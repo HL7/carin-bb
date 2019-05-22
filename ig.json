@@ -1,0 +1,117 @@
+{
+	"tool": "jekyll",
+	"source": "implementationguide/carin-bb.xml",
+	"npm-name": "carin-bb",
+	"license": "CC0-1.0",
+	"paths": {
+		"qa": "generated_output/qa",
+		"temp": "generated_output/temp",
+		"output": "output",
+		"txCache": "generated_output/txCache",
+		"specification": "http://hl7.org/fhir/R4/",
+		"pages": [
+			"framework",
+			"source/pages"
+		],
+		"resources": [
+			"source/resources"
+		]
+	},
+	"pages": [
+		"pages"
+	],
+	"extension-domains": [
+		"https://trifolia-on-fhir.lantanagroup.com"
+	],
+	"allowed-domains": [
+		"https://trifolia-on-fhir.lantanagroup.com"
+	],
+	"sct-edition": "http://snomed.info/sct/731000124108",
+	"canonicalBase": "http://hl7.org/fhir/us/carin-alliance",
+	"defaults": {
+		"Location": {
+			"template-base": "ex.html"
+		},
+		"ProcedureRequest": {
+			"template-base": "ex.html"
+		},
+		"Organization": {
+			"template-base": "ex.html"
+		},
+		"MedicationStatement": {
+			"template-base": "ex.html"
+		},
+		"SearchParameter": {
+			"template-base": "base.html"
+		},
+		"StructureDefinition": {
+			"template-mappings": "sd-mappings.html",
+			"template-base": "sd.html",
+			"template-defns": "sd-definitions.html"
+		},
+		"Immunization": {
+			"template-base": "ex.html"
+		},
+		"Patient": {
+			"template-base": "ex.html"
+		},
+		"StructureMap": {
+			"content": false,
+			"script": false,
+			"template-base": "ex.html",
+			"profiles": false
+		},
+		"ConceptMap": {
+			"template-base": "base.html"
+		},
+		"Practitioner": {
+			"template-base": "ex.html"
+		},
+		"OperationDefinition": {
+			"template-base": "base.html"
+		},
+		"CodeSystem": {
+			"template-base": "base.html"
+		},
+		"Communication": {
+			"template-base": "ex.html"
+		},
+		"Any": {
+			"template-format": "format.html",
+			"template-base": "base.html"
+		},
+		"PractitionerRole": {
+			"template-base": "ex.html"
+		},
+		"ValueSet": {
+			"template-base": "base.html"
+		},
+		"CapabilityStatement": {
+			"template-base": "base.html"
+		},
+		"Observation": {
+			"template-base": "ex.html"
+		}
+	},
+	"resources": {
+		"Claim/cdex-example-claim": {
+			"base": "Claim-cdex-example-claim.html",
+			"defns": "Claim-cdex-example-claim-definitions.html"
+		},
+		"StructureDefinition/Patient": {
+			"base": "StructureDefinition-Patient.html",
+			"defns": "StructureDefinition-Patient-definitions.html"
+		},
+		"StructureDefinition/carin-bb2-explanationofbenefit": {
+			"base": "StructureDefinition-carin-bb2-explanationofbenefit.html",
+			"defns": "StructureDefinition-carin-bb2-explanationofbenefit-definitions.html"
+		},
+		"StructureDefinition/carin-coverage": {
+			"base": "StructureDefinition-carin-coverage.html",
+			"defns": "StructureDefinition-carin-coverage-definitions.html"
+		}
+	},
+	"version": "4.0.0",
+	"fixed-business-version": "0.1.21",
+	"dependencyList": []
+}

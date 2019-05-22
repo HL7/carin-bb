@@ -1,0 +1,58 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "carin-coverage",
+	"meta": {
+		"versionId": "10",
+		"lastUpdated": "2019-05-20T15:19:53.000-04:00",
+		"security": [
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^read"
+			}
+		]
+	},
+	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/Coverage",
+	"version": "0.1",
+	"name": "Coverage",
+	"title": "CARIN Alliance Blue Button 2.0 Coverage",
+	"status": "active",
+	"date": "2019-05-20",
+	"publisher": "CARIN Alliance",
+	"fhirVersion": "4.0.0",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Coverage",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Coverage",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Coverage",
+				"path": "Coverage"
+			},
+			{
+				"id": "Coverage.id",
+				"path": "Coverage.id"
+			},
+			{
+				"id": "Coverage.status",
+				"path": "Coverage.status",
+				"mustSupport": false,
+				"isSummary": true
+			},
+			{
+				"id": "Coverage.type",
+				"path": "Coverage.type",
+				"isSummary": true
+			},
+			{
+				"id": "Coverage.subscriberId",
+				"path": "Coverage.subscriberId",
+				"min": 1,
+				"max": "1",
+				"mustSupport": false,
+				"isSummary": true
+			}
+		]
+	}
+}
