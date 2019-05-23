@@ -1,2 +1,2 @@
 # carin-bb
-CARIN Blue Button Implementation Guide - joint work between Carin Alliance and HL7
+CARIN Blue Button Implementation Guide - joint work between CARIN Alliance and HL7
