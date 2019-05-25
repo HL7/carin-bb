@@ -4,4 +4,4 @@ layout: default
 active: Feedback
 ---
 
-***Instructions on how to provide feedback go here***
+Please send your feedback/questions to amol.vyas@cambiahealth.com

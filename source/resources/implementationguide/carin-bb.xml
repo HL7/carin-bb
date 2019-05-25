@@ -3,15 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="carin-bb"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2019-05-22T00:40:23.000-04:00"/>
+        <versionId value="13"/>
+        <lastUpdated value="2019-05-25T05:35:02.000-04:00"/>
         <security>
             <system value="https://trifolia-fhir.lantanagroup.com/security"/>
             <code value="everyone^read"/>
         </security>
     </meta>
     <url value="http://hl7.org/fhir/us/carin-alliance/ImplementationGuide/carin-bb"/>
-    <version value="0.1.21"/>
+    <version value="0.1.22"/>
     <name value="CARINBlueButton"/>
     <title value="CARIN Blue Button"/>
     <status value="draft"/>
