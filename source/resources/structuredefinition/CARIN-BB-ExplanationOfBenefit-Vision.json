@@ -1,0 +1,29 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "CARIN-BB-ExplanationOfBenefit-Vision",
+	"meta": {
+		"versionId": "1",
+		"lastUpdated": "2019-06-07T13:35:55.000-04:00"
+	},
+	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-vision",
+	"version": "0.2",
+	"name": "CARINBBExplanationOfBenefitVision",
+	"title": "CARIN Blue Button Explanation of Benefit Vision",
+	"status": "draft",
+	"date": "2019-06-07",
+	"publisher": "CARIN Alliance",
+	"fhirVersion": "4.0.0",
+	"kind": "resource",
+	"abstract": false,
+	"type": "ExplanationOfBenefit",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/ExplanationOfBenefit",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "ExplanationOfBenefit",
+				"path": "ExplanationOfBenefit"
+			}
+		]
+	}
+}

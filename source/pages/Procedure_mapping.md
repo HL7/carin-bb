@@ -19,9 +19,10 @@ active: Procedure mapping
 			<th> CPCDS Element </th>
 			<th> R4 Resource </th>
 			<th> Profile Element </th>
+			<th> Description </th>
 		</tr>
 		<tr>
-			<th colspan="4" style="text-align:center;"> Procedure (0-n) </th>
+			<td colspan="5" style="text-align:center;">Procedure (0-n) </td>
 		</tr>
 	</thead>
 	<tbody>
@@ -30,48 +31,63 @@ active: Procedure mapping
 			<td>Procedure code</td>
 			<td>ExplanationOfBenefit.procedure.procedureReference(Procedure)</td>
 			<td>.code.coding.code</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>2</td>
-			<td>Procedure date</td>
+			<td>Procedure description</td>
 			<td>ExplanationOfBenefit.procedure.procedureReference(Procedure)</td>
-			<td>.performedPeriod</td>
+			<td>.code.coding.display</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>3</td>
-			<td>Procedure code type</td>
+			<td>Procedure date</td>
 			<td>ExplanationOfBenefit.procedure.procedureReference(Procedure)</td>
-			<td>.code.coding.system</td>
+			<td>.performedPeriod</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>4</td>
-			<td>Procedure type</td>
-			<td>ExplanationOfBenefit</td>
-			<td>.procedure.type</td>
+			<td>Procedure code type</td>
+			<td>ExplanationOfBenefit.procedure.procedureReference(Procedure)</td>
+			<td>.code.coding.system</td>
+			<td>CPT/HCPCS/ICD-PCS</td>
 		</tr>
 		<tr>
 			<td>5</td>
-			<td>Modifier Code-1</td>
+			<td>Procedure type</td>
 			<td>ExplanationOfBenefit</td>
-			<td>.item.modifier OR Procedure.modifier (Extension)</td>
+			<td>.procedure.type</td>
+			<td>primary, secondary, discharge, etc.</td>
 		</tr>
 		<tr>
 			<td>6</td>
-			<td>Modifier Code-2</td>
+			<td>Modifier Code-1</td>
 			<td>ExplanationOfBenefit</td>
 			<td>.item.modifier</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>7</td>
-			<td>Modifier Code-3</td>
+			<td>Modifier Code-2</td>
 			<td>ExplanationOfBenefit</td>
 			<td>.item.modifier</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>8</td>
+			<td>Modifier Code-3</td>
+			<td>ExplanationOfBenefit</td>
+			<td>.item.modifier</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>9</td>
 			<td>Modifier Code-4</td>
 			<td>ExplanationOfBenefit</td>
 			<td>.item.modifier</td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>

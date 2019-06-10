@@ -13,19 +13,3 @@ active: other
 
 <!-- end TOC -->
 
-### Other Resources
-
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Claim</td>
-<td><a href="Claim-cdex-example-claim.html">cdex-example-claim</a></td>
-</tr>
-</tbody>
-</table>

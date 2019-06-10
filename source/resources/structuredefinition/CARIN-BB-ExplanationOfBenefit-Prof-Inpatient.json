@@ -1,0 +1,29 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "CARIN-BB-ExplanationOfBenefit-Prof-Inpatient",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2019-06-07T13:59:54.000-04:00"
+	},
+	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-prof-inpatient",
+	"version": "0.1",
+	"name": "CARINBBExplanationOfBenefitProfessionalInpatient",
+	"title": "CARIN Blue Button Explanation of Benefit Professional Inpatient",
+	"status": "draft",
+	"date": "2019-06-07",
+	"publisher": "CARIN Alliance",
+	"fhirVersion": "4.0.0",
+	"kind": "resource",
+	"abstract": false,
+	"type": "ExplanationOfBenefit",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/ExplanationOfBenefit",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "ExplanationOfBenefit",
+				"path": "ExplanationOfBenefit"
+			}
+		]
+	}
+}

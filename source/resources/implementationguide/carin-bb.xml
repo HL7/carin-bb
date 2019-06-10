@@ -3,53 +3,111 @@
     xmlns="http://hl7.org/fhir">
     <id value="carin-bb"/>
     <meta>
-        <versionId value="13"/>
-        <lastUpdated value="2019-05-25T05:35:02.000-04:00"/>
+        <versionId value="60"/>
+        <lastUpdated value="2019-06-10T02:45:04.000-04:00"/>
         <security>
             <system value="https://trifolia-fhir.lantanagroup.com/security"/>
             <code value="everyone^read"/>
         </security>
+        <security>
+            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+            <code value="everyone^write"/>
+        </security>
     </meta>
-    <url value="http://hl7.org/fhir/us/carin-alliance/ImplementationGuide/carin-bb"/>
-    <version value="0.1.22"/>
+    <url value="http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb"/>
+    <version value="0.1.29"/>
     <name value="CARINBlueButton"/>
     <title value="CARIN Blue Button"/>
     <status value="draft"/>
     <experimental value="true"/>
     <publisher value="CARIN Alliance"/>
-    <description value=" **CARIN Alliance** &#xA;*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*&#xA;&#xA;This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&#xA;&#xA;See the [Table of Contents](toc.html) for more information.&#xA;&#xA;"/>
-    <packageId value="carin-bb"/>
+    <description value=" **CARIN Alliance** &#xA;*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*&#xA;&#xA;This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&#xA;&#xA;See the [Table of Contents](toc.html) for more information.&#xA;&#xA;#### Latest Changes&#xA;- (29) Updated Provider and Claim Line Amounts mappings.&#xA;- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.&#xA;- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.&#xA;- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit&#xA;- (25) Added FHIR Resources section to narrative and included Example EOB.&#xA;- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.&#xA;- (23) Added the Latest Changes section. Added USCoreR4 Dependency.&#xA;&#xA;&#xA;&#xA;&#xA;"/>
+    <packageId value="hl7.fhir.us.carin-bb"/>
     <fhirVersion value="4.0.0"/>
+    <dependsOn>
+        <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0"/>
+        <packageId value="hl7.fhir.us.core"/>
+        <version value="current"/>
+    </dependsOn>
     <definition>
         <resource>
             <reference>
-                <reference value="Claim/cdex-example-claim"/>
-                <display value="cdex-example-claim"/>
+                <reference value="StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy"/>
+                <display value="CARINBBExplanationOfBenefitPharmacy"/>
             </reference>
-            <exampleBoolean value="true"/>
-        </resource>
-        <resource>
-            <reference>
-                <reference value="StructureDefinition/Patient"/>
-                <display value="Patient"/>
-            </reference>
-            <name value="Patient"/>
+            <name value="CARINBBExplanationOfBenefitPharmacy"/>
             <exampleBoolean value="false"/>
         </resource>
         <resource>
             <reference>
-                <reference value="StructureDefinition/carin-bb2-explanationofbenefit"/>
-                <display value="CARINAllianceBB2ExplanationOfBenefit"/>
+                <reference value="StructureDefinition/CARIN-BB-ExplanationOfBenefit-Vision"/>
+                <display value="CARINBBExplanationOfBenefitVision"/>
             </reference>
-            <name value="CARINAllianceBB2ExplanationOfBenefit"/>
+            <name value="CARINBBExplanationOfBenefitVision"/>
             <exampleBoolean value="false"/>
         </resource>
         <resource>
             <reference>
-                <reference value="StructureDefinition/carin-coverage"/>
-                <display value="Coverage"/>
+                <reference value="StructureDefinition/CARIN-BB-ExplanationOfBenefit-Oral"/>
+                <display value="CARINBBExplanationOfBenefitOral"/>
             </reference>
-            <name value="Coverage"/>
+            <name value="CARINBBExplanationOfBenefitOral"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute"/>
+                <display value="CARINBBExplanationOfBenefitInstitutionalInpatientAcute"/>
+            </reference>
+            <name value="CARINBBExplanationOfBenefitInstitutionalInpatientAcute"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute"/>
+                <display value="CARINBBExplanationOfBenefitInstitutionalInpatientNonAcute"/>
+            </reference>
+            <name value="CARINBBExplanationOfBenefitInstitutionalInpatientNonAcute"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Outpatient"/>
+                <display value="CARINBBExplanationOfBenefitInstitutionalOutpatient"/>
+            </reference>
+            <name value="CARINBBExplanationOfBenefitInstitutionalOutpatient"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/CARIN-BB-ExplanationOfBenefit-Prof-Inpatient"/>
+                <display value="CARINBBExplanationOfBenefitProfessionalInpatient"/>
+            </reference>
+            <name value="CARINBBExplanationOfBenefitProfessionalInpatient"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/CARIN-BB-ExplanationOfBenefit-Prof-Outpatient"/>
+                <display value="CARINBBExplanationOfBenefitProfessionalOutpatient"/>
+            </reference>
+            <name value="CARINBBExplanationOfBenefitProfessionalOutpatient"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient"/>
+                <display value="CARINBBExplanationOfBenefitNonPhysInpatient"/>
+            </reference>
+            <name value="CARINBBExplanationOfBenefitNonPhysInpatient"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient"/>
+                <display value="CARINBBExplanationOfBenefitNonPhysOutpatient"/>
+            </reference>
+            <name value="CARINBBExplanationOfBenefitNonPhysOutpatient"/>
             <exampleBoolean value="false"/>
         </resource>
         <page>
@@ -74,40 +132,10 @@
                     <nameUrl value="Common_Payer_Consumer_Data_Set_(CPCDS).html"/>
                     <title value="Common Payer Consumer Data Set (CPCDS)"/>
                     <generation value="markdown"/>
-                    <page>
-                        <nameUrl value="Claim.html"/>
-                        <title value="Claim"/>
-                        <generation value="markdown"/>
-                    </page>
-                    <page>
-                        <nameUrl value="Claim_Line.html"/>
-                        <title value="Claim Line"/>
-                        <generation value="markdown"/>
-                    </page>
-                    <page>
-                        <nameUrl value="Diagnosis.html"/>
-                        <title value="Diagnosis"/>
-                        <generation value="markdown"/>
-                    </page>
-                    <page>
-                        <nameUrl value="Procedure.html"/>
-                        <title value="Procedure"/>
-                        <generation value="markdown"/>
-                    </page>
-                    <page>
-                        <nameUrl value="Member.html"/>
-                        <title value="Member"/>
-                        <generation value="markdown"/>
-                    </page>
-                    <page>
-                        <nameUrl value="Coverage.html"/>
-                        <title value="Coverage"/>
-                        <generation value="markdown"/>
-                    </page>
                 </page>
                 <page>
-                    <nameUrl value="Mapping_from_CPCDS_to_FHIR_.html"/>
-                    <title value="Mapping from CPCDS to FHIR "/>
+                    <nameUrl value="Mapping_from_CPCDS_to_FHIR_Resources.html"/>
+                    <title value="Mapping from CPCDS to FHIR Resources"/>
                     <generation value="markdown"/>
                     <page>
                         <nameUrl value="Claim_mapping.html"/>
@@ -139,26 +167,6 @@
                         <title value="Coverage mapping"/>
                         <generation value="markdown"/>
                     </page>
-                </page>
-                <page>
-                    <nameUrl value="Flat_File_Format_for_CPCDS.html"/>
-                    <title value="Flat File Format for CPCDS"/>
-                    <generation value="markdown"/>
-                </page>
-                <page>
-                    <nameUrl value="Mapping_From_Flat_File_to_FHIR_Resources.html"/>
-                    <title value="Mapping From Flat File to FHIR Resources"/>
-                    <generation value="markdown"/>
-                </page>
-            </page>
-            <page>
-                <nameUrl value="Using_CARIN_Blue_Button_Framework.html"/>
-                <title value="Using CARIN Blue Button Framework"/>
-                <generation value="markdown"/>
-                <page>
-                    <nameUrl value="Technical_Considerations.html"/>
-                    <title value="Technical Considerations"/>
-                    <generation value="markdown"/>
                 </page>
             </page>
             <page>

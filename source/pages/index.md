@@ -24,5 +24,17 @@ This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework
 
 See the [Table of Contents](toc.html) for more information.
 
+#### Latest Changes
+- (29) Updated Provider and Claim Line Amounts mappings.
+- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.
+- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.
+- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit
+- (25) Added FHIR Resources section to narrative and included Example EOB.
+- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.
+- (23) Added the Latest Changes section. Added USCoreR4 Dependency.
+
+
+
+
 
 

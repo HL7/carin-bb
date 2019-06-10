@@ -1,7 +1,7 @@
 {
 	"tool": "jekyll",
 	"source": "implementationguide/carin-bb.xml",
-	"npm-name": "carin-bb",
+	"npm-name": "hl7.fhir.us.carin-bb",
 	"license": "CC0-1.0",
 	"paths": {
 		"qa": "generated_output/qa",
@@ -27,7 +27,7 @@
 		"https://trifolia-on-fhir.lantanagroup.com"
 	],
 	"sct-edition": "http://snomed.info/sct/731000124108",
-	"canonicalBase": "http://hl7.org/fhir/us/carin-alliance",
+	"canonicalBase": "http://hl7.org/fhir/us/carin-bb",
 	"defaults": {
 		"Location": {
 			"template-base": "ex.html"
@@ -94,24 +94,54 @@
 		}
 	},
 	"resources": {
-		"Claim/cdex-example-claim": {
-			"base": "Claim-cdex-example-claim.html",
-			"defns": "Claim-cdex-example-claim-definitions.html"
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy-definitions.html"
 		},
-		"StructureDefinition/Patient": {
-			"base": "StructureDefinition-Patient.html",
-			"defns": "StructureDefinition-Patient-definitions.html"
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Vision": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Vision.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Vision-definitions.html"
 		},
-		"StructureDefinition/carin-bb2-explanationofbenefit": {
-			"base": "StructureDefinition-carin-bb2-explanationofbenefit.html",
-			"defns": "StructureDefinition-carin-bb2-explanationofbenefit-definitions.html"
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Oral": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Oral.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Oral-definitions.html"
 		},
-		"StructureDefinition/carin-coverage": {
-			"base": "StructureDefinition-carin-coverage.html",
-			"defns": "StructureDefinition-carin-coverage-definitions.html"
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Outpatient": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Outpatient.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Outpatient-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Prof-Inpatient": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Inpatient.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Inpatient-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Prof-Outpatient": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Outpatient.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Outpatient-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient-definitions.html"
 		}
 	},
 	"version": "4.0.0",
-	"fixed-business-version": "0.1.22",
-	"dependencyList": []
+	"fixed-business-version": "0.1.29",
+	"dependencyList": [
+		{
+			"location": "http://hl7.org/fhir/us/core",
+			"name": "USCoreR4",
+			"version": "current"
+		}
+	]
 }

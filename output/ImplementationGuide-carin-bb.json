@@ -1,0 +1,267 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.us.carin-bb-0.1.29",
+  "meta": {
+    "versionId": "60",
+    "lastUpdated": "2019-06-10T02:45:04.000-04:00",
+    "security": [
+      {
+        "system": "https://trifolia-fhir.lantanagroup.com/security",
+        "code": "everyone^read"
+      },
+      {
+        "system": "https://trifolia-fhir.lantanagroup.com/security",
+        "code": "everyone^write"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARINBlueButton</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb</pre><div><p><strong>CARIN Alliance</strong>\n<em>Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.</em></p>\n<p>This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.</p>\n<p>See the <a href=\"toc.html\">Table of Contents</a> for more information.</p>\n<h4>Latest Changes</h4>\n<ul>\n<li>(29) Updated Provider and Claim Line Amounts mappings.</li>\n<li>(28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.</li>\n<li>(27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.</li>\n<li>(26) Added sample of reverse mapping narrative for ExplanationOfBenefit</li>\n<li>(25) Added FHIR Resources section to narrative and included Example EOB.</li>\n<li>(24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.</li>\n<li>(23) Added the Latest Changes section. Added USCoreR4 Dependency.</li>\n</ul>\n</div></div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb",
+  "version": "0.1.29",
+  "name": "CARINBlueButton",
+  "title": "CARIN Blue Button",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "CARIN Alliance",
+  "description": " **CARIN Alliance** \n*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*\n\nThis implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.\n\nSee the [Table of Contents](toc.html) for more information.\n\n#### Latest Changes\n- (29) Updated Provider and Claim Line Amounts mappings.\n- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.\n- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.\n- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit\n- (25) Added FHIR Resources section to narrative and included Example EOB.\n- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.\n- (23) Added the Latest Changes section. Added USCoreR4 Dependency.\n\n\n\n\n",
+  "packageId": "hl7.fhir.us.carin-bb",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.0"
+  ],
+  "dependsOn": [
+    {
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0",
+      "packageId": "hl7.fhir.us.core",
+      "version": "current"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy",
+          "display": "CARINBBExplanationOfBenefitPharmacy"
+        },
+        "name": "CARINBBExplanationOfBenefitPharmacy",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Vision.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Vision",
+          "display": "CARINBBExplanationOfBenefitVision"
+        },
+        "name": "CARINBBExplanationOfBenefitVision",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Oral.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Oral",
+          "display": "CARINBBExplanationOfBenefitOral"
+        },
+        "name": "CARINBBExplanationOfBenefitOral",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute",
+          "display": "CARINBBExplanationOfBenefitInstitutionalInpatientAcute"
+        },
+        "name": "CARINBBExplanationOfBenefitInstitutionalInpatientAcute",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute",
+          "display": "CARINBBExplanationOfBenefitInstitutionalInpatientNonAcute"
+        },
+        "name": "CARINBBExplanationOfBenefitInstitutionalInpatientNonAcute",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Outpatient.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Outpatient",
+          "display": "CARINBBExplanationOfBenefitInstitutionalOutpatient"
+        },
+        "name": "CARINBBExplanationOfBenefitInstitutionalOutpatient",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Inpatient.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Prof-Inpatient",
+          "display": "CARINBBExplanationOfBenefitProfessionalInpatient"
+        },
+        "name": "CARINBBExplanationOfBenefitProfessionalInpatient",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Outpatient.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Prof-Outpatient",
+          "display": "CARINBBExplanationOfBenefitProfessionalOutpatient"
+        },
+        "name": "CARINBBExplanationOfBenefitProfessionalOutpatient",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient",
+          "display": "CARINBBExplanationOfBenefitNonPhysInpatient"
+        },
+        "name": "CARINBBExplanationOfBenefitNonPhysInpatient",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient",
+          "display": "CARINBBExplanationOfBenefitNonPhysOutpatient"
+        },
+        "name": "CARINBBExplanationOfBenefitNonPhysOutpatient",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.md",
+      "title": "Table of Contents",
+      "generation": "generated",
+      "page": [
+        {
+          "nameUrl": "Background.html",
+          "title": "Background",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Use_Case.html",
+          "title": "Use Case",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "CARIN_Blue_Button_Framework_Specification.html",
+          "title": "CARIN Blue Button Framework Specification",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "Common_Payer_Consumer_Data_Set_(CPCDS).html",
+              "title": "Common Payer Consumer Data Set (CPCDS)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "Mapping_from_CPCDS_to_FHIR_Resources.html",
+              "title": "Mapping from CPCDS to FHIR Resources",
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "Claim_mapping.html",
+                  "title": "Claim mapping",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "Claim_Line_mapping.html",
+                  "title": "Claim Line mapping",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "Diagnosis_mapping.html",
+                  "title": "Diagnosis mapping",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "Procedure_mapping.html",
+                  "title": "Procedure mapping",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "Member_mapping.html",
+                  "title": "Member mapping",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "Coverage_mapping.html",
+                  "title": "Coverage mapping",
+                  "generation": "markdown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "nameUrl": "Benefit_to_Health_Plans.html",
+          "title": "Benefit to Health Plans",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Feedback.html",
+          "title": "Feedback",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Credits.html",
+          "title": "Credits",
+          "generation": "markdown"
+        }
+      ]
+    }
+  }
+}

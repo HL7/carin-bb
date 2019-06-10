@@ -27,17 +27,44 @@ active: profiles
 </thead>
 <tbody>
 <tr>
-<td><a href="StructureDefinition-carin-bb2-explanationofbenefit.html">CARINAllianceBB2ExplanationOfBenefit</a></td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute.html">CARINBBExplanationOfBenefitInstitutionalInpatientAcute</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-carin-coverage.html">Coverage</a></td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute.html">CARINBBExplanationOfBenefitInstitutionalInpatientNonAcute</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-Patient.html">Patient</a></td>
-<td>Demographics and other administrative information about an individual or animal receiving
-   care or other health-related services.</td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Outpatient.html">CARINBBExplanationOfBenefitInstitutionalOutpatient</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient.html">CARINBBExplanationOfBenefitNonPhysInpatient</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient.html">CARINBBExplanationOfBenefitNonPhysOutpatient</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Oral.html">CARINBBExplanationOfBenefitOral</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html">CARINBBExplanationOfBenefitPharmacy</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Inpatient.html">CARINBBExplanationOfBenefitProfessionalInpatient</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Outpatient.html">CARINBBExplanationOfBenefitProfessionalOutpatient</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Vision.html">CARINBBExplanationOfBenefitVision</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
