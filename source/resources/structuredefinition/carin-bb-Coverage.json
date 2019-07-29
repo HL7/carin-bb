@@ -1,0 +1,110 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "carin-bb-Coverage",
+	"meta": {
+		"versionId": "19",
+		"lastUpdated": "2019-07-28T22:43:09.000-04:00",
+		"security": [
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^write"
+			}
+		]
+	},
+	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage",
+	"version": "0.0.1",
+	"name": "CARINBBCoverage",
+	"title": "CARIN Blue Button Coverage",
+	"status": "draft",
+	"date": "2019-07-27",
+	"fhirVersion": "4.0.0",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Coverage",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Coverage",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Coverage",
+				"path": "Coverage"
+			},
+			{
+				"id": "Coverage.contained",
+				"path": "Coverage.contained",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "Coverage.extension",
+				"path": "Coverage.extension",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "Coverage.type",
+				"path": "Coverage.type",
+				"min": 1,
+				"max": "1",
+				"binding": {
+					"strength": "required",
+					"description": "Coverage Type",
+					"valueSet": "http://hl7.org/fhir/ValueSet/coverage-type"
+				}
+			},
+			{
+				"id": "Coverage.subscriberId",
+				"path": "Coverage.subscriberId",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Coverage.relationship",
+				"path": "Coverage.relationship",
+				"min": 1,
+				"max": "1",
+				"binding": {
+					"strength": "required",
+					"description": "Subscriber Relationship",
+					"valueSet": "http://hl7.org/fhir/ValueSet/subscriber-relationship"
+				}
+			},
+			{
+				"id": "Coverage.period",
+				"path": "Coverage.period",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Coverage.class",
+				"path": "Coverage.class",
+				"short": "Group,Plan,class ..etc will be mapped to class"
+			},
+			{
+				"id": "Coverage.class.type",
+				"path": "Coverage.class.type",
+				"binding": {
+					"strength": "required",
+					"description": "Coverage Class",
+					"valueSet": "http://hl7.org/fhir/ValueSet/coverage-class"
+				}
+			},
+			{
+				"id": "Coverage.payor",
+				"path": "Coverage.payor",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/StructureDefinition/Organization"
+						]
+					}
+				]
+			}
+		]
+	}
+}

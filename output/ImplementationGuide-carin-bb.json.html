@@ -277,47 +277,85 @@ can only resize using html  or css ;-(
 <pre class="json">
 {
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide">resourceType</a>" : "ImplementationGuide",
-  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.id">id</a>" : "hl7.fhir.us.carin-bb-0.1.29",
+  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.id">id</a>" : "hl7.fhir.us.carin-bb-0.1.32",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.meta">meta</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "60",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2019-06-10T02:45:04.000-04:00",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "108",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2019-07-28T22:28:23.000-04:00",
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.security">security</a>" : [
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://trifolia-fhir.lantanagroup.com/security",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "everyone^read"
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "everyone^write"
       },
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://trifolia-fhir.lantanagroup.com/security",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "everyone^write"
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "everyone^read"
       }
     ]
   },
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;CARINBlueButton&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb&lt;/pre&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;CARIN Alliance&lt;/strong&gt;\n&lt;em&gt;Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.&lt;/em&gt;&lt;/p&gt;\n&lt;p&gt;This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&lt;/p&gt;\n&lt;p&gt;See the &lt;a href=\&quot;toc.html\&quot;&gt;Table of Contents&lt;/a&gt; for more information.&lt;/p&gt;\n&lt;h4&gt;Latest Changes&lt;/h4&gt;\n&lt;ul&gt;\n&lt;li&gt;(29) Updated Provider and Claim Line Amounts mappings.&lt;/li&gt;\n&lt;li&gt;(28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.&lt;/li&gt;\n&lt;li&gt;(27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.&lt;/li&gt;\n&lt;li&gt;(26) Added sample of reverse mapping narrative for ExplanationOfBenefit&lt;/li&gt;\n&lt;li&gt;(25) Added FHIR Resources section to narrative and included Example EOB.&lt;/li&gt;\n&lt;li&gt;(24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.&lt;/li&gt;\n&lt;li&gt;(23) Added the Latest Changes section. Added USCoreR4 Dependency.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/div&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;CARINBlueButton&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb&lt;/pre&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;CARIN Alliance&lt;/strong&gt;\n&lt;em&gt;Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.&lt;/em&gt;&lt;/p&gt;\n&lt;p&gt;This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&lt;/p&gt;\n&lt;p&gt;See the &lt;a href=\&quot;toc.html\&quot;&gt;Table of Contents&lt;/a&gt; for more information.&lt;/p&gt;\n&lt;h4&gt;Latest Changes&lt;/h4&gt;\n&lt;ul&gt;\n&lt;li&gt;(32) Added 4 specific EOB and 1 Coverage profiles&lt;/li&gt;\n&lt;li&gt;(31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile&lt;/li&gt;\n&lt;li&gt;(30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy&lt;/li&gt;\n&lt;li&gt;(29) Updated Provider and Claim Line Amounts mappings.&lt;/li&gt;\n&lt;li&gt;(28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.&lt;/li&gt;\n&lt;li&gt;(27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.&lt;/li&gt;\n&lt;li&gt;(26) Added sample of reverse mapping narrative for ExplanationOfBenefit&lt;/li&gt;\n&lt;li&gt;(25) Added FHIR Resources section to narrative and included Example EOB.&lt;/li&gt;\n&lt;li&gt;(24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.&lt;/li&gt;\n&lt;li&gt;(23) Added the Latest Changes section. Added USCoreR4 Dependency.&lt;/li&gt;\n&lt;/ul&gt;\n&lt;/div&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.url">url</a>" : "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb",
-  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.version">version</a>" : "0.1.29",
+  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.version">version</a>" : "0.1.32",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.name">name</a>" : "CARINBlueButton",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.title">title</a>" : "CARIN Blue Button",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.status">status</a>" : "draft",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.experimental">experimental</a>" : true,
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.publisher">publisher</a>" : "CARIN Alliance",
-  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.description">description</a>" : " **CARIN Alliance** \n*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*\n\nThis implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.\n\nSee the [Table of Contents](toc.html) for more information.\n\n#### Latest Changes\n- (29) Updated Provider and Claim Line Amounts mappings.\n- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.\n- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.\n- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit\n- (25) Added FHIR Resources section to narrative and included Example EOB.\n- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.\n- (23) Added the Latest Changes section. Added USCoreR4 Dependency.\n\n\n\n\n",
+  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.description">description</a>" : " **CARIN Alliance** \n*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*\n\nThis implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.\n\nSee the [Table of Contents](toc.html) for more information.\n\n#### Latest Changes\n- (32) Added 4 specific EOB and 1 Coverage profiles\n- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile\n- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy\n- (29) Updated Provider and Claim Line Amounts mappings.\n- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.\n- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.\n- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit\n- (25) Added FHIR Resources section to narrative and included Example EOB.\n- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.\n- (23) Added the Latest Changes section. Added USCoreR4 Dependency.\n\n\n\n\n",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.packageId">packageId</a>" : "hl7.fhir.us.carin-bb",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.license">license</a>" : "CC0-1.0",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.fhirVersion">fhirVersion</a>" : [
     "4.0.0"
   ],
-  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.dependsOn">dependsOn</a>" : [
-    {
-      "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.dependsOn.uri">uri</a>" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0",
-      "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.dependsOn.packageId">packageId</a>" : "hl7.fhir.us.core",
-      "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.dependsOn.version">version</a>" : "current"
-    }
-  ],
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition">definition</a>" : {
     "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefit"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefit",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "eob comprehensive profile",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Outpatient-Facility",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitOutpatientFacility"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitOutpatientFacility",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "eob outpatient profile",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "CodeSystem-CARIN-BB-Claim-Information-Category.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "CodeSystem/CARIN-BB-Claim-Information-Category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBClaimInformationCategory"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBClaimInformationCategory",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "codesystem: claim information category",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
@@ -330,132 +368,443 @@ can only resize using html  or css ;-(
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitPharmacy"
         },
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitPharmacy",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "eob pharmacy profile",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Vision.html"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-Related-Claim-Relationship.html"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Vision",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitVision"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-Related-Claim-Relationship",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBRelatedClaimRelationship"
         },
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitVision",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBRelatedClaimRelationship",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "value set: claim relation ship",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Oral.html"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-carin-bb-Coverage.html"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Oral",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitOral"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/carin-bb-Coverage",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBCoverage"
         },
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitOral",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBCoverage",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "coverage profile",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute.html"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inpatient-Facility.html"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitInstitutionalInpatientAcute"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inpatient-Facility",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitInpatientFacility"
         },
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitInstitutionalInpatientAcute",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitInpatientFacility",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute.html"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-Claim-Type.html"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitInstitutionalInpatientNonAcute"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-Claim-Type",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBClaimType"
         },
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitInstitutionalInpatientNonAcute",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBClaimType",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Outpatient.html"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "CodeSystem-CARIN-BB-Claim-Type.html"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Outpatient",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitInstitutionalOutpatient"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "CodeSystem/CARIN-BB-Claim-Type",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBClaimType"
         },
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitInstitutionalOutpatient",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBClaimType",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Inpatient.html"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "CodeSystem-CARIN-BB-Related-Claim-Relationship.html"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Prof-Inpatient",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitProfessionalInpatient"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "CodeSystem/CARIN-BB-Related-Claim-Relationship",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBRelatedClaimRelationship"
         },
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitProfessionalInpatient",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBRelatedClaimRelationship",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Outpatient.html"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-Claim-CareTeam-Role.html"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Prof-Outpatient",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitProfessionalOutpatient"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-Claim-CareTeam-Role",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBClaimCareTeamRole"
         },
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitProfessionalOutpatient",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBClaimCareTeamRole",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient.html"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "CodeSystem-CARIN-BB-Claim-CareTeam-Role.html"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitNonPhysInpatient"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "CodeSystem/CARIN-BB-Claim-CareTeam-Role",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBClaimCareTeamRole"
         },
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitNonPhysInpatient",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBClaimCareTeamRole",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient.html"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-DiagnosisType.html"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitNonPhysOutpatient"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-DiagnosisType",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBDiagnosisType"
         },
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitNonPhysOutpatient",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBDiagnosisType",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-Revenue-Center.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-Revenue-Center",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBRevenueCenter"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBRevenueCenter",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-Adjudication-Amount-Category.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-Adjudication-Amount-Category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBAdjudicationAmountCategory"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBAdjudicationAmountCategory",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "CodeSystem-CARIN-BB-Adjudication-Category.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "CodeSystem/CARIN-BB-Adjudication-Category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBAdjudicationCategory"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBAdjudicationCategory",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-Adjudication-Denial-Reason.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-Adjudication-Denial-Reason",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBAdjudicationDenialReason"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBAdjudicationDenialReason",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-Network-Contracting-Status.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-Network-Contracting-Status",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBNetworkContractingStatus"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBNetworkContractingStatus",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "CodeSystem-CARIN-BB-Network-Contracting-Status.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "CodeSystem/CARIN-BB-Network-Contracting-Status",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBNetworkContractingStatus"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBNetworkContractingStatus",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-TypeOfService.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-TypeOfService",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBTypeOfService"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBTypeOfService",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-TOB-TypeOfFacility.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-TOB-TypeOfFacility",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBTOBTypeOfFacility"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBTOBTypeOfFacility",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-TOB-Frequency.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-TOB-Frequency",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBTOBFrequency"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBTOBFrequency",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-TOB-BillClassification.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-TOB-BillClassification",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBTOBBillClassification"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBTOBBillClassification",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-AdmitType.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-AdmitType",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBAdmitType"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBAdmitType",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-AdmitSource.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-AdmitSource",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBAdmitSource"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBAdmitSource",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-Discharge-Status.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-Discharge-Status",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBDischargeStatus"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBDischargeStatus",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-MS-DRG.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-MS-DRG",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBMSDRG"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBMSDRG",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-Claim-Information-Category.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-Claim-Information-Category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBClaimInformationCategory"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBClaimInformationCategory",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Professional-NonClinician.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBExplanationOfBenefitProfessionalNonClinician"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBExplanationOfBenefitProfessionalNonClinician",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-SNOMEDCT-ProcedureCodes.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-SNOMEDCT-ProcedureCodes",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBSNOMEDCTProcedureCodes"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBSNOMEDCTProcedureCodes",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-CPT-HCPCS-ProcedureCodes.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-CPT-HCPCS-ProcedureCodes",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBCPTHCPCSProcedureCodes"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBCPTHCPCSProcedureCodes",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-HCPCS-ModifierCodes.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-HCPCS-ModifierCodes",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBHCPCSModifierCodes"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBHCPCSModifierCodes",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-Adjudication-Benefit-Payment-Status-Category.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-Adjudication-Benefit-Payment-Status-Category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBAdjudicationBenefitPaymentStatusCategory"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBAdjudicationBenefitPaymentStatusCategory",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-PlaceOfService.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-PlaceOfService",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBPlaceOfService"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBPlaceOfService",
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Extension#Extension.value[x]">valueUri</a>" : "ValueSet-CARIN-BB-Adjudication-Category.html"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.reference">reference</a>" : "ValueSet/CARIN-BB-Adjudication-Category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Reference#Reference.display">display</a>" : "CARINBBAdjudicationCategory"
+        },
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CARINBBAdjudicationCategory",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a>" : false
       }
     ],
@@ -490,33 +839,23 @@ can only resize using html  or css ;-(
               "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown",
               "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "Claim_mapping.html",
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Claim mapping",
+                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "EOB_Inpatient_Facility_mapping.html",
+                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "EOB Inpatient Facility mapping",
                   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
                 },
                 {
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "Claim_Line_mapping.html",
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Claim Line mapping",
+                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "EOB_Outpatient_Facility_mapping.html",
+                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "EOB Outpatient Facility mapping",
                   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
                 },
                 {
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "Diagnosis_mapping.html",
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Diagnosis mapping",
+                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "EOB_Professional_Non-Clinician_mapping.html",
+                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "EOB Professional Non-Clinician mapping",
                   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
                 },
                 {
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "Procedure_mapping.html",
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Procedure mapping",
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
-                },
-                {
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "Member_mapping.html",
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Member mapping",
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
-                },
-                {
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "Coverage_mapping.html",
-                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Coverage mapping",
+                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "EOB_Pharmacy_mapping.html",
+                  "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "EOB Pharmacy mapping",
                   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
                 }
               ]
@@ -586,7 +925,7 @@ Formats: <a href="ImplementationGuide-carin-bb.html">Narrative</a>, <a href="Imp
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CARINBlueButton Version: 0.1.29  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.0</a> (IG Publisher v4.0.0-a53ec6ee1b) generated on Mon, Jun 10, 2019 10:55-0400.
+      CARINBlueButton Version: 0.1.32  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.0</a> (IG Publisher v4.0.0-a53ec6ee1b) generated on Sun, Jul 28, 2019 23:13-0400.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

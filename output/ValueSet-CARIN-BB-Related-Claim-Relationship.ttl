@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/CARIN-BB-Related-Claim-Relationship> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "CARIN-BB-Related-Claim-Relationship"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "2" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-07-27T07:01:18.000-04:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Related Claim Relationship Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-CARIN-BB-Related-Claim-Relationship.html\"><code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>prior</td><td>Prior claim</td><td/></tr><tr><td>replaced</td><td>Replaced claim</td><td/></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-relatedclaimrelationship"];
+  fhir:ValueSet.version [ fhir:value "0.1.32"];
+  fhir:ValueSet.name [ fhir:value "CARINBBRelatedClaimRelationship"];
+  fhir:ValueSet.title [ fhir:value "CARIN Blue Button Related Claim Relationship Value Set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2019-07-28T23:13:21-04:00"^^xsd:dateTime];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship" ];
+       fhir:ValueSet.compose.include.version [ fhir:value "1.0.0" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "prior" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prior claim" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "replaced" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Replaced claim" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/CARIN-BB-Related-Claim-Relationship.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/ValueSet/CARIN-BB-Related-Claim-Relationship.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,26 @@
+{
+  "resourceType": "ValueSet",
+  "id": "CARIN-BB-Discharge-Status",
+  "meta": {
+    "versionId": "3",
+    "lastUpdated": "2019-07-28T07:55:58.000-04:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Discharge Status Value Set</h2><div><p>UB04 (FL-17)</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html</code></li></ul></div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-discharge-status",
+  "version": "0.1.32",
+  "name": "CARINBBDischargeStatus",
+  "title": "CARIN Blue Button Discharge Status Value Set",
+  "status": "draft",
+  "date": "2019-07-28T23:13:21-04:00",
+  "description": "UB04 (FL-17)",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html"
+      }
+    ]
+  }
+}

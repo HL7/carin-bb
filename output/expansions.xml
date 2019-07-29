@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="6b756073-1d5b-4bed-b675-0b1e60dd1eed"/>
+  <id value="f6209e6b-552f-4998-9f8a-58c5d8ee1704"/>
   <meta>
-    <lastUpdated value="2019-06-10T10:55:46.998-04:00"/>
+    <lastUpdated value="2019-07-28T23:13:21.205-04:00"/>
   </meta>
   <type value="collection"/>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-snomedct-procedurecodes"/>
+    <resource>
+      <ValueSet>
+        <id value="CARIN-BB-SNOMEDCT-ProcedureCodes"/>
+        <meta>
+          <versionId value="4"/>
+          <lastUpdated value="2019-07-28T19:15:57.000-04:00"/>
+        </meta>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 0 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/ValueSet/procedure-code version 4.0.0</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-snomedct-procedurecodes"/>
+        <version value="0.1.32"/>
+        <name value="CARINBBSNOMEDCTProcedureCodes"/>
+        <title value="CARIN Blue Button SNOMEDCT Procedure Codes Value Set"/>
+        <status value="draft"/>
+        <date value="2019-07-28T23:13:21-04:00"/>
+        <description value="This value set includes codes from the following code systems:&#xA;&#xA;Include codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)"/>
+        <expansion>
+          <identifier value="urn:uuid:efc539cf-5e3a-4dac-a37a-8029695e4a9c"/>
+          <timestamp value="2019-07-28T23:14:00-04:00"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/ValueSet/procedure-code|4.0.0"/>
+          </parameter>
+          <parameter>
+            <name value="limitedExpansion"/>
+            <valueString value="-1"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueString value="http://snomed.info/sct?version=http://snomed.info/sct/20611000087101/version/20190430"/>
+          </parameter>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
 </Bundle>

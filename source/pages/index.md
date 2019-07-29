@@ -25,6 +25,9 @@ This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework
 See the [Table of Contents](toc.html) for more information.
 
 #### Latest Changes
+- (32) Added 4 specific EOB and 1 Coverage profiles
+- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile
+- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy
 - (29) Updated Provider and Claim Line Amounts mappings.
 - (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.
 - (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.

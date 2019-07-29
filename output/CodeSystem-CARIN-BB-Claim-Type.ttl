@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/CARIN-BB-Claim-Type> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "CARIN-BB-Claim-Type"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "2" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-07-27T05:06:45.000-04:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Type Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type defines many codes, but they are not represented here</p></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type"];
+  fhir:CodeSystem.version [ fhir:value "0.1.32"];
+  fhir:CodeSystem.name [ fhir:value "CARINBBClaimType"];
+  fhir:CodeSystem.title [ fhir:value "CARIN Blue Button Claim Type Code System"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2019-07-28T23:13:21-04:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "not-present"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "inpatient-facility" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Inpatient Facility" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "outpatient-facility" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Outpatient Facility" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "professional-nonclinician" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Professional or Non-Clinician" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "pharmacy" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Pharmacy" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "vision" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Vision" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "oral" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Oral" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/CARIN-BB-Claim-Type.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/CodeSystem/CARIN-BB-Claim-Type.ttl> .
+
+# -------------------------------------------------------------------------------------
+

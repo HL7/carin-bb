@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="CARIN-BB-Claim-CareTeam-Role"/>
+  <meta>
+    <versionId value="3"/>
+    <lastUpdated value="2019-07-27T07:57:01.000-04:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Claim Care Team Role Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole defines many codes, but they are not represented here</p></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole"/>
+  <version value="0.1.32"/>
+  <name value="CARINBBClaimCareTeamRole"/>
+  <title value="CARIN Blue Button Claim Care Team Role Code System"/>
+  <status value="draft"/>
+  <date value="2019-07-28T23:13:21-04:00"/>
+  <publisher value="CARIN Alliance"/>
+  <caseSensitive value="true"/>
+  <content value="not-present"/>
+  <concept>
+    <code value="supervising"/>
+    <display value="Attending or Supervising provider"/>
+  </concept>
+  <concept>
+    <code value="referring"/>
+    <display value="Referring provider"/>
+  </concept>
+  <concept>
+    <code value="performing"/>
+    <display value="Servicing or Rendering provider"/>
+  </concept>
+  <concept>
+    <code value="prescribing"/>
+    <display value="Prescribing provider"/>
+  </concept>
+  <concept>
+    <code value="pcp"/>
+    <display value="Primary care provider"/>
+  </concept>
+</CodeSystem>

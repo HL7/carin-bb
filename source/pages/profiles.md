@@ -27,27 +27,19 @@ active: profiles
 </thead>
 <tbody>
 <tr>
-<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute.html">CARINBBExplanationOfBenefitInstitutionalInpatientAcute</a></td>
+<td><a href="StructureDefinition-carin-bb-Coverage.html">CARINBBCoverage</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute.html">CARINBBExplanationOfBenefitInstitutionalInpatientNonAcute</a></td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit.html">CARINBBExplanationOfBenefit</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Outpatient.html">CARINBBExplanationOfBenefitInstitutionalOutpatient</a></td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inpatient-Facility.html">CARINBBExplanationOfBenefitInpatientFacility</a></td>
 <td></td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient.html">CARINBBExplanationOfBenefitNonPhysInpatient</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient.html">CARINBBExplanationOfBenefitNonPhysOutpatient</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Oral.html">CARINBBExplanationOfBenefitOral</a></td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.html">CARINBBExplanationOfBenefitOutpatientFacility</a></td>
 <td></td>
 </tr>
 <tr>
@@ -55,15 +47,7 @@ active: profiles
 <td></td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Inpatient.html">CARINBBExplanationOfBenefitProfessionalInpatient</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Outpatient.html">CARINBBExplanationOfBenefitProfessionalOutpatient</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Vision.html">CARINBBExplanationOfBenefitVision</a></td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Professional-NonClinician.html">CARINBBExplanationOfBenefitProfessionalNonClinician</a></td>
 <td></td>
 </tr>
 </tbody>

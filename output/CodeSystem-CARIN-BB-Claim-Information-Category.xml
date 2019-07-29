@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="CARIN-BB-Claim-Information-Category"/>
+  <meta>
+    <versionId value="4"/>
+    <lastUpdated value="2019-07-27T19:58:17.000-04:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Claim Information Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory defines many codes, but they are not represented here</p></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory"/>
+  <version value="0.1.32"/>
+  <name value="CARINBBClaimInformationCategory"/>
+  <title value="CARIN Blue Button Claim Information Category Code System"/>
+  <status value="draft"/>
+  <date value="2019-07-28T23:13:21-04:00"/>
+  <publisher value="CARIN Alliance"/>
+  <caseSensitive value="true"/>
+  <content value="not-present"/>
+  <concept>
+    <code value="billingnetworkcontractingstatus"/>
+    <display value="billingnetworkcontractingstatus"/>
+  </concept>
+  <concept>
+    <code value="attendingnetworkcontractingstatus"/>
+    <display value="attendingnetworkcontractingstatus"/>
+  </concept>
+  <concept>
+    <code value="sitenetworkcontractingstatus"/>
+    <display value="sitenetworkcontractingstatus"/>
+  </concept>
+  <concept>
+    <code value="referringnetworkcontractingstatus"/>
+    <display value="referringnetworkcontractingstatus"/>
+  </concept>
+  <concept>
+    <code value="performingnetworkcontractingstatus"/>
+    <display value="performingnetworkcontractingstatus"/>
+  </concept>
+  <concept>
+    <code value="prescribingnetworkcontractingstatus"/>
+    <display value="prescribingnetworkcontractingstatus"/>
+  </concept>
+  <concept>
+    <code value="clmrecvddate"/>
+    <display value="clmrecvddate"/>
+  </concept>
+  <concept>
+    <code value="typeofservice"/>
+    <display value="typeofservice for inpatient"/>
+  </concept>
+  <concept>
+    <code value="tob-typeoffacility"/>
+    <display value="tob-typeoffacility"/>
+  </concept>
+  <concept>
+    <code value="tob-billclassification"/>
+    <display value="tob-billclassification"/>
+  </concept>
+  <concept>
+    <code value="tob-frequency"/>
+    <display value="tob-frequency"/>
+  </concept>
+  <concept>
+    <code value="admsrc"/>
+    <display value="admsrc"/>
+  </concept>
+  <concept>
+    <code value="admtype"/>
+    <display value="admtype"/>
+  </concept>
+  <concept>
+    <code value="discharge-status"/>
+    <display value="discharge-status"/>
+  </concept>
+  <concept>
+    <code value="ms-drg"/>
+    <display value="ms-drg"/>
+  </concept>
+  <concept>
+    <code value="placeofservice"/>
+    <display value="placeofservice"/>
+  </concept>
+  <concept>
+    <code value="dayssupply"/>
+    <display value="Days supply"/>
+  </concept>
+  <concept>
+    <code value="dawcode"/>
+    <display value="DAW code"/>
+  </concept>
+  <concept>
+    <code value="refillnum"/>
+    <display value="Refill Num"/>
+  </concept>
+  <concept>
+    <code value="rxorigincode"/>
+    <display value="RX origin Code"/>
+  </concept>
+  <concept>
+    <code value="brandgenericcode"/>
+    <display value="Brand generic code"/>
+  </concept>
+</CodeSystem>

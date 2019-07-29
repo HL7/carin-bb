@@ -1,0 +1,99 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/CARIN-BB-Adjudication-Category> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "CARIN-BB-Adjudication-Category"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "2" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-07-28T22:43:49.000-04:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Adjudication Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory defines many codes, but they are not represented here</p></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory"];
+  fhir:CodeSystem.version [ fhir:value "0.1.32"];
+  fhir:CodeSystem.name [ fhir:value "CARINBBAdjudicationCategory"];
+  fhir:CodeSystem.title [ fhir:value "CARIN Blue Button Claim Adjudication Category Code System"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2019-07-27T00:00:00-04:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "not-present"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "benefitPaymentStatusCode" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Benefit payment status code" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Benefit payment status code" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "paymentDenialCode" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Payment denial code" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Payment Denial Code" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "submittedamount" ];
+     fhir:CodeSystem.concept.display [ fhir:value "submitted amount" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "allowedamount" ];
+     fhir:CodeSystem.concept.display [ fhir:value "allowed amount" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "deductibleamount" ];
+     fhir:CodeSystem.concept.display [ fhir:value "deductible amount" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "coinsuranceamount" ];
+     fhir:CodeSystem.concept.display [ fhir:value "coinsurance amount" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "copayamount" ];
+     fhir:CodeSystem.concept.display [ fhir:value "copay amount" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "noncoveredamount" ];
+     fhir:CodeSystem.concept.display [ fhir:value "noncovered amount" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "cobamount" ];
+     fhir:CodeSystem.concept.display [ fhir:value "cob amount" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "paymentamount" ];
+     fhir:CodeSystem.concept.display [ fhir:value "payment amount" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "patientpayamount" ];
+     fhir:CodeSystem.concept.display [ fhir:value "patient pay amount" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "denialreason" ];
+     fhir:CodeSystem.concept.display [ fhir:value "payment denial reason" ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "innetworkbenefitpaymentstatus" ];
+     fhir:CodeSystem.concept.display [ fhir:value "in network benefit payment status" ]
+  ], [
+     fhir:index 13;
+     fhir:CodeSystem.concept.code [ fhir:value "outofnetworkbenefitpaymentstatus" ];
+     fhir:CodeSystem.concept.display [ fhir:value "out of network benefit payment status" ]
+  ], [
+     fhir:index 14;
+     fhir:CodeSystem.concept.code [ fhir:value "otherbenefitpaymentstatus" ];
+     fhir:CodeSystem.concept.display [ fhir:value "other benefit payment status" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/CARIN-BB-Adjudication-Category.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/CodeSystem/CARIN-BB-Adjudication-Category.ttl> .
+
+# -------------------------------------------------------------------------------------
+

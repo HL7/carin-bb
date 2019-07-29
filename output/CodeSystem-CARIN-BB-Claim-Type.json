@@ -1,0 +1,47 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "CARIN-BB-Claim-Type",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2019-07-27T05:06:45.000-04:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Type Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type defines many codes, but they are not represented here</p></div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type",
+  "version": "0.1.32",
+  "name": "CARINBBClaimType",
+  "title": "CARIN Blue Button Claim Type Code System",
+  "status": "draft",
+  "date": "2019-07-28T23:13:21-04:00",
+  "publisher": "CARIN Alliance",
+  "caseSensitive": true,
+  "content": "not-present",
+  "concept": [
+    {
+      "code": "inpatient-facility",
+      "display": "Inpatient Facility"
+    },
+    {
+      "code": "outpatient-facility",
+      "display": "Outpatient Facility"
+    },
+    {
+      "code": "professional-nonclinician",
+      "display": "Professional or Non-Clinician"
+    },
+    {
+      "code": "pharmacy",
+      "display": "Pharmacy"
+    },
+    {
+      "code": "vision",
+      "display": "Vision"
+    },
+    {
+      "code": "oral",
+      "display": "Oral"
+    }
+  ]
+}

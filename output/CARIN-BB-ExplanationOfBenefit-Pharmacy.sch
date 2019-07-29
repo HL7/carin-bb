@@ -3,12 +3,33 @@
   <sch:ns prefix="f" uri="http://hl7.org/fhir"/>
   <sch:ns prefix="h" uri="http://www.w3.org/1999/xhtml"/>
   <!-- 
-    This file contains just the constraints for the profile ExplanationOfBenefit
+    This file contains just the constraints for the profile CARINBBExplanationOfBenefit
     It includes the base constraints for the resource as well.
     Because of the way that schematrons and containment work, 
     you may need to use this schematron fragment to build a, 
     single schematron that validates contained resources (if you have any) 
   -->
+  <sch:pattern>
+    <sch:title>f:ExplanationOfBenefit</sch:title>
+    <sch:rule context="f:ExplanationOfBenefit">
+      <sch:assert test="count(f:extension) &lt;= 0">extension: maximum cardinality of 'extension' is 0</sch:assert>
+      <sch:assert test="count(f:modifierExtension) &lt;= 0">modifierExtension: maximum cardinality of 'modifierExtension' is 0</sch:assert>
+      <sch:assert test="count(f:subType) &lt;= 0">subType: maximum cardinality of 'subType' is 0</sch:assert>
+      <sch:assert test="count(f:priority) &lt;= 0">priority: maximum cardinality of 'priority' is 0</sch:assert>
+      <sch:assert test="count(f:fundsReserveRequested) &lt;= 0">fundsReserveRequested: maximum cardinality of 'fundsReserveRequested' is 0</sch:assert>
+      <sch:assert test="count(f:fundsReserve) &lt;= 0">fundsReserve: maximum cardinality of 'fundsReserve' is 0</sch:assert>
+      <sch:assert test="count(f:facility) &lt;= 0">facility: maximum cardinality of 'facility' is 0</sch:assert>
+      <sch:assert test="count(f:claim) &lt;= 0">claim: maximum cardinality of 'claim' is 0</sch:assert>
+      <sch:assert test="count(f:claimResponse) &lt;= 0">claimResponse: maximum cardinality of 'claimResponse' is 0</sch:assert>
+      <sch:assert test="count(f:disposition) &lt;= 0">disposition: maximum cardinality of 'disposition' is 0</sch:assert>
+      <sch:assert test="count(f:preAuthRef) &lt;= 0">preAuthRef: maximum cardinality of 'preAuthRef' is 0</sch:assert>
+      <sch:assert test="count(f:preAuthRefPeriod) &lt;= 0">preAuthRefPeriod: maximum cardinality of 'preAuthRefPeriod' is 0</sch:assert>
+      <sch:assert test="count(f:accident) &lt;= 0">accident: maximum cardinality of 'accident' is 0</sch:assert>
+      <sch:assert test="count(f:form) &lt;= 0">form: maximum cardinality of 'form' is 0</sch:assert>
+      <sch:assert test="count(f:processNote) &lt;= 0">processNote: maximum cardinality of 'processNote' is 0</sch:assert>
+      <sch:assert test="count(f:benefitBalance) &lt;= 0">benefitBalance: maximum cardinality of 'benefitBalance' is 0</sch:assert>
+    </sch:rule>
+  </sch:pattern>
   <sch:pattern>
     <sch:title>ExplanationOfBenefit</sch:title>
     <sch:rule context="f:ExplanationOfBenefit">
@@ -17,6 +38,12 @@
       <sch:assert test="not(exists(for $contained in f:contained return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))">If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource (inherited)</sch:assert>
       <sch:assert test="exists(f:text/h:div)">A resource should have narrative for robust management (inherited)</sch:assert>
       <sch:assert test="not(exists(f:contained/*/f:meta/f:security))">If a resource is contained in another resource, it SHALL NOT have a security label (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:ExplanationOfBenefit/f:related</sch:title>
+    <sch:rule context="f:ExplanationOfBenefit/f:related">
+      <sch:assert test="count(f:relationship) &gt;= 1">relationship: minimum cardinality of 'relationship' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -40,6 +67,13 @@
   <sch:pattern>
     <sch:title>ExplanationOfBenefit.supportingInfo</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:supportingInfo">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -65,6 +99,14 @@
     <sch:title>ExplanationOfBenefit.accident</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:accident">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:ExplanationOfBenefit/f:item</sch:title>
+    <sch:rule context="f:ExplanationOfBenefit/f:item">
+      <sch:assert test="count(f:id) &lt;= 0">id: maximum cardinality of 'id' is 0</sch:assert>
+      <sch:assert test="count(f:extension) &lt;= 0">extension: maximum cardinality of 'extension' is 0</sch:assert>
+      <sch:assert test="count(f:modifierExtension) &lt;= 0">modifierExtension: maximum cardinality of 'modifierExtension' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

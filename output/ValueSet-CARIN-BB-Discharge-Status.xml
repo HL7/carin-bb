@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="CARIN-BB-Discharge-Status"/>
+  <meta>
+    <versionId value="3"/>
+    <lastUpdated value="2019-07-28T07:55:58.000-04:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Discharge Status Value Set</h2><div><p>UB04 (FL-17)</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html</code></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-discharge-status"/>
+  <version value="0.1.32"/>
+  <name value="CARINBBDischargeStatus"/>
+  <title value="CARIN Blue Button Discharge Status Value Set"/>
+  <status value="draft"/>
+  <date value="2019-07-28T23:13:21-04:00"/>
+  <description value="UB04 (FL-17)"/>
+  <compose>
+    <include>
+      <system value="https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html"/>
+    </include>
+  </compose>
+</ValueSet>

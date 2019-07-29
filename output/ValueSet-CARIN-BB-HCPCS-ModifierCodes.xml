@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="CARIN-BB-HCPCS-ModifierCodes"/>
+  <meta>
+    <versionId value="3"/>
+    <lastUpdated value="2019-07-28T19:07:07.000-04:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button HCPCS Modifier Codes Value Set</h2><div><p>HCPCS Release &amp; Code Sets
+This file contains the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage, and pricing data.  The Level II HCPCS codes, which are established by CMS's Alpha-Numeric Editorial Panel, primarily represent items and supplies and non-physician services not covered by the American Medical Association's Current Procedural Terminology-4 (CPT-4) codes; Medicare, Medicaid, and private health insurers use HCPCS procedure and modifier codes for claims processing.  Level II alphanumeric procedure and modifier codes comprise the A to V range.</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html</code></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-hcpcs-modifiercodes"/>
+  <version value="0.1.32"/>
+  <name value="CARINBBHCPCSModifierCodes"/>
+  <title value="CARIN Blue Button HCPCS Modifier Codes Value Set"/>
+  <status value="draft"/>
+  <date value="2019-07-28T23:13:21-04:00"/>
+  <description value="HCPCS Release &amp; Code Sets&#xA;This file contains the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage, and pricing data.  The Level II HCPCS codes, which are established by CMS&#39;s Alpha-Numeric Editorial Panel, primarily represent items and supplies and non-physician services not covered by the American Medical Association&#39;s Current Procedural Terminology-4 (CPT-4) codes; Medicare, Medicaid, and private health insurers use HCPCS procedure and modifier codes for claims processing.  Level II alphanumeric procedure and modifier codes comprise the A to V range."/>
+  <compose>
+    <include>
+      <system value="https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,102 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "CARIN-BB-Claim-Information-Category",
+	"meta": {
+		"versionId": "4",
+		"lastUpdated": "2019-07-27T19:58:17.000-04:00"
+	},
+	"url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+	"version": "1.0.0",
+	"name": "CARINBBClaimInformationCategory",
+	"title": "CARIN Blue Button Claim Information Category Code System",
+	"status": "draft",
+	"publisher": "CARIN Alliance",
+	"caseSensitive": true,
+	"content": "not-present",
+	"concept": [
+		{
+			"code": "billingnetworkcontractingstatus",
+			"display": "billingnetworkcontractingstatus"
+		},
+		{
+			"code": "attendingnetworkcontractingstatus",
+			"display": "attendingnetworkcontractingstatus"
+		},
+		{
+			"code": "sitenetworkcontractingstatus",
+			"display": "sitenetworkcontractingstatus"
+		},
+		{
+			"code": "referringnetworkcontractingstatus",
+			"display": "referringnetworkcontractingstatus"
+		},
+		{
+			"code": "performingnetworkcontractingstatus",
+			"display": "performingnetworkcontractingstatus"
+		},
+		{
+			"code": "prescribingnetworkcontractingstatus",
+			"display": "prescribingnetworkcontractingstatus"
+		},
+		{
+			"code": "clmrecvddate",
+			"display": "clmrecvddate"
+		},
+		{
+			"code": "typeofservice",
+			"display": "typeofservice for inpatient"
+		},
+		{
+			"code": "tob-typeoffacility",
+			"display": "tob-typeoffacility"
+		},
+		{
+			"code": "tob-billclassification",
+			"display": "tob-billclassification"
+		},
+		{
+			"code": "tob-frequency",
+			"display": "tob-frequency"
+		},
+		{
+			"code": "admsrc",
+			"display": "admsrc"
+		},
+		{
+			"code": "admtype",
+			"display": "admtype"
+		},
+		{
+			"code": "discharge-status",
+			"display": "discharge-status"
+		},
+		{
+			"code": "ms-drg",
+			"display": "ms-drg"
+		},
+		{
+			"code": "placeofservice",
+			"display": "placeofservice"
+		},
+		{
+			"code": "dayssupply",
+			"display": "Days supply"
+		},
+		{
+			"code": "dawcode",
+			"display": "DAW code"
+		},
+		{
+			"code": "refillnum",
+			"display": "Refill Num"
+		},
+		{
+			"code": "rxorigincode",
+			"display": "RX origin Code"
+		},
+		{
+			"code": "brandgenericcode",
+			"display": "Brand generic code"
+		}
+	]
+}

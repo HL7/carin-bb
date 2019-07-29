@@ -1,0 +1,100 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/CARIN-BB-Adjudication-Category> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "CARIN-BB-Adjudication-Category"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-07-28T22:34:46.000-04:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Adjudication Category Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>benefitPaymentStatusCode</td><td>Benefit payment status code</td><td/></tr><tr><td>paymentDenialCode</td><td>Payment denial code</td><td/></tr><tr><td>submittedamount</td><td>submitted amount</td><td/></tr><tr><td>allowedamount</td><td>allowed amount</td><td/></tr><tr><td>deductibleamount</td><td>deductible amount</td><td/></tr><tr><td>coinsuranceamount</td><td>coinsurance amount</td><td/></tr><tr><td>copayamount</td><td>copay amount</td><td/></tr><tr><td>noncoveredamount</td><td>noncovered amount</td><td/></tr><tr><td>cobamount</td><td>cob amount</td><td/></tr><tr><td>paymentamount</td><td>payment amount</td><td/></tr><tr><td>patientpayamount</td><td>patient pay amount</td><td/></tr><tr><td>denialreason</td><td>payment denial reason</td><td/></tr><tr><td>innetworkbenefitpaymentstatus</td><td>in network benefit payment status</td><td/></tr><tr><td>outofnetworkbenefitpaymentstatus</td><td>out of network benefit payment status</td><td/></tr><tr><td>otherbenefitpaymentstatus</td><td>other benefit payment status</td><td/></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationcategory"];
+  fhir:ValueSet.version [ fhir:value "0.1.32"];
+  fhir:ValueSet.name [ fhir:value "CARINBBAdjudicationCategory"];
+  fhir:ValueSet.title [ fhir:value "CARIN Blue Button Claim Adjudication Category Value Set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2019-07-28T23:13:21-04:00"^^xsd:dateTime];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "benefitPaymentStatusCode" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Benefit payment status code" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "paymentDenialCode" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Payment denial code" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "submittedamount" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "submitted amount" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "allowedamount" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "allowed amount" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "deductibleamount" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "deductible amount" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "coinsuranceamount" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "coinsurance amount" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "copayamount" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "copay amount" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "noncoveredamount" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "noncovered amount" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "cobamount" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "cob amount" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "paymentamount" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "payment amount" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "patientpayamount" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "patient pay amount" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "denialreason" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "payment denial reason" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "innetworkbenefitpaymentstatus" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "in network benefit payment status" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "outofnetworkbenefitpaymentstatus" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "out of network benefit payment status" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "otherbenefitpaymentstatus" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "other benefit payment status" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/CARIN-BB-Adjudication-Category.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/ValueSet/CARIN-BB-Adjudication-Category.ttl> .
+
+# -------------------------------------------------------------------------------------
+

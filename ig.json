@@ -94,54 +94,148 @@
 		}
 	},
 	"resources": {
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Outpatient-Facility": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility-definitions.html"
+		},
+		"CodeSystem/CARIN-BB-Claim-Information-Category": {
+			"base": "CodeSystem-CARIN-BB-Claim-Information-Category.html",
+			"defns": "CodeSystem-CARIN-BB-Claim-Information-Category-definitions.html"
+		},
 		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy": {
 			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html",
 			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy-definitions.html"
 		},
-		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Vision": {
-			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Vision.html",
-			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Vision-definitions.html"
+		"ValueSet/CARIN-BB-Related-Claim-Relationship": {
+			"base": "ValueSet-CARIN-BB-Related-Claim-Relationship.html",
+			"defns": "ValueSet-CARIN-BB-Related-Claim-Relationship-definitions.html"
 		},
-		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Oral": {
-			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Oral.html",
-			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Oral-definitions.html"
+		"StructureDefinition/carin-bb-Coverage": {
+			"base": "StructureDefinition-carin-bb-Coverage.html",
+			"defns": "StructureDefinition-carin-bb-Coverage-definitions.html"
 		},
-		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute": {
-			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute.html",
-			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-Acute-definitions.html"
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inpatient-Facility": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inpatient-Facility.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inpatient-Facility-definitions.html"
 		},
-		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute": {
-			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute.html",
-			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Inpatient-NonAcute-definitions.html"
+		"ValueSet/CARIN-BB-Claim-Type": {
+			"base": "ValueSet-CARIN-BB-Claim-Type.html",
+			"defns": "ValueSet-CARIN-BB-Claim-Type-definitions.html"
 		},
-		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inst-Outpatient": {
-			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Outpatient.html",
-			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inst-Outpatient-definitions.html"
+		"CodeSystem/CARIN-BB-Claim-Type": {
+			"base": "CodeSystem-CARIN-BB-Claim-Type.html",
+			"defns": "CodeSystem-CARIN-BB-Claim-Type-definitions.html"
 		},
-		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Prof-Inpatient": {
-			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Inpatient.html",
-			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Inpatient-definitions.html"
+		"CodeSystem/CARIN-BB-Related-Claim-Relationship": {
+			"base": "CodeSystem-CARIN-BB-Related-Claim-Relationship.html",
+			"defns": "CodeSystem-CARIN-BB-Related-Claim-Relationship-definitions.html"
 		},
-		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Prof-Outpatient": {
-			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Outpatient.html",
-			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Prof-Outpatient-definitions.html"
+		"ValueSet/CARIN-BB-Claim-CareTeam-Role": {
+			"base": "ValueSet-CARIN-BB-Claim-CareTeam-Role.html",
+			"defns": "ValueSet-CARIN-BB-Claim-CareTeam-Role-definitions.html"
 		},
-		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient": {
-			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient.html",
-			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Inpatient-definitions.html"
+		"CodeSystem/CARIN-BB-Claim-CareTeam-Role": {
+			"base": "CodeSystem-CARIN-BB-Claim-CareTeam-Role.html",
+			"defns": "CodeSystem-CARIN-BB-Claim-CareTeam-Role-definitions.html"
 		},
-		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient": {
-			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient.html",
-			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-NonPhys-Outpatient-definitions.html"
+		"ValueSet/CARIN-BB-DiagnosisType": {
+			"base": "ValueSet-CARIN-BB-DiagnosisType.html",
+			"defns": "ValueSet-CARIN-BB-DiagnosisType-definitions.html"
+		},
+		"ValueSet/CARIN-BB-Revenue-Center": {
+			"base": "ValueSet-CARIN-BB-Revenue-Center.html",
+			"defns": "ValueSet-CARIN-BB-Revenue-Center-definitions.html"
+		},
+		"ValueSet/CARIN-BB-Adjudication-Amount-Category": {
+			"base": "ValueSet-CARIN-BB-Adjudication-Amount-Category.html",
+			"defns": "ValueSet-CARIN-BB-Adjudication-Amount-Category-definitions.html"
+		},
+		"CodeSystem/CARIN-BB-Adjudication-Category": {
+			"base": "CodeSystem-CARIN-BB-Adjudication-Category.html",
+			"defns": "CodeSystem-CARIN-BB-Adjudication-Category-definitions.html"
+		},
+		"ValueSet/CARIN-BB-Adjudication-Denial-Reason": {
+			"base": "ValueSet-CARIN-BB-Adjudication-Denial-Reason.html",
+			"defns": "ValueSet-CARIN-BB-Adjudication-Denial-Reason-definitions.html"
+		},
+		"ValueSet/CARIN-BB-Network-Contracting-Status": {
+			"base": "ValueSet-CARIN-BB-Network-Contracting-Status.html",
+			"defns": "ValueSet-CARIN-BB-Network-Contracting-Status-definitions.html"
+		},
+		"CodeSystem/CARIN-BB-Network-Contracting-Status": {
+			"base": "CodeSystem-CARIN-BB-Network-Contracting-Status.html",
+			"defns": "CodeSystem-CARIN-BB-Network-Contracting-Status-definitions.html"
+		},
+		"ValueSet/CARIN-BB-TypeOfService": {
+			"base": "ValueSet-CARIN-BB-TypeOfService.html",
+			"defns": "ValueSet-CARIN-BB-TypeOfService-definitions.html"
+		},
+		"ValueSet/CARIN-BB-TOB-TypeOfFacility": {
+			"base": "ValueSet-CARIN-BB-TOB-TypeOfFacility.html",
+			"defns": "ValueSet-CARIN-BB-TOB-TypeOfFacility-definitions.html"
+		},
+		"ValueSet/CARIN-BB-TOB-Frequency": {
+			"base": "ValueSet-CARIN-BB-TOB-Frequency.html",
+			"defns": "ValueSet-CARIN-BB-TOB-Frequency-definitions.html"
+		},
+		"ValueSet/CARIN-BB-TOB-BillClassification": {
+			"base": "ValueSet-CARIN-BB-TOB-BillClassification.html",
+			"defns": "ValueSet-CARIN-BB-TOB-BillClassification-definitions.html"
+		},
+		"ValueSet/CARIN-BB-AdmitType": {
+			"base": "ValueSet-CARIN-BB-AdmitType.html",
+			"defns": "ValueSet-CARIN-BB-AdmitType-definitions.html"
+		},
+		"ValueSet/CARIN-BB-AdmitSource": {
+			"base": "ValueSet-CARIN-BB-AdmitSource.html",
+			"defns": "ValueSet-CARIN-BB-AdmitSource-definitions.html"
+		},
+		"ValueSet/CARIN-BB-Discharge-Status": {
+			"base": "ValueSet-CARIN-BB-Discharge-Status.html",
+			"defns": "ValueSet-CARIN-BB-Discharge-Status-definitions.html"
+		},
+		"ValueSet/CARIN-BB-MS-DRG": {
+			"base": "ValueSet-CARIN-BB-MS-DRG.html",
+			"defns": "ValueSet-CARIN-BB-MS-DRG-definitions.html"
+		},
+		"ValueSet/CARIN-BB-Claim-Information-Category": {
+			"base": "ValueSet-CARIN-BB-Claim-Information-Category.html",
+			"defns": "ValueSet-CARIN-BB-Claim-Information-Category-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician": {
+			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Professional-NonClinician.html",
+			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Professional-NonClinician-definitions.html"
+		},
+		"ValueSet/CARIN-BB-SNOMEDCT-ProcedureCodes": {
+			"base": "ValueSet-CARIN-BB-SNOMEDCT-ProcedureCodes.html",
+			"defns": "ValueSet-CARIN-BB-SNOMEDCT-ProcedureCodes-definitions.html"
+		},
+		"ValueSet/CARIN-BB-CPT-HCPCS-ProcedureCodes": {
+			"base": "ValueSet-CARIN-BB-CPT-HCPCS-ProcedureCodes.html",
+			"defns": "ValueSet-CARIN-BB-CPT-HCPCS-ProcedureCodes-definitions.html"
+		},
+		"ValueSet/CARIN-BB-HCPCS-ModifierCodes": {
+			"base": "ValueSet-CARIN-BB-HCPCS-ModifierCodes.html",
+			"defns": "ValueSet-CARIN-BB-HCPCS-ModifierCodes-definitions.html"
+		},
+		"ValueSet/CARIN-BB-Adjudication-Benefit-Payment-Status-Category": {
+			"base": "ValueSet-CARIN-BB-Adjudication-Benefit-Payment-Status-Category.html",
+			"defns": "ValueSet-CARIN-BB-Adjudication-Benefit-Payment-Status-Category-definitions.html"
+		},
+		"ValueSet/CARIN-BB-PlaceOfService": {
+			"base": "ValueSet-CARIN-BB-PlaceOfService.html",
+			"defns": "ValueSet-CARIN-BB-PlaceOfService-definitions.html"
+		},
+		"ValueSet/CARIN-BB-Adjudication-Category": {
+			"base": "ValueSet-CARIN-BB-Adjudication-Category.html",
+			"defns": "ValueSet-CARIN-BB-Adjudication-Category-definitions.html"
 		}
 	},
 	"version": "4.0.0",
-	"fixed-business-version": "0.1.29",
-	"dependencyList": [
-		{
-			"location": "http://hl7.org/fhir/us/core",
-			"name": "USCoreR4",
-			"version": "current"
-		}
-	]
+	"fixed-business-version": "0.1.32",
+	"dependencyList": []
 }

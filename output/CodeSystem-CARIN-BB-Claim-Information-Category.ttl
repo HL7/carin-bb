@@ -1,0 +1,121 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/CARIN-BB-Claim-Information-Category> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "CARIN-BB-Claim-Information-Category"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-07-27T19:58:17.000-04:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Information Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory defines many codes, but they are not represented here</p></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory"];
+  fhir:CodeSystem.version [ fhir:value "0.1.32"];
+  fhir:CodeSystem.name [ fhir:value "CARINBBClaimInformationCategory"];
+  fhir:CodeSystem.title [ fhir:value "CARIN Blue Button Claim Information Category Code System"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2019-07-28T23:13:21-04:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "not-present"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "billingnetworkcontractingstatus" ];
+     fhir:CodeSystem.concept.display [ fhir:value "billingnetworkcontractingstatus" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "attendingnetworkcontractingstatus" ];
+     fhir:CodeSystem.concept.display [ fhir:value "attendingnetworkcontractingstatus" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "sitenetworkcontractingstatus" ];
+     fhir:CodeSystem.concept.display [ fhir:value "sitenetworkcontractingstatus" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "referringnetworkcontractingstatus" ];
+     fhir:CodeSystem.concept.display [ fhir:value "referringnetworkcontractingstatus" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "performingnetworkcontractingstatus" ];
+     fhir:CodeSystem.concept.display [ fhir:value "performingnetworkcontractingstatus" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "prescribingnetworkcontractingstatus" ];
+     fhir:CodeSystem.concept.display [ fhir:value "prescribingnetworkcontractingstatus" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "clmrecvddate" ];
+     fhir:CodeSystem.concept.display [ fhir:value "clmrecvddate" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "typeofservice" ];
+     fhir:CodeSystem.concept.display [ fhir:value "typeofservice for inpatient" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "tob-typeoffacility" ];
+     fhir:CodeSystem.concept.display [ fhir:value "tob-typeoffacility" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "tob-billclassification" ];
+     fhir:CodeSystem.concept.display [ fhir:value "tob-billclassification" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "tob-frequency" ];
+     fhir:CodeSystem.concept.display [ fhir:value "tob-frequency" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "admsrc" ];
+     fhir:CodeSystem.concept.display [ fhir:value "admsrc" ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "admtype" ];
+     fhir:CodeSystem.concept.display [ fhir:value "admtype" ]
+  ], [
+     fhir:index 13;
+     fhir:CodeSystem.concept.code [ fhir:value "discharge-status" ];
+     fhir:CodeSystem.concept.display [ fhir:value "discharge-status" ]
+  ], [
+     fhir:index 14;
+     fhir:CodeSystem.concept.code [ fhir:value "ms-drg" ];
+     fhir:CodeSystem.concept.display [ fhir:value "ms-drg" ]
+  ], [
+     fhir:index 15;
+     fhir:CodeSystem.concept.code [ fhir:value "placeofservice" ];
+     fhir:CodeSystem.concept.display [ fhir:value "placeofservice" ]
+  ], [
+     fhir:index 16;
+     fhir:CodeSystem.concept.code [ fhir:value "dayssupply" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Days supply" ]
+  ], [
+     fhir:index 17;
+     fhir:CodeSystem.concept.code [ fhir:value "dawcode" ];
+     fhir:CodeSystem.concept.display [ fhir:value "DAW code" ]
+  ], [
+     fhir:index 18;
+     fhir:CodeSystem.concept.code [ fhir:value "refillnum" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Refill Num" ]
+  ], [
+     fhir:index 19;
+     fhir:CodeSystem.concept.code [ fhir:value "rxorigincode" ];
+     fhir:CodeSystem.concept.display [ fhir:value "RX origin Code" ]
+  ], [
+     fhir:index 20;
+     fhir:CodeSystem.concept.code [ fhir:value "brandgenericcode" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Brand generic code" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/CARIN-BB-Claim-Information-Category.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/CodeSystem/CARIN-BB-Claim-Information-Category.ttl> .
+
+# -------------------------------------------------------------------------------------
+

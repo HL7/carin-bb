@@ -1,0 +1,31 @@
+{
+	"resourceType": "ValueSet",
+	"id": "CARIN-BB-Related-Claim-Relationship",
+	"meta": {
+		"versionId": "2",
+		"lastUpdated": "2019-07-27T07:01:18.000-04:00"
+	},
+	"url": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-relatedclaimrelationship",
+	"version": "1.0.0",
+	"name": "CARINBBRelatedClaimRelationship",
+	"title": "CARIN Blue Button Related Claim Relationship Value Set",
+	"status": "draft",
+	"compose": {
+		"include": [
+			{
+				"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship",
+				"version": "1.0.0",
+				"concept": [
+					{
+						"code": "prior",
+						"display": "Prior claim"
+					},
+					{
+						"code": "replaced",
+						"display": "Replaced claim"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="CARIN-BB-TOB-TypeOfFacility"/>
+  <meta>
+    <versionId value="3"/>
+    <lastUpdated value="2019-07-28T07:01:45.000-04:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Type Of Bill (Type Of Facility) Value Set</h2><div><p>UB-04 Type of Bill (FL-4) structure - Type of facility</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html</code></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-tob-typeoffacility"/>
+  <version value="0.1.32"/>
+  <name value="CARINBBTOBTypeOfFacility"/>
+  <title value="CARIN Blue Button Type Of Bill (Type Of Facility) Value Set"/>
+  <status value="draft"/>
+  <date value="2019-07-28T23:13:21-04:00"/>
+  <description value="UB-04 Type of Bill (FL-4) structure - Type of facility&#xA;"/>
+  <compose>
+    <include>
+      <system value="https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html"/>
+    </include>
+  </compose>
+</ValueSet>

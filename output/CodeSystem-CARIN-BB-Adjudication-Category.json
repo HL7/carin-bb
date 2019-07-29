@@ -1,0 +1,85 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "CARIN-BB-Adjudication-Category",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2019-07-28T22:43:49.000-04:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Adjudication Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory defines many codes, but they are not represented here</p></div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+  "version": "0.1.32",
+  "name": "CARINBBAdjudicationCategory",
+  "title": "CARIN Blue Button Claim Adjudication Category Code System",
+  "status": "draft",
+  "date": "2019-07-27T00:00:00-04:00",
+  "publisher": "CARIN Alliance",
+  "caseSensitive": true,
+  "content": "not-present",
+  "concept": [
+    {
+      "code": "benefitPaymentStatusCode",
+      "display": "Benefit payment status code",
+      "definition": "Benefit payment status code"
+    },
+    {
+      "code": "paymentDenialCode",
+      "display": "Payment denial code",
+      "definition": "Payment Denial Code"
+    },
+    {
+      "code": "submittedamount",
+      "display": "submitted amount"
+    },
+    {
+      "code": "allowedamount",
+      "display": "allowed amount"
+    },
+    {
+      "code": "deductibleamount",
+      "display": "deductible amount"
+    },
+    {
+      "code": "coinsuranceamount",
+      "display": "coinsurance amount"
+    },
+    {
+      "code": "copayamount",
+      "display": "copay amount"
+    },
+    {
+      "code": "noncoveredamount",
+      "display": "noncovered amount"
+    },
+    {
+      "code": "cobamount",
+      "display": "cob amount"
+    },
+    {
+      "code": "paymentamount",
+      "display": "payment amount"
+    },
+    {
+      "code": "patientpayamount",
+      "display": "patient pay amount"
+    },
+    {
+      "code": "denialreason",
+      "display": "payment denial reason"
+    },
+    {
+      "code": "innetworkbenefitpaymentstatus",
+      "display": "in network benefit payment status"
+    },
+    {
+      "code": "outofnetworkbenefitpaymentstatus",
+      "display": "out of network benefit payment status"
+    },
+    {
+      "code": "otherbenefitpaymentstatus",
+      "display": "other benefit payment status"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="CARIN-BB-MS-DRG"/>
+  <meta>
+    <versionId value="2"/>
+    <lastUpdated value="2019-07-28T08:00:25.000-04:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button MS-DRG Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html</code></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-ms-drg"/>
+  <version value="0.1.32"/>
+  <name value="CARINBBMSDRG"/>
+  <title value="CARIN Blue Button MS-DRG Value Set"/>
+  <status value="draft"/>
+  <date value="2019-07-28T23:13:21-04:00"/>
+  <compose>
+    <include>
+      <system value="https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html"/>
+    </include>
+  </compose>
+</ValueSet>

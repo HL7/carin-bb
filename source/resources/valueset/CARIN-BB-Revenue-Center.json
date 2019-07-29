@@ -1,0 +1,21 @@
+{
+	"resourceType": "ValueSet",
+	"id": "CARIN-BB-Revenue-Center",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2019-07-28T07:01:28.000-04:00"
+	},
+	"url": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-revenue-center",
+	"version": "1.0.0",
+	"name": "CARINBBRevenueCenter",
+	"title": "CARIN Blue Button Revenue Center Value Set",
+	"status": "draft",
+	"description": "UB-04 Revenue Code (FL-42), Revenue Description (FL-43)",
+	"compose": {
+		"include": [
+			{
+				"system": "https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html"
+			}
+		]
+	}
+}

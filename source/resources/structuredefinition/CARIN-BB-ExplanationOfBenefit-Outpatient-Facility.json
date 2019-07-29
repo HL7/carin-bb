@@ -1,0 +1,493 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "CARIN-BB-ExplanationOfBenefit-Outpatient-Facility",
+	"meta": {
+		"versionId": "178",
+		"lastUpdated": "2019-07-27T20:55:00.000-04:00",
+		"security": [
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^read"
+			},
+			{
+				"system": "https://trifolia-fhir.lantanagroup.com/security",
+				"code": "everyone^write"
+			}
+		]
+	},
+	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-outpatient-facility",
+	"version": "0.2",
+	"name": "CARINBBExplanationOfBenefitOutpatientFacility",
+	"title": "CARIN Blue Button Explanation of Benefit Outpatient Facility",
+	"status": "active",
+	"date": "2019-07-26",
+	"publisher": "CARIN Alliance",
+	"fhirVersion": "4.0.0",
+	"kind": "resource",
+	"abstract": false,
+	"type": "ExplanationOfBenefit",
+	"baseDefinition": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "ExplanationOfBenefit",
+				"path": "ExplanationOfBenefit"
+			},
+			{
+				"id": "ExplanationOfBenefit.payment.id",
+				"path": "ExplanationOfBenefit.payment.id",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.payment.extension",
+				"path": "ExplanationOfBenefit.payment.extension",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.payment.modifierExtension",
+				"path": "ExplanationOfBenefit.payment.modifierExtension",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.payment.type",
+				"path": "ExplanationOfBenefit.payment.type"
+			},
+			{
+				"id": "ExplanationOfBenefit.payment.adjustmentReason",
+				"path": "ExplanationOfBenefit.payment.adjustmentReason",
+				"label": "Define value set and bind to to adjustment reason"
+			},
+			{
+				"id": "ExplanationOfBenefit.form",
+				"path": "ExplanationOfBenefit.form",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.processNote",
+				"path": "ExplanationOfBenefit.processNote",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.benefitBalance",
+				"path": "ExplanationOfBenefit.benefitBalance",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.implicitRules",
+				"path": "ExplanationOfBenefit.implicitRules",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.language",
+				"path": "ExplanationOfBenefit.language",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.text",
+				"path": "ExplanationOfBenefit.text",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.extension",
+				"path": "ExplanationOfBenefit.extension",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.modifierExtension",
+				"path": "ExplanationOfBenefit.modifierExtension",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.type",
+				"path": "ExplanationOfBenefit.type",
+				"min": 1,
+				"max": "1",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/claim-type",
+							"code": "institutional"
+						}
+					]
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.subType",
+				"path": "ExplanationOfBenefit.subType",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.patient",
+				"path": "ExplanationOfBenefit.patient",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.created",
+				"path": "ExplanationOfBenefit.created",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.insurer",
+				"path": "ExplanationOfBenefit.insurer",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.provider",
+				"path": "ExplanationOfBenefit.provider",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.enterer",
+				"path": "ExplanationOfBenefit.enterer",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.referral",
+				"path": "ExplanationOfBenefit.referral",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.facility",
+				"path": "ExplanationOfBenefit.facility",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.claim",
+				"path": "ExplanationOfBenefit.claim",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.claimResponse",
+				"path": "ExplanationOfBenefit.claimResponse",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.disposition",
+				"path": "ExplanationOfBenefit.disposition",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.prescription",
+				"path": "ExplanationOfBenefit.prescription",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.originalPrescription",
+				"path": "ExplanationOfBenefit.originalPrescription",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.accident",
+				"path": "ExplanationOfBenefit.accident",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.precedence",
+				"path": "ExplanationOfBenefit.precedence",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.preAuthRef",
+				"path": "ExplanationOfBenefit.preAuthRef",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.preAuthRefPeriod",
+				"path": "ExplanationOfBenefit.preAuthRefPeriod",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.priority",
+				"path": "ExplanationOfBenefit.priority",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.fundsReserveRequested",
+				"path": "ExplanationOfBenefit.fundsReserveRequested",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.fundsReserve",
+				"path": "ExplanationOfBenefit.fundsReserve",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "category"
+						}
+					],
+					"rules": "open"
+				},
+				"min": 0,
+				"max": "*"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:placeOfServiceCode",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"sliceName": "placeOfServiceCode",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:placeOfServiceCode.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "placeofservice"
+						}
+					]
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:patientDischargeStatusCode",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"sliceName": "patientDischargeStatusCode",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:patientDischargeStatusCode.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "discharge-status"
+						}
+					]
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:sourceInpatientAdmissionTypeCode",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"sliceName": "sourceInpatientAdmissionTypeCode",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:sourceInpatientAdmissionTypeCode.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "admtype"
+						}
+					]
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:sourceInpatientAdmissionCode",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"sliceName": "sourceInpatientAdmissionCode",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:sourceInpatientAdmissionCode.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "admsrc"
+						}
+					]
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:frequencyCode",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"sliceName": "frequencyCode",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:frequencyCode.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "tob-frequency"
+						}
+					]
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:serviceClassificationCode",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"sliceName": "serviceClassificationCode",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:serviceClassificationCode.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "tob-billclassification"
+						}
+					]
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:facilityTypeCode",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"sliceName": "facilityTypeCode",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:facilityTypeCode.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "tob-typeoffacility"
+						}
+					]
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:claimReceivedDate",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"sliceName": "claimReceivedDate",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:claimReceivedDate.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "clmrecvddate"
+						}
+					]
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:referringProviderNetworkStatus",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"sliceName": "referringProviderNetworkStatus",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:referringProviderNetworkStatus.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "referringnetworkcontractingstatus"
+						}
+					]
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:billingProviderNetworkStatus",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"sliceName": "billingProviderNetworkStatus",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo:billingProviderNetworkStatus.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "billingnetworkcontractingstatus"
+						}
+					]
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.item.id",
+				"path": "ExplanationOfBenefit.item.id",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.item.extension",
+				"path": "ExplanationOfBenefit.item.extension",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.item.modifierExtension",
+				"path": "ExplanationOfBenefit.item.modifierExtension",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.item.sequence",
+				"path": "ExplanationOfBenefit.item.sequence",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.related",
+				"path": "ExplanationOfBenefit.related",
+				"min": 0,
+				"max": "*"
+			},
+			{
+				"id": "ExplanationOfBenefit.related.relationship",
+				"path": "ExplanationOfBenefit.related.relationship",
+				"min": 1,
+				"max": "1",
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-relatedclaimrelationship"
+				}
+			}
+		]
+	}
+}

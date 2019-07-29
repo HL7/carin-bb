@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="CARIN-BB-Adjudication-Category"/>
+  <meta>
+    <versionId value="2"/>
+    <lastUpdated value="2019-07-28T22:43:49.000-04:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Claim Adjudication Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory defines many codes, but they are not represented here</p></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory"/>
+  <version value="0.1.32"/>
+  <name value="CARINBBAdjudicationCategory"/>
+  <title value="CARIN Blue Button Claim Adjudication Category Code System"/>
+  <status value="draft"/>
+  <date value="2019-07-27T00:00:00-04:00"/>
+  <publisher value="CARIN Alliance"/>
+  <caseSensitive value="true"/>
+  <content value="not-present"/>
+  <concept>
+    <code value="benefitPaymentStatusCode"/>
+    <display value="Benefit payment status code"/>
+    <definition value="Benefit payment status code"/>
+  </concept>
+  <concept>
+    <code value="paymentDenialCode"/>
+    <display value="Payment denial code"/>
+    <definition value="Payment Denial Code"/>
+  </concept>
+  <concept>
+    <code value="submittedamount"/>
+    <display value="submitted amount"/>
+  </concept>
+  <concept>
+    <code value="allowedamount"/>
+    <display value="allowed amount"/>
+  </concept>
+  <concept>
+    <code value="deductibleamount"/>
+    <display value="deductible amount"/>
+  </concept>
+  <concept>
+    <code value="coinsuranceamount"/>
+    <display value="coinsurance amount"/>
+  </concept>
+  <concept>
+    <code value="copayamount"/>
+    <display value="copay amount"/>
+  </concept>
+  <concept>
+    <code value="noncoveredamount"/>
+    <display value="noncovered amount"/>
+  </concept>
+  <concept>
+    <code value="cobamount"/>
+    <display value="cob amount"/>
+  </concept>
+  <concept>
+    <code value="paymentamount"/>
+    <display value="payment amount"/>
+  </concept>
+  <concept>
+    <code value="patientpayamount"/>
+    <display value="patient pay amount"/>
+  </concept>
+  <concept>
+    <code value="denialreason"/>
+    <display value="payment denial reason"/>
+  </concept>
+  <concept>
+    <code value="innetworkbenefitpaymentstatus"/>
+    <display value="in network benefit payment status"/>
+  </concept>
+  <concept>
+    <code value="outofnetworkbenefitpaymentstatus"/>
+    <display value="out of network benefit payment status"/>
+  </concept>
+  <concept>
+    <code value="otherbenefitpaymentstatus"/>
+    <display value="other benefit payment status"/>
+  </concept>
+</CodeSystem>
