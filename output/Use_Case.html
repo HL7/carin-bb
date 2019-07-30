@@ -231,24 +231,21 @@ can only resize using html  or css ;-(
 <p><strong>Consumer-directed health insurance data exchange</strong>
 Consumer-directed exchange occurs when a consumer or an authorized caregiver invokes their HIPAA Individual Right of Access (45 CFR  164.524) and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.</p>
 
-<p><strong>Use Case 1</strong>: Access Claims Data</p>
+<p><strong>Use Case</strong>: Consumer Access to their Claims Data</p>
 
 <p>Actors:</p>
 <ul>
   <li>Consumer (aka Beneficiary, Patient, or Authorized Caregiver)</li>
   <li>Payer (aka Health Plan, Commercial Payer, Covered Entity)</li>
-  <li>App - a digital application selected by the Consumer; this application may be supplied by the Payer or by a third-party (to include other Covered Entities)</li>
+  <li>Consumer-facing application - A digital third-party application selected by and primarily for the Consumer with a consumer-facing user interface</li>
 </ul>
 
 <p>Normal Flow:</p>
 <ul>
-  <li>Consumer authorizes an App to access their digital health information</li>
-  <li>Consumer invokes their HIPAA Individual Right of Access</li>
-  <li>Consumer requests their digital claims data from a Payer via the App</li>
-  <li>App submits requests for digital claims data to the Payer</li>
-  <li>Payer sends digital claims data back to the App</li>
-  <li>App displays digital claims data to Consumer</li>
-  <li>Consumer chooses to share data for a specific set of purposes via the App</li>
+  <li>Consumer downloads or accesses the application of their choice</li>
+  <li>Consumer authorizes the application to access their digital claims data (thereby invoking their Individual Right of Access under HIPAA) via the SMART on FHIR authorization flow</li>
+  <li>Application connects to a FHIR API to download their digital claims data and requests the health plan send the data to the application</li>
+  <li>Application displays or otherwise uses digital claims data to the benefit of the Consumer</li>
 </ul>
 
 
@@ -281,7 +278,7 @@ Consumer-directed exchange occurs when a consumer or an authorized caregiver inv
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CARINBlueButton Version: 0.1.34  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.0</a> (IG Publisher v4.0.0-a53ec6ee1b) generated on Tue, Jul 30, 2019 01:39-0400.
+      CARINBlueButton Version: 0.1.35  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.0</a> (IG Publisher v4.0.0-a53ec6ee1b) generated on Tue, Jul 30, 2019 08:30-0400.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

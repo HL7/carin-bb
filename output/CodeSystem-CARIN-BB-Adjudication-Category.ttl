@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Adjudication Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory defines many codes, but they are not represented here</p></div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory"];
-  fhir:CodeSystem.version [ fhir:value "0.1.34"];
+  fhir:CodeSystem.version [ fhir:value "0.1.35"];
   fhir:CodeSystem.name [ fhir:value "CARINBBAdjudicationCategory"];
   fhir:CodeSystem.title [ fhir:value "CARIN Blue Button Claim Adjudication Category Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];

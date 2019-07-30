@@ -17,11 +17,11 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button SNOMEDCT Procedure Codes Value Set</h2><div><p>This value set includes codes from the following code systems:</p>\n<p>Include codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a>, where the codes are contained in <a href=\"http://hl7.org/fhir/R4/valueset-procedure-code.html\">http://hl7.org/fhir/ValueSet/procedure-code</a></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-snomedct-procedurecodes"];
-  fhir:ValueSet.version [ fhir:value "0.1.34"];
+  fhir:ValueSet.version [ fhir:value "0.1.35"];
   fhir:ValueSet.name [ fhir:value "CARINBBSNOMEDCTProcedureCodes"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button SNOMEDCT Procedure Codes Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-07-30T01:39:13-04:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-07-30T08:30:19-04:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "This value set includes codes from the following code systems:\n\nInclude codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

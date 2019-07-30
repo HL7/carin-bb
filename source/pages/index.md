@@ -25,6 +25,7 @@ This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework
 See the [Table of Contents](toc.html) for more information.
 
 #### Latest Changes
+- (35) Revised narrative content
 - (34) Removed Credits and added USCore Patient based CARINBBPatient profile
 - (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages
 - (32) Added 4 specific EOB and 1 Coverage profiles

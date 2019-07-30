@@ -3,8 +3,8 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="carin-bb"/>
   <meta>
-    <versionId value="124"/>
-    <lastUpdated value="2019-07-30T01:38:25.000-04:00"/>
+    <versionId value="126"/>
+    <lastUpdated value="2019-07-30T06:14:43.000-04:00"/>
     <security>
       <system value="https://trifolia-fhir.lantanagroup.com/security"/>
       <code value="everyone^write"/>
@@ -15,22 +15,22 @@
     </security>
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Windows\Temp\tmp-860ihK0XqX8Ry33\source\resources"/>
+    <valueString value="C:\Windows\Temp\tmp-860TIUmzsqRMuxR\source\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Windows\Temp\tmp-860ihK0XqX8Ry33\framework"/>
+    <valueString value="C:\Windows\Temp\tmp-860TIUmzsqRMuxR\framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Windows\Temp\tmp-860ihK0XqX8Ry33\source\pages"/>
+    <valueString value="C:\Windows\Temp\tmp-860TIUmzsqRMuxR\source\pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb"/>
-  <version value="0.1.34"/>
+  <version value="0.1.35"/>
   <name value="CARINBlueButton"/>
   <title value="CARIN Blue Button"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="CARIN Alliance"/>
-  <description value=" **CARIN Alliance** &#xA;*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*&#xA;&#xA;This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&#xA;&#xA;See the [Table of Contents](toc.html) for more information.&#xA;&#xA;#### Latest Changes&#xA;- (34) Removed Credits and added USCore Patient based CARINBBPatient profile&#xA;- (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages&#xA;- (32) Added 4 specific EOB and 1 Coverage profiles&#xA;- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile&#xA;- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy&#xA;- (29) Updated Provider and Claim Line Amounts mappings.&#xA;- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.&#xA;- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.&#xA;- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit&#xA;- (25) Added FHIR Resources section to narrative and included Example EOB.&#xA;- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.&#xA;- (23) Added the Latest Changes section. Added USCoreR4 Dependency.&#xA;&#xA;&#xA;&#xA;&#xA;"/>
+  <description value=" **CARIN Alliance** &#xA;*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*&#xA;&#xA;This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&#xA;&#xA;See the [Table of Contents](toc.html) for more information.&#xA;&#xA;#### Latest Changes&#xA;- (35) Revised narrative content&#xA;- (34) Removed Credits and added USCore Patient based CARINBBPatient profile&#xA;- (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages&#xA;- (32) Added 4 specific EOB and 1 Coverage profiles&#xA;- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile&#xA;- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy&#xA;- (29) Updated Provider and Claim Line Amounts mappings.&#xA;- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.&#xA;- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.&#xA;- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit&#xA;- (25) Added FHIR Resources section to narrative and included Example EOB.&#xA;- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.&#xA;- (23) Added the Latest Changes section. Added USCoreR4 Dependency.&#xA;&#xA;&#xA;&#xA;&#xA;"/>
   <packageId value="hl7.fhir.us.carin-bb"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.0"/>
@@ -408,8 +408,8 @@
         </page>
       </page>
       <page>
-        <nameUrl value="Benefit_to_Health_Plans.html"/>
-        <title value="Benefit to Health Plans"/>
+        <nameUrl value="Benefit_to_Consumers_and_Health_Plans.html"/>
+        <title value="Benefit to Consumers and Health Plans"/>
         <generation value="markdown"/>
       </page>
       <page>
