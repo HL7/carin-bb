@@ -10,7 +10,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Adjudication Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory defines many codes, but they are not represented here</p></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
-  "version": "0.1.34",
+  "version": "0.1.33",
   "name": "CARINBBAdjudicationCategory",
   "title": "CARIN Blue Button Claim Adjudication Category Code System",
   "status": "draft",

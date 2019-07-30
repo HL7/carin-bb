@@ -11,11 +11,11 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html</code></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-discharge-status"/>
-  <version value="0.1.34"/>
+  <version value="0.1.33"/>
   <name value="CARINBBDischargeStatus"/>
   <title value="CARIN Blue Button Discharge Status Value Set"/>
   <status value="draft"/>
-  <date value="2019-07-30T01:39:13-04:00"/>
+  <date value="2019-07-30T01:18:46-04:00"/>
   <description value="UB04 (FL-17)"/>
   <compose>
     <include>
