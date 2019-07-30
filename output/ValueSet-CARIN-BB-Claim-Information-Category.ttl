@@ -17,11 +17,11 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Information Category Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-CARIN-BB-Claim-Information-Category.html\"><code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>billingnetworkcontractingstatus</td><td>billingnetworkcontractingstatus</td><td/></tr><tr><td>attendingnetworkcontractingstatus</td><td>attendingnetworkcontractingstatus</td><td/></tr><tr><td>sitenetworkcontractingstatus</td><td>sitenetworkcontractingstatus</td><td/></tr><tr><td>referringnetworkcontractingstatus</td><td>referringnetworkcontractingstatus</td><td/></tr><tr><td>performingnetworkcontractingstatus</td><td>performingnetworkcontractingstatus</td><td/></tr><tr><td>prescribingnetworkcontractingstatus</td><td>prescribingnetworkcontractingstatus</td><td/></tr><tr><td>clmrecvddate</td><td>clmrecvddate</td><td/></tr><tr><td>typeofservice</td><td>typeofservice</td><td/></tr><tr><td>tob-typeoffacility</td><td>tob-typeoffacility</td><td/></tr><tr><td>tob-billclassification</td><td>tob-billclassification</td><td/></tr><tr><td>tob-frequency</td><td>tob-frequency</td><td/></tr><tr><td>admsrc</td><td>admsrc</td><td/></tr><tr><td>admtype</td><td>admtype</td><td/></tr><tr><td>discharge-status</td><td>discharge-status</td><td/></tr><tr><td>ms-drg</td><td>ms-drg</td><td/></tr><tr><td>placeofservice</td><td>placeofservice</td><td/></tr><tr><td>dayssupply</td><td>dayssupply</td><td/></tr><tr><td>dawcode</td><td>dawcode</td><td/></tr><tr><td>refillnum</td><td>refillnum</td><td/></tr><tr><td>rxorigincode</td><td>rxorigincode</td><td/></tr><tr><td>brandgenericcode</td><td>brandgenericcode</td><td/></tr></table></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"];
-  fhir:ValueSet.version [ fhir:value "0.1.33"];
+  fhir:ValueSet.version [ fhir:value "0.1.34"];
   fhir:ValueSet.name [ fhir:value "CARINBBClaimInformationCategory"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button Claim Information Category Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-07-30T01:18:46-04:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-07-30T01:39:13-04:00"^^xsd:dateTime];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
