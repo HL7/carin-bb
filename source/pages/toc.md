@@ -20,4 +20,3 @@ active: toc
             * <a href="Patient_mapping.html">Patient mapping</a>
     * <a href="Benefit_to_Health_Plans.html">Benefit to Health Plans</a>
     * <a href="Feedback.html">Feedback</a>
-    * <a href="Credits.html">Credits</a>

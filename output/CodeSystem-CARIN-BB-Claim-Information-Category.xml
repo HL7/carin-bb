@@ -10,11 +10,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Claim Information Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory defines many codes, but they are not represented here</p></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory"/>
-  <version value="0.1.33"/>
+  <version value="0.1.34"/>
   <name value="CARINBBClaimInformationCategory"/>
   <title value="CARIN Blue Button Claim Information Category Code System"/>
   <status value="draft"/>
-  <date value="2019-07-30T01:18:46-04:00"/>
+  <date value="2019-07-30T01:39:13-04:00"/>
   <publisher value="CARIN Alliance"/>
   <caseSensitive value="true"/>
   <content value="not-present"/>
