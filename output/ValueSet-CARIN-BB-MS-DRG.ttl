@@ -17,11 +17,11 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button MS-DRG Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html</code></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-ms-drg"];
-  fhir:ValueSet.version [ fhir:value "0.1.32"];
+  fhir:ValueSet.version [ fhir:value "0.1.33"];
   fhir:ValueSet.name [ fhir:value "CARINBBMSDRG"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button MS-DRG Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-07-28T23:13:21-04:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-07-30T01:18:46-04:00"^^xsd:dateTime];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;

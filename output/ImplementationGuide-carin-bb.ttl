@@ -5,12 +5,12 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb-0.1.32> a fhir:ImplementationGuide;
+<http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb-0.1.33> a fhir:ImplementationGuide;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "hl7.fhir.us.carin-bb-0.1.32"];
+  fhir:Resource.id [ fhir:value "hl7.fhir.us.carin-bb-0.1.33"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "108" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-07-28T22:28:23.000-04:00"^^xsd:dateTime ];
+     fhir:Meta.versionId [ fhir:value "121" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-07-29T20:37:44.000-04:00"^^xsd:dateTime ];
      fhir:Meta.security [
        fhir:index 0;
        fhir:Coding.system [ fhir:value "https://trifolia-fhir.lantanagroup.com/security" ];
@@ -23,21 +23,30 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARINBlueButton</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb</pre><div><p><strong>CARIN Alliance</strong>\n<em>Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.</em></p>\n<p>This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.</p>\n<p>See the <a href=\"toc.html\">Table of Contents</a> for more information.</p>\n<h4>Latest Changes</h4>\n<ul>\n<li>(32) Added 4 specific EOB and 1 Coverage profiles</li>\n<li>(31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile</li>\n<li>(30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy</li>\n<li>(29) Updated Provider and Claim Line Amounts mappings.</li>\n<li>(28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.</li>\n<li>(27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.</li>\n<li>(26) Added sample of reverse mapping narrative for ExplanationOfBenefit</li>\n<li>(25) Added FHIR Resources section to narrative and included Example EOB.</li>\n<li>(24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.</li>\n<li>(23) Added the Latest Changes section. Added USCoreR4 Dependency.</li>\n</ul>\n</div></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARINBlueButton</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb</pre><div><p><strong>CARIN Alliance</strong>\n<em>Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.</em></p>\n<p>This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.</p>\n<p>See the <a href=\"toc.html\">Table of Contents</a> for more information.</p>\n<h4>Latest Changes</h4>\n<ul>\n<li>(33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages</li>\n<li>(32) Added 4 specific EOB and 1 Coverage profiles</li>\n<li>(31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile</li>\n<li>(30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy</li>\n<li>(29) Updated Provider and Claim Line Amounts mappings.</li>\n<li>(28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.</li>\n<li>(27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.</li>\n<li>(26) Added sample of reverse mapping narrative for ExplanationOfBenefit</li>\n<li>(25) Added FHIR Resources section to narrative and included Example EOB.</li>\n<li>(24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.</li>\n<li>(23) Added the Latest Changes section. Added USCoreR4 Dependency.</li>\n</ul>\n</div></div>"
   ];
   fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb"];
-  fhir:ImplementationGuide.version [ fhir:value "0.1.32"];
+  fhir:ImplementationGuide.version [ fhir:value "0.1.33"];
   fhir:ImplementationGuide.name [ fhir:value "CARINBlueButton"];
   fhir:ImplementationGuide.title [ fhir:value "CARIN Blue Button"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "true"^^xsd:boolean];
   fhir:ImplementationGuide.publisher [ fhir:value "CARIN Alliance"];
-  fhir:ImplementationGuide.description [ fhir:value " **CARIN Alliance** \n*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*\n\nThis implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.\n\nSee the [Table of Contents](toc.html) for more information.\n\n#### Latest Changes\n- (32) Added 4 specific EOB and 1 Coverage profiles\n- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile\n- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy\n- (29) Updated Provider and Claim Line Amounts mappings.\n- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.\n- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.\n- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit\n- (25) Added FHIR Resources section to narrative and included Example EOB.\n- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.\n- (23) Added the Latest Changes section. Added USCoreR4 Dependency.\n\n\n\n\n"];
+  fhir:ImplementationGuide.description [ fhir:value " **CARIN Alliance** \n*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*\n\nThis implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.\n\nSee the [Table of Contents](toc.html) for more information.\n\n#### Latest Changes\n- (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages\n- (32) Added 4 specific EOB and 1 Coverage profiles\n- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile\n- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy\n- (29) Updated Provider and Claim Line Amounts mappings.\n- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.\n- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.\n- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit\n- (25) Added FHIR Resources section to narrative and included Example EOB.\n- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.\n- (23) Added the Latest Changes section. Added USCoreR4 Dependency.\n\n\n\n\n"];
   fhir:ImplementationGuide.packageId [ fhir:value "hl7.fhir.us.carin-bb"];
   fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
   fhir:ImplementationGuide.fhirVersion [
      fhir:value "4.0.0";
      fhir:index 0
+  ];
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0";
+       fhir:link <http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.core" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "current" ]
   ];
   fhir:ImplementationGuide.definition [
      fhir:ImplementationGuide.definition.resource [
@@ -113,7 +122,7 @@
          fhir:Reference.display [ fhir:value "CARINBBRelatedClaimRelationship" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CARINBBRelatedClaimRelationship" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "value set: claim relation ship" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "value set: claim relationship" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 5;
@@ -143,6 +152,7 @@
          fhir:Reference.display [ fhir:value "CARINBBExplanationOfBenefitInpatientFacility" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CARINBBExplanationOfBenefitInpatientFacility" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "eob inpatient profile" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 7;
@@ -451,6 +461,7 @@
          fhir:Reference.display [ fhir:value "CARINBBExplanationOfBenefitProfessionalNonClinician" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CARINBBExplanationOfBenefitProfessionalNonClinician" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "eob professional non-clinician profile" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 29;
@@ -536,6 +547,21 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CARINBBAdjudicationCategory" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-CARINBBPatient.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARINBBPatient>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/CARINBBPatient" ];
+         fhir:Reference.display [ fhir:value "CARINBBPatient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CARINBBPatient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "patient profile" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.md" ];
@@ -568,24 +594,44 @@
            fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ];
            fhir:ImplementationGuide.definition.page.page [
              fhir:index 0;
-             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "EOB_Inpatient_Facility_mapping.html" ];
-             fhir:ImplementationGuide.definition.page.title [ fhir:value "EOB Inpatient Facility mapping" ];
-             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "Data_Element_Index.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "Data Element Index" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
            ], [
              fhir:index 1;
-             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "EOB_Outpatient_Facility_mapping.html" ];
-             fhir:ImplementationGuide.definition.page.title [ fhir:value "EOB Outpatient Facility mapping" ];
-             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "Coverage_mapping.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "Coverage mapping" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
            ], [
              fhir:index 2;
-             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "EOB_Professional_Non-Clinician_mapping.html" ];
-             fhir:ImplementationGuide.definition.page.title [ fhir:value "EOB Professional Non-Clinician mapping" ];
-             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "EOB_Comprehensive_mapping.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "EOB Comprehensive mapping" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
            ], [
              fhir:index 3;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "EOB_Inpatient_Facility_mapping.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "EOB Inpatient Facility mapping" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+           ], [
+             fhir:index 4;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "EOB_Outpatient_Facility_mapping.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "EOB Outpatient Facility mapping" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+           ], [
+             fhir:index 5;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "EOB_Professional_Non-Clinician_mapping.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "EOB Professional Non-Clinician mapping" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+           ], [
+             fhir:index 6;
              fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "EOB_Pharmacy_mapping.html" ];
              fhir:ImplementationGuide.definition.page.title [ fhir:value "EOB Pharmacy mapping" ];
-             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+           ], [
+             fhir:index 7;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "Patient_mapping.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "Patient mapping" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
            ]
          ]
        ], [
@@ -677,11 +723,13 @@
 
 <http://hl7.org/fhir/us/carin-bb/ValueSet/CARIN-BB-Adjudication-Category> a fhir:us .
 
+<http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARINBBPatient> a fhir:us .
+
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb-0.1.32.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb-0.1.33.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb-0.1.32.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb-0.1.33.ttl> .
 
 # -------------------------------------------------------------------------------------
 

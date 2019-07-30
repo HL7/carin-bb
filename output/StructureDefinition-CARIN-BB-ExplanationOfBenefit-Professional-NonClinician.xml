@@ -66,7 +66,7 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician"/>
-  <version value="0.1.32"/>
+  <version value="0.1.33"/>
   <name value="CARINBBExplanationOfBenefitProfessionalNonClinician"/>
   <title value="CARIN Blue Button Explanation of Benefit Professional Non-Clinician Profile"/>
   <status value="draft"/>

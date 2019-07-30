@@ -233,9 +233,19 @@
 		"ValueSet/CARIN-BB-Adjudication-Category": {
 			"base": "ValueSet-CARIN-BB-Adjudication-Category.html",
 			"defns": "ValueSet-CARIN-BB-Adjudication-Category-definitions.html"
+		},
+		"StructureDefinition/CARINBBPatient": {
+			"base": "StructureDefinition-CARINBBPatient.html",
+			"defns": "StructureDefinition-CARINBBPatient-definitions.html"
 		}
 	},
 	"version": "4.0.0",
-	"fixed-business-version": "0.1.32",
-	"dependencyList": []
+	"fixed-business-version": "0.1.33",
+	"dependencyList": [
+		{
+			"location": "http://hl7.org/fhir/us/core",
+			"name": "USCoreR4",
+			"version": "current"
+		}
+	]
 }

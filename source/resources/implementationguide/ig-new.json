@@ -2,8 +2,8 @@
   "resourceType" : "ImplementationGuide",
   "id" : "carin-bb",
   "meta" : {
-    "versionId" : "108",
-    "lastUpdated" : "2019-07-28T22:28:23.000-04:00",
+    "versionId" : "121",
+    "lastUpdated" : "2019-07-29T20:37:44.000-04:00",
     "security" : [{
       "system" : "https://trifolia-fhir.lantanagroup.com/security",
       "code" : "everyone^write"
@@ -15,28 +15,34 @@
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Windows\\Temp\\tmp-860Aav9ZiGg5YgJ\\source\\resources"
+    "valueString" : "C:\\Windows\\Temp\\tmp-860uyDtKl7hdl2l\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Windows\\Temp\\tmp-860Aav9ZiGg5YgJ\\framework"
+    "valueString" : "C:\\Windows\\Temp\\tmp-860uyDtKl7hdl2l\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Windows\\Temp\\tmp-860Aav9ZiGg5YgJ\\source\\pages"
+    "valueString" : "C:\\Windows\\Temp\\tmp-860uyDtKl7hdl2l\\source\\pages"
   }],
   "url" : "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb",
-  "version" : "0.1.32",
+  "version" : "0.1.33",
   "name" : "CARINBlueButton",
   "title" : "CARIN Blue Button",
   "status" : "draft",
   "experimental" : true,
   "publisher" : "CARIN Alliance",
-  "description" : " **CARIN Alliance** \n*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*\n\nThis implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.\n\nSee the [Table of Contents](toc.html) for more information.\n\n#### Latest Changes\n- (32) Added 4 specific EOB and 1 Coverage profiles\n- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile\n- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy\n- (29) Updated Provider and Claim Line Amounts mappings.\n- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.\n- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.\n- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit\n- (25) Added FHIR Resources section to narrative and included Example EOB.\n- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.\n- (23) Added the Latest Changes section. Added USCoreR4 Dependency.\n\n\n\n\n",
+  "description" : " **CARIN Alliance** \n*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*\n\nThis implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.\n\nSee the [Table of Contents](toc.html) for more information.\n\n#### Latest Changes\n- (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages\n- (32) Added 4 specific EOB and 1 Coverage profiles\n- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile\n- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy\n- (29) Updated Provider and Claim Line Amounts mappings.\n- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.\n- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.\n- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit\n- (25) Added FHIR Resources section to narrative and included Example EOB.\n- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.\n- (23) Added the Latest Changes section. Added USCoreR4 Dependency.\n\n\n\n\n",
   "packageId" : "hl7.fhir.us.carin-bb",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
   "4.0.0"],
+  "dependsOn" : [{
+    "id" : "USCoreR4",
+    "uri" : "http://hl7.org/fhir/us/core",
+    "packageId" : "hl7.fhir.us.core",
+    "version" : "current"
+  }],
   "definition" : {
     "resource" : [{
       "reference" : {
@@ -80,7 +86,7 @@
         "display" : "CARINBBRelatedClaimRelationship"
       },
       "name" : "CARINBBRelatedClaimRelationship",
-      "description" : "value set: claim relation ship",
+      "description" : "value set: claim relationship",
       "exampleBoolean" : false
     },
     {
@@ -98,6 +104,7 @@
         "display" : "CARINBBExplanationOfBenefitInpatientFacility"
       },
       "name" : "CARINBBExplanationOfBenefitInpatientFacility",
+      "description" : "eob inpatient profile",
       "exampleBoolean" : false
     },
     {
@@ -274,6 +281,7 @@
         "display" : "CARINBBExplanationOfBenefitProfessionalNonClinician"
       },
       "name" : "CARINBBExplanationOfBenefitProfessionalNonClinician",
+      "description" : "eob professional non-clinician profile",
       "exampleBoolean" : false
     },
     {
@@ -323,6 +331,15 @@
       },
       "name" : "CARINBBAdjudicationCategory",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/CARINBBPatient",
+        "display" : "CARINBBPatient"
+      },
+      "name" : "CARINBBPatient",
+      "description" : "patient profile",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "toc.md",
@@ -352,24 +369,44 @@
           "title" : "Mapping from CPCDS to FHIR Resources",
           "generation" : "markdown",
           "page" : [{
+            "nameUrl" : "Data_Element_Index.html",
+            "title" : "Data Element Index",
+            "generation" : "html"
+          },
+          {
+            "nameUrl" : "Coverage_mapping.html",
+            "title" : "Coverage mapping",
+            "generation" : "html"
+          },
+          {
+            "nameUrl" : "EOB_Comprehensive_mapping.html",
+            "title" : "EOB Comprehensive mapping",
+            "generation" : "html"
+          },
+          {
             "nameUrl" : "EOB_Inpatient_Facility_mapping.html",
             "title" : "EOB Inpatient Facility mapping",
-            "generation" : "markdown"
+            "generation" : "html"
           },
           {
             "nameUrl" : "EOB_Outpatient_Facility_mapping.html",
             "title" : "EOB Outpatient Facility mapping",
-            "generation" : "markdown"
+            "generation" : "html"
           },
           {
             "nameUrl" : "EOB_Professional_Non-Clinician_mapping.html",
             "title" : "EOB Professional Non-Clinician mapping",
-            "generation" : "markdown"
+            "generation" : "html"
           },
           {
             "nameUrl" : "EOB_Pharmacy_mapping.html",
             "title" : "EOB Pharmacy mapping",
-            "generation" : "markdown"
+            "generation" : "html"
+          },
+          {
+            "nameUrl" : "Patient_mapping.html",
+            "title" : "Patient mapping",
+            "generation" : "html"
           }]
         }]
       },

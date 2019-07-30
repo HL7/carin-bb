@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "f6209e6b-552f-4998-9f8a-58c5d8ee1704",
+  "id" : "8ad18a9b-a08b-44de-87ca-e227c15285f2",
   "meta" : {
-    "lastUpdated" : "2019-07-28T23:13:21.205-04:00"
+    "lastUpdated" : "2019-07-30T01:18:46.669-04:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,15 +19,15 @@
         "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on http://hl7.org/fhir/ValueSet/procedure-code version 4.0.0</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
       },
       "url" : "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-snomedct-procedurecodes",
-      "version" : "0.1.32",
+      "version" : "0.1.33",
       "name" : "CARINBBSNOMEDCTProcedureCodes",
       "title" : "CARIN Blue Button SNOMEDCT Procedure Codes Value Set",
       "status" : "draft",
-      "date" : "2019-07-28T23:13:21-04:00",
+      "date" : "2019-07-30T01:18:46-04:00",
       "description" : "This value set includes codes from the following code systems:\n\nInclude codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)",
       "expansion" : {
-        "identifier" : "urn:uuid:efc539cf-5e3a-4dac-a37a-8029695e4a9c",
-        "timestamp" : "2019-07-28T23:14:00-04:00",
+        "identifier" : "urn:uuid:d2d8e09b-4860-4683-8677-b389c8607d1a",
+        "timestamp" : "2019-07-30T01:19:28-04:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false

@@ -50,6 +50,10 @@ active: profiles
 <td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Professional-NonClinician.html">CARINBBExplanationOfBenefitProfessionalNonClinician</a></td>
 <td></td>
 </tr>
+<tr>
+<td><a href="StructureDefinition-CARINBBPatient.html">CARINBBPatient</a></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 

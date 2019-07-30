@@ -1,0 +1,33 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "CARINBBPatient",
+	"meta": {
+		"versionId": "6",
+		"lastUpdated": "2019-07-28T12:01:51.000-04:00"
+	},
+	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient",
+	"version": "0.0.1",
+	"name": "CARINBBPatient",
+	"title": "CARIN Blue Button Patient",
+	"status": "active",
+	"date": "2019-07-28",
+	"fhirVersion": "4.0.0",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Patient",
+	"baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Patient",
+				"path": "Patient"
+			},
+			{
+				"id": "Patient.identifier",
+				"path": "Patient.identifier",
+				"min": 1
+			}
+		]
+	}
+}
