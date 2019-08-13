@@ -3,17 +3,7 @@
 	"id": "carin-bb-Coverage",
 	"meta": {
 		"versionId": "19",
-		"lastUpdated": "2019-07-28T22:43:09.000-04:00",
-		"security": [
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "everyone^read"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "everyone^write"
-			}
-		]
+		"lastUpdated": "2019-07-28T22:43:02.000-04:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage",
 	"version": "0.0.1",

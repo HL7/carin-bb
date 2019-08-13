@@ -3,7 +3,7 @@
 	"id": "CARIN-BB-TOB-TypeOfFacility",
 	"meta": {
 		"versionId": "3",
-		"lastUpdated": "2019-07-28T07:01:45.000-04:00"
+		"lastUpdated": "2019-07-28T07:00:18.000-04:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-tob-typeoffacility",
 	"version": "1.0.0",

@@ -3,7 +3,7 @@
 	"id": "CARIN-BB-HCPCS-ModifierCodes",
 	"meta": {
 		"versionId": "3",
-		"lastUpdated": "2019-07-28T19:07:07.000-04:00"
+		"lastUpdated": "2019-07-28T19:06:57.000-04:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-hcpcs-modifiercodes",
 	"name": "CARINBBHCPCSModifierCodes",

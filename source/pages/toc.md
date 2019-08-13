@@ -4,7 +4,7 @@ layout: default
 active: toc
 ---
 
-* Table of Contents
+* <a href="toc.html">Table of Contents</a>
     * <a href="Background.html">Background</a>
     * <a href="Use_Case.html">Use Case</a>
     * <a href="CARIN_Blue_Button_Framework_Specification.html">CARIN Blue Button Framework Specification</a>

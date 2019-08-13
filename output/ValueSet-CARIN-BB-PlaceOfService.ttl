@@ -10,18 +10,18 @@
   fhir:Resource.id [ fhir:value "CARIN-BB-PlaceOfService"];
   fhir:Resource.meta [
      fhir:Meta.versionId [ fhir:value "4" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-07-28T18:42:19.000-04:00"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-07-28T18:42:06.000-04:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Place Of Service Codes For Professional Claims Value Set</h2><div><p>Place of Service Codes for Professional Claims</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html</code></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-placeofservice"];
-  fhir:ValueSet.version [ fhir:value "0.1.35"];
+  fhir:ValueSet.version [ fhir:value "0.1.36-DRAFT"];
   fhir:ValueSet.name [ fhir:value "CARINBBPlaceOfService"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button Place Of Service Codes For Professional Claims Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-07-30T08:30:19-04:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-08-13T05:09:16-04:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "Place of Service Codes for Professional Claims"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

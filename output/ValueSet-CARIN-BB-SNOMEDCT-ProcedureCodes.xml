@@ -12,11 +12,11 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a>, where the codes are contained in <a href="http://hl7.org/fhir/R4/valueset-procedure-code.html">http://hl7.org/fhir/ValueSet/procedure-code</a></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-snomedct-procedurecodes"/>
-  <version value="0.1.35"/>
+  <version value="0.1.36-DRAFT"/>
   <name value="CARINBBSNOMEDCTProcedureCodes"/>
   <title value="CARIN Blue Button SNOMEDCT Procedure Codes Value Set"/>
   <status value="draft"/>
-  <date value="2019-07-30T08:30:19-04:00"/>
+  <date value="2019-08-13T05:09:16-04:00"/>
   <description value="This value set includes codes from the following code systems:&#xA;&#xA;Include codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)"/>
   <compose>
     <include>

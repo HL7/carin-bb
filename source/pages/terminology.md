@@ -19,15 +19,11 @@ active: terminology
 - [CARIN Blue Button Admit Source Value Set](ValueSet-CARIN-BB-AdmitSource.html)
 - [CARIN Blue Button Admit Type Value Set](ValueSet-CARIN-BB-AdmitType.html)
 - [CARIN Blue Button CPT/HCPCS Procedure Codes Value Set](ValueSet-CARIN-BB-CPT-HCPCS-ProcedureCodes.html)
-- [CARIN Blue Button Claim Care Team Role Value Set](ValueSet-CARIN-BB-Claim-CareTeam-Role.html)
-- [CARIN Blue Button Claim Type Value Set](ValueSet-CARIN-BB-Claim-Type.html)
 - [CARIN Blue Button Diagnosis Type Value Set](ValueSet-CARIN-BB-DiagnosisType.html)
 - [CARIN Blue Button Discharge Status Value Set](ValueSet-CARIN-BB-Discharge-Status.html)
 - [CARIN Blue Button HCPCS Modifier Codes Value Set](ValueSet-CARIN-BB-HCPCS-ModifierCodes.html)
 - [CARIN Blue Button MS-DRG Value Set](ValueSet-CARIN-BB-MS-DRG.html)
-- [CARIN Blue Button Network Contracting Status Value Set](ValueSet-CARIN-BB-Network-Contracting-Status.html)
 - [CARIN Blue Button Place Of Service Codes For Professional Claims Value Set](ValueSet-CARIN-BB-PlaceOfService.html)
-- [CARIN Blue Button Related Claim Relationship Value Set](ValueSet-CARIN-BB-Related-Claim-Relationship.html)
 - [CARIN Blue Button Revenue Center Value Set](ValueSet-CARIN-BB-Revenue-Center.html)
 - [CARIN Blue Button SNOMEDCT Procedure Codes Value Set](ValueSet-CARIN-BB-SNOMEDCT-ProcedureCodes.html)
 - [CARIN Blue Button Type Of Bill (Bill Classification) Value Set](ValueSet-CARIN-BB-TOB-BillClassification.html)
@@ -38,7 +34,11 @@ active: terminology
 
 ### Code Systems
 
-- [CARIN Blue Button Claim Adjudication Category Code System](ValueSet-CARIN-BB-Adjudication-Category.html)
-- [CARIN Blue Button Claim Information Category Code System](ValueSet-CARIN-BB-Claim-Information-Category.html)
+- [CARIN Blue Button Claim Adjudication Category Code System](CodeSystem-CARIN-BB-Adjudication-Category.html)
+- [CARIN Blue Button Claim Care Team Role Code System](CodeSystem-CARIN-BB-Claim-CareTeam-Role.html)
+- [CARIN Blue Button Claim Information Category Code System](CodeSystem-CARIN-BB-Claim-Information-Category.html)
+- [CARIN Blue Button Claim Type Code System](CodeSystem-CARIN-BB-Claim-Type.html)
+- [CARIN Blue Button Network Contracting Status Code System](CodeSystem-CARIN-BB-Network-Contracting-Status.html)
+- [CARIN Blue Button Related Claim Relationship Code System](CodeSystem-CARIN-BB-Related-Claim-Relationship.html)
 
 

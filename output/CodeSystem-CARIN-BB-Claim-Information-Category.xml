@@ -4,17 +4,17 @@
   <id value="CARIN-BB-Claim-Information-Category"/>
   <meta>
     <versionId value="4"/>
-    <lastUpdated value="2019-07-27T19:58:17.000-04:00"/>
+    <lastUpdated value="2019-07-27T19:57:02.000-04:00"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Claim Information Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory defines many codes, but they are not represented here</p></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory"/>
-  <version value="0.1.35"/>
+  <version value="0.1.36-DRAFT"/>
   <name value="CARINBBClaimInformationCategory"/>
   <title value="CARIN Blue Button Claim Information Category Code System"/>
   <status value="draft"/>
-  <date value="2019-07-30T08:30:19-04:00"/>
+  <date value="2019-08-13T05:09:16-04:00"/>
   <publisher value="CARIN Alliance"/>
   <caseSensitive value="true"/>
   <content value="not-present"/>

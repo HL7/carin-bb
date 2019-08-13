@@ -1,5 +1,5 @@
 ---
-title: Implementation Guide HomePage
+title: Implementation Guide Home Page
 layout: default
 active: home
 ---
@@ -24,7 +24,12 @@ This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework
 
 See the [Table of Contents](toc.html) for more information.
 
+***Please note that this implementation guide is currently a work in progress and is in draft status.***
+
+
+
 #### Latest Changes
+- (36) Added "draft" verbiage
 - (35) Revised narrative content
 - (34) Removed Credits and added USCore Patient based CARINBBPatient profile
 - (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages

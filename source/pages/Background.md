@@ -4,6 +4,8 @@ layout: default
 active: Background
 ---
 
+[Previous Page](toc.html)
+
 # The CARIN Alliance
 The [CARIN Alliance](https://www.carinalliance.com/) is a bi-partisan, multi-sector alliance to unite industry leaders in advancing the adoption of consumer-directed health care information exchange across the U.S. 
 
@@ -37,3 +39,6 @@ We used the [Argonaut Project](http://argonautwiki.hl7.org/index.php?title=Main_
 The CARIN health plan workgroup was organized to develop a FHIR-based API that could be sent to a consumer-facing application. 
 
 
+
+
+[Next Page](Use_Case.html)

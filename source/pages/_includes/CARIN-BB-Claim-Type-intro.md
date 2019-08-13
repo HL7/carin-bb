@@ -1,6 +1,6 @@
 ---
-title: CodeSystem-CARIN-BB-Claim-Type-intro
+title: ValueSet-CARIN-BB-Claim-Type-intro
 layout: default
-active: CodeSystem-CARIN-BB-Claim-Type-intro
+active: ValueSet-CARIN-BB-Claim-Type-intro
 ---
 

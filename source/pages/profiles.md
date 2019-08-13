@@ -58,3 +58,7 @@ active: profiles
 </table>
 
 
+### Extensions
+
+**No extensions are defined for this implementation guide**
+

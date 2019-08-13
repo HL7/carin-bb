@@ -3,7 +3,7 @@
 	"id": "CARIN-BB-Claim-Information-Category",
 	"meta": {
 		"versionId": "4",
-		"lastUpdated": "2019-07-27T19:58:17.000-04:00"
+		"lastUpdated": "2019-07-27T19:57:02.000-04:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
 	"version": "1.0.0",

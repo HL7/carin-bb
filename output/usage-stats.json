@@ -1,0 +1,77 @@
+{
+  "package": "hl7.fhir.us.carin-bb",
+  "version": "0.1.36-DRAFT",
+  "fhirVersion": "4.0.0",
+  "extensions": [],
+  "profiles": {
+    "Coverage": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage",
+        "title": "CARIN Blue Button Coverage"
+      }
+    ],
+    "ExplanationOfBenefit": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit",
+        "title": "CARIN Blue Button Explanation of Benefit Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility",
+        "title": "CARIN Blue Button Explanation of Benefit Inpatient Facility Profile"
+      },
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-outpatient-facility",
+        "title": "CARIN Blue Button Explanation of Benefit Outpatient Facility"
+      },
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-pharmacy",
+        "title": "CARIN Blue Button Explanation of Benefit Pharmacy"
+      },
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician",
+        "title": "CARIN Blue Button Explanation of Benefit Professional Non-Clinician Profile"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient",
+        "title": "CARIN Blue Button Patient"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race": [
+      "Patient"
+    ]
+  }
+}

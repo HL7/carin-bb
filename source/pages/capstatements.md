@@ -13,3 +13,4 @@ active: capstatements
 
 <!-- end TOC -->
 
+**No capability statements are defined for this implementation guide**

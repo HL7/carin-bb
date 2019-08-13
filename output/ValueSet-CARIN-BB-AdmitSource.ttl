@@ -10,18 +10,18 @@
   fhir:Resource.id [ fhir:value "CARIN-BB-AdmitSource"];
   fhir:Resource.meta [
      fhir:Meta.versionId [ fhir:value "3" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-07-28T07:50:26.000-04:00"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-07-28T07:50:10.000-04:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Admit Source Value Set</h2><div><p>UB-04 Source of Admission code (FL-15)</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html</code></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-admitsource"];
-  fhir:ValueSet.version [ fhir:value "0.1.35"];
+  fhir:ValueSet.version [ fhir:value "0.1.36-DRAFT"];
   fhir:ValueSet.name [ fhir:value "CARINBBAdmitSource"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button Admit Source Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-07-30T08:30:19-04:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-08-13T05:09:16-04:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "UB-04 Source of Admission code (FL-15)"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

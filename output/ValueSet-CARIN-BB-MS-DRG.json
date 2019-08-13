@@ -3,18 +3,18 @@
   "id": "CARIN-BB-MS-DRG",
   "meta": {
     "versionId": "2",
-    "lastUpdated": "2019-07-28T08:00:25.000-04:00"
+    "lastUpdated": "2019-07-28T07:59:19.000-04:00"
   },
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button MS-DRG Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html</code></li></ul></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-ms-drg",
-  "version": "0.1.35",
+  "version": "0.1.36-DRAFT",
   "name": "CARINBBMSDRG",
   "title": "CARIN Blue Button MS-DRG Value Set",
   "status": "draft",
-  "date": "2019-07-30T08:30:19-04:00",
+  "date": "2019-08-13T05:09:16-04:00",
   "compose": {
     "include": [
       {

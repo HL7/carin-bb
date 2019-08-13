@@ -4,18 +4,18 @@
 
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-   <meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>
   <title>CARIN Blue Button</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="CARIN Blue Button Implemenation Guide" />
-<meta name="author" content="CARIN Alliance"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CARIN Blue Button Implemenation Guide" />
+  <meta name="author" content="CARIN Alliance"/>
   <link href="fhir.css" rel="stylesheet"/>
 
 
-   <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
 
-   <!-- Latest compiled and minified CSS -->
+  <!-- Latest compiled and minified CSS -->
 
   <link href="assets/css/bootstrap.css" rel="stylesheet"/>
   <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
@@ -24,8 +24,8 @@
   <!-- Project extras -->
   <link href="assets/css/project.css" rel="stylesheet"/>
   <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
-	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-
+  <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  
 
   <!-- Favicons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
@@ -41,15 +41,15 @@
   <!-- segment-header -->
   <div class="container"><!-- container -->
 
-<!-- hl7 logo -->
+    <!-- hl7 logo -->
     <a no-external="true" href="http://hl7.org/fhir">
       <img alt="FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png"/>
     </a>
-<!-- end hl7 logo -->
+    <!-- end hl7 logo -->
 
 
- <!-- org logo -->
-             <!--
+    <!-- org logo -->
+    <!--
 <a id="your-logo" no-external="true" href="http://www.hl7.org">
 <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png"/>
 </a>
@@ -68,10 +68,10 @@ can only resize using html  or css ;-(
 <img alt="visit our website" class="img-responsive project-logo" src="assets/images/hl7-logo.png"/>
 </a>
 
-  <!-- end org logo -->
+    <!-- end org logo -->
 
 
-      <div id="project-status" class="project-status"> <!-- ig title text -->
+    <div id="project-status" class="project-status"> <!-- ig title text -->
 
       
       <strong>CARIN Blue Button Implementation Guide CI Build</strong>
@@ -131,7 +131,7 @@ can only resize using html  or css ;-(
 <ul class="nav navbar-nav">
   <li><a href="index.html" class="active">Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
-  <li><a href="profiles.html">Profiles, Extensions &amp; Transactions</a></li>
+  <li><a href="profiles.html">Profiles &amp; Extensions</a></li>
   <li><a href="terminology.html">Terminology</a></li>
   <li><a href="capstatements.html">Capability Statements</a></li>
   <li><a href="other.html">Other</a></li>
@@ -204,7 +204,8 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-            <!-- content of page -->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Blue Button - Local Development build (v0.1.36-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!-- content of page -->
 
 
 <!-- ============BreadCrumb=============== -->
@@ -284,7 +285,7 @@ can only resize using html  or css ;-(
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;CARIN-BB-Adjudication-Category&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.meta">meta</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;4&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2019-07-28T22:34:46.000-04:00&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2019-07-28T22:34:40.000-04:00&quot;/&gt;
   &lt;/meta&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
@@ -292,11 +293,11 @@ can only resize using html  or css ;-(
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>
        <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationcategory&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.35&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.36-DRAFT&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CARINBBAdjudicationCategory&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CARIN Blue Button Claim Adjudication Category Value Set&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2019-07-30T08:30:19-04:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2019-08-13T05:09:16-04:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>
@@ -408,7 +409,7 @@ Formats: <a href="ValueSet-CARIN-BB-Adjudication-Category.html">Narrative</a>, <
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CARINBlueButton Version: 0.1.35  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.0</a> (IG Publisher v4.0.0-a53ec6ee1b) generated on Tue, Jul 30, 2019 08:30-0400.
+      CARINBlueButton Version: 0.1.36-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.0</a> (IG Publisher v4.0.0-a53ec6ee1b) generated on Tue, Aug 13, 2019 05:09-0400.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

@@ -3,17 +3,7 @@
 	"id": "CARIN-BB-ExplanationOfBenefit-Outpatient-Facility",
 	"meta": {
 		"versionId": "178",
-		"lastUpdated": "2019-07-27T20:55:00.000-04:00",
-		"security": [
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "everyone^read"
-			},
-			{
-				"system": "https://trifolia-fhir.lantanagroup.com/security",
-				"code": "everyone^write"
-			}
-		]
+		"lastUpdated": "2019-07-27T20:53:28.000-04:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-outpatient-facility",
 	"version": "0.2",

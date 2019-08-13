@@ -1,6 +1,6 @@
 ---
-title: CodeSystem-CARIN-BB-Network-Contracting-Status-intro
+title: ValueSet-CARIN-BB-Network-Contracting-Status-intro
 layout: default
-active: CodeSystem-CARIN-BB-Network-Contracting-Status-intro
+active: ValueSet-CARIN-BB-Network-Contracting-Status-intro
 ---
 

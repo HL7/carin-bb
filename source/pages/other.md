@@ -13,3 +13,4 @@ active: other
 
 <!-- end TOC -->
 
+**No examples are defined for this implementation guide**
