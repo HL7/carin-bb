@@ -17,11 +17,11 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Care Team Role Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole defines many codes, but they are not represented here</p></div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole"];
-  fhir:CodeSystem.version [ fhir:value "0.1.36-DRAFT"];
+  fhir:CodeSystem.version [ fhir:value "0.1.37-DRAFT"];
   fhir:CodeSystem.name [ fhir:value "CARINBBClaimCareTeamRole"];
   fhir:CodeSystem.title [ fhir:value "CARIN Blue Button Claim Care Team Role Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
-  fhir:CodeSystem.date [ fhir:value "2019-08-13T05:09:16-04:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2019-08-20T03:19:01-04:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
   fhir:CodeSystem.content [ fhir:value "not-present"];

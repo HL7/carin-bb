@@ -11,11 +11,11 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html</code></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-placeofservice"/>
-  <version value="0.1.36-DRAFT"/>
+  <version value="0.1.37-DRAFT"/>
   <name value="CARINBBPlaceOfService"/>
   <title value="CARIN Blue Button Place Of Service Codes For Professional Claims Value Set"/>
   <status value="draft"/>
-  <date value="2019-08-13T05:09:16-04:00"/>
+  <date value="2019-08-20T03:19:01-04:00"/>
   <description value="Place of Service Codes for Professional Claims"/>
   <compose>
     <include>

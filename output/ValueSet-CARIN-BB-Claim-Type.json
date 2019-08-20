@@ -10,11 +10,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Type Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-CARIN-BB-Claim-Type.html\"><code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>inpatient-facility</td><td>Inpatient Facility</td><td/></tr><tr><td>outpatient-facility</td><td>Outpatient Facility</td><td/></tr><tr><td>professional-nonclinician</td><td>Professional or Non-Clinician</td><td/></tr><tr><td>pharmacy</td><td>Pharmacy</td><td/></tr><tr><td>vision</td><td>Vision</td><td/></tr><tr><td>oral</td><td>Oral</td><td/></tr></table></li></ul></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type",
-  "version": "0.1.36-DRAFT",
+  "version": "0.1.37-DRAFT",
   "name": "CARINBBClaimType",
   "title": "CARIN Blue Button Claim Type Value Set",
   "status": "draft",
-  "date": "2019-08-13T05:09:16-04:00",
+  "date": "2019-08-20T03:19:01-04:00",
   "compose": {
     "include": [
       {

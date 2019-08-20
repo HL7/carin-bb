@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="534d039a-ff2f-46e9-9735-0676a223e191"/>
+  <id value="7207c4a0-24b5-4a64-b5e5-e48df6c90152"/>
   <meta>
-    <lastUpdated value="2019-08-13T05:09:16.814-04:00"/>
+    <lastUpdated value="2019-08-20T03:19:01.683-04:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -36,15 +36,15 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-snomedct-procedurecodes"/>
-        <version value="0.1.36-DRAFT"/>
+        <version value="0.1.37-DRAFT"/>
         <name value="CARINBBSNOMEDCTProcedureCodes"/>
         <title value="CARIN Blue Button SNOMEDCT Procedure Codes Value Set"/>
         <status value="draft"/>
-        <date value="2019-08-13T05:09:16-04:00"/>
+        <date value="2019-08-20T03:19:01-04:00"/>
         <description value="This value set includes codes from the following code systems:&#xA;&#xA;Include codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)"/>
         <expansion>
-          <identifier value="urn:uuid:9da27ea4-3598-426e-bea3-81a46c4309d1"/>
-          <timestamp value="2019-08-13T05:09:57-04:00"/>
+          <identifier value="urn:uuid:3e70bf88-6bc6-4704-a921-eac728f0ec77"/>
+          <timestamp value="2019-08-20T03:19:46-04:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>

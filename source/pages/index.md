@@ -29,7 +29,8 @@ See the [Table of Contents](toc.html) for more information.
 
 
 #### Latest Changes
-- (36) Added "draft" verbiage
+- (37) Updated Feedback section with Zulip stream information
+- (36) Added explicit "draft" verbiage
 - (35) Revised narrative content
 - (34) Removed Credits and added USCore Patient based CARINBBPatient profile
 - (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages

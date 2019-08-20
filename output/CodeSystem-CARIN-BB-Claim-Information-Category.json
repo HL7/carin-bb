@@ -10,11 +10,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Information Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory defines many codes, but they are not represented here</p></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-  "version": "0.1.36-DRAFT",
+  "version": "0.1.37-DRAFT",
   "name": "CARINBBClaimInformationCategory",
   "title": "CARIN Blue Button Claim Information Category Code System",
   "status": "draft",
-  "date": "2019-08-13T05:09:16-04:00",
+  "date": "2019-08-20T03:19:01-04:00",
   "publisher": "CARIN Alliance",
   "caseSensitive": true,
   "content": "not-present",

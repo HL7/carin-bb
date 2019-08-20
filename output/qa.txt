@@ -2,118 +2,118 @@
 =========================================
 
 err = 60, warn = 0, info = 0
-Generated Tue Aug 13 05:11:38 EDT 2019. FHIR version 4.0.0 for hl7.fhir.us.carin-bb#0.1.36-DRAFT (canonical = http://hl7.org/fhir/us/carin-bb)
+Generated Tue Aug 20 03:21:55 EDT 2019. FHIR version 4.0.0 for hl7.fhir.us.carin-bb#0.1.37-DRAFT (canonical = http://hl7.org/fhir/us/carin-bb)
 
  Build Errors : 6 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Adjudication-Category : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Claim-CareTeam-Role : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Claim-Information-Category : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Claim-Type : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Network-Contracting-Status : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Related-Claim-Relationship : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\implementationguide\carin-bb : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Inpatient-Facility : 2 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Outpatient-Facility : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Pharmacy : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Professional-NonClinician : 2 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARINBBPatient : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\carin-bb-Coverage : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Adjudication-Amount-Category : 2 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Adjudication-Benefit-Payment-Status-Category : 2 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Adjudication-Category : 2 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Adjudication-Denial-Reason : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-AdmitSource : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-AdmitType : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-CPT-HCPCS-ProcedureCodes : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Claim-CareTeam-Role : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Claim-Information-Category : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Claim-Type : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-DiagnosisType : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Discharge-Status : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-HCPCS-ModifierCodes : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-MS-DRG : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Network-Contracting-Status : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-PlaceOfService : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Related-Claim-Relationship : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Revenue-Center : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-SNOMEDCT-ProcedureCodes : 0 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-TOB-BillClassification : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-TOB-Frequency : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-TOB-TypeOfFacility : 1 / 0
- C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-TypeOfService : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Adjudication-Category : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Claim-CareTeam-Role : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Claim-Information-Category : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Claim-Type : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Network-Contracting-Status : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Related-Claim-Relationship : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\implementationguide\carin-bb : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Inpatient-Facility : 2 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Outpatient-Facility : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Pharmacy : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Professional-NonClinician : 2 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARINBBPatient : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\carin-bb-Coverage : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Adjudication-Amount-Category : 2 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Adjudication-Benefit-Payment-Status-Category : 2 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Adjudication-Category : 2 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Adjudication-Denial-Reason : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-AdmitSource : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-AdmitType : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-CPT-HCPCS-ProcedureCodes : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Claim-CareTeam-Role : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Claim-Information-Category : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Claim-Type : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-DiagnosisType : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Discharge-Status : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-HCPCS-ModifierCodes : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-MS-DRG : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Network-Contracting-Status : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-PlaceOfService : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Related-Claim-Relationship : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Revenue-Center : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-SNOMEDCT-ProcedureCodes : 0 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-TOB-BillClassification : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-TOB-Frequency : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-TOB-TypeOfFacility : 1 / 0
+ C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-TypeOfService : 1 / 0
 </table>
 == n/a ==
 ERROR: Patient.contact.relationship: The reference http://hl7.org/fhir/ValueSet/v2-0131 could not be resolved
-ERROR: C:\Windows\Temp\tmp-11416DFILhyPCm7bl\output\Benefit_to_Consumers_and_Health_Plans.html#/html/head/link/body/div/div/div/div/div/div/p/a at Line 232, column 5: The link 'undefined' for "Previous Page" cannot be resolved
-ERROR: C:\Windows\Temp\tmp-11416DFILhyPCm7bl\output\Mapping_from_CPCDS_to_FHIR_Resources.html#/html/head/link/body/div/div/div/div/div/div/p/a at Line 236, column 5: The link 'undefined' for "Next Page" cannot be resolved
-ERROR: C:\Windows\Temp\tmp-11416DFILhyPCm7bl\output\StructureDefinition-CARINBBPatient-definitions.html#/html/head/link/body/div/div/div/div/div/div/table/tr/td/a at Line 650, column 206: The link 'v2-0131.html' for "v2-0131" cannot be resolved
-ERROR: C:\Windows\Temp\tmp-11416DFILhyPCm7bl\output\StructureDefinition-CARINBBPatient.html#/html/head/link/body/div/div/div/div/div/div/hr/div/div/div/div/table/tr/td/a at Line 441, column 1700: The link 'v2-0131.html' for "v2-0131" cannot be resolved
-ERROR: C:\Windows\Temp\tmp-11416DFILhyPCm7bl\output\StructureDefinition-CARINBBPatient.html#/html/head/link/body/div/div/div/div/div/div/hr/div/div/div/div/table/tr/td/a at Line 572, column 1700: The link 'v2-0131.html' for "v2-0131" cannot be resolved
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Adjudication-Category.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Claim-CareTeam-Role.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Claim-Information-Category.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Claim-Type.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Network-Contracting-Status.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\codesystem\CARIN-BB-Related-Claim-Relationship.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\implementationguide\carin-bb.xml ==
+ERROR: C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\output\Benefit_to_Consumers_and_Health_Plans.html#/html/head/link/body/div/div/div/div/div/div/p/a at Line 232, column 5: The link 'undefined' for "Previous Page" cannot be resolved
+ERROR: C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\output\Mapping_from_CPCDS_to_FHIR_Resources.html#/html/head/link/body/div/div/div/div/div/div/p/a at Line 236, column 5: The link 'undefined' for "Next Page" cannot be resolved
+ERROR: C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\output\StructureDefinition-CARINBBPatient-definitions.html#/html/head/link/body/div/div/div/div/div/div/table/tr/td/a at Line 650, column 206: The link 'v2-0131.html' for "v2-0131" cannot be resolved
+ERROR: C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\output\StructureDefinition-CARINBBPatient.html#/html/head/link/body/div/div/div/div/div/div/hr/div/div/div/div/table/tr/td/a at Line 441, column 1700: The link 'v2-0131.html' for "v2-0131" cannot be resolved
+ERROR: C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\output\StructureDefinition-CARINBBPatient.html#/html/head/link/body/div/div/div/div/div/div/hr/div/div/div/div/table/tr/td/a at Line 572, column 1700: The link 'v2-0131.html' for "v2-0131" cannot be resolved
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Adjudication-Category.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Claim-CareTeam-Role.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Claim-Information-Category.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Claim-Type.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Network-Contracting-Status.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\codesystem\CARIN-BB-Related-Claim-Relationship.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\implementationguide\carin-bb.xml ==
 ERROR: ImplementationGuide/hl7.fhir.us.carin-bb: ImplementationGuide.dependsOn[0].uri: URL value 'http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0' does not resolve
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Inpatient-Facility.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Inpatient-Facility.json ==
 ERROR: http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility: Snapshot for http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility does not contain an element that matches an existing differential element that has id: ExplanationOfBenefit.supportingInfo.category
 ERROR: http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility: Snapshot for http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility does not contain an element that matches an existing differential element that has id: ExplanationOfBenefit.item.adjudication.category
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Pharmacy.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Professional-NonClinician.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Pharmacy.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARIN-BB-ExplanationOfBenefit-Professional-NonClinician.json ==
 ERROR: http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician: Snapshot for http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician does not contain an element that matches an existing differential element that has id: ExplanationOfBenefit.supportingInfo.category
 ERROR: http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician: Snapshot for http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician does not contain an element that matches an existing differential element that has id: ExplanationOfBenefit.item.adjudication.category
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\CARINBBPatient.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\structuredefinition\carin-bb-Coverage.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Adjudication-Amount-Category.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\CARINBBPatient.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\structuredefinition\carin-bb-Coverage.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Adjudication-Amount-Category.json ==
 ERROR: ValueSet/CARIN-BB-Adjudication-Amount-Category: ValueSet.compose.include[0].system: URL value 'http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory' does not resolve
 ERROR: CARIN-BB-Adjudication-Amount-Category: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Adjudication-Benefit-Payment-Status-Category.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Adjudication-Benefit-Payment-Status-Category.json ==
 ERROR: ValueSet/CARIN-BB-Adjudication-Benefit-Payment-Status-Category: ValueSet.compose.include[0].system: URL value 'http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory' does not resolve
 ERROR: CARIN-BB-Adjudication-Benefit-Payment-Status-Category: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Adjudication-Category.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Adjudication-Category.json ==
 ERROR: ValueSet/CARIN-BB-Adjudication-Category: ValueSet.compose.include[0].system: URL value 'http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory' does not resolve
 ERROR: CARIN-BB-Adjudication-Category: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Adjudication-Denial-Reason.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Adjudication-Denial-Reason.json ==
 ERROR: CARIN-BB-Adjudication-Denial-Reason: Error from server: Unable to provide support for code system http://www.wpc-edi.com/reference/codelists/healthcare/claim-adjustment-reason-codes
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-AdmitSource.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-AdmitSource.json ==
 ERROR: CARIN-BB-AdmitSource: Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-AdmitType.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-AdmitType.json ==
 ERROR: CARIN-BB-AdmitType: Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-CPT-HCPCS-ProcedureCodes.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-CPT-HCPCS-ProcedureCodes.json ==
 ERROR: CARIN-BB-CPT-HCPCS-ProcedureCodes: Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Claim-CareTeam-Role.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Claim-CareTeam-Role.json ==
 ERROR: CARIN-BB-Claim-CareTeam-Role: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Claim-Information-Category.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Claim-Information-Category.json ==
 ERROR: CARIN-BB-Claim-Information-Category: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Claim-Type.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Claim-Type.json ==
 ERROR: CARIN-BB-Claim-Type: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-DiagnosisType.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-DiagnosisType.json ==
 ERROR: CARIN-BB-DiagnosisType: Error from server: Unable to provide support for code system http://snomed.info/sct/5991000124107/version/20170901
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Discharge-Status.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Discharge-Status.json ==
 ERROR: CARIN-BB-Discharge-Status: Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-HCPCS-ModifierCodes.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-HCPCS-ModifierCodes.json ==
 ERROR: CARIN-BB-HCPCS-ModifierCodes: Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-MS-DRG.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-MS-DRG.json ==
 ERROR: CARIN-BB-MS-DRG: Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Network-Contracting-Status.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Network-Contracting-Status.json ==
 ERROR: CARIN-BB-Network-Contracting-Status: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-PlaceOfService.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-PlaceOfService.json ==
 ERROR: CARIN-BB-PlaceOfService: Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Related-Claim-Relationship.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Related-Claim-Relationship.json ==
 ERROR: CARIN-BB-Related-Claim-Relationship: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-Revenue-Center.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-Revenue-Center.json ==
 ERROR: CARIN-BB-Revenue-Center: Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-SNOMEDCT-ProcedureCodes.json ==
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-TOB-BillClassification.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-SNOMEDCT-ProcedureCodes.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-TOB-BillClassification.json ==
 ERROR: CARIN-BB-TOB-BillClassification: Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-TOB-Frequency.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-TOB-Frequency.json ==
 ERROR: CARIN-BB-TOB-Frequency: Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-TOB-TypeOfFacility.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-TOB-TypeOfFacility.json ==
 ERROR: CARIN-BB-TOB-TypeOfFacility: Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html
-== C:\Windows\Temp\tmp-11416DFILhyPCm7bl\source\resources\valueset\CARIN-BB-TypeOfService.json ==
+== C:\Windows\Temp\tmp-114163Pv8p4CnqC3P\source\resources\valueset\CARIN-BB-TypeOfService.json ==
 ERROR: CARIN-BB-TypeOfService: Error from server: Unable to provide support for code system https://www.resdac.org/sites/resdac.umn.edu/files/CMS%20Type%20of%20Service%20Table.txt
