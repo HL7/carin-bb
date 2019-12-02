@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "c6c0a271-b87c-46f4-9aa9-efc62e5ca5a6",
+  "id" : "df24d091-57f4-4004-b647-ab1dbebbb730",
   "meta" : {
-    "lastUpdated" : "2019-12-02T04:50:03.590-05:00"
+    "lastUpdated" : "2019-12-02T05:44:40.581-05:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -23,10 +23,10 @@
       "name" : "CARINBBRelatedClaimRelationship",
       "title" : "CARIN Blue Button Related Claim Relationship Value Set",
       "status" : "draft",
-      "date" : "2019-12-02T04:50:03-05:00",
+      "date" : "2019-12-02T05:44:40-05:00",
       "expansion" : {
-        "identifier" : "urn:uuid:99ec5398-09bb-40fd-9243-11d152c0de46",
-        "timestamp" : "2019-12-02T04:51:33-05:00",
+        "identifier" : "urn:uuid:2fd22d58-c242-482e-a64c-a9a7ec0605ce",
+        "timestamp" : "2019-12-02T05:46:07-05:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -67,10 +67,10 @@
       "name" : "CARINBBClaimType",
       "title" : "CARIN Blue Button Claim Type Value Set",
       "status" : "draft",
-      "date" : "2019-12-02T04:50:03-05:00",
+      "date" : "2019-12-02T05:44:40-05:00",
       "expansion" : {
-        "identifier" : "urn:uuid:0f566d18-6a3c-4bf1-a904-2d3bce417942",
-        "timestamp" : "2019-12-02T04:52:06-05:00",
+        "identifier" : "urn:uuid:0c0d5caf-a215-4b51-b657-fc35c4ec83d5",
+        "timestamp" : "2019-12-02T05:46:40-05:00",
         "total" : 6,
         "parameter" : [{
           "name" : "excludeNested",
@@ -131,10 +131,10 @@
       "name" : "CARINBBClaimCareTeamRole",
       "title" : "CARIN Blue Button Claim Care Team Role Value Set",
       "status" : "draft",
-      "date" : "2019-12-02T04:50:03-05:00",
+      "date" : "2019-12-02T05:44:40-05:00",
       "expansion" : {
-        "identifier" : "urn:uuid:2ba7ec60-76cd-43e7-88e4-d492f91615b5",
-        "timestamp" : "2019-12-02T04:52:06-05:00",
+        "identifier" : "urn:uuid:5fc1d6b4-dce6-42e8-b6fa-4c917da0f744",
+        "timestamp" : "2019-12-02T05:46:40-05:00",
         "total" : 5,
         "parameter" : [{
           "name" : "excludeNested",
@@ -190,11 +190,11 @@
       "name" : "CARINBBAdjudicationAmountCategory",
       "title" : "CARIN Blue Button Adjudication Amount Category Value Set",
       "status" : "draft",
-      "date" : "2019-12-02T04:50:03-05:00",
+      "date" : "2019-12-02T05:44:40-05:00",
       "description" : "Describes the various amount fields used when submitting and adjudicating a claim.",
       "expansion" : {
-        "identifier" : "urn:uuid:fa04a531-4d50-4dad-abc4-4a9baa792fa5",
-        "timestamp" : "2019-12-02T04:52:07-05:00",
+        "identifier" : "urn:uuid:d63008ae-2c9c-416e-a2b6-40f503e159f1",
+        "timestamp" : "2019-12-02T05:46:41-05:00",
         "total" : 9,
         "parameter" : [{
           "name" : "excludeNested",
@@ -270,10 +270,10 @@
       "name" : "CARINBBNetworkContractingStatus",
       "title" : "CARIN Blue Button Network Contracting Status Value Set",
       "status" : "draft",
-      "date" : "2019-12-02T04:50:03-05:00",
+      "date" : "2019-12-02T05:44:40-05:00",
       "expansion" : {
-        "identifier" : "urn:uuid:3cb67696-e238-4b88-82ac-a55ea2371ba6",
-        "timestamp" : "2019-12-02T04:52:07-05:00",
+        "identifier" : "urn:uuid:b16c5d40-1d5c-4ec9-adde-ba58e8911677",
+        "timestamp" : "2019-12-02T05:46:41-05:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -314,10 +314,10 @@
       "name" : "CARINBBClaimInformationCategory",
       "title" : "CARIN Blue Button Claim Information Category Value Set",
       "status" : "draft",
-      "date" : "2019-12-02T04:50:03-05:00",
+      "date" : "2019-12-02T05:44:40-05:00",
       "expansion" : {
-        "identifier" : "urn:uuid:caa9c4ed-e944-49c6-b852-7ad43287956d",
-        "timestamp" : "2019-12-02T04:52:08-05:00",
+        "identifier" : "urn:uuid:a102a7ce-f1ab-4a21-acb9-9dcc8b4ea3f3",
+        "timestamp" : "2019-12-02T05:46:42-05:00",
         "total" : 21,
         "parameter" : [{
           "name" : "excludeNested",
@@ -453,15 +453,15 @@
       "name" : "CARINBBSNOMEDCTProcedureCodes",
       "title" : "CARIN Blue Button SNOMEDCT Procedure Codes Value Set",
       "status" : "draft",
-      "date" : "2019-12-02T04:50:03-05:00",
+      "date" : "2019-12-02T05:44:40-05:00",
       "description" : "This value set includes codes from the following code systems:\n\nInclude codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)",
       "expansion" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
           "valueBoolean" : true
         }],
-        "identifier" : "urn:uuid:200f0471-ae02-4a95-b57b-952eeb6f7d08",
-        "timestamp" : "2019-12-02T04:52:35-05:00",
+        "identifier" : "urn:uuid:5c5d7fe4-74bf-4c63-9f24-7e29cab7bc9e",
+        "timestamp" : "2019-12-02T05:47:10-05:00",
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -499,10 +499,10 @@
       "name" : "CARINBBAdjudicationBenefitPaymentStatusCategory",
       "title" : "CARIN Blue Button Adjudication Benefit Payment Status Category Value Set",
       "status" : "draft",
-      "date" : "2019-12-02T04:50:03-05:00",
+      "date" : "2019-12-02T05:44:40-05:00",
       "expansion" : {
-        "identifier" : "urn:uuid:b844b3e7-ac0a-46c6-88a1-6721f5ebfe71",
-        "timestamp" : "2019-12-02T04:53:30-05:00",
+        "identifier" : "urn:uuid:dff1e8a0-4f77-402b-b9ec-125f621f0024",
+        "timestamp" : "2019-12-02T05:48:01-05:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -548,10 +548,10 @@
       "name" : "CARINBBAdjudicationCategory",
       "title" : "CARIN Blue Button Claim Adjudication Category Value Set",
       "status" : "draft",
-      "date" : "2019-12-02T04:50:03-05:00",
+      "date" : "2019-12-02T05:44:40-05:00",
       "expansion" : {
-        "identifier" : "urn:uuid:857d22e8-853f-4d7e-a6ac-36f5a3d35a6a",
-        "timestamp" : "2019-12-02T04:53:31-05:00",
+        "identifier" : "urn:uuid:e4582722-d237-484f-917b-fbe94f94585a",
+        "timestamp" : "2019-12-02T05:48:01-05:00",
         "total" : 15,
         "parameter" : [{
           "name" : "excludeNested",
@@ -657,10 +657,10 @@
       "name" : "CARINBBIdentifierType",
       "title" : "CARIN Blue Button Identifier Type Value Set",
       "status" : "draft",
-      "date" : "2019-12-02T04:50:03-05:00",
+      "date" : "2019-12-02T05:44:40-05:00",
       "expansion" : {
-        "identifier" : "urn:uuid:197eed0b-0fdc-40fd-8691-8826d244a0bc",
-        "timestamp" : "2019-12-02T04:53:46-05:00",
+        "identifier" : "urn:uuid:694138ee-b865-4282-aa71-73dd9b53c994",
+        "timestamp" : "2019-12-02T05:48:16-05:00",
         "total" : 29,
         "parameter" : [{
           "name" : "excludeNested",

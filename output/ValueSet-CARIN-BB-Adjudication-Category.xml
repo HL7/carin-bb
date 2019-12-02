@@ -14,7 +14,7 @@
   <name value="CARINBBAdjudicationCategory"/>
   <title value="CARIN Blue Button Claim Adjudication Category Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-02T04:50:03-05:00"/>
+  <date value="2019-12-02T05:44:40-05:00"/>
   <compose>
     <include>
       <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory"/>

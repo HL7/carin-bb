@@ -21,7 +21,7 @@
   fhir:ValueSet.name [ fhir:value "CARINBBRevenueCenter"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button Revenue Center Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-02T04:50:03-05:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-12-02T05:44:40-05:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "UB-04 Revenue Code (FL-42), Revenue Description (FL-43)"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

@@ -16,7 +16,7 @@ This file contains the Level II alphanumeric HCPCS procedure and modifier codes,
   <name value="CARINBBHCPCSModifierCodes"/>
   <title value="CARIN Blue Button HCPCS Modifier Codes Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-02T04:50:03-05:00"/>
+  <date value="2019-12-02T05:44:40-05:00"/>
   <description value="HCPCS Release &amp; Code Sets&#xA;This file contains the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage, and pricing data.  The Level II HCPCS codes, which are established by CMS&#39;s Alpha-Numeric Editorial Panel, primarily represent items and supplies and non-physician services not covered by the American Medical Association&#39;s Current Procedural Terminology-4 (CPT-4) codes; Medicare, Medicaid, and private health insurers use HCPCS procedure and modifier codes for claims processing.  Level II alphanumeric procedure and modifier codes comprise the A to V range."/>
   <compose>
     <include>

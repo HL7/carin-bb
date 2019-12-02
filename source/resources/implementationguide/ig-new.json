@@ -7,15 +7,15 @@
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Windows\\Temp\\tmp-9976yelbGYnIUsGu\\source\\resources"
+    "valueString" : "C:\\Windows\\Temp\\tmp-9976hsOkULiQy15n\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Windows\\Temp\\tmp-9976yelbGYnIUsGu\\framework"
+    "valueString" : "C:\\Windows\\Temp\\tmp-9976hsOkULiQy15n\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Windows\\Temp\\tmp-9976yelbGYnIUsGu\\source\\pages"
+    "valueString" : "C:\\Windows\\Temp\\tmp-9976hsOkULiQy15n\\source\\pages"
   }],
   "url" : "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb",
   "version" : "0.1.42-DRAFT",

@@ -15,7 +15,7 @@
   <name value="NUBCPointOfOriginForAdmissionOrVisit"/>
   <title value="NUBC Point of Origin for Admission or Visit Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-02T04:50:03-05:00"/>
+  <date value="2019-12-02T05:44:40-05:00"/>
   <description value="These codes are found in the [CMS 1450](https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256) form. See HL7 OID [information](http://www.hl7.org/oid/OID_view.cfm?&amp;Comp_OID=2.16.840.1.113883.6.301.4)."/>
   <compose>
     <include>

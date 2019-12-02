@@ -21,7 +21,7 @@
   fhir:ValueSet.name [ fhir:value "CARINBBMSDRG"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button MS-DRG Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-02T04:50:03-05:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-12-02T05:44:40-05:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "This is the description for the MS-DRG value set."];
   fhir:ValueSet.purpose [ fhir:value "This is the purpose of this value set."];
   fhir:ValueSet.copyright [ fhir:value "The content of this value set is copyrighted by a party other than HL7"];
