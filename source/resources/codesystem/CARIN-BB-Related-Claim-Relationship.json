@@ -1,0 +1,26 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "CARIN-BB-Related-Claim-Relationship",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2019-12-01T14:03:36.000-05:00"
+	},
+	"url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship",
+	"version": "1.0.0",
+	"name": "CARINBBRelatedClaimRelationship",
+	"title": "CARIN Blue Button Related Claim Relationship Code System",
+	"status": "draft",
+	"publisher": "CARIN Alliance",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+			"code": "prior",
+			"display": "Prior claim"
+		},
+		{
+			"code": "replaced",
+			"display": "Replaced claim"
+		}
+	]
+}

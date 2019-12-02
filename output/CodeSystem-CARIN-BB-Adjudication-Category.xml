@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="CARIN-BB-Adjudication-Category"/>
+  <meta>
+    <versionId value="4"/>
+    <lastUpdated value="2019-12-01T13:53:17.000-05:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Claim Adjudication Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">benefitPaymentStatusCode<a name="CARIN-BB-Adjudication-Category-benefitPaymentStatusCode"> </a></td><td>Benefit payment status code</td><td>Benefit payment status code</td></tr><tr><td style="white-space:nowrap">paymentDenialCode<a name="CARIN-BB-Adjudication-Category-paymentDenialCode"> </a></td><td>Payment denial code</td><td>Payment Denial Code</td></tr><tr><td style="white-space:nowrap">submittedamount<a name="CARIN-BB-Adjudication-Category-submittedamount"> </a></td><td>submitted amount</td><td/></tr><tr><td style="white-space:nowrap">allowedamount<a name="CARIN-BB-Adjudication-Category-allowedamount"> </a></td><td>allowed amount</td><td/></tr><tr><td style="white-space:nowrap">deductibleamount<a name="CARIN-BB-Adjudication-Category-deductibleamount"> </a></td><td>deductible amount</td><td/></tr><tr><td style="white-space:nowrap">coinsuranceamount<a name="CARIN-BB-Adjudication-Category-coinsuranceamount"> </a></td><td>coinsurance amount</td><td/></tr><tr><td style="white-space:nowrap">copayamount<a name="CARIN-BB-Adjudication-Category-copayamount"> </a></td><td>copay amount</td><td/></tr><tr><td style="white-space:nowrap">noncoveredamount<a name="CARIN-BB-Adjudication-Category-noncoveredamount"> </a></td><td>noncovered amount</td><td/></tr><tr><td style="white-space:nowrap">cobamount<a name="CARIN-BB-Adjudication-Category-cobamount"> </a></td><td>cob amount</td><td/></tr><tr><td style="white-space:nowrap">paymentamount<a name="CARIN-BB-Adjudication-Category-paymentamount"> </a></td><td>payment amount</td><td/></tr><tr><td style="white-space:nowrap">patientpayamount<a name="CARIN-BB-Adjudication-Category-patientpayamount"> </a></td><td>patient pay amount</td><td/></tr><tr><td style="white-space:nowrap">denialreason<a name="CARIN-BB-Adjudication-Category-denialreason"> </a></td><td>payment denial reason</td><td/></tr><tr><td style="white-space:nowrap">innetworkbenefitpaymentstatus<a name="CARIN-BB-Adjudication-Category-innetworkbenefitpaymentstatus"> </a></td><td>in network benefit payment status</td><td/></tr><tr><td style="white-space:nowrap">outofnetworkbenefitpaymentstatus<a name="CARIN-BB-Adjudication-Category-outofnetworkbenefitpaymentstatus"> </a></td><td>out of network benefit payment status</td><td/></tr><tr><td style="white-space:nowrap">otherbenefitpaymentstatus<a name="CARIN-BB-Adjudication-Category-otherbenefitpaymentstatus"> </a></td><td>other benefit payment status</td><td/></tr><tr><td style="white-space:nowrap">allowedunits<a name="CARIN-BB-Adjudication-Category-allowedunits"> </a></td><td>allowed units</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory"/>
+  <version value="0.1.42-DRAFT"/>
+  <name value="CARINBBAdjudicationCategory"/>
+  <title value="CARIN Blue Button Claim Adjudication Category Code System"/>
+  <status value="draft"/>
+  <date value="2019-07-27T00:00:00-04:00"/>
+  <publisher value="CARIN Alliance"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <concept>
+    <code value="benefitPaymentStatusCode"/>
+    <display value="Benefit payment status code"/>
+    <definition value="Benefit payment status code"/>
+  </concept>
+  <concept>
+    <code value="paymentDenialCode"/>
+    <display value="Payment denial code"/>
+    <definition value="Payment Denial Code"/>
+  </concept>
+  <concept>
+    <code value="submittedamount"/>
+    <display value="submitted amount"/>
+  </concept>
+  <concept>
+    <code value="allowedamount"/>
+    <display value="allowed amount"/>
+  </concept>
+  <concept>
+    <code value="deductibleamount"/>
+    <display value="deductible amount"/>
+  </concept>
+  <concept>
+    <code value="coinsuranceamount"/>
+    <display value="coinsurance amount"/>
+  </concept>
+  <concept>
+    <code value="copayamount"/>
+    <display value="copay amount"/>
+  </concept>
+  <concept>
+    <code value="noncoveredamount"/>
+    <display value="noncovered amount"/>
+  </concept>
+  <concept>
+    <code value="cobamount"/>
+    <display value="cob amount"/>
+  </concept>
+  <concept>
+    <code value="paymentamount"/>
+    <display value="payment amount"/>
+  </concept>
+  <concept>
+    <code value="patientpayamount"/>
+    <display value="patient pay amount"/>
+  </concept>
+  <concept>
+    <code value="denialreason"/>
+    <display value="payment denial reason"/>
+  </concept>
+  <concept>
+    <code value="innetworkbenefitpaymentstatus"/>
+    <display value="in network benefit payment status"/>
+  </concept>
+  <concept>
+    <code value="outofnetworkbenefitpaymentstatus"/>
+    <display value="out of network benefit payment status"/>
+  </concept>
+  <concept>
+    <code value="otherbenefitpaymentstatus"/>
+    <display value="other benefit payment status"/>
+  </concept>
+  <concept>
+    <code value="allowedunits"/>
+    <display value="allowed units"/>
+  </concept>
+</CodeSystem>

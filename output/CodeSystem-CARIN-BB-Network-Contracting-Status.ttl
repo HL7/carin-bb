@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/CARIN-BB-Network-Contracting-Status> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "CARIN-BB-Network-Contracting-Status"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "3" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-01T14:03:23.000-05:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Network Contracting Status Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">contracted<a name=\"CARIN-BB-Network-Contracting-Status-contracted\"> </a></td><td>contracted</td><td/></tr><tr><td style=\"white-space:nowrap\">non-contracted<a name=\"CARIN-BB-Network-Contracting-Status-non-contracted\"> </a></td><td>non-contracted</td><td/></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus"];
+  fhir:CodeSystem.version [ fhir:value "0.1.42-DRAFT"];
+  fhir:CodeSystem.name [ fhir:value "CARINBBNetworkContractingStatus"];
+  fhir:CodeSystem.title [ fhir:value "CARIN Blue Button Network Contracting Status Code System"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2019-12-02T07:37:06-05:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "contracted" ];
+     fhir:CodeSystem.concept.display [ fhir:value "contracted" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "non-contracted" ];
+     fhir:CodeSystem.concept.display [ fhir:value "non-contracted" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/CARIN-BB-Network-Contracting-Status.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/CodeSystem/CARIN-BB-Network-Contracting-Status.ttl> .
+
+# -------------------------------------------------------------------------------------
+

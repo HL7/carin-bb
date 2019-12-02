@@ -1,0 +1,26 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "CARIN-BB-Network-Contracting-Status",
+	"meta": {
+		"versionId": "3",
+		"lastUpdated": "2019-12-01T14:03:23.000-05:00"
+	},
+	"url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus",
+	"version": "1.0.0",
+	"name": "CARINBBNetworkContractingStatus",
+	"title": "CARIN Blue Button Network Contracting Status Code System",
+	"status": "draft",
+	"publisher": "CARIN Alliance",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+			"code": "contracted",
+			"display": "contracted"
+		},
+		{
+			"code": "non-contracted",
+			"display": "non-contracted"
+		}
+	]
+}

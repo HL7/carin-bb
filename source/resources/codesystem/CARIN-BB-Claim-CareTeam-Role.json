@@ -1,0 +1,38 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "CARIN-BB-Claim-CareTeam-Role",
+	"meta": {
+		"versionId": "4",
+		"lastUpdated": "2019-12-01T14:02:49.000-05:00"
+	},
+	"url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole",
+	"version": "1.0.0",
+	"name": "CARINBBClaimCareTeamRole",
+	"title": "CARIN Blue Button Claim Care Team Role Code System",
+	"status": "draft",
+	"publisher": "CARIN Alliance",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+			"code": "supervising",
+			"display": "Attending or Supervising provider"
+		},
+		{
+			"code": "referring",
+			"display": "Referring provider"
+		},
+		{
+			"code": "performing",
+			"display": "Servicing or Rendering provider"
+		},
+		{
+			"code": "prescribing",
+			"display": "Prescribing provider"
+		},
+		{
+			"code": "pcp",
+			"display": "Primary care provider"
+		}
+	]
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="CARIN-BB-Claim-CareTeam-Role"/>
+  <meta>
+    <versionId value="4"/>
+    <lastUpdated value="2019-12-01T14:02:49.000-05:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Claim Care Team Role Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">supervising<a name="CARIN-BB-Claim-CareTeam-Role-supervising"> </a></td><td>Attending or Supervising provider</td><td/></tr><tr><td style="white-space:nowrap">referring<a name="CARIN-BB-Claim-CareTeam-Role-referring"> </a></td><td>Referring provider</td><td/></tr><tr><td style="white-space:nowrap">performing<a name="CARIN-BB-Claim-CareTeam-Role-performing"> </a></td><td>Servicing or Rendering provider</td><td/></tr><tr><td style="white-space:nowrap">prescribing<a name="CARIN-BB-Claim-CareTeam-Role-prescribing"> </a></td><td>Prescribing provider</td><td/></tr><tr><td style="white-space:nowrap">pcp<a name="CARIN-BB-Claim-CareTeam-Role-pcp"> </a></td><td>Primary care provider</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole"/>
+  <version value="0.1.42-DRAFT"/>
+  <name value="CARINBBClaimCareTeamRole"/>
+  <title value="CARIN Blue Button Claim Care Team Role Code System"/>
+  <status value="draft"/>
+  <date value="2019-12-02T07:37:06-05:00"/>
+  <publisher value="CARIN Alliance"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <concept>
+    <code value="supervising"/>
+    <display value="Attending or Supervising provider"/>
+  </concept>
+  <concept>
+    <code value="referring"/>
+    <display value="Referring provider"/>
+  </concept>
+  <concept>
+    <code value="performing"/>
+    <display value="Servicing or Rendering provider"/>
+  </concept>
+  <concept>
+    <code value="prescribing"/>
+    <display value="Prescribing provider"/>
+  </concept>
+  <concept>
+    <code value="pcp"/>
+    <display value="Primary care provider"/>
+  </concept>
+</CodeSystem>

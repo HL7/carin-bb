@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="CARIN-BB-SNOMEDCT-ProcedureCodes"/>
+  <meta>
+    <versionId value="4"/>
+    <lastUpdated value="2019-07-28T19:15:57.000-04:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button SNOMEDCT Procedure Codes Value Set</h2><div><p>This value set includes codes from the following code systems:</p>
+<p>Include codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a>, where the codes are contained in <a href="http://hl7.org/fhir/R4/valueset-procedure-code.html">http://hl7.org/fhir/ValueSet/procedure-code</a></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-snomedct-procedurecodes"/>
+  <version value="0.1.42-DRAFT"/>
+  <name value="CARINBBSNOMEDCTProcedureCodes"/>
+  <title value="CARIN Blue Button SNOMEDCT Procedure Codes Value Set"/>
+  <status value="draft"/>
+  <date value="2019-12-02T07:37:06-05:00"/>
+  <description value="This value set includes codes from the following code systems:&#xA;&#xA;Include codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <valueSet value="http://hl7.org/fhir/ValueSet/procedure-code"/>
+    </include>
+  </compose>
+</ValueSet>
