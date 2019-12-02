@@ -21,7 +21,7 @@
   fhir:ValueSet.name [ fhir:value "CARINBBTOBFrequency"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button Type Of Bill (Frequency) Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-02T05:44:40-05:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-12-02T07:37:06-05:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "UB-04 Type of Bill (FL-4) structure - Sequence in this episode of care\n"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

@@ -21,7 +21,7 @@
   fhir:StructureDefinition.name [ fhir:value "CARINBBOrganization"];
   fhir:StructureDefinition.title [ fhir:value "CARIN Blue Button Organization Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2019-12-02T05:44:40-05:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-12-02T07:37:06-05:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [

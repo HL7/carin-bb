@@ -14,7 +14,7 @@
   <name value="CARINBBIdentifierType"/>
   <title value="CARIN Blue Button Identifier Type Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-02T05:44:40-05:00"/>
+  <date value="2019-12-02T07:37:06-05:00"/>
   <compose>
     <include>
       <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>

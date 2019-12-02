@@ -21,7 +21,7 @@
   fhir:CodeSystem.name [ fhir:value "CARINBBClaimType"];
   fhir:CodeSystem.title [ fhir:value "CARIN Blue Button Claim Type Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
-  fhir:CodeSystem.date [ fhir:value "2019-12-02T05:44:40-05:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2019-12-02T07:37:06-05:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
   fhir:CodeSystem.content [ fhir:value "complete"];

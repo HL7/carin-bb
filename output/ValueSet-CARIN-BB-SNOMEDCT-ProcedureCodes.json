@@ -14,7 +14,7 @@
   "name": "CARINBBSNOMEDCTProcedureCodes",
   "title": "CARIN Blue Button SNOMEDCT Procedure Codes Value Set",
   "status": "draft",
-  "date": "2019-12-02T05:44:40-05:00",
+  "date": "2019-12-02T07:37:06-05:00",
   "description": "This value set includes codes from the following code systems:\n\nInclude codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)",
   "compose": {
     "include": [

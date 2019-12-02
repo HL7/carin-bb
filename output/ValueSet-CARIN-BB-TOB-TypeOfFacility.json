@@ -14,7 +14,7 @@
   "name": "CARINBBTOBTypeOfFacility",
   "title": "CARIN Blue Button Type Of Bill (Type Of Facility) Value Set",
   "status": "draft",
-  "date": "2019-12-02T05:44:40-05:00",
+  "date": "2019-12-02T07:37:06-05:00",
   "description": "UB-04 Type of Bill (FL-4) structure - Type of facility\n",
   "compose": {
     "include": [
