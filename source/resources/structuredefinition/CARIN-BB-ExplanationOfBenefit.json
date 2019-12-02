@@ -2,13 +2,14 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit",
 	"meta": {
-		"versionId": "11",
-		"lastUpdated": "2019-07-27T01:55:47.000-04:00"
+		"versionId": "20",
+		"lastUpdated": "2019-12-02T04:09:09.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit",
+	"version": "0.5",
 	"name": "CARINBBExplanationOfBenefit",
 	"title": "CARIN Blue Button Explanation of Benefit Profile",
-	"status": "draft",
+	"status": "active",
 	"publisher": "CARIN Alliance",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
@@ -31,6 +32,262 @@
 				"id": "ExplanationOfBenefit.identifier",
 				"path": "ExplanationOfBenefit.identifier",
 				"min": 1
+			},
+			{
+				"id": "ExplanationOfBenefit.type",
+				"path": "ExplanationOfBenefit.type",
+				"binding": {
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type"
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.subType",
+				"path": "ExplanationOfBenefit.subType",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.use",
+				"path": "ExplanationOfBenefit.use",
+				"patternCode": "claim"
+			},
+			{
+				"id": "ExplanationOfBenefit.patient",
+				"path": "ExplanationOfBenefit.patient",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient"
+						]
+					}
+				]
+			},
+			{
+				"id": "ExplanationOfBenefit.enterer",
+				"path": "ExplanationOfBenefit.enterer",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.insurer",
+				"path": "ExplanationOfBenefit.insurer",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "ExplanationOfBenefit.provider",
+				"path": "ExplanationOfBenefit.provider",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization"
+						]
+					}
+				]
+			},
+			{
+				"id": "ExplanationOfBenefit.priority",
+				"path": "ExplanationOfBenefit.priority",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.fundsReserveRequested",
+				"path": "ExplanationOfBenefit.fundsReserveRequested",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.fundsReserve",
+				"path": "ExplanationOfBenefit.fundsReserve",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.related.relationship",
+				"path": "ExplanationOfBenefit.related.relationship",
+				"min": 1,
+				"binding": {
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-relatedclaimrelationship"
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.prescription",
+				"path": "ExplanationOfBenefit.prescription",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.originalPrescription",
+				"path": "ExplanationOfBenefit.originalPrescription",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.payee.party",
+				"path": "ExplanationOfBenefit.payee.party",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole",
+							"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient"
+						]
+					}
+				]
+			},
+			{
+				"id": "ExplanationOfBenefit.careTeam.role",
+				"path": "ExplanationOfBenefit.careTeam.role",
+				"binding": {
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claimcareteamrole"
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.diagnosis.diagnosis[x]",
+				"path": "ExplanationOfBenefit.diagnosis.diagnosis[x]",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "ExplanationOfBenefit.diagnosis.type",
+				"path": "ExplanationOfBenefit.diagnosis.type",
+				"min": 1,
+				"max": "1",
+				"binding": {
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-diagnosistype"
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.procedure.procedure[x]",
+				"path": "ExplanationOfBenefit.procedure.procedure[x]",
+				"type": [
+					{
+						"code": "CodeableConcept"
+					}
+				]
+			},
+			{
+				"id": "ExplanationOfBenefit.precedence",
+				"path": "ExplanationOfBenefit.precedence",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.insurance",
+				"path": "ExplanationOfBenefit.insurance",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "focal"
+						}
+					],
+					"rules": "closed"
+				},
+				"max": "2"
+			},
+			{
+				"id": "ExplanationOfBenefit.insurance.focal",
+				"path": "ExplanationOfBenefit.insurance.focal",
+				"fixedBoolean": true
+			},
+			{
+				"id": "ExplanationOfBenefit.insurance.coverage",
+				"path": "ExplanationOfBenefit.insurance.coverage",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage"
+						]
+					}
+				]
+			},
+			{
+				"id": "ExplanationOfBenefit.insurance:primaryinsurance",
+				"path": "ExplanationOfBenefit.insurance",
+				"sliceName": "primaryinsurance",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.insurance:primaryinsurance.focal",
+				"path": "ExplanationOfBenefit.insurance.focal",
+				"fixedBoolean": false
+			},
+			{
+				"id": "ExplanationOfBenefit.accident",
+				"path": "ExplanationOfBenefit.accident",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.item.programCode",
+				"path": "ExplanationOfBenefit.item.programCode",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.item.factor",
+				"path": "ExplanationOfBenefit.item.factor",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.item.udi",
+				"path": "ExplanationOfBenefit.item.udi",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.item.detail",
+				"path": "ExplanationOfBenefit.item.detail",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.addItem",
+				"path": "ExplanationOfBenefit.addItem",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.total.category",
+				"path": "ExplanationOfBenefit.total.category",
+				"binding": {
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationamountcategory"
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.payment.adjustmentReason",
+				"path": "ExplanationOfBenefit.payment.adjustmentReason",
+				"binding": {
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationdenialreason"
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.formCode",
+				"path": "ExplanationOfBenefit.formCode",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.form",
+				"path": "ExplanationOfBenefit.form",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.benefitPeriod",
+				"path": "ExplanationOfBenefit.benefitPeriod",
+				"max": "0"
+			},
+			{
+				"id": "ExplanationOfBenefit.benefitBalance",
+				"path": "ExplanationOfBenefit.benefitBalance",
+				"max": "0"
 			}
 		]
 	}

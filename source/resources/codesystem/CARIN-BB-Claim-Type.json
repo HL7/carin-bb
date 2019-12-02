@@ -2,8 +2,8 @@
 	"resourceType": "CodeSystem",
 	"id": "CARIN-BB-Claim-Type",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2019-07-27T05:06:45.000-04:00"
+		"versionId": "5",
+		"lastUpdated": "2019-12-01T14:02:14.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type",
 	"version": "1.0.0",
@@ -12,7 +12,7 @@
 	"status": "draft",
 	"publisher": "CARIN Alliance",
 	"caseSensitive": true,
-	"content": "not-present",
+	"content": "complete",
 	"concept": [
 		{
 			"code": "inpatient-facility",

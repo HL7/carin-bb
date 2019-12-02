@@ -9,22 +9,22 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "CARIN-BB-Network-Contracting-Status"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "2" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-07-28T06:18:51.000-04:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "3" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-01T14:03:23.000-05:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Network Contracting Status Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus defines many codes, but they are not represented here</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Network Contracting Status Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">contracted<a name=\"CARIN-BB-Network-Contracting-Status-contracted\"> </a></td><td>contracted</td><td/></tr><tr><td style=\"white-space:nowrap\">non-contracted<a name=\"CARIN-BB-Network-Contracting-Status-non-contracted\"> </a></td><td>non-contracted</td><td/></tr></table></div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus"];
-  fhir:CodeSystem.version [ fhir:value "0.1.37-DRAFT"];
+  fhir:CodeSystem.version [ fhir:value "0.1.42-DRAFT"];
   fhir:CodeSystem.name [ fhir:value "CARINBBNetworkContractingStatus"];
   fhir:CodeSystem.title [ fhir:value "CARIN Blue Button Network Contracting Status Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
-  fhir:CodeSystem.date [ fhir:value "2019-08-20T03:19:01-04:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2019-12-02T04:50:03-05:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
-  fhir:CodeSystem.content [ fhir:value "not-present"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.concept [
      fhir:index 0;
      fhir:CodeSystem.concept.code [ fhir:value "contracted" ];

@@ -2,22 +2,22 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.carin-bb",
   "meta": {
-    "versionId": "129",
-    "lastUpdated": "2019-08-20T03:16:27.000-04:00"
+    "versionId": "155",
+    "lastUpdated": "2019-12-02T04:21:41.000-05:00"
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARINBlueButton</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb</pre><div><p><strong>CARIN Alliance</strong>\n<em>Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.</em></p>\n<p>This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.</p>\n<p>See the <a href=\"toc.html\">Table of Contents</a> for more information.</p>\n<p><em><strong>Please note that this implementation guide is currently a work in progress and is in draft status.</strong></em></p>\n<h4>Latest Changes</h4>\n<ul>\n<li>(37) Updated Feedback section with Zulip stream information</li>\n<li>(36) Added explicit &quot;draft&quot; verbiage</li>\n<li>(35) Revised narrative content</li>\n<li>(34) Removed Credits and added USCore Patient based CARINBBPatient profile</li>\n<li>(33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages</li>\n<li>(32) Added 4 specific EOB and 1 Coverage profiles</li>\n<li>(31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile</li>\n<li>(30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy</li>\n<li>(29) Updated Provider and Claim Line Amounts mappings.</li>\n<li>(28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.</li>\n<li>(27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.</li>\n<li>(26) Added sample of reverse mapping narrative for ExplanationOfBenefit</li>\n<li>(25) Added FHIR Resources section to narrative and included Example EOB.</li>\n<li>(24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.</li>\n<li>(23) Added the Latest Changes section. Added USCoreR4 Dependency.</li>\n</ul>\n</div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARINBlueButton</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb</pre><div><p><strong>CARIN Alliance</strong>\n<em>Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.</em></p>\n<p>This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.</p>\n<p>See the <a href=\"toc.html\">Table of Contents</a> for more information.</p>\n<p><em><strong>Please note that this implementation guide is currently a work in progress and is in draft status.</strong></em></p>\n<h4>Latest Changes</h4>\n<ul>\n<li>(42) First pass at harmonization of profiles and terminologies. Added the <strong>Authorization, Authentication, and Registration</strong> section.</li>\n<li>(41) set content to completed for code system CARINBBClaimType(http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)</li>\n<li>(40)  Binding of value set http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type to eob.type in profile http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit</li>\n<li>(39)  Added new code allowedunits to CARINBBAdjudicationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)</li>\n<li>(38)  Added new code clmlastactiondate to CARINBBClaimInformationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)</li>\n<li>(37) Updated Feedback section with Zulip stream information</li>\n<li>(36) Added explicit &quot;draft&quot; verbiage</li>\n<li>(35) Revised narrative content</li>\n<li>(34) Removed Credits and added USCore Patient based CARINBBPatient profile</li>\n<li>(33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages</li>\n<li>(32) Added 4 specific EOB and 1 Coverage profiles</li>\n<li>(31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile</li>\n<li>(30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy</li>\n<li>(29) Updated Provider and Claim Line Amounts mappings.</li>\n<li>(28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.</li>\n<li>(27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.</li>\n<li>(26) Added sample of reverse mapping narrative for ExplanationOfBenefit</li>\n<li>(25) Added FHIR Resources section to narrative and included Example EOB.</li>\n<li>(24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.</li>\n<li>(23) Added the Latest Changes section. Added USCoreR4 Dependency.</li>\n</ul>\n</div></div>"
   },
   "url": "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb",
-  "version": "0.1.37-DRAFT",
+  "version": "0.1.42-DRAFT",
   "name": "CARINBlueButton",
   "title": "CARIN Blue Button",
   "status": "draft",
   "experimental": true,
-  "date": "2019-08-20T03:19:01-04:00",
+  "date": "2019-12-02T04:50:03-05:00",
   "publisher": "CARIN Alliance",
-  "description": " **CARIN Alliance** \n*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*\n\nThis implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.\n\nSee the [Table of Contents](toc.html) for more information.\n\n***Please note that this implementation guide is currently a work in progress and is in draft status.***\n\n\n\n#### Latest Changes\n- (37) Updated Feedback section with Zulip stream information\n- (36) Added explicit \"draft\" verbiage\n- (35) Revised narrative content\n- (34) Removed Credits and added USCore Patient based CARINBBPatient profile\n- (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages\n- (32) Added 4 specific EOB and 1 Coverage profiles\n- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile\n- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy\n- (29) Updated Provider and Claim Line Amounts mappings.\n- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.\n- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.\n- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit\n- (25) Added FHIR Resources section to narrative and included Example EOB.\n- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.\n- (23) Added the Latest Changes section. Added USCoreR4 Dependency.\n\n\n\n\n",
+  "description": " **CARIN Alliance** \n*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*\n\nThis implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.\n\nSee the [Table of Contents](toc.html) for more information.\n\n***Please note that this implementation guide is currently a work in progress and is in draft status.***\n\n\n\n#### Latest Changes\n- (42) First pass at harmonization of profiles and terminologies. Added the **Authorization, Authentication, and Registration** section.\n- (41) set content to completed for code system CARINBBClaimType(http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)\n- (40)  Binding of value set http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type to eob.type in profile http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit \n- (39)  Added new code allowedunits to CARINBBAdjudicationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)\n- (38)  Added new code clmlastactiondate to CARINBBClaimInformationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)\n- (37) Updated Feedback section with Zulip stream information\n- (36) Added explicit \"draft\" verbiage\n- (35) Revised narrative content\n- (34) Removed Credits and added USCore Patient based CARINBBPatient profile\n- (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages\n- (32) Added 4 specific EOB and 1 Coverage profiles\n- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile\n- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy\n- (29) Updated Provider and Claim Line Amounts mappings.\n- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.\n- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.\n- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit\n- (25) Added FHIR Resources section to narrative and included Example EOB.\n- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.\n- (23) Added the Latest Changes section. Added USCoreR4 Dependency.\n\n\n\n\n",
   "packageId": "hl7.fhir.us.carin-bb",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -25,7 +25,7 @@
   ],
   "dependsOn": [
     {
-      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0",
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
       "packageId": "hl7.fhir.us.core",
       "version": "current"
     }
@@ -125,25 +125,6 @@
         },
         "name": "CARINBBRelatedClaimRelationship",
         "description": "value set: claim relationship",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-carin-bb-Coverage.html"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/carin-bb-Coverage",
-          "display": "CARINBBCoverage"
-        },
-        "name": "CARINBBCoverage",
-        "description": "coverage profile",
         "exampleBoolean": false
       },
       {
@@ -479,24 +460,6 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "ValueSet-CARIN-BB-AdmitSource.html"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/CARIN-BB-AdmitSource",
-          "display": "CARINBBAdmitSource"
-        },
-        "name": "CARINBBAdmitSource",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
             "valueUri": "ValueSet-CARIN-BB-Discharge-Status.html"
           }
         ],
@@ -678,15 +641,122 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-CARINBBPatient.html"
+            "valueUri": "StructureDefinition-CARIN-BB-Coverage.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/CARINBBPatient",
+          "reference": "StructureDefinition/CARIN-BB-Coverage",
+          "display": "CARINBBCoverage"
+        },
+        "name": "CARINBBCoverage",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-Patient.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-Patient",
           "display": "CARINBBPatient"
         },
         "name": "CARINBBPatient",
-        "description": "patient profile",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-CARIN-BB-Identifier-Type.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/CARIN-BB-Identifier-Type",
+          "display": "CARINBBIdentifierType"
+        },
+        "name": "CARINBBIdentifierType",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-nubc-pointoforiginforadmissionorvisit.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/nubc-pointoforiginforadmissionorvisit",
+          "display": "NUBC Point of Origin for Admission or Visit Value Set"
+        },
+        "name": "NUBC Point of Origin for Admission or Visit Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-Organization.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-Organization",
+          "display": "CARINBBOrganization"
+        },
+        "name": "CARINBBOrganization",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-PractitionerRole.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-PractitionerRole",
+          "display": "CARINBBPractitionerRole"
+        },
+        "name": "CARINBBPractitionerRole",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-CARIN-BB-RelatedPerson.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-RelatedPerson",
+          "display": "CARINBBRelatedPerson"
+        },
+        "name": "CARINBBRelatedPerson",
         "exampleBoolean": false
       }
     ],
@@ -761,6 +831,11 @@
                   "generation": "html"
                 }
               ]
+            },
+            {
+              "nameUrl": "Authorization,_Authentication,_and_Registration.html",
+              "title": "Authorization, Authentication, and Registration",
+              "generation": "markdown"
             }
           ]
         },

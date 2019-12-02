@@ -1,9 +1,3 @@
----
-title: ValueSet-CARIN-BB-TypeOfService-intro
-layout: default
-active: ValueSet-CARIN-BB-TypeOfService-intro
----
-
 CMS_TYPE_SRVC_TB CMS Type of Service Table
 
   1 = Medical care

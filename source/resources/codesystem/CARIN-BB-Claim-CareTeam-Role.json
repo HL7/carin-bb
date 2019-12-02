@@ -2,8 +2,8 @@
 	"resourceType": "CodeSystem",
 	"id": "CARIN-BB-Claim-CareTeam-Role",
 	"meta": {
-		"versionId": "3",
-		"lastUpdated": "2019-07-27T07:57:01.000-04:00"
+		"versionId": "4",
+		"lastUpdated": "2019-12-01T14:02:49.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole",
 	"version": "1.0.0",
@@ -12,7 +12,7 @@
 	"status": "draft",
 	"publisher": "CARIN Alliance",
 	"caseSensitive": true,
-	"content": "not-present",
+	"content": "complete",
 	"concept": [
 		{
 			"code": "supervising",

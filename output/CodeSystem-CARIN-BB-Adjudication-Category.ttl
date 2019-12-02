@@ -9,22 +9,22 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "CARIN-BB-Adjudication-Category"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "2" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-07-28T22:43:49.000-04:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-01T13:53:17.000-05:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Adjudication Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory defines many codes, but they are not represented here</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Adjudication Category Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">benefitPaymentStatusCode<a name=\"CARIN-BB-Adjudication-Category-benefitPaymentStatusCode\"> </a></td><td>Benefit payment status code</td><td>Benefit payment status code</td></tr><tr><td style=\"white-space:nowrap\">paymentDenialCode<a name=\"CARIN-BB-Adjudication-Category-paymentDenialCode\"> </a></td><td>Payment denial code</td><td>Payment Denial Code</td></tr><tr><td style=\"white-space:nowrap\">submittedamount<a name=\"CARIN-BB-Adjudication-Category-submittedamount\"> </a></td><td>submitted amount</td><td/></tr><tr><td style=\"white-space:nowrap\">allowedamount<a name=\"CARIN-BB-Adjudication-Category-allowedamount\"> </a></td><td>allowed amount</td><td/></tr><tr><td style=\"white-space:nowrap\">deductibleamount<a name=\"CARIN-BB-Adjudication-Category-deductibleamount\"> </a></td><td>deductible amount</td><td/></tr><tr><td style=\"white-space:nowrap\">coinsuranceamount<a name=\"CARIN-BB-Adjudication-Category-coinsuranceamount\"> </a></td><td>coinsurance amount</td><td/></tr><tr><td style=\"white-space:nowrap\">copayamount<a name=\"CARIN-BB-Adjudication-Category-copayamount\"> </a></td><td>copay amount</td><td/></tr><tr><td style=\"white-space:nowrap\">noncoveredamount<a name=\"CARIN-BB-Adjudication-Category-noncoveredamount\"> </a></td><td>noncovered amount</td><td/></tr><tr><td style=\"white-space:nowrap\">cobamount<a name=\"CARIN-BB-Adjudication-Category-cobamount\"> </a></td><td>cob amount</td><td/></tr><tr><td style=\"white-space:nowrap\">paymentamount<a name=\"CARIN-BB-Adjudication-Category-paymentamount\"> </a></td><td>payment amount</td><td/></tr><tr><td style=\"white-space:nowrap\">patientpayamount<a name=\"CARIN-BB-Adjudication-Category-patientpayamount\"> </a></td><td>patient pay amount</td><td/></tr><tr><td style=\"white-space:nowrap\">denialreason<a name=\"CARIN-BB-Adjudication-Category-denialreason\"> </a></td><td>payment denial reason</td><td/></tr><tr><td style=\"white-space:nowrap\">innetworkbenefitpaymentstatus<a name=\"CARIN-BB-Adjudication-Category-innetworkbenefitpaymentstatus\"> </a></td><td>in network benefit payment status</td><td/></tr><tr><td style=\"white-space:nowrap\">outofnetworkbenefitpaymentstatus<a name=\"CARIN-BB-Adjudication-Category-outofnetworkbenefitpaymentstatus\"> </a></td><td>out of network benefit payment status</td><td/></tr><tr><td style=\"white-space:nowrap\">otherbenefitpaymentstatus<a name=\"CARIN-BB-Adjudication-Category-otherbenefitpaymentstatus\"> </a></td><td>other benefit payment status</td><td/></tr><tr><td style=\"white-space:nowrap\">allowedunits<a name=\"CARIN-BB-Adjudication-Category-allowedunits\"> </a></td><td>allowed units</td><td/></tr></table></div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory"];
-  fhir:CodeSystem.version [ fhir:value "0.1.37-DRAFT"];
+  fhir:CodeSystem.version [ fhir:value "0.1.42-DRAFT"];
   fhir:CodeSystem.name [ fhir:value "CARINBBAdjudicationCategory"];
   fhir:CodeSystem.title [ fhir:value "CARIN Blue Button Claim Adjudication Category Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
   fhir:CodeSystem.date [ fhir:value "2019-07-27T00:00:00-04:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
-  fhir:CodeSystem.content [ fhir:value "not-present"];
+  fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.concept [
      fhir:index 0;
      fhir:CodeSystem.concept.code [ fhir:value "benefitPaymentStatusCode" ];
@@ -87,6 +87,10 @@
      fhir:index 14;
      fhir:CodeSystem.concept.code [ fhir:value "otherbenefitpaymentstatus" ];
      fhir:CodeSystem.concept.display [ fhir:value "other benefit payment status" ]
+  ], [
+     fhir:index 15;
+     fhir:CodeSystem.concept.code [ fhir:value "allowedunits" ];
+     fhir:CodeSystem.concept.display [ fhir:value "allowed units" ]
   ] .
 
 # - ontology header ------------------------------------------------------------

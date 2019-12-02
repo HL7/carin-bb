@@ -2,14 +2,14 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Professional-NonClinician",
 	"meta": {
-		"versionId": "7",
-		"lastUpdated": "2019-07-28T23:11:58.000-04:00"
+		"versionId": "9",
+		"lastUpdated": "2019-11-26T04:32:16.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician",
-	"version": "1.0.0",
+	"version": "0.5",
 	"name": "CARINBBExplanationOfBenefitProfessionalNonClinician",
-	"title": "CARIN Blue Button Explanation of Benefit Professional Non-Clinician Profile",
-	"status": "draft",
+	"title": "CARIN Blue Button Explanation of Benefit Professional or Non-Clinician Profile",
+	"status": "active",
 	"date": "2019-07-26",
 	"publisher": "CARIN Alliance",
 	"fhirVersion": "4.0.0",
@@ -27,117 +27,10 @@
 			{
 				"id": "ExplanationOfBenefit.type",
 				"path": "ExplanationOfBenefit.type",
-				"fixedCoding": {
+				"patternCoding": {
 					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type",
 					"code": "professional-nonclinician",
 					"display": "Professional or Non-Clinician"
-				}
-			},
-			{
-				"id": "ExplanationOfBenefit.subType",
-				"path": "ExplanationOfBenefit.subType",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.use",
-				"path": "ExplanationOfBenefit.use",
-				"fixedCode": "claim"
-			},
-			{
-				"id": "ExplanationOfBenefit.enterer",
-				"path": "ExplanationOfBenefit.enterer",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.provider",
-				"path": "ExplanationOfBenefit.provider",
-				"type": [
-					{
-						"code": "Reference",
-						"targetProfile": [
-							"http://hl7.org/fhir/StructureDefinition/Organization"
-						]
-					}
-				]
-			},
-			{
-				"id": "ExplanationOfBenefit.priority",
-				"path": "ExplanationOfBenefit.priority",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.fundsReserveRequested",
-				"path": "ExplanationOfBenefit.fundsReserveRequested",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.fundsReserve",
-				"path": "ExplanationOfBenefit.fundsReserve",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.related.relationship",
-				"path": "ExplanationOfBenefit.related.relationship",
-				"min": 1,
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-relatedclaimrelationship"
-				}
-			},
-			{
-				"id": "ExplanationOfBenefit.prescription",
-				"path": "ExplanationOfBenefit.prescription",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.originalPrescription",
-				"path": "ExplanationOfBenefit.originalPrescription",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.referral",
-				"path": "ExplanationOfBenefit.referral",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.claim",
-				"path": "ExplanationOfBenefit.claim",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.claimResponse",
-				"path": "ExplanationOfBenefit.claimResponse",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.disposition",
-				"path": "ExplanationOfBenefit.disposition",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.preAuthRef",
-				"path": "ExplanationOfBenefit.preAuthRef",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.preAuthRefPeriod",
-				"path": "ExplanationOfBenefit.preAuthRefPeriod",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.careTeam.role",
-				"path": "ExplanationOfBenefit.careTeam.role",
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claimcareteamrole"
-				}
-			},
-			{
-				"id": "ExplanationOfBenefit.supportingInfo.category",
-				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
 				}
 			},
 			{
@@ -150,7 +43,15 @@
 							"path": "category"
 						}
 					],
-					"rules": "closed"
+					"rules": "open"
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"binding": {
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
 				}
 			},
 			{
@@ -271,75 +172,6 @@
 				]
 			},
 			{
-				"id": "ExplanationOfBenefit.diagnosis.diagnosis[x]",
-				"path": "ExplanationOfBenefit.diagnosis.diagnosis[x]",
-				"type": [
-					{
-						"code": "CodeableConcept"
-					}
-				]
-			},
-			{
-				"id": "ExplanationOfBenefit.diagnosis.type",
-				"path": "ExplanationOfBenefit.diagnosis.type",
-				"min": 1,
-				"max": "1",
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-diagnosistype"
-				}
-			},
-			{
-				"id": "ExplanationOfBenefit.procedure.procedure[x]",
-				"path": "ExplanationOfBenefit.procedure.procedure[x]",
-				"type": [
-					{
-						"code": "CodeableConcept"
-					}
-				]
-			},
-			{
-				"id": "ExplanationOfBenefit.precedence",
-				"path": "ExplanationOfBenefit.precedence",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.insurance",
-				"path": "ExplanationOfBenefit.insurance",
-				"slicing": {
-					"discriminator": [
-						{
-							"type": "value",
-							"path": "focal"
-						}
-					],
-					"rules": "closed"
-				},
-				"max": "1"
-			},
-			{
-				"id": "ExplanationOfBenefit.insurance.focal",
-				"path": "ExplanationOfBenefit.insurance.focal",
-				"fixedBoolean": true
-			},
-			{
-				"id": "ExplanationOfBenefit.insurance:primaryinsurance",
-				"path": "ExplanationOfBenefit.insurance",
-				"sliceName": "primaryinsurance",
-				"min": 0,
-				"max": "1"
-			},
-			{
-				"id": "ExplanationOfBenefit.insurance:primaryinsurance.focal",
-				"path": "ExplanationOfBenefit.insurance.focal",
-				"fixedBoolean": false
-			},
-			{
-				"id": "ExplanationOfBenefit.accident",
-				"path": "ExplanationOfBenefit.accident",
-				"max": "0"
-			},
-			{
 				"id": "ExplanationOfBenefit.item.revenue",
 				"path": "ExplanationOfBenefit.item.revenue",
 				"max": "0"
@@ -369,11 +201,6 @@
 				}
 			},
 			{
-				"id": "ExplanationOfBenefit.item.programCode",
-				"path": "ExplanationOfBenefit.item.programCode",
-				"max": "0"
-			},
-			{
 				"id": "ExplanationOfBenefit.item.location[x]",
 				"path": "ExplanationOfBenefit.item.location[x]",
 				"type": [
@@ -387,24 +214,6 @@
 				}
 			},
 			{
-				"id": "ExplanationOfBenefit.item.factor",
-				"path": "ExplanationOfBenefit.item.factor",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.item.udi",
-				"path": "ExplanationOfBenefit.item.udi",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.item.adjudication.category",
-				"path": "ExplanationOfBenefit.item.adjudication.category",
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationcategory"
-				}
-			},
-			{
 				"id": "ExplanationOfBenefit.item.adjudication",
 				"path": "ExplanationOfBenefit.item.adjudication",
 				"slicing": {
@@ -415,6 +224,14 @@
 						}
 					],
 					"rules": "closed"
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.item.adjudication.category",
+				"path": "ExplanationOfBenefit.item.adjudication.category",
+				"binding": {
+					"strength": "required",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationcategory"
 				}
 			},
 			{
@@ -469,55 +286,9 @@
 				}
 			},
 			{
-				"id": "ExplanationOfBenefit.item.detail",
-				"path": "ExplanationOfBenefit.item.detail",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.addItem",
-				"path": "ExplanationOfBenefit.addItem",
-				"max": "0"
-			},
-			{
 				"id": "ExplanationOfBenefit.total",
 				"path": "ExplanationOfBenefit.total",
 				"min": 1
-			},
-			{
-				"id": "ExplanationOfBenefit.total.category",
-				"path": "ExplanationOfBenefit.total.category",
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationamountcategory"
-				}
-			},
-			{
-				"id": "ExplanationOfBenefit.payment.adjustmentReason",
-				"path": "ExplanationOfBenefit.payment.adjustmentReason",
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationdenialreason"
-				}
-			},
-			{
-				"id": "ExplanationOfBenefit.formCode",
-				"path": "ExplanationOfBenefit.formCode",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.form",
-				"path": "ExplanationOfBenefit.form",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.benefitPeriod",
-				"path": "ExplanationOfBenefit.benefitPeriod",
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.benefitBalance",
-				"path": "ExplanationOfBenefit.benefitBalance",
-				"max": "0"
 			}
 		]
 	}

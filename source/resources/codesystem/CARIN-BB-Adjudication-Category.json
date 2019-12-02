@@ -2,8 +2,8 @@
 	"resourceType": "CodeSystem",
 	"id": "CARIN-BB-Adjudication-Category",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2019-07-28T22:43:49.000-04:00"
+		"versionId": "4",
+		"lastUpdated": "2019-12-01T13:53:17.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
 	"version": "1.0.0",
@@ -13,7 +13,7 @@
 	"date": "2019-07-27",
 	"publisher": "CARIN Alliance",
 	"caseSensitive": true,
-	"content": "not-present",
+	"content": "complete",
 	"concept": [
 		{
 			"code": "benefitPaymentStatusCode",
@@ -76,6 +76,10 @@
 		{
 			"code": "otherbenefitpaymentstatus",
 			"display": "other benefit payment status"
+		},
+		{
+			"code": "allowedunits",
+			"display": "allowed units"
 		}
 	]
 }

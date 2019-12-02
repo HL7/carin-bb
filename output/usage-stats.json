@@ -1,13 +1,13 @@
 {
   "package": "hl7.fhir.us.carin-bb",
-  "version": "0.1.37-DRAFT",
+  "version": "0.1.42-DRAFT",
   "fhirVersion": "4.0.0",
   "extensions": [],
   "profiles": {
     "Coverage": [
       {
         "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage",
-        "title": "CARIN Blue Button Coverage"
+        "title": "CARIN Blue Button Coverage Profile"
       }
     ],
     "ExplanationOfBenefit": [
@@ -21,21 +21,39 @@
       },
       {
         "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-outpatient-facility",
-        "title": "CARIN Blue Button Explanation of Benefit Outpatient Facility"
+        "title": "CARIN Blue Button Explanation of Benefit Outpatient Facility Profile"
       },
       {
         "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-pharmacy",
-        "title": "CARIN Blue Button Explanation of Benefit Pharmacy"
+        "title": "CARIN Blue Button Explanation of Benefit Pharmacy Profile"
       },
       {
         "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician",
-        "title": "CARIN Blue Button Explanation of Benefit Professional Non-Clinician Profile"
+        "title": "CARIN Blue Button Explanation of Benefit Professional or Non-Clinician Profile"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization",
+        "title": "CARIN Blue Button Organization Profile"
       }
     ],
     "Patient": [
       {
         "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient",
-        "title": "CARIN Blue Button Patient"
+        "title": "CARIN Blue Button Patient Profile"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole",
+        "title": "CARIN Blue Button Practitioner Role Profile"
+      }
+    ],
+    "RelatedPerson": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-relatedperson",
+        "title": "CARIN Blue Button Related Person Profile"
       }
     ]
   },
@@ -60,6 +78,12 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
       "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"

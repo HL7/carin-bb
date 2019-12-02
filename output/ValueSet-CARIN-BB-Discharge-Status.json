@@ -10,11 +10,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Discharge Status Value Set</h2><div><p>UB04 (FL-17)</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html</code></li></ul></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-discharge-status",
-  "version": "0.1.37-DRAFT",
+  "version": "0.1.42-DRAFT",
   "name": "CARINBBDischargeStatus",
   "title": "CARIN Blue Button Discharge Status Value Set",
   "status": "draft",
-  "date": "2019-08-20T03:19:01-04:00",
+  "date": "2019-12-02T04:50:03-05:00",
   "description": "UB04 (FL-17)",
   "compose": {
     "include": [

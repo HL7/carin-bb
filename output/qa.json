@@ -2,11 +2,11 @@
   "url": "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb",
   "name": "CARINBlueButton",
   "package-id": "hl7.fhir.us.carin-bb",
-  "ig-ver": "0.1.37-DRAFT",
-  "date": "Tue, 20 Aug, 2019 03:19:01 -0400",
-  "errs": 60,
+  "ig-ver": "0.1.42-DRAFT",
+  "date": "Mon, 02 Dec, 2019 04:50:03 -0500",
+  "errs": 28,
   "warnings": 0,
   "hints": 0,
-  "version": "4.0.0",
+  "version": "4.0.1",
   "tool": "4.1.0 (3)"
 }

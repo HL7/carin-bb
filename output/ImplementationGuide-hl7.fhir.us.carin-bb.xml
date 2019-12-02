@@ -3,8 +3,8 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.carin-bb"/>
   <meta>
-    <versionId value="129"/>
-    <lastUpdated value="2019-08-20T03:16:27.000-04:00"/>
+    <versionId value="155"/>
+    <lastUpdated value="2019-12-02T04:21:41.000-05:00"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARINBlueButton</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb</pre><div><p><strong>CARIN Alliance</strong>
@@ -14,6 +14,11 @@
 <p><em><strong>Please note that this implementation guide is currently a work in progress and is in draft status.</strong></em></p>
 <h4>Latest Changes</h4>
 <ul>
+<li>(42) First pass at harmonization of profiles and terminologies. Added the <strong>Authorization, Authentication, and Registration</strong> section.</li>
+<li>(41) set content to completed for code system CARINBBClaimType(http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)</li>
+<li>(40)  Binding of value set http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type to eob.type in profile http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit</li>
+<li>(39)  Added new code allowedunits to CARINBBAdjudicationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)</li>
+<li>(38)  Added new code clmlastactiondate to CARINBBClaimInformationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)</li>
 <li>(37) Updated Feedback section with Zulip stream information</li>
 <li>(36) Added explicit &quot;draft&quot; verbiage</li>
 <li>(35) Revised narrative content</li>
@@ -33,19 +38,19 @@
 </div></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb"/>
-  <version value="0.1.37-DRAFT"/>
+  <version value="0.1.42-DRAFT"/>
   <name value="CARINBlueButton"/>
   <title value="CARIN Blue Button"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2019-08-20T03:19:01-04:00"/>
+  <date value="2019-12-02T04:50:03-05:00"/>
   <publisher value="CARIN Alliance"/>
-  <description value=" **CARIN Alliance** &#xA;*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*&#xA;&#xA;This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&#xA;&#xA;See the [Table of Contents](toc.html) for more information.&#xA;&#xA;***Please note that this implementation guide is currently a work in progress and is in draft status.***&#xA;&#xA;&#xA;&#xA;#### Latest Changes&#xA;- (37) Updated Feedback section with Zulip stream information&#xA;- (36) Added explicit &quot;draft&quot; verbiage&#xA;- (35) Revised narrative content&#xA;- (34) Removed Credits and added USCore Patient based CARINBBPatient profile&#xA;- (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages&#xA;- (32) Added 4 specific EOB and 1 Coverage profiles&#xA;- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile&#xA;- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy&#xA;- (29) Updated Provider and Claim Line Amounts mappings.&#xA;- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.&#xA;- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.&#xA;- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit&#xA;- (25) Added FHIR Resources section to narrative and included Example EOB.&#xA;- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.&#xA;- (23) Added the Latest Changes section. Added USCoreR4 Dependency.&#xA;&#xA;&#xA;&#xA;&#xA;"/>
+  <description value=" **CARIN Alliance** &#xA;*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*&#xA;&#xA;This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&#xA;&#xA;See the [Table of Contents](toc.html) for more information.&#xA;&#xA;***Please note that this implementation guide is currently a work in progress and is in draft status.***&#xA;&#xA;&#xA;&#xA;#### Latest Changes&#xA;- (42) First pass at harmonization of profiles and terminologies. Added the **Authorization, Authentication, and Registration** section.&#xA;- (41) set content to completed for code system CARINBBClaimType(http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)&#xA;- (40)  Binding of value set http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type to eob.type in profile http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit &#xA;- (39)  Added new code allowedunits to CARINBBAdjudicationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)&#xA;- (38)  Added new code clmlastactiondate to CARINBBClaimInformationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)&#xA;- (37) Updated Feedback section with Zulip stream information&#xA;- (36) Added explicit &quot;draft&quot; verbiage&#xA;- (35) Revised narrative content&#xA;- (34) Removed Credits and added USCore Patient based CARINBBPatient profile&#xA;- (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages&#xA;- (32) Added 4 specific EOB and 1 Coverage profiles&#xA;- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile&#xA;- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy&#xA;- (29) Updated Provider and Claim Line Amounts mappings.&#xA;- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.&#xA;- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.&#xA;- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit&#xA;- (25) Added FHIR Resources section to narrative and included Example EOB.&#xA;- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.&#xA;- (23) Added the Latest Changes section. Added USCoreR4 Dependency.&#xA;&#xA;&#xA;&#xA;&#xA;"/>
   <packageId value="hl7.fhir.us.carin-bb"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.0"/>
   <dependsOn>
-    <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0"/>
+    <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
     <packageId value="hl7.fhir.us.core"/>
     <version value="current"/>
   </dependsOn>
@@ -123,21 +128,6 @@
       </reference>
       <name value="CARINBBRelatedClaimRelationship"/>
       <description value="value set: claim relationship"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-carin-bb-Coverage.html"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/carin-bb-Coverage"/>
-        <display value="CARINBBCoverage"/>
-      </reference>
-      <name value="CARINBBCoverage"/>
-      <description value="coverage profile"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -398,20 +388,6 @@
         <valueString value="ValueSet"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="ValueSet-CARIN-BB-AdmitSource.html"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/CARIN-BB-AdmitSource"/>
-        <display value="CARINBBAdmitSource"/>
-      </reference>
-      <name value="CARINBBAdmitSource"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="ValueSet-CARIN-BB-Discharge-Status.html"/>
       </extension>
       <reference>
@@ -553,14 +529,97 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-CARINBBPatient.html"/>
+        <valueUri value="StructureDefinition-CARIN-BB-Coverage.html"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/CARINBBPatient"/>
+        <reference value="StructureDefinition/CARIN-BB-Coverage"/>
+        <display value="CARINBBCoverage"/>
+      </reference>
+      <name value="CARINBBCoverage"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-CARIN-BB-Patient.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/CARIN-BB-Patient"/>
         <display value="CARINBBPatient"/>
       </reference>
       <name value="CARINBBPatient"/>
-      <description value="patient profile"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-CARIN-BB-Identifier-Type.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CARIN-BB-Identifier-Type"/>
+        <display value="CARINBBIdentifierType"/>
+      </reference>
+      <name value="CARINBBIdentifierType"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-nubc-pointoforiginforadmissionorvisit.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/nubc-pointoforiginforadmissionorvisit"/>
+        <display value="NUBC Point of Origin for Admission or Visit Value Set"/>
+      </reference>
+      <name value="NUBC Point of Origin for Admission or Visit Value Set"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-CARIN-BB-Organization.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/CARIN-BB-Organization"/>
+        <display value="CARINBBOrganization"/>
+      </reference>
+      <name value="CARINBBOrganization"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-CARIN-BB-PractitionerRole.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/CARIN-BB-PractitionerRole"/>
+        <display value="CARINBBPractitionerRole"/>
+      </reference>
+      <name value="CARINBBPractitionerRole"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-CARIN-BB-RelatedPerson.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/CARIN-BB-RelatedPerson"/>
+        <display value="CARINBBRelatedPerson"/>
+      </reference>
+      <name value="CARINBBRelatedPerson"/>
       <exampleBoolean value="false"/>
     </resource>
     <page>
@@ -630,6 +689,11 @@
             <title value="Patient mapping"/>
             <generation value="html"/>
           </page>
+        </page>
+        <page>
+          <nameUrl value="Authorization,_Authentication,_and_Registration.html"/>
+          <title value="Authorization, Authentication, and Registration"/>
+          <generation value="markdown"/>
         </page>
       </page>
       <page>

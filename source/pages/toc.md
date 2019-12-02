@@ -18,5 +18,6 @@ active: toc
             * <a href="EOB_Professional_Non-Clinician_mapping.html">EOB Professional Non-Clinician mapping</a>
             * <a href="EOB_Pharmacy_mapping.html">EOB Pharmacy mapping</a>
             * <a href="Patient_mapping.html">Patient mapping</a>
+        * <a href="Authorization,_Authentication,_and_Registration.html">Authorization, Authentication, and Registration</a>
     * <a href="Benefit_to_Consumers_and_Health_Plans.html">Benefit to Consumers and Health Plans</a>
     * <a href="Feedback.html">Feedback</a>

@@ -1,9 +1,3 @@
----
-title: ValueSet-CARIN-BB-CPT-HCPCS-ProcedureCodes-intro
-layout: default
-active: ValueSet-CARIN-BB-CPT-HCPCS-ProcedureCodes-intro
----
-
 CPT is made managed by the American Medical Association (http://www.ama-assn.org/go/cpt)
 
 HCPCS Background Information

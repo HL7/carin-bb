@@ -7,14 +7,14 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Related Claim Relationship Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-CARIN-BB-Related-Claim-Relationship.html\"><code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>prior</td><td>Prior claim</td><td/></tr><tr><td>replaced</td><td>Replaced claim</td><td/></tr></table></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Related Claim Relationship Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-CARIN-BB-Related-Claim-Relationship.html\"><code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-CARIN-BB-Related-Claim-Relationship.html#CARIN-BB-Related-Claim-Relationship-prior\">prior</a></td><td>Prior claim</td><td/></tr><tr><td><a href=\"CodeSystem-CARIN-BB-Related-Claim-Relationship.html#CARIN-BB-Related-Claim-Relationship-replaced\">replaced</a></td><td>Replaced claim</td><td/></tr></table></li></ul></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-relatedclaimrelationship",
-  "version": "0.1.37-DRAFT",
+  "version": "0.1.42-DRAFT",
   "name": "CARINBBRelatedClaimRelationship",
   "title": "CARIN Blue Button Related Claim Relationship Value Set",
   "status": "draft",
-  "date": "2019-08-20T03:19:01-04:00",
+  "date": "2019-12-02T04:50:03-05:00",
   "compose": {
     "include": [
       {

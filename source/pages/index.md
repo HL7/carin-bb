@@ -4,8 +4,6 @@ layout: default
 active: home
 ---
 
-{% include publish-box.html %}
-
 <!-- { :.no_toc } -->
 
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
@@ -29,6 +27,11 @@ See the [Table of Contents](toc.html) for more information.
 
 
 #### Latest Changes
+- (42) First pass at harmonization of profiles and terminologies. Added the **Authorization, Authentication, and Registration** section.
+- (41) set content to completed for code system CARINBBClaimType(http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)
+- (40) 	Binding of value set http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type to eob.type in profile http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit 
+- (39) 	Added new code allowedunits to CARINBBAdjudicationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)
+- (38) 	Added new code clmlastactiondate to CARINBBClaimInformationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)
 - (37) Updated Feedback section with Zulip stream information
 - (36) Added explicit "draft" verbiage
 - (35) Revised narrative content

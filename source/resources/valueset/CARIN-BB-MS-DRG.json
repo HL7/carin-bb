@@ -2,14 +2,17 @@
 	"resourceType": "ValueSet",
 	"id": "CARIN-BB-MS-DRG",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2019-07-28T07:59:19.000-04:00"
+		"versionId": "5",
+		"lastUpdated": "2019-11-25T19:31:02.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-ms-drg",
 	"version": "1.0.0",
 	"name": "CARINBBMSDRG",
 	"title": "CARIN Blue Button MS-DRG Value Set",
 	"status": "draft",
+	"description": "This is the description for the MS-DRG value set.",
+	"purpose": "This is the purpose of this value set.",
+	"copyright": "The content of this value set is copyrighted by a party other than HL7",
 	"compose": {
 		"include": [
 			{

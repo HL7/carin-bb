@@ -3,21 +3,23 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="CARIN-BB-Adjudication-Amount-Category"/>
   <meta>
-    <versionId value="3"/>
-    <lastUpdated value="2019-07-28T03:02:15.000-04:00"/>
+    <versionId value="5"/>
+    <lastUpdated value="2019-12-01T13:43:22.000-05:00"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Adjudication Amount Category Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>submittedamount</td><td>submitted amount</td><td/></tr><tr><td>allowedamount</td><td>allowed amount</td><td/></tr><tr><td>deductibleamount</td><td>deductible amount</td><td/></tr><tr><td>coinsuranceamount</td><td>coinsurance amount</td><td/></tr><tr><td>copayamount</td><td>copay amount</td><td/></tr><tr><td>noncoveredamount</td><td>noncovered amount</td><td/></tr><tr><td>cobamount</td><td>cob amount</td><td/></tr><tr><td>paymentamount</td><td>payment amount</td><td/></tr><tr><td>patientpayamount</td><td>patient pay amount</td><td/></tr></table></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Adjudication Amount Category Value Set</h2><div><p>Describes the various amount fields used when submitting and adjudicating a claim.</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="CodeSystem-CARIN-BB-Adjudication-Category.html"><code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-submittedamount">submittedamount</a></td><td>submitted amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-allowedamount">allowedamount</a></td><td>allowed amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-deductibleamount">deductibleamount</a></td><td>deductible amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-coinsuranceamount">coinsuranceamount</a></td><td>coinsurance amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-copayamount">copayamount</a></td><td>copay amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-noncoveredamount">noncoveredamount</a></td><td>noncovered amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-cobamount">cobamount</a></td><td>cob amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-paymentamount">paymentamount</a></td><td>payment amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-patientpayamount">patientpayamount</a></td><td>patient pay amount</td><td/></tr></table></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationamountcategory"/>
-  <version value="0.1.37-DRAFT"/>
+  <version value="0.1.42-DRAFT"/>
   <name value="CARINBBAdjudicationAmountCategory"/>
   <title value="CARIN Blue Button Adjudication Amount Category Value Set"/>
   <status value="draft"/>
-  <date value="2019-08-20T03:19:01-04:00"/>
+  <date value="2019-12-02T04:50:03-05:00"/>
+  <description value="Describes the various amount fields used when submitting and adjudicating a claim."/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory"/>
+      <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory"/>
       <concept>
         <code value="submittedamount"/>
         <display value="submitted amount"/>

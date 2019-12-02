@@ -2,8 +2,8 @@
 	"resourceType": "CodeSystem",
 	"id": "CARIN-BB-Claim-Information-Category",
 	"meta": {
-		"versionId": "4",
-		"lastUpdated": "2019-07-27T19:57:02.000-04:00"
+		"versionId": "6",
+		"lastUpdated": "2019-12-01T14:03:08.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
 	"version": "1.0.0",
@@ -12,7 +12,7 @@
 	"status": "draft",
 	"publisher": "CARIN Alliance",
 	"caseSensitive": true,
-	"content": "not-present",
+	"content": "complete",
 	"concept": [
 		{
 			"code": "billingnetworkcontractingstatus",
@@ -97,6 +97,10 @@
 		{
 			"code": "brandgenericcode",
 			"display": "Brand generic code"
+		},
+		{
+			"code": "clmlastactiondate",
+			"display": "claim last action date"
 		}
 	]
 }

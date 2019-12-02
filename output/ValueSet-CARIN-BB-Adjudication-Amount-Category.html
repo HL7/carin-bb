@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Blue Button - Local Development build (v0.1.37-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Blue Button - Local Development build (v0.1.42-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -243,24 +243,21 @@ can only resize using html  or css ;-(
   
   	<li class="active"><a href="#">Content</a></li>
   
-    
 
 
 
-
- 
   <!-- XML -->
   
     <li><a
       href="ValueSet-CARIN-BB-Adjudication-Amount-Category.xml.html">XML</a></li>
   
-    
+
     <!-- JSON -->
   
     <li><a href="ValueSet-CARIN-BB-Adjudication-Amount-Category.json.html">JSON</a></li>
   
- 
- 
+
+
 </ul>
 
 
@@ -278,24 +275,28 @@ can only resize using html  or css ;-(
 
   <table class="grid">
  <tbody><tr><td>Defining URL:</td><td>http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationamountcategory</td></tr>
- <tr><td>Version:</td><td>0.1.37-DRAFT</td></tr>
+ <tr><td>Version:</td><td>0.1.42-DRAFT</td></tr>
  <tr><td>Name:</td><td>CARINBBAdjudicationAmountCategory</td></tr>
- <tr><td>Definition:</td><td></td></tr>
+ <tr><td>Definition:</td><td><p>Describes the various amount fields used when submitting and adjudicating a claim.</p>
+</td></tr>
  <tr><td>Source Resource:</td><td><a href="ValueSet-CARIN-BB-Adjudication-Amount-Category.xml.html">XML</a> / <a href="ValueSet-CARIN-BB-Adjudication-Amount-Category.json.html">JSON</a> / <a href="ValueSet-CARIN-BB-Adjudication-Amount-Category.ttl.html">Turtle</a></td></tr>
 </tbody></table>
 
   
 <ul>
+ <li><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit.html">CARIN Blue Button Explanation of Benefit Profile</a></li>
  <li><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inpatient-Facility.html">CARIN Blue Button Explanation of Benefit Inpatient Facility Profile</a></li>
- <li><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Professional-NonClinician.html">CARIN Blue Button Explanation of Benefit Professional Non-Clinician Profile</a></li>
+ <li><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.html">CARIN Blue Button Explanation of Benefit Outpatient Facility Profile</a></li>
+ <li><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html">CARIN Blue Button Explanation of Benefit Pharmacy Profile</a></li>
+ <li><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Professional-NonClinician.html">CARIN Blue Button Explanation of Benefit Professional or Non-Clinician Profile</a></li>
 </ul>
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Adjudication Amount Category Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>submittedamount</td><td>submitted amount</td><td></td></tr><tr><td>allowedamount</td><td>allowed amount</td><td></td></tr><tr><td>deductibleamount</td><td>deductible amount</td><td></td></tr><tr><td>coinsuranceamount</td><td>coinsurance amount</td><td></td></tr><tr><td>copayamount</td><td>copay amount</td><td></td></tr><tr><td>noncoveredamount</td><td>noncovered amount</td><td></td></tr><tr><td>cobamount</td><td>cob amount</td><td></td></tr><tr><td>paymentamount</td><td>payment amount</td><td></td></tr><tr><td>patientpayamount</td><td>patient pay amount</td><td></td></tr></table></li></ul></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Adjudication Amount Category Value Set</h2><div><p>Describes the various amount fields used when submitting and adjudicating a claim.</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="CodeSystem-CARIN-BB-Adjudication-Category.html"><code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-submittedamount">submittedamount</a></td><td>submitted amount</td><td></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-allowedamount">allowedamount</a></td><td>allowed amount</td><td></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-deductibleamount">deductibleamount</a></td><td>deductible amount</td><td></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-coinsuranceamount">coinsuranceamount</a></td><td>coinsurance amount</td><td></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-copayamount">copayamount</a></td><td>copay amount</td><td></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-noncoveredamount">noncoveredamount</a></td><td>noncovered amount</td><td></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-cobamount">cobamount</a></td><td>cob amount</td><td></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-paymentamount">paymentamount</a></td><td>payment amount</td><td></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-patientpayamount">patientpayamount</a></td><td>patient pay amount</td><td></td></tr></table></li></ul></div>
 
   <h3>Expansion</h3>
 
-  <p><span style="color: maroon; font-weight: bold" title="Publication Tooling Error: Error from server: Unable to provide support for code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationCategory">No Expansion for this valueset (not supported by Publication Tooling)</span></p>
-
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 9 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory version 0.1.42-DRAFT</p><p>All codes from system <a href="CodeSystem-CARIN-BB-Adjudication-Category.html"><code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory</code></a></p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-carin-CodeSystem-carin-bb-adjudicationcategory-submittedamount"> </a><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-submittedamount">submittedamount</a></td><td>submitted amount</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-carin-CodeSystem-carin-bb-adjudicationcategory-allowedamount"> </a><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-allowedamount">allowedamount</a></td><td>allowed amount</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-carin-CodeSystem-carin-bb-adjudicationcategory-deductibleamount"> </a><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-deductibleamount">deductibleamount</a></td><td>deductible amount</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-carin-CodeSystem-carin-bb-adjudicationcategory-coinsuranceamount"> </a><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-coinsuranceamount">coinsuranceamount</a></td><td>coinsurance amount</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-carin-CodeSystem-carin-bb-adjudicationcategory-copayamount"> </a><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-copayamount">copayamount</a></td><td>copay amount</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-carin-CodeSystem-carin-bb-adjudicationcategory-noncoveredamount"> </a><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-noncoveredamount">noncoveredamount</a></td><td>noncovered amount</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-carin-CodeSystem-carin-bb-adjudicationcategory-cobamount"> </a><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-cobamount">cobamount</a></td><td>cob amount</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-carin-CodeSystem-carin-bb-adjudicationcategory-paymentamount"> </a><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-paymentamount">paymentamount</a></td><td>payment amount</td><td/></tr><tr><td style="white-space:nowrap"><a name="http---hl7.org-fhir-us-carin-CodeSystem-carin-bb-adjudicationcategory-patientpayamount"> </a><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-patientpayamount">patientpayamount</a></td><td>patient pay amount</td><td/></tr></table></div>
 <!-- ============VAlUESET CONTENT CONTENT=============== -->
 
 <!-- ( % when 'StructureMap' % }
@@ -364,7 +365,7 @@ Formats: <a href="ValueSet-CARIN-BB-Adjudication-Amount-Category.html">Narrative
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CARINBlueButton Version: 0.1.37-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.0</a> (IG Publisher v4.0.0-a53ec6ee1b) generated on Tue, Aug 20, 2019 03:19-0400.
+      CARINBlueButton Version: 0.1.42-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Mon, Dec 2, 2019 04:50-0500.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

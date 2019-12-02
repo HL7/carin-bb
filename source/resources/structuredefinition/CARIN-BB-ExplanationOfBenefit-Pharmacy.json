@@ -2,14 +2,14 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Pharmacy",
 	"meta": {
-		"versionId": "39",
-		"lastUpdated": "2019-07-28T01:16:46.000-04:00"
+		"versionId": "40",
+		"lastUpdated": "2019-11-26T04:19:06.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-pharmacy",
-	"version": "0.3",
+	"version": "0.5",
 	"name": "CARINBBExplanationOfBenefitPharmacy",
-	"title": "CARIN Blue Button Explanation of Benefit Pharmacy",
-	"status": "draft",
+	"title": "CARIN Blue Button Explanation of Benefit Pharmacy Profile",
+	"status": "active",
 	"date": "2019-07-26",
 	"publisher": "CARIN Alliance",
 	"fhirVersion": "4.0.0",
@@ -25,144 +25,13 @@
 				"path": "ExplanationOfBenefit"
 			},
 			{
-				"id": "ExplanationOfBenefit.id",
-				"path": "ExplanationOfBenefit.id",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "ExplanationOfBenefit.extension",
-				"path": "ExplanationOfBenefit.extension",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.modifierExtension",
-				"path": "ExplanationOfBenefit.modifierExtension",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.identifier",
-				"path": "ExplanationOfBenefit.identifier",
-				"min": 1,
-				"max": "*"
-			},
-			{
 				"id": "ExplanationOfBenefit.type",
 				"path": "ExplanationOfBenefit.type",
-				"min": 1,
-				"max": "1",
-				"patternCodeableConcept": {
-					"coding": [
-						{
-							"system": "http://terminology.hl7.org/CodeSystem/claim-type",
-							"code": "pharmacy"
-						}
-					]
+				"patternCoding": {
+					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type",
+					"code": "pharmacy",
+					"display": "Pharmacy"
 				}
-			},
-			{
-				"id": "ExplanationOfBenefit.subType",
-				"path": "ExplanationOfBenefit.subType",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.priority",
-				"path": "ExplanationOfBenefit.priority",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.fundsReserveRequested",
-				"path": "ExplanationOfBenefit.fundsReserveRequested",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.fundsReserve",
-				"path": "ExplanationOfBenefit.fundsReserve",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.facility",
-				"path": "ExplanationOfBenefit.facility",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.claim",
-				"path": "ExplanationOfBenefit.claim",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.claimResponse",
-				"path": "ExplanationOfBenefit.claimResponse",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.disposition",
-				"path": "ExplanationOfBenefit.disposition",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.preAuthRef",
-				"path": "ExplanationOfBenefit.preAuthRef",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.preAuthRefPeriod",
-				"path": "ExplanationOfBenefit.preAuthRefPeriod",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.accident",
-				"path": "ExplanationOfBenefit.accident",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.item.id",
-				"path": "ExplanationOfBenefit.item.id",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.item.extension",
-				"path": "ExplanationOfBenefit.item.extension",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.item.modifierExtension",
-				"path": "ExplanationOfBenefit.item.modifierExtension",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.form",
-				"path": "ExplanationOfBenefit.form",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.processNote",
-				"path": "ExplanationOfBenefit.processNote",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "ExplanationOfBenefit.benefitBalance",
-				"path": "ExplanationOfBenefit.benefitBalance",
-				"min": 0,
-				"max": "0"
 			},
 			{
 				"id": "ExplanationOfBenefit.supportingInfo",
@@ -175,9 +44,15 @@
 						}
 					],
 					"rules": "open"
-				},
-				"min": 0,
-				"max": "*"
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"binding": {
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
+				}
 			},
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:brandGenericCode",
@@ -313,20 +188,9 @@
 				}
 			},
 			{
-				"id": "ExplanationOfBenefit.related",
-				"path": "ExplanationOfBenefit.related",
-				"min": 0,
-				"max": "*"
-			},
-			{
-				"id": "ExplanationOfBenefit.related.relationship",
-				"path": "ExplanationOfBenefit.related.relationship",
-				"min": 1,
-				"max": "1",
-				"binding": {
-					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-relatedclaimrelationship"
-				}
+				"id": "ExplanationOfBenefit.item.revenue",
+				"path": "ExplanationOfBenefit.item.revenue",
+				"max": "0"
 			}
 		]
 	}

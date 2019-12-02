@@ -1,6 +1,1 @@
----
-title: ValueSet-CARIN-BB-MS-DRG-intro
-layout: default
-active: ValueSet-CARIN-BB-MS-DRG-intro
----
-
+This is the description for the MS-DRG value set.

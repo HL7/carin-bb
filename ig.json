@@ -20,6 +20,7 @@
 	"pages": [
 		"pages"
 	],
+	"version": "4.0.1",
 	"extension-domains": [
 		"https://trifolia-on-fhir.lantanagroup.com"
 	],
@@ -27,6 +28,9 @@
 		"https://trifolia-on-fhir.lantanagroup.com"
 	],
 	"sct-edition": "http://snomed.info/sct/731000124108",
+	"extraTemplates": [
+		"mappings"
+	],
 	"canonicalBase": "http://hl7.org/fhir/us/carin-bb",
 	"defaults": {
 		"Location": {
@@ -47,7 +51,8 @@
 		"StructureDefinition": {
 			"template-mappings": "sd-mappings.html",
 			"template-base": "sd.html",
-			"template-defns": "sd-definitions.html"
+			"template-defns": "sd-definitions.html",
+			"mappings": "StructureDefinition-{{[id]}}-mappings.html"
 		},
 		"Immunization": {
 			"template-base": "ex.html"
@@ -94,10 +99,6 @@
 		}
 	},
 	"resources": {
-		"StructureDefinition/carin-bb-Coverage": {
-			"base": "StructureDefinition-carin-bb-Coverage.html",
-			"defns": "StructureDefinition-carin-bb-Coverage-definitions.html"
-		},
 		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy": {
 			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html",
 			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy-definitions.html"
@@ -114,6 +115,10 @@
 			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.html",
 			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility-definitions.html"
 		},
+		"StructureDefinition/CARIN-BB-Patient": {
+			"base": "StructureDefinition-CARIN-BB-Patient.html",
+			"defns": "StructureDefinition-CARIN-BB-Patient-definitions.html"
+		},
 		"CodeSystem/CARIN-BB-Claim-Type": {
 			"base": "CodeSystem-CARIN-BB-Claim-Type.html",
 			"defns": "CodeSystem-CARIN-BB-Claim-Type-definitions.html"
@@ -129,6 +134,10 @@
 		"ValueSet/CARIN-BB-Related-Claim-Relationship": {
 			"base": "ValueSet-CARIN-BB-Related-Claim-Relationship.html",
 			"defns": "ValueSet-CARIN-BB-Related-Claim-Relationship-definitions.html"
+		},
+		"ValueSet/CARIN-BB-Identifier-Type": {
+			"base": "ValueSet-CARIN-BB-Identifier-Type.html",
+			"defns": "ValueSet-CARIN-BB-Identifier-Type-definitions.html"
 		},
 		"CodeSystem/CARIN-BB-Claim-CareTeam-Role": {
 			"base": "CodeSystem-CARIN-BB-Claim-CareTeam-Role.html",
@@ -182,6 +191,10 @@
 			"base": "ValueSet-CARIN-BB-TypeOfService.html",
 			"defns": "ValueSet-CARIN-BB-TypeOfService-definitions.html"
 		},
+		"ValueSet/nubc-pointoforiginforadmissionorvisit": {
+			"base": "ValueSet-nubc-pointoforiginforadmissionorvisit.html",
+			"defns": "ValueSet-nubc-pointoforiginforadmissionorvisit-definitions.html"
+		},
 		"ValueSet/CARIN-BB-TOB-TypeOfFacility": {
 			"base": "ValueSet-CARIN-BB-TOB-TypeOfFacility.html",
 			"defns": "ValueSet-CARIN-BB-TOB-TypeOfFacility-definitions.html"
@@ -193,10 +206,6 @@
 		"ValueSet/CARIN-BB-TOB-Frequency": {
 			"base": "ValueSet-CARIN-BB-TOB-Frequency.html",
 			"defns": "ValueSet-CARIN-BB-TOB-Frequency-definitions.html"
-		},
-		"ValueSet/CARIN-BB-AdmitSource": {
-			"base": "ValueSet-CARIN-BB-AdmitSource.html",
-			"defns": "ValueSet-CARIN-BB-AdmitSource-definitions.html"
 		},
 		"ValueSet/CARIN-BB-AdmitType": {
 			"base": "ValueSet-CARIN-BB-AdmitType.html",
@@ -213,10 +222,6 @@
 		"ValueSet/CARIN-BB-Adjudication-Category": {
 			"base": "ValueSet-CARIN-BB-Adjudication-Category.html",
 			"defns": "ValueSet-CARIN-BB-Adjudication-Category-definitions.html"
-		},
-		"StructureDefinition/CARINBBPatient": {
-			"base": "StructureDefinition-CARINBBPatient.html",
-			"defns": "StructureDefinition-CARINBBPatient-definitions.html"
 		},
 		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician": {
 			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Professional-NonClinician.html",
@@ -237,10 +242,25 @@
 		"ValueSet/CARIN-BB-SNOMEDCT-ProcedureCodes": {
 			"base": "ValueSet-CARIN-BB-SNOMEDCT-ProcedureCodes.html",
 			"defns": "ValueSet-CARIN-BB-SNOMEDCT-ProcedureCodes-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-Organization": {
+			"base": "StructureDefinition-CARIN-BB-Organization.html",
+			"defns": "StructureDefinition-CARIN-BB-Organization-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-PractitionerRole": {
+			"base": "StructureDefinition-CARIN-BB-PractitionerRole.html",
+			"defns": "StructureDefinition-CARIN-BB-PractitionerRole-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-RelatedPerson": {
+			"base": "StructureDefinition-CARIN-BB-RelatedPerson.html",
+			"defns": "StructureDefinition-CARIN-BB-RelatedPerson-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-Coverage": {
+			"base": "StructureDefinition-CARIN-BB-Coverage.html",
+			"defns": "StructureDefinition-CARIN-BB-Coverage-definitions.html"
 		}
 	},
-	"version": "4.0.0",
-	"fixed-business-version": "0.1.37-DRAFT",
+	"fixed-business-version": "0.1.42-DRAFT",
 	"dependencyList": [
 		{
 			"location": "http://hl7.org/fhir/us/core",

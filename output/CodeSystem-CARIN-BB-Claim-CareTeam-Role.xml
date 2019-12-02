@@ -3,21 +3,21 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="CARIN-BB-Claim-CareTeam-Role"/>
   <meta>
-    <versionId value="3"/>
-    <lastUpdated value="2019-07-27T07:57:01.000-04:00"/>
+    <versionId value="4"/>
+    <lastUpdated value="2019-12-01T14:02:49.000-05:00"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Claim Care Team Role Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole defines many codes, but they are not represented here</p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Claim Care Team Role Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">supervising<a name="CARIN-BB-Claim-CareTeam-Role-supervising"> </a></td><td>Attending or Supervising provider</td><td/></tr><tr><td style="white-space:nowrap">referring<a name="CARIN-BB-Claim-CareTeam-Role-referring"> </a></td><td>Referring provider</td><td/></tr><tr><td style="white-space:nowrap">performing<a name="CARIN-BB-Claim-CareTeam-Role-performing"> </a></td><td>Servicing or Rendering provider</td><td/></tr><tr><td style="white-space:nowrap">prescribing<a name="CARIN-BB-Claim-CareTeam-Role-prescribing"> </a></td><td>Prescribing provider</td><td/></tr><tr><td style="white-space:nowrap">pcp<a name="CARIN-BB-Claim-CareTeam-Role-pcp"> </a></td><td>Primary care provider</td><td/></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole"/>
-  <version value="0.1.37-DRAFT"/>
+  <version value="0.1.42-DRAFT"/>
   <name value="CARINBBClaimCareTeamRole"/>
   <title value="CARIN Blue Button Claim Care Team Role Code System"/>
   <status value="draft"/>
-  <date value="2019-08-20T03:19:01-04:00"/>
+  <date value="2019-12-02T04:50:03-05:00"/>
   <publisher value="CARIN Alliance"/>
   <caseSensitive value="true"/>
-  <content value="not-present"/>
+  <content value="complete"/>
   <concept>
     <code value="supervising"/>
     <display value="Attending or Supervising provider"/>

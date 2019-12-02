@@ -1,15 +1,15 @@
 {
 	"resourceType": "StructureDefinition",
-	"id": "carin-bb-Coverage",
+	"id": "CARIN-BB-Coverage",
 	"meta": {
-		"versionId": "19",
-		"lastUpdated": "2019-07-28T22:43:02.000-04:00"
+		"versionId": "5",
+		"lastUpdated": "2019-12-02T04:48:10.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage",
-	"version": "0.0.1",
+	"version": "0.5",
 	"name": "CARINBBCoverage",
-	"title": "CARIN Blue Button Coverage",
-	"status": "draft",
+	"title": "CARIN Blue Button Coverage Profile",
+	"status": "active",
 	"date": "2019-07-27",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
@@ -24,64 +24,39 @@
 				"path": "Coverage"
 			},
 			{
-				"id": "Coverage.contained",
-				"path": "Coverage.contained",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "Coverage.extension",
-				"path": "Coverage.extension",
-				"min": 0,
-				"max": "0"
-			},
-			{
-				"id": "Coverage.type",
-				"path": "Coverage.type",
-				"min": 1,
-				"max": "1",
-				"binding": {
-					"strength": "required",
-					"description": "Coverage Type",
-					"valueSet": "http://hl7.org/fhir/ValueSet/coverage-type"
-				}
+				"id": "Coverage.subscriber",
+				"path": "Coverage.subscriber",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient",
+							"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-relatedperson"
+						]
+					}
+				]
 			},
 			{
 				"id": "Coverage.subscriberId",
 				"path": "Coverage.subscriberId",
-				"min": 1,
-				"max": "1"
+				"min": 1
+			},
+			{
+				"id": "Coverage.beneficiary",
+				"path": "Coverage.beneficiary",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient"
+						]
+					}
+				]
 			},
 			{
 				"id": "Coverage.relationship",
 				"path": "Coverage.relationship",
-				"min": 1,
-				"max": "1",
-				"binding": {
-					"strength": "required",
-					"description": "Subscriber Relationship",
-					"valueSet": "http://hl7.org/fhir/ValueSet/subscriber-relationship"
-				}
-			},
-			{
-				"id": "Coverage.period",
-				"path": "Coverage.period",
-				"min": 1,
-				"max": "1"
-			},
-			{
-				"id": "Coverage.class",
-				"path": "Coverage.class",
-				"short": "Group,Plan,class ..etc will be mapped to class"
-			},
-			{
-				"id": "Coverage.class.type",
-				"path": "Coverage.class.type",
-				"binding": {
-					"strength": "required",
-					"description": "Coverage Class",
-					"valueSet": "http://hl7.org/fhir/ValueSet/coverage-class"
-				}
+				"min": 1
 			},
 			{
 				"id": "Coverage.payor",
@@ -90,10 +65,53 @@
 					{
 						"code": "Reference",
 						"targetProfile": [
-							"http://hl7.org/fhir/StructureDefinition/Organization"
+							"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization"
 						]
 					}
 				]
+			},
+			{
+				"id": "Coverage.class",
+				"path": "Coverage.class",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "type"
+						}
+					],
+					"rules": "open"
+				}
+			},
+			{
+				"id": "Coverage.class:group",
+				"path": "Coverage.class",
+				"sliceName": "group",
+				"max": "1"
+			},
+			{
+				"id": "Coverage.class:group.type",
+				"path": "Coverage.class.type",
+				"patternCoding": {
+					"system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+					"code": "group",
+					"display": "Group"
+				}
+			},
+			{
+				"id": "Coverage.class:plan",
+				"path": "Coverage.class",
+				"sliceName": "plan",
+				"max": "1"
+			},
+			{
+				"id": "Coverage.class:plan.type",
+				"path": "Coverage.class.type",
+				"patternCoding": {
+					"system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+					"code": "plan",
+					"display": "Plan"
+				}
 			}
 		]
 	}
