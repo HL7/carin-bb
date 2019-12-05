@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Blue Button - Local Development build (v0.1.42-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Blue Button - Local Development build (v0.1.43-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -275,23 +275,24 @@ can only resize using html  or css ;-(
 &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide">ImplementationGuide</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;hl7.fhir.us.carin-bb&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.meta">meta</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;155&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2019-12-02T04:21:41.000-05:00&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;163&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2019-12-05T06:48:06.000-05:00&quot;/&gt;
   &lt;/meta&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;CARINBlueButton&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb&lt;/pre&gt;&lt;div&gt;&lt;p&gt;&lt;strong&gt;CARIN Alliance&lt;/strong&gt;
-&lt;em&gt;Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&lt;/p&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;CARINBlueButton&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb&lt;/pre&gt;&lt;div&gt;&lt;h1&gt;CARIN Alliance&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This implementation guide describes the CARIN Blue Button&amp;amp;reg; Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&lt;/p&gt;
 &lt;p&gt;See the &lt;a href=&quot;toc.html&quot;&gt;Table of Contents&lt;/a&gt; for more information.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Please note that this implementation guide is currently a work in progress and is in draft status.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;h4&gt;Latest Changes&lt;/h4&gt;
 &lt;ul&gt;
+&lt;li&gt;(43) The IG does not forbid any elements from base R4. Added &amp;amp;reg; symbol to Blue Button references to acknowledge CMS' registered mark. Reorganized the mapping sections.&lt;/li&gt;
 &lt;li&gt;(42) First pass at harmonization of profiles and terminologies. Added the &lt;strong&gt;Authorization, Authentication, and Registration&lt;/strong&gt; section.&lt;/li&gt;
-&lt;li&gt;(41) set content to completed for code system CARINBBClaimType(http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)&lt;/li&gt;
-&lt;li&gt;(40)  Binding of value set http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type to eob.type in profile http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit&lt;/li&gt;
-&lt;li&gt;(39)  Added new code allowedunits to CARINBBAdjudicationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)&lt;/li&gt;
-&lt;li&gt;(38)  Added new code clmlastactiondate to CARINBBClaimInformationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)&lt;/li&gt;
+&lt;li&gt;(41) set content to completed for code system &lt;a href=&quot;http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type&quot;&gt;CARINBBClaimType&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(40)  Binding of value set &lt;a href=&quot;http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type&quot;&gt;CARINBBClaimType&lt;/a&gt; to eob.type in profile &lt;a href=&quot;http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit&quot;&gt;CARINBBExplanationOfBenefit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(39)  Added new code allowedunits to &lt;a href=&quot;http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory&quot;&gt;CARINBBAdjudicationCategory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(38)  Added new code clmlastactiondate to &lt;a href=&quot;http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory&quot;&gt;CARINBBClaimInformationCategory&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;(37) Updated Feedback section with Zulip stream information&lt;/li&gt;
 &lt;li&gt;(36) Added explicit &amp;quot;draft&amp;quot; verbiage&lt;/li&gt;
 &lt;li&gt;(35) Revised narrative content&lt;/li&gt;
@@ -312,18 +313,19 @@ can only resize using html  or css ;-(
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.url">url</a>
        <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.42-DRAFT&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.43-DRAFT&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CARINBlueButton&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CARIN Blue Button&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2019-12-02T07:37:06-05:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2019-12-05T06:48:52-05:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CARIN Alliance&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.description">description</a>
-               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot; **CARIN Alliance** 
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;
+# CARIN Alliance
 *Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*
 
-This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
+This implementation guide describes the CARIN Blue Button&amp;amp;reg; Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
 
 See the [Table of Contents](toc.html) for more information.
 
@@ -332,11 +334,12 @@ See the [Table of Contents](toc.html) for more information.
 
 
 #### Latest Changes
+- (43) The IG does not forbid any elements from base R4. Added &amp;amp;reg; symbol to Blue Button references to acknowledge CMS&amp;#39; registered mark. Reorganized the mapping sections.
 - (42) First pass at harmonization of profiles and terminologies. Added the **Authorization, Authentication, and Registration** section.
-- (41) set content to completed for code system CARINBBClaimType(http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)
-- (40)  Binding of value set http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type to eob.type in profile http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit 
-- (39)  Added new code allowedunits to CARINBBAdjudicationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)
-- (38)  Added new code clmlastactiondate to CARINBBClaimInformationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)
+- (41) set content to completed for code system [CARINBBClaimType](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)
+- (40)  Binding of value set [CARINBBClaimType](http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type) to eob.type in profile [CARINBBExplanationOfBenefit](http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit) 
+- (39)  Added new code allowedunits to [CARINBBAdjudicationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)
+- (38)  Added new code clmlastactiondate to [CARINBBClaimInformationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)
 - (37) Updated Feedback section with Zulip stream information
 - (36) Added explicit &amp;quot;draft&amp;quot; verbiage
 - (35) Revised narrative content
@@ -352,10 +355,6 @@ See the [Table of Contents](toc.html) for more information.
 - (25) Added FHIR Resources section to narrative and included Example EOB.
 - (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.
 - (23) Added the Latest Changes section. Added USCoreR4 Dependency.
-
-
-
-
 &quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.packageId">packageId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;hl7.fhir.us.carin-bb&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.license">license</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CC0-1.0&quot;/&gt;
@@ -1051,46 +1050,6 @@ See the [Table of Contents](toc.html) for more information.
           &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;Mapping_from_CPCDS_to_FHIR_Resources.html&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Mapping from CPCDS to FHIR Resources&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;markdown&quot;/&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;Data_Element_Index.html&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Data Element Index&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;html&quot;/&gt;
-          &lt;/page&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;Coverage_mapping.html&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Coverage mapping&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;html&quot;/&gt;
-          &lt;/page&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;EOB_Comprehensive_mapping.html&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EOB Comprehensive mapping&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;html&quot;/&gt;
-          &lt;/page&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;EOB_Inpatient_Facility_mapping.html&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EOB Inpatient Facility mapping&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;html&quot;/&gt;
-          &lt;/page&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;EOB_Outpatient_Facility_mapping.html&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EOB Outpatient Facility mapping&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;html&quot;/&gt;
-          &lt;/page&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;EOB_Professional_Non-Clinician_mapping.html&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EOB Professional Non-Clinician mapping&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;html&quot;/&gt;
-          &lt;/page&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;EOB_Pharmacy_mapping.html&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EOB Pharmacy mapping&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;html&quot;/&gt;
-          &lt;/page&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;Patient_mapping.html&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient mapping&quot;/&gt;
-            &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;html&quot;/&gt;
-          &lt;/page&gt;
         &lt;/page&gt;
         &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;Authorization,_Authentication,_and_Registration.html&quot;/&gt;
@@ -1155,7 +1114,7 @@ Formats: <a href="ImplementationGuide-hl7.fhir.us.carin-bb.html">Narrative</a>, 
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CARINBlueButton Version: 0.1.42-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Mon, Dec 2, 2019 07:37-0500.
+      CARINBlueButton Version: 0.1.43-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Thu, Dec 5, 2019 06:48-0500.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

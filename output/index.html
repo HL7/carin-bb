@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Blue Button - Local Development build (v0.1.42-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Blue Button - Local Development build (v0.1.43-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -232,7 +232,8 @@ can only resize using html  or css ;-(
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
 
 <ul id="markdown-toc">
-  <li><a href="#description" id="markdown-toc-description">Description</a>    <ul>
+  <li><a href="#description" id="markdown-toc-description">Description</a></li>
+  <li><a href="#carin-alliance" id="markdown-toc-carin-alliance">CARIN Alliance</a>    <ul>
       <li><a href="#latest-changes" id="markdown-toc-latest-changes">Latest Changes</a></li>
     </ul>
   </li>
@@ -242,10 +243,10 @@ can only resize using html  or css ;-(
 
 <h3 id="description">Description</h3>
 
-<p><strong>CARIN Alliance</strong> 
-<em>Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.</em></p>
+<h1 id="carin-alliance">CARIN Alliance</h1>
+<p><em>Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.</em></p>
 
-<p>This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.</p>
+<p>This implementation guide describes the CARIN Blue Button® Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.</p>
 
 <p>See the <a href="toc.html">Table of Contents</a> for more information.</p>
 
@@ -253,11 +254,12 @@ can only resize using html  or css ;-(
 
 <h4 id="latest-changes">Latest Changes</h4>
 <ul>
+  <li>(43) The IG does not forbid any elements from base R4. Added ® symbol to Blue Button references to acknowledge CMS’ registered mark. Reorganized the mapping sections.</li>
   <li>(42) First pass at harmonization of profiles and terminologies. Added the <strong>Authorization, Authentication, and Registration</strong> section.</li>
-  <li>(41) set content to completed for code system CARINBBClaimType(http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)</li>
-  <li>(40) 	Binding of value set http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type to eob.type in profile http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit</li>
-  <li>(39) 	Added new code allowedunits to CARINBBAdjudicationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)</li>
-  <li>(38) 	Added new code clmlastactiondate to CARINBBClaimInformationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)</li>
+  <li>(41) set content to completed for code system <a href="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type">CARINBBClaimType</a></li>
+  <li>(40) 	Binding of value set <a href="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type">CARINBBClaimType</a> to eob.type in profile <a href="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit">CARINBBExplanationOfBenefit</a></li>
+  <li>(39) 	Added new code allowedunits to <a href="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory">CARINBBAdjudicationCategory</a></li>
+  <li>(38) 	Added new code clmlastactiondate to <a href="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory">CARINBBClaimInformationCategory</a></li>
   <li>(37) Updated Feedback section with Zulip stream information</li>
   <li>(36) Added explicit “draft” verbiage</li>
   <li>(35) Revised narrative content</li>
@@ -305,7 +307,7 @@ can only resize using html  or css ;-(
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CARINBlueButton Version: 0.1.42-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Mon, Dec 2, 2019 07:37-0500.
+      CARINBlueButton Version: 0.1.43-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Thu, Dec 5, 2019 06:48-0500.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

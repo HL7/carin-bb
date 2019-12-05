@@ -12,11 +12,11 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole"/>
-  <version value="0.1.42-DRAFT"/>
+  <version value="0.1.43-DRAFT"/>
   <name value="CARINBBPractitionerRole"/>
   <title value="CARIN Blue Button Practitioner Role Profile"/>
   <status value="active"/>
-  <date value="2019-12-02T07:37:06-05:00"/>
+  <date value="2019-12-05T06:48:52-05:00"/>
   <publisher value="CARIN Alliance"/>
   <fhirVersion value="4.0.1"/>
   <mapping>

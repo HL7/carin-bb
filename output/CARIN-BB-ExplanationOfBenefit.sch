@@ -14,20 +14,6 @@
     <sch:rule context="f:ExplanationOfBenefit">
       <sch:assert test="count(f:id) &gt;= 1">id: minimum cardinality of 'id' is 1</sch:assert>
       <sch:assert test="count(f:identifier) &gt;= 1">identifier: minimum cardinality of 'identifier' is 1</sch:assert>
-      <sch:assert test="count(f:subType) &lt;= 0">subType: maximum cardinality of 'subType' is 0</sch:assert>
-      <sch:assert test="count(f:enterer) &lt;= 0">enterer: maximum cardinality of 'enterer' is 0</sch:assert>
-      <sch:assert test="count(f:priority) &lt;= 0">priority: maximum cardinality of 'priority' is 0</sch:assert>
-      <sch:assert test="count(f:fundsReserveRequested) &lt;= 0">fundsReserveRequested: maximum cardinality of 'fundsReserveRequested' is 0</sch:assert>
-      <sch:assert test="count(f:fundsReserve) &lt;= 0">fundsReserve: maximum cardinality of 'fundsReserve' is 0</sch:assert>
-      <sch:assert test="count(f:prescription) &lt;= 0">prescription: maximum cardinality of 'prescription' is 0</sch:assert>
-      <sch:assert test="count(f:originalPrescription) &lt;= 0">originalPrescription: maximum cardinality of 'originalPrescription' is 0</sch:assert>
-      <sch:assert test="count(f:precedence) &lt;= 0">precedence: maximum cardinality of 'precedence' is 0</sch:assert>
-      <sch:assert test="count(f:accident) &lt;= 0">accident: maximum cardinality of 'accident' is 0</sch:assert>
-      <sch:assert test="count(f:addItem) &lt;= 0">addItem: maximum cardinality of 'addItem' is 0</sch:assert>
-      <sch:assert test="count(f:formCode) &lt;= 0">formCode: maximum cardinality of 'formCode' is 0</sch:assert>
-      <sch:assert test="count(f:form) &lt;= 0">form: maximum cardinality of 'form' is 0</sch:assert>
-      <sch:assert test="count(f:benefitPeriod) &lt;= 0">benefitPeriod: maximum cardinality of 'benefitPeriod' is 0</sch:assert>
-      <sch:assert test="count(f:benefitBalance) &lt;= 0">benefitBalance: maximum cardinality of 'benefitBalance' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -599,15 +585,6 @@
     <sch:title>ExplanationOfBenefit.accident.location[x] 1</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:accident/f:location[x]">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>f:ExplanationOfBenefit/f:item</sch:title>
-    <sch:rule context="f:ExplanationOfBenefit/f:item">
-      <sch:assert test="count(f:programCode) &lt;= 0">programCode: maximum cardinality of 'programCode' is 0</sch:assert>
-      <sch:assert test="count(f:factor) &lt;= 0">factor: maximum cardinality of 'factor' is 0</sch:assert>
-      <sch:assert test="count(f:udi) &lt;= 0">udi: maximum cardinality of 'udi' is 0</sch:assert>
-      <sch:assert test="count(f:detail) &lt;= 0">detail: maximum cardinality of 'detail' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

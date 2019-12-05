@@ -10,6 +10,9 @@ The CARIN Blue Button framework consists of the following components:
 
 * Common Payer Consumer Data Set (CPCDS)
 * Mapping from CPCDS to FHIR resource profiles
-* Terminologies
+* Authorization, Authentication, and Registration
+
+
+
 
 [Next Page](Common_Payer_Consumer_Data_Set_(CPCDS).html)

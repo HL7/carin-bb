@@ -15,10 +15,11 @@ active: home
 
 ### Description
 
- **CARIN Alliance** 
+
+# CARIN Alliance
 *Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*
 
-This implementation guide describes the CARIN Alliance Blue Button 2.0 Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
+This implementation guide describes the CARIN Blue Button&reg; Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
 
 See the [Table of Contents](toc.html) for more information.
 
@@ -27,11 +28,12 @@ See the [Table of Contents](toc.html) for more information.
 
 
 #### Latest Changes
+- (43) The IG does not forbid any elements from base R4. Added &reg; symbol to Blue Button references to acknowledge CMS' registered mark. Reorganized the mapping sections.
 - (42) First pass at harmonization of profiles and terminologies. Added the **Authorization, Authentication, and Registration** section.
-- (41) set content to completed for code system CARINBBClaimType(http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)
-- (40) 	Binding of value set http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type to eob.type in profile http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit 
-- (39) 	Added new code allowedunits to CARINBBAdjudicationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)
-- (38) 	Added new code clmlastactiondate to CARINBBClaimInformationCategory (http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)
+- (41) set content to completed for code system [CARINBBClaimType](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)
+- (40) 	Binding of value set [CARINBBClaimType](http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type) to eob.type in profile [CARINBBExplanationOfBenefit](http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit) 
+- (39) 	Added new code allowedunits to [CARINBBAdjudicationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)
+- (38) 	Added new code clmlastactiondate to [CARINBBClaimInformationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)
 - (37) Updated Feedback section with Zulip stream information
 - (36) Added explicit "draft" verbiage
 - (35) Revised narrative content
@@ -47,9 +49,5 @@ See the [Table of Contents](toc.html) for more information.
 - (25) Added FHIR Resources section to narrative and included Example EOB.
 - (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.
 - (23) Added the Latest Changes section. Added USCoreR4 Dependency.
-
-
-
-
 
 

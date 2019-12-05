@@ -62,7 +62,7 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician"/>
-  <version value="0.1.42-DRAFT"/>
+  <version value="0.1.43-DRAFT"/>
   <name value="CARINBBExplanationOfBenefitProfessionalNonClinician"/>
   <title value="CARIN Blue Button Explanation of Benefit Professional or Non-Clinician Profile"/>
   <status value="active"/>
@@ -547,7 +547,7 @@
       <comment value="This may contain the local bill type codes such as the US UB-04 bill type code."/>
       <requirements value="Some jurisdictions need a finer grained claim type for routing and adjudication."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.subType"/>
         <min value="0"/>
@@ -729,7 +729,7 @@
       <definition value="Individual who created the claim, predetermination or preauthorization."/>
       <requirements value="Some jurisdictions require the contact information for personnel completing claims."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.enterer"/>
         <min value="0"/>
@@ -832,7 +832,7 @@
       <comment value="If a claim processor is unable to complete the processing as per the priority then they should generate and error and not process the request."/>
       <requirements value="The provider may need to indicate their processing requirements so that the processor can indicate if they are unable to comply."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.priority"/>
         <min value="0"/>
@@ -872,7 +872,7 @@
       <requirements value="In the case of a Pre-Determination/Pre-Authorization the provider may request that funds in the amount of the expected Benefit be reserved (&#39;Patient&#39; or &#39;Provider&#39;) to pay for the Benefits determined on the subsequent claim(s). &#39;None&#39; explicitly indicates no funds reserving is requested."/>
       <alias value="Fund pre-allocation"/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.fundsReserveRequested"/>
         <min value="0"/>
@@ -910,7 +910,7 @@
       <comment value="Fund would be release by a future claim quoting the preAuthRef of this response. Examples of values include: provider, patient, none."/>
       <requirements value="Needed to advise the submitting provider on whether the rquest for reservation of funds has been honored."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.fundsReserve"/>
         <min value="0"/>
@@ -1170,7 +1170,7 @@
       <definition value="Prescription to support the dispensing of pharmacy, device or vision products."/>
       <requirements value="Required to authorize the dispensing of controlled substances and devices."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.prescription"/>
         <min value="0"/>
@@ -1199,7 +1199,7 @@
       <comment value="For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefor issues a new prescription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the &#39;prescription&#39; and that from the physician becomes the &#39;original prescription&#39;."/>
       <requirements value="Often required when a fulfiller varies what is fulfilled from that authorized on the original prescription."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.originalPrescription"/>
         <min value="0"/>
@@ -4571,7 +4571,7 @@
       <definition value="This indicates the relative order of a series of EOBs related to different coverages for the same suite of services."/>
       <requirements value="Needed to coordinate between multiple EOBs for the same suite of services."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.precedence"/>
         <min value="0"/>
@@ -5056,7 +5056,7 @@
       <definition value="Details of a accident which resulted in injuries which required the products and services listed in the claim."/>
       <requirements value="When healthcare products and services are accident related, benefits may be payable under accident provisions of policies, such as automotive, etc before they are payable under normal health insurance."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.accident"/>
         <min value="0"/>
@@ -5679,7 +5679,7 @@
       <comment value="For example: Neonatal program, child dental program or drug users recovery program."/>
       <requirements value="Commonly used in in the identification of publicly provided program focused on population segments or disease classifications."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="ExplanationOfBenefit.item.programCode"/>
         <min value="0"/>
@@ -5834,7 +5834,7 @@
       <comment value="To show a 10% senior&#39;s discount, the value entered is: 0.90 (1.00 - 0.10)."/>
       <requirements value="When discounts are provided to a patient (example: Senior&#39;s discount) then this must be documented for adjudication."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.item.factor"/>
         <min value="0"/>
@@ -5887,7 +5887,7 @@
       <definition value="Unique Device Identifiers associated with this line item."/>
       <requirements value="The UDI code allows the insurer to obtain device level information on the product supplied."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="ExplanationOfBenefit.item.udi"/>
         <min value="0"/>
@@ -6822,7 +6822,7 @@
       <short value="Additional items"/>
       <definition value="Second-tier of goods and services."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="ExplanationOfBenefit.item.detail"/>
         <min value="0"/>
@@ -7870,7 +7870,7 @@
       <definition value="The first-tier service adjudications for payor added product or service lines."/>
       <requirements value="Insurers may redefine the provided product or service or may package and/or decompose groups of products and services. The addItems allows the insurer to provide their line item list with linkage to the submitted items/details/sub-details. In a preauthorization the insurer may use the addItem structure to provide additional information on authorized products and services."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="ExplanationOfBenefit.addItem"/>
         <min value="0"/>
@@ -10026,7 +10026,7 @@
       <comment value="May be needed to identify specific jurisdictional forms."/>
       <requirements value="Needed to specify the specific form used for producing output for this response."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.formCode"/>
         <min value="0"/>
@@ -10064,7 +10064,7 @@
       <comment value="Needed to permit insurers to include the actual form."/>
       <requirements value="Needed to include the specific form used for producing output for this response."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.form"/>
         <min value="0"/>
@@ -10358,7 +10358,7 @@
       <comment value="Not applicable when use=claim."/>
       <requirements value="Needed as coverages may be multi-year while benefits tend to be annual therefore a separate expression of the benefit period is needed."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="ExplanationOfBenefit.benefitPeriod"/>
         <min value="0"/>
@@ -10386,7 +10386,7 @@
       <short value="Balance by Benefit Category"/>
       <definition value="Balance by Benefit Category."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="ExplanationOfBenefit.benefitBalance"/>
         <min value="0"/>

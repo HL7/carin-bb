@@ -27,7 +27,7 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage"/>
-  <version value="0.1.42-DRAFT"/>
+  <version value="0.1.43-DRAFT"/>
   <name value="CARINBBCoverage"/>
   <title value="CARIN Blue Button Coverage Profile"/>
   <status value="active"/>

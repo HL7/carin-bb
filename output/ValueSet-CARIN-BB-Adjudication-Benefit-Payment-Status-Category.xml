@@ -10,11 +10,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Adjudication Benefit Payment Status Category Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="CodeSystem-CARIN-BB-Adjudication-Category.html"><code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-innetworkbenefitpaymentstatus">innetworkbenefitpaymentstatus</a></td><td>in network benefit payment status</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-outofnetworkbenefitpaymentstatus">outofnetworkbenefitpaymentstatus</a></td><td>out of network benefit payment status</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-otherbenefitpaymentstatus">otherbenefitpaymentstatus</a></td><td>other benefit payment status</td><td/></tr></table></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationbenefitpaymentstatuscategory"/>
-  <version value="0.1.42-DRAFT"/>
+  <version value="0.1.43-DRAFT"/>
   <name value="CARINBBAdjudicationBenefitPaymentStatusCategory"/>
   <title value="CARIN Blue Button Adjudication Benefit Payment Status Category Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-02T07:37:06-05:00"/>
+  <date value="2019-12-05T06:48:52-05:00"/>
   <compose>
     <include>
       <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory"/>

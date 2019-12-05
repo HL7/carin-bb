@@ -4,7 +4,7 @@ layout: default
 active: Authorization, Authentication, and Registration
 ---
 
-[Previous Page](undefined)
+[Previous Page](Mapping_from_CPCDS_to_FHIR_Resources.html)
 
 Client applications and systems of record SHALL support the standalone launch sequence of the [SMART App Launch framework](http://www.hl7.org/fhir/smart-app-launch/) for user authorization and client authentication. Systems of record SHALL publish their authorization and token endpoints for discovery in accordance with the SMART App Launch framework.
 

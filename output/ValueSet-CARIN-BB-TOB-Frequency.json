@@ -10,11 +10,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Type Of Bill (Frequency) Value Set</h2><div><p>UB-04 Type of Bill (FL-4) structure - Sequence in this episode of care</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html</code></li></ul></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-tob-frequency",
-  "version": "0.1.42-DRAFT",
+  "version": "0.1.43-DRAFT",
   "name": "CARINBBTOBFrequency",
   "title": "CARIN Blue Button Type Of Bill (Frequency) Value Set",
   "status": "draft",
-  "date": "2019-12-02T07:37:06-05:00",
+  "date": "2019-12-05T06:48:52-05:00",
   "description": "UB-04 Type of Bill (FL-4) structure - Sequence in this episode of care\n",
   "compose": {
     "include": [
