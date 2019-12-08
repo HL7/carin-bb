@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Outpatient-Facility",
 	"meta": {
-		"versionId": "191",
-		"lastUpdated": "2019-11-30T04:54:11.000-05:00"
+		"versionId": "192",
+		"lastUpdated": "2019-12-06T07:37:59.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-outpatient-facility",
 	"version": "0.5",
@@ -12,6 +12,7 @@
 	"status": "active",
 	"date": "2019-07-26",
 	"publisher": "CARIN Alliance",
+	"description": "CARIN Blue Button Explanation of Benefit Outpatient Facility Profile",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,

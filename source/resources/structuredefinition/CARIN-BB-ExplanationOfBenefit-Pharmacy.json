@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Pharmacy",
 	"meta": {
-		"versionId": "40",
-		"lastUpdated": "2019-11-26T04:19:06.000-05:00"
+		"versionId": "41",
+		"lastUpdated": "2019-12-06T07:37:10.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-pharmacy",
 	"version": "0.5",
@@ -12,6 +12,7 @@
 	"status": "active",
 	"date": "2019-07-26",
 	"publisher": "CARIN Alliance",
+	"description": "CARIN Blue Button Explanation of Benefit Pharmacy Profile",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,

@@ -3,10 +3,10 @@
   "name": "CARINBlueButton",
   "package-id": "hl7.fhir.us.carin-bb",
   "ig-ver": "0.1.43-DRAFT",
-  "date": "Thu, 05 Dec, 2019 06:48:52 -0500",
-  "errs": 28,
+  "date": "Sun, 08 Dec, 2019 06:42:37 -0500",
+  "errs": 36,
   "warnings": 0,
-  "hints": 0,
+  "hints": 12,
   "version": "4.0.1",
   "tool": "4.1.0 (3)"
 }

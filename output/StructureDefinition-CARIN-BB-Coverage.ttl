@@ -9,8 +9,8 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "CARIN-BB-Coverage"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "5" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-12-02T04:48:10.000-05:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "6" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-06T07:41:24.000-05:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
@@ -22,6 +22,7 @@
   fhir:StructureDefinition.title [ fhir:value "CARIN Blue Button Coverage Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
   fhir:StructureDefinition.date [ fhir:value "2019-07-27T00:00:00-04:00"^^xsd:dateTime];
+  fhir:StructureDefinition.description [ fhir:value "CARIN Blue Button Coverage Profile"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;

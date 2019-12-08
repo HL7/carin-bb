@@ -9,8 +9,8 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "CARIN-BB-PractitionerRole"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "3" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-12-01T23:52:18.000-05:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-06T07:33:20.000-05:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
@@ -21,8 +21,9 @@
   fhir:StructureDefinition.name [ fhir:value "CARINBBPractitionerRole"];
   fhir:StructureDefinition.title [ fhir:value "CARIN Blue Button Practitioner Role Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2019-12-05T06:48:52-05:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-12-08T06:42:37-05:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
+  fhir:StructureDefinition.description [ fhir:value "CARIN Blue Button Practitioner Role Profile"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;

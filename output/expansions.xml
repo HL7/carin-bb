@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="b78b2f7d-13b3-48f2-bbab-7d1ad970dad7"/>
+  <id value="b917a0f1-84df-4480-b165-ba543cbe58d2"/>
   <meta>
-    <lastUpdated value="2019-12-05T06:48:52.022-05:00"/>
+    <lastUpdated value="2019-12-08T06:42:37.764-05:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -61,10 +61,10 @@
         <name value="CARINBBRelatedClaimRelationship"/>
         <title value="CARIN Blue Button Related Claim Relationship Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-05T06:48:52-05:00"/>
+        <date value="2019-12-08T06:42:37-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:17728db3-52d6-4c5f-8714-f74953efdff3"/>
-          <timestamp value="2019-12-05T06:50:10-05:00"/>
+          <identifier value="urn:uuid:20206c57-bc62-47ac-b95d-0f75a29b93bb"/>
+          <timestamp value="2019-12-08T06:44:01-05:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -175,10 +175,10 @@
         <name value="CARINBBClaimType"/>
         <title value="CARIN Blue Button Claim Type Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-05T06:48:52-05:00"/>
+        <date value="2019-12-08T06:42:37-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:a5e32df7-3954-4e11-8734-6d6648fd99f7"/>
-          <timestamp value="2019-12-05T06:50:40-05:00"/>
+          <identifier value="urn:uuid:9c931686-f996-44ca-8070-400ea2d85d07"/>
+          <timestamp value="2019-12-08T06:44:33-05:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -301,10 +301,10 @@
         <name value="CARINBBClaimCareTeamRole"/>
         <title value="CARIN Blue Button Claim Care Team Role Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-05T06:48:52-05:00"/>
+        <date value="2019-12-08T06:42:37-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:e2eb2d86-4fe8-4b16-9002-6ed8aa723958"/>
-          <timestamp value="2019-12-05T06:50:40-05:00"/>
+          <identifier value="urn:uuid:2c4daaca-f554-461a-8b25-9c783b05cb6e"/>
+          <timestamp value="2019-12-08T06:44:33-05:00"/>
           <total value="5"/>
           <parameter>
             <name value="excludeNested"/>
@@ -454,11 +454,11 @@
         <name value="CARINBBAdjudicationAmountCategory"/>
         <title value="CARIN Blue Button Adjudication Amount Category Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-05T06:48:52-05:00"/>
+        <date value="2019-12-08T06:42:37-05:00"/>
         <description value="Describes the various amount fields used when submitting and adjudicating a claim."/>
         <expansion>
-          <identifier value="urn:uuid:1ec29f3d-3230-47a4-91fe-94298f2077e6"/>
-          <timestamp value="2019-12-05T06:50:41-05:00"/>
+          <identifier value="urn:uuid:393191ad-2f0d-4181-bea8-8f57d7cd9317"/>
+          <timestamp value="2019-12-08T06:44:34-05:00"/>
           <total value="9"/>
           <parameter>
             <name value="excludeNested"/>
@@ -572,10 +572,10 @@
         <name value="CARINBBNetworkContractingStatus"/>
         <title value="CARIN Blue Button Network Contracting Status Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-05T06:48:52-05:00"/>
+        <date value="2019-12-08T06:42:37-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:7ee39d9f-8084-4b1e-a6dc-e0727755e1f6"/>
-          <timestamp value="2019-12-05T06:50:41-05:00"/>
+          <identifier value="urn:uuid:3910fb12-52b3-497e-946f-bb66735153ac"/>
+          <timestamp value="2019-12-08T06:44:35-05:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -806,10 +806,10 @@
         <name value="CARINBBClaimInformationCategory"/>
         <title value="CARIN Blue Button Claim Information Category Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-05T06:48:52-05:00"/>
+        <date value="2019-12-08T06:42:37-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:7d6f0939-4101-43f3-ab94-9aef2b079bcd"/>
-          <timestamp value="2019-12-05T06:50:42-05:00"/>
+          <identifier value="urn:uuid:5ffd8da9-fa98-4139-928e-ffb6b84a8e25"/>
+          <timestamp value="2019-12-08T06:44:36-05:00"/>
           <total value="21"/>
           <parameter>
             <name value="excludeNested"/>
@@ -962,14 +962,14 @@
         <name value="CARINBBSNOMEDCTProcedureCodes"/>
         <title value="CARIN Blue Button SNOMEDCT Procedure Codes Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-05T06:48:52-05:00"/>
+        <date value="2019-12-08T06:42:37-05:00"/>
         <description value="This value set includes codes from the following code systems:&#xA;&#xA;Include codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)"/>
         <expansion>
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:1d785d8e-422c-4ed2-b13d-44e921696763"/>
-          <timestamp value="2019-12-05T06:51:07-05:00"/>
+          <identifier value="urn:uuid:e9ee51c5-7e0d-4c56-9b80-2608654a7333"/>
+          <timestamp value="2019-12-08T06:45:02-05:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -1053,10 +1053,10 @@
         <name value="CARINBBAdjudicationBenefitPaymentStatusCategory"/>
         <title value="CARIN Blue Button Adjudication Benefit Payment Status Category Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-05T06:48:52-05:00"/>
+        <date value="2019-12-08T06:42:37-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:ef08972d-70cc-48b2-8fc7-71b9482b5849"/>
-          <timestamp value="2019-12-05T06:51:45-05:00"/>
+          <identifier value="urn:uuid:0155e674-e095-4a98-883d-58fce41a48c2"/>
+          <timestamp value="2019-12-08T06:45:50-05:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1244,10 +1244,10 @@
         <name value="CARINBBAdjudicationCategory"/>
         <title value="CARIN Blue Button Claim Adjudication Category Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-05T06:48:52-05:00"/>
+        <date value="2019-12-08T06:42:37-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:28e124ac-8982-494a-a2ef-719c570c2d4a"/>
-          <timestamp value="2019-12-05T06:51:45-05:00"/>
+          <identifier value="urn:uuid:dbb33e48-1adc-4fa6-90ff-70c4a5f91058"/>
+          <timestamp value="2019-12-08T06:45:51-05:00"/>
           <total value="15"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1607,10 +1607,10 @@
         <name value="CARINBBIdentifierType"/>
         <title value="CARIN Blue Button Identifier Type Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-05T06:48:52-05:00"/>
+        <date value="2019-12-08T06:42:37-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:c0c9f715-49f9-4166-afa9-03c3adc8a687"/>
-          <timestamp value="2019-12-05T06:51:58-05:00"/>
+          <identifier value="urn:uuid:9a86c1da-1644-42af-94a8-d454e7144461"/>
+          <timestamp value="2019-12-08T06:46:05-05:00"/>
           <total value="29"/>
           <parameter>
             <name value="excludeNested"/>

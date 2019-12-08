@@ -258,6 +258,10 @@
 		"StructureDefinition/CARIN-BB-Coverage": {
 			"base": "StructureDefinition-CARIN-BB-Coverage.html",
 			"defns": "StructureDefinition-CARIN-BB-Coverage-definitions.html"
+		},
+		"CapabilityStatement/carin-bb-server": {
+			"base": "CapabilityStatement-carin-bb-server.html",
+			"defns": "CapabilityStatement-carin-bb-server-definitions.html"
 		}
 	},
 	"fixed-business-version": "0.1.43-DRAFT",

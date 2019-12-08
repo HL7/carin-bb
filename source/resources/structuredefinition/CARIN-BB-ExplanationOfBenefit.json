@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit",
 	"meta": {
-		"versionId": "21",
-		"lastUpdated": "2019-12-05T05:37:27.000-05:00"
+		"versionId": "23",
+		"lastUpdated": "2019-12-06T07:59:38.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit",
 	"version": "0.5",
@@ -11,6 +11,7 @@
 	"title": "CARIN Blue Button Explanation of Benefit Profile",
 	"status": "active",
 	"publisher": "CARIN Alliance",
+	"description": "CARIN Blue Button Explanation of Benefit Profile",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,
@@ -31,7 +32,8 @@
 			{
 				"id": "ExplanationOfBenefit.identifier",
 				"path": "ExplanationOfBenefit.identifier",
-				"min": 1
+				"min": 1,
+				"mustSupport": true
 			},
 			{
 				"id": "ExplanationOfBenefit.type",
@@ -59,6 +61,11 @@
 				]
 			},
 			{
+				"id": "ExplanationOfBenefit.billablePeriod",
+				"path": "ExplanationOfBenefit.billablePeriod",
+				"mustSupport": true
+			},
+			{
 				"id": "ExplanationOfBenefit.insurer",
 				"path": "ExplanationOfBenefit.insurer",
 				"type": [
@@ -83,6 +90,11 @@
 				]
 			},
 			{
+				"id": "ExplanationOfBenefit.related",
+				"path": "ExplanationOfBenefit.related",
+				"mustSupport": true
+			},
+			{
 				"id": "ExplanationOfBenefit.related.relationship",
 				"path": "ExplanationOfBenefit.related.relationship",
 				"min": 1,
@@ -92,8 +104,19 @@
 				}
 			},
 			{
+				"id": "ExplanationOfBenefit.payee",
+				"path": "ExplanationOfBenefit.payee",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.payee.type",
+				"path": "ExplanationOfBenefit.payee.type",
+				"min": 1
+			},
+			{
 				"id": "ExplanationOfBenefit.payee.party",
 				"path": "ExplanationOfBenefit.payee.party",
+				"min": 1,
 				"type": [
 					{
 						"code": "Reference",
@@ -105,12 +128,68 @@
 				]
 			},
 			{
+				"id": "ExplanationOfBenefit.careTeam",
+				"path": "ExplanationOfBenefit.careTeam",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.careTeam.provider",
+				"path": "ExplanationOfBenefit.careTeam.provider",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole"
+						]
+					}
+				]
+			},
+			{
+				"id": "ExplanationOfBenefit.careTeam.responsible",
+				"path": "ExplanationOfBenefit.careTeam.responsible",
+				"mustSupport": true
+			},
+			{
 				"id": "ExplanationOfBenefit.careTeam.role",
 				"path": "ExplanationOfBenefit.careTeam.role",
+				"min": 1,
 				"binding": {
 					"strength": "extensible",
 					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claimcareteamrole"
 				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo",
+				"path": "ExplanationOfBenefit.supportingInfo",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo.category",
+				"path": "ExplanationOfBenefit.supportingInfo.category",
+				"binding": {
+					"strength": "extensible",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
+				}
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo.code",
+				"path": "ExplanationOfBenefit.supportingInfo.code",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo.timing[x]",
+				"path": "ExplanationOfBenefit.supportingInfo.timing[x]",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.supportingInfo.value[x]",
+				"path": "ExplanationOfBenefit.supportingInfo.value[x]",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.diagnosis",
+				"path": "ExplanationOfBenefit.diagnosis",
+				"mustSupport": true
 			},
 			{
 				"id": "ExplanationOfBenefit.diagnosis.diagnosis[x]",
@@ -130,6 +209,26 @@
 					"strength": "extensible",
 					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-diagnosistype"
 				}
+			},
+			{
+				"id": "ExplanationOfBenefit.diagnosis.onAdmission",
+				"path": "ExplanationOfBenefit.diagnosis.onAdmission",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.procedure",
+				"path": "ExplanationOfBenefit.procedure",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.procedure.type",
+				"path": "ExplanationOfBenefit.procedure.type",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.procedure.date",
+				"path": "ExplanationOfBenefit.procedure.date",
+				"mustSupport": true
 			},
 			{
 				"id": "ExplanationOfBenefit.procedure.procedure[x]",
@@ -182,6 +281,61 @@
 				"id": "ExplanationOfBenefit.insurance:primaryinsurance.focal",
 				"path": "ExplanationOfBenefit.insurance.focal",
 				"fixedBoolean": false
+			},
+			{
+				"id": "ExplanationOfBenefit.item",
+				"path": "ExplanationOfBenefit.item",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.item.careTeamSequence",
+				"path": "ExplanationOfBenefit.item.careTeamSequence",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.item.diagnosisSequence",
+				"path": "ExplanationOfBenefit.item.diagnosisSequence",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.item.procedureSequence",
+				"path": "ExplanationOfBenefit.item.procedureSequence",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.item.informationSequence",
+				"path": "ExplanationOfBenefit.item.informationSequence",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.item.category",
+				"path": "ExplanationOfBenefit.item.category",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.item.modifier",
+				"path": "ExplanationOfBenefit.item.modifier",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.item.serviced[x]",
+				"path": "ExplanationOfBenefit.item.serviced[x]",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.item.location[x]",
+				"path": "ExplanationOfBenefit.item.location[x]",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.item.quantity",
+				"path": "ExplanationOfBenefit.item.quantity",
+				"mustSupport": true
+			},
+			{
+				"id": "ExplanationOfBenefit.item.net",
+				"path": "ExplanationOfBenefit.item.net",
+				"mustSupport": true
 			},
 			{
 				"id": "ExplanationOfBenefit.total.category",

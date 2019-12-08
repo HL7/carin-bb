@@ -205,6 +205,13 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>f:ExplanationOfBenefit/f:payee</sch:title>
+    <sch:rule context="f:ExplanationOfBenefit/f:payee">
+      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
+      <sch:assert test="count(f:party) &gt;= 1">party: minimum cardinality of 'party' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>ExplanationOfBenefit.payee</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:payee">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
@@ -282,6 +289,12 @@
     <sch:title>ExplanationOfBenefit.preAuthRefPeriod</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:preAuthRefPeriod">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:ExplanationOfBenefit/f:careTeam</sch:title>
+    <sch:rule context="f:ExplanationOfBenefit/f:careTeam">
+      <sch:assert test="count(f:role) &gt;= 1">role: minimum cardinality of 'role' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

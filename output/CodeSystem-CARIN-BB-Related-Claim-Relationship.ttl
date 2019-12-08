@@ -21,7 +21,7 @@
   fhir:CodeSystem.name [ fhir:value "CARINBBRelatedClaimRelationship"];
   fhir:CodeSystem.title [ fhir:value "CARIN Blue Button Related Claim Relationship Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
-  fhir:CodeSystem.date [ fhir:value "2019-12-05T06:48:52-05:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2019-12-08T06:42:37-05:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
   fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
   fhir:CodeSystem.content [ fhir:value "complete"];

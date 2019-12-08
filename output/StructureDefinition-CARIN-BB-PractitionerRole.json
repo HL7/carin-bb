@@ -2,8 +2,8 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-PractitionerRole",
   "meta": {
-    "versionId": "3",
-    "lastUpdated": "2019-12-01T23:52:18.000-05:00"
+    "versionId": "4",
+    "lastUpdated": "2019-12-06T07:33:20.000-05:00"
   },
   "text": {
     "status": "generated",
@@ -14,8 +14,9 @@
   "name": "CARINBBPractitionerRole",
   "title": "CARIN Blue Button Practitioner Role Profile",
   "status": "active",
-  "date": "2019-12-05T06:48:52-05:00",
+  "date": "2019-12-08T06:42:37-05:00",
   "publisher": "CARIN Alliance",
+  "description": "CARIN Blue Button Practitioner Role Profile",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

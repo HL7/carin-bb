@@ -30,7 +30,7 @@ user content","",0,*,"","Y","","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"ExplanationOfBenefit.identifier","","","",1,*,"","","","Identifier {[]} {[]}
+"ExplanationOfBenefit.identifier","","","",1,*,"Y","","","Identifier {[]} {[]}
 ","Business Identifier for the resource","A unique identifier assigned to this explanation of benefit.","","Allows EOBs to be distinguished and referenced.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.identifier","FiveWs.identifier"
 "ExplanationOfBenefit.status","","","",1,1,"","Y","Y","code {[]} {[]}
@@ -52,7 +52,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ExplanationOfBenefit.patient","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient]]}
 ","The recipient of the products and services","The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for forecast reimbursement is sought.","","The patient must be supplied to the insurer so that confirmation of coverage and service history may be considered as part of the authorization and/or adjudiction.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.patient",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.subject","FiveWs.subject[x]","FiveWs.subject"
-"ExplanationOfBenefit.billablePeriod","","","",0,1,"","","Y","Period {[]} {[]}
+"ExplanationOfBenefit.billablePeriod","","","",0,1,"Y","","Y","Period {[]} {[]}
 ","Relevant time frame for the claim","The period for which charges are being submitted.","Typically this would be today or in the past for a claim, and today or in the future for preauthorizations and prodeterminations. Typically line item dates of service should fall within the billing period if one is specified.","A number jurisdictions required the submission of the billing period when submitting claims for example for hospital stays or long-term care.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.billablePeriod",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.done[x]"
 "ExplanationOfBenefit.created","","","",1,1,"","","Y","dateTime {[]} {[]}
@@ -77,7 +77,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ExplanationOfBenefit.fundsReserve","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Funds reserved status","A code, used only on a response to a preauthorization, to indicate whether the benefits payable have been reserved and for whom.","Fund would be release by a future claim quoting the preAuthRef of this response. Examples of values include: provider, patient, none.","Needed to advise the submitting provider on whether the rquest for reservation of funds has been honored.","","","","","","","",,"example","For whom funds are to be reserved: (Patient, Provider, None).","http://hl7.org/fhir/ValueSet/fundsreserve","",,,,"ExplanationOfBenefit.fundsReserve",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.related","","","",0,*,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.related","","","",0,*,"Y","","","BackboneElement {[]} {[]}
 ","Prior or corollary claims","Other claims which are related to this claim such as prior submissions or claims for related services or for the same event.","For example,  for the original treatment and follow-up exams.","For workplace or other accidents it is common to relate separate claims arising from the same event.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.related",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.related.id","","","",0,1,"","","","string {[]} {[]}
@@ -107,7 +107,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ExplanationOfBenefit.originalPrescription","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/MedicationRequest]]}
 ","Original prescription if superceded by fulfiller","Original prescription which has been superseded by this prescription to support the dispensing of pharmacy services, medications or products.","For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefor issues a new prescription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'.","Often required when a fulfiller varies what is fulfilled from that authorized on the original prescription.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.originalPrescription",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.payee","","","",0,1,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.payee","","","",0,1,"Y","","","BackboneElement {[]} {[]}
 ","Recipient of benefits payable","The party to be reimbursed for cost of the products and services according to the terms of the policy.","Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and may choose to pay the subscriber instead.","The provider needs to specify who they wish to be reimbursed and the claims processor needs express who they will reimburse.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.payee",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.payee.id","","","",0,1,"","","","string {[]} {[]}
@@ -122,10 +122,10 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"ExplanationOfBenefit.payee.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.payee.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Category of recipient","Type of Party to be reimbursed: Subscriber, provider, other.","","Need to know who should receive payment with the most common situations being the Provider (assignment of benefits) or the Subscriber.","","","","","","","",,"example","A code for the party to be reimbursed.","http://hl7.org/fhir/ValueSet/payeetype","",,,,"ExplanationOfBenefit.payee.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.payee.party","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole], CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient]]}
+"ExplanationOfBenefit.payee.party","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole], CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient]]}
 ","Recipient reference","Reference to the individual or organization to whom any payment will be made.","Not required if the payee is 'subscriber' or 'provider'.","Need to provide demographics if the payee is not 'subscriber' nor 'provider'.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.payee.party",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.referral","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ServiceRequest]]}
@@ -152,7 +152,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ExplanationOfBenefit.preAuthRefPeriod","","","",0,*,"","","","Period {[]} {[]}
 ","Preauthorization in-effect period","The timeframe during which the supplied preauthorization reference may be quoted on claims to obtain the adjudication as provided.","This value is only present on preauthorization adjudications.","On subsequent claims, the insurer may require the provider to quote this value.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.preAuthRefPeriod",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.careTeam","","","",0,*,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.careTeam","","","",0,*,"Y","","","BackboneElement {[]} {[]}
 ","Care Team members","The members of the team who provided the products and services.","","Common to identify the responsible and supporting practitioners.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.careTeam",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.careTeam.id","","","",0,1,"","","","string {[]} {[]}
@@ -170,19 +170,19 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ExplanationOfBenefit.careTeam.sequence","","","",1,1,"","","","positiveInt {[]} {[]}
 ","Order of care team","A number to uniquely identify care team entries.","","Necessary to maintain the order of the care team and provide a mechanism to link individuals to claim details.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.careTeam.sequence",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.careTeam.provider","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+"ExplanationOfBenefit.careTeam.provider","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole]]}
 ","Practitioner or organization","Member of the team who provided the product or service.","","Often a regulatory requirement to specify the responsible provider.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.careTeam.provider",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.actor"
-"ExplanationOfBenefit.careTeam.responsible","","","",0,1,"","","","boolean {[]} {[]}
+"ExplanationOfBenefit.careTeam.responsible","","","",0,1,"Y","","","boolean {[]} {[]}
 ","Indicator of the lead practitioner","The party who is billing and/or responsible for the claimed products or services.","Responsible might not be required when there is only a single provider listed.","When multiple parties are present it is required to distinguish the lead or responsible individual.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.careTeam.responsible",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.careTeam.role","","","",0,1,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.careTeam.role","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Function within the team","The lead, assisting or supervising practitioner and their discipline if a multidisciplinary team.","Role might not be required when there is only a single provider listed.","When multiple parties are present it is required to distinguish the roles performed by each member.","","","","","","","",,"extensible","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claimcareteamrole","",,,,"ExplanationOfBenefit.careTeam.role",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.careTeam.qualification","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Practitioner credential or specialization","The qualification of the practitioner which is applicable for this service.","","Need to specify which qualification a provider is delivering the product or service under.","","","","","","","",,"example","Provider professional qualifications.","http://hl7.org/fhir/ValueSet/provider-qualification","",,,,"ExplanationOfBenefit.careTeam.qualification",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo","","","",0,*,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.supportingInfo","","","",0,*,"Y","","","BackboneElement {[]} {[]}
 ","Supporting information","Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues.","Often there are multiple jurisdiction specific valuesets which are required.","Typically these information codes are required to support the services rendered or the adjudication of the services rendered.","","","","","","","",,,,,"","value:category}
 ","",,"open","ExplanationOfBenefit.supportingInfo",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -204,19 +204,19 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ExplanationOfBenefit.supportingInfo.category","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Classification of the supplied information","The general class of the information supplied: information; exception; accident, employment; onset, etc.","This may contain a category for the local bill type codes.","Required to group or associate information items with common characteristics. For example: admission information or prior treatments.","","","","","","","",,"extensible","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory","",,,,"ExplanationOfBenefit.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.code","","","",0,1,"Y","","","CodeableConcept {[]} {[]}
 ","Type of information","System and code pertaining to the specific information regarding special conditions relating to the setting, treatment or patient  for which care is sought.","This may contain the local bill type codes such as the US UB-04 bill type code.","Required to identify the kind of additional information.","","","","","","","",,"example","The valuset used for additional information codes.","http://hl7.org/fhir/ValueSet/claim-exception","",,,,"ExplanationOfBenefit.supportingInfo.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.timing[x]","","","",0,1,"","","","date {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.timing[x]","","","",0,1,"Y","","","date {[]} {[]}
 Period {[]} {[]}","When it occurred","The date when or period to which this information refers.","","","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"","","","boolean {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"Y","","","boolean {[]} {[]}
 string {[]} {[]}Quantity {[]} {[]}Attachment {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}","Data to be provided","Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.","Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.","To convey the data content to be provided when the information is more than a simple code or period.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.supportingInfo.reason","","","",0,1,"","","","Coding {[]} {[]}
 ","Explanation for the information","Provides the reason in the situation where a reason code is required in addition to the content.","For example: the reason for the additional stay, or why a tooth is  missing.","Needed when the supporting information has both a date and amount/value and requires explanation.","","","","","","","",,"example","Reason codes for the missing teeth.","http://hl7.org/fhir/ValueSet/missing-tooth-reason","",,,,"ExplanationOfBenefit.supportingInfo.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo","billingnetworkcontractingstatus","","",0,1,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.supportingInfo","billingnetworkcontractingstatus","","",0,1,"Y","","","BackboneElement {[]} {[]}
 ","Supporting information","Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues.","Often there are multiple jurisdiction specific valuesets which are required.","Typically these information codes are required to support the services rendered or the adjudication of the services rendered.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.supportingInfo.id","","","",0,1,"","","","string {[]} {[]}
@@ -238,21 +238,21 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Classification of the supplied information","The general class of the information supplied: information; exception; accident, employment; onset, etc.","This may contain a category for the local bill type codes.","Required to group or associate information items with common characteristics. For example: admission information or prior treatments.","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory""/>
   <code value=""billingnetworkcontractingstatus""/>
-</valueCoding>","","","","",,"example","The valuset used for additional information category codes.","http://hl7.org/fhir/ValueSet/claim-informationcategory","",,,,"ExplanationOfBenefit.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+</valueCoding>","","","","",,"extensible","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory","",,,,"ExplanationOfBenefit.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.code","","","",1,1,"Y","","","CodeableConcept {[]} {[]}
 ","Type of information","System and code pertaining to the specific information regarding special conditions relating to the setting, treatment or patient  for which care is sought.","This may contain the local bill type codes such as the US UB-04 bill type code.","Required to identify the kind of additional information.","","","","","","","",,"required","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-networkcontractingstatus","",,,,"ExplanationOfBenefit.supportingInfo.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.timing[x]","","","",0,1,"","","","date {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.timing[x]","","","",0,1,"Y","","","date {[]} {[]}
 Period {[]} {[]}","When it occurred","The date when or period to which this information refers.","","","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"","","","boolean {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"Y","","","boolean {[]} {[]}
 string {[]} {[]}Quantity {[]} {[]}Attachment {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}","Data to be provided","Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.","Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.","To convey the data content to be provided when the information is more than a simple code or period.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.supportingInfo.reason","","","",0,1,"","","","Coding {[]} {[]}
 ","Explanation for the information","Provides the reason in the situation where a reason code is required in addition to the content.","For example: the reason for the additional stay, or why a tooth is  missing.","Needed when the supporting information has both a date and amount/value and requires explanation.","","","","","","","",,"example","Reason codes for the missing teeth.","http://hl7.org/fhir/ValueSet/missing-tooth-reason","",,,,"ExplanationOfBenefit.supportingInfo.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo","referringnetworkcontractingstatus","","",0,1,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.supportingInfo","referringnetworkcontractingstatus","","",0,1,"Y","","","BackboneElement {[]} {[]}
 ","Supporting information","Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues.","Often there are multiple jurisdiction specific valuesets which are required.","Typically these information codes are required to support the services rendered or the adjudication of the services rendered.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.supportingInfo.id","","","",0,1,"","","","string {[]} {[]}
@@ -274,21 +274,21 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Classification of the supplied information","The general class of the information supplied: information; exception; accident, employment; onset, etc.","This may contain a category for the local bill type codes.","Required to group or associate information items with common characteristics. For example: admission information or prior treatments.","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory""/>
   <code value=""referringnetworkcontractingstatus""/>
-</valueCoding>","","","","",,"example","The valuset used for additional information category codes.","http://hl7.org/fhir/ValueSet/claim-informationcategory","",,,,"ExplanationOfBenefit.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+</valueCoding>","","","","",,"extensible","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory","",,,,"ExplanationOfBenefit.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.code","","","",1,1,"Y","","","CodeableConcept {[]} {[]}
 ","Type of information","System and code pertaining to the specific information regarding special conditions relating to the setting, treatment or patient  for which care is sought.","This may contain the local bill type codes such as the US UB-04 bill type code.","Required to identify the kind of additional information.","","","","","","","",,"required","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-networkcontractingstatus","",,,,"ExplanationOfBenefit.supportingInfo.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.timing[x]","","","",0,1,"","","","date {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.timing[x]","","","",0,1,"Y","","","date {[]} {[]}
 Period {[]} {[]}","When it occurred","The date when or period to which this information refers.","","","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"","","","boolean {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"Y","","","boolean {[]} {[]}
 string {[]} {[]}Quantity {[]} {[]}Attachment {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}","Data to be provided","Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.","Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.","To convey the data content to be provided when the information is more than a simple code or period.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.supportingInfo.reason","","","",0,1,"","","","Coding {[]} {[]}
 ","Explanation for the information","Provides the reason in the situation where a reason code is required in addition to the content.","For example: the reason for the additional stay, or why a tooth is  missing.","Needed when the supporting information has both a date and amount/value and requires explanation.","","","","","","","",,"example","Reason codes for the missing teeth.","http://hl7.org/fhir/ValueSet/missing-tooth-reason","",,,,"ExplanationOfBenefit.supportingInfo.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo","performingnetworkcontractingstatus","","",0,1,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.supportingInfo","performingnetworkcontractingstatus","","",0,1,"Y","","","BackboneElement {[]} {[]}
 ","Supporting information","Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues.","Often there are multiple jurisdiction specific valuesets which are required.","Typically these information codes are required to support the services rendered or the adjudication of the services rendered.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.supportingInfo.id","","","",0,1,"","","","string {[]} {[]}
@@ -310,21 +310,21 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Classification of the supplied information","The general class of the information supplied: information; exception; accident, employment; onset, etc.","This may contain a category for the local bill type codes.","Required to group or associate information items with common characteristics. For example: admission information or prior treatments.","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory""/>
   <code value=""performingnetworkcontractingstatus""/>
-</valueCoding>","","","","",,"example","The valuset used for additional information category codes.","http://hl7.org/fhir/ValueSet/claim-informationcategory","",,,,"ExplanationOfBenefit.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+</valueCoding>","","","","",,"extensible","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory","",,,,"ExplanationOfBenefit.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.code","","","",1,1,"Y","","","CodeableConcept {[]} {[]}
 ","Type of information","System and code pertaining to the specific information regarding special conditions relating to the setting, treatment or patient  for which care is sought.","This may contain the local bill type codes such as the US UB-04 bill type code.","Required to identify the kind of additional information.","","","","","","","",,"required","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-networkcontractingstatus","",,,,"ExplanationOfBenefit.supportingInfo.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.timing[x]","","","",0,1,"","","","date {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.timing[x]","","","",0,1,"Y","","","date {[]} {[]}
 Period {[]} {[]}","When it occurred","The date when or period to which this information refers.","","","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"","","","boolean {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"Y","","","boolean {[]} {[]}
 string {[]} {[]}Quantity {[]} {[]}Attachment {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}","Data to be provided","Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.","Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.","To convey the data content to be provided when the information is more than a simple code or period.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.supportingInfo.reason","","","",0,1,"","","","Coding {[]} {[]}
 ","Explanation for the information","Provides the reason in the situation where a reason code is required in addition to the content.","For example: the reason for the additional stay, or why a tooth is  missing.","Needed when the supporting information has both a date and amount/value and requires explanation.","","","","","","","",,"example","Reason codes for the missing teeth.","http://hl7.org/fhir/ValueSet/missing-tooth-reason","",,,,"ExplanationOfBenefit.supportingInfo.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo","sitenetworkcontractingstatus","","",0,1,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.supportingInfo","sitenetworkcontractingstatus","","",0,1,"Y","","","BackboneElement {[]} {[]}
 ","Supporting information","Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues.","Often there are multiple jurisdiction specific valuesets which are required.","Typically these information codes are required to support the services rendered or the adjudication of the services rendered.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.supportingInfo.id","","","",0,1,"","","","string {[]} {[]}
@@ -346,21 +346,21 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Classification of the supplied information","The general class of the information supplied: information; exception; accident, employment; onset, etc.","This may contain a category for the local bill type codes.","Required to group or associate information items with common characteristics. For example: admission information or prior treatments.","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory""/>
   <code value=""sitenetworkcontractingstatus""/>
-</valueCoding>","","","","",,"example","The valuset used for additional information category codes.","http://hl7.org/fhir/ValueSet/claim-informationcategory","",,,,"ExplanationOfBenefit.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+</valueCoding>","","","","",,"extensible","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory","",,,,"ExplanationOfBenefit.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.code","","","",1,1,"Y","","","CodeableConcept {[]} {[]}
 ","Type of information","System and code pertaining to the specific information regarding special conditions relating to the setting, treatment or patient  for which care is sought.","This may contain the local bill type codes such as the US UB-04 bill type code.","Required to identify the kind of additional information.","","","","","","","",,"required","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-networkcontractingstatus","",,,,"ExplanationOfBenefit.supportingInfo.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.timing[x]","","","",0,1,"","","","date {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.timing[x]","","","",0,1,"Y","","","date {[]} {[]}
 Period {[]} {[]}","When it occurred","The date when or period to which this information refers.","","","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"","","","boolean {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"Y","","","boolean {[]} {[]}
 string {[]} {[]}Quantity {[]} {[]}Attachment {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}","Data to be provided","Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.","Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.","To convey the data content to be provided when the information is more than a simple code or period.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.supportingInfo.reason","","","",0,1,"","","","Coding {[]} {[]}
 ","Explanation for the information","Provides the reason in the situation where a reason code is required in addition to the content.","For example: the reason for the additional stay, or why a tooth is  missing.","Needed when the supporting information has both a date and amount/value and requires explanation.","","","","","","","",,"example","Reason codes for the missing teeth.","http://hl7.org/fhir/ValueSet/missing-tooth-reason","",,,,"ExplanationOfBenefit.supportingInfo.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo","clmrecvddate","","",1,1,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.supportingInfo","clmrecvddate","","",1,1,"Y","","","BackboneElement {[]} {[]}
 ","Supporting information","Additional information codes regarding exceptions, special considerations, the condition, situation, prior or concurrent issues.","Often there are multiple jurisdiction specific valuesets which are required.","Typically these information codes are required to support the services rendered or the adjudication of the services rendered.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.supportingInfo.id","","","",0,1,"","","","string {[]} {[]}
@@ -382,21 +382,21 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Classification of the supplied information","The general class of the information supplied: information; exception; accident, employment; onset, etc.","This may contain a category for the local bill type codes.","Required to group or associate information items with common characteristics. For example: admission information or prior treatments.","","","<valueCoding xmlns=""http://hl7.org/fhir"">
   <system value=""http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory""/>
   <code value=""clmrecvddate""/>
-</valueCoding>","","","","",,"example","The valuset used for additional information category codes.","http://hl7.org/fhir/ValueSet/claim-informationcategory","",,,,"ExplanationOfBenefit.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+</valueCoding>","","","","",,"extensible","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory","",,,,"ExplanationOfBenefit.supportingInfo.category",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.code","","","",0,1,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.code","","","",0,1,"Y","","","CodeableConcept {[]} {[]}
 ","Type of information","System and code pertaining to the specific information regarding special conditions relating to the setting, treatment or patient  for which care is sought.","This may contain the local bill type codes such as the US UB-04 bill type code.","Required to identify the kind of additional information.","","","","","","","",,"example","The valuset used for additional information codes.","http://hl7.org/fhir/ValueSet/claim-exception","",,,,"ExplanationOfBenefit.supportingInfo.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.timing[x]","","","",1,1,"","","","date {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.timing[x]","","","",1,1,"Y","","","date {[]} {[]}
 ","When it occurred","The date when or period to which this information refers.","","","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.timing[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"","","","boolean {[]} {[]}
+"ExplanationOfBenefit.supportingInfo.value[x]","","","",0,1,"Y","","","boolean {[]} {[]}
 string {[]} {[]}Quantity {[]} {[]}Attachment {[]} {[]}Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Resource]]}","Data to be provided","Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data.","Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.","To convey the data content to be provided when the information is more than a simple code or period.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.supportingInfo.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.supportingInfo.reason","","","",0,1,"","","","Coding {[]} {[]}
 ","Explanation for the information","Provides the reason in the situation where a reason code is required in addition to the content.","For example: the reason for the additional stay, or why a tooth is  missing.","Needed when the supporting information has both a date and amount/value and requires explanation.","","","","","","","",,"example","Reason codes for the missing teeth.","http://hl7.org/fhir/ValueSet/missing-tooth-reason","",,,,"ExplanationOfBenefit.supportingInfo.reason",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.diagnosis","","","",0,*,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.diagnosis","","","",0,*,"Y","","","BackboneElement {[]} {[]}
 ","Pertinent diagnosis information","Information about diagnoses relevant to the claim items.","","Required for the adjudication by provided context for the services and product listed.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.diagnosis",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.diagnosis.id","","","",0,1,"","","","string {[]} {[]}
@@ -420,13 +420,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ExplanationOfBenefit.diagnosis.type","","","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Timing or nature of the diagnosis","When the condition was observed or the relative ranking.","For example: admitting, primary, secondary, discharge.","Often required to capture a particular diagnosis, for example: primary or discharge.","","","","","","","",,"extensible","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-diagnosistype","",,,,"ExplanationOfBenefit.diagnosis.type",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.diagnosis.onAdmission","","","",0,1,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.diagnosis.onAdmission","","","",0,1,"Y","","","CodeableConcept {[]} {[]}
 ","Present on admission","Indication of whether the diagnosis was present on admission to a facility.","","Many systems need to understand for adjudication if the diagnosis was present a time of admission.","","","","","","","",,"example","Present on admission.","http://hl7.org/fhir/ValueSet/ex-diagnosis-on-admission","",,,,"ExplanationOfBenefit.diagnosis.onAdmission",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.diagnosis.packageCode","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Package billing code","A package billing code or bundle code used to group products and services to a particular health condition (such as heart attack) which is based on a predetermined grouping code system.","For example, DRG (Diagnosis Related Group) or a bundled billing code. A patient may have a diagnosis of a Myocardio-infarction and a DRG for HeartAttack would assigned. The Claim item (and possible subsequent claims) would refer to the DRG for those line items that were for services related to the heart attack event.","Required to relate the current  diagnosis to a package billing code that is then referenced on the individual claim items which are specific to the health condition covered by the package code.","","","","","","","",,"example","The DRG codes associated with the diagnosis.","http://hl7.org/fhir/ValueSet/ex-diagnosisrelatedgroup","",,,,"ExplanationOfBenefit.diagnosis.packageCode",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.procedure","","","",0,*,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.procedure","","","",0,*,"Y","","","BackboneElement {[]} {[]}
 ","Clinical procedures performed","Procedures performed on the patient relevant to the billing items with the claim.","","The specific clinical invention are sometimes required to be provided to justify billing a greater than customary amount for a service.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.procedure",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.procedure.id","","","",0,1,"","","","string {[]} {[]}
@@ -444,10 +444,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ExplanationOfBenefit.procedure.sequence","","","",1,1,"","","","positiveInt {[]} {[]}
 ","Procedure instance identifier","A number to uniquely identify procedure entries.","","Necessary to provide a mechanism to link to claim details.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.procedure.sequence",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.procedure.type","","","",0,*,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.procedure.type","","","",0,*,"Y","","","CodeableConcept {[]} {[]}
 ","Category of Procedure","When the condition was observed or the relative ranking.","","Often required to capture a particular diagnosis, for example: primary or discharge.","","","","","","","",,"example","Example procedure type codes.","http://hl7.org/fhir/ValueSet/ex-procedure-type","",,,,"ExplanationOfBenefit.procedure.type",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.procedure.date","","","",0,1,"","","","dateTime {[]} {[]}
+"ExplanationOfBenefit.procedure.date","","","",0,1,"Y","","","dateTime {[]} {[]}
 ","When the procedure was performed","Date and optionally time the procedure was performed.","","Required for auditing purposes.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.procedure.date",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.procedure.procedure[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
@@ -532,7 +532,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ExplanationOfBenefit.accident.location[x]","","","",0,1,"","","","Address {[]} {[]}
 Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Location]]}","Where the event occurred","The physical location of the accident event.","","Required for audit purposes and determination of applicable insurance liability.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.accident.location[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.item","","","",0,*,"","","","BackboneElement {[]} {[]}
+"ExplanationOfBenefit.item","","","",0,*,"Y","","","BackboneElement {[]} {[]}
 ","Product or service provided","A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.","","The items to be processed for adjudication.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.item",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.item.id","","","",0,1,"","","","string {[]} {[]}
@@ -550,41 +550,41 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ExplanationOfBenefit.item.sequence","","","",1,1,"","","","positiveInt {[]} {[]}
 ","Item instance identifier","A number to uniquely identify item entries.","","Necessary to provide a mechanism to link to items from within the claim and within the adjudication details of the ClaimResponse.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.item.sequence",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.item.careTeamSequence","","","",0,*,"","","","positiveInt {[]} {[]}
+"ExplanationOfBenefit.item.careTeamSequence","","","",0,*,"Y","","","positiveInt {[]} {[]}
 ","Applicable care team members","Care team members related to this service or product.","","Need to identify the individuals and their roles in the provision of the product or service.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.item.careTeamSequence",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.item.diagnosisSequence","","","",0,*,"","","","positiveInt {[]} {[]}
+"ExplanationOfBenefit.item.diagnosisSequence","","","",0,*,"Y","","","positiveInt {[]} {[]}
 ","Applicable diagnoses","Diagnoses applicable for this service or product.","","Need to related the product or service to the associated diagnoses.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.item.diagnosisSequence",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.item.procedureSequence","","","",0,*,"","","","positiveInt {[]} {[]}
+"ExplanationOfBenefit.item.procedureSequence","","","",0,*,"Y","","","positiveInt {[]} {[]}
 ","Applicable procedures","Procedures applicable for this service or product.","","Need to provide any listed specific procedures to support the product or service being claimed.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.item.procedureSequence",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.item.informationSequence","","","",0,*,"","","","positiveInt {[]} {[]}
+"ExplanationOfBenefit.item.informationSequence","","","",0,*,"Y","","","positiveInt {[]} {[]}
 ","Applicable exception and supporting information","Exceptions, special conditions and supporting information applicable for this service or product.","","Need to reference the supporting information items that relate directly to this product or service.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.item.informationSequence",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.item.revenue","","","",0,0,"","","","CodeableConcept {[]} {[]}
 ","Revenue or cost center code","The type of revenue or cost center providing the product and/or service.","","Needed in the processing of institutional claims.","","","","","","","",,"example","Codes for the revenue or cost centers supplying the service and/or products.","http://hl7.org/fhir/ValueSet/ex-revenue-center","",,,,"ExplanationOfBenefit.item.revenue",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.item.category","","","",0,1,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.item.category","","","",0,1,"Y","","","CodeableConcept {[]} {[]}
 ","Benefit classification","Code to identify the general type of benefits under which products and services are provided.","Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.","Needed in the processing of institutional claims as this allows the insurer to determine whether a facial X-Ray is for dental, orthopedic, or facial surgery purposes.","","","","","","","",,"required","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-typeofservice","",,,,"ExplanationOfBenefit.item.category",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.item.productOrService","","Drug Code
 Bill CodeService Code","",1,1,"","","","CodeableConcept {[]} {[]}
 ","Billing, service, product, or drug code","When the value is a group code then this item collects a set of related claim details, otherwise this contains the product, service, drug or other billing code for the item.","If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.","Necessary to state what was provided or done.","","","","","","","",,"required","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-cpt-hcpcs-procedurecodes","",,,,"ExplanationOfBenefit.item.productOrService",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.item.modifier","","","",0,*,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.item.modifier","","","",0,*,"Y","","","CodeableConcept {[]} {[]}
 ","Product or service billing modifiers","Item typification or modifiers codes to convey additional context for the product or service.","For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.","To support inclusion of the item for adjudication or to charge an elevated fee.","","","","","","","",,"required","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-hcpcs-modifiercodes","",,,,"ExplanationOfBenefit.item.modifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.item.programCode","","","",0,*,"","","","CodeableConcept {[]} {[]}
 ","Program the product or service is provided under","Identifies the program under which this may be recovered.","For example: Neonatal program, child dental program or drug users recovery program.","Commonly used in in the identification of publicly provided program focused on population segments or disease classifications.","","","","","","","",,"example","Program specific reason codes.","http://hl7.org/fhir/ValueSet/ex-program-code","",,,,"ExplanationOfBenefit.item.programCode",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.item.serviced[x]","","","",0,1,"","","","date {[]} {[]}
+"ExplanationOfBenefit.item.serviced[x]","","","",0,1,"Y","","","date {[]} {[]}
 Period {[]} {[]}","Date or dates of service or product delivery","The date or dates when the service or product was supplied, performed or completed.","","Needed to determine whether the  service or product was provided during the term of the insurance coverage.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.item.serviced[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.done[x]"
-"ExplanationOfBenefit.item.location[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+"ExplanationOfBenefit.item.location[x]","","","",0,1,"Y","","","CodeableConcept {[]} {[]}
 ","Place of service or where product was supplied","Where the product or service was provided.","","The location can alter whether the item was acceptable for insurance purposes or impact the determination of the benefit amount.","","","","","","","",,"required","","http://hl7.org/fhir/us/carin/ValueSet/carin-bb-placeofservice","",,,,"ExplanationOfBenefit.item.location[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.where[x]"
-"ExplanationOfBenefit.item.quantity","","","",0,1,"","","","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity]]} {[]}
+"ExplanationOfBenefit.item.quantity","","","",0,1,"Y","","","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity]]} {[]}
 ","Count of products or services","The number of repetitions of a service or product.","","Required when the product or service code does not convey the quantity provided.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.item.quantity",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.item.unitPrice","","","",0,1,"","","","Money {[]} {[]}
@@ -593,7 +593,7 @@ Period {[]} {[]}","Date or dates of service or product delivery","The date or da
 "ExplanationOfBenefit.item.factor","","","",0,1,"","","","decimal {[]} {[]}
 ","Price scaling factor","A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.","To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).","When discounts are provided to a patient (example: Senior's discount) then this must be documented for adjudication.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.item.factor",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"ExplanationOfBenefit.item.net","","","",0,1,"","","","Money {[]} {[]}
+"ExplanationOfBenefit.item.net","","","",0,1,"Y","","","Money {[]} {[]}
 ","Total item cost","The quantity times the unit price for an additional service or product or charge.","For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.","Provides the total amount claimed  for the group (if a grouper) or the line item.","","","","","","","",,,,,"",,,,"ExplanationOfBenefit.item.net",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "ExplanationOfBenefit.item.udi","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Device]]}

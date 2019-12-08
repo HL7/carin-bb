@@ -14,7 +14,7 @@
   "name": "CARINBBTOBBillClassification",
   "title": "CARIN Blue Button Type Of Bill (Bill Classification) Value Set",
   "status": "draft",
-  "date": "2019-12-05T06:48:52-05:00",
+  "date": "2019-12-08T06:42:37-05:00",
   "description": "UB-04 Type of Bill (FL-4) structure - Type of care\n",
   "compose": {
     "include": [

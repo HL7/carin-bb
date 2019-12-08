@@ -275,40 +275,50 @@ can only resize using html  or css ;-(
 &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide">ImplementationGuide</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;hl7.fhir.us.carin-bb&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.meta">meta</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;163&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2019-12-05T06:48:06.000-05:00&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;170&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2019-12-08T06:41:37.000-05:00&quot;/&gt;
   &lt;/meta&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
     &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;CARINBlueButton&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb&lt;/pre&gt;&lt;div&gt;&lt;h1&gt;CARIN Alliance&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This implementation guide describes the CARIN Blue Button&amp;amp;reg; Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&lt;/p&gt;
 &lt;p&gt;See the &lt;a href=&quot;toc.html&quot;&gt;Table of Contents&lt;/a&gt; for more information.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Please note that this implementation guide is currently a work in progress and is in draft status.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h4&gt;Latest Changes&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;(43) The IG does not forbid any elements from base R4. Added &amp;amp;reg; symbol to Blue Button references to acknowledge CMS' registered mark. Reorganized the mapping sections.&lt;/li&gt;
-&lt;li&gt;(42) First pass at harmonization of profiles and terminologies. Added the &lt;strong&gt;Authorization, Authentication, and Registration&lt;/strong&gt; section.&lt;/li&gt;
-&lt;li&gt;(41) set content to completed for code system &lt;a href=&quot;http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type&quot;&gt;CARINBBClaimType&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;(40)  Binding of value set &lt;a href=&quot;http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type&quot;&gt;CARINBBClaimType&lt;/a&gt; to eob.type in profile &lt;a href=&quot;http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit&quot;&gt;CARINBBExplanationOfBenefit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;(39)  Added new code allowedunits to &lt;a href=&quot;http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory&quot;&gt;CARINBBAdjudicationCategory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;(38)  Added new code clmlastactiondate to &lt;a href=&quot;http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory&quot;&gt;CARINBBClaimInformationCategory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;(37) Updated Feedback section with Zulip stream information&lt;/li&gt;
-&lt;li&gt;(36) Added explicit &amp;quot;draft&amp;quot; verbiage&lt;/li&gt;
-&lt;li&gt;(35) Revised narrative content&lt;/li&gt;
-&lt;li&gt;(34) Removed Credits and added USCore Patient based CARINBBPatient profile&lt;/li&gt;
-&lt;li&gt;(33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages&lt;/li&gt;
-&lt;li&gt;(32) Added 4 specific EOB and 1 Coverage profiles&lt;/li&gt;
-&lt;li&gt;(31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile&lt;/li&gt;
-&lt;li&gt;(30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy&lt;/li&gt;
-&lt;li&gt;(29) Updated Provider and Claim Line Amounts mappings.&lt;/li&gt;
-&lt;li&gt;(28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.&lt;/li&gt;
-&lt;li&gt;(27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.&lt;/li&gt;
-&lt;li&gt;(26) Added sample of reverse mapping narrative for ExplanationOfBenefit&lt;/li&gt;
-&lt;li&gt;(25) Added FHIR Resources section to narrative and included Example EOB.&lt;/li&gt;
-&lt;li&gt;(24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.&lt;/li&gt;
-&lt;li&gt;(23) Added the Latest Changes section. Added USCoreR4 Dependency.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;hr/&gt;
+&lt;h3&gt;Latest Changes&lt;/h3&gt;
+&lt;table class=&quot;grid&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;&lt;th&gt;Number&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;44&lt;/td&gt;&lt;td&gt;Refined mapping page and added worksheet download link. Added initial capability statement, profile desciptions and  must support flags.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;43&lt;/td&gt;&lt;td&gt;The IG does not forbid any elements from base R4. Added &amp;amp;reg; symbol to Blue Button references to acknowledge CMS' registered mark. Reorganized the mapping sections.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;42&lt;/td&gt;&lt;td&gt;First pass at harmonization of profiles and terminologies. Added the &lt;strong&gt;Authorization, Authentication, and Registration&lt;/strong&gt; section.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;41&lt;/td&gt;&lt;td&gt;set content to completed for code system &lt;a href=&quot;http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type&quot;&gt;CARINBBClaimType&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;40&lt;/td&gt;&lt;td&gt;Binding of value set &lt;a href=&quot;http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type&quot;&gt;CARINBBClaimType&lt;/a&gt; to eob.type in profile &lt;a href=&quot;http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit&quot;&gt;CARINBBExplanationOfBenefit&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;39&lt;/td&gt;&lt;td&gt;Added new code allowedunits to &lt;a href=&quot;http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory&quot;&gt;CARINBBAdjudicationCategory&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;38&lt;/td&gt;&lt;td&gt;Added new code clmlastactiondate to &lt;a href=&quot;http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory&quot;&gt;CARINBBClaimInformationCategory&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;37&lt;/td&gt;&lt;td&gt;Updated Feedback section with Zulip stream information&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;36&lt;/td&gt;&lt;td&gt;Added explicit &amp;quot;draft&amp;quot; verbiage&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;35&lt;/td&gt;&lt;td&gt;Revised narrative content&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;34&lt;/td&gt;&lt;td&gt;Removed Credits and added USCore Patient based CARINBBPatient profile&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;33&lt;/td&gt;&lt;td&gt;Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;32&lt;/td&gt;&lt;td&gt;Added 4 specific EOB and 1 Coverage profiles&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;31&lt;/td&gt;&lt;td&gt;Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;29&lt;/td&gt;&lt;td&gt;Updated Provider and Claim Line Amounts mappings.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;28&lt;/td&gt;&lt;td&gt;Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;27&lt;/td&gt;&lt;td&gt;Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;26&lt;/td&gt;&lt;td&gt;Added sample of reverse mapping narrative for ExplanationOfBenefit&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;25&lt;/td&gt;&lt;td&gt;Added FHIR Resources section to narrative and included Example EOB.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;23&lt;/td&gt;&lt;td&gt;Added the Latest Changes section. Added USCoreR4 Dependency.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr/&gt;
+&lt;h2&gt;&amp;gt;This implementation guide is currently a work in progress and is in draft status.
+&amp;gt;
+&amp;gt;Blue Button&amp;amp;reg; is a registered mark of CMS&lt;/h2&gt;
 &lt;/div&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.url">url</a>
@@ -318,43 +328,49 @@ can only resize using html  or css ;-(
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CARIN Blue Button&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2019-12-05T06:48:52-05:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2019-12-08T06:42:37-05:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CARIN Alliance&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.description">description</a>
                <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;
 # CARIN Alliance
-*Enabling consumers and their authorized caregivers to access more of their digital health information with less friction.*
+**_Enabling consumers and their authorized caregivers to access more of their digital health information with less friction._**
 
 This implementation guide describes the CARIN Blue Button&amp;amp;reg; Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
 
 See the [Table of Contents](toc.html) for more information.
 
-***Please note that this implementation guide is currently a work in progress and is in draft status.***
+---
+### Latest Changes
+| Number | Description |
+| ----- | ----- |
+| 44 | Refined mapping page and added worksheet download link. Added initial capability statement, profile desciptions and  must support flags. |
+| 43 | The IG does not forbid any elements from base R4. Added &amp;amp;reg; symbol to Blue Button references to acknowledge CMS&amp;#39; registered mark. Reorganized the mapping sections. |
+| 42 | First pass at harmonization of profiles and terminologies. Added the **Authorization, Authentication, and Registration** section. |
+| 41 | set content to completed for code system [CARINBBClaimType](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type) |
+| 40 |  Binding of value set [CARINBBClaimType](http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type) to eob.type in profile [CARINBBExplanationOfBenefit](http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit) |
+| 39 |  Added new code allowedunits to [CARINBBAdjudicationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory) |
+| 38 |  Added new code clmlastactiondate to [CARINBBClaimInformationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory) |
+| 37 | Updated Feedback section with Zulip stream information |
+| 36 | Added explicit &amp;quot;draft&amp;quot; verbiage |
+| 35 | Revised narrative content |
+| 34 | Removed Credits and added USCore Patient based CARINBBPatient profile |
+| 33 | Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages |
+| 32 | Added 4 specific EOB and 1 Coverage profiles |
+| 31 | Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile |
+| 30 | Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy |
+| 29 | Updated Provider and Claim Line Amounts mappings. |
+| 28 | Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping. |
+| 27 | Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention. |
+| 26 | Added sample of reverse mapping narrative for ExplanationOfBenefit |
+| 25 | Added FHIR Resources section to narrative and included Example EOB. |
+| 24 | Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder. |
+| 23 | Added the Latest Changes section. Added USCoreR4 Dependency. |
 
-
-
-#### Latest Changes
-- (43) The IG does not forbid any elements from base R4. Added &amp;amp;reg; symbol to Blue Button references to acknowledge CMS&amp;#39; registered mark. Reorganized the mapping sections.
-- (42) First pass at harmonization of profiles and terminologies. Added the **Authorization, Authentication, and Registration** section.
-- (41) set content to completed for code system [CARINBBClaimType](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type)
-- (40)  Binding of value set [CARINBBClaimType](http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type) to eob.type in profile [CARINBBExplanationOfBenefit](http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit) 
-- (39)  Added new code allowedunits to [CARINBBAdjudicationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory)
-- (38)  Added new code clmlastactiondate to [CARINBBClaimInformationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory)
-- (37) Updated Feedback section with Zulip stream information
-- (36) Added explicit &amp;quot;draft&amp;quot; verbiage
-- (35) Revised narrative content
-- (34) Removed Credits and added USCore Patient based CARINBBPatient profile
-- (33) Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages
-- (32) Added 4 specific EOB and 1 Coverage profiles
-- (31) Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile
-- (30) Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy
-- (29) Updated Provider and Claim Line Amounts mappings.
-- (28) Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping.
-- (27) Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention.
-- (26) Added sample of reverse mapping narrative for ExplanationOfBenefit
-- (25) Added FHIR Resources section to narrative and included Example EOB.
-- (24) Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder.
-- (23) Added the Latest Changes section. Added USCoreR4 Dependency.
+---
+&amp;gt;This implementation guide is currently a work in progress and is in draft status.
+&amp;gt;
+&amp;gt;Blue Button&amp;amp;reg; is a registered mark of CMS
+---
 &quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.packageId">packageId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;hl7.fhir.us.carin-bb&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.license">license</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CC0-1.0&quot;/&gt;
@@ -1023,6 +1039,22 @@ See the [Table of Contents](toc.html) for more information.
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CARINBBRelatedPerson&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
     &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CapabilityStatement&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUri</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;CapabilityStatement-carin-bb-server.html&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CapabilityStatement/carin-bb-server&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CARIN Blue Button Server CapabilityStatement&quot;/&gt;
+      &lt;/reference&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CARIN Blue Button Server CapabilityStatement&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+    &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page">page</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;toc.md&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Table of Contents&quot;/&gt;
@@ -1114,7 +1146,7 @@ Formats: <a href="ImplementationGuide-hl7.fhir.us.carin-bb.html">Narrative</a>, 
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CARINBlueButton Version: 0.1.43-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Thu, Dec 5, 2019 06:48-0500.
+      CARINBlueButton Version: 0.1.43-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Sun, Dec 8, 2019 06:42-0500.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

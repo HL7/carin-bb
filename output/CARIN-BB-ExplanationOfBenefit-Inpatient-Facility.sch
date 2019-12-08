@@ -737,7 +737,6 @@
     <sch:title>f:ExplanationOfBenefit/f:item</sch:title>
     <sch:rule context="f:ExplanationOfBenefit/f:item">
       <sch:assert test="count(f:revenue) &gt;= 1">revenue: minimum cardinality of 'revenue' is 1</sch:assert>
-      <sch:assert test="count(f:modifier) &lt;= 0">modifier: maximum cardinality of 'modifier' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

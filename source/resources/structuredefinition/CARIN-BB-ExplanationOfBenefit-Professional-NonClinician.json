@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Professional-NonClinician",
 	"meta": {
-		"versionId": "9",
-		"lastUpdated": "2019-11-26T04:32:16.000-05:00"
+		"versionId": "10",
+		"lastUpdated": "2019-12-06T07:36:06.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician",
 	"version": "0.5",
@@ -12,6 +12,7 @@
 	"status": "active",
 	"date": "2019-07-26",
 	"publisher": "CARIN Alliance",
+	"description": "CARIN Blue Button Explanation of Benefit Professional or Non-Clinician Profile",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,

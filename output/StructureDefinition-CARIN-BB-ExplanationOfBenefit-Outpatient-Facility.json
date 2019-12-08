@@ -2,8 +2,8 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-ExplanationOfBenefit-Outpatient-Facility",
   "meta": {
-    "versionId": "191",
-    "lastUpdated": "2019-11-30T04:54:11.000-05:00"
+    "versionId": "192",
+    "lastUpdated": "2019-12-06T07:37:59.000-05:00"
   },
   "text": {
     "status": "generated",
@@ -16,6 +16,7 @@
   "status": "active",
   "date": "2019-07-26T00:00:00-04:00",
   "publisher": "CARIN Alliance",
+  "description": "CARIN Blue Button Explanation of Benefit Outpatient Facility Profile",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -468,6 +469,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -761,6 +763,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1122,6 +1125,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -1468,6 +1472,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -1613,7 +1618,7 @@
         "short": "Category of recipient",
         "definition": "Type of Party to be reimbursed: Subscriber, provider, other.",
         "requirements": "Need to know who should receive payment with the most common situations being the Provider (assignment of benefits) or the Subscriber.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "ExplanationOfBenefit.payee.type",
@@ -1660,7 +1665,7 @@
         "definition": "Reference to the individual or organization to whom any payment will be made.",
         "comment": "Not required if the payee is 'subscriber' or 'provider'.",
         "requirements": "Need to provide demographics if the payee is not 'subscriber' nor 'provider'.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "ExplanationOfBenefit.payee.party",
@@ -2020,6 +2025,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -2207,9 +2213,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole"
             ]
           }
         ],
@@ -2261,6 +2265,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -2271,7 +2276,7 @@
         "definition": "The lead, assisting or supervising practitioner and their discipline if a multidisciplinary team.",
         "comment": "Role might not be required when there is only a single provider listed.",
         "requirements": "When multiple parties are present it is required to distinguish the roles performed by each member.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "ExplanationOfBenefit.careTeam.role",
@@ -2386,6 +2391,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -2621,6 +2627,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -2665,6 +2672,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -2712,6 +2720,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -2794,6 +2803,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -3004,15 +3014,8 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "InformationCategory"
-            }
-          ],
-          "strength": "example",
-          "description": "The valuset used for additional information category codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/claim-informationcategory"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
         }
       },
       {
@@ -3044,6 +3047,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -3088,6 +3092,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -3135,6 +3140,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -3217,6 +3223,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -3427,15 +3434,8 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "InformationCategory"
-            }
-          ],
-          "strength": "example",
-          "description": "The valuset used for additional information category codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/claim-informationcategory"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
         }
       },
       {
@@ -3467,6 +3467,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -3511,6 +3512,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -3558,6 +3560,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -3640,6 +3643,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -3850,15 +3854,8 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "InformationCategory"
-            }
-          ],
-          "strength": "example",
-          "description": "The valuset used for additional information category codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/claim-informationcategory"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
         }
       },
       {
@@ -3890,6 +3887,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -3934,6 +3932,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -3981,6 +3980,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -4063,6 +4063,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -4273,15 +4274,8 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "InformationCategory"
-            }
-          ],
-          "strength": "example",
-          "description": "The valuset used for additional information category codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/claim-informationcategory"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
         }
       },
       {
@@ -4313,6 +4307,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -4350,6 +4345,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -4397,6 +4393,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -4479,6 +4476,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -4689,15 +4687,8 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "InformationCategory"
-            }
-          ],
-          "strength": "example",
-          "description": "The valuset used for additional information category codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/claim-informationcategory"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
         }
       },
       {
@@ -4729,6 +4720,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -4773,6 +4765,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -4820,6 +4813,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -4902,6 +4896,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -5112,15 +5107,8 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "InformationCategory"
-            }
-          ],
-          "strength": "example",
-          "description": "The valuset used for additional information category codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/claim-informationcategory"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
         }
       },
       {
@@ -5152,6 +5140,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -5196,6 +5185,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -5243,6 +5233,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -5325,6 +5316,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -5535,15 +5527,8 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "InformationCategory"
-            }
-          ],
-          "strength": "example",
-          "description": "The valuset used for additional information category codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/claim-informationcategory"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
         }
       },
       {
@@ -5575,6 +5560,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -5619,6 +5605,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -5666,6 +5653,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -5748,6 +5736,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -5958,15 +5947,8 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "InformationCategory"
-            }
-          ],
-          "strength": "example",
-          "description": "The valuset used for additional information category codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/claim-informationcategory"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
         }
       },
       {
@@ -5998,6 +5980,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -6042,6 +6025,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -6089,6 +6073,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -6171,6 +6156,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -6381,15 +6367,8 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "InformationCategory"
-            }
-          ],
-          "strength": "example",
-          "description": "The valuset used for additional information category codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/claim-informationcategory"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
         }
       },
       {
@@ -6421,6 +6400,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -6465,6 +6445,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -6512,6 +6493,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -6594,6 +6576,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -6804,15 +6787,8 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "InformationCategory"
-            }
-          ],
-          "strength": "example",
-          "description": "The valuset used for additional information category codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/claim-informationcategory"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"
         }
       },
       {
@@ -6844,6 +6820,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -6888,6 +6865,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -6935,6 +6913,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -7015,6 +6994,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -7292,6 +7272,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -7383,6 +7364,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -7581,6 +7563,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -7623,6 +7606,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -8619,6 +8603,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -8817,6 +8802,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -8848,6 +8834,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -8879,6 +8866,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -8910,6 +8898,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -8984,6 +8973,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -9075,6 +9065,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -9163,6 +9154,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -9209,6 +9201,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -9260,6 +9253,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -9355,6 +9349,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },

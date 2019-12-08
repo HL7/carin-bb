@@ -21,7 +21,7 @@
   fhir:ValueSet.name [ fhir:value "CARINBBAdjudicationAmountCategory"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button Adjudication Amount Category Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-05T06:48:52-05:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-12-08T06:42:37-05:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "Describes the various amount fields used when submitting and adjudicating a claim."];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

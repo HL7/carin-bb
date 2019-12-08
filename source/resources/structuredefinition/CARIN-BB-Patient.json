@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-Patient",
 	"meta": {
-		"versionId": "5",
-		"lastUpdated": "2019-12-01T18:58:52.000-05:00"
+		"versionId": "7",
+		"lastUpdated": "2019-12-06T10:42:58.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient",
 	"version": "0.5",
@@ -12,6 +12,7 @@
 	"status": "active",
 	"date": "2019-11-26",
 	"publisher": "CARIN Alliance",
+	"description": "CARIN Blue Button Patient Profile",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,
@@ -39,7 +40,8 @@
 						}
 					],
 					"rules": "open"
-				}
+				},
+				"mustSupport": true
 			},
 			{
 				"id": "Patient.identifier.type",

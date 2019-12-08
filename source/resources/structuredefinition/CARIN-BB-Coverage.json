@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-Coverage",
 	"meta": {
-		"versionId": "5",
-		"lastUpdated": "2019-12-02T04:48:10.000-05:00"
+		"versionId": "6",
+		"lastUpdated": "2019-12-06T07:41:24.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage",
 	"version": "0.5",
@@ -11,6 +11,7 @@
 	"title": "CARIN Blue Button Coverage Profile",
 	"status": "active",
 	"date": "2019-07-27",
+	"description": "CARIN Blue Button Coverage Profile",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,

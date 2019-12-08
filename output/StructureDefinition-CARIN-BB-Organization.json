@@ -2,8 +2,8 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-Organization",
   "meta": {
-    "versionId": "7",
-    "lastUpdated": "2019-12-02T03:49:59.000-05:00"
+    "versionId": "8",
+    "lastUpdated": "2019-12-06T07:34:54.000-05:00"
   },
   "text": {
     "status": "generated",
@@ -14,8 +14,9 @@
   "name": "CARINBBOrganization",
   "title": "CARIN Blue Button Organization Profile",
   "status": "active",
-  "date": "2019-12-05T06:48:52-05:00",
+  "date": "2019-12-08T06:42:37-05:00",
   "publisher": "CARIN Alliance",
+  "description": "CARIN Blue Button Organization Profile",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
