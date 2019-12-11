@@ -24,10 +24,17 @@ This implementation guide describes the CARIN Blue Button&reg; Framework and Com
 See the [Table of Contents](toc.html) for more information.
 
 ---
+
+| foo | bar |
+| ----- | ----- |
+| baz | bim |
+
+
+---
 ### Latest Changes
 | Number | Description |
-| ----- | ----- |
-| 44 | Refined mapping page and added worksheet download link. Added initial capability statement, profile desciptions and  must support flags. |
+| --- | --- |
+| 44 | Refined mapping page and added worksheet download link. Added initial profile desciptions and  must support flags. |
 | 43 | The IG does not forbid any elements from base R4. Added &reg; symbol to Blue Button references to acknowledge CMS' registered mark. Reorganized the mapping sections. |
 | 42 | First pass at harmonization of profiles and terminologies. Added the **Authorization, Authentication, and Registration** section. |
 | 41 | set content to completed for code system [CARINBBClaimType](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type) |

@@ -14,7 +14,7 @@
   "name": "CARINBBAdjudicationAmountCategory",
   "title": "CARIN Blue Button Adjudication Amount Category Value Set",
   "status": "draft",
-  "date": "2019-12-08T06:42:37-05:00",
+  "date": "2019-12-11T08:57:52-05:00",
   "description": "Describes the various amount fields used when submitting and adjudicating a claim.",
   "compose": {
     "include": [

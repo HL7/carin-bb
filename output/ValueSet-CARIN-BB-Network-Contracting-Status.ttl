@@ -21,7 +21,7 @@
   fhir:ValueSet.name [ fhir:value "CARINBBNetworkContractingStatus"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button Network Contracting Status Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-08T06:42:37-05:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-12-11T08:57:52-05:00"^^xsd:dateTime];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;

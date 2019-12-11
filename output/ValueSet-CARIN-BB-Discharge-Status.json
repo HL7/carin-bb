@@ -14,7 +14,7 @@
   "name": "CARINBBDischargeStatus",
   "title": "CARIN Blue Button Discharge Status Value Set",
   "status": "draft",
-  "date": "2019-12-08T06:42:37-05:00",
+  "date": "2019-12-11T08:57:52-05:00",
   "description": "UB04 (FL-17)",
   "compose": {
     "include": [

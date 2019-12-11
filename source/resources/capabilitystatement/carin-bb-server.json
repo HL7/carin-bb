@@ -2,12 +2,12 @@
 	"resourceType": "CapabilityStatement",
 	"id": "carin-bb-server",
 	"meta": {
-		"versionId": "1",
-		"lastUpdated": "2019-12-06T15:45:10.000-05:00"
+		"versionId": "2",
+		"lastUpdated": "2019-12-11T08:27:57.000-05:00"
 	},
 	"text": {
 		"status": "generated",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">CARIN Blue Button Server CapabilityStatement</h2><ul><li>Implementation Guide Version: 1.0.0</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-12-04</li><li>Published by HL7 International and CARIN Alliance</li></ul><p><p>This Section describes the expected capabilities of the CARIN Blue Button Server actor which is responsible for providing responses to the queries submitted by the CARIN Blue Button Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined.</p></p><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>The CARIN Blue Button Server <strong>SHALL</strong>:</p><ol><li>Support the CARIN Blue Button Patient resource profile.</li><li>Support at least one additional resource profile from the list of CARIN Blue Button Profiles.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Return the following response classes:\n<ul><li>(Status 400): invalid parameter</li><li>(Status 401/4xx): unauthorized request</li><li>(Status 403): insufficient scope</li><li>(Status 404): unknown resource</li><li>(Status 410): deleted resource.</li></ul>\n</li><li>Support json source formats for all CARIN Blue Button interactions.</li></ol><p>The CARIN Blue Button Server <strong>SHOULD</strong>:</p><ol><li>Support xml source formats for all CARIN Blue Button interactions.</li><li>Identify the CARIN Blue Button profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li></ol><p id=\"security\"><strong>Security:</strong></p><ol><li>See the <a href=\"security.html\">General Security Considerations</a> section for requirements and recommendations.</li><li>A server <strong>SHALL</strong> reject any unauthorized requests by returning an <code>HTTP 401</code> unauthorized response code.</li></ol><hr/><br/></div>"
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">CARIN Blue Button Server CapabilityStatement</h2><ul><li>Implementation Guide Version: 1.0.0</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-12-04</li><li>Published by HL7 International and CARIN Alliance</li></ul><p><p>This Section describes the expected capabilities of the CARIN Blue Button Server actor which is responsible for providing responses to the queries submitted by the CARIN Blue Button Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined.</p></p><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>The CARIN Blue Button Server <strong>SHALL</strong>:</p><ol><li>Support the CARIN Blue Button Patient resource profile.</li><li>Support at least one additional resource profile from the list of CARIN Blue Button Profiles.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Return the following response classes:\n<ul><li>(Status 400): invalid parameter</li><li>(Status 401/4xx): unauthorized request</li><li>(Status 403): insufficient scope</li><li>(Status 404): unknown resource</li><li>(Status 410): deleted resource.</li></ul>\n</li><li>Support json source formats for all CARIN Blue Button interactions.</li></ol><p>The CARIN Blue Button Server <strong>SHOULD</strong>:</p><ol><li>Support xml source formats for all CARIN Blue Button interactions.</li><li>Identify the CARIN Blue Button profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li></ol><p id=\"security\"><strong>Security:</strong></p><ol><li>See the <a href=\"Authorization,_Authentication,_and_Registration.html\">General Security Considerations</a> section for requirements and recommendations.</li><li>A server <strong>SHALL</strong> reject any unauthorized requests by returning an <code>HTTP 401</code> unauthorized response code.</li></ol><hr/><br/></div>"
 	},
 	"url": "http://hl7.org/fhir/us/carin/CapabilityStatement/carin-bb-server",
 	"version": "1.0.0",
@@ -16,7 +16,7 @@
 	"status": "active",
 	"experimental": false,
 	"date": "2019-12-04",
-	"publisher": "HL7 International & CARIN Alliance",
+	"publisher": "CARIN Alliance",
 	"contact": [
 		{
 			"telecom": [
@@ -52,7 +52,7 @@
 			"mode": "server",
 			"documentation": "The CARIN Blue Button Server **SHALL**:\n\n1. Support the CARIN Blue Button Patient resource profile.\n1. Support at least one additional resource profile from the list of CARIN Blue Button Profiles.\n1. Implement the RESTful behavior according to the FHIR specification.\n1. Return the following response classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized request\n   - (Status 403): insufficient scope\n   - (Status 404): unknown resource\n   - (Status 410): deleted resource.\n1. Support json source formats for all CARIN Blue Button interactions.\n\nThe CARIN Blue Button Server **SHOULD**:\n\n1. Support xml source formats for all CARIN Blue Button interactions.\n1. Identify the CARIN Blue Button profiles supported as part of the FHIR `meta.profile` attribute for each instance.\n1.",
 			"security": {
-				"description": "1. See the [General Security Considerations](security.html) section for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code."
+				"description": "1. See the [General Security Considerations](Authorization,_Authentication,_and_Registration.html) section for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code."
 			},
 			"resource": [
 				{

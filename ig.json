@@ -99,6 +99,10 @@
 		}
 	},
 	"resources": {
+		"CapabilityStatement/carin-bb-client": {
+			"base": "CapabilityStatement-carin-bb-client.html",
+			"defns": "CapabilityStatement-carin-bb-client-definitions.html"
+		},
 		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy": {
 			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html",
 			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy-definitions.html"
@@ -119,9 +123,25 @@
 			"base": "StructureDefinition-CARIN-BB-Patient.html",
 			"defns": "StructureDefinition-CARIN-BB-Patient-definitions.html"
 		},
+		"SearchParameter/carin-bb-coverage-patient": {
+			"base": "SearchParameter-carin-bb-coverage-patient.html",
+			"defns": "SearchParameter-carin-bb-coverage-patient-definitions.html"
+		},
+		"SearchParameter/carin-bb-coverage-status": {
+			"base": "SearchParameter-carin-bb-coverage-status.html",
+			"defns": "SearchParameter-carin-bb-coverage-status-definitions.html"
+		},
+		"SearchParameter/carin-bb-explanationofbenefit-patient": {
+			"base": "SearchParameter-carin-bb-explanationofbenefit-patient.html",
+			"defns": "SearchParameter-carin-bb-explanationofbenefit-patient-definitions.html"
+		},
 		"CodeSystem/CARIN-BB-Claim-Type": {
 			"base": "CodeSystem-CARIN-BB-Claim-Type.html",
 			"defns": "CodeSystem-CARIN-BB-Claim-Type-definitions.html"
+		},
+		"SearchParameter/carin-bb-explanationofbenefit-status": {
+			"base": "SearchParameter-carin-bb-explanationofbenefit-status.html",
+			"defns": "SearchParameter-carin-bb-explanationofbenefit-status-definitions.html"
 		},
 		"ValueSet/CARIN-BB-Claim-Type": {
 			"base": "ValueSet-CARIN-BB-Claim-Type.html",

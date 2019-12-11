@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="carin-bb-explanationofbenefit-patient"/>
+  <meta>
+    <versionId value="4"/>
+    <lastUpdated value="2019-12-11T08:51:09.000-05:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>SearchParameter: CarinBBExplanationOfBenefitPatient</h2><p><b> description</b> : The reference to the patient</p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-explanationofbenefit-patient"/>
+  <version value="0.1.43-DRAFT"/>
+  <name value="CarinBBExplanationOfBenefitPatient"/>
+  <derivedFrom value="http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-patient"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2019-12-01T04:48:45-05:00"/>
+  <publisher value="CARIN Alliance"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.carinalliance.com/about-us/contact-us"/>
+    </telecom>
+  </contact>
+  <description value="The reference to the patient"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <code value="patient"/>
+  <base value="ExplanationOfBenefit"/>
+  <type value="reference"/>
+  <expression value="ExplanationOfBenefit.beneficiary"/>
+  <xpath value="f:ExplanationOfBenefit/f:beneficiary"/>
+  <xpathUsage value="normal"/>
+  <target value="Patient"/>
+  <multipleOr value="true"/>
+  <multipleAnd value="true"/>
+  <modifier value="missing"/>
+  <modifier value="type"/>
+  <modifier value="identifier"/>
+</SearchParameter>

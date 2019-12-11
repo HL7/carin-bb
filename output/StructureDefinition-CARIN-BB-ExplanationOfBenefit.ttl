@@ -21,7 +21,7 @@
   fhir:StructureDefinition.name [ fhir:value "CARINBBExplanationOfBenefit"];
   fhir:StructureDefinition.title [ fhir:value "CARIN Blue Button Explanation of Benefit Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2019-12-08T06:42:37-05:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-12-11T08:57:52-05:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
   fhir:StructureDefinition.description [ fhir:value "CARIN Blue Button Explanation of Benefit Profile"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];

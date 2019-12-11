@@ -1,0 +1,1 @@
+The status of the ExplanationOfBenefit: active | cancelled | draft | entered-in-error

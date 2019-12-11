@@ -1,0 +1,1 @@
+The status of the Coverage: active | cancelled | draft | entered-in-error

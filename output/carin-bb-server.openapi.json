@@ -9,7 +9,7 @@
     },
     "version": "0.1.43-DRAFT",
     "contact": {
-      "name": "HL7 International \u0026 CARIN Alliance"
+      "name": "CARIN Alliance"
     }
   },
   "externalDocs": {
@@ -371,14 +371,16 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The status of the Coverage: active | cancelled | draft | entered-in-error"
           },
           {
             "name": "patient",
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "Retrieve coverages for a patient"
           }
         ]
       }
@@ -572,14 +574,16 @@
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The status of the ExplanationOfBenefit: active | cancelled | draft | entered-in-error"
           },
           {
             "name": "patient",
             "in": "query",
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "The reference to the patient"
           }
         ]
       }

@@ -13,4 +13,31 @@ active: other
 
 <!-- end TOC -->
 
-**No examples are defined for this implementation guide**
+### Other Resources
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SearchParameter</td>
+<td><a href="SearchParameter-carin-bb-coverage-patient.html">CarinBBCoveragePatient</a></td>
+</tr>
+<tr>
+<td>SearchParameter</td>
+<td><a href="SearchParameter-carin-bb-coverage-status.html">CarinBBCoverageStatus</a></td>
+</tr>
+<tr>
+<td>SearchParameter</td>
+<td><a href="SearchParameter-carin-bb-explanationofbenefit-patient.html">CarinBBExplanationOfBenefitPatient</a></td>
+</tr>
+<tr>
+<td>SearchParameter</td>
+<td><a href="SearchParameter-carin-bb-explanationofbenefit-status.html">CarinBBExplanationOfBenefitStatus</a></td>
+</tr>
+</tbody>
+</table>
