@@ -1,1 +1,1 @@
-CARIN Blue Button Organization Profile
+This profile builds on the USCoreOrganization Profile. It includes additional constraints relevant for the use cases addressed by this IG.

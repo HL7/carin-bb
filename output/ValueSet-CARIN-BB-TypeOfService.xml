@@ -45,11 +45,11 @@ Z = Third opinion on elective surgery (obsoleted 1/97)</p>
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.resdac.org/sites/resdac.umn.edu/files/CMS%20Type%20of%20Service%20Table.txt</code></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-typeofservice"/>
-  <version value="0.1.43-DRAFT"/>
+  <version value="0.1.57-DRAFT"/>
   <name value="CARINBBTypeOfService"/>
   <title value="CARIN Blue Button Type Of Service Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-11T08:57:52-05:00"/>
+  <date value="2019-12-15T21:47:45-05:00"/>
   <description value="CMS_TYPE_SRVC_TB CMS Type of Service Table&#xA;&#xA;  1 = Medical care&#xA;  2 = Surgery&#xA;  3 = Consultation&#xA;  4 = Diagnostic radiology&#xA;  5 = Diagnostic laboratory&#xA;  6 = Therapeutic radiology&#xA;  7 = Anesthesia&#xA;  8 = Assistant at surgery&#xA;  9 = Other medical items or services&#xA;  0 = Whole blood only eff 01/96, whole blood or packed red cells before 01/96&#xA;  A = Used durable medical equipment (DME)&#xA;  B = High risk screening mammography (obsolete 1/1/98)&#xA;  C = Low risk screening mammography (obsolete 1/1/98)&#xA;  D = Ambulance (eff 04/95)&#xA;  E = Enteral/parenteral nutrients/supplies (eff 04/95)&#xA;  F = Ambulatory surgical center (facility usage for surgical services)&#xA;  G = Immunosuppressive drugs&#xA;  H = Hospice services (discontinued 01/95)&#xA;  I = Purchase of DME (installment basis) (discontinued 04/95)&#xA;  J = Diabetic shoes (eff 04/95)&#xA;  K = Hearing items and services (eff 04/95)&#xA;  L = ESRD supplies (eff 04/95) (renal supplier in the home before 04/95)&#xA;  M = Monthly capitation payment for dialysis&#xA;  N = Kidney donor&#xA;  P = Lump sum purchase of DME, prosthetics orthotics&#xA;  Q = Vision items or services&#xA;  R = Rental of DME&#xA;  S = Surgical dressings or other medical supplies (eff 04/95)&#xA;  T = Psychological therapy (term. 12/31/97) outpatient mental health limitation (eff. 1/1/98)&#xA;  U = Occupational therapy&#xA;  V = Pneumococcal/flu vaccine (eff 01/96), Pneumococcal/flu/hepatitis B vaccine (eff 04/95-12/95), Pneumococcal only before 04/95&#xA;  W = Physical therapy&#xA;  Y = Second opinion on elective surgery (obsoleted 1/97)&#xA;  Z = Third opinion on elective surgery (obsoleted 1/97)"/>
   <compose>
     <include>

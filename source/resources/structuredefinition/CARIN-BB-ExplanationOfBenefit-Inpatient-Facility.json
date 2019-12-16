@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Inpatient-Facility",
 	"meta": {
-		"versionId": "24",
-		"lastUpdated": "2019-12-06T08:00:09.000-05:00"
+		"versionId": "26",
+		"lastUpdated": "2019-12-15T18:02:22.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility",
 	"version": "0.5",
@@ -12,7 +12,7 @@
 	"status": "active",
 	"date": "2019-07-26",
 	"publisher": "CARIN Alliance",
-	"description": "CARIN Blue Button Explanation of Benefit Inpatient Facility Profile",
+	"description": "This profile is built upon the CARINBBExplanationOfBenefit Profile. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges.  Inpatient claims are submitted for services rendered at a facility as part of an overnight stay. The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human  Services as form CMS-1450.\n",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,

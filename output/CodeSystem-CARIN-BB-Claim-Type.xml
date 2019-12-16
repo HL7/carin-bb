@@ -10,11 +10,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN Blue Button Claim Type Code System</h2><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">inpatient-facility<a name="CARIN-BB-Claim-Type-inpatient-facility"> </a></td><td>Inpatient Facility</td><td/></tr><tr><td style="white-space:nowrap">outpatient-facility<a name="CARIN-BB-Claim-Type-outpatient-facility"> </a></td><td>Outpatient Facility</td><td/></tr><tr><td style="white-space:nowrap">professional-nonclinician<a name="CARIN-BB-Claim-Type-professional-nonclinician"> </a></td><td>Professional or Non-Clinician</td><td/></tr><tr><td style="white-space:nowrap">pharmacy<a name="CARIN-BB-Claim-Type-pharmacy"> </a></td><td>Pharmacy</td><td/></tr><tr><td style="white-space:nowrap">vision<a name="CARIN-BB-Claim-Type-vision"> </a></td><td>Vision</td><td/></tr><tr><td style="white-space:nowrap">oral<a name="CARIN-BB-Claim-Type-oral"> </a></td><td>Oral</td><td/></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type"/>
-  <version value="0.1.43-DRAFT"/>
+  <version value="0.1.57-DRAFT"/>
   <name value="CARINBBClaimType"/>
   <title value="CARIN Blue Button Claim Type Code System"/>
   <status value="draft"/>
-  <date value="2019-12-11T08:57:52-05:00"/>
+  <date value="2019-12-15T21:47:45-05:00"/>
   <publisher value="CARIN Alliance"/>
   <caseSensitive value="true"/>
   <content value="complete"/>

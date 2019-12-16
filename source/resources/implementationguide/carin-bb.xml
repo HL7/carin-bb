@@ -3,17 +3,17 @@
     xmlns="http://hl7.org/fhir">
     <id value="carin-bb"/>
     <meta>
-        <versionId value="177"/>
-        <lastUpdated value="2019-12-11T08:09:45.000-05:00"/>
+        <versionId value="251"/>
+        <lastUpdated value="2019-12-15T21:27:25.000-05:00"/>
     </meta>
     <url value="http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb"/>
-    <version value="0.1.43-DRAFT"/>
+    <version value="0.1.57-DRAFT"/>
     <name value="CARINBlueButton"/>
     <title value="CARIN Blue Button"/>
     <status value="draft"/>
     <experimental value="true"/>
     <publisher value="CARIN Alliance"/>
-    <description value="&#xA;# CARIN Alliance&#xA;**_Enabling consumers and their authorized caregivers to access more of their digital health information with less friction._**&#xA;&#xA;This implementation guide describes the CARIN Blue Button&amp;reg; Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&#xA;&#xA;See the [Table of Contents](toc.html) for more information.&#xA;&#xA;---&#xA;&#xA;| foo | bar |&#xA;| ----- | ----- |&#xA;| baz | bim |&#xA;&#xA;&#xA;---&#xA;### Latest Changes&#xA;| Number | Description |&#xA;| --- | --- |&#xA;| 44 | Refined mapping page and added worksheet download link. Added initial profile desciptions and  must support flags. |&#xA;| 43 | The IG does not forbid any elements from base R4. Added &amp;reg; symbol to Blue Button references to acknowledge CMS' registered mark. Reorganized the mapping sections. |&#xA;| 42 | First pass at harmonization of profiles and terminologies. Added the **Authorization, Authentication, and Registration** section. |&#xA;| 41 | set content to completed for code system [CARINBBClaimType](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type) |&#xA;| 40 | 	Binding of value set [CARINBBClaimType](http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type) to eob.type in profile [CARINBBExplanationOfBenefit](http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit) |&#xA;| 39 | 	Added new code allowedunits to [CARINBBAdjudicationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory) |&#xA;| 38 | 	Added new code clmlastactiondate to [CARINBBClaimInformationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory) |&#xA;| 37 | Updated Feedback section with Zulip stream information |&#xA;| 36 | Added explicit &quot;draft&quot; verbiage |&#xA;| 35 | Revised narrative content |&#xA;| 34 | Removed Credits and added USCore Patient based CARINBBPatient profile |&#xA;| 33 | Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages |&#xA;| 32 | Added 4 specific EOB and 1 Coverage profiles |&#xA;| 31 | Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile |&#xA;| 30 | Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy |&#xA;| 29 | Updated Provider and Claim Line Amounts mappings. |&#xA;| 28 | Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping. |&#xA;| 27 | Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention. |&#xA;| 26 | Added sample of reverse mapping narrative for ExplanationOfBenefit |&#xA;| 25 | Added FHIR Resources section to narrative and included Example EOB. |&#xA;| 24 | Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder. |&#xA;| 23 | Added the Latest Changes section. Added USCoreR4 Dependency. |&#xA;&#xA;---&#xA;&gt;This implementation guide is currently a work in progress and is in draft status.&#xA;&gt;&#xA;&gt;Blue Button&amp;reg; is a registered mark of CMS&#xA;---&#xA;"/>
+    <description value="&#xA;# CARIN Alliance&#xA;**_Enabling consumers and their authorized caregivers to access more of their digital health information with less friction._**&#xA;&#xA;This implementation guide describes the CARIN Blue Button&amp;reg; Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.&#xA;&#xA;See the [Table of Contents](toc.html) for more information.&#xA;&#xA;---&#xA;&#xA;---&#xA;### Latest Changes&#xA;&#xA;&#xA;| Number | Description |&#xA;| :---: | --- |&#xA;| 57 | Examples have been added and referenced from a new Examples Section. Additional examples will be developed and reviewed during the ballot reconciliation period to be included with the published IG. |&#xA;| 56 | Search Parameters: Added a Search Parameters page to expose the developed SearchParameter Resources defined in this IG. A note to balloters was added to explain that Trifolia on FHIR is not rendering SearchParameter Resources correctly and reviewers need to use the XML or JSON tab to see the defintion. |&#xA;| 55 | Notes to Balloters: A note to balloters was added to explain that the name of the IG will be changed before publication to remove the use of the FHIR Accelerator Program name and to remove the use of a trademarked phrase. Discussions are underway to seek approval for the new IG name. |&#xA;| 54 | Notes to Balloters: A note to balloters was added to explain that certain Terminology naming issues will be addressed during the ballot process and will be resolved prior to publication in the following way: the Value Sets will be updated to remove reference to CARIN Blue Button, replaced by either industry standard names or, for those specific to claim adjudication, with the new IG name.  Industry standard Code System revisions include consolidating the three Type of Bill Codes, removing reference to SNOMED CT, etc. |&#xA;| 53 | Note to Balloters: A note to balloters was added to explain that certain Code System referencing issues will be addressed during the ballot process and will be resolved prior to publication. Based on recent guidance from the HL7 Vocabulary Workgroup a change will be made to reference external licensed Code Systems using URIs instead of OIDs|&#xA;| 52 | Capability Statements: The names of the Capability Statements were modified to align with the updated actor names. |&#xA;| 51 | Profiles and Extensions: The MustSupport implementer guidance was added to the CARINBBExplanationOfBenefit Profile.  A sentence was added to explain the Explanation of Benefit profiles inherit MustSupport guidance from the base profile.  Search parameter guidance was added for the Coverage and Explanation of Benefit profile.  |&#xA;| 50 | Notes to Balloters: The Feedback section was modified to Notes to Balloters and comments were added requesting feedback on additional search parameters needed to support the use cases covered in this IG. An additional comment was added about Value Set and Codes System names noting they will be updated prior to publication and Terminology references. The note explains that they way Licensed Codes Systems and associated Value Sets are identified will be modified to incorporate recent changes in the way FHIR IGs specify external codes systems that HL7 is not licensed to incorporate into publications made available through HL7.org/FHIR &#xA;|&#xA;| 49 | Access to Licensed Code Systems: A new section under General Guidance, Access to Licensed Code Systems, was added.  It will include guidance on how to access Licensed Industry Standard Code Systems and Available Industry Standard Code Systems. |&#xA;| 48 | General Guidance: A section, General Guidance, was added to include guidance to support MustSupport for this IG, how to handle missing information. |&#xA;| 47 | Use Case: A sequence flow diagram was added and the actor names in the descriptions were modified to align with the actor names used in the diagram. |&#xA;| 46 | CARIN Blue Button Framework Specification: hotlinks were added to make the content it describes directly accessible without having to click through next page. |&#xA;| 45 | Home Page, CARIN Alliance section: Formatting was resolved and additional verbiage was added to note that Blue Button is a registered mark of the U.S. Department of Health and Human Services. An attribution statement was made in the Acknowledgements to state, Blue Button, the slogan, Download My Data, the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services. |&#xA;| 44 | Refined mapping page and added worksheet download link. Added initial profile desciptions and  must support flags. |&#xA;| 43 | The IG does not forbid any elements from base R4. Added &amp;reg; symbol to Blue Button references to acknowledge CMS' registered mark. Reorganized the mapping sections. |&#xA;| 42 | First pass at harmonization of profiles and terminologies. Added the **Authorization, Authentication, and Registration** section. |&#xA;| 41 | set content to completed for code system [CARINBBClaimType](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type) |&#xA;| 40 | 	Binding of value set [CARINBBClaimType](http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type) to eob.type in profile [CARINBBExplanationOfBenefit](http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit) |&#xA;| 39 | 	Added new code allowedunits to [CARINBBAdjudicationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory) |&#xA;| 38 | 	Added new code clmlastactiondate to [CARINBBClaimInformationCategory](http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory) |&#xA;| 37 | Updated Feedback section with Zulip stream information |&#xA;| 36 | Added explicit &quot;draft&quot; verbiage |&#xA;| 35 | Revised narrative content |&#xA;| 34 | Removed Credits and added USCore Patient based CARINBBPatient profile |&#xA;| 33 | Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages |&#xA;| 32 | Added 4 specific EOB and 1 Coverage profiles. |&#xA;| 31 | Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile |&#xA;| 30 | Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy |&#xA;| 29 | Updated Provider and Claim Line Amounts mappings. |&#xA;| 28 | Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping. |&#xA;| 27 | Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention. |&#xA;| 26 | Added sample of reverse mapping narrative for ExplanationOfBenefit. |&#xA;| 25 | Added FHIR Resources section to narrative and included Example EOB. |&#xA;| 24 | Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder. |&#xA;| 23 | Added the Latest Changes section. Added USCoreR4 Dependency. |&#xA;&#xA;&#xA;### Acknowledgements&#xA;&#xA;Blue Button, the slogan, 'Download My Data,' the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services.&#xA;&#xA;---&#xA;&gt;This implementation guide is currently a work in progress and is in draft status.&#xA;&gt;&#xA;&gt;Blue Button&amp;reg; is a registered mark of HHS&#xA;---&#xA;"/>
     <packageId value="hl7.fhir.us.carin-bb"/>
     <fhirVersion value="4.0.0"/>
     <dependsOn>
@@ -351,51 +351,91 @@
         </resource>
         <resource>
             <reference>
-                <reference value="CapabilityStatement/carin-bb-server"/>
-                <display value="CARIN Blue Button Server CapabilityStatement"/>
+                <reference value="CapabilityStatement/carin-bb-consumer-app"/>
+                <display value="CARIN BlueButton Consumer App CapabilityStatement"/>
             </reference>
-            <name value="CARIN Blue Button Server CapabilityStatement"/>
+            <name value="CARIN BlueButton Consumer App CapabilityStatement"/>
             <exampleBoolean value="false"/>
         </resource>
         <resource>
             <reference>
-                <reference value="CapabilityStatement/carin-bb-client"/>
-                <display value="CARIN Blue Button Client CapabilityStatement"/>
+                <reference value="CapabilityStatement/carin-bb-healthplan-api"/>
+                <display value="CARIN Blue Button HealthPlan API CapabilityStatement"/>
             </reference>
-            <name value="CARIN Blue Button Client CapabilityStatement"/>
+            <name value="CARIN Blue Button HealthPlan API CapabilityStatement"/>
             <exampleBoolean value="false"/>
         </resource>
         <resource>
             <reference>
-                <reference value="SearchParameter/carin-bb-coverage-patient"/>
-                <display value="CarinBBCoveragePatient"/>
+                <reference value="SearchParameter/carin-bb-coverage-patient-sp"/>
+                <display value="CARINBlueButtonCoveragePatientSP"/>
             </reference>
-            <name value="CarinBBCoveragePatient"/>
+            <name value="CARINBlueButtonCoveragePatientSP"/>
             <exampleBoolean value="false"/>
         </resource>
         <resource>
             <reference>
-                <reference value="SearchParameter/carin-bb-coverage-status"/>
-                <display value="CarinBBCoverageStatus"/>
+                <reference value="SearchParameter/carin-bb-explanationofbenefit-created-sp"/>
+                <display value="CARINBlueButtonEOBCreatedSP"/>
             </reference>
-            <name value="CarinBBCoverageStatus"/>
+            <name value="CARINBlueButtonEOBCreatedSP"/>
             <exampleBoolean value="false"/>
         </resource>
         <resource>
             <reference>
-                <reference value="SearchParameter/carin-bb-explanationofbenefit-patient"/>
-                <display value="CarinBBExplanationOfBenefitPatient"/>
+                <reference value="SearchParameter/carin-bb-explanationofbenefit-patient-sp"/>
+                <display value="CARINBlueButtonEOBPatientSP"/>
             </reference>
-            <name value="CarinBBExplanationOfBenefitPatient"/>
+            <name value="CARINBlueButtonEOBPatientSP"/>
             <exampleBoolean value="false"/>
         </resource>
         <resource>
             <reference>
-                <reference value="SearchParameter/carin-bb-explanationofbenefit-status"/>
-                <display value="CarinBBExplanationOfBenefitStatus"/>
+                <reference value="Organization/Org1"/>
+                <display value="Hospital ABC"/>
             </reference>
-            <name value="CarinBBExplanationOfBenefitStatus"/>
-            <exampleBoolean value="false"/>
+            <name value="CARIN BB Organization (Hospital) Example"/>
+            <description value=" Example of a CARIN BB Organization (Hospital) resource"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/Org45"/>
+                <display value="Insurance XYZ"/>
+            </reference>
+            <name value="CARIN BB Organization (Insurance) Example"/>
+            <description value="Example of a CARIN BB Organization (Insurance) resource"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="PractitionerRole/PractitionerRole1"/></reference>
+            <name value="CARIN BB PractitionerRole Example"/>
+            <description value="Example of a CARIN BB PractitionerRole resource"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Patient/Patient1"/>
+                <display value="John Doe"/>
+            </reference>
+            <name value="CARIN BB Patient Example"/>
+            <description value="Example of a CARIN BB Patient resource"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Coverage/Coverage1"/></reference>
+            <name value="CARIN BB Coverage Example"/>
+            <description value="Example of a CARIN BB Coverage resources"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ExplanationOfBenefit/EOB1"/></reference>
+            <name value="CARIN BB ExplanationOfBenefit (Inpatient) Example"/>
+            <description value="Example of a CARIN BB ExplanationOfBenefit (Inpatient) example"/>
+            <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit"/>
         </resource>
         <page>
             <nameUrl value="toc.md"/>
@@ -430,6 +470,11 @@
                     <title value="Authorization, Authentication, and Registration"/>
                     <generation value="markdown"/>
                 </page>
+                <page>
+                    <nameUrl value="Search_Parameters.html"/>
+                    <title value="Search Parameters"/>
+                    <generation value="markdown"/>
+                </page>
             </page>
             <page>
                 <nameUrl value="Benefit_to_Consumers_and_Health_Plans.html"/>
@@ -437,8 +482,18 @@
                 <generation value="markdown"/>
             </page>
             <page>
-                <nameUrl value="Feedback.html"/>
-                <title value="Feedback"/>
+                <nameUrl value="General_Guidance.html"/>
+                <title value="General Guidance"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="Examples.html"/>
+                <title value="Examples"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="Notes_to_Balloters_.html"/>
+                <title value="Notes to Balloters "/>
                 <generation value="markdown"/>
             </page>
         </page>

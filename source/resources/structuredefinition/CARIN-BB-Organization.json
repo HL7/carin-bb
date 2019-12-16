@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-Organization",
 	"meta": {
-		"versionId": "8",
-		"lastUpdated": "2019-12-06T07:34:54.000-05:00"
+		"versionId": "10",
+		"lastUpdated": "2019-12-15T18:04:21.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization",
 	"version": "0.5",
@@ -11,7 +11,7 @@
 	"title": "CARIN Blue Button Organization Profile",
 	"status": "active",
 	"publisher": "CARIN Alliance",
-	"description": "CARIN Blue Button Organization Profile",
+	"description": "This profile builds on the USCoreOrganization Profile. It includes additional constraints relevant for the use cases addressed by this IG.",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,

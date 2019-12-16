@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.us.carin-bb",
-  "version": "0.1.43-DRAFT",
+  "version": "0.1.57-DRAFT",
   "fhirVersion": "4.0.0",
   "extensions": [],
   "profiles": {

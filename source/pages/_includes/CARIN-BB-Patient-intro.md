@@ -1,1 +1,1 @@
-CARIN Blue Button Patient Profile
+This profile builds on USCorePatient Profile. It includes additional constraints relevant for the use cases addressed by this IG.

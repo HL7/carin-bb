@@ -99,49 +99,93 @@
 		}
 	},
 	"resources": {
-		"CapabilityStatement/carin-bb-client": {
-			"base": "CapabilityStatement-carin-bb-client.html",
-			"defns": "CapabilityStatement-carin-bb-client-definitions.html"
+		"StructureDefinition/CARIN-BB-Patient": {
+			"base": "StructureDefinition-CARIN-BB-Patient.html",
+			"defns": "StructureDefinition-CARIN-BB-Patient-definitions.html"
+		},
+		"ValueSet/CARIN-BB-Identifier-Type": {
+			"base": "ValueSet-CARIN-BB-Identifier-Type.html",
+			"defns": "ValueSet-CARIN-BB-Identifier-Type-definitions.html"
+		},
+		"ValueSet/nubc-pointoforiginforadmissionorvisit": {
+			"base": "ValueSet-nubc-pointoforiginforadmissionorvisit.html",
+			"defns": "ValueSet-nubc-pointoforiginforadmissionorvisit-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-Organization": {
+			"base": "StructureDefinition-CARIN-BB-Organization.html",
+			"defns": "StructureDefinition-CARIN-BB-Organization-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-PractitionerRole": {
+			"base": "StructureDefinition-CARIN-BB-PractitionerRole.html",
+			"defns": "StructureDefinition-CARIN-BB-PractitionerRole-definitions.html"
+		},
+		"StructureDefinition/CARIN-BB-RelatedPerson": {
+			"base": "StructureDefinition-CARIN-BB-RelatedPerson.html",
+			"defns": "StructureDefinition-CARIN-BB-RelatedPerson-definitions.html"
+		},
+		"CapabilityStatement/carin-bb-consumer-app": {
+			"base": "CapabilityStatement-carin-bb-consumer-app.html",
+			"defns": "CapabilityStatement-carin-bb-consumer-app-definitions.html"
+		},
+		"CapabilityStatement/carin-bb-healthplan-api": {
+			"base": "CapabilityStatement-carin-bb-healthplan-api.html",
+			"defns": "CapabilityStatement-carin-bb-healthplan-api-definitions.html"
+		},
+		"SearchParameter/carin-bb-coverage-patient-sp": {
+			"base": "SearchParameter-carin-bb-coverage-patient-sp.html",
+			"defns": "SearchParameter-carin-bb-coverage-patient-sp-definitions.html"
+		},
+		"SearchParameter/carin-bb-explanationofbenefit-created-sp": {
+			"base": "SearchParameter-carin-bb-explanationofbenefit-created-sp.html",
+			"defns": "SearchParameter-carin-bb-explanationofbenefit-created-sp-definitions.html"
+		},
+		"SearchParameter/carin-bb-explanationofbenefit-patient-sp": {
+			"base": "SearchParameter-carin-bb-explanationofbenefit-patient-sp.html",
+			"defns": "SearchParameter-carin-bb-explanationofbenefit-patient-sp-definitions.html"
+		},
+		"Organization/Org1": {
+			"base": "Organization-Org1.html",
+			"defns": "Organization-Org1-definitions.html"
+		},
+		"Organization/Org45": {
+			"base": "Organization-Org45.html",
+			"defns": "Organization-Org45-definitions.html"
 		},
 		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy": {
 			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html",
 			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy-definitions.html"
 		},
+		"PractitionerRole/PractitionerRole1": {
+			"base": "PractitionerRole-PractitionerRole1.html",
+			"defns": "PractitionerRole-PractitionerRole1-definitions.html"
+		},
 		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inpatient-Facility": {
 			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inpatient-Facility.html",
 			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inpatient-Facility-definitions.html"
+		},
+		"Patient/Patient1": {
+			"base": "Patient-Patient1.html",
+			"defns": "Patient-Patient1-definitions.html"
 		},
 		"StructureDefinition/CARIN-BB-ExplanationOfBenefit": {
 			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit.html",
 			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-definitions.html"
 		},
+		"Coverage/Coverage1": {
+			"base": "Coverage-Coverage1.html",
+			"defns": "Coverage-Coverage1-definitions.html"
+		},
 		"StructureDefinition/CARIN-BB-ExplanationOfBenefit-Outpatient-Facility": {
 			"base": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.html",
 			"defns": "StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility-definitions.html"
 		},
-		"StructureDefinition/CARIN-BB-Patient": {
-			"base": "StructureDefinition-CARIN-BB-Patient.html",
-			"defns": "StructureDefinition-CARIN-BB-Patient-definitions.html"
-		},
-		"SearchParameter/carin-bb-coverage-patient": {
-			"base": "SearchParameter-carin-bb-coverage-patient.html",
-			"defns": "SearchParameter-carin-bb-coverage-patient-definitions.html"
-		},
-		"SearchParameter/carin-bb-coverage-status": {
-			"base": "SearchParameter-carin-bb-coverage-status.html",
-			"defns": "SearchParameter-carin-bb-coverage-status-definitions.html"
-		},
-		"SearchParameter/carin-bb-explanationofbenefit-patient": {
-			"base": "SearchParameter-carin-bb-explanationofbenefit-patient.html",
-			"defns": "SearchParameter-carin-bb-explanationofbenefit-patient-definitions.html"
+		"ExplanationOfBenefit/EOB1": {
+			"base": "ExplanationOfBenefit-EOB1.html",
+			"defns": "ExplanationOfBenefit-EOB1-definitions.html"
 		},
 		"CodeSystem/CARIN-BB-Claim-Type": {
 			"base": "CodeSystem-CARIN-BB-Claim-Type.html",
 			"defns": "CodeSystem-CARIN-BB-Claim-Type-definitions.html"
-		},
-		"SearchParameter/carin-bb-explanationofbenefit-status": {
-			"base": "SearchParameter-carin-bb-explanationofbenefit-status.html",
-			"defns": "SearchParameter-carin-bb-explanationofbenefit-status-definitions.html"
 		},
 		"ValueSet/CARIN-BB-Claim-Type": {
 			"base": "ValueSet-CARIN-BB-Claim-Type.html",
@@ -154,10 +198,6 @@
 		"ValueSet/CARIN-BB-Related-Claim-Relationship": {
 			"base": "ValueSet-CARIN-BB-Related-Claim-Relationship.html",
 			"defns": "ValueSet-CARIN-BB-Related-Claim-Relationship-definitions.html"
-		},
-		"ValueSet/CARIN-BB-Identifier-Type": {
-			"base": "ValueSet-CARIN-BB-Identifier-Type.html",
-			"defns": "ValueSet-CARIN-BB-Identifier-Type-definitions.html"
 		},
 		"CodeSystem/CARIN-BB-Claim-CareTeam-Role": {
 			"base": "CodeSystem-CARIN-BB-Claim-CareTeam-Role.html",
@@ -211,10 +251,6 @@
 			"base": "ValueSet-CARIN-BB-TypeOfService.html",
 			"defns": "ValueSet-CARIN-BB-TypeOfService-definitions.html"
 		},
-		"ValueSet/nubc-pointoforiginforadmissionorvisit": {
-			"base": "ValueSet-nubc-pointoforiginforadmissionorvisit.html",
-			"defns": "ValueSet-nubc-pointoforiginforadmissionorvisit-definitions.html"
-		},
 		"ValueSet/CARIN-BB-TOB-TypeOfFacility": {
 			"base": "ValueSet-CARIN-BB-TOB-TypeOfFacility.html",
 			"defns": "ValueSet-CARIN-BB-TOB-TypeOfFacility-definitions.html"
@@ -263,28 +299,12 @@
 			"base": "ValueSet-CARIN-BB-SNOMEDCT-ProcedureCodes.html",
 			"defns": "ValueSet-CARIN-BB-SNOMEDCT-ProcedureCodes-definitions.html"
 		},
-		"StructureDefinition/CARIN-BB-Organization": {
-			"base": "StructureDefinition-CARIN-BB-Organization.html",
-			"defns": "StructureDefinition-CARIN-BB-Organization-definitions.html"
-		},
-		"StructureDefinition/CARIN-BB-PractitionerRole": {
-			"base": "StructureDefinition-CARIN-BB-PractitionerRole.html",
-			"defns": "StructureDefinition-CARIN-BB-PractitionerRole-definitions.html"
-		},
-		"StructureDefinition/CARIN-BB-RelatedPerson": {
-			"base": "StructureDefinition-CARIN-BB-RelatedPerson.html",
-			"defns": "StructureDefinition-CARIN-BB-RelatedPerson-definitions.html"
-		},
 		"StructureDefinition/CARIN-BB-Coverage": {
 			"base": "StructureDefinition-CARIN-BB-Coverage.html",
 			"defns": "StructureDefinition-CARIN-BB-Coverage-definitions.html"
-		},
-		"CapabilityStatement/carin-bb-server": {
-			"base": "CapabilityStatement-carin-bb-server.html",
-			"defns": "CapabilityStatement-carin-bb-server-definitions.html"
 		}
 	},
-	"fixed-business-version": "0.1.43-DRAFT",
+	"fixed-business-version": "0.1.57-DRAFT",
 	"dependencyList": [
 		{
 			"location": "http://hl7.org/fhir/us/core",

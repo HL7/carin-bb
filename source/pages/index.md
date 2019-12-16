@@ -25,15 +25,26 @@ See the [Table of Contents](toc.html) for more information.
 
 ---
 
-| foo | bar |
-| ----- | ----- |
-| baz | bim |
-
-
 ---
 ### Latest Changes
+
+
 | Number | Description |
-| --- | --- |
+| :---: | --- |
+| 57 | Examples have been added and referenced from a new Examples Section. Additional examples will be developed and reviewed during the ballot reconciliation period to be included with the published IG. |
+| 56 | Search Parameters: Added a Search Parameters page to expose the developed SearchParameter Resources defined in this IG. A note to balloters was added to explain that Trifolia on FHIR is not rendering SearchParameter Resources correctly and reviewers need to use the XML or JSON tab to see the defintion. |
+| 55 | Notes to Balloters: A note to balloters was added to explain that the name of the IG will be changed before publication to remove the use of the FHIR Accelerator Program name and to remove the use of a trademarked phrase. Discussions are underway to seek approval for the new IG name. |
+| 54 | Notes to Balloters: A note to balloters was added to explain that certain Terminology naming issues will be addressed during the ballot process and will be resolved prior to publication in the following way: the Value Sets will be updated to remove reference to CARIN Blue Button, replaced by either industry standard names or, for those specific to claim adjudication, with the new IG name.  Industry standard Code System revisions include consolidating the three Type of Bill Codes, removing reference to SNOMED CT, etc. |
+| 53 | Note to Balloters: A note to balloters was added to explain that certain Code System referencing issues will be addressed during the ballot process and will be resolved prior to publication. Based on recent guidance from the HL7 Vocabulary Workgroup a change will be made to reference external licensed Code Systems using URIs instead of OIDs|
+| 52 | Capability Statements: The names of the Capability Statements were modified to align with the updated actor names. |
+| 51 | Profiles and Extensions: The MustSupport implementer guidance was added to the CARINBBExplanationOfBenefit Profile.  A sentence was added to explain the Explanation of Benefit profiles inherit MustSupport guidance from the base profile.  Search parameter guidance was added for the Coverage and Explanation of Benefit profile.  |
+| 50 | Notes to Balloters: The Feedback section was modified to Notes to Balloters and comments were added requesting feedback on additional search parameters needed to support the use cases covered in this IG. An additional comment was added about Value Set and Codes System names noting they will be updated prior to publication and Terminology references. The note explains that they way Licensed Codes Systems and associated Value Sets are identified will be modified to incorporate recent changes in the way FHIR IGs specify external codes systems that HL7 is not licensed to incorporate into publications made available through HL7.org/FHIR 
+|
+| 49 | Access to Licensed Code Systems: A new section under General Guidance, Access to Licensed Code Systems, was added.  It will include guidance on how to access Licensed Industry Standard Code Systems and Available Industry Standard Code Systems. |
+| 48 | General Guidance: A section, General Guidance, was added to include guidance to support MustSupport for this IG, how to handle missing information. |
+| 47 | Use Case: A sequence flow diagram was added and the actor names in the descriptions were modified to align with the actor names used in the diagram. |
+| 46 | CARIN Blue Button Framework Specification: hotlinks were added to make the content it describes directly accessible without having to click through next page. |
+| 45 | Home Page, CARIN Alliance section: Formatting was resolved and additional verbiage was added to note that Blue Button is a registered mark of the U.S. Department of Health and Human Services. An attribution statement was made in the Acknowledgements to state, Blue Button, the slogan, Download My Data, the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services. |
 | 44 | Refined mapping page and added worksheet download link. Added initial profile desciptions and  must support flags. |
 | 43 | The IG does not forbid any elements from base R4. Added &reg; symbol to Blue Button references to acknowledge CMS' registered mark. Reorganized the mapping sections. |
 | 42 | First pass at harmonization of profiles and terminologies. Added the **Authorization, Authentication, and Registration** section. |
@@ -46,21 +57,26 @@ See the [Table of Contents](toc.html) for more information.
 | 35 | Revised narrative content |
 | 34 | Removed Credits and added USCore Patient based CARINBBPatient profile |
 | 33 | Removed mapping page content and created new pages for Coverage, Patient, Comprehensive, and Data Index (to match spreadsheet); added content from spreadsheet to the pages |
-| 32 | Added 4 specific EOB and 1 Coverage profiles |
+| 32 | Added 4 specific EOB and 1 Coverage profiles. |
 | 31 | Removed mapping pages for Claim, Claim LIne, Diagnosis, Procedure, Member and Coverage; removed 10 EOB profile stubs and replaced with 1 base profile |
 | 30 | Added pages to hold mappings for EOB Inpatient Facility, EOB Outpatient Facility, EOB Professional/Non-Clinician, and EOB Pharmacy |
 | 29 | Updated Provider and Claim Line Amounts mappings. |
 | 28 | Removed references to flat file format.  Combined CPCDS format and mapping sections. Updated sample reverse mapping. |
 | 27 | Replaced 6 EOB profiles (one per claim type) with 10 EOB profiles (one per claim/subclaim type, flattened). Renamed things with new naming convention. |
-| 26 | Added sample of reverse mapping narrative for ExplanationOfBenefit |
+| 26 | Added sample of reverse mapping narrative for ExplanationOfBenefit. |
 | 25 | Added FHIR Resources section to narrative and included Example EOB. |
 | 24 | Replaced EOB profile with one EOB profile for each claim type. Added Business Rules page as a placeholder. |
 | 23 | Added the Latest Changes section. Added USCoreR4 Dependency. |
 
+
+### Acknowledgements
+
+Blue Button, the slogan, 'Download My Data,' the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services.
+
 ---
 >This implementation guide is currently a work in progress and is in draft status.
 >
->Blue Button&reg; is a registered mark of CMS
+>Blue Button&reg; is a registered mark of HHS
 ---
 
 

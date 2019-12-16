@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-RelatedPerson",
 	"meta": {
-		"versionId": "4",
-		"lastUpdated": "2019-12-06T07:32:51.000-05:00"
+		"versionId": "5",
+		"lastUpdated": "2019-12-14T13:02:08.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-relatedperson",
 	"version": "0.5",
@@ -11,7 +11,7 @@
 	"title": "CARIN Blue Button Related Person Profile",
 	"status": "active",
 	"publisher": "CARIN Alliance",
-	"description": "CARIN Blue Button Related Person Profile",
+	"description": "This profile builds on the RelatedPerson Resource. It includes additional constraints relevant for the use cases addressed by this IG.",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,

@@ -11,10 +11,13 @@ Consumer-directed exchange occurs when a consumer or an authorized caregiver inv
 
 **Use Case**: Consumer Access to their Claims Data
 
+<table><tr><td><img src="Screen Shot 2019-12-13 at 3.31.56 PM.png" /></td></tr></table>
+
 Actors:
 * Consumer (aka Beneficiary, Patient, or Authorized Caregiver)
-* Payer (aka Health Plan, Commercial Payer, Covered Entity)
-* Consumer-facing application - A digital third-party application selected by and primarily for the Consumer with a consumer-facing user interface
+* Consumer App- A digital third-party application selected by and primarily for the Consumer with a consumer-facing user interface
+* Patient Portal / Identity Provider
+* Health Plan API (aka Health Plan, Commercial Payer, Covered Entity)
 
 Normal Flow:
 * Consumer downloads or accesses the application of their choice

@@ -17,11 +17,11 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Discharge Status Value Set</h2><div><p>UB04 (FL-17)</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html</code></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-discharge-status"];
-  fhir:ValueSet.version [ fhir:value "0.1.43-DRAFT"];
+  fhir:ValueSet.version [ fhir:value "0.1.57-DRAFT"];
   fhir:ValueSet.name [ fhir:value "CARINBBDischargeStatus"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button Discharge Status Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-11T08:57:52-05:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-12-15T21:47:45-05:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "UB04 (FL-17)"];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

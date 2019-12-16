@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-Patient",
 	"meta": {
-		"versionId": "7",
-		"lastUpdated": "2019-12-06T10:42:58.000-05:00"
+		"versionId": "9",
+		"lastUpdated": "2019-12-15T18:04:47.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient",
 	"version": "0.5",
@@ -12,7 +12,7 @@
 	"status": "active",
 	"date": "2019-11-26",
 	"publisher": "CARIN Alliance",
-	"description": "CARIN Blue Button Patient Profile",
+	"description": "This profile builds on USCorePatient Profile. It includes additional constraints relevant for the use cases addressed by this IG.",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,

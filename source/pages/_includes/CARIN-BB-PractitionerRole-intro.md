@@ -1,1 +1,1 @@
-CARIN Blue Button Practitioner Role Profile
+This profile builds on USCorePractitionerRole Profile. It includes additional constraints relevant for the use cases addressed by this IG.

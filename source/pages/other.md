@@ -24,20 +24,40 @@ active: other
 </thead>
 <tbody>
 <tr>
-<td>SearchParameter</td>
-<td><a href="SearchParameter-carin-bb-coverage-patient.html">CarinBBCoveragePatient</a></td>
+<td>Coverage</td>
+<td><a href="Coverage-Coverage1.html">Coverage1</a></td>
+</tr>
+<tr>
+<td>ExplanationOfBenefit</td>
+<td><a href="ExplanationOfBenefit-EOB1.html">EOB1</a></td>
+</tr>
+<tr>
+<td>Organization</td>
+<td><a href="Organization-Org1.html">Hospital ABC</a></td>
+</tr>
+<tr>
+<td>Organization</td>
+<td><a href="Organization-Org45.html">Insurance XYZ</a></td>
+</tr>
+<tr>
+<td>Patient</td>
+<td><a href="Patient-Patient1.html">Patient1</a></td>
+</tr>
+<tr>
+<td>PractitionerRole</td>
+<td><a href="PractitionerRole-PractitionerRole1.html">PractitionerRole1</a></td>
 </tr>
 <tr>
 <td>SearchParameter</td>
-<td><a href="SearchParameter-carin-bb-coverage-status.html">CarinBBCoverageStatus</a></td>
+<td><a href="SearchParameter-carin-bb-coverage-patient-sp.html">CARINBlueButtonCoveragePatientSP</a></td>
 </tr>
 <tr>
 <td>SearchParameter</td>
-<td><a href="SearchParameter-carin-bb-explanationofbenefit-patient.html">CarinBBExplanationOfBenefitPatient</a></td>
+<td><a href="SearchParameter-carin-bb-explanationofbenefit-created-sp.html">CARINBlueButtonEOBCreatedSP</a></td>
 </tr>
 <tr>
 <td>SearchParameter</td>
-<td><a href="SearchParameter-carin-bb-explanationofbenefit-status.html">CarinBBExplanationOfBenefitStatus</a></td>
+<td><a href="SearchParameter-carin-bb-explanationofbenefit-patient-sp.html">CARINBlueButtonEOBPatientSP</a></td>
 </tr>
 </tbody>
 </table>

@@ -1,1 +1,1 @@
-CARIN Blue Button Related Person Profile
+This profile builds on the RelatedPerson Resource. It includes additional constraints relevant for the use cases addressed by this IG.

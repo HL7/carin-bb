@@ -16,4 +16,4 @@ Conforming client applications and systems of record MAY support the [UDAP Tiere
 
 Additional constraints on the SMART and UDAP profiles listed above for the CARIN Blue Button IG use case can be found at [URI TBD](http://).
 
-[Next Page](Benefit_to_Consumers_and_Health_Plans.html)
+[Next Page](Search_Parameters.html)

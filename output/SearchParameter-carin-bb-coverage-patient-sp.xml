@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="carin-bb-coverage-patient-sp"/>
+  <meta>
+    <versionId value="2"/>
+    <lastUpdated value="2019-12-15T13:27:32.000-05:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>SearchParameter: CARINBlueButtonCoveragePatientSP</h2><p><b> description</b> : Retrieve coverages for a patient
+         </p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-coverage-patient-sp"/>
+  <version value="0.1.57-DRAFT"/>
+  <name value="CARINBlueButtonCoveragePatientSP"/>
+  <derivedFrom value="http://hl7.org/fhir/SearchParameter/Coverage-patient-sp"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2019-12-01T04:48:45-05:00"/>
+  <publisher value="HL7 International &amp; CARIN Alliance"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.carinalliance.com/about-us/contact-us"/>
+    </telecom>
+  </contact>
+  <description value="Retrieve coverages for a patient"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <code value="patient"/>
+  <base value="Coverage"/>
+  <type value="reference"/>
+  <expression value="Coverage.beneficiary"/>
+  <xpath value="f:Coverage/f:beneficiary"/>
+  <xpathUsage value="normal"/>
+  <target value="Patient"/>
+</SearchParameter>

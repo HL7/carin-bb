@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-PractitionerRole",
 	"meta": {
-		"versionId": "4",
-		"lastUpdated": "2019-12-06T07:33:20.000-05:00"
+		"versionId": "6",
+		"lastUpdated": "2019-12-15T18:05:04.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole",
 	"version": "0.5",
@@ -11,7 +11,7 @@
 	"title": "CARIN Blue Button Practitioner Role Profile",
 	"status": "active",
 	"publisher": "CARIN Alliance",
-	"description": "CARIN Blue Button Practitioner Role Profile",
+	"description": "This profile builds on USCorePractitionerRole Profile. It includes additional constraints relevant for the use cases addressed by this IG.",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,

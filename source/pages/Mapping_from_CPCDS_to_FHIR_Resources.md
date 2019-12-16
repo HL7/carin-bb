@@ -20,13 +20,16 @@ Based on CPCDS, the mappings define the minimum mandatory elements, extensions a
 This implementation guide establishes a set of FHIR Profiles for the Explanation of Benefit resource and other referenced FHIR resources. The data represented in these profiles aligns with claim submission standards adopted by the US Department of Health and Human Services. Five EOB profiles have been specified.  The first is an EOB Profile that includes data representation constraints which are common across all types of EOBs.  The other four define more specific profiling which are distinct for each type of benefit.  For example, the Inpatient EOB Profile adds additional constraints specific to how Inpatient Facility benefit data is represented.
 
 The five EOB profiles include:
+
+
 | | | |
 | --- | --- | --- |
-| 1 | CARINBBExplanationOfBenefit | CARIN Blue Button Explanation of Benefit Profile |
-| 2 | CARINBBExplanationOfBenefitInpatientFacility | CARIN Blue Button Explanation of Benefit Inpatient Facility Profile |
-| 3 | CARINBBExplanationOfBenefitOutpatientFacility | CARIN Blue Button Explanation of Benefit Outpatient Facility Profile |
-| 4 | CARINBBExplanationOfBenefitPharmacy | CARIN Blue Button Explanation of Benefit Pharmacy Profile |
-| 5 | CARINBBExplanationOfBenefitProfessionalNonClinician | CARIN Blue Button Explanation of Benefit Professional or Non-Clinician Profile |
+| 1 | [CARINBBExplanationOfBenefit](https://trifolia-fhir-dev.lantanagroup.com/igs/lantana_prod_hapi_r4/carin-bb/StructureDefinition-CARIN-BB-ExplanationOfBenefit.htmlps://trifolia-fhir-dev.lantanagroup.com/igs/lantana_prod_hapi_r4/carin-bb/StructureDefinition-CARIN-BB-ExplanationOfBenefit.html) | CARIN Blue Button Explanation of Benefit Profile |
+| 2 | [CARINBBExplanationOfBenefitInpatientFacility](https://trifolia-fhir-dev.lantanagroup.com/igs/lantana_prod_hapi_r4/carin-bb/StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inpatient-Facility.html) | CARIN Blue Button Explanation of Benefit Inpatient Facility Profile |
+| 3 | [CARINBBExplanationOfBenefitOutpatientFacility](https://trifolia-fhir-dev.lantanagroup.com/igs/lantana_prod_hapi_r4/carin-bb/StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.html) | CARIN Blue Button Explanation of Benefit Outpatient Facility Profile |
+| 4 | [CARINBBExplanationOfBenefitPharmacy](https://trifolia-fhir-dev.lantanagroup.com/igs/lantana_prod_hapi_r4/carin-bb/StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html) |Explanation of Benefit Pharmacy Profile |
+| 5 | [CARINBBExplanationOfBenefitProfessionalNonClinician](https://trifolia-fhir-dev.lantanagroup.com/igs/lantana_prod_hapi_r4/carin-bb/StructureDefinition-CARIN-BB-ExplanationOfBenefit-Professional-NonClinician.html ) | Explanation of Benefit Professional or NonClinician |
+
 
 > Two additional EOB profiles are expected to be added in 2020.  They cover Vision and Dental/Oral benefits.  
 

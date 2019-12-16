@@ -1,0 +1,221 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "carin-bb-healthplan-api",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2019-12-15T17:56:07.000-05:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">CARIN Blue Button Server CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.1.43-DRAFT</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-12-04</li><li>Published by HL7 International and CARIN Alliance</li></ul><p><p>This Section describes the expected capabilities of the CARIN Blue Button Server actor which is responsible for providing responses to the queries submitted by the CARIN Blue Button Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined.</p></p><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>The CARIN Blue Button Server <strong>SHALL</strong>:</p><ol><li>Support the CARIN Blue Button Patient resource profile.</li><li>Support at least one additional resource profile from the list of CARIN Blue Button Profiles.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Return the following response classes:\r\n      <ul><li>(Status 400): invalid parameter</li><li>(Status 401/4xx): unauthorized request</li><li>(Status 403): insufficient scope</li><li>(Status 404): unknown resource</li><li>(Status 410): deleted resource.</li></ul></li><li>Support json source formats for all CARIN Blue Button interactions.</li></ol><p>The CARIN Blue Button Server <strong>SHOULD</strong>:</p><ol><li>Support xml source formats for all CARIN Blue Button interactions.</li><li>Identify the CARIN Blue Button profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li></ol><p id=\"security\"><strong>Security:</strong></p><ol><li>See the <a href=\"Authorization,_Authentication,_and_Registration.html\">Authorization, Authentication, and Registration</a> section for requirements and recommendations.</li><li>A server <strong>SHALL</strong> reject any unauthorized requests by returning an <code>HTTP 401</code> unauthorized response code.</li></ol><hr/><br/></div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin/CapabilityStatement/carin-bb-healthplan-api",
+  "version": "0.1.57-DRAFT",
+  "name": "CARINBlueButton_HealthPlan_API_CapabilityStatement",
+  "title": "CARIN Blue Button HealthPlan API CapabilityStatement",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-12-04T00:00:00-05:00",
+  "publisher": "CARIN Alliance",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.carinalliance.com/about-us/contact-us"
+        }
+      ]
+    }
+  ],
+  "description": "This Section describes the expected capabilities of the CARIN Blue Button Server actor which is responsible for providing responses to the queries submitted by the CARIN Blue Button Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "kind": "requirements",
+  "fhirVersion": "4.0.0",
+  "format": [
+    "xml",
+    "json"
+  ],
+  "implementationGuide": [
+    "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "documentation": "The CARIN Blue Button Server **SHALL**:\n\n1. Support the CARIN Blue Button Patient resource profile.\n2. Support at least one additional resource profile from the list of CARIN Blue Button Profiles.\n3. Implement the RESTful behavior according to the FHIR specification.\n4. Return the following response classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized request\n   - (Status 403): insufficient scope\n   - (Status 404): unknown resource\n   - (Status 410): deleted resource.\n5. Support json source formats for all CARIN Blue Button interactions.\n\nThe CARIN Blue Button Server **SHOULD**:\n\n1. Support xml source formats for all CARIN Blue Button interactions.\n2. Identify the CARIN Blue Button profiles supported as part of the FHIR `meta.profile` attribute for each instance.",
+      "security": {
+        "cors": true,
+        "service": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
+                "code": "OAuth",
+                "display": "OAuth"
+              }
+            ],
+            "text": "OAuth"
+          },
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/restful-security-service",
+                "code": "SMART-on-FHIR",
+                "display": "SMART-on-FHIR"
+              }
+            ],
+            "text": "OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org)"
+          }
+        ],
+        "description": "1. See the [General Security Considerations](Authorization,_Authentication,_and_Registration.html) section for requirements and recommendations.\n2. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code."
+      },
+      "resource": [
+        {
+          "type": "Patient",
+          "profile": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient",
+          "interaction": [
+            {
+              "code": "read"
+            }
+          ],
+          "referencePolicy": [
+            "resolves"
+          ]
+        },
+        {
+          "type": "Coverage",
+          "profile": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage",
+          "interaction": [
+            {
+              "code": "search-type"
+            },
+            {
+              "code": "read"
+            }
+          ],
+          "referencePolicy": [
+            "resolves"
+          ],
+          "searchParam": [
+            {
+              "name": "patient",
+              "definition": "http://hl7.org/fhir/us/core/SearchParameter/carin-bb-coverage-patient",
+              "type": "reference"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                },
+                {
+                  "url": "required",
+                  "valueString": "patient"
+                },
+                {
+                  "url": "optional",
+                  "valueString": "created"
+                }
+              ],
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+            }
+          ],
+          "type": "ExplanationOfBenefit",
+          "profile": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit",
+          "supportedProfile": [
+            "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility",
+            "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-outpatient-facility",
+            "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-pharmacy",
+            "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician"
+          ],
+          "interaction": [
+            {
+              "code": "search-type"
+            },
+            {
+              "code": "read"
+            }
+          ],
+          "referencePolicy": [
+            "resolves"
+          ],
+          "searchParam": [
+            {
+              "name": "patient",
+              "definition": "http://hl7.org/fhir/us/core/SearchParameter/carin-bb-explanationofbenefit-patient",
+              "type": "reference"
+            },
+            {
+              "name": "created",
+              "definition": "http://hl7.org/fhir/us/core/SearchParameter/carin-bb-explanationofbenefit-patient",
+              "type": "date"
+            }
+          ]
+        },
+        {
+          "type": "RelatedPerson",
+          "profile": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-relatedperson",
+          "interaction": [
+            {
+              "code": "read"
+            }
+          ],
+          "referencePolicy": [
+            "resolves"
+          ]
+        },
+        {
+          "type": "PractitionerRole",
+          "profile": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole",
+          "interaction": [
+            {
+              "code": "read"
+            }
+          ],
+          "referencePolicy": [
+            "resolves"
+          ]
+        },
+        {
+          "type": "Organization",
+          "profile": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization",
+          "interaction": [
+            {
+              "code": "read"
+            }
+          ],
+          "referencePolicy": [
+            "resolves"
+          ]
+        },
+        {
+          "type": "ValueSet",
+          "operation": [
+            {
+              "name": "expand",
+              "definition": "http://hl7.org/fhir/OperationDefinition/ValueSet-expand",
+              "documentation": "A  client can determine the note and report types support by a server by invoking the standard FHIR Value Set Expansion ($expand) operation defined in the FHIR R4 specification. Because servers may support different read and write formats, it also is used to determine the formats (for example, text, pdf) the server supports read and write transactions."
+            }
+          ]
+        }
+      ],
+      "interaction": [
+        {
+          "code": "search-system"
+        }
+      ]
+    }
+  ]
+}

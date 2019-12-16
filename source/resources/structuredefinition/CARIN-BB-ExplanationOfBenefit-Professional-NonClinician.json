@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Professional-NonClinician",
 	"meta": {
-		"versionId": "10",
-		"lastUpdated": "2019-12-06T07:36:06.000-05:00"
+		"versionId": "12",
+		"lastUpdated": "2019-12-15T18:03:44.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician",
 	"version": "0.5",
@@ -12,7 +12,7 @@
 	"status": "active",
 	"date": "2019-07-26",
 	"publisher": "CARIN Alliance",
-	"description": "CARIN Blue Button Explanation of Benefit Professional or Non-Clinician Profile",
+	"description": "This profile is built upon the CARINBBExplanationOfBenefit Profile. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations.  The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human  Services as form CMS-1500.  \n\n",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,

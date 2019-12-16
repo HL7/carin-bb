@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/SearchParameter/carin-bb-explanationofbenefit-patient-sp> a fhir:SearchParameter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-bb-explanationofbenefit-patient-sp"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-15T13:26:30.000-05:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SearchParameter: CARINBlueButtonEOBPatientSP</h2><p><b> description</b> : The reference to the patient\r\n         </p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ];
+     fhir:Extension.valueCode [ fhir:value "trial-use" ]
+  ];
+  fhir:SearchParameter.url [ fhir:value "http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-explanationofbenefit-patient-sp"];
+  fhir:SearchParameter.version [ fhir:value "0.1.57-DRAFT"];
+  fhir:SearchParameter.name [ fhir:value "CARINBlueButtonEOBPatientSP"];
+  fhir:SearchParameter.derivedFrom [
+     fhir:value "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-patient-sp";
+     fhir:link <http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-patient-sp>
+  ];
+  fhir:SearchParameter.status [ fhir:value "active"];
+  fhir:SearchParameter.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:SearchParameter.date [ fhir:value "2019-12-01T04:48:45-05:00"^^xsd:dateTime];
+  fhir:SearchParameter.publisher [ fhir:value "HL7 International & CARIN Alliance"];
+  fhir:SearchParameter.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.carinalliance.com/about-us/contact-us" ]
+     ]
+  ];
+  fhir:SearchParameter.description [ fhir:value "The reference to the patient"];
+  fhir:SearchParameter.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
+  fhir:SearchParameter.code [ fhir:value "patient"];
+  fhir:SearchParameter.base [
+     fhir:value "ExplanationOfBenefit";
+     fhir:index 0
+  ];
+  fhir:SearchParameter.type [ fhir:value "reference"];
+  fhir:SearchParameter.expression [ fhir:value "explanationofbenefit.patient"];
+  fhir:SearchParameter.xpath [ fhir:value "f:explanationofbenefit/f:patient"];
+  fhir:SearchParameter.xpathUsage [ fhir:value "normal"];
+  fhir:SearchParameter.target [
+     fhir:value "Patient";
+     fhir:index 0
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/SearchParameter/carin-bb-explanationofbenefit-patient-sp.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/SearchParameter/carin-bb-explanationofbenefit-patient-sp.ttl> .
+
+# -------------------------------------------------------------------------------------
+
