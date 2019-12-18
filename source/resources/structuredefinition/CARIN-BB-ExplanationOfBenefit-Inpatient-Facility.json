@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Inpatient-Facility",
 	"meta": {
-		"versionId": "26",
-		"lastUpdated": "2019-12-15T18:02:22.000-05:00"
+		"versionId": "27",
+		"lastUpdated": "2019-12-16T12:33:58.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility",
 	"version": "0.5",
@@ -276,7 +276,7 @@
 				"min": 1,
 				"binding": {
 					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-tob-admittype"
+					"valueSet": "http://hl7.org/fhir/us/ValueSet/nubc-prioritytypeofadmissionorvisit"
 				}
 			},
 			{
@@ -299,7 +299,7 @@
 				"min": 1,
 				"binding": {
 					"strength": "required",
-					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-discharge-status"
+					"valueSet": "http://hl7.org/fhir/us/ValueSet/nubc-patientdischargestatus"
 				}
 			},
 			{

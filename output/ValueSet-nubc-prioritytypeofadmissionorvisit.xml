@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="nubc-prioritytypeofadmissionorvisit"/>
+  <meta>
+    <versionId value="2"/>
+    <lastUpdated value="2019-12-16T12:55:47.000-05:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>NUBC Priority (Type) of Admission or Visit Value Set</h2><div><p>These codes are found in the <a href="https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256">CMS 1450</a> form.</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http//www.nubc.org/priority-type-of-admission-or-visit</code></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/ValueSet/nubc-prioritytypeofadmissionorvisit"/>
+  <version value="0.1.59-DRAFT"/>
+  <name value="NUBCPriorityTypeOfAdmissionOrVisit"/>
+  <title value="NUBC Priority (Type) of Admission or Visit Value Set"/>
+  <status value="draft"/>
+  <date value="2019-12-18T00:18:52-05:00"/>
+  <description value="These codes are found in the [CMS 1450](https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256) form."/>
+  <compose>
+    <include>
+      <system value="http//www.nubc.org/priority-type-of-admission-or-visit"/>
+    </include>
+  </compose>
+</ValueSet>

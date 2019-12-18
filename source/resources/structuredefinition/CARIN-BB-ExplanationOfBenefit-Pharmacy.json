@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Pharmacy",
 	"meta": {
-		"versionId": "42",
-		"lastUpdated": "2019-12-13T17:22:39.000-05:00"
+		"versionId": "43",
+		"lastUpdated": "2019-12-17T17:00:54.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-pharmacy",
 	"version": "0.5",
@@ -12,7 +12,7 @@
 	"status": "active",
 	"date": "2019-07-26",
 	"publisher": "CARIN Alliance",
-	"description": "This profile is built upon the CARINBBExplanationOfBenefit Resource. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies.  The claims data is based on submission standards adopted by the Department of Health and Human  Services defined by NCPDP (National Council for Prescription Drug Program)\n",
+	"description": "This profile is built upon the CARINBBExplanationOfBenefit Profile. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies.  The claims data is based on submission standards adopted by the Department of Health and Human  Services defined by NCPDP (National Council for Prescription Drug Program)\n",
 	"fhirVersion": "4.0.0",
 	"kind": "resource",
 	"abstract": false,

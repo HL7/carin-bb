@@ -2,8 +2,8 @@
 	"resourceType": "ValueSet",
 	"id": "nubc-pointoforiginforadmissionorvisit",
 	"meta": {
-		"versionId": "2",
-		"lastUpdated": "2019-11-30T04:35:36.000-05:00"
+		"versionId": "3",
+		"lastUpdated": "2019-12-16T09:34:28.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/ValueSet/nubc-pointoforiginforadmissionorvisit",
 	"version": "1.0.0",
@@ -14,7 +14,7 @@
 	"compose": {
 		"include": [
 			{
-				"system": "urn:oid:2.16.840.1.113883.6.301.4"
+				"system": "https://www.nubc.org/point-of-origin-for-admission-or-visit"
 			}
 		]
 	}

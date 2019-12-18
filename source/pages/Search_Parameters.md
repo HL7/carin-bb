@@ -9,10 +9,10 @@ active: Search Parameters
 The Health Plan API actor and Consumer App actor **SHALL** support the following search parameters for the identified Resources:
 
 **Coverage**
-* [patient](https://trifolia-fhir-dev.lantanagroup.com/igs/lantana_prod_hapi_r4/carin-bb/SearchParameter-carin-bb-coverage-patient-sp.html)
+* [patient](SearchParameter-carin-bb-searchparameter-coverage-patient.html)
 
 **ExplanationOfBenefit**
-* [patient](https://trifolia-fhir-dev.lantanagroup.com/igs/lantana_prod_hapi_r4/carin-bb/SearchParameter-carin-bb-explanationofbenefit-patient-sp.html)
-* [date](https://trifolia-fhir-dev.lantanagroup.com/igs/lantana_prod_hapi_r4/carin-bb/SearchParameter-carin-bb-explanationofbenefit-created-sp.html)
+* [patient](SearchParameter-carin-bb-searchparameter-explanationofbenefit-patient.html)
+* [created (date)](SearchParameter-carin-bb-searchparameter-explanationofbenefit-created.html)
 
 [Next Page](Benefit_to_Consumers_and_Health_Plans.html)

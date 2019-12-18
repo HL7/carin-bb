@@ -1,0 +1,267 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CapabilityStatement/carin-bb-capabilitystatement-healthplan-api> a fhir:CapabilityStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-bb-capabilitystatement-healthplan-api"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "3" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-16T02:35:28.000-05:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">CARIN Blue Button Server CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.1.57-DRAFT</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-12-04</li><li>Published by HL7 International and CARIN Alliance</li></ul><p><p>This Section describes the expected capabilities of the CARIN Blue Button Server actor which is responsible for providing responses to the queries submitted by the CARIN Blue Button Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined.</p></p><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>The CARIN Blue Button Server <strong>SHALL</strong>:</p><ol><li>Support the CARIN Blue Button Patient resource profile.</li><li>Support at least one additional resource profile from the list of CARIN Blue Button Profiles.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Return the following response classes:\n      <ul><li>(Status 400): invalid parameter</li><li>(Status 401/4xx): unauthorized request</li><li>(Status 403): insufficient scope</li><li>(Status 404): unknown resource</li><li>(Status 410): deleted resource.</li></ul></li><li>Support json source formats for all CARIN Blue Button interactions.</li></ol><p>The CARIN Blue Button Server <strong>SHOULD</strong>:</p><ol><li>Support xml source formats for all CARIN Blue Button interactions.</li><li>Identify the CARIN Blue Button profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li></ol><p id=\"security\"><strong>Security:</strong></p><ol><li>See the <a href=\"Authorization,_Authentication,_and_Registration.html\">Authorization, Authentication, and Registration</a> section for requirements and recommendations.</li><li>A server <strong>SHALL</strong> reject any unauthorized requests by returning an <code>HTTP 401</code> unauthorized response code.</li></ol><hr/><br/></div>"
+  ];
+  fhir:CapabilityStatement.url [ fhir:value "http://hl7.org/fhir/us/carin/CapabilityStatement/carin-bb-capabilitystatement-healthplan-api"];
+  fhir:CapabilityStatement.version [ fhir:value "0.1.59-DRAFT"];
+  fhir:CapabilityStatement.name [ fhir:value "CARINBlueButton_HealthPlan_API_CapabilityStatement"];
+  fhir:CapabilityStatement.title [ fhir:value "CARIN Blue Button HealthPlan API CapabilityStatement"];
+  fhir:CapabilityStatement.status [ fhir:value "active"];
+  fhir:CapabilityStatement.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CapabilityStatement.date [ fhir:value "2019-12-04T00:00:00-05:00"^^xsd:dateTime];
+  fhir:CapabilityStatement.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CapabilityStatement.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.carinalliance.com/about-us/contact-us" ]
+     ]
+  ];
+  fhir:CapabilityStatement.description [ fhir:value "This Section describes the expected capabilities of the CARIN Blue Button Server actor which is responsible for providing responses to the queries submitted by the CARIN Blue Button Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined."];
+  fhir:CapabilityStatement.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:CapabilityStatement.kind [ fhir:value "requirements"];
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "4.0.0"];
+  fhir:CapabilityStatement.format [
+     fhir:value "xml";
+     fhir:index 0
+  ], [
+     fhir:value "json";
+     fhir:index 1
+  ];
+  fhir:CapabilityStatement.implementationGuide [
+     fhir:value "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb";
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb>
+  ];
+  fhir:CapabilityStatement.rest [
+     fhir:index 0;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "server" ];
+     fhir:CapabilityStatement.rest.documentation [ fhir:value "The CARIN Blue Button Server **SHALL**:\n\n1. Support the CARIN Blue Button Patient resource profile.\n2. Support at least one additional resource profile from the list of CARIN Blue Button Profiles.\n3. Implement the RESTful behavior according to the FHIR specification.\n4. Return the following response classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized request\n   - (Status 403): insufficient scope\n   - (Status 404): unknown resource\n   - (Status 410): deleted resource.\n5. Support json source formats for all CARIN Blue Button interactions.\n\nThe CARIN Blue Button Server **SHOULD**:\n\n1. Support xml source formats for all CARIN Blue Button interactions.\n2. Identify the CARIN Blue Button profiles supported as part of the FHIR `meta.profile` attribute for each instance." ];
+     fhir:CapabilityStatement.rest.security [
+       fhir:CapabilityStatement.rest.security.cors [ fhir:value "true"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.security.service [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/restful-security-service" ];
+           fhir:Coding.code [ fhir:value "OAuth" ];
+           fhir:Coding.display [ fhir:value "OAuth" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "OAuth" ]
+       ], [
+         fhir:index 1;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/restful-security-service" ];
+           fhir:Coding.code [ fhir:value "SMART-on-FHIR" ];
+           fhir:Coding.display [ fhir:value "SMART-on-FHIR" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org)" ]
+       ];
+       fhir:CapabilityStatement.rest.security.description [ fhir:value "1. See the [General Security Considerations](Authorization,_Authentication,_and_Registration.html) section for requirements and recommendations.\n2. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code." ]
+     ];
+     fhir:CapabilityStatement.rest.resource [
+       fhir:index 0;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Patient" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient";
+         fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "resolves";
+         fhir:index 0
+       ]
+     ], [
+       fhir:index 1;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Coverage" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage";
+         fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "resolves";
+         fhir:index 0
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-coverage-patient";
+           fhir:link <http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-coverage-patient>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "patient" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "optional" ];
+           fhir:Extension.valueString [ fhir:value "created" ]
+         ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "ExplanationOfBenefit" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit";
+         fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit>
+       ];
+       fhir:CapabilityStatement.rest.resource.supportedProfile [
+         fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility";
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility>
+       ], [
+         fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-outpatient-facility";
+         fhir:index 1;
+         fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-outpatient-facility>
+       ], [
+         fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-pharmacy";
+         fhir:index 2;
+         fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-pharmacy>
+       ], [
+         fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician";
+         fhir:index 3;
+         fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "resolves";
+         fhir:index 0
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient";
+           fhir:link <http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index 1;
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "created" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [
+           fhir:value "http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient";
+           fhir:link <http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient>
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "date" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "RelatedPerson" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-relatedperson";
+         fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-relatedperson>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "resolves";
+         fhir:index 0
+       ]
+     ], [
+       fhir:index 4;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "PractitionerRole" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole";
+         fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-practitionerrole>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "resolves";
+         fhir:index 0
+       ]
+     ], [
+       fhir:index 5;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "Organization" ];
+       fhir:CapabilityStatement.rest.resource.profile [
+         fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization";
+         fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization>
+       ];
+       fhir:CapabilityStatement.rest.resource.interaction [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.referencePolicy [
+         fhir:value "resolves";
+         fhir:index 0
+       ]
+     ], [
+       fhir:index 6;
+       fhir:CapabilityStatement.rest.resource.type [ fhir:value "ValueSet" ];
+       fhir:CapabilityStatement.rest.resource.operation [
+         fhir:index 0;
+         fhir:CapabilityStatement.rest.resource.operation.name [ fhir:value "expand" ];
+         fhir:CapabilityStatement.rest.resource.operation.definition [
+           fhir:value "http://hl7.org/fhir/OperationDefinition/ValueSet-expand";
+           fhir:link <http://hl7.org/fhir/OperationDefinition/ValueSet-expand>
+         ];
+         fhir:CapabilityStatement.rest.resource.operation.documentation [ fhir:value "A  client can determine the note and report types support by a server by invoking the standard FHIR Value Set Expansion ($expand) operation defined in the FHIR R4 specification. Because servers may support different read and write formats, it also is used to determine the formats (for example, text, pdf) the server supports read and write transactions." ]
+       ]
+     ];
+     fhir:CapabilityStatement.rest.interaction [
+       fhir:index 0;
+       fhir:CapabilityStatement.rest.interaction.code [ fhir:value "search-system" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CapabilityStatement/carin-bb-capabilitystatement-healthplan-api.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/CapabilityStatement/carin-bb-capabilitystatement-healthplan-api.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -11,11 +11,11 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="CodeSystem-CARIN-BB-Adjudication-Category.html"><code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-submittedamount">submittedamount</a></td><td>submitted amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-allowedamount">allowedamount</a></td><td>allowed amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-deductibleamount">deductibleamount</a></td><td>deductible amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-coinsuranceamount">coinsuranceamount</a></td><td>coinsurance amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-copayamount">copayamount</a></td><td>copay amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-noncoveredamount">noncoveredamount</a></td><td>noncovered amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-cobamount">cobamount</a></td><td>cob amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-paymentamount">paymentamount</a></td><td>payment amount</td><td/></tr><tr><td><a href="CodeSystem-CARIN-BB-Adjudication-Category.html#CARIN-BB-Adjudication-Category-patientpayamount">patientpayamount</a></td><td>patient pay amount</td><td/></tr></table></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationamountcategory"/>
-  <version value="0.1.57-DRAFT"/>
+  <version value="0.1.59-DRAFT"/>
   <name value="CARINBBAdjudicationAmountCategory"/>
   <title value="CARIN Blue Button Adjudication Amount Category Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-15T21:47:45-05:00"/>
+  <date value="2019-12-18T00:18:52-05:00"/>
   <description value="Describes the various amount fields used when submitting and adjudicating a claim."/>
   <compose>
     <include>

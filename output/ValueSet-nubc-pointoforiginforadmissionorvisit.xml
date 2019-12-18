@@ -3,23 +3,23 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="nubc-pointoforiginforadmissionorvisit"/>
   <meta>
-    <versionId value="2"/>
-    <lastUpdated value="2019-11-30T04:35:36.000-05:00"/>
+    <versionId value="3"/>
+    <lastUpdated value="2019-12-16T09:34:28.000-05:00"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>NUBC Point of Origin for Admission or Visit Value Set</h2><div><p>These codes are found in the <a href="https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256">CMS 1450</a> form. See HL7 OID <a href="http://www.hl7.org/oid/OID_view.cfm?&amp;Comp_OID=2.16.840.1.113883.6.301.4">information</a>.</p>
-</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>urn:oid:2.16.840.1.113883.6.301.4</code></li></ul></div>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.nubc.org/point-of-origin-for-admission-or-visit</code></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/ValueSet/nubc-pointoforiginforadmissionorvisit"/>
-  <version value="0.1.57-DRAFT"/>
+  <version value="0.1.59-DRAFT"/>
   <name value="NUBCPointOfOriginForAdmissionOrVisit"/>
   <title value="NUBC Point of Origin for Admission or Visit Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-15T21:47:45-05:00"/>
+  <date value="2019-12-18T00:18:52-05:00"/>
   <description value="These codes are found in the [CMS 1450](https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256) form. See HL7 OID [information](http://www.hl7.org/oid/OID_view.cfm?&amp;Comp_OID=2.16.840.1.113883.6.301.4)."/>
   <compose>
     <include>
-      <system value="urn:oid:2.16.840.1.113883.6.301.4"/>
+      <system value="https://www.nubc.org/point-of-origin-for-admission-or-visit"/>
     </include>
   </compose>
 </ValueSet>

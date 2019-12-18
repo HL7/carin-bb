@@ -22,11 +22,11 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization"/>
-  <version value="0.1.57-DRAFT"/>
+  <version value="0.1.59-DRAFT"/>
   <name value="CARINBBOrganization"/>
   <title value="CARIN Blue Button Organization Profile"/>
   <status value="active"/>
-  <date value="2019-12-15T21:47:45-05:00"/>
+  <date value="2019-12-18T00:18:52-05:00"/>
   <publisher value="CARIN Alliance"/>
   <description value="This profile builds on the USCoreOrganization Profile. It includes additional constraints relevant for the use cases addressed by this IG."/>
   <fhirVersion value="4.0.1"/>

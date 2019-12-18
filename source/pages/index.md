@@ -15,7 +15,6 @@ active: home
 
 ### Description
 
-
 # CARIN Alliance
 **_Enabling consumers and their authorized caregivers to access more of their digital health information with less friction._**
 
@@ -31,10 +30,12 @@ See the [Table of Contents](toc.html) for more information.
 
 | Number | Description |
 | :---: | --- |
+| 59 | A new html page was added to the IG to fix the broken Directory of Published version link which wasn't working because this is the first version of the IG to be published. |
+| 58 | The Request a Change link in the IG footer was fixed in Trifolia to take commenters to the new HL7 Jira site for tracking issues. |
 | 57 | Examples have been added and referenced from a new Examples Section. Additional examples will be developed and reviewed during the ballot reconciliation period to be included with the published IG. |
 | 56 | Search Parameters: Added a Search Parameters page to expose the developed SearchParameter Resources defined in this IG. A note to balloters was added to explain that Trifolia on FHIR is not rendering SearchParameter Resources correctly and reviewers need to use the XML or JSON tab to see the defintion. |
-| 55 | Notes to Balloters: A note to balloters was added to explain that the name of the IG will be changed before publication to remove the use of the FHIR Accelerator Program name and to remove the use of a trademarked phrase. Discussions are underway to seek approval for the new IG name. |
-| 54 | Notes to Balloters: A note to balloters was added to explain that certain Terminology naming issues will be addressed during the ballot process and will be resolved prior to publication in the following way: the Value Sets will be updated to remove reference to CARIN Blue Button, replaced by either industry standard names or, for those specific to claim adjudication, with the new IG name.  Industry standard Code System revisions include consolidating the three Type of Bill Codes, removing reference to SNOMED CT, etc. |
+| 55 | Notes to Balloters: A note to balloters was added to explain that the name of the IG has been changed. The formal HL7 title does not include the FHIR Accelerator Program name, nor does it use of a trademarked phrase. An acknowledgement was added to explain the IG will also be known as (aka) the Carin Blue Button IG. |
+| 54 | Notes to Balloters: A note to balloters was added to explain that certain Terminology naming issues will be addressed during the ballot process and will be resolved prior to publication in the following way: the Value Sets will be updated to remove reference to CARIN Blue Button, replaced by either industry standard names or, for those specific to claim adjudication, with the new IG name.  Industry standard Code System revisions include consolidating the three Type of Bill Codes, removing reference to SNOMED CT, etc. Some value sets renaming has be started. The rest will be completed during ballot reconciliation. |
 | 53 | Note to Balloters: A note to balloters was added to explain that certain Code System referencing issues will be addressed during the ballot process and will be resolved prior to publication. Based on recent guidance from the HL7 Vocabulary Workgroup a change will be made to reference external licensed Code Systems using URIs instead of OIDs|
 | 52 | Capability Statements: The names of the Capability Statements were modified to align with the updated actor names. |
 | 51 | Profiles and Extensions: The MustSupport implementer guidance was added to the CARINBBExplanationOfBenefit Profile.  A sentence was added to explain the Explanation of Benefit profiles inherit MustSupport guidance from the base profile.  Search parameter guidance was added for the Coverage and Explanation of Benefit profile.  |
@@ -70,6 +71,7 @@ See the [Table of Contents](toc.html) for more information.
 
 
 ### Acknowledgements
+The Consumer-Directed Payer Data Exchange Implementation Guide is also known as the CARIN Blue Button&reg; Implementation Guide.
 
 Blue Button, the slogan, 'Download My Data,' the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services.
 

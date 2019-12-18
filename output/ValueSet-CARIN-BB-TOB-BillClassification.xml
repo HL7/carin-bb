@@ -11,11 +11,11 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256.html</code></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-tob-billclassification"/>
-  <version value="0.1.57-DRAFT"/>
+  <version value="0.1.59-DRAFT"/>
   <name value="CARINBBTOBBillClassification"/>
   <title value="CARIN Blue Button Type Of Bill (Bill Classification) Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-15T21:47:45-05:00"/>
+  <date value="2019-12-18T00:18:52-05:00"/>
   <description value="UB-04 Type of Bill (FL-4) structure - Type of care&#xA;"/>
   <compose>
     <include>

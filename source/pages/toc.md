@@ -15,4 +15,4 @@ active: toc
     * <a href="Benefit_to_Consumers_and_Health_Plans.html">Benefit to Consumers and Health Plans</a>
     * <a href="General_Guidance.html">General Guidance</a>
     * <a href="Examples.html">Examples</a>
-    * <a href="Notes_to_Balloters.html">Notes to Balloters </a>
+    * <a href="Notes_to_Balloters.html">Notes to Balloters</a>

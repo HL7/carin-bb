@@ -49,15 +49,15 @@ active: other
 </tr>
 <tr>
 <td>SearchParameter</td>
-<td><a href="SearchParameter-carin-bb-coverage-patient-sp.html">CARINBlueButtonCoveragePatientSP</a></td>
+<td><a href="SearchParameter-carin-bb-searchparameter-coverage-patient.html">CARINBlueButton_Coverage_Patient_SearchParameter</a></td>
 </tr>
 <tr>
 <td>SearchParameter</td>
-<td><a href="SearchParameter-carin-bb-explanationofbenefit-created-sp.html">CARINBlueButtonEOBCreatedSP</a></td>
+<td><a href="SearchParameter-carin-bb-searchparameter-explanationofbenefit-created.html">CARINBlueButton_ExplanationOfBenefit_Created_SearchParameter</a></td>
 </tr>
 <tr>
 <td>SearchParameter</td>
-<td><a href="SearchParameter-carin-bb-explanationofbenefit-patient-sp.html">CARINBlueButtonEOBPatientSP</a></td>
+<td><a href="SearchParameter-carin-bb-searchparameter-explanationofbenefit-patient.html">CARINBlueButton_ExplanationOfBenefit_Patient_SearchParameter</a></td>
 </tr>
 </tbody>
 </table>
