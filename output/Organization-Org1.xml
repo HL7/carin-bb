@@ -3,8 +3,8 @@
 <Organization xmlns="http://hl7.org/fhir">
   <id value="Org1"/>
   <meta>
-    <versionId value="2"/>
-    <lastUpdated value="2019-12-15T20:22:58.000-05:00"/>
+    <versionId value="4"/>
+    <lastUpdated value="2019-12-18T22:28:27.000-05:00"/>
     <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization"/>
   </meta>
   <text>
@@ -29,11 +29,11 @@
     <type>
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-        <code value="PRN"/>
-        <display value="Provider number"/>
+        <code value="TAX"/>
+        <display value="Tax ID number"/>
       </coding>
     </type>
-    <system value="http://www.bcbs.com/fhir/ns/NamingSystem/organization-identifier-inpatient"/>
+    <system value="urn:oid:2.16.840.1.113883.4.4"/>
     <value value="AB12346"/>
   </identifier>
   <active value="true"/>

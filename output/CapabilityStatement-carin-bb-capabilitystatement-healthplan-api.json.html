@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">Consumer-Directed Payer Data Exchange - Local Development build (v0.1.59-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">Consumer-Directed Payer Data Exchange - Local Development build (v0.1.60-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -283,17 +283,17 @@ can only resize using html  or css ;-(
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement">resourceType</a>" : "CapabilityStatement",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.id">id</a>" : "carin-bb-capabilitystatement-healthplan-api",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.meta">meta</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "3",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2019-12-16T02:35:28.000-05:00"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "5",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2019-12-18T22:28:15.000-05:00"
   },
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2 id=\&quot;title\&quot;&gt;CARIN Blue Button Server CapabilityStatement&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Implementation Guide Version: 0.1.57-DRAFT&lt;/li&gt;&lt;li&gt;FHIR Version: 4.0.1&lt;/li&gt;&lt;li&gt;Supported formats: xml, json&lt;/li&gt;&lt;li&gt;Published: 2019-12-04&lt;/li&gt;&lt;li&gt;Published by HL7 International and CARIN Alliance&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;p&gt;This Section describes the expected capabilities of the CARIN Blue Button Server actor which is responsible for providing responses to the queries submitted by the CARIN Blue Button Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined.&lt;/p&gt;&lt;/p&gt;&lt;h3 id=\&quot;behavior\&quot;&gt;FHIR RESTful Capabilities&lt;/h3&gt;&lt;p&gt;The CARIN Blue Button Server &lt;strong&gt;SHALL&lt;/strong&gt;:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Support the CARIN Blue Button Patient resource profile.&lt;/li&gt;&lt;li&gt;Support at least one additional resource profile from the list of CARIN Blue Button Profiles.&lt;/li&gt;&lt;li&gt;Implement the RESTful behavior according to the FHIR specification.&lt;/li&gt;&lt;li&gt;Return the following response classes:\n      &lt;ul&gt;&lt;li&gt;(Status 400): invalid parameter&lt;/li&gt;&lt;li&gt;(Status 401/4xx): unauthorized request&lt;/li&gt;&lt;li&gt;(Status 403): insufficient scope&lt;/li&gt;&lt;li&gt;(Status 404): unknown resource&lt;/li&gt;&lt;li&gt;(Status 410): deleted resource.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Support json source formats for all CARIN Blue Button interactions.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;The CARIN Blue Button Server &lt;strong&gt;SHOULD&lt;/strong&gt;:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Support xml source formats for all CARIN Blue Button interactions.&lt;/li&gt;&lt;li&gt;Identify the CARIN Blue Button profiles supported as part of the FHIR &lt;code&gt;meta.profile&lt;/code&gt; attribute for each instance.&lt;/li&gt;&lt;/ol&gt;&lt;p id=\&quot;security\&quot;&gt;&lt;strong&gt;Security:&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;See the &lt;a href=\&quot;Authorization,_Authentication,_and_Registration.html\&quot;&gt;Authorization, Authentication, and Registration&lt;/a&gt; section for requirements and recommendations.&lt;/li&gt;&lt;li&gt;A server &lt;strong&gt;SHALL&lt;/strong&gt; reject any unauthorized requests by returning an &lt;code&gt;HTTP 401&lt;/code&gt; unauthorized response code.&lt;/li&gt;&lt;/ol&gt;&lt;hr/&gt;&lt;br/&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2 id=\&quot;title\&quot;&gt;Consumer-Directed Payer Data Exchange Server CapabilityStatement&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Implementation Guide&lt;/li&gt;&lt;li&gt;FHIR Version: 4.0.1&lt;/li&gt;&lt;li&gt;Supported formats: xml, json&lt;/li&gt;&lt;li&gt;Published: 2019-12-04&lt;/li&gt;&lt;li&gt;Published by HL7 International and CARIN Alliance&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;p&gt;This Section describes the expected capabilities of the Consumer-Directed Payer Data Exchange Server actor which is responsible for providing responses to the queries submitted by the Consumer-Directed Payer Data Exchange Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by Consumer-Directed Payer Data Exchange Servers are defined.&lt;/p&gt;&lt;/p&gt;&lt;h3 id=\&quot;behavior\&quot;&gt;FHIR RESTful Capabilities&lt;/h3&gt;&lt;p&gt;The Consumer-Directed Payer Data Exchange Server \n                &lt;strong&gt;SHALL&lt;/strong&gt;:\n            &lt;/p&gt;&lt;ol&gt;&lt;li&gt;Support the CARIN Blue Button Patient and ExplanationOfBenefit resource profiles.&lt;/li&gt;&lt;li&gt;Support additional resource profiles from the list of CARIN Blue Button Profiles.&lt;/li&gt;&lt;li&gt;Implement the RESTful behavior according to the FHIR specification.&lt;/li&gt;&lt;li&gt;Return the following response classes:\n      \n                    &lt;ul&gt;&lt;li&gt;(Status 400): invalid parameter&lt;/li&gt;&lt;li&gt;(Status 401/4xx): unauthorized request&lt;/li&gt;&lt;li&gt;(Status 403): insufficient scope&lt;/li&gt;&lt;li&gt;(Status 404): unknown resource&lt;/li&gt;&lt;li&gt;(Status 410): deleted resource.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Support json source formats for all Consumer-Directed Payer Data Exchange interactions.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;The Consumer-Directed Payer Data Exchange Server \n                &lt;strong&gt;SHOULD&lt;/strong&gt;:\n            &lt;/p&gt;&lt;ol&gt;&lt;li&gt;Support xml source formats for all Consumer-Directed Payer Data Exchange interactions.&lt;/li&gt;&lt;li&gt;Identify the CARIN Blue Button profiles supported as part of the FHIR \n                    &lt;code&gt;meta.profile&lt;/code&gt; attribute for each instance.\n                &lt;/li&gt;&lt;/ol&gt;&lt;p id=\&quot;security\&quot;&gt;&lt;strong&gt;Security:&lt;/strong&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;See the \n                    &lt;a href=\&quot;Authorization,_Authentication,_and_Registration.html\&quot;&gt;Authorization, Authentication, and Registration&lt;/a&gt; section for requirements and recommendations.\n                &lt;/li&gt;&lt;li&gt;A server \n                    &lt;strong&gt;SHALL&lt;/strong&gt; reject any unauthorized requests by returning an \n                    &lt;code&gt;HTTP 401&lt;/code&gt; unauthorized response code.\n                &lt;/li&gt;&lt;/ol&gt;&lt;hr/&gt;&lt;br/&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
   },
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.url">url</a>" : "http://hl7.org/fhir/us/carin/CapabilityStatement/carin-bb-capabilitystatement-healthplan-api",
-  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.version">version</a>" : "0.1.59-DRAFT",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.version">version</a>" : "0.1.60-DRAFT",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.name">name</a>" : "CARINBlueButton_HealthPlan_API_CapabilityStatement",
-  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.title">title</a>" : "CARIN Blue Button HealthPlan API CapabilityStatement",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.title">title</a>" : "Consumer-Directed Payer Data Exchange HealthPlan API CapabilityStatement",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.status">status</a>" : "active",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.experimental">experimental</a>" : false,
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.date">date</a>" : "2019-12-04T00:00:00-05:00",
@@ -308,7 +308,7 @@ can only resize using html  or css ;-(
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.description">description</a>" : "This Section describes the expected capabilities of the CARIN Blue Button Server actor which is responsible for providing responses to the queries submitted by the CARIN Blue Button Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined.",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.description">description</a>" : "This Section describes the expected capabilities of the Consumer-Directed Payer Data Exchange Server actor which is responsible for providing responses to the queries submitted by the Consumer-Directed Payer Data Exchange Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by Consumer-Directed Payer Data Exchange Servers are defined.",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.jurisdiction">jurisdiction</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
@@ -331,7 +331,7 @@ can only resize using html  or css ;-(
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest">rest</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.mode">mode</a>" : "server",
-      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.documentation">documentation</a>" : "The CARIN Blue Button Server **SHALL**:\n\n1. Support the CARIN Blue Button Patient resource profile.\n2. Support at least one additional resource profile from the list of CARIN Blue Button Profiles.\n3. Implement the RESTful behavior according to the FHIR specification.\n4. Return the following response classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized request\n   - (Status 403): insufficient scope\n   - (Status 404): unknown resource\n   - (Status 410): deleted resource.\n5. Support json source formats for all CARIN Blue Button interactions.\n\nThe CARIN Blue Button Server **SHOULD**:\n\n1. Support xml source formats for all CARIN Blue Button interactions.\n2. Identify the CARIN Blue Button profiles supported as part of the FHIR `meta.profile` attribute for each instance.",
+      "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.documentation">documentation</a>" : "The Consumer-Directed Payer Data Exchange Server **SHALL**:\n\n1. Support the CARIN Blue Button Patient and ExplanationOfBenefit resource profiles.\n2. Support additional resource profiles from the list of CARIN Blue Button Profiles.\n3. Implement the RESTful behavior according to the FHIR specification.\n4. Return the following response classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized request\n   - (Status 403): insufficient scope\n   - (Status 404): unknown resource\n   - (Status 410): deleted resource.\n5. Support json source formats for all Consumer-Directed Payer Data Exchange interactions.\n\nThe Consumer-Directed Payer Data Exchange Server **SHOULD**:\n\n1. Support xml source formats for all Consumer-Directed Payer Data Exchange interactions.\n2. Identify the CARIN Blue Button profiles supported as part of the FHIR `meta.profile` attribute for each instance.",
       "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security">security</a>" : {
         "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security.cors">cors</a>" : true,
         "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.security.service">service</a>" : [
@@ -388,7 +388,7 @@ can only resize using html  or css ;-(
           "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "patient",
-              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>" : "http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-coverage-patient",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>" : "http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-searchparameter-coverage-patient",
               "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference"
             }
           ]
@@ -435,12 +435,12 @@ can only resize using html  or css ;-(
           "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam">searchParam</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "patient",
-              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>" : "http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>" : "http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient",
               "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "reference"
             },
             {
               "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.name">name</a>" : "created",
-              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>" : "http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient",
+              "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.definition">definition</a>" : "http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient",
               "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.rest.resource.searchParam.type">type</a>" : "date"
             }
           ]
@@ -544,8 +544,8 @@ Formats: <a href="CapabilityStatement-carin-bb-capabilitystatement-healthplan-ap
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CARINBlueButton Version: 0.1.59-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Dec 18, 2019 00:18-0500.
-      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+      CARINBlueButton Version: 0.1.60-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Thu, Dec 19, 2019 16:49-0500.
+      | <a style="color: #81BEF7" href="https://jira.hl7.org/projects/FHIR">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>

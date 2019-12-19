@@ -25,11 +25,11 @@ active: capstatements
 <tbody>
 <tr>
 <td><a href="CapabilityStatement-carin-bb-capabilitystatement-consumer-app.html">CARIN_BlueButton_Consumer_App_CapabilityStatement</a></td>
-<td>The Section describes the expected capabilities of the CARIN Blue Button Consumer App which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined in the [Conformance Requirements for Server](carin-bb-capabilitystatement-healthplan-api.html). CARIN Blue Button Consumer Apps have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.</td>
+<td>The Section describes the expected capabilities of the Consumer-Directed Payer Data Exchange Consumer App which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by Consumer-Directed Payer Data Exchange Servers are defined in the [Conformance Requirements for Server](carin-bb-capabilitystatement-healthplan-api.html). Consumer-Directed Payer Data Exchange Consumer Apps have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.</td>
 </tr>
 <tr>
 <td><a href="CapabilityStatement-carin-bb-capabilitystatement-healthplan-api.html">CARINBlueButton_HealthPlan_API_CapabilityStatement</a></td>
-<td>This Section describes the expected capabilities of the CARIN Blue Button Server actor which is responsible for providing responses to the queries submitted by the CARIN Blue Button Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined.</td>
+<td>This Section describes the expected capabilities of the Consumer-Directed Payer Data Exchange Server actor which is responsible for providing responses to the queries submitted by the Consumer-Directed Payer Data Exchange Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by Consumer-Directed Payer Data Exchange Servers are defined.</td>
 </tr>
 </tbody>
 </table>

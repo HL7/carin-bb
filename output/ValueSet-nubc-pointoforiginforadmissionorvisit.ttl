@@ -17,11 +17,11 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>NUBC Point of Origin for Admission or Visit Value Set</h2><div><p>These codes are found in the <a href=\"https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256\">CMS 1450</a> form. See HL7 OID <a href=\"http://www.hl7.org/oid/OID_view.cfm?&amp;Comp_OID=2.16.840.1.113883.6.301.4\">information</a>.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>https://www.nubc.org/point-of-origin-for-admission-or-visit</code></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/ValueSet/nubc-pointoforiginforadmissionorvisit"];
-  fhir:ValueSet.version [ fhir:value "0.1.59-DRAFT"];
+  fhir:ValueSet.version [ fhir:value "0.1.60-DRAFT"];
   fhir:ValueSet.name [ fhir:value "NUBCPointOfOriginForAdmissionOrVisit"];
   fhir:ValueSet.title [ fhir:value "NUBC Point of Origin for Admission or Visit Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-18T00:18:52-05:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-12-19T16:49:00-05:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "These codes are found in the [CMS 1450](https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256) form. See HL7 OID [information](http://www.hl7.org/oid/OID_view.cfm?&Comp_OID=2.16.840.1.113883.6.301.4)."];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

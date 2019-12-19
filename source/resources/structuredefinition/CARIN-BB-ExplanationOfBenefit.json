@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit",
 	"meta": {
-		"versionId": "31",
-		"lastUpdated": "2019-12-15T09:08:28.000-05:00"
+		"versionId": "32",
+		"lastUpdated": "2019-12-19T00:17:11.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit",
 	"version": "0.5",
@@ -255,8 +255,7 @@
 			},
 			{
 				"id": "ExplanationOfBenefit.insurance.focal",
-				"path": "ExplanationOfBenefit.insurance.focal",
-				"fixedBoolean": true
+				"path": "ExplanationOfBenefit.insurance.focal"
 			},
 			{
 				"id": "ExplanationOfBenefit.insurance.coverage",
@@ -281,6 +280,18 @@
 				"id": "ExplanationOfBenefit.insurance:primaryinsurance.focal",
 				"path": "ExplanationOfBenefit.insurance.focal",
 				"fixedBoolean": false
+			},
+			{
+				"id": "ExplanationOfBenefit.insurance:secondaryinsurance",
+				"path": "ExplanationOfBenefit.insurance",
+				"sliceName": "secondaryinsurance",
+				"min": 0,
+				"max": "1"
+			},
+			{
+				"id": "ExplanationOfBenefit.insurance:secondaryinsurance.focal",
+				"path": "ExplanationOfBenefit.insurance.focal",
+				"fixedBoolean": true
 			},
 			{
 				"id": "ExplanationOfBenefit.item",

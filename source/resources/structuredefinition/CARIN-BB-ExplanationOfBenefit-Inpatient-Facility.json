@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Inpatient-Facility",
 	"meta": {
-		"versionId": "27",
-		"lastUpdated": "2019-12-16T12:33:58.000-05:00"
+		"versionId": "29",
+		"lastUpdated": "2019-12-18T23:46:39.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility",
 	"version": "0.5",
@@ -28,10 +28,12 @@
 			{
 				"id": "ExplanationOfBenefit.type",
 				"path": "ExplanationOfBenefit.type",
-				"patternCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type",
-					"code": "inpatient-facility",
-					"display": "Inpatient Facility"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "inpatient-facility"
+						}
+					]
 				}
 			},
 			{
@@ -56,9 +58,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:billingnetworkcontractingstatus.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "billingnetworkcontractingstatus"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "billingnetworkcontractingstatus"
+						}
+					]
 				}
 			},
 			{
@@ -79,9 +85,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:attendingnetworkcontractingstatus.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "attendingnetworkcontractingstatus"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "attendingnetworkcontractingstatus"
+						}
+					]
 				}
 			},
 			{
@@ -102,9 +112,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:referringnetworkcontractingstatus.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "referringnetworkcontractingstatus"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "referringnetworkcontractingstatus"
+						}
+					]
 				}
 			},
 			{
@@ -126,9 +140,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:clmrecvddate.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "clmrecvddate"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "clmrecvddate"
+						}
+					]
 				}
 			},
 			{
@@ -150,9 +168,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:typeofservice.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "typeofservice"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "typeofservice"
+						}
+					]
 				}
 			},
 			{
@@ -173,9 +195,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:tob-typeoffacility.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "tob-typeoffacility"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "tob-typeoffacility"
+						}
+					]
 				}
 			},
 			{
@@ -196,9 +222,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:tob-billclassification.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "tob-billclassification"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "tob-billclassification"
+						}
+					]
 				}
 			},
 			{
@@ -219,9 +249,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:tob-frequency.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "tob-frequency"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "tob-frequency"
+						}
+					]
 				}
 			},
 			{
@@ -242,9 +276,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:admsrc.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "admsrc"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "admsrc"
+						}
+					]
 				}
 			},
 			{
@@ -265,9 +303,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:admtype.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "admtype"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "admtype"
+						}
+					]
 				}
 			},
 			{
@@ -288,9 +330,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:discharge-status.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "discharge-status"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "discharge-status"
+						}
+					]
 				}
 			},
 			{
@@ -311,9 +357,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:ms-drg.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "ms-drg"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "ms-drg"
+						}
+					]
 				}
 			},
 			{
@@ -334,9 +384,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:placeofservice.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "placeofservice"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "placeofservice"
+						}
+					]
 				}
 			},
 			{
@@ -399,9 +453,13 @@
 			{
 				"id": "ExplanationOfBenefit.item.adjudication:denialreason.category",
 				"path": "ExplanationOfBenefit.item.adjudication.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
-					"code": "denialreason"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+							"code": "denialreason"
+						}
+					]
 				}
 			},
 			{

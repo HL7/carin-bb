@@ -1,6 +1,6 @@
 {
-  "version": "0.1.59-DRAFT",
+  "version": "0.1.60-DRAFT",
   "fhirVersion": "[4.0.0]",
-  "date": "20191218001837",
+  "date": "20191219164846",
   "name": "hl7.fhir.us.carin-bb"
 }

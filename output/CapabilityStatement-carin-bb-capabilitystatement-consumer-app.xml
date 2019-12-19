@@ -3,14 +3,20 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
   <id value="carin-bb-capabilitystatement-consumer-app"/>
   <meta>
-    <versionId value="4"/>
-    <lastUpdated value="2019-12-16T13:15:43.000-05:00"/>
+    <versionId value="7"/>
+    <lastUpdated value="2019-12-18T22:49:13.000-05:00"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">CARIN BlueButton Consumer App CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.1.57-DRAFT</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-12-04</li><li>Published by HL7 International and CARIN Alliance</li></ul><p><p>This Section describes the expected capabilities of the CARIN Blue Button Consumer App which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined in the <a href="CapabilityStatement-carin-bb-capabilitystatement-healthplan-api.html">Conformance Requirements for Server</a>.CARIN Blue Button Consumer Apps have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.</p></p><h3 id="behavior">FHIR RESTful Capabilities</h3><p>The CARIN Blue Button Consumer App <strong>SHALL</strong>:</p><ol><li>Support fetching and querying of one or more CARIN Blue Button profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement.</li></ol><p id="security"><strong>Security:</strong></p><ol><li>See the <a href="Authorization,_Authentication,_and_Registration.html">Authorization, Authentication, and Registration</a> section for requirements and recommendations.</li></ol><hr/><br/></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">CARIN BlueButton Consumer App CapabilityStatement</h2><ul><li>Implementation Guide</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-12-04</li><li>Published by HL7 International and CARIN Alliance</li></ul><p><p>This Section describes the expected capabilities of the Consumer-Directed Payer Data Exchange Consumer App which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by Consumer-Directed Payer Data Exchange Servers are defined in the 
+                    <a href="CapabilityStatement-carin-bb-capabilitystatement-healthplan-api.html">Conformance Requirements for Server</a>.Consumer-Directed Payer Data Exchange Consumer Apps have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.
+                </p></p><h3 id="behavior">FHIR RESTful Capabilities</h3><p>The Consumer-Directed Payer Data Exchange Consumer App 
+                <strong>SHALL</strong>:
+            </p><ol><li>Support fetching and querying of one or more CARIN Blue Button profile(s), using the supported RESTful interactions and search parameters declared in the US Core Server CapabilityStatement.</li></ol><p id="security"><strong>Security:</strong></p><ol><li>See the 
+                    <a href="Authorization,_Authentication,_and_Registration.html">Authorization, Authentication, and Registration</a> section for requirements and recommendations.
+                </li></ol><hr/><br/></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/CapabilityStatement/carin-bb-capabilitystatement-consumer-app"/>
-  <version value="0.1.59-DRAFT"/>
+  <version value="0.1.60-DRAFT"/>
   <name value="CARIN_BlueButton_Consumer_App_CapabilityStatement"/>
   <title value="CARIN BlueButton Consumer App CapabilityStatement"/>
   <status value="active"/>
@@ -23,7 +29,7 @@
       <value value="https://www.carinalliance.com/about-us/contact-us"/>
     </telecom>
   </contact>
-  <description value="The Section describes the expected capabilities of the CARIN Blue Button Consumer App which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined in the [Conformance Requirements for Server](carin-bb-capabilitystatement-healthplan-api.html). CARIN Blue Button Consumer Apps have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements."/>
+  <description value="The Section describes the expected capabilities of the Consumer-Directed Payer Data Exchange Consumer App which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by Consumer-Directed Payer Data Exchange Servers are defined in the [Conformance Requirements for Server](carin-bb-capabilitystatement-healthplan-api.html). Consumer-Directed Payer Data Exchange Consumer Apps have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -37,7 +43,7 @@
   <implementationGuide value="http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb"/>
   <rest>
     <mode value="client"/>
-    <documentation value="The CARIN Blue Button Consumer App **SHALL**:&#xA;&#xA;1. Support fetching and querying of one or more CARIN Blue Button profile(s), using the supported RESTful interactions and search parameters declared in the CARIN Blue Button Server CapabilityStatement"/>
+    <documentation value="The Consumer-Directed Payer Data Exchange Consumer App **SHALL**:&#xA;&#xA;1. Support fetching and querying of one or more CARIN Blue Button profile(s), using the supported RESTful interactions and search parameters declared in the Consumer-Directed Payer Data Exchange Server CapabilityStatement"/>
     <security>
       <description value="1. See the [Authorization, Authentication, and Registrations] section for requirements and recommendations."/>
     </security>
@@ -61,7 +67,7 @@
       <referencePolicy value="resolves"/>
       <searchParam>
         <name value="patient"/>
-        <definition value="http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-coverage-patient"/>
+        <definition value="http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-searchparameter-coverage-patient"/>
         <type value="reference"/>
       </searchParam>
     </resource>
@@ -88,12 +94,12 @@
       <referencePolicy value="resolves"/>
       <searchParam>
         <name value="patient"/>
-        <definition value="http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient"/>
+        <definition value="http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient"/>
         <type value="reference"/>
       </searchParam>
       <searchParam>
         <name value="created"/>
-        <definition value="http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient"/>
+        <definition value="http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient"/>
         <type value="date"/>
       </searchParam>
     </resource>

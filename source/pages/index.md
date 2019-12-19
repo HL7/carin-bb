@@ -30,6 +30,7 @@ See the [Table of Contents](toc.html) for more information.
 
 | Number | Description |
 | :---: | --- |
+| 60 | Added Balloter Notes to document the errors in QA.html and explain that these errors have been reviewed and were considered acceptable for going to ballot. |
 | 59 | A new html page was added to the IG to fix the broken Directory of Published version link which wasn't working because this is the first version of the IG to be published. |
 | 58 | The Request a Change link in the IG footer was fixed in Trifolia to take commenters to the new HL7 Jira site for tracking issues. |
 | 57 | Examples have been added and referenced from a new Examples Section. Additional examples will be developed and reviewed during the ballot reconciliation period to be included with the published IG. |

@@ -2,8 +2,8 @@
   "resourceType": "Organization",
   "id": "Org1",
   "meta": {
-    "versionId": "2",
-    "lastUpdated": "2019-12-15T20:22:58.000-05:00",
+    "versionId": "4",
+    "lastUpdated": "2019-12-18T22:28:27.000-05:00",
     "profile": [
       "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization"
     ]
@@ -31,12 +31,12 @@
         "coding": [
           {
             "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code": "PRN",
-            "display": "Provider number"
+            "code": "TAX",
+            "display": "Tax ID number"
           }
         ]
       },
-      "system": "http://www.bcbs.com/fhir/ns/NamingSystem/organization-identifier-inpatient",
+      "system": "urn:oid:2.16.840.1.113883.4.4",
       "value": "AB12346"
     }
   ],

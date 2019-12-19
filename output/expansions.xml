@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="d2add93b-ce8d-42b2-82ec-5a008b86836c"/>
+  <id value="ddd30c38-8779-461a-ac66-e4ac606f98ef"/>
   <meta>
-    <lastUpdated value="2019-12-18T00:18:52.265-05:00"/>
+    <lastUpdated value="2019-12-19T16:49:00.642-05:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -19,7 +19,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 2 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship version 0.1.59-DRAFT</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship version 0.1.60-DRAFT</p>
             <p>All codes from system 
               <a href="CodeSystem-CARIN-BB-Related-Claim-Relationship.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship</code>
@@ -57,14 +57,14 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-relatedclaimrelationship"/>
-        <version value="0.1.59-DRAFT"/>
+        <version value="0.1.60-DRAFT"/>
         <name value="CARINBBRelatedClaimRelationship"/>
         <title value="CARIN Blue Button Related Claim Relationship Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-18T00:18:52-05:00"/>
+        <date value="2019-12-19T16:49:00-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:3d13172c-0046-4ebb-9c11-3ced6c6e9e63"/>
-          <timestamp value="2019-12-18T00:20:25-05:00"/>
+          <identifier value="urn:uuid:161663cb-7aa4-429d-adab-d5da5ba2fab6"/>
+          <timestamp value="2019-12-19T16:50:33-05:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -72,7 +72,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship|0.1.59-DRAFT"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship|0.1.60-DRAFT"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-relatedclaimrelationship"/>
@@ -101,7 +101,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 6 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type version 0.1.59-DRAFT</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type version 0.1.60-DRAFT</p>
             <p>All codes from system 
               <a href="CodeSystem-CARIN-BB-Claim-Type.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type</code>
@@ -171,14 +171,14 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claim-type"/>
-        <version value="0.1.59-DRAFT"/>
+        <version value="0.1.60-DRAFT"/>
         <name value="CARINBBClaimType"/>
         <title value="CARIN Blue Button Claim Type Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-18T00:18:52-05:00"/>
+        <date value="2019-12-19T16:49:00-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:5b297b15-88a4-403f-9e4e-8eb9d3120b98"/>
-          <timestamp value="2019-12-18T00:20:57-05:00"/>
+          <identifier value="urn:uuid:32a8742b-c472-417d-a885-32ca4b69217b"/>
+          <timestamp value="2019-12-19T16:51:05-05:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -186,7 +186,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type|0.1.59-DRAFT"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type|0.1.60-DRAFT"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type"/>
@@ -235,7 +235,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 5 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole version 0.1.59-DRAFT</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole version 0.1.60-DRAFT</p>
             <p>All codes from system 
               <a href="CodeSystem-CARIN-BB-Claim-CareTeam-Role.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole</code>
@@ -297,14 +297,14 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claimcareteamrole"/>
-        <version value="0.1.59-DRAFT"/>
+        <version value="0.1.60-DRAFT"/>
         <name value="CARINBBClaimCareTeamRole"/>
         <title value="CARIN Blue Button Claim Care Team Role Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-18T00:18:52-05:00"/>
+        <date value="2019-12-19T16:49:00-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:b6fb6c7d-00d0-4138-b273-7f36b9efcb5b"/>
-          <timestamp value="2019-12-18T00:20:57-05:00"/>
+          <identifier value="urn:uuid:c9cc2e7b-0917-406d-8656-2f56b8c69dd4"/>
+          <timestamp value="2019-12-19T16:51:05-05:00"/>
           <total value="5"/>
           <parameter>
             <name value="excludeNested"/>
@@ -312,7 +312,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole|0.1.59-DRAFT"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole|0.1.60-DRAFT"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole"/>
@@ -356,7 +356,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 9 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory version 0.1.59-DRAFT</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory version 0.1.60-DRAFT</p>
             <p>All codes from system 
               <a href="CodeSystem-CARIN-BB-Adjudication-Category.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory</code>
@@ -450,15 +450,15 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationamountcategory"/>
-        <version value="0.1.59-DRAFT"/>
+        <version value="0.1.60-DRAFT"/>
         <name value="CARINBBAdjudicationAmountCategory"/>
         <title value="CARIN Blue Button Adjudication Amount Category Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-18T00:18:52-05:00"/>
+        <date value="2019-12-19T16:49:00-05:00"/>
         <description value="Describes the various amount fields used when submitting and adjudicating a claim."/>
         <expansion>
-          <identifier value="urn:uuid:0faa85f4-2da2-49e9-9887-76c7b833e00c"/>
-          <timestamp value="2019-12-18T00:20:58-05:00"/>
+          <identifier value="urn:uuid:ce371647-9272-45a0-b140-fa8a792ca13e"/>
+          <timestamp value="2019-12-19T16:51:06-05:00"/>
           <total value="9"/>
           <parameter>
             <name value="excludeNested"/>
@@ -466,7 +466,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory|0.1.59-DRAFT"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory|0.1.60-DRAFT"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory"/>
@@ -530,7 +530,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 2 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus version 0.1.59-DRAFT</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus version 0.1.60-DRAFT</p>
             <p>All codes from system 
               <a href="CodeSystem-CARIN-BB-Network-Contracting-Status.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus</code>
@@ -568,14 +568,14 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-networkcontractingstatus"/>
-        <version value="0.1.59-DRAFT"/>
+        <version value="0.1.60-DRAFT"/>
         <name value="CARINBBNetworkContractingStatus"/>
         <title value="CARIN Blue Button Network Contracting Status Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-18T00:18:52-05:00"/>
+        <date value="2019-12-19T16:49:00-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:16942137-2d94-49eb-8d91-cc5488a53811"/>
-          <timestamp value="2019-12-18T00:20:59-05:00"/>
+          <identifier value="urn:uuid:437a1aca-88f3-444f-b738-cae46c67beac"/>
+          <timestamp value="2019-12-19T16:51:07-05:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -583,7 +583,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus|0.1.59-DRAFT"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus|0.1.60-DRAFT"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-networkcontractingstatus"/>
@@ -612,7 +612,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 21 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory version 0.1.59-DRAFT</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory version 0.1.60-DRAFT</p>
             <p>All codes from system 
               <a href="CodeSystem-CARIN-BB-Claim-Information-Category.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory</code>
@@ -802,14 +802,14 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claiminformationcategory"/>
-        <version value="0.1.59-DRAFT"/>
+        <version value="0.1.60-DRAFT"/>
         <name value="CARINBBClaimInformationCategory"/>
         <title value="CARIN Blue Button Claim Information Category Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-18T00:18:52-05:00"/>
+        <date value="2019-12-19T16:49:00-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:40bd2b37-aedf-46a5-894d-e4ab82c9f049"/>
-          <timestamp value="2019-12-18T00:21:00-05:00"/>
+          <identifier value="urn:uuid:bff666d8-dba1-45f3-b4a2-151899b9b7f4"/>
+          <timestamp value="2019-12-19T16:51:09-05:00"/>
           <total value="21"/>
           <parameter>
             <name value="excludeNested"/>
@@ -817,7 +817,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory|0.1.59-DRAFT"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory|0.1.60-DRAFT"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory"/>
@@ -958,18 +958,18 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-snomedct-procedurecodes"/>
-        <version value="0.1.59-DRAFT"/>
+        <version value="0.1.60-DRAFT"/>
         <name value="CARINBBSNOMEDCTProcedureCodes"/>
         <title value="CARIN Blue Button SNOMEDCT Procedure Codes Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-18T00:18:52-05:00"/>
+        <date value="2019-12-19T16:49:00-05:00"/>
         <description value="This value set includes codes from the following code systems:&#xA;&#xA;Include codes from http://snomed.info/sct  where concept is-a 71388002 (Procedure)"/>
         <expansion>
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:1c7a7f15-aa16-461c-838e-495699bacd9c"/>
-          <timestamp value="2019-12-18T00:21:26-05:00"/>
+          <identifier value="urn:uuid:d0e30b0c-9448-4cc9-b899-902a22d832a7"/>
+          <timestamp value="2019-12-19T16:51:35-05:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -1003,7 +1003,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 3 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory version 0.1.59-DRAFT</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory version 0.1.60-DRAFT</p>
             <p>All codes from system 
               <a href="CodeSystem-CARIN-BB-Adjudication-Category.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory</code>
@@ -1049,14 +1049,14 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationbenefitpaymentstatuscategory"/>
-        <version value="0.1.59-DRAFT"/>
+        <version value="0.1.60-DRAFT"/>
         <name value="CARINBBAdjudicationBenefitPaymentStatusCategory"/>
         <title value="CARIN Blue Button Adjudication Benefit Payment Status Category Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-18T00:18:52-05:00"/>
+        <date value="2019-12-19T16:49:00-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:5ff49c74-6477-47a6-aef1-b04ebb74dd49"/>
-          <timestamp value="2019-12-18T00:22:26-05:00"/>
+          <identifier value="urn:uuid:1ece3111-ffb5-4d04-a241-6e6d8d3e0b62"/>
+          <timestamp value="2019-12-19T16:52:38-05:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1064,7 +1064,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory|0.1.59-DRAFT"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory|0.1.60-DRAFT"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory"/>
@@ -1098,7 +1098,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 15 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory version 0.1.59-DRAFT</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory version 0.1.60-DRAFT</p>
             <p>All codes from system 
               <a href="CodeSystem-CARIN-BB-Adjudication-Category.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory</code>
@@ -1240,14 +1240,14 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-adjudicationcategory"/>
-        <version value="0.1.59-DRAFT"/>
+        <version value="0.1.60-DRAFT"/>
         <name value="CARINBBAdjudicationCategory"/>
         <title value="CARIN Blue Button Claim Adjudication Category Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-18T00:18:52-05:00"/>
+        <date value="2019-12-19T16:49:00-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:85b40009-9865-4255-9768-59bd25f9ad46"/>
-          <timestamp value="2019-12-18T00:22:26-05:00"/>
+          <identifier value="urn:uuid:c3b30dfb-a9e6-4c17-84ea-6fe742138426"/>
+          <timestamp value="2019-12-19T16:52:39-05:00"/>
           <total value="15"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1255,7 +1255,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory|0.1.59-DRAFT"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory|0.1.60-DRAFT"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory"/>
@@ -1603,14 +1603,14 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-bb-identifier-type"/>
-        <version value="0.1.59-DRAFT"/>
+        <version value="0.1.60-DRAFT"/>
         <name value="CARINBBIdentifierType"/>
         <title value="CARIN Blue Button Identifier Type Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-18T00:18:52-05:00"/>
+        <date value="2019-12-19T16:49:00-05:00"/>
         <expansion>
-          <identifier value="urn:uuid:52ab0d02-2ae0-4f05-972a-83cd7e56c638"/>
-          <timestamp value="2019-12-18T00:22:41-05:00"/>
+          <identifier value="urn:uuid:8cb94f0a-d699-4d0d-9df6-e0845c34fdf1"/>
+          <timestamp value="2019-12-19T16:52:53-05:00"/>
           <total value="29"/>
           <parameter>
             <name value="excludeNested"/>

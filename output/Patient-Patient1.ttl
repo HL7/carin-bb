@@ -9,8 +9,8 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Patient1"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "3" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-12-15T20:57:15.000-05:00"^^xsd:dateTime ];
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-18T23:57:06.000-05:00"^^xsd:dateTime ];
      fhir:Meta.profile [
        fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient";
        fhir:index 0;

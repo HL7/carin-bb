@@ -304,7 +304,7 @@
 			"defns": "StructureDefinition-CARIN-BB-Coverage-definitions.html"
 		}
 	},
-	"fixed-business-version": "0.1.59-DRAFT",
+	"fixed-business-version": "0.1.60-DRAFT",
 	"dependencyList": [
 		{
 			"location": "http://hl7.org/fhir/us/core",

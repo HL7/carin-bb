@@ -22,7 +22,7 @@
      fhir:Extension.valueCode [ fhir:value "trial-use" ]
   ];
   fhir:SearchParameter.url [ fhir:value "http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-searchparameter-coverage-patient"];
-  fhir:SearchParameter.version [ fhir:value "0.1.59-DRAFT"];
+  fhir:SearchParameter.version [ fhir:value "0.1.60-DRAFT"];
   fhir:SearchParameter.name [ fhir:value "CARINBlueButton_Coverage_Patient_SearchParameter"];
   fhir:SearchParameter.derivedFrom [
      fhir:value "http://hl7.org/fhir/SearchParameter/Coverage-patient";

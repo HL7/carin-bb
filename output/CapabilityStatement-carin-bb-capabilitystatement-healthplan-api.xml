@@ -3,17 +3,29 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
   <id value="carin-bb-capabilitystatement-healthplan-api"/>
   <meta>
-    <versionId value="3"/>
-    <lastUpdated value="2019-12-16T02:35:28.000-05:00"/>
+    <versionId value="5"/>
+    <lastUpdated value="2019-12-18T22:28:15.000-05:00"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">CARIN Blue Button Server CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.1.57-DRAFT</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-12-04</li><li>Published by HL7 International and CARIN Alliance</li></ul><p><p>This Section describes the expected capabilities of the CARIN Blue Button Server actor which is responsible for providing responses to the queries submitted by the CARIN Blue Button Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined.</p></p><h3 id="behavior">FHIR RESTful Capabilities</h3><p>The CARIN Blue Button Server <strong>SHALL</strong>:</p><ol><li>Support the CARIN Blue Button Patient resource profile.</li><li>Support at least one additional resource profile from the list of CARIN Blue Button Profiles.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Return the following response classes:
-      <ul><li>(Status 400): invalid parameter</li><li>(Status 401/4xx): unauthorized request</li><li>(Status 403): insufficient scope</li><li>(Status 404): unknown resource</li><li>(Status 410): deleted resource.</li></ul></li><li>Support json source formats for all CARIN Blue Button interactions.</li></ol><p>The CARIN Blue Button Server <strong>SHOULD</strong>:</p><ol><li>Support xml source formats for all CARIN Blue Button interactions.</li><li>Identify the CARIN Blue Button profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li></ol><p id="security"><strong>Security:</strong></p><ol><li>See the <a href="Authorization,_Authentication,_and_Registration.html">Authorization, Authentication, and Registration</a> section for requirements and recommendations.</li><li>A server <strong>SHALL</strong> reject any unauthorized requests by returning an <code>HTTP 401</code> unauthorized response code.</li></ol><hr/><br/></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">Consumer-Directed Payer Data Exchange Server CapabilityStatement</h2><ul><li>Implementation Guide</li><li>FHIR Version: 4.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-12-04</li><li>Published by HL7 International and CARIN Alliance</li></ul><p><p>This Section describes the expected capabilities of the Consumer-Directed Payer Data Exchange Server actor which is responsible for providing responses to the queries submitted by the Consumer-Directed Payer Data Exchange Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by Consumer-Directed Payer Data Exchange Servers are defined.</p></p><h3 id="behavior">FHIR RESTful Capabilities</h3><p>The Consumer-Directed Payer Data Exchange Server 
+                <strong>SHALL</strong>:
+            </p><ol><li>Support the CARIN Blue Button Patient and ExplanationOfBenefit resource profiles.</li><li>Support additional resource profiles from the list of CARIN Blue Button Profiles.</li><li>Implement the RESTful behavior according to the FHIR specification.</li><li>Return the following response classes:
+      
+                    <ul><li>(Status 400): invalid parameter</li><li>(Status 401/4xx): unauthorized request</li><li>(Status 403): insufficient scope</li><li>(Status 404): unknown resource</li><li>(Status 410): deleted resource.</li></ul></li><li>Support json source formats for all Consumer-Directed Payer Data Exchange interactions.</li></ol><p>The Consumer-Directed Payer Data Exchange Server 
+                <strong>SHOULD</strong>:
+            </p><ol><li>Support xml source formats for all Consumer-Directed Payer Data Exchange interactions.</li><li>Identify the CARIN Blue Button profiles supported as part of the FHIR 
+                    <code>meta.profile</code> attribute for each instance.
+                </li></ol><p id="security"><strong>Security:</strong></p><ol><li>See the 
+                    <a href="Authorization,_Authentication,_and_Registration.html">Authorization, Authentication, and Registration</a> section for requirements and recommendations.
+                </li><li>A server 
+                    <strong>SHALL</strong> reject any unauthorized requests by returning an 
+                    <code>HTTP 401</code> unauthorized response code.
+                </li></ol><hr/><br/></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/CapabilityStatement/carin-bb-capabilitystatement-healthplan-api"/>
-  <version value="0.1.59-DRAFT"/>
+  <version value="0.1.60-DRAFT"/>
   <name value="CARINBlueButton_HealthPlan_API_CapabilityStatement"/>
-  <title value="CARIN Blue Button HealthPlan API CapabilityStatement"/>
+  <title value="Consumer-Directed Payer Data Exchange HealthPlan API CapabilityStatement"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2019-12-04T00:00:00-05:00"/>
@@ -24,7 +36,7 @@
       <value value="https://www.carinalliance.com/about-us/contact-us"/>
     </telecom>
   </contact>
-  <description value="This Section describes the expected capabilities of the CARIN Blue Button Server actor which is responsible for providing responses to the queries submitted by the CARIN Blue Button Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by CARIN Blue Button Servers are defined."/>
+  <description value="This Section describes the expected capabilities of the Consumer-Directed Payer Data Exchange Server actor which is responsible for providing responses to the queries submitted by the Consumer-Directed Payer Data Exchange Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by Consumer-Directed Payer Data Exchange Servers are defined."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -38,7 +50,7 @@
   <implementationGuide value="http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb"/>
   <rest>
     <mode value="server"/>
-    <documentation value="The CARIN Blue Button Server **SHALL**:&#xA;&#xA;1. Support the CARIN Blue Button Patient resource profile.&#xA;2. Support at least one additional resource profile from the list of CARIN Blue Button Profiles.&#xA;3. Implement the RESTful behavior according to the FHIR specification.&#xA;4. Return the following response classes:&#xA;   - (Status 400): invalid parameter&#xA;   - (Status 401/4xx): unauthorized request&#xA;   - (Status 403): insufficient scope&#xA;   - (Status 404): unknown resource&#xA;   - (Status 410): deleted resource.&#xA;5. Support json source formats for all CARIN Blue Button interactions.&#xA;&#xA;The CARIN Blue Button Server **SHOULD**:&#xA;&#xA;1. Support xml source formats for all CARIN Blue Button interactions.&#xA;2. Identify the CARIN Blue Button profiles supported as part of the FHIR `meta.profile` attribute for each instance."/>
+    <documentation value="The Consumer-Directed Payer Data Exchange Server **SHALL**:&#xA;&#xA;1. Support the CARIN Blue Button Patient and ExplanationOfBenefit resource profiles.&#xA;2. Support additional resource profiles from the list of CARIN Blue Button Profiles.&#xA;3. Implement the RESTful behavior according to the FHIR specification.&#xA;4. Return the following response classes:&#xA;   - (Status 400): invalid parameter&#xA;   - (Status 401/4xx): unauthorized request&#xA;   - (Status 403): insufficient scope&#xA;   - (Status 404): unknown resource&#xA;   - (Status 410): deleted resource.&#xA;5. Support json source formats for all Consumer-Directed Payer Data Exchange interactions.&#xA;&#xA;The Consumer-Directed Payer Data Exchange Server **SHOULD**:&#xA;&#xA;1. Support xml source formats for all Consumer-Directed Payer Data Exchange interactions.&#xA;2. Identify the CARIN Blue Button profiles supported as part of the FHIR `meta.profile` attribute for each instance."/>
     <security>
       <cors value="true"/>
       <service>
@@ -79,7 +91,7 @@
       <referencePolicy value="resolves"/>
       <searchParam>
         <name value="patient"/>
-        <definition value="http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-coverage-patient"/>
+        <definition value="http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-searchparameter-coverage-patient"/>
         <type value="reference"/>
       </searchParam>
     </resource>
@@ -110,12 +122,12 @@
       <referencePolicy value="resolves"/>
       <searchParam>
         <name value="patient"/>
-        <definition value="http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient"/>
+        <definition value="http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient"/>
         <type value="reference"/>
       </searchParam>
       <searchParam>
         <name value="created"/>
-        <definition value="http://hl7.org/fhir/us/core/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient"/>
+        <definition value="http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient"/>
         <type value="date"/>
       </searchParam>
     </resource>

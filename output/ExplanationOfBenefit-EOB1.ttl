@@ -1,7 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
@@ -10,16 +9,12 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "EOB1"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "2" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-12-15T20:23:33.000-05:00"^^xsd:dateTime ];
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-18T22:49:23.000-05:00"^^xsd:dateTime ];
      fhir:Meta.profile [
        fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit";
        fhir:index 0;
        fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit>
-     ], [
-       fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility";
-       fhir:index 1;
-       fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility>
      ]
   ];
   fhir:DomainResource.text [
@@ -193,7 +188,7 @@
      fhir:ExplanationOfBenefit.diagnosis.diagnosisCodeableConcept [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10" ];
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10-cm" ];
          fhir:Coding.code [ fhir:value "A30.1" ];
          fhir:Coding.display [ fhir:value "Tuberculoid leprosy" ]
        ]
@@ -202,9 +197,8 @@
        fhir:index 0;
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         a sct:8319008;
-         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "8319008" ];
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-diagnosistype" ];
+         fhir:Coding.code [ fhir:value "principal" ];
          fhir:Coding.display [ fhir:value "Principal diagnosis" ]
        ]
      ]
@@ -214,7 +208,7 @@
      fhir:ExplanationOfBenefit.diagnosis.diagnosisCodeableConcept [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10" ];
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10-cm" ];
          fhir:Coding.code [ fhir:value "S40.861A" ];
          fhir:Coding.display [ fhir:value "Diagnosis description 1" ]
        ]
@@ -223,9 +217,8 @@
        fhir:index 0;
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         a sct:8319008;
-         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "8319008" ];
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-diagnosistype" ];
+         fhir:Coding.code [ fhir:value "principal" ];
          fhir:Coding.display [ fhir:value "Principal diagnosis" ]
        ]
      ];
@@ -243,7 +236,7 @@
      fhir:ExplanationOfBenefit.diagnosis.diagnosisCodeableConcept [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10" ];
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10-cm" ];
          fhir:Coding.code [ fhir:value "A05.1" ]
        ]
      ];
@@ -251,10 +244,9 @@
        fhir:index 0;
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         a sct:85097005;
-         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "85097005" ];
-         fhir:Coding.display [ fhir:value "Secondary diagnosis" ]
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-diagnosistype" ];
+         fhir:Coding.code [ fhir:value "admitting" ];
+         fhir:Coding.display [ fhir:value "Admitting Diagnosis" ]
        ]
      ];
      fhir:ExplanationOfBenefit.diagnosis.onAdmission [
@@ -271,7 +263,7 @@
      fhir:ExplanationOfBenefit.diagnosis.diagnosisCodeableConcept [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10" ];
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10-cm" ];
          fhir:Coding.code [ fhir:value "A37.00" ]
        ]
      ];
@@ -279,10 +271,9 @@
        fhir:index 0;
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         a sct:85097005;
-         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "85097005" ];
-         fhir:Coding.display [ fhir:value "Secondary diagnosis" ]
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-diagnosistype" ];
+         fhir:Coding.code [ fhir:value "admitting" ];
+         fhir:Coding.display [ fhir:value "Admitting Diagnosis" ]
        ]
      ];
      fhir:ExplanationOfBenefit.diagnosis.onAdmission [
@@ -299,7 +290,7 @@
      fhir:ExplanationOfBenefit.diagnosis.diagnosisCodeableConcept [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10" ];
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10-cm" ];
          fhir:Coding.code [ fhir:value "G44.221" ]
        ]
      ];
@@ -307,10 +298,9 @@
        fhir:index 0;
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         a sct:85097005;
-         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "85097005" ];
-         fhir:Coding.display [ fhir:value "Secondary diagnosis" ]
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-diagnosistype" ];
+         fhir:Coding.code [ fhir:value "admitting" ];
+         fhir:Coding.display [ fhir:value "Admitting Diagnosis" ]
        ]
      ];
      fhir:ExplanationOfBenefit.diagnosis.onAdmission [
@@ -327,7 +317,7 @@
      fhir:ExplanationOfBenefit.diagnosis.diagnosisCodeableConcept [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10" ];
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10-cm" ];
          fhir:Coding.code [ fhir:value "I11.9" ]
        ]
      ];
@@ -335,10 +325,9 @@
        fhir:index 0;
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         a sct:85097005;
-         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "85097005" ];
-         fhir:Coding.display [ fhir:value "Secondary diagnosis" ]
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-diagnosistype" ];
+         fhir:Coding.code [ fhir:value "admitting" ];
+         fhir:Coding.display [ fhir:value "Admitting Diagnosis" ]
        ]
      ];
      fhir:ExplanationOfBenefit.diagnosis.onAdmission [
@@ -355,7 +344,7 @@
      fhir:ExplanationOfBenefit.diagnosis.diagnosisCodeableConcept [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10" ];
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10-cm" ];
          fhir:Coding.code [ fhir:value "A31.1" ]
        ]
      ];
@@ -363,10 +352,9 @@
        fhir:index 0;
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         a sct:85097005;
-         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "85097005" ];
-         fhir:Coding.display [ fhir:value "Secondary diagnosis" ]
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-diagnosistype" ];
+         fhir:Coding.code [ fhir:value "admitting" ];
+         fhir:Coding.display [ fhir:value "Admitting Diagnosis" ]
        ]
      ];
      fhir:ExplanationOfBenefit.diagnosis.onAdmission [
@@ -536,10 +524,9 @@
      fhir:ExplanationOfBenefit.item.productOrService [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         a sct:394656005;
-         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "394656005" ];
-         fhir:Coding.display [ fhir:value "Inpatient care" ]
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-USCLS" ];
+         fhir:Coding.code [ fhir:value "1101" ];
+         fhir:Coding.display [ fhir:value "Exam, comp, primary" ]
        ]
      ];
      fhir:ExplanationOfBenefit.item.quantity [
@@ -655,10 +642,9 @@
      fhir:ExplanationOfBenefit.item.productOrService [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         a sct:394656005;
-         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "394656005" ];
-         fhir:Coding.display [ fhir:value "Inpatient care" ]
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-USCLS" ];
+         fhir:Coding.code [ fhir:value "1101" ];
+         fhir:Coding.display [ fhir:value "Exam, comp, primary" ]
        ]
      ];
      fhir:ExplanationOfBenefit.item.quantity [
@@ -756,7 +742,7 @@
        fhir:CodeableConcept.coding [
          fhir:index 0;
          fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-revenue-center" ];
-         fhir:Coding.code [ fhir:value "0320" ]
+         fhir:Coding.code [ fhir:value "0370" ]
        ]
      ];
      fhir:ExplanationOfBenefit.item.category [
@@ -770,10 +756,9 @@
      fhir:ExplanationOfBenefit.item.productOrService [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         a sct:394656005;
-         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "394656005" ];
-         fhir:Coding.display [ fhir:value "Inpatient care" ]
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-USCLS" ];
+         fhir:Coding.code [ fhir:value "1205" ];
+         fhir:Coding.display [ fhir:value "Exam, emergency" ]
        ]
      ];
      fhir:ExplanationOfBenefit.item.quantity [

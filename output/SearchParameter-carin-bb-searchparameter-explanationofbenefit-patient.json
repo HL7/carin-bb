@@ -16,7 +16,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/us/carin/SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient",
-  "version": "0.1.59-DRAFT",
+  "version": "0.1.60-DRAFT",
   "name": "CARINBlueButton_ExplanationOfBenefit_Patient_SearchParameter",
   "derivedFrom": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-patient",
   "status": "active",

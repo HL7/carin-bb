@@ -11,11 +11,11 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http//www.nubc.org/patient-discharge</code></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/ValueSet/nubc-patientdischargestatus"/>
-  <version value="0.1.59-DRAFT"/>
+  <version value="0.1.60-DRAFT"/>
   <name value="NUBCPatientDischargeStatus"/>
   <title value="NUBC Patient Discharge Status"/>
   <status value="draft"/>
-  <date value="2019-12-18T00:18:52-05:00"/>
+  <date value="2019-12-19T16:49:00-05:00"/>
   <description value="These codes are found in the [CMS 1450](https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256) form. See HL7 OID [information](http://www.hl7.org/oid/OID_view.cfm?&amp;Comp_OID=2.16.840.1.113883.6.301.5)."/>
   <compose>
     <include>

@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-Patient",
 	"meta": {
-		"versionId": "9",
-		"lastUpdated": "2019-12-15T18:04:47.000-05:00"
+		"versionId": "10",
+		"lastUpdated": "2019-12-18T23:29:09.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient",
 	"version": "0.5",
@@ -61,8 +61,12 @@
 			{
 				"id": "Patient.identifier:memberid.type",
 				"path": "Patient.identifier.type",
-				"patternCoding": {
-					"code": "MB"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "MB"
+						}
+					]
 				}
 			},
 			{
@@ -73,8 +77,12 @@
 			{
 				"id": "Patient.identifier:medrecnum.type",
 				"path": "Patient.identifier.type",
-				"patternCoding": {
-					"code": "MR"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "MR"
+						}
+					]
 				}
 			},
 			{
@@ -85,8 +93,12 @@
 			{
 				"id": "Patient.identifier:patacctnum.type",
 				"path": "Patient.identifier.type",
-				"patternCoding": {
-					"code": "PT"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "PT"
+						}
+					]
 				}
 			}
 		]

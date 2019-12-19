@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-Organization",
 	"meta": {
-		"versionId": "10",
-		"lastUpdated": "2019-12-15T18:04:21.000-05:00"
+		"versionId": "11",
+		"lastUpdated": "2019-12-18T22:28:15.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization",
 	"version": "0.5",
@@ -57,8 +57,12 @@
 			{
 				"id": "Organization.identifier:NPI.type",
 				"path": "Organization.identifier.type",
-				"patternCoding": {
-					"code": "NPI"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "NPI"
+						}
+					]
 				}
 			},
 			{
@@ -72,8 +76,12 @@
 			{
 				"id": "Organization.identifier:TIN.type",
 				"path": "Organization.identifier.type",
-				"patternCoding": {
-					"code": "TAX"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "TAX"
+						}
+					]
 				}
 			}
 		]

@@ -2,8 +2,8 @@
 	"resourceType": "Patient",
 	"id": "Patient1",
 	"meta": {
-		"versionId": "3",
-		"lastUpdated": "2019-12-15T20:57:15.000-05:00",
+		"versionId": "4",
+		"lastUpdated": "2019-12-18T23:57:06.000-05:00",
 		"profile": [
 			"http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-patient"
 		]

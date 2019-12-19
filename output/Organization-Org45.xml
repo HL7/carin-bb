@@ -3,8 +3,8 @@
 <Organization xmlns="http://hl7.org/fhir">
   <id value="Org45"/>
   <meta>
-    <versionId value="3"/>
-    <lastUpdated value="2019-12-15T20:57:15.000-05:00"/>
+    <versionId value="5"/>
+    <lastUpdated value="2019-12-18T22:28:27.000-05:00"/>
     <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-organization"/>
   </meta>
   <text>
@@ -24,17 +24,6 @@
     </type>
     <system value="http://hl7.org/fhir/sid/us-npi"/>
     <value value="345678"/>
-  </identifier>
-  <identifier>
-    <type>
-      <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-        <code value="NH"/>
-        <display value="National Health Plan Identifier"/>
-      </coding>
-    </type>
-    <system value="http://www.bcbs.com/fhir/ns/NamingSystem/organization-identifier-insurance"/>
-    <value value="789"/>
   </identifier>
   <active value="true"/>
   <name value="Insurance XYZ"/>

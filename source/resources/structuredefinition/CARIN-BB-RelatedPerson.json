@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-RelatedPerson",
 	"meta": {
-		"versionId": "5",
-		"lastUpdated": "2019-12-14T13:02:08.000-05:00"
+		"versionId": "6",
+		"lastUpdated": "2019-12-18T23:29:09.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-relatedperson",
 	"version": "0.5",
@@ -58,8 +58,12 @@
 			{
 				"id": "RelatedPerson.identifier:memberid.type",
 				"path": "RelatedPerson.identifier.type",
-				"patternCoding": {
-					"code": "MB"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "MB"
+						}
+					]
 				}
 			},
 			{
@@ -71,8 +75,12 @@
 			{
 				"id": "RelatedPerson.identifier:subscriberid.type",
 				"path": "RelatedPerson.identifier.type",
-				"patternCoding": {
-					"code": "SN"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "SN"
+						}
+					]
 				}
 			},
 			{

@@ -3,10 +3,9 @@
 <ExplanationOfBenefit xmlns="http://hl7.org/fhir">
   <id value="EOB1"/>
   <meta>
-    <versionId value="2"/>
-    <lastUpdated value="2019-12-15T20:23:33.000-05:00"/>
+    <versionId value="4"/>
+    <lastUpdated value="2019-12-18T22:49:23.000-05:00"/>
     <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit"/>
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-inpatient-facility"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
@@ -159,15 +158,15 @@
     <sequence value="1"/>
     <diagnosisCodeableConcept>
       <coding>
-        <system value="http://hl7.org/fhir/sid/icd-10"/>
+        <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
         <code value="A30.1"/>
         <display value="Tuberculoid leprosy"/>
       </coding>
     </diagnosisCodeableConcept>
     <type>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="8319008"/>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype"/>
+        <code value="principal"/>
         <display value="Principal diagnosis"/>
       </coding>
     </type>
@@ -176,15 +175,15 @@
     <sequence value="2"/>
     <diagnosisCodeableConcept>
       <coding>
-        <system value="http://hl7.org/fhir/sid/icd-10"/>
+        <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
         <code value="S40.861A"/>
         <display value="Diagnosis description 1"/>
       </coding>
     </diagnosisCodeableConcept>
     <type>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="8319008"/>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype"/>
+        <code value="principal"/>
         <display value="Principal diagnosis"/>
       </coding>
     </type>
@@ -200,15 +199,15 @@
     <sequence value="3"/>
     <diagnosisCodeableConcept>
       <coding>
-        <system value="http://hl7.org/fhir/sid/icd-10"/>
+        <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
         <code value="A05.1"/>
       </coding>
     </diagnosisCodeableConcept>
     <type>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="85097005"/>
-        <display value="Secondary diagnosis"/>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype"/>
+        <code value="admitting"/>
+        <display value="Admitting Diagnosis"/>
       </coding>
     </type>
     <onAdmission>
@@ -223,15 +222,15 @@
     <sequence value="4"/>
     <diagnosisCodeableConcept>
       <coding>
-        <system value="http://hl7.org/fhir/sid/icd-10"/>
+        <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
         <code value="A37.00"/>
       </coding>
     </diagnosisCodeableConcept>
     <type>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="85097005"/>
-        <display value="Secondary diagnosis"/>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype"/>
+        <code value="admitting"/>
+        <display value="Admitting Diagnosis"/>
       </coding>
     </type>
     <onAdmission>
@@ -246,15 +245,15 @@
     <sequence value="5"/>
     <diagnosisCodeableConcept>
       <coding>
-        <system value="http://hl7.org/fhir/sid/icd-10"/>
+        <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
         <code value="G44.221"/>
       </coding>
     </diagnosisCodeableConcept>
     <type>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="85097005"/>
-        <display value="Secondary diagnosis"/>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype"/>
+        <code value="admitting"/>
+        <display value="Admitting Diagnosis"/>
       </coding>
     </type>
     <onAdmission>
@@ -269,15 +268,15 @@
     <sequence value="6"/>
     <diagnosisCodeableConcept>
       <coding>
-        <system value="http://hl7.org/fhir/sid/icd-10"/>
+        <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
         <code value="I11.9"/>
       </coding>
     </diagnosisCodeableConcept>
     <type>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="85097005"/>
-        <display value="Secondary diagnosis"/>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype"/>
+        <code value="admitting"/>
+        <display value="Admitting Diagnosis"/>
       </coding>
     </type>
     <onAdmission>
@@ -292,15 +291,15 @@
     <sequence value="7"/>
     <diagnosisCodeableConcept>
       <coding>
-        <system value="http://hl7.org/fhir/sid/icd-10"/>
+        <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
         <code value="A31.1"/>
       </coding>
     </diagnosisCodeableConcept>
     <type>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="85097005"/>
-        <display value="Secondary diagnosis"/>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype"/>
+        <code value="admitting"/>
+        <display value="Admitting Diagnosis"/>
       </coding>
     </type>
     <onAdmission>
@@ -434,9 +433,9 @@
     </category>
     <productOrService>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="394656005"/>
-        <display value="Inpatient care"/>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-USCLS"/>
+        <code value="1101"/>
+        <display value="Exam, comp, primary"/>
       </coding>
     </productOrService>
     <quantity>
@@ -530,9 +529,9 @@
     </category>
     <productOrService>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="394656005"/>
-        <display value="Inpatient care"/>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-USCLS"/>
+        <code value="1101"/>
+        <display value="Exam, comp, primary"/>
       </coding>
     </productOrService>
     <quantity>
@@ -611,7 +610,7 @@
     <revenue>
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/ex-revenue-center"/>
-        <code value="0320"/>
+        <code value="0370"/>
       </coding>
     </revenue>
     <category>
@@ -623,9 +622,9 @@
     </category>
     <productOrService>
       <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="394656005"/>
-        <display value="Inpatient care"/>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-USCLS"/>
+        <code value="1205"/>
+        <display value="Exam, emergency"/>
       </coding>
     </productOrService>
     <quantity>

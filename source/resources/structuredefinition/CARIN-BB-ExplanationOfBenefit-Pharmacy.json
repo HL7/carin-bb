@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Pharmacy",
 	"meta": {
-		"versionId": "43",
-		"lastUpdated": "2019-12-17T17:00:54.000-05:00"
+		"versionId": "44",
+		"lastUpdated": "2019-12-18T23:29:10.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-pharmacy",
 	"version": "0.5",
@@ -28,10 +28,12 @@
 			{
 				"id": "ExplanationOfBenefit.type",
 				"path": "ExplanationOfBenefit.type",
-				"patternCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type",
-					"code": "pharmacy",
-					"display": "Pharmacy"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "pharmacy"
+						}
+					]
 				}
 			},
 			{

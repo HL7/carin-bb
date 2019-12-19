@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">Consumer-Directed Payer Data Exchange - Local Development build (v0.1.59-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">Consumer-Directed Payer Data Exchange - Local Development build (v0.1.60-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -237,9 +237,15 @@ can only resize using html  or css ;-(
   <li>Terminology naming issues will be addressed during the ballot process and will be resolved prior to publication in the following way: the Value Sets will be updated to remove reference to CARIN Blue Button, replaced by either industry standard names or, for those specific to claim adjudication, with the new IG name.  Industry standard Code System revisions include consolidating the three Type of Bill Codes, removing reference to SNOMED CT, etc.  Some value sets renaming has be started. The rest will be completed during ballot reconciliation.</li>
   <li>Code System referencing issues will be addressed during the ballot process and will be resolved prior to publication. Based on recent guidance from the HL7 Vocabulary Workgroup a change will be made to reference external licensed Code Systems using URIs instead of OIDs.</li>
   <li>Trifolia-on-FHIR is not rendering complete information about the SearchParameter Resource.  To view the definition of a search parameter, review the XML or JSON representation.</li>
+  <li>The QA.html tab shows a small number of errors that have been reviewed and were determined to be an acceptable set of issues going into the ballot cycle.  These errors will be addressed prior to publication.  Error types included:
+    <ul>
+      <li>broken links to pdf files, which actually do work</li>
+      <li>errors related to inability of IG Publisher to provide support for the code systems CARIN is using</li>
+      <li>errors in the EOB example resource related to inability of IG Publisher to  validate ICD-10-CM and ICD-10-PCS codes. Grahame Grieve confirmed that ICD-10-CM and ICD-10-PCS is not supported by tx.fhir.org yet: https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Validatior.20Error.20ICD-10.20codes</li>
+    </ul>
+  </li>
 </ol>
 
-<p>null</p>
 
 
 
@@ -270,8 +276,8 @@ can only resize using html  or css ;-(
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CARINBlueButton Version: 0.1.59-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Dec 18, 2019 00:18-0500.
-      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+      CARINBlueButton Version: 0.1.60-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Thu, Dec 19, 2019 16:49-0500.
+      | <a style="color: #81BEF7" href="https://jira.hl7.org/projects/FHIR">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>

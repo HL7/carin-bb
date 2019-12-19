@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Outpatient-Facility",
 	"meta": {
-		"versionId": "194",
-		"lastUpdated": "2019-12-15T18:02:49.000-05:00"
+		"versionId": "195",
+		"lastUpdated": "2019-12-18T23:29:09.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-outpatient-facility",
 	"version": "0.5",
@@ -28,10 +28,12 @@
 			{
 				"id": "ExplanationOfBenefit.type",
 				"path": "ExplanationOfBenefit.type",
-				"patternCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type",
-					"code": "outpatient-facility",
-					"display": "Outpatient Facility"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "outpatient-facility"
+						}
+					]
 				}
 			},
 			{

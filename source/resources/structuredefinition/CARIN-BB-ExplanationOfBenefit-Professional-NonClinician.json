@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-ExplanationOfBenefit-Professional-NonClinician",
 	"meta": {
-		"versionId": "12",
-		"lastUpdated": "2019-12-15T18:03:44.000-05:00"
+		"versionId": "14",
+		"lastUpdated": "2019-12-18T23:46:39.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-explanationofbenefit-professional-nonclinician",
 	"version": "0.5",
@@ -28,10 +28,12 @@
 			{
 				"id": "ExplanationOfBenefit.type",
 				"path": "ExplanationOfBenefit.type",
-				"patternCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type",
-					"code": "professional-nonclinician",
-					"display": "Professional or Non-Clinician"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "professional-nonclinician"
+						}
+					]
 				}
 			},
 			{
@@ -64,9 +66,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:billingnetworkcontractingstatus.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "billingnetworkcontractingstatus"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "billingnetworkcontractingstatus"
+						}
+					]
 				}
 			},
 			{
@@ -87,9 +93,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:referringnetworkcontractingstatus.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "referringnetworkcontractingstatus"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "referringnetworkcontractingstatus"
+						}
+					]
 				}
 			},
 			{
@@ -110,9 +120,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:performingnetworkcontractingstatus.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "performingnetworkcontractingstatus"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "performingnetworkcontractingstatus"
+						}
+					]
 				}
 			},
 			{
@@ -133,9 +147,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:sitenetworkcontractingstatus.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "sitenetworkcontractingstatus"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "sitenetworkcontractingstatus"
+						}
+					]
 				}
 			},
 			{
@@ -157,9 +175,13 @@
 			{
 				"id": "ExplanationOfBenefit.supportingInfo:clmrecvddate.category",
 				"path": "ExplanationOfBenefit.supportingInfo.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
-					"code": "clmrecvddate"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory",
+							"code": "clmrecvddate"
+						}
+					]
 				}
 			},
 			{
@@ -257,9 +279,13 @@
 			{
 				"id": "ExplanationOfBenefit.item.adjudication:denialreason.category",
 				"path": "ExplanationOfBenefit.item.adjudication.category",
-				"fixedCoding": {
-					"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
-					"code": "denialreason"
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-adjudicationcategory",
+							"code": "denialreason"
+						}
+					]
 				}
 			},
 			{

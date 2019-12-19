@@ -2,8 +2,8 @@
 	"resourceType": "StructureDefinition",
 	"id": "CARIN-BB-Coverage",
 	"meta": {
-		"versionId": "10",
-		"lastUpdated": "2019-12-15T09:07:29.000-05:00"
+		"versionId": "11",
+		"lastUpdated": "2019-12-18T23:29:09.000-05:00"
 	},
 	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-bb-coverage",
 	"version": "0.5",
@@ -93,10 +93,12 @@
 			{
 				"id": "Coverage.class:group.type",
 				"path": "Coverage.class.type",
-				"patternCoding": {
-					"system": "http://terminology.hl7.org/CodeSystem/coverage-class",
-					"code": "group",
-					"display": "Group"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "group"
+						}
+					]
 				}
 			},
 			{
@@ -108,10 +110,12 @@
 			{
 				"id": "Coverage.class:plan.type",
 				"path": "Coverage.class.type",
-				"patternCoding": {
-					"system": "http://terminology.hl7.org/CodeSystem/coverage-class",
-					"code": "plan",
-					"display": "Plan"
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"code": "plan"
+						}
+					]
 				}
 			}
 		]

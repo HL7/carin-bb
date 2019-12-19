@@ -17,11 +17,11 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN Blue Button Claim Care Team Role Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-CARIN-BB-Claim-CareTeam-Role.html\"><code>http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claimcareteamrole</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-CARIN-BB-Claim-CareTeam-Role.html#CARIN-BB-Claim-CareTeam-Role-supervising\">supervising</a></td><td>Attending or Supervising provider</td><td/></tr><tr><td><a href=\"CodeSystem-CARIN-BB-Claim-CareTeam-Role.html#CARIN-BB-Claim-CareTeam-Role-referring\">referring</a></td><td>Referring provider</td><td/></tr><tr><td><a href=\"CodeSystem-CARIN-BB-Claim-CareTeam-Role.html#CARIN-BB-Claim-CareTeam-Role-performing\">performing</a></td><td>Servicing or Rendering provider</td><td/></tr><tr><td><a href=\"CodeSystem-CARIN-BB-Claim-CareTeam-Role.html#CARIN-BB-Claim-CareTeam-Role-prescribing\">prescribing</a></td><td>Prescribing provider</td><td/></tr><tr><td><a href=\"CodeSystem-CARIN-BB-Claim-CareTeam-Role.html#CARIN-BB-Claim-CareTeam-Role-pcp\">pcp</a></td><td>Primary care provider</td><td/></tr></table></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-bb-claimcareteamrole"];
-  fhir:ValueSet.version [ fhir:value "0.1.59-DRAFT"];
+  fhir:ValueSet.version [ fhir:value "0.1.60-DRAFT"];
   fhir:ValueSet.name [ fhir:value "CARINBBClaimCareTeamRole"];
   fhir:ValueSet.title [ fhir:value "CARIN Blue Button Claim Care Team Role Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-18T00:18:52-05:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-12-19T16:49:00-05:00"^^xsd:dateTime];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
