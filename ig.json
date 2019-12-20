@@ -3,6 +3,7 @@
 	"source": "implementationguide/carin-bb.xml",
 	"npm-name": "hl7.fhir.us.carin-bb",
 	"license": "CC0-1.0",
+	"history": "http://hl7.org/fhir/us/carin-bb/history.html",
 	"paths": {
 		"qa": "generated_output/qa",
 		"temp": "generated_output/temp",
