@@ -13,7 +13,7 @@
 	"compose": {
 		"include": [
 			{
-				"system": "http://snomed.info/sct/5991000124107/version/20170901",
+				"system": "http://snomed.info/sct",
 				"concept": [
 					{
 						"code": "principal",
