@@ -7,7 +7,7 @@
         <lastUpdated value="2019-12-19T16:34:57.000-05:00"/>
     </meta>
     <url value="http://hl7.org/fhir/us/carin-bb/ImplementationGuide/carin-bb"/>
-    <version value="0.1.60-DRAFT"/>
+    <version value="0.1.0"/>
     <name value="CARINBlueButton"/>
     <title value="Consumer-Directed Payer Data Exchange"/>
     <status value="draft"/>
