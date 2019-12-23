@@ -12,7 +12,7 @@
       "current": true
     },
     {
-      "version": "0.1.60",
+      "version": "0.1.0",
       "desc": "CARIN Blue Button FHIR IG STU1 ballot",
       "date": "2019-12-22",
       "sequence": "STU1",
