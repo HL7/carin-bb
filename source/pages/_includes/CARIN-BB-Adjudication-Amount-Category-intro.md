@@ -1,1 +1,0 @@
-Describes the various amount fields used when submitting and adjudicating a claim.

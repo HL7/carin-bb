@@ -1,0 +1,26 @@
+{
+  "package-id": "hl7.fhir.us.carin-bb",
+  "title": "CARIN Blue Button Implementation Guide",
+  "canonical": "http://hl7.org/fhir/us/carin-bb",
+  "introduction": "This implementation guide describes the CARIN Blue Button® Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.",
+  "list": [
+    {
+      "version": "current",
+      "desc": "CARIN Blue Button Implementation Guide CI Build",
+      "path": "http://build.fhir.org/ig/HL7/carin-bb",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "0.1.0",
+      "desc": "CARIN Blue Button FHIR IG STU1 ballot",
+      "date": "2019-12-22",
+      "sequence": "STU1",
+      "path": "http://hl7.org/fhir/us/carin-bb/2020Feb",
+      "status": "ballot",
+      "fhirversion": "4.0.1",
+      "current": false 
+    }
+  ]
+}
+

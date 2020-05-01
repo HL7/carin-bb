@@ -1,1 +1,0 @@
-Retrieve coverages for a patient
