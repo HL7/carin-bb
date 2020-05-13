@@ -92,8 +92,8 @@ included in this base profile (e.g. profile flags). The more specific EOB profil
 * item.informationSequence 0..* MS
 * item.category 0..1 MS
 * item.modifier 0..* MS
-* item.serviced[x] 0..* MS
-* item.location[x] 0..* MS
+* item.serviced[x] 0..1 MS
+* item.location[x] 0..1 MS
 * item.locationReference only Reference(CARINBBLocation)
 * item.quantity 0..1 MS
 * item.net 0..1 MS
@@ -106,11 +106,13 @@ Id: CARIN-BB-ExplanationOfBenefit-Inpatient-Facility
 Title: "CARIN BB ExplanationOfBenefit Inpatient Facility"
 Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at a facility as part of an overnight stay. 
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
+* type.coding 1..1
 * type.coding.code = #inpatient-facility
-* supportingInfo ^slicing.discriminator.path = "value:category"
+* supportingInfo ^slicing.discriminator.path = "value:category.coding.code"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
+
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 and
    attendingnetworkcontractingstatus 0..1 and
@@ -125,7 +127,8 @@ The claims data is based on the institutional claim format UB-04, submission sta
    discharge-status 0..1 and 
    ms-drg 0..1 and 
    placeofservice 0..1
-* supportingInfo.category.coding.system = "george" // ClaimInformationCategoryCS 
+
+* supportingInfo.category.coding.system = "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory"
 * supportingInfo[billingnetworkcontractingstatus].category.coding.code = #billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from NetworkContractingStatusVS  (required)
 * supportingInfo[attendingnetworkcontractingstatus].category.coding.code = #attendingnetworkcontractingstatus
@@ -154,7 +157,6 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[placeofservice].category.coding.code = #placeofservice
 
 
-
 Profile: CARINBBExplanationOfBenefitOutpatientFacility
 Parent: CARIN-BB-ExplanationOfBenefit
 Id: CARIN-BB-ExplanationOfBenefit-Outpatient-Facility
@@ -162,8 +164,8 @@ Title: "CARIN BB ExplanationOfBenefit Outpatient Facility"
 Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at a facility that are not part of an overnight stay. 
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
 * type.coding.code = #outpatient-facility
-* supportingInfo.category.coding.system = "george" // ClaimInformationCategoryCS 
-* supportingInfo ^slicing.discriminator.path = "value:category"
+* supportingInfo.category.coding.system = "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory" // ClaimInformationCategoryCS 
+* supportingInfo ^slicing.discriminator.path = "value:category.coding.code"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
@@ -198,8 +200,8 @@ Title: "CARIN BB ExplanationOfBenefit Pharmacy"
 Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies. 
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
 * type.coding.code = #pharmacy 
-* supportingInfo.category.coding.system = "george" // ClaimInformationCategoryCS 
-* supportingInfo ^slicing.discriminator.path = "value:category"
+* supportingInfo.category.coding.system = "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory" // ClaimInformationCategoryCS 
+* supportingInfo ^slicing.discriminator.path = "value:category.coding.code"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
@@ -211,7 +213,6 @@ The claims data is based on submission standards adopted by the Department of He
    claimReceivedDate 0..1 and
    daysSupply 0..1 and
    billingProviderNetworkStatus 0..1 
-* supportingInfo.category.coding.system = "george" // ClaimInformationCategoryCS 
 * supportingInfo[brandGenericCode].category.coding.code = #brandGenericCode   //BrandGeneric Code?
 * supportingInfo[rxOriginCode].category.coding.code = #rxOriginCode   // Code?
 * supportingInfo[refillNum].category.coding.code = #refillnum
@@ -227,8 +228,8 @@ Title: "CARIN BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. 
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 * type.coding.code = #professional-nonclinician 
-* supportingInfo.category.coding.system = "george" // ClaimInformationCategoryCS 
-* supportingInfo ^slicing.discriminator.path = "value:category"
+* supportingInfo.category.coding.system = "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory" // ClaimInformationCategoryCS 
+* supportingInfo ^slicing.discriminator.path = "value:category.coding.code"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
@@ -238,7 +239,6 @@ The claims data is based on the professional claim form 1500, submission standar
    performingnetworkcontractingstatus 0..1 and
    sitenetworkcontractingstatus 0..1 and
    clmrecvddate 0..1 
-* supportingInfo.category.coding.system = "george" // ClaimInformationCategoryCS 
 * supportingInfo[billingnetworkcontractingstatus].category.coding.code = #billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from NetworkContractingStatusVS  (required)
 * supportingInfo[referringnetworkcontractingstatus].category.coding.code = #referringnetworkcontractingstatus
@@ -250,6 +250,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[clmrecvddate].category.coding.code = #clmrecvddate
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1
+
 
 Profile: CARINBBOrganization
 Parent: Organization
