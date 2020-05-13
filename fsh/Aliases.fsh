@@ -2,6 +2,7 @@
 Alias:   $USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
 Alias:   $USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 Alias:   $USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+Alias:   $USCorePractitionerRole = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
 
 Alias:   $USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
 Alias:   USCoreMedicationRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
