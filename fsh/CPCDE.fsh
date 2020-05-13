@@ -11,8 +11,8 @@ Description: "CARIN Blue Button Coverage Profile."
 * relationship 1..1
 * payor 1..* 
 * payor only Reference (CARINBBOrganization)
-* class ^slicing.discriminator.type = #pattern
-* class ^slicing.discriminator.path = "value:type"
+* class ^slicing.discriminator.type = #value
+* class ^slicing.discriminator.path = "type.coding.code"
 * class ^slicing.rules = #open
 * class ^slicing.ordered = false   // can be omitted, since false is the default
 * class ^slicing.description = "Slice based on value pattern"
@@ -108,11 +108,11 @@ Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
 * type.coding 1..1
 * type.coding.code = #inpatient-facility
-* supportingInfo ^slicing.discriminator.path = "value:category.coding.code"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
-
+* supportingInfo ^slicing.discriminator.type = #value
+* supportingInfo ^slicing.discriminator.path = "category.coding.code"
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 and
    attendingnetworkcontractingstatus 0..1 and
@@ -165,10 +165,11 @@ Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
 * type.coding.code = #outpatient-facility
 * supportingInfo.category.coding.system = "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory" // ClaimInformationCategoryCS 
-* supportingInfo ^slicing.discriminator.path = "value:category.coding.code"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
+* supportingInfo ^slicing.discriminator.type = #value
+* supportingInfo ^slicing.discriminator.path = "category.coding.code"
 * supportingInfo contains 
    placeOfServiceCode 0..1 and
    patientDischargeStatusCode 0..1 and
@@ -201,7 +202,8 @@ Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
 * type.coding.code = #pharmacy 
 * supportingInfo.category.coding.system = "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory" // ClaimInformationCategoryCS 
-* supportingInfo ^slicing.discriminator.path = "value:category.coding.code"
+* supportingInfo ^slicing.discriminator.type = #value
+* supportingInfo ^slicing.discriminator.path = "category.coding.code"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
@@ -229,7 +231,8 @@ Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 * type.coding.code = #professional-nonclinician 
 * supportingInfo.category.coding.system = "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory" // ClaimInformationCategoryCS 
-* supportingInfo ^slicing.discriminator.path = "value:category.coding.code"
+* supportingInfo ^slicing.discriminator.type = #value
+* supportingInfo ^slicing.discriminator.path = "category.coding.code"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
@@ -240,6 +243,10 @@ The claims data is based on the professional claim form 1500, submission standar
    sitenetworkcontractingstatus 0..1 and
    clmrecvddate 0..1 
 * supportingInfo[billingnetworkcontractingstatus].category.coding.code = #billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].code from NetworkContractingStatusVS  (required)
+* supportingInfo[billingnetworkcontractingstatus].category.coding 1..1
+* supportingInfo[billingnetworkcontractingstatus].category.coding.system 1..1
+* supportingInfo[billingnetworkcontractingstatus].category.coding.code 1..1
 * supportingInfo[billingnetworkcontractingstatus].code from NetworkContractingStatusVS  (required)
 * supportingInfo[referringnetworkcontractingstatus].category.coding.code = #referringnetworkcontractingstatus
 * supportingInfo[referringnetworkcontractingstatus].code from NetworkContractingStatusVS  (required)
@@ -252,18 +259,58 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[clmrecvddate].timing[x] 1..1
 
 
+// Do all references to Organization in this profile need to target CARINBBOrganization?
 Profile: CARINBBOrganization
-Parent: Organization
+Parent:  $USCoreOrganization
 Id:  CARIN-BB-Organization
 Title: "CARIN BB Organization"
 Description: "CARIN Blue Button Organization Profile."
+* identifier.type 1..1
+* identifier.type from IdentiferTypeVS (extensible)
+* identifier ^slicing.discriminator.type = #pattern 
+* identifier ^slicing.discriminator.path = "$this"
+//* identifier ^slicing.rules = #open
+//* identifier ^slicing.ordered = false   // can be omitted, since false is the default
+//* identifier ^slicing.description = "Slice based on  pattern"
+* identifier contains 
+   NPI 0..1 and
+   TIN 0..*
+* identifier[NPI].type.coding.code = #NPI
+* identifier[NPI].type.coding 1..1
+* identifier[NPI].type.coding.code 1..1 
+* identifier[NPI].system = "http://hl7.org/fhir/sid/us-npi"
+* identifier[TIN].type.coding.code = #TAX
+* identifier[TIN].type.coding 1..1
+* identifier[TIN].type.coding.code 1..1 
+* identifier[TIN].system = "urn:oid:2.16.840.1.113883.4.4"
 
 Profile: CARINBBPatient
 Parent: $USCorePatient
 Id: CARIN-BB-Patient
 Title: "CARIN BB Patient"
 Description: "CARIN Blue Button Patient Profile."
+* identifier.type from IdentiferTypeVS (extensible)
+* identifier ^slicing.discriminator.type = #value 
+* identifier ^slicing.discriminator.path = "type.coding.code"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false   // can be omitted, since false is the default
+* identifier ^slicing.description = "Slice based on  pattern"
+* identifier contains 
+   memberid 1..* and
+   medrecnum 1..* and
+   patacctnum 1..*
+* identifier[memberid].type.coding.code = #MB
+* identifier[memberid].type.coding 1..*
+* identifier[memberid].type.coding.code 1..1 
+* identifier[medrecnum].type.coding.code = #MR
+* identifier[medrecnum].type.coding 1..*
+* identifier[medrecnum].type.coding.code 1..1 
+* identifier[patacctnum].type.coding.code = #PT
+* identifier[patacctnum].type.coding 1..*
+* identifier[patacctnum].type.coding.code 1..1 
 
+
+// What needs to change?
 Profile: CARINBBPractitioner
 Parent: $USCorePractitioner
 Id: CARIN-BB-Practitioner
@@ -275,7 +322,11 @@ Parent: $USCorePractitionerRole
 Id: CARIN-BB-PractitionerRole
 Title: "CARIN BB PractitionerRole"
 Description: "CARIN Blue Button PractitionerRole Profile."
+* organization only Reference(CARINBBOrganization)
+* practitioner only Reference(CARINBBPractitioner)
+* location only Reference (CARINBBLocation)
 
+// WHat needs to change?
 Profile: CARINBBLocation
 Parent: $USCoreLocation
 Id: CARIN-BB-Location

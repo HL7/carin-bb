@@ -75,3 +75,6 @@ Title: "Type of Bill (Frequency)"
 
 ValueSet: TypeOfBillClassificationVS
 Title: "Type of Bill (Classification)"
+
+ValueSet: IdentiferTypeVS
+Title: "Identifer Type"
