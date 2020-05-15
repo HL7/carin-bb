@@ -266,19 +266,12 @@ Id:  CARIN-BB-Organization
 Title: "CARIN BB Organization"
 Description: "CARIN Blue Button Organization Profile."
 * identifier.type 1..1
-* identifier.type from IdentiferTypeVS (extensible)
-* identifier ^slicing.discriminator.type = #pattern 
-* identifier ^slicing.discriminator.path = "$this"
-//* identifier ^slicing.rules = #open
-//* identifier ^slicing.ordered = false   // can be omitted, since false is the default
-//* identifier ^slicing.description = "Slice based on  pattern"
 * identifier contains 
-   NPI 0..1 and
    TIN 0..*
+* identifier.type from IdentiferTypeVS (extensible)
 * identifier[NPI].type.coding.code = #NPI
 * identifier[NPI].type.coding 1..1
 * identifier[NPI].type.coding.code 1..1 
-* identifier[NPI].system = "http://hl7.org/fhir/sid/us-npi"
 * identifier[TIN].type.coding.code = #TAX
 * identifier[TIN].type.coding 1..1
 * identifier[TIN].type.coding.code 1..1 
