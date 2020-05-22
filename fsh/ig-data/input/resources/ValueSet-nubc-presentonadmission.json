@@ -1,0 +1,24 @@
+{
+    "resourceType": "ValueSet",
+    "id": "nubc-presentonadmission",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-23T11:04:49.000+00:00"
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>NUBC Present On Admission</h2><div><p>UUB-04 Present on Admission.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http//www.nubc.org/present-on-admission</code></li></ul></div>"
+    },
+    "url": "http://hl7.org/fhir/us/ValueSet/nubc-presentonadmission",
+    "version": "0.1.0",
+    "name": "NUBCPresentOnAdmission",
+    "title": "NUBC Present On Admission",
+    "status": "draft",
+    "date": "2020-01-23T19:25:28+00:00",
+    "description": "UB-04 Present on Admission.",
+    "compose": {
+        "include": [{
+            "system": "http://www.nubc.org/present-on-admission"
+        }]
+    }
+}

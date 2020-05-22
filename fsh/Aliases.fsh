@@ -24,3 +24,4 @@ Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   $CPT = http://www.ama-assn.org/go/cpt
 Alias:   $ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
+Alias:   $FDANationalDrugCodeCS = http://hl7.org/fhir/sid/ndc
