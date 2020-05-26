@@ -210,8 +210,6 @@ Title: "Type Of Service"
 ValueSet: TypeOfFacilityVS 
 Title: "Type of Facility"
 
-ValueSet: TypeOfBillVS 
-Title: "Type of Bill"
 
 ValueSet: MSDRGVS
 Title: "MS-DRG"
@@ -229,7 +227,7 @@ ValueSet: NUBCRevenueCodeVS
 Title: "NUBC Revenue Code"
 
 ValueSet: NUBCTypeOfBillVS
-Title: "Type of Bill"
+Title: "NUBC Type of Bill"
 Description: "Code System http://www.nubc.org/type-of-bill,"
 
 ValueSet: TypeOfBillFrequencyVS
@@ -305,3 +303,10 @@ Title: "Benefit Payment Status Category"
 * ClaimAdjudicationCategoryCS#innetworkbenefitpaymentstatus	"in network benefit payment status"
 * ClaimAdjudicationCategoryCS#outofnetworkbenefitpaymentstatus	"out of network benefit payment status"
 * ClaimAdjudicationCategoryCS#otherbenefitpaymentstatus	"other benefit payment status"	
+
+ValueSet: AdjudicationValueCodesVS
+Title: "Benefit Payment Status Category"
+* ClaimAdjudicationCategoryCS#submittedamount	"submitted amount"	
+* ClaimAdjudicationCategoryCS#allowedamount	"allowed amount"
+* ClaimAdjudicationCategoryCS#deductibleamount	"deductible amount"	
+
