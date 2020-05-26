@@ -40,7 +40,6 @@ included in this base profile (e.g. profile flags). The more specific EOB profil
 * insurer 1..1
 * insurer only Reference(CARINBBOrganization)
 * provider 1..1 
-* provider only Reference(CARINBBOrganization)
 * related 0..* MS
 * related.relationship 1..1
 * related.relationship from RelatedClaimVS (extensible)
@@ -50,7 +49,6 @@ included in this base profile (e.g. profile flags). The more specific EOB profil
 * payee.party only Reference(CARINBBPractitionerRole | CARINBBPatient)
 * careTeam 0..* MS 
 * careTeam.provider 1..1
-* careTeam.provider only Reference(CARINBBPractitionerRole)
 * careTeam.responsible 0..1 MS 
 * careTeam.role 1..1 
 * careTeam.role from CareTeamRoleVS (extensible)
@@ -111,6 +109,8 @@ Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
 * type.coding 1..1
 * type.coding.code = #inpatient-facility
+* provider 1..1
+* provider only Reference(CarinBBOrganization)
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
@@ -260,6 +260,7 @@ Title: "CARIN BB ExplanationOfBenefit Outpatient Facility"
 Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at a facility that are not part of an overnight stay. 
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
 * type.coding.code = #outpatient-facility
+* provider only Reference(CARINBBOrganization)
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
@@ -305,6 +306,7 @@ Title: "CARIN BB ExplanationOfBenefit Pharmacy"
 Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies. 
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
 * type.coding.code = #pharmacy 
+* provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
 * supportingInfo ^slicing.discriminator.type = #value
 * supportingInfo ^slicing.discriminator.path = "category.coding.code"
 * supportingInfo ^slicing.rules = #open
@@ -341,6 +343,7 @@ Title: "CARIN BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is built upon the CARINBBExplanationOfBenefit Profile. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. 
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 * type.coding.code = #professional-nonclinician 
+* provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
 * supportingInfo.category.coding.system = "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory" // ClaimInformationCategoryCS 
 * supportingInfo ^slicing.discriminator.type = #value
 * supportingInfo ^slicing.discriminator.path = "category.coding.code"
