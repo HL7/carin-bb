@@ -110,7 +110,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * type.coding 1..1
 * type.coding.code = #inpatient-facility
 * provider 1..1
-* provider only Reference(CarinBBOrganization)
+* provider only Reference(CARINBBOrganization)
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
@@ -135,28 +135,28 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[billingnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
-* supportingInfo[billingnetworkcontractingstatus].value 0..0
-* supportingInfo[billingnetworkcontractingstatus].timing 0..0
+* supportingInfo[billingnetworkcontractingstatus].value[x] 0..0
+* supportingInfo[billingnetworkcontractingstatus].timing[x] 0..0
 * supportingInfo[attendingnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#attendingnetworkcontractingstatus
 * supportingInfo[attendingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[attendingnetworkcontractingstatus] ^short = "Claim attending provider network status"
-* supportingInfo[attendingnetworkcontractingstatus].value 0..0
-* supportingInfo[attendingnetworkcontractingstatus].timing 0..0
+* supportingInfo[attendingnetworkcontractingstatus].value[x] 0..0
+* supportingInfo[attendingnetworkcontractingstatus].timing[x] 0..0
 * supportingInfo[referringnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#referringnetworkcontractingstatus
 * supportingInfo[referringnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[referringnetworkcontractingstatus] ^short = "Claim attending provider network status"
-* supportingInfo[referringnetworkcontractingstatus].value 0..0
-* supportingInfo[referringnetworkcontractingstatus].timing 0..0
+* supportingInfo[referringnetworkcontractingstatus].value[x] 0..0
+* supportingInfo[referringnetworkcontractingstatus].timing[x] 0..0
 * supportingInfo[clmrecvddate].category.coding.code = #clmrecvddate
 * supportingInfo[clmrecvddate] ^short = "Claim Received Date"
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1
-* supportingInfo[clmrecvddate].value 0..0
+* supportingInfo[clmrecvddate].value[x] 0..0
 * supportingInfo[typeofbill].category.coding.code = ClaimInformationCategoryCS#typeofbill
 * supportingInfo[typeofbill] ^short = "Type of Bill"
 * supportingInfo[typeofbill].code from NUBCTypeOfBillVS (required)
-* supportingInfo[typeofbill].value 0..0
-* supportingInfo[typeofbill].timing 0..0
+* supportingInfo[typeofbill].value[x] 0..0
+* supportingInfo[typeofbill].timing[x] 0..0
 /* 
 * supportingInfo[typeofservice].category.coding.code = #typeofservice
 * supportingInfo[typeofservice].code from TypeOfServiceVS  (required)
@@ -172,23 +172,23 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[pointoforigin].category.coding.code = #admsrc
 * supportingInfo[pointoforigin].code from NUBCPointOfOriginVS (required)
 * supportingInfo[pointoforigin] ^short = "Claim Point of Origin for Admission or Visit"
-* supportingInfo[pointoforigin].value 0..0
-* supportingInfo[pointoforigin].timing 0..0
+* supportingInfo[pointoforigin].value[x] 0..0
+* supportingInfo[pointoforigin].timing[x] 0..0
 * supportingInfo[admtype].category.coding.code = #admtype
 * supportingInfo[admtype].code from NUBCPriorityOfAdmissionnVS  (required)
 * supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit "
-* supportingInfo[admtype].value 0..0
-* supportingInfo[admtype].timing 0..0
+* supportingInfo[admtype].value[x] 0..0
+* supportingInfo[admtype].timing[x] 0..0
 * supportingInfo[discharge-status].category.coding.code = #discharge-status
 * supportingInfo[discharge-status].code from NUBCPatientDischargeStatusVS   (required)
-* supportingInfo[discharge-status].value 0..0
-* supportingInfo[discharge-status].timing 0..0
+* supportingInfo[discharge-status].value[x] 0..0
+* supportingInfo[discharge-status].timing[x] 0..0
 * supportingInfo[pointoforigin] ^short = "Discharge Status"
 * supportingInfo[ms-drg].category.coding.code = #ms-drg
 * supportingInfo[ms-drg].code from MSDRGVS  (required)
 * supportingInfo[ms-drg] ^short = "Claim diagnosis related group (DRG), including the code system, the DRG version and the code value"
-* supportingInfo[ms-drg].value 0..0
-* supportingInfo[ms-drg].timing 0..0
+* supportingInfo[ms-drg].value[x] 0..0
+* supportingInfo[ms-drg].timing[x] 0..0
 
 
 
@@ -443,10 +443,9 @@ Id: CARIN-BB-PractitionerRole
 Title: "CARIN BB PractitionerRole"
 Description: "CARIN Blue Button PractitionerRole Profile."
 * organization only Reference(CARINBBOrganization)
-//* practitioner only Reference(CARINBBPractitioner)
-//* location only Reference (CARINBBLocation)
+* practitioner only Reference(CARINBBPractitioner)
+* location only Reference (CARINBBLocation)
 
-/*
 // What needs to change?
 Profile: CARINBBPractitioner
 Parent: $USCorePractitioner
@@ -460,4 +459,3 @@ Parent: $USCoreLocation
 Id: CARIN-BB-Location
 Title: "CARIN BB Location"
 Description: "CARIN Blue Button Location Profile."
-*/
