@@ -17,8 +17,8 @@ Description: "CARIN Blue Button Coverage Profile."
 * class ^slicing.ordered = false   // can be omitted, since false is the default
 * class ^slicing.description = "Slice based on value pattern"
 * class contains 
-   Group 1..1 and
-   Plan 1..1
+   Group 1..1 MS and
+   Plan 1..1 MS
 * class[Group].type.coding.code = #group
 * class[Plan].type.coding.code = #plan
  
@@ -118,20 +118,20 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo ^slicing.discriminator.path = "category.coding.code"
 * supportingInfo.category 1..1 
 * supportingInfo contains 
-   billingnetworkcontractingstatus 0..1 and
-   attendingnetworkcontractingstatus 0..1 and
-   referringnetworkcontractingstatus 0..1 and
-   clmrecvddate 0..1 and
- //  typeofservice 0..1 and
- //  tob-typeoffacility 0..1 and
- //  tob-billclassification 0..1 and 
- //  tob-frequency 0..1 and
- //  placeofservice 0..1  and 
-   typeofbill 0..1 and 
-   pointoforigin 0..1 and 
-   admtype 0..1 and 
-   discharge-status 0..1 and 
-   ms-drg 0..1 
+   billingnetworkcontractingstatus 0..1 MS and
+   attendingnetworkcontractingstatus 0..1 MS and
+   referringnetworkcontractingstatus 0..1 MS and
+   clmrecvddate 0..1 MS and
+ //  typeofservice 0..1 MS and
+ //  tob-typeoffacility 0..1 MS and
+ //  tob-billclassification 0..1 MS and 
+ //  tob-frequency 0..1 MS and
+ //  placeofservice 0..1  MS and 
+   typeofbill 0..1 MS and 
+   pointoforigin 0..1 MS and 
+   admtype 0..1 MS and 
+   discharge-status 0..1 MS and 
+   ms-drg 0..1 MS
 * supportingInfo[billingnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
@@ -201,9 +201,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * item.adjudication.category 1..1 
 * item.adjudication.category from ClaimAdjudicationCategoryVS
 * item.adjudication contains
-   adjudicationamounttype 0..* and
-   denialreason 0..1 and
-   allowedunits 0..1 
+   adjudicationamounttype 0..* MS and
+   denialreason 0..1 MS and
+   allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "Allowed number of units"
 * item.adjudication[allowedunits].category.coding.code = #allowedunits
 * item.adjudication[allowedunits].value only decimal
@@ -228,9 +228,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication.category 1..1
 * adjudication.category from ClaimAdjudicationCategoryVS
 * adjudication contains
-   adjudicationamounttype 0..* and
-   denialreason 0..1 and
-   inoutnetwork 1..1
+   adjudicationamounttype 0..* MS and
+   denialreason 0..1 MS and
+   inoutnetwork 1..1 MS
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * adjudication[inoutnetwork].category.coding.code = #inoutnetwork
 * adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
@@ -267,16 +267,16 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo ^slicing.discriminator.type = #value
 * supportingInfo ^slicing.discriminator.path = "category.coding.code"
 * supportingInfo contains 
-   placeOfServiceCode 0..1 and
-   discharge-status 0..1 and
-   admtype 0..1 and
-   pointoforigin 0..1 and
-   frequencyCode 0..1 and
-   serviceClassificationCode 0..1 and
-   facilityTypeCode 0..1 and 
-   claimReceivedDate 0..1 and
-   referringProviderNetworkStatus 0..1 and 
-   billingProviderNetworkStatus 0..1 
+   placeOfServiceCode 0..1 MS and
+   discharge-status 0..1 MS and
+   admtype 0..1 MS and
+   pointoforigin 0..1 MS and
+   frequencyCode 0..1 MS and
+   serviceClassificationCode 0..1 MS and
+   facilityTypeCode 0..1 MS and 
+   claimReceivedDate 0..1 MS and
+   referringProviderNetworkStatus 0..1 MS and 
+   billingProviderNetworkStatus 0..1 MS 
 * supportingInfo[placeOfServiceCode].category.coding.code = ClaimInformationCategoryCS#placeofservice
 * supportingInfo[discharge-status].category.coding.code = ClaimInformationCategoryCS#discharge-status
 * supportingInfo[discharge-status].code from NUBCPatientDischargeStatusVS (required)
@@ -313,13 +313,13 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
 * supportingInfo contains 
-   brandGenericCode 0..1 and
-   rxOriginCode 0..1 and
-   refillNum 0..1 and
-   dawCode 0..1 and
-   claimReceivedDate 0..1 and
-   daysSupply 0..1 and
-   billingProviderNetworkStatus 0..1 
+   brandGenericCode 0..1 MS and
+   rxOriginCode 0..1 MS and
+   refillNum 0..1 MS and
+   dawCode 0..1 MS and
+   claimReceivedDate 0..1 MS and
+   daysSupply 0..1 MS and
+   billingProviderNetworkStatus 0..1 MS
 * supportingInfo[brandGenericCode].category.coding.code = #brandGenericCode   
 * supportingInfo[brandGenericCode].code from NCPDPBrandGenericCodeVS (required)
 * supportingInfo[rxOriginCode].category.coding.code = #rxOriginCode   
@@ -351,11 +351,11 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
 * supportingInfo contains 
-   billingnetworkcontractingstatus 0..1 and
-   referringnetworkcontractingstatus 0..1 and
-   performingnetworkcontractingstatus 0..1 and
-   sitenetworkcontractingstatus 0..1 and
-   clmrecvddate 0..1 
+   billingnetworkcontractingstatus 0..1 MS and
+   referringnetworkcontractingstatus 0..1 MS and
+   performingnetworkcontractingstatus 0..1 MS and
+   sitenetworkcontractingstatus 0..1 MS and
+   clmrecvddate 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category.coding.code = #billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[billingnetworkcontractingstatus].category.coding 1..1
@@ -397,7 +397,7 @@ Title: "CARIN BB Organization"
 Description: "CARIN Blue Button Organization Profile."
 * identifier.type 1..1
 * identifier contains 
-   TIN 0..*
+   TIN 0..* MS
 * identifier.type from IdentiferTypeVS (extensible)
 * identifier[NPI].type.coding.code = #NPI
 * identifier[NPI].type.coding 1..1
