@@ -260,6 +260,16 @@ ValueSet: ICD10CMVS
 Title: "ICD-10-CM Diagnosis Codes"
 * codes from system $ICD10CM
 
+ValueSet: ICD10PCSVS
+Title: "ICD-1-PCS"
+* codes from system $ICD10PCS 
+
+ValueSet: CPTHCPCSProcedureCodeVS 
+Title: "AMA CPT and CMS HCPCS Procedure Codes"
+
+ValueSet:  CPTHCPCSModifierCodeVS
+Title: "AMA CPT and CMS HCPCS Modifier Codes"
+
 CodeSystem: ClaimAdjudicationCategoryCS
 Title: "Claim Adjudication Category"
 Description: "Values for EOB.item.adjudication.category"
