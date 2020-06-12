@@ -1,10 +1,4 @@
----
-title: Benefit to Consumers and Health Plans
-layout: default
-active: Benefit to Consumers and Health Plans
----
 
-[Previous Page](searchparams.html)
 
 Allowing third party applications to access payer data can directly impact the triple aim of health care to provide the right service to the right member at the right time. Members will undoubtedly engage at higher rates because they self-select the applications they find most appropriate to their unique circumstance. In addition, consumer data exchange is bi-directional. A consumers right to access their health data can include an opt-in provision allowing sharing of their historical health information with their health plan. Within days of enrollment, versus the months it typically takes, a plan can appropriately assess risk, identify gaps in care and triage the member to appropriate plan resources such as case management, care management, or disease management to name a few.
 
@@ -19,4 +13,3 @@ While the benefits of third-party applications targeting a consumer are vast, be
 * Reduced gaps in care will benefit payers when consumers and providers share vital information regarding chronic illnesses. 
 
 
-[Next Page](General_Guidance.html)

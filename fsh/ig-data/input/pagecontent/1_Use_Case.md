@@ -1,10 +1,4 @@
----
-title: Use Case
-layout: default
-active: Use Case
----
 
-[Previous Page](Background.html)
 
 **Consumer-directed health insurance data exchange**
 Consumer-directed exchange occurs when a consumer or an authorized caregiver invokes their HIPAA Individual Right of Access (45 CFR  164.524) and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.
@@ -27,7 +21,3 @@ Normal Flow:
 
 
 
-
-
-
-[Next Page](CARIN_Blue_Button_Framework_Specification.html)
