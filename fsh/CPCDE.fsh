@@ -52,6 +52,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * identifier[claimnumber].type = #cn 
 * identifier[claimnumber] ^short = "Claim Number"* type 1..1
 * type from ClaimTypeVS (extensible)
+* claim MS
 * use = #claim 
 * patient 1..1 
 * adjudication MS 
@@ -78,13 +79,6 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * supportingInfo.code 0..1 MS 
 * supportingInfo.timing[x] 0..1 MS 
 * supportingInfo.value[x] 0..1 MS 
-* diagnosis 0..* MS 
-* diagnosis.type 1..1
-* diagnosis.diagnosis[x] 1..1 
-* diagnosis.diagnosis[x] only CodeableConcept 
-* diagnosis.diagnosis[x] from ICD10CMVS (required)
-* diagnosis.type from DiagnosisTypeVS (extensible)
-* diagnosis.onAdmission 0..1 MS
 * procedure 0..* MS 
 * procedure.type 0..* MS 
 * procedure.date 0..1 MS 
@@ -108,17 +102,6 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * item.adjudication MS 
 * item.adjudication.category 1..1 
 * item.adjudication.category from ClaimAdjudicationCategoryVS
-* item.careTeamSequence 0..* MS
-* item.diagnosisSequence 0..* MS
-* item.procedureSequence 0..* MS
-* item.informationSequence 0..* MS
-* item.category 0..1 MS
-* item.modifier 0..* MS
-* item.serviced[x] 0..1 MS
-* item.location[x] 0..1 MS
-//* item.locationReference only Reference(CARINBBLocation)
-* item.quantity 0..1 MS
-* item.net 0..1 MS
 * total.category from AdjudicationAmountCategoryVS (extensible)
 * payment MS 
 * payment.adjustmentReason from AdjudicationDenialReasonVS (extensible)
@@ -126,17 +109,24 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * payee.type from ClaimPayeeTypeCodeVS (required)
 * supportingInfo.category.coding from ClaimInformationCategoryVS (required)
 
+
 Profile: CARINBBExplanationOfBenefitInpatientFacility
 Parent: CARIN-BB-ExplanationOfBenefit
 Id: CARIN-BB-ExplanationOfBenefit-Inpatient-Facility
 Title: "CARIN BB ExplanationOfBenefit Inpatient Facility"
 Description: "The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at a facility as part of an overnight stay. 
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
+
 * type.coding 1..1
 * type.coding.code = #inpatient-facility
-* diagnosis.diagnosisCodeableConcept from ICD10CMVS (required)
-* diagnosis.onAdmission from NUBCPresentOnAdmissionVS (required)
+* diagnosis 1..*
+* diagnosis.type 1..1
 * diagnosis.type from DiagnosisTypeFacilityVS (required)
+* diagnosis.diagnosis[x] 1..1 
+* diagnosis.diagnosis[x] only CodeableConcept 
+* diagnosis.diagnosis[x] from ICD10CMVS (required)
+* diagnosis.onAdmission 0..1 MS
+* diagnosis.onAdmission from NUBCPresentOnAdmissionVS (required)
 * procedure.procedure[x] from ICD10PCSVS (required)
 * provider 1..1
 * provider only Reference(CARINBBOrganization)
@@ -151,12 +141,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
    attendingnetworkcontractingstatus 0..1 MS and
    referringnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
- //  typeofservice 0..1 MS and
- //  tob-typeoffacility 0..1 MS and
- //  tob-billclassification 0..1 MS and 
- //  tob-frequency 0..1 MS and
- //  placeofservice 0..1  MS and 
-   typeofbill 0..1 MS and 
+    typeofbill 0..1 MS and 
    pointoforigin 0..1 MS and 
    admtype 0..1 MS and 
    discharge-status 0..1 MS and 
@@ -203,12 +188,13 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[discharge-status].code from NUBCPatientDischargeStatusVS   (required)
 * supportingInfo[discharge-status].value[x] 0..0
 * supportingInfo[discharge-status].timing[x] 0..0
-* supportingInfo[pointoforigin] ^short = "Discharge Status"
+* supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[ms-drg].category.coding.code = #ms-drg
 * supportingInfo[ms-drg].code from MSDRGVS  (required)
 * supportingInfo[ms-drg] ^short = "Claim diagnosis related group (DRG), including the code system, the DRG version and the code value"
 * supportingInfo[ms-drg].value[x] 0..0
 * supportingInfo[ms-drg].timing[x] 0..0
+
 * item.revenue from NUBCRevenueCodeVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
@@ -273,6 +259,7 @@ Title: "CARIN BB ExplanationOfBenefit Outpatient Facility"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at a facility that are not part of an overnight stay. 
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
 * type.coding.code = #outpatient-facility
+* diagnosis 1..*
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
 * provider only Reference(CARINBBOrganization)
 * supportingInfo ^slicing.rules = #open
@@ -321,7 +308,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[admtype].value[x] 0..0
 * supportingInfo[admtype].timing[x] 0..0
 * supportingInfo[discharge-status].category.coding.code = #discharge-status
-* supportingInfo[pointoforigin] ^short = "Discharge Status"
+* supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[discharge-status].code from NUBCPatientDischargeStatusVS   (required)
 * supportingInfo[discharge-status].value[x] 0..0
 * supportingInfo[discharge-status].timing[x] 0..0
@@ -379,7 +366,12 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication[adjudicationamounttype].amount 1..1
 * adjudication[adjudicationamounttype].value 0..0
 * careTeam.role from PayerOutpatientFacilityProviderRoleVS (required)
+* diagnosis 1..*
+* diagnosis.type 1..1
 * diagnosis.type from DiagnosisTypeFacilityVS (required)
+* diagnosis.diagnosis[x] 1..1 
+* diagnosis.diagnosis[x] only CodeableConcept 
+* diagnosis.diagnosis[x] from ICD10CMVS (required)
 * payment.type from  BenefitPaymentStatusVS (required)
 
 Profile: CARINBBExplanationOfBenefitPharmacy
@@ -491,7 +483,11 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1
 * careTeam.role from PayerProfessionalAndNonClinicianProviderRoleVS (required)
+* diagnosis 1..*
+* diagnosis.type 1..1
 * diagnosis.type from DiagnosisTypeProfessionalNonClinicianVS (required)
+* diagnosis.diagnosis[x] 1..1 
+* diagnosis.diagnosis[x] only CodeableConcept 
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
 * item.revenue 0..0
 * item.modifier from CPTHCPCSModifierCodeVS (required)
@@ -524,7 +520,7 @@ Description: "CARIN Blue Button Organization Profile."
 * identifier contains 
    TIN 0..* MS and
    payerid 0..* MS
-* identifier.type from IdentiferTypeVS (extensible)
+* identifier.type from IdentifierTypeVS (extensible)
 * identifier[NPI].type.coding.code = #NPI
 * identifier[NPI].type.coding 1..1
 * identifier[NPI].type.coding.code 1..1 
@@ -544,7 +540,7 @@ Title: "CARIN BB Patient"
 Description: "CARIN Blue Button Patient Profile."
 * meta.lastUpdated 1..1
 * meta.profile 1..* MS
-* identifier.type from IdentiferTypeVS (extensible)
+* identifier.type from IdentifierTypeVS (extensible)
 * identifier ^slicing.discriminator.type = #value 
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
@@ -608,7 +604,5 @@ Description: "CARIN Blue Button Location Profile."
 
 Invariant:  EOB-insurance-focal  
 Description: "EOB.insurance:  if focal is true, EOB.insurance.coverage.payor must equal EOB.insurer"
-Expression: "insurance.select(focal = true).count() = 0 or 
-             insurance.select (focal = true).single() = insurer"
+Expression: "insurance.select (focal = true).count() < 2"
 Severity:   #error
-XPath:      "   "

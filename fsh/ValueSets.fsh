@@ -236,8 +236,8 @@ Title: "Type of Bill (Frequency)"
 ValueSet: TypeOfBillClassificationVS
 Title: "Type of Bill (Classification)"
 
-ValueSet: IdentiferTypeVS
-Title: "Identifer Type"
+ValueSet: IdentifierTypeVS
+Title: "Identifier Type"
 
 ValueSet: NCPDPDispensedAsWrittenVS
 Title: "NCPDP Dispensed As Written (DAW)"
