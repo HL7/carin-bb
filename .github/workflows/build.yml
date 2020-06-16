@@ -25,7 +25,8 @@ jobs:
       - name: Install jekyll
         run: gem install jekyll --no-document
       - name: Install dependencies
-        run: npm install fsh-sushi --no-save
+#        run: npm install fsh-sushi --no-save
+        run: npm install -g fsh-sushi@0.12.7 --nosave
       - name: Run fsh-sushi
         run: ./node_modules/.bin/sushi fsh
 #      - name: Update ig-publisher

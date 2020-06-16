@@ -433,11 +433,9 @@ The claims data is based on submission standards adopted by the Department of He
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS and
    inoutnetwork 0..1 MS
-* item.adjudication[allowedunits] ^short = "Allowed number of units"
-* item.adjudication[allowedunits].category.coding.code = #allowedunits
-* item.adjudication[allowedunits].value only decimal
-* item.adjudication[allowedunits].reason 0..0
-* item.adjudication[allowedunits].amount 0..0
+* item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
+* item.adjudication[inoutnetwork].category.coding.code = #inoutnetwork
+* item.adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
