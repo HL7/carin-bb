@@ -1,0 +1,41 @@
+name: Build IG
+
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up java
+        uses: actions/setup-java@v1
+        with:
+          java-version: "11"
+          java-package: jre
+          architecture: x64
+      - name: Set up node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.12"
+      - name: Set up ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: "2.6"
+      - name: Install jekyll
+        run: gem install jekyll --no-document
+      - name: Install dependencies
+        run: npm install fsh-sushi --no-save
+      - name: Run fsh-sushi
+        run: ./node_modules/.bin/sushi fsh
+#      - name: Update ig-publisher
+#        run: cd build && ./_updatePublisher.sh
+#      - name: Run ig-publisher
+#        run: cd build && ./_genonce.sh
+      - name: Push changes
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          EXTERNAL_REPOSITORY: saulakravitz/carin-bb-publish
+          PUBLISH_BRANCH: master
+          PUBLISH_DIR: ./fsh/build/output

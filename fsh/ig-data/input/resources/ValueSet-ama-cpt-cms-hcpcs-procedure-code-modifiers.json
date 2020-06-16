@@ -1,0 +1,26 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ama-cpt-cms-hcpcs-procedure-code-modifiers",
+    "meta": {
+        "versionId": "3",
+        "lastUpdated": "2019-07-28T23:06:57.000+00:00"
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>AMA CPT CMS HCPCS Procedure Modifiers</h2><div><p>CPT (HCPCS I) and HCPCS II procedure modifier codes.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http://www.ama-assn.org/go/cpt-modifiers</code></li><li>Include all codes defined in <code>http://www.cms.gov/hcpcs-level-II-modifiers</code></li></ul></div>"
+    },
+    "url": "http://hl7.org/fhir/us/ValueSet/ama-cpt-cms-hcpcs-procedure-code-modifiers",
+    "version": "0.1.0",
+    "name": "AMACPTCMSHCPCSProcedureModifiers",
+    "title": "AMA CPT CMS HCPCS Procedure Modifiers",
+    "status": "draft",
+    "date": "2020-01-23T19:25:28+00:00",
+    "description": "CPT (HCPCS I) and HCPCS II procedure modifier codes.",
+    "compose": {
+        "include": [{
+            "system": "http://www.ama-assn.org/go/cpt-modifiers"
+        }, {
+            "system": "http://www.cms.gov/hcpcs-level-II-modifiers"
+        }]
+    }
+}

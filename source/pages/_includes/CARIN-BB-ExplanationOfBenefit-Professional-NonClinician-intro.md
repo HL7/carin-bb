@@ -1,2 +1,0 @@
-This profile is built upon the CARINBBExplanationOfBenefit Profile. The profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations.  The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human  Services as form CMS-1500.  
-

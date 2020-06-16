@@ -1,1 +1,0 @@
-These codes are found in the [CMS 1450](https://www.cms.gov/Medicare/CMS-Forms/CMS-Forms/CMS-Forms-Items/CMS1196256) form.

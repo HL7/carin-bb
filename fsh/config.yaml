@@ -1,0 +1,84 @@
+# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
+# │                                                                                                │
+# │  This file was generated from your existing project files and will be used for SUSHI           │
+# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# ╭─────────────────────────ImplementationGuide-hl7.fhir.us.carin-bb.json──────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.us.carin-bb
+canonical: http://hl7.org/fhir/us/carin-bb
+version: 0.1.0
+name: CARINConsumerDirectedPayerDataExchange
+title: CARIN Consumer Directed Payer Data Exchange
+status: active
+publisher:
+  name: HL7 Financial Management Working Group
+  url: http://www.hl7.org/Special/committees/fm/index.cfm
+  email: fm@lists.HL7.org
+description: CARIN Consumer Directed Payer Data Exchange
+license: CC0-1.0
+fhirVersion: 4.0.1
+dependencies:
+  hl7.fhir.us.core: 3.1.0
+parameters:
+  show-inherited-invariants: false
+copyrightYear: 2020+
+releaseLabel: STU1
+
+# ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
+# │  To control the ig.ini using this config, uncomment and set the "template" property.           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# template: hl7.fhir.template#current
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# menu:
+#   Home: index.html
+#   "HOME ":
+#     Introduction: index.html#Introduction
+#     The CARIN Alliance: index.html#Introduction#the-carin-alliance
+#     Guide Overview: index.html#guide-overview
+#   Use Cases:
+#     Terms and Concepts: use_case.html
+#     Use Cases: use_case.html
+#   Guidance:
+#     General Guidance: index.html#Introduction
+#     Common Payer Consumer Data Set (CPCDS): cpcds.html
+#     Notes To Developers: index.html#CARIN
+#   FHIR Artifacts:
+#     Profiles: profiles.html
+#     Search Parameters: searchParameters.html
+#     "Terminology ": terminology.html
+#     Capability Statements: capability.html
+#   Security: index.html#CARIN
+#   Examples: examples.html
+#   Downloads: downloads.html
+
+# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
+# │  To control the package-list.json using this config, uncomment and set the "history" property. │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# history:
+#   title: CARIN Blue Button Implementation Guide
+#   introduction: This implementation guide describes the CARIN Blue Button®
+#     Framework and Common Payer Consumer Data Set (CPCDS), providing a set of
+#     resources that payers can display to consumers via a FHIR API.
+#   current:
+#     version: current
+#     desc: CARIN Blue Button Implementation Guide CI Build
+#     path: http://build.fhir.org/ig/HL7/carin-bb
+#     status: ci-build
+#     current: true
+#   0.1.0:
+#     desc: CARIN Blue Button FHIR IG STU1 ballot
+#     date: 2019-12-22
+#     sequence: STU1
+#     path: http://hl7.org/fhir/us/carin-bb/2020Feb
+#     status: ballot
+#     fhirversion: 4.0.1
+#     current: false
