@@ -433,6 +433,22 @@ The claims data is based on submission standards adopted by the Department of He
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS and
    inoutnetwork 0..1 MS
+* item.adjudication[allowedunits] ^short = "Allowed number of units"
+* item.adjudication[allowedunits].category.coding.code = #allowedunits
+* item.adjudication[allowedunits].value only decimal
+* item.adjudication[allowedunits].reason 0..0
+* item.adjudication[allowedunits].amount 0..0
+* item.adjudication[denialreason] ^short = "Denial Reason"
+* item.adjudication[denialreason].category.coding.code = #denialreason 
+* item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
+* item.adjudication[denialreason].reason 1..1
+* item.adjudication[denialreason].amount 0..0
+* item.adjudication[denialreason].value 0..0
+* item.adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
+* item.adjudication[adjudicationamounttype] ^short = "Amounts"
+* item.adjudication[adjudicationamounttype].reason 0..0
+* item.adjudication[adjudicationamounttype].amount 1..1
+* item.adjudication[adjudicationamounttype].value 0..0
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
@@ -443,7 +459,14 @@ The claims data is based on submission standards adopted by the Department of He
 * adjudication contains
    adjudicationamounttype 0..* MS and
    inoutnetwork 1..1 MS
-
+* adjudication[inoutnetwork] ^short = "Benefit Payment Status"
+* adjudication[inoutnetwork].category.coding.code = #inoutnetwork
+* adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
+* adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
+* adjudication[adjudicationamounttype] ^short = "Amounts"
+* adjudication[adjudicationamounttype].reason 0..0
+* adjudication[adjudicationamounttype].amount 1..1
+* adjudication[adjudicationamounttype].value 0..0
 
 Profile: CARINBBExplanationOfBenefitProfessionalNonClinician
 Parent: CARIN-BB-ExplanationOfBenefit
@@ -504,10 +527,20 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * item.adjudication[denialreason].reason 1..1
+* item.adjudication[denialreason] ^short = "Denial Reason"
+* item.adjudication[denialreason].category.coding.code = #denialreason 
+* item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
+* item.adjudication[denialreason].reason 1..1
+* item.adjudication[denialreason].amount 0..0
+* item.adjudication[denialreason].value 0..0
 * item.adjudication[adjudicationamounttype].category from ClaimAdjudicationCategoryVS (required)
+* item.adjudication[adjudicationamounttype] ^short = "Amounts"
+* item.adjudication[adjudicationamounttype].reason 0..0
+* item.adjudication[adjudicationamounttype].amount 1..1
+* item.adjudication[adjudicationamounttype].value 0..0
+* item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
+* item.adjudication[inoutnetwork].category.coding.code = #inoutnetwork
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
-
-
 // Do all references to Organization in this profile need to target CARINBBOrganization?
 Profile: CARINBBOrganization
 Parent:  $USCoreOrganization
