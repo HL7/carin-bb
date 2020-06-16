@@ -230,11 +230,11 @@ ValueSet: NUBCTypeOfBillVS
 Title: "NUBC Type of Bill"
 Description: "Code System http://www.nubc.org/type-of-bill,"
 
-ValueSet: TypeOfBillFrequencyVS
-Title: "Type of Bill (Frequency)"
+//ValueSet: TypeOfBillFrequencyVS
+//Title: "Type of Bill (Frequency)"
 
-ValueSet: TypeOfBillClassificationVS
-Title: "Type of Bill (Classification)"
+//ValueSet: TypeOfBillClassificationVS
+//Title: "Type of Bill (Classification)"
 
 ValueSet: IdentifierTypeVS
 Title: "Identifier Type"
