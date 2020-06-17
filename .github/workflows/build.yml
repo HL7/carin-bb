@@ -28,7 +28,7 @@ jobs:
 #        run: npm install fsh-sushi --no-save
         run: npm install fsh-sushi@0.12.7 --nosave
       - name: Run fsh-sushi
-        run: ./node_modules/.bin/sushi fsh -o build; ls -l
+        run: cd fsh;./node_modules/.bin/sushi . ; ls -l build
       - name: Update and run ig-publisher
         run: cd build; ls -l ;./_updatePublisher.sh ; ./_genonce.sh
 #      - name: Run ig-publisher
