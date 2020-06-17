@@ -1,20 +1,23 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li><a href="index.html">Home</a></li>
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">HOME <b class="caret"> </b></a>
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret">
+      </b>
+    </a>
     <ul class="dropdown-menu">
-  <li><a href="index.html#Introduction">Introduction</a></li>
-  <li><a href="index.html#Introduction#the-carin-alliance">The CARIN Alliance</a></li>
-  <li><a href="index.html#guide-overview">Guide Overview</a></li>
+     <li><a href="index.html#Introduction">Introduction</a></li>
+     <li><a href="index.html#Introduction#the-carin-alliance">The CARIN Alliance</a></li>
+      <li><a href="index.html#guide-overview">Guide Overview</a></li>
     </ul>
   </li>
      <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-  <li><a href="use_case.html">Terms and Concepts</a></li>
-  <li><a href="use_case.html">Use Cases</a></li>
-   </ul>
-  </li>
+       <li><a href="use_case.html">Terms and Concepts</a></li>
+       <li><a href="use_case.html">Use Cases</a></li>
+    </ul>
+   </li>
     <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
@@ -27,12 +30,28 @@
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret"> </b></a>
     <ul class="dropdown-menu">
      <li><a href="profiles.html">Profiles</a></li>
-    <li><a href="searchParameters.html">Search Parameters</a></li>
+    <li><a href="search.html">Search Behavior and Parameters</a></li>
     <li><a href="terminology.html">Terminology </a></li>
     <li><a href="capability.html">Capability Statements</a></li>
     </ul>
    </li>
-    <li><a href="index.html#CARIN">Security</a></li>
+     </li>
+     <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Security<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+     <li><a href="security.html">Security</a></li>
+    </ul>
+   </li>
+        <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Examples<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
     <li><a href="examples.html">Examples</a></li> 
+    </ul>
+   </li>
+        <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Downloads<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
     <li><a href="downloads.html">Downloads</a></li>  
+    </ul>
+   </li>
 </ul>
