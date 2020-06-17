@@ -67,3 +67,13 @@ The SMART App IG also provides guidance on how to handle authentication. If the 
 <h4>PDEX</h4>
 <h4>RTPBC</h4>
 Using the RTPBC (Real Time Pharmacy Benefit Check), a patient can learn the cost and insurance coverage related to medications they’ve been prescribed.  A person would typically use the RTPBC prior to the dispensing of the prescription and the filing of the claim.  CARIIN BB provides the capability to access how pharmacy (and medical) benefits have been applied by the payer as a result of a claim filed by the pharmacy.  
+
+<h3>Guide Overview</h3>
+<h4>How to Read This Guide</h4>
+<h4>Actors</h4>
+<h4>Conformance Requirementse</h4>
+<h4>Acknowledgements</h4>
+<h4>Blue Button Trademark Information</h4>
+<h4>Authors</h4>
+Financial Management Workgroup, Payer / Provider Information Exchange Workgroup, Amol Vyas, Pat Taylor.
+Secondary Authors: Mark Roberts, Saul Kravitz, Igor Sirkovich.

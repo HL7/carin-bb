@@ -15,15 +15,15 @@
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases<b class="caret"> </b></a>
     <ul class="dropdown-menu">
        <li><a href="use_case.html">Terms and Concepts</a></li>
-       <li><a href="use_case.html">Use Cases</a></li>
+       <li><a href="Use_Case.html">Use Cases</a></li>
     </ul>
    </li>
     <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-  <li><a href="index.html#Introduction">General Guidance</a></li>
-  <li><a href="cpcds.html">Common Payer Consumer Data Set (CPCDS)</a></li>
-   <li><a href="index.html#CARIN">Notes To Developers</a></li>
+  <li><a href="Guidance.html">General Guidance</a></li>
+  <li><a href="Common_Payer_Consumer_Data_Set.html">CPCDS</a></li>
+   <li><a href="Notes_To_Developers.html">Notes To Developers</a></li>
     </ul>
   </li>
      <li class="dropdown">
