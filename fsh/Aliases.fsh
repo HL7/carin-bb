@@ -14,6 +14,7 @@ Alias:   USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-ra
 Alias:   USCoreDiagnosticReportLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
 Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
 Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+Alias:   $SubscriberRelationiship = http://hl7.org/fhir/R4/valueset-subscriber-relationship
 
 
 // Code Systems

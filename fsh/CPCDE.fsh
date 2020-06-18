@@ -9,10 +9,11 @@ Description: "CARIN Blue Button Coverage Profile."
 * status MS
 * subscriber 0..1 
 * subscriber only Reference(CARINBBPatient)
-* subscriberId 1..1 MS
-* beneficiary 1..1 MS
+* subscriberId 1..1 
+* beneficiary 1..1 
 * beneficiary only Reference(CARINBBPatient) 
 * relationship 1..1
+* relationship from $SubscriberRelationiship (required)
 * payor 1..1 MS   // was 1..* in Balloted STU
 * payor only Reference (CARINBBOrganization) 
 * class MS 
@@ -23,8 +24,8 @@ Description: "CARIN Blue Button Coverage Profile."
 * class ^slicing.ordered = false   // can be omitted, since false is the default
 * class ^slicing.description = "Slice based on value pattern"
 * class contains 
-   Group 1..1 MS and
-   Plan 1..1 MS
+   Group 1..1  and
+   Plan 1..1 
 * class[Group].type.coding.code = #group
 * class[Plan].type.coding.code = #plan
  
@@ -418,7 +419,7 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[dispensingstatus].category.coding.code = #dispensingstatus
 //* supportingInfo[dispensingstatus].code from --- shouldn't this be bound to a VS
 * supportingInfo[dispensingstatus] ^short = "Dispensing Status"
-* item.productOrService from FDANationalDrugCodeVS (required)
+* item.productOrService from FDANDCNCPDPCompoundCodeVS (required)
 * item.detail.productOrService  from FDANationalDrugCodeVS (required)
 * item.revenue 0..0
 * item.detail MS
@@ -438,7 +439,7 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[denialreason].category.coding.code = #denialreason 
-* item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
+* item.adjudication[denialreason].reason from NCPDPRejectCodeVS
 * item.adjudication[denialreason].reason 1..1
 * item.adjudication[denialreason].amount 0..0
 * item.adjudication[denialreason].value 0..0
@@ -611,7 +612,7 @@ Description: "CARIN Blue Button PractitionerRole Profile."
 * organization only Reference(CARINBBOrganization)
 * practitioner only Reference(CARINBBPractitioner)
 * location only Reference (CARINBBLocation)
-// * code   - same binding as Plan-Net
+* code from PayerProviderRoleVS (required)
 // * specialty  - same binding as Plan-Net
 
 // What needs to change?

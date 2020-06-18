@@ -39,6 +39,11 @@ Description: "Payer Provider Role"
 * #site "site"  "Site Provider"
 * #prescribing "prescribing" "Prescribing Provider"
 
+ValueSet: PayerProviderRoleVS
+Title: "Payer Provider Role"
+Description: "Payer Provider Role"
+* codes from system PayerProviderRoleCS
+
 ValueSet: PayerInpatientFacilityProviderRoleVSProviderRoleVS
 Title: "Payer - Inpatient Facility Provider Role"
 Description: "Indicates the role of the provider providing the care."
@@ -204,8 +209,8 @@ ValueSet: AdjudicationDenialReasonVS
 Title: "Adjudication Denial Reason"
 Description: "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC"
 
-ValueSet: TypeOfServiceVS 
-Title: "Type Of Service"
+//ValueSet: TypeOfServiceVS 
+//Title: "Type Of Service"
 
 ValueSet: TypeOfFacilityVS 
 Title: "Type of Facility"
@@ -250,6 +255,14 @@ Description: "http://www.ncpdp.org/brand-generic-code"
 ValueSet: NCPDPPrescriptionOriginCodeVS
 Title: "NCPDP Prescription Origin Code"
 Description: "http://www.ncpdp.org/prescription-origin-code"
+
+ValueSet: NCPDPRejectCodeVS
+Title: "NCPDP Reject Code"
+Description: "http://www.ncpdp.org/reject-code"
+
+ValueSet: FDANDCNCPDPCompoundCodeVS
+Title: "FDA NDC NCPDP Compound Code"
+Description: "NCPDP field # 407-D7 (National Drug Code (NDC)) or NCPDP field # 406-D6 (Compound Code)"
 
 ValueSet: FDANationalDrugCodeVS
 Title: "FDA National Drug Code (NDC)"

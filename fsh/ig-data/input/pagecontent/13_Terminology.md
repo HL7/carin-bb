@@ -109,6 +109,11 @@
         <td>{% capture md_text %}FDA National Drug Code (NDC){% endcapture %}{{ md_text | markdownify }}</td>
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
+    <tr>
+        <td><a href="ValueSet-FDANDCNCPDPCompoundCodeVS.html">FDA NDC and NCPDP Compound Codes</a></td>
+        <td>{% capture md_text %}FDA NDC and NCPDP Compound Codes.{% endcapture %}{{ md_text | markdownify }}</td>
+        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
 <tr>
         <td><a href="ValueSet-ICD10CMVS.html">ICD-10-CM</a></td>
         <td>{% capture md_text %}ICD-10-CM{% endcapture %}{{ md_text | markdownify }}</td>
@@ -149,6 +154,11 @@
         <td>{% capture md_text %}NCPDP Prescription Origin.{% endcapture %}{{ md_text | markdownify }}</td>
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
+    <tr>
+        <td><a href="ValueSet-NCPDPRejectCodeVS.html">NCPDP Reject Code</a></td>
+        <td>{% capture md_text %}NCPDP Reject Code{% endcapture %}{{ md_text | markdownify }}</td>
+        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
 <tr>
         <td><a href="ValueSet-NUBCPatientDischargeStatusVS.html">NUBC Patient Discharge Status</a></td>
         <td>{% capture md_text %}NUBC Patient Discharge Status{% endcapture %}{{ md_text | markdownify }}</td>
@@ -185,6 +195,11 @@
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
 <tr>
+        <td><a href="ValueSet-PayerProviderRoleVS.html">Payer Provider Role </a></td>
+        <td>{% capture md_text %}Payer  Provider Role{% endcapture %}{{ md_text | markdownify }}</td>
+        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
         <td><a href="ValueSet-PayerInpatientFacilityProviderRoleVS.html">Payer Inpatient Facility Provider Role </a></td>
         <td>{% capture md_text %}Payer Inpatient Facility Provider Role{% endcapture %}{{ md_text | markdownify }}</td>
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
