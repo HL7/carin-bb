@@ -115,7 +115,7 @@
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
 <tr>
-        <td><a href="ValueSet-ICD10PCSVS.html">ICD-10-PCS.html</a></td>
+        <td><a href="ValueSet-ICD10PCSVS.html">ICD-10-PCS</a></td>
         <td>{% capture md_text %}ICD-10-PC{% endcapture %}{{ md_text | markdownify }}</td>
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
@@ -239,81 +239,6 @@
         <td>{% capture md_text %}Type of Service{% endcapture %}{{ md_text | markdownify }}</td>
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
-<tr>
-        <td><a href="ValueSet-ama-cpt-cms-hcpcs-procedure-code-modifiers.html">AMA CPT HCPCS Procedure Code Modifiers</a></td>
-        <td>{% capture md_text %}AMA CPT HCPCS Procedure Code Modifiers.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-ama-cpt-cms-hcpcs-procedure-codes.html">AMA CPT HCPCS Procedure Code</a></td>
-        <td>{% capture md_text %}AMA CPT HCPCS Procedure Code.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-cdc-icd-cm-diagnosiscodes.html">CDC ICD CM Diagnosis Codes</a></td>
-        <td>{% capture md_text %}CDC ICD CM Diagnosis Codes{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-cms-ms-drg.html">CMS MS DRG</a></td>
-        <td>{% capture md_text %}CMS MS DRG.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-cms-placeofservice.html">CMS Place Of Service</a></td>
-        <td>{% capture md_text %}CMS Place Of Service.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-fda-ndc.html">FDA-NDC</a></td>
-        <td>{% capture md_text %}FDA-NDC.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-ncpdp-dispensedaswrittenorproductselectioncode.html">NCPDP Dispensed As WRitten or Product Selection Code</a></td>
-        <td>{% capture md_text %}NCPDP Dispensed As Written or Product Selection Code.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-ncpdp-prescriptionorigincode.html">NCPDP Prescription Origin</a></td>
-        <td>{% capture md_text %}NCPDP Prescription Origin{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-nubc-patientdischargestatus.html">NUBC Patient Discharge Status</a></td>
-        <td>{% capture md_text %}NUBC Patient Discharge Status{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-nubc-pointoforiginforadmissionorvisit.html">NUBC Point Of Origin for Admission or Visit</a></td>
-        <td>{% capture md_text %}NUBC Point Of Origin for Admission or Visit.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-nubc-presentonadmission.html">NUBC Present On Admission</a></td>
-        <td>{% capture md_text %}NUBC Present On Admission.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-nubc-prioritytypeofadmissionorvisit.html">NUBC Priority Type of Admission or Visit</a></td>
-        <td>{% capture md_text %}NUBC Priority Type of Admission or Visit{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.          {% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-nubc-revenuecode.html"> NUBC Revenue Code</a></td>
-        <td>{% capture md_text %}NUBC Revenue Code             {% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions {% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-nubc-typeofbill.html">NUBC Type of Bill</a></td>
-        <td>{% capture md_text %}NUBC Type of Bill.            {% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions {% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-x12carccmsrarc.html">X12 CARC and CMS RARC</a></td>
-        <td>{% capture md_text %}X12 CARC and CMS RARC         {% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions {% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
   </tbody>
 </table>
 
@@ -344,15 +269,15 @@
       </tr>
       <tr>
         <td><a href="CodeSystem-PayerDiagnosisTypeCS.html">Payer Diagnosis Types (additional)</a></td>
-        <td>{% capture md_text %}"Payer Diagnosis Types"{% endcapture %}{{ md_text | markdownify }}</td>
+        <td>{% capture md_text %}Payer Diagnosis Types{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
         <td><a href="CodeSystem-ClaimTypeCS.html">Claim Types</a></td>
-        <td>{% capture md_text %}"Claim Types"{% endcapture %}{{ md_text | markdownify }}</td>
+        <td>{% capture md_text %}Claim Types{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
         <td><a href="CodeSystem-PayerProviderRoleCS.html">Provider Roles</a></td>
-        <td>{% capture md_text %}"Provider Roles"{% endcapture %}{{ md_text | markdownify }}</td>
+        <td>{% capture md_text %}Provider Roles{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
   </tbody>
 </table>

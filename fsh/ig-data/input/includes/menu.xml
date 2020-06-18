@@ -14,8 +14,8 @@
      <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-       <li><a href="use_case.html">Terms and Concepts</a></li>
-       <li><a href="Use_Case.html">Use Cases</a></li>
+       <li><a href="use_case.html#terms-and-concepts">Terms and Concepts</a></li>
+       <li><a href="use_case.html#use-cases">Use Cases</a></li>
     </ul>
    </li>
     <li class="dropdown">
@@ -31,7 +31,7 @@
     <ul class="dropdown-menu">
      <li><a href="profiles.html">Profiles</a></li>
     <li><a href="search.html">Search Behavior and Parameters</a></li>
-    <li><a href="terminology.html">Terminology </a></li>
+    <li><a href="Terminology.html">Terminology </a></li>
     <li><a href="capability.html">Capability Statements</a></li>
     </ul>
    </li>
@@ -39,7 +39,7 @@
      <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Security<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-     <li><a href="security.html">Security</a></li>
+     <li><a href="Authorization_Authentication_and_Registration.html">Security</a></li>
     </ul>
    </li>
         <li class="dropdown">
