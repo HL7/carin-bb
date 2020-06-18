@@ -10,19 +10,19 @@
       <td>
         <b>Definition</b>
       </td>
-     </tr>
+    </tr>
   </thead>
   <tbody>
     <tr>
               <td>Subscriber</td>
               <td>TBD</td>
     </tr>
-        <tr>
+    <tr>
               <td>Dependent</td>
               <td>TBD</td>
     </tr>
-        <tr>
-              <td>Member/td>
+    <tr>
+              <td>Member</td>
               <td>TBD</td>
     </tr>
         <tr>
@@ -37,15 +37,15 @@
               <td>Personal Representative</td>
               <td>Per the HIPAA privacy regulations at 45 CFR 164.502(g), a <a href="https://urldefense.proofpoint.com/v2/url?u=https-3A__www.hhs.gov_hipaa_for-2Dprofessionals_privacy_guidance_personal-2Drepresentatives_index.html&d=DwMD-g&c=aIUDzRSH0GV4AQi9KEcOBQ&r=yWXMVZr0SziUyEVZ56vTdlmXBCJDn2JEHB1y1-Ra3ig&m=kW-2JMnVMmexZk4eJoDWtnQeGJ4pZp68igBn9CMjP7M&s=YqcWL-o6QklLgDfOA91f5ysHOEn9YZjX7k7m7ROTuU0&e=">personal-representative</a> is someone authorized under state or other applicable law to act on behalf of the individual in making health care related decisions (such as a parent, guardian, or person with a medical power of attorney)</td>
     </tr>
-        <tr>
+    <tr>
               <td>Coordination of Benefits</td>
               <td>TBD</td>
     </tr>
-        <tr>
-              <td>Payer</a></td>
+    <tr>
+              <td>Payer</td>
               <td>TBD</td>
     </tr>
-        <tr>
+    <tr>
               <td>Encounter data vs Claims</td>
               <td>Encounter data means the information or data relating to the receipt of any item(s) or service(s) by an enrollee under a contract between a State and a managed care plan. Encounter data are conceptually equivalent to the paid claims records that state Medicaid agencies create when they pay providers on a FFS basis</td>
     </tr>
@@ -53,11 +53,11 @@
               <td>EOB.careteam</td>
               <td>The members of the team or organization who provided the products and services as submitted on the claim by the provider to the payer</td>
     </tr>
-            <tr>
+    <tr>
               <td>CareTeam Resource</td>
               <td>The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient</td>
     </tr>
-           </tbody>
+    </tbody>
 </table>
 
 

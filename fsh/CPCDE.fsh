@@ -64,7 +64,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * provider 1..1 
 * related 0..* MS
 * related.relationship 1..1
-* related.relationship from RelatedClaimVS (extensible)
+//* related.relationship from RelatedClaimVS (extensible)
 * payee 0..1 MS
 * payee.type 1..1
 * payee.party 1..1
@@ -73,10 +73,10 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * careTeam.provider 1..1
 * careTeam.responsible 0..1 MS 
 * careTeam.role 1..1 
-* careTeam.role from CareTeamRoleVS (extensible)
+//* careTeam.role from PayerProviderRoleVS (required)
 * supportingInfo 0..* MS
 * supportingInfo.category 1..1
-* supportingInfo.category from InformationCategoryVS
+* supportingInfo.category from ClaimInformationCategoryVS
 * supportingInfo.code 0..1 MS 
 * supportingInfo.timing[x] 0..1 MS 
 * supportingInfo.value[x] 0..1 MS 
@@ -103,7 +103,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * item.adjudication MS 
 * item.adjudication.category 1..1 
 * item.adjudication.category from ClaimAdjudicationCategoryVS
-* total.category from AdjudicationAmountCategoryVS (extensible)
+* total.category from PayerAdjudicationAmountCategoryVS (extensible)
 * payment MS 
 * payment.adjustmentReason from AdjudicationDenialReasonVS (extensible)
 * payment.type from ClaimPaymentStatusCodeVS (required)

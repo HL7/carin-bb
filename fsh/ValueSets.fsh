@@ -190,20 +190,20 @@ Title: "Claim Types"
 Description: "Proposed replacement/update for http://hl7.org/fhir/ValueSet/claim-type"
 * codes from system ClaimTypeCS
 
-ValueSet: RelatedClaimVS
-Title: "Related Claim"
+//ValueSet: RelatedClaimVS
+//Title: "Related Claim"
 
-ValueSet: CareTeamRoleVS
-Title: "Care Team Roles"
+//ValueSet: CareTeamRoleVS
+//Title: "Care Team Roles"
 
-ValueSet: InformationCategoryVS
-Title: "Information Categories"
+//ValueSet: InformationCategoryVS
+//Title: "Information Categories"
 
-ValueSet: DiagnosisTypeVS
-Title: "Diagnosis Type"
+//ValueSet: DiagnosisTypeVS
+//Title: "Diagnosis Type"
 
-ValueSet: AdjudicationAmountCategoryVS
-Title: "Adjudication Amount Category"
+//ValueSet: AdjudicationAmountCategoryVS
+//Title: "Adjudication Amount Category"
 
 ValueSet: AdjudicationDenialReasonVS
 Title: "Adjudication Denial Reason"
@@ -212,8 +212,8 @@ Description: "Reason codes used to interpret the adjudication denial reason.  X1
 //ValueSet: TypeOfServiceVS 
 //Title: "Type Of Service"
 
-ValueSet: TypeOfFacilityVS 
-Title: "Type of Facility"
+//ValueSet: TypeOfFacilityVS 
+//Title: "Type of Facility"
 
 
 ValueSet: MSDRGVS

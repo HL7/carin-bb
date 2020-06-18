@@ -19,14 +19,9 @@
     </tr>
   </thead>
   <tbody> 
- <tr>
-        <td><a href="ValueSet-AdjudicationAmountCategoryVS.html">Adjudication Amount Category</a></td>
-        <td>{% capture md_text %}Adjudication Amount Category.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
 <tr>
         <td><a href="ValueSet-AdjudicationDenialReasonVS.html">Adjudication Denial Reason</a></td>
-        <td>{% capture md_text %}Adjudication Denial Reason.{% endcapture %}{{ md_text | markdownify }}</td>
+        <td>{% capture md_text %}Adjudication Denial Reason X12CARCCMSRARC.{% endcapture %}{{ md_text | markdownify }}</td>
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
 <tr>
@@ -57,11 +52,6 @@
 <tr>
         <td><a href="ValueSet-CPTHCPCSProcedureCodeVS.html">CPT and HCPCS Procedure Codes</a></td>
         <td>{% capture md_text %}CPT and HCPCS Procedure Codes.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-CareTeamRoleVS.html">Care Team Role</a></td>
-        <td>{% capture md_text %}Care Team Role.{% endcapture %}{{ md_text | markdownify }}</td>
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
 <tr>
@@ -100,11 +90,6 @@
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
 <tr>
-        <td><a href="ValueSet-DiagnosisTypeVS.html">Diagnosis Type </a></td>
-        <td>{% capture md_text %}Diagnosis Type.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
         <td><a href="ValueSet-FDANationalDrugCodeVS.html">FDA National Drug Code (NDC)</a></td>
         <td>{% capture md_text %}FDA National Drug Code (NDC){% endcapture %}{{ md_text | markdownify }}</td>
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
@@ -127,11 +112,6 @@
 <tr>
         <td><a href="ValueSet-IdentifierTypeVS.html">Identifier Type</a></td>
         <td>{% capture md_text %}Identifier Type.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-InformationCategoryVS.html">Information Category</a></td>
-        <td>{% capture md_text %}Information Category{% endcapture %}{{ md_text | markdownify }}</td>
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
 <tr>
@@ -227,11 +207,6 @@
 <tr>
         <td><a href="ValueSet-ProviderNetworkStatusVS.html">Provider Network Status</a></td>
         <td>{% capture md_text %}Provider Network Status.{% endcapture %}{{ md_text | markdownify }}</td>
-        <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-<tr>
-        <td><a href="ValueSet-RelatedClaimVS.html">Related Claim</a></td>
-        <td>{% capture md_text %}Related Claim.{% endcapture %}{{ md_text | markdownify }}</td>
         <td>{% capture md_text %}Update Licensing restrictions.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
 <tr>
