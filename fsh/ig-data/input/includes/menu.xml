@@ -6,9 +6,9 @@
       </b>
     </a>
     <ul class="dropdown-menu">
-     <li><a href="index.html#Introduction">Introduction</a></li>
-     <li><a href="index.html#Introduction#the-carin-alliance">The CARIN Alliance</a></li>
-      <li><a href="index.html#guide-overview">Guide Overview</a></li>
+     <li><a href="index.html#description">Introduction</a></li>
+     <li><a href="Background.html#the-carin-alliance">The CARIN Alliance</a></li>
+      <li><a href="Background.html#guide-overview">Guide Overview</a></li>
     </ul>
   </li>
      <li class="dropdown">
@@ -39,7 +39,8 @@
      <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Security<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-     <li><a href="Authorization_Authentication_and_Registration.html">Security</a></li>
+     <li><a href="Authorization_Authentication_and_Registration.html">Authentication and Authorization</a></li>
+      <li><a href="Authorization_Authentication_and_Registration.html">SMARTonFHIR App Launch</a></li>
     </ul>
    </li>
         <li class="dropdown">
