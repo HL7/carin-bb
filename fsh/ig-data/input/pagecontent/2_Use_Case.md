@@ -67,7 +67,7 @@
 Consumer-directed exchange occurs when a consumer or an authorized caregiver invokes their HIPAA Individual Right of Access (45 CFR  164.524) and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.
 **Use Case**: Consumer Access to their Claims Data
 <h4>Technical Workflow</h4>
-<img style="width:100%;height:auto;float:none;align:middle;" src="CARINSequence.png" />
+<img style="width:100%;float:none;align:middle;" src="CARINSequence.png" />
 
 Actors:
 <ul>

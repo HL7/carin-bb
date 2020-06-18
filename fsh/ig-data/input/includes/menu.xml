@@ -14,8 +14,8 @@
      <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-       <li><a href="use_case.html#terms-and-concepts">Terms and Concepts</a></li>
-       <li><a href="use_case.html#use-cases">Use Cases</a></li>
+       <li><a href="Use_Case.html#terms-and-concepts">Terms and Concepts</a></li>
+       <li><a href="Use_Case.html#use-cases">Use Cases</a></li>
     </ul>
    </li>
     <li class="dropdown">

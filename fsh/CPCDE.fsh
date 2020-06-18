@@ -151,50 +151,33 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
-* supportingInfo[billingnetworkcontractingstatus].value[x] 0..0
-* supportingInfo[billingnetworkcontractingstatus].timing[x] 0..0
 * supportingInfo[attendingnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#attendingnetworkcontractingstatus
 * supportingInfo[attendingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[attendingnetworkcontractingstatus].code 1..1
 * supportingInfo[attendingnetworkcontractingstatus] ^short = "Claim attending provider network status"
-* supportingInfo[attendingnetworkcontractingstatus].value[x] 0..0
-* supportingInfo[attendingnetworkcontractingstatus].timing[x] 0..0
 * supportingInfo[referringnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#referringnetworkcontractingstatus
 * supportingInfo[referringnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[referringnetworkcontractingstatus].code 1..1
 * supportingInfo[referringnetworkcontractingstatus] ^short = "Claim attending provider network status"
-* supportingInfo[referringnetworkcontractingstatus].value[x] 0..0
-* supportingInfo[referringnetworkcontractingstatus].timing[x] 0..0
 * supportingInfo[clmrecvddate].category.coding.code = #clmrecvddate
 * supportingInfo[clmrecvddate] ^short = "Claim Received Date"
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1
-* supportingInfo[clmrecvddate].value[x] 0..0
 * supportingInfo[typeofbill].category.coding.code = ClaimInformationCategoryCS#typeofbill
 * supportingInfo[typeofbill] ^short = "Type of Bill"
 * supportingInfo[typeofbill].code from NUBCTypeOfBillVS (required)
-* supportingInfo[typeofbill].value[x] 0..0
-* supportingInfo[typeofbill].timing[x] 0..0
 * supportingInfo[pointoforigin].category.coding.code = #admsrc
 * supportingInfo[pointoforigin].code from NUBCPointOfOriginVS (required)
 * supportingInfo[pointoforigin] ^short = "Claim Point of Origin for Admission or Visit"
-* supportingInfo[pointoforigin].value[x] 0..0
-* supportingInfo[pointoforigin].timing[x] 0..0
 * supportingInfo[admtype].category.coding.code = #admtype
 * supportingInfo[admtype].code from NUBCPriorityOfAdmissionnVS  (required)
 * supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit "
-* supportingInfo[admtype].value[x] 0..0
-* supportingInfo[admtype].timing[x] 0..0
 * supportingInfo[discharge-status].category.coding.code = #discharge-status
 * supportingInfo[discharge-status].code from NUBCPatientDischargeStatusVS   (required)
-* supportingInfo[discharge-status].value[x] 0..0
-* supportingInfo[discharge-status].timing[x] 0..0
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[ms-drg].category.coding.code = #ms-drg
 * supportingInfo[ms-drg].code from MSDRGVS  (required)
 * supportingInfo[ms-drg] ^short = "Claim diagnosis related group (DRG), including the code system, the DRG version and the code value"
-* supportingInfo[ms-drg].value[x] 0..0
-* supportingInfo[ms-drg].timing[x] 0..0
 
 * item.revenue from NUBCRevenueCodeVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
@@ -211,19 +194,13 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * item.adjudication[allowedunits] ^short = "Allowed number of units"
 * item.adjudication[allowedunits].category.coding.code = #allowedunits
 * item.adjudication[allowedunits].value only decimal
-* item.adjudication[allowedunits].reason 0..0
-* item.adjudication[allowedunits].amount 0..0
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[denialreason].amount 0..0
-* item.adjudication[denialreason].value 0..0
 * item.adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
-* item.adjudication[adjudicationamounttype].reason 0..0
 * item.adjudication[adjudicationamounttype].amount 1..1
-* item.adjudication[adjudicationamounttype].value 0..0
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
@@ -242,13 +219,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication[denialreason].category.coding.code = #denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * adjudication[denialreason].reason 1..1
-* adjudication[denialreason].amount 0..0
-* adjudication[denialreason].value 0..0
 * adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
 * adjudication[adjudicationamounttype] ^short = "Amounts"
-* adjudication[adjudicationamounttype].reason 0..0
 * adjudication[adjudicationamounttype].amount 1..1
-* adjudication[adjudicationamounttype].value 0..0
 * careTeam.role from PayerInpatientFacilityProviderRoleVSProviderRoleVS (required)
 * payment.type from  BenefitPaymentStatusVS (required)
 
@@ -280,39 +253,26 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
-* supportingInfo[billingnetworkcontractingstatus].value[x] 0..0
-* supportingInfo[billingnetworkcontractingstatus].timing[x] 0..0
 * supportingInfo[referringnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#referringnetworkcontractingstatus
 * supportingInfo[referringnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[referringnetworkcontractingstatus].code 1..1
 * supportingInfo[referringnetworkcontractingstatus] ^short = "Claim attending provider network status"
-* supportingInfo[referringnetworkcontractingstatus].value[x] 0..0
-* supportingInfo[referringnetworkcontractingstatus].timing[x] 0..0
 * supportingInfo[clmrecvddate].category.coding.code = #clmrecvddate
 * supportingInfo[clmrecvddate] ^short = "Claim Received Date"
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1
-* supportingInfo[clmrecvddate].value[x] 0..0
 * supportingInfo[typeofbill].category.coding.code = ClaimInformationCategoryCS#typeofbill
 * supportingInfo[typeofbill] ^short = "Type of Bill"
 * supportingInfo[typeofbill].code from NUBCTypeOfBillVS (required)
-* supportingInfo[typeofbill].value[x] 0..0
-* supportingInfo[typeofbill].timing[x] 0..0
 * supportingInfo[pointoforigin].category.coding.code = #admsrc
 * supportingInfo[pointoforigin].code from NUBCPointOfOriginVS (required)
 * supportingInfo[pointoforigin] ^short = "Claim Point of Origin for Admission or Visit"
-* supportingInfo[pointoforigin].value[x] 0..0
-* supportingInfo[pointoforigin].timing[x] 0..0
 * supportingInfo[admtype].category.coding.code = #admtype
 * supportingInfo[admtype].code from NUBCPriorityOfAdmissionnVS  (required)
 * supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit "
-* supportingInfo[admtype].value[x] 0..0
-* supportingInfo[admtype].timing[x] 0..0
 * supportingInfo[discharge-status].category.coding.code = #discharge-status
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[discharge-status].code from NUBCPatientDischargeStatusVS   (required)
-* supportingInfo[discharge-status].value[x] 0..0
-* supportingInfo[discharge-status].timing[x] 0..0
 * item.revenue from NUBCRevenueCodeVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
@@ -328,19 +288,13 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[allowedunits] ^short = "Allowed number of units"
 * item.adjudication[allowedunits].category.coding.code = #allowedunits
 * item.adjudication[allowedunits].value only decimal
-* item.adjudication[allowedunits].reason 0..0
-* item.adjudication[allowedunits].amount 0..0
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[denialreason].amount 0..0
-* item.adjudication[denialreason].value 0..0
 * item.adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
-* item.adjudication[adjudicationamounttype].reason 0..0
 * item.adjudication[adjudicationamounttype].amount 1..1
-* item.adjudication[adjudicationamounttype].value 0..0
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
@@ -359,13 +313,9 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication[denialreason].category.coding.code = #denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * adjudication[denialreason].reason 1..1
-* adjudication[denialreason].amount 0..0
-* adjudication[denialreason].value 0..0
 * adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
 * adjudication[adjudicationamounttype] ^short = "Amounts"
-* adjudication[adjudicationamounttype].reason 0..0
 * adjudication[adjudicationamounttype].amount 1..1
-* adjudication[adjudicationamounttype].value 0..0
 * careTeam.role from PayerOutpatientFacilityProviderRoleVS (required)
 * diagnosis 1..*
 * diagnosis.type 1..1
@@ -421,7 +371,6 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[dispensingstatus] ^short = "Dispensing Status"
 * item.productOrService from FDANDCNCPDPCompoundCodeVS (required)
 * item.detail.productOrService  from FDANationalDrugCodeVS (required)
-* item.revenue 0..0
 * item.detail MS
 * item.detail.quantity MS 
 * careTeam.role from PayerPharmacyProviderRoleVS (required)
@@ -441,13 +390,9 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from NCPDPRejectCodeVS
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[denialreason].amount 0..0
-* item.adjudication[denialreason].value 0..0
 * item.adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
-* item.adjudication[adjudicationamounttype].reason 0..0
 * item.adjudication[adjudicationamounttype].amount 1..1
-* item.adjudication[adjudicationamounttype].value 0..0
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
@@ -463,9 +408,7 @@ The claims data is based on submission standards adopted by the Department of He
 * adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
 * adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
 * adjudication[adjudicationamounttype] ^short = "Amounts"
-* adjudication[adjudicationamounttype].reason 0..0
 * adjudication[adjudicationamounttype].amount 1..1
-* adjudication[adjudicationamounttype].value 0..0
 
 Profile: CARINBBExplanationOfBenefitProfessionalNonClinician
 Parent: CARIN-BB-ExplanationOfBenefit
@@ -511,7 +454,6 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.diagnosis[x] 1..1 
 * diagnosis.diagnosis[x] only CodeableConcept 
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
-* item.revenue 0..0
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
 * item.adjudication ^slicing.rules = #closed
@@ -530,13 +472,9 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[denialreason].amount 0..0
-* item.adjudication[denialreason].value 0..0
 * item.adjudication[adjudicationamounttype].category from ClaimAdjudicationCategoryVS (required)
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
-* item.adjudication[adjudicationamounttype].reason 0..0
 * item.adjudication[adjudicationamounttype].amount 1..1
-* item.adjudication[adjudicationamounttype].value 0..0
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * item.adjudication[inoutnetwork].category.coding.code = #inoutnetwork
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
