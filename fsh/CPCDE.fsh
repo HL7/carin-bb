@@ -198,7 +198,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
+* item.adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount 1..1
 * adjudication ^slicing.rules = #closed
@@ -219,7 +219,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication[denialreason].category.coding.code = #denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * adjudication[denialreason].reason 1..1
-* adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
+* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
 * careTeam.role from PayerInpatientFacilityProviderRoleVSProviderRoleVS (required)
@@ -292,7 +292,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
+* item.adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount 1..1
 * adjudication ^slicing.rules = #closed
@@ -313,7 +313,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication[denialreason].category.coding.code = #denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * adjudication[denialreason].reason 1..1
-* adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
+* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
 * careTeam.role from PayerOutpatientFacilityProviderRoleVS (required)
@@ -478,22 +478,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * item.adjudication[inoutnetwork].category.coding.code = #inoutnetwork
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
-* adjudication ^slicing.rules = #closed
-* adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* adjudication ^slicing.description = "Slice based on value pattern"
-* adjudication ^slicing.discriminator.type = #value
-* adjudication ^slicing.discriminator.path = "category.coding.code"
-* adjudication.category 1..1
-* adjudication.category from ClaimAdjudicationCategoryVS
-* adjudication contains
-   adjudicationamounttype 0..* MS and
-   inoutnetwork 1..1 MS
-* adjudication[inoutnetwork] ^short = "Benefit Payment Status"
-* adjudication[inoutnetwork].category.coding.code = #inoutnetwork
-* adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
-* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
-* adjudication[adjudicationamounttype] ^short = "Amounts"
-* adjudication[adjudicationamounttype].amount 1..1
+
 
 // Do all references to Organization in this profile need to target CARINBBOrganization?
 Profile: CARINBBOrganization
