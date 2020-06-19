@@ -390,7 +390,7 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from NCPDPRejectCodeVS
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
+* item.adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount 1..1
 * adjudication ^slicing.rules = #closed
@@ -406,7 +406,7 @@ The claims data is based on submission standards adopted by the Department of He
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * adjudication[inoutnetwork].category.coding.code = #inoutnetwork
 * adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
-* adjudication[adjudicationamounttype].category from AdjustmentAmountCategoryVS
+* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
 
@@ -472,12 +472,29 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[adjudicationamounttype].category from ClaimAdjudicationCategoryVS (required)
+* item.adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS (required)
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount 1..1
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * item.adjudication[inoutnetwork].category.coding.code = #inoutnetwork
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
+* adjudication ^slicing.rules = #closed
+* adjudication ^slicing.ordered = false   // can be omitted, since false is the default
+* adjudication ^slicing.description = "Slice based on value pattern"
+* adjudication ^slicing.discriminator.type = #value
+* adjudication ^slicing.discriminator.path = "category.coding.code"
+* adjudication.category 1..1
+* adjudication.category from ClaimAdjudicationCategoryVS
+* adjudication contains
+   adjudicationamounttype 0..* MS and
+   inoutnetwork 1..1 MS
+* adjudication[inoutnetwork] ^short = "Benefit Payment Status"
+* adjudication[inoutnetwork].category.coding.code = #inoutnetwork
+* adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
+* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
+* adjudication[adjudicationamounttype] ^short = "Amounts"
+* adjudication[adjudicationamounttype].amount 1..1
+
 // Do all references to Organization in this profile need to target CARINBBOrganization?
 Profile: CARINBBOrganization
 Parent:  $USCoreOrganization

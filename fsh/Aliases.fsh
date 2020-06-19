@@ -15,6 +15,7 @@ Alias:   USCoreDiagnosticReportLab = http://hl7.org/fhir/us/core/StructureDefini
 Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
 Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 Alias:   $SubscriberRelationiship = http://hl7.org/fhir/R4/valueset-subscriber-relationship
+Alias:   $HL7Adjudication = 	http://terminology.hl7.org/CodeSystem/adjudication
 
 
 // Code Systems
