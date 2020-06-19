@@ -40,17 +40,17 @@ See the [Table of Contents](toc.html) for more information.
      <td></td>
   <td></td>
    </tr>
-  <tr>
-   <td></td>
-    <td>Saul A. Kravitz</td>
-  <td>saul@mitre.org</td>
-  </tr>
-    <tr>
-  <td></td>
+     <tr>
+      <td></td>
       <td>Mark Roberts</td>
-  <td>mark.roberts@leavittpartners.com</td>
-  </tr>
-<tr>
+      <td>mark.roberts@leavittpartners.com</td>
+    </tr>
+   <tr>
+    <td></td>
+    <td>Saul A. Kravitz</td>
+    <td>saul@mitre.org</td>
+    </tr>
+   <tr>
    <td></td>
   <td>Igor Sirkovich </td>
   <td>igor@simpatico.ai</td>
@@ -61,7 +61,7 @@ The Consumer-Directed Payer Data Exchange Implementation Guide is also known as 
 
 
 
-<div class="footnote"><p>
+<div class="footnote">
 <sup>[<a name="ftn.id1" href="#id1">*</a>]</sup>Blue Button, the slogan, 'Download My Data,' the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services.
 </div>
 
