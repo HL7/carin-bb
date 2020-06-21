@@ -91,7 +91,7 @@ This IG includes value set bindings to industry standard codes that are availabl
     </tr>
 <tr>
         <td><a href="ValueSet-ClaimPayeeTypeCodeVS.html">Claim Payee Type</a></td>
-        <td>Claim Payee Typ.</td>
+        <td>Claim Payee Type.</td>
         <td></td>
     </tr>
 <tr>
@@ -122,7 +122,7 @@ This IG includes value set bindings to industry standard codes that are availabl
     <tr>
         <td><a href="ValueSet-FDANDCNCPDPCompoundCodeVS.html">FDA NDC and NCPDP Compound Codes</a></td>
         <td>FDA NDC and NCPDP Compound Codes.</td>
-        <td>Requires License.</td>
+        <td>NCPDP Compound Code Requires License.</td>
     </tr>
 <tr>
         <td><a href="ValueSet-ICD10CMVS.html">ICD-10-CM</a></td>
@@ -192,8 +192,8 @@ This IG includes value set bindings to industry standard codes that are availabl
 <tr>
         <td><a href="ValueSet-NUBCTypeOfBillVS.html">NUBC Type of Bill</a></td>
         <td>NUBC Type of Bill</td>
-        <td>Update Licensing restrictions.</td>
-    </tr>
+        <td>Requires License</td>
+     </tr>
 <tr>
         <td><a href="ValueSet-PayerAdjudicationAmountCategoryVS.html">Payer Adjudication Category</a></td>
         <td>Payer Adjudication Category.</td>
@@ -225,8 +225,8 @@ This IG includes value set bindings to industry standard codes that are availabl
         <td></td>
     </tr>
 <tr>
-        <td><a href="ValueSet-PresentOnAdmissionDiagnosisTypeVS.html">Present On Admission Diagnosis</a></td>
-        <td>Present On Admission Diagnosis.</td>
+        <td><a href="ValueSet-PresentOnAdmissionDiagnosisTypeVS.html">Present On Admission Diagnosis Type</a></td>
+        <td>Present On Admission Diagnosis Type.</td>
         <td></td>
     </tr>
 <tr>
