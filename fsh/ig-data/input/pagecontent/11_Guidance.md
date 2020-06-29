@@ -12,6 +12,8 @@ The CARIN BB’s interpretation of Must Support and Missing Data is aligned with
 
 * Health Plan API actors **SHALL** be capable of populating all data elements as part of the query results as specified by the CARINBlueButtonHealthPlanAPICapabilityStatement.
 * Consumer App actors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. 
+* Consumer App actors **SHALL** be capable of displaying the data elements for human use.
+* Consumer App actors **SHOULD** be capable of storing the information for other purposes.
 * In situations where information on a particular data element is not present and the reason for absence is unknown, Health Plan API actors **SHALL NOT** include the data elements in the resource instance returned as part of the query results.
 * When querying Health Plan API actors, Consumer App actors **SHALL** interpret missing data elements within resource instances as data not present in the Health Plan API actors system.
 * In situations where information on a particular data element is missing and the Health Plan API actor knows the precise reason for the absence of data, Health Plan API actors **SHALL** send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or use the dataAbsentReason extension.
