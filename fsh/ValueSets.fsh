@@ -142,6 +142,7 @@ Description: "Indicates if the Present on Admission Code applies to the Primary 
 
 ValueSet: NUBCPresentOnAdmissionVS
 Title: "NUBC Present On Admission"
+Description: "NUBC Present On Admission"
 
 /*
 CodeSystem: ClaimTypeCS 
@@ -186,18 +187,23 @@ Description: "Reason codes used to interpret the adjudication denial reason.  X1
 
 ValueSet: MSDRGVS
 Title: "MS-DRG"
+Description: "MS-DRG"
 
 ValueSet: NUBCPatientDischargeStatusVS
 Title: "NUBC Patient Discharge Status"
+Description: "NUBC Patient Discharge Status"
 
 ValueSet: NUBCPriorityOfAdmissionnVS
 Title: "NUBC Priority of Admission"
+Description: "NUBC Priority of Admission"
 
 ValueSet: NUBCPointOfOriginVS
 Title: "NUBC Point of Origin of Admission"
+Description: "NUBC Point of Origin of Admission"
 
 ValueSet: NUBCRevenueCodeVS
 Title: "NUBC Revenue Code"
+Description: "NUBC Revenue Code"
 
 ValueSet: NUBCTypeOfBillVS
 Title: "NUBC Type of Bill"
@@ -211,6 +217,7 @@ Description: "Code System http://www.nubc.org/type-of-bill,"
 
 ValueSet: IdentifierTypeVS
 Title: "Identifier Type"
+Description: "IdentifierType"
 
 ValueSet: NCPDPDispensedAsWrittenVS
 Title: "NCPDP Dispensed As Written (DAW)"
@@ -239,16 +246,20 @@ Description: "FDA National Drug Code (NDC)"
 
 ValueSet: ICD10CMVS
 Title: "ICD-10-CM Diagnosis Codes"
+Description: "ICD-10-CM Diagnosis Codes"
 * codes from system $ICD10CM
 
 ValueSet: ICD10PCSVS
-Title: "ICD-1-PCS"
+Title: "ICD-10-PCS"
+Description: "ICD-10-PCS"
 * codes from system $ICD10PCS 
 
 ValueSet: CPTHCPCSProcedureCodeVS 
+Description: "AMA CPT and CMS HCPCS Procedure Codes"
 Title: "AMA CPT and CMS HCPCS Procedure Codes"
 
 ValueSet:  CPTHCPCSModifierCodeVS
+Description: "AMA CPT and CMS HCPCS Modifier Codes"
 Title: "AMA CPT and CMS HCPCS Modifier Codes"
 
 
@@ -272,12 +283,14 @@ Description: "Describes the various amount fields used when submitting and adjud
 
 ValueSet: BenefitPaymentStatusCategoryVS
 Title: "Benefit Payment Status Category"
+Description: "Benefit Payment Status Category"
 * ClaimAdjudicationCategoryCS#innetworkbenefitpaymentstatus	"in network benefit payment status"
 * ClaimAdjudicationCategoryCS#outofnetworkbenefitpaymentstatus	"out of network benefit payment status"
 * ClaimAdjudicationCategoryCS#otherbenefitpaymentstatus	"other benefit payment status"	
 
 ValueSet: AdjudicationValueCodesVS
 Title: "Benefit Payment Status Category"
+Description: "Benefit Payment Status Category"
 * ClaimAdjudicationCategoryCS#submittedamount	"submitted amount"	
 * ClaimAdjudicationCategoryCS#allowedamount	"allowed amount"
 * ClaimAdjudicationCategoryCS#deductibleamount	"deductible amount"	

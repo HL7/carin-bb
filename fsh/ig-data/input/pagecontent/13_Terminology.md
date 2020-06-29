@@ -45,195 +45,156 @@ This IG includes value set bindings to code systems that are industry standard c
   </thead>
   <tbody> 
 <tr>
-        <td><a href="ValueSet-AdjudicationDenialReasonVS.html">Adjudication Denial Reason</a></td>
-        <td>Adjudication Denial Reason X12CARCCMSRARC.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-ICD10PCSVS.html">ICD-10-PCS</td>
+<td> ICD-10-PCS</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-AdjudicationValueCodesVS.html">Adjudication Value Codes</a></td>
-        <td>Adjudication Value Codes.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-NCPDPRejectCodeVS.html">NCPDP Reject Code</td>
+<td> http://www.ncpdp.org/reject-code</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-AdjustmentAmountCategoryVS.html">Adjustment Amount Category</a></td>
-        <td>Adjustment Amount Category.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-NUBCPresentOnAdmissionVS.html">NUBC Present On Admission</td>
+<td> NUBC Present On Admission</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-BenefitPaymentStatusCategoryVS.html">Benefit Payment Status Category.</a></td>
-        <td>Benefit Payment Status Category</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-ICD10CMVS.html">ICD-10-CM Diagnosis Codes</td>
+<td> ICD-10-CM Diagnosis Codes</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-BenefitPaymentStatusVS.html">Benefit Payment Status</a></td>
-        <td>Benefit Payment Status</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-NUBCTypeOfBillVS.html">NUBC Type of Bill</td>
+<td> Code System http://www.nubc.org/type-of-bill,</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-CPTHCPCSModifierCodeVS.html">CPT and HCPCS Modifier Codes</a></td>
-        <td>CPT and HCPCS Modifier Codes.</td>
-        <td>Requires License.</td>
-    </tr>
+<td> <a href="ValueSet-ClaimPaymentStatusCodeVS.html">Claim Payment Status Code</td>
+<td> Indicates whether the claim / item was paid or denied.</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-CPTHCPCSProcedureCodeVS.html">CPT and HCPCS Procedure Codes</a></td>
-        <td>CPT and HCPCS Procedure Codes.</td>
-        <td>Requires License.</td>
-    </tr>
+<td> <a href="ValueSet-NUBCRevenueCodeVS.html">NUBC Revenue Code</td>
+<td> NUBC Revenue Code</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-ClaimAdjudicationCategoryVS.html">Claim Adjustment Category</a></td>
-        <td>Claim Adjustment Category.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-PresentOnAdmissionDiagnosisTypeVS.html">Present-on-admission Diagnosis Type</td>
+<td> Indicates if the Present on Admission Code applies to the Primary or secondary diagnosis</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-ClaimInformationCategoryVS.html">Claim Information Category</a></td>
-        <td>Claim Information Category.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-AdjudicationPayerValueCodesVS.html">Payer Adjudication Value Codes</td>
+<td> As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-ClaimPayeeTypeCodeVS.html">Claim Payee Type</a></td>
-        <td>Claim Payee Type.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-AdjustmentAmountCategoryVS.html">Adjustment Amount Category</td>
+<td> Describes the various amount fields used when submitting and adjudicating a claim.</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-ClaimPaymentStatusCodeVS.html">Claim Payment Status Codes</a></td>
-        <td>Claim Payment Status Codes.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-CPTHCPCSModifierCodeVS.html">AMA CPT and CMS HCPCS Modifier Codes</td>
+<td> AMA CPT and CMS HCPCS Modifier Codes</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-ClaimTypeVS.html">Claim Type</a></td>
-        <td>Claim Type.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-AdjudicationValueCodesVS.html">Benefit Payment Status Category</td>
+<td> Benefit Payment Status Category</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-DiagnosisTypeFacilityVS.html">Diagnosis Type - Facility</a></td>
-        <td>Diagnosis Type - Facility</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-PayerInpatientFacilityProviderRoleVSProviderRoleVS.html">Payer - Inpatient Facility Provider Role</td>
+<td> Indicates the role of the provider providing the care.</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-DiagnosisTypeProfessionalNonClinicianVS.html">Diagnosis Type - Non-Clinician</a></td>
-        <td>Diagnosis Type - Non-Clinician.</td>
-        <td>.</td>
-    </tr>
+<td> <a href="ValueSet-ClaimPayeeTypeCodeVS.html">Claim Payee Type Code</td>
+<td> Identifies recipient of benefits payable; i.e., provider or subscriber.</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-FDANationalDrugCodeVS.html">FDA National Drug Code (NDC)</a></td>
-        <td>FDA National Drug Code (NDC)</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="ValueSet-FDANDCNCPDPCompoundCodeVS.html">FDA NDC and NCPDP Compound Codes</a></td>
-        <td>FDA NDC and NCPDP Compound Codes.</td>
-        <td>NCPDP Compound Code Requires License.</td>
-    </tr>
+<td> <a href="ValueSet-ClaimInformationCategoryVS.html">Claim Information Category</td>
+<td> Claim Information Category - Used as the discriminator for supportingInfo</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-ICD10CMVS.html">ICD-10-CM</a></td>
-        <td>ICD-10-CM</td>
-        <td>Requires License.</td>
-    </tr>
+<td> <a href="ValueSet-PayerAdjudicationAmountCategoryVS.html">Payer Adjudication Amount Category</td>
+<td> This describes the various amount fields used when payers receive and adjudicate a claim.</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-ICD10PCSVS.html">ICD-10-PCS</a></td>
-        <td>ICD-10-PC</td>
-        <td>Requires License.</td>
-    </tr>
+<td> <a href="ValueSet-PayerProviderRoleVS.html">Payer Provider Role</td>
+<td> Payer Provider Role</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-IdentifierTypeVS.html">Identifier Type</a></td>
-        <td>Identifier Type.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-FDANDCNCPDPCompoundCodeVS.html">FDA NDC NCPDP Compound Code</td>
+<td> NCPDP field # 407-D7 (National Drug Code (NDC)) or NCPDP field # 406-D6 (Compound Code)</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-MSDRGVS.html">MS-DRG</a></td>
-        <td>MS-DRG</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-PayerProfessionalAndNonClinicianProviderRoleVS.html">Payer - Professional and Non-Clinician Provider Role</td>
+<td> Indicates the role of the provider providing the care.</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-NCPDPBrandGenericCodeVS.html">NCPDP Brand Generic Code</a></td>
-        <td>NCPDP Brand Generic Code</td>
-        <td>Requires License.</td>
-    </tr>
+<td> <a href="ValueSet-NCPDPPrescriptionOriginCodeVS.html">NCPDP Prescription Origin Code</td>
+<td> http://www.ncpdp.org/prescription-origin-code</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-NCPDPDispensedAsWrittenVS.html">NCPDP Dispensed as Written</a></td>
-        <td>NCPDP Dispensed as Written</td>
-        <td>Requires License</td>
-    </tr>
+<td> <a href="ValueSet-NCPDPDispensedAsWrittenVS.html">NCPDP Dispensed As Written (DAW)</td>
+<td> http://www.ncpdp.org/dispensed-as-written-or-product-selection-code</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-NCPDPPrescriptionOriginCodeVS.html">NCPDP Prescription Origin</a></td>
-        <td>NCPDP Prescription Origin.</td>
-        <td>Requires License</td>
-    </tr>
-    <tr>
-        <td><a href="ValueSet-NCPDPRejectCodeVS.html">NCPDP Reject Code</a></td>
-        <td>NCPDP Reject Code</td>
-        <td>Requires License</td>
-    </tr>
+<td> <a href="ValueSet-MSDRGVS.html">MS-DRG</td>
+<td> MS-DRG</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-NUBCPatientDischargeStatusVS.html">NUBC Patient Discharge Status</a></td>
-        <td>NUBC Patient Discharge Status</td>
-        <td>Requires License</td>
-    </tr>
+<td> <a href="ValueSet-PayerPharmacyProviderRoleVS.html">Payer - Pharmacy Provider Role</td>
+<td> Indicates the role of the provider providing the care.</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-NUBCPointOfOriginVS.html">NUBC Point Of Origin</a></td>
-        <td>NUBC Point Of Origin</td>
-        <td>Requires License</td>
-    </tr>
+<td> <a href="ValueSet-DiagnosisTypeFacilityVS.html">Diagnosis Type -- Facility</td>
+<td> Indicates if the facility diagnosis is principal, secondary, an external cause of injury, a patient reason for visit, or first-listed</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-NUBCPresentOnAdmissionVS.html">NUBC Present On Admission</a></td>
-        <td>NUBC Present On Admission</td>
-        <td>Requires License</td>
-    </tr>
+<td> <a href="ValueSet-PayerOutpatientFacilityProviderRoleVS.html">Payer - Outpatient Facility Provider Role</td>
+<td> Indicates the role of the provider providing the care.</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-NUBCPriorityOfAdmissionnVS.html">NUBC Priority of Admission</a></td>
-        <td>NUBC Priority of Admission.</td>
-        <td>Requires License</td>
-    </tr>
+<td> <a href="ValueSet-NUBCPriorityOfAdmissionnVS.html">NUBC Priority of Admission</td>
+<td> NUBC Priority of Admission</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-NUBCRevenueCodeVS.html">NUBC Revenue Code</a></td>
-        <td>NUBC Revenue Code.</td>
-        <td>Requires License</td>
-    </tr>
+<td> <a href="ValueSet-IdentifierTypeVS.html">Identifier Type</td>
+<td> IdentifierType</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-NUBCTypeOfBillVS.html">NUBC Type of Bill</a></td>
-        <td>NUBC Type of Bill</td>
-        <td>Requires License</td>
-     </tr>
+<td> <a href="ValueSet-ProviderNetworkStatusVS.html">Provider Network Status</td>
+<td> Indicates that the Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission.</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-PayerAdjudicationAmountCategoryVS.html">Payer Adjudication Category</a></td>
-        <td>Payer Adjudication Category.</td>
-        <td>.</td>
-    </tr>
+<td> <a href="ValueSet-DiagnosisTypeProfessionalNonClinicianVS.html">Diagnosis Type -- Professional and Non-Clinician</td>
+<td> Indicates if the professional and non-clinician diagnosis is principal, secondary, or first-listed</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-PayerProviderRoleVS.html">Payer Provider Role </a></td>
-        <td>Payer  Provider Role</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="ValueSet-PayerInpatientFacilityProviderRoleVS.html">Payer Inpatient Facility Provider Role </a></td>
-        <td>Payer Inpatient Facility Provider Role</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-ClaimAdjudicationCategoryVS.html">Claim Adjudication Category</td>
+<td> Values for EOB.item.adjudication.category</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-PayerOutpatientFacilityProviderRoleVS.html">Payer Outpatient Facility Provider Role</a></td>
-        <td>Payer Outpatient Facility Provider Role.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-BenefitPaymentStatusCategoryVS.html">Benefit Payment Status Category</td>
+<td> Benefit Payment Status Category</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-PayerPharmacyProviderRoleVS.html">Payer Pharmacy Provider Role</a></td>
-        <td>Payer Pharmacy Provider Role</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-AdjudicationDenialReasonVS.html">Adjudication Denial Reason</td>
+<td> Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-PayerProfessionalAndNonClinicianProviderRoleVS.html">Payer Professional Non-Clinician Provider Role</a></td>
-        <td>Payer Professional Non-Clinician Provider Role</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-CPTHCPCSProcedureCodeVS.html">AMA CPT and CMS HCPCS Procedure Codes</td>
+<td> AMA CPT and CMS HCPCS Procedure Codes</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-PresentOnAdmissionDiagnosisTypeVS.html">Present On Admission Diagnosis Type</a></td>
-        <td>Present On Admission Diagnosis Type.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-BenefitPaymentStatusVS.html">Benefit Payment Status</td>
+<td> Indicates the in network or out of network payment status of the claim.</td>
+</tr>
 <tr>
-        <td><a href="ValueSet-ProviderNetworkStatusVS.html">Provider Network Status</a></td>
-        <td>Provider Network Status.</td>
-        <td></td>
-    </tr>
+<td> <a href="ValueSet-FDANationalDrugCodeVS.html">FDA National Drug Code (NDC)</td>
+<td> FDA National Drug Code (NDC)</td>
+</tr>
+<tr>
+<td> <a href="ValueSet-NCPDPBrandGenericCodeVS.html">NCPDP Brand Generic Code</td>
+<td> http://www.ncpdp.org/brand-generic-code</td>
+</tr>
+<tr>
+<td> <a href="ValueSet-NUBCPointOfOriginVS.html">NUBC Point of Origin of Admission</td>
+<td> NUBC Point of Origin of Admission</td>
+</tr>
+<tr>
+<td> <a href="ValueSet-NUBCPatientDischargeStatusVS.html">NUBC Patient Discharge Status</td>
+<td> NUBC Patient Discharge Status</td>
   </tbody>
 </table>
 
@@ -250,30 +211,26 @@ This IG includes value set bindings to code systems that are industry standard c
     </tr>
   </thead>
   <tbody> 
-       <tr>
-        <td><a href="CodeSystem-ClaimAdjudicationCategoryCS.html">Claim Adjudication Category Codes</a></td>
-        <td>Claim Adjudication Category Codes.</td>
-      </tr>
-      <tr>
-        <td><a href="CodeSystem-PayerAdjudicationCategoryCS.html">Payer Adjudication Categories</a></td>
-        <td>Payer Adudication Categories.</td>
-      </tr>
-      <tr>
-        <td><a href="CodeSystem-ClaimInformationCategoryCS">Claim Information Category</a></td>
-        <td>Claim Information Category</td>
-      </tr>
-      <tr>
-        <td><a href="CodeSystem-PayerDiagnosisTypeCS.html">Payer Diagnosis Types (additional)</a></td>
-        <td>Payer Diagnosis Types</td>
-      </tr>
-      <tr>
-        <td><a href="CodeSystem-ClaimTypeCS.html">Claim Types</a></td>
-        <td>Claim Types</td>
-      </tr>
-      <tr>
-        <td><a href="CodeSystem-PayerProviderRoleCS.html">Provider Roles</a></td>
-        <td>Provider Roles</td>
-      </tr>
+<tr>
+<td> <a href="CodeSystem-PayerProviderRoleCS.html">Payer Provider Role</td>
+<td> Payer Provider Role</td>
+</tr>
+<tr>
+<td> <a href="CodeSystem-ClaimInformationCategoryCS.html">Claim Information Category</td>
+<td> Claim Information Category - Used as the discriminator for supportingInfo</td>
+</tr>
+<tr>
+<td> <a href="CodeSystem-ClaimAdjudicationCategoryCS.html">Claim Adjudication Category</td>
+<td> Values for EOB.item.adjudication.category</td>
+</tr>
+<tr>
+<td> <a href="CodeSystem-PayerAdjudicationCategoryCS.html">Payer Adjudication Category</td>
+<td> Payer Adjudication Category</td>
+</tr>
+<tr>
+<td> <a href="CodeSystem-PayerDiagnosisTypeCS.html">Payer Diagnosis Type</td>
+<td> Payer Diagnosis Type</td>
+</tr>
   </tbody>
 </table>
 
