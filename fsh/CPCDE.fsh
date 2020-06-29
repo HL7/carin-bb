@@ -86,11 +86,11 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * procedure.procedure[x] 1..1 MS
 * procedure.procedure[x] only CodeableConcept   
 * insurance 1..* MS
-* insurance ^slicing.discriminator.type = #pattern
 * insurance.coverage 1..1 MS
 * insurance.focal 1..1  MS
 * insurance.coverage only Reference(CARINBBCoverage)
 /*   Eliminate slicing on focal.   Constraint ensures that only one element with focal = true
+* insurance ^slicing.discriminator.type = #pattern
 * insurance ^slicing.discriminator.path = "value:focal"
 * insurance ^slicing.rules = #closed
 * insurance ^slicing.ordered = false   // can be omitted, since false is the default
