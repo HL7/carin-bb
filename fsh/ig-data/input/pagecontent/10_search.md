@@ -39,7 +39,6 @@ These $assemble-eob operation SHALL support the following parameters:
               <td>0..1</td>
               <td>Logical id for the ExplanationOfBenefit resource.</td>
               <td>(none))</td>
-              <td>(none)</td>
     </tr>
      <tr>
               <td>patient</td>
@@ -47,7 +46,6 @@ These $assemble-eob operation SHALL support the following parameters:
               <td>1..1</td>
               <td>Required.  The id of the patient resource located on the server on which this operation is executed. If there is no match, an empty Bundle is returned</td>
               <td>(none))</td>
-              <td>(none)</td>
     </tr>
     <tr>
               <td>_since</td>
@@ -55,7 +53,6 @@ These $assemble-eob operation SHALL support the following parameters:
               <td>0..1</td>
               <td>ExplanationOfBenefit resources updated after this period will be included in the response. The intent of this parameter is to allow a client to request only records that have changed since the last request.</td>
               <td>(none))</td>
-              <td>(none)</td>
     </tr>
     <tr>
               <td>type</td>
@@ -63,7 +60,6 @@ These $assemble-eob operation SHALL support the following parameters:
               <td>0..1</td>
               <td>The type of the ExplanationOfBenefit, e.g. institutional, pharmacy, professional</td>
               <td>(none))</td>
-              <td>(none)</td>
     </tr>
         <tr>
               <td>identifier</td>
@@ -71,7 +67,6 @@ These $assemble-eob operation SHALL support the following parameters:
               <td>0..1</td>
               <td>Claim Number / Business Identifier of the ExplanationOfBenefit resource.</td>
               <td>(none))</td>
-              <td>(none)</td>
     </tr>
     <tr>
               <td>service-date</td>
@@ -79,7 +74,6 @@ These $assemble-eob operation SHALL support the following parameters:
               <td>0..1</td>
               <td>Date of the service for the ExplanationOfBenefit.</td>
               <td>(none))</td>
-              <td>(none)</td>
     </tr>
 </tbody>
 </table>
