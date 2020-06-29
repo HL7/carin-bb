@@ -1,15 +1,11 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
 
 <h3>Code Systems Requiring Licenses </h3>
-
 <h4>Access to Licensed Code Systems</h4>
-
 This HL7 specification contains and references intellectual property owned by third parties ("Third Party IP"). Implementers and testers of this specification SHALL abide by the license requirements for each terminology content artifact utilized within a functioning implementation. Terminology licenses SHALL be obtained from the Third Party IP owner for each code system and/or other specified artifact used. It is the sole responsibility of each organization deploying or testing this specification to ensure their implementations comply with licensing requirements of each Third Party IP.
 
 <h4>Licensed Industry Standard Code Systems</h4>
-
 This IG includes value set bindings to code systems that reference industry standard codes which require implementers to purchase a license before the coded concepts can be used.  The following information summarizes the set of licensed Code Systems required by this IG and provides links to the information about where to go to obtain a license.
-
 <ul>
 <li><a href="http://www.ama-assn.org/go/cpt">AMA CPT</a>: The CPT procedure and modifier codes are owned by the American Medical Association.</li>
 <li> <a href="http://www.x12.org/codes/claim-adjustment-reason-codes/">X12</a>:  CARC (Claim Adjustment Reason Codes are owned by X12.</a>.</li>
@@ -27,7 +23,6 @@ This IG includes value set bindings to code systems that are industry standard c
 <li> <a href="http://hl7.org/fhir/sid/ndc.html">NDC (National Drug Codes)</a>: The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code..</li>
 <li> <a href="http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes">RARCCodes</a>: The RARC codes are owned by CMS..</li>
 </ul>
-  
 <h3>Value Sets defined as part of this Implementation Guide.  </h3>
 <table border="1" class="valuesets local">
   <thead>
@@ -37,9 +32,6 @@ This IG includes value set bindings to code systems that are industry standard c
       </td>
       <td>
         <b>Definition</b>
-      </td>
-       <td>
-        <b>Licensing</b>
       </td>
     </tr>
   </thead>
