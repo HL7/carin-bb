@@ -76,11 +76,11 @@ Description: "Indicates the role of the provider providing the care."
 ValueSet: AdjudicationPayerValueCodesVS
 Title: "Payer Adjudication Value Codes"
 Description: "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem"
-* $HL7Adjudication#submitted 
-* $HL7Adjudication#copay 
-* $HL7Adjudication#eligible
-* $HL7Adjudication#deductible  
-* $HL7Adjudication#benefit 
+* $HL7AdjudicationCS#submitted 
+* $HL7AdjudicationCS#copay 
+* $HL7AdjudicationCS#eligible
+* $HL7AdjudicationCS#deductible  
+* $HL7AdjudicationCS#benefit 
 * PayerAdjudicationCategoryCS#coinsurance "Coinsurance" 
 * PayerAdjudicationCategoryCS#copay "Copay" 
 * PayerAdjudicationCategoryCS#noncovered "Noncovered" 
@@ -196,6 +196,7 @@ Description: "Indicates if the Present on Admission Code applies to the Primary 
 ValueSet: NUBCPresentOnAdmissionVS
 Title: "NUBC Present On Admission"
 
+/*
 CodeSystem: ClaimTypeCS 
 Title: "Claim Types"
 Description:  "Proposed replacement/update for http://hl7.org/fhir/ValueSet/claim-type and http://terminology.hl7.org/CodeSystem/claim-type"
@@ -208,6 +209,7 @@ ValueSet: ClaimTypeVS
 Title: "Claim Types"
 Description: "Proposed replacement/update for http://hl7.org/fhir/ValueSet/claim-type"
 * codes from system ClaimTypeCS
+*/
 
 //ValueSet: RelatedClaimVS
 //Title: "Related Claim"

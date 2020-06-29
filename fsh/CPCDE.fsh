@@ -3,17 +3,17 @@ Parent: Coverage
 Id: CARIN-BB-Coverage
 Title: "CARIN BB Coverage"
 Description: "CARIN Blue Button Coverage Profile."
-* meta.lastUpdated 1..1
+* meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * identifier MS 
 * status MS
 * subscriber 0..1 
 * subscriber only Reference(CARINBBPatient)
-* subscriberId 1..1 
-* beneficiary 1..1 
+* subscriberId 1..1 MS
+* beneficiary 1..1 MS
 * beneficiary only Reference(CARINBBPatient) 
-* relationship 1..1
-* relationship from $SubscriberRelationiship (required)
+* relationship 1..1 MS
+* relationship from $SubscriberRelationishipVS (required)
 * payor 1..1 MS   // was 1..* in Balloted STU
 * payor only Reference (CARINBBOrganization) 
 * class MS 
@@ -24,8 +24,8 @@ Description: "CARIN Blue Button Coverage Profile."
 * class ^slicing.ordered = false   // can be omitted, since false is the default
 * class ^slicing.description = "Slice based on value pattern"
 * class contains 
-   Group 1..1  and
-   Plan 1..1 
+   Group 1..1  MS and
+   Plan 1..1 MS
 * class[Group].type.coding.code = #group
 * class[Plan].type.coding.code = #plan
  
@@ -37,45 +37,45 @@ Title: "CARIN BB Explanation Of Benefit"
 Description: "Abstract parent profile that includes constraints that are common to the four specific ExplanationOfBenefit (EOB) profiles defined in this Implementation Guide.
 All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
 * obeys EOB-insurance-focal 
-* meta.lastUpdated 1..1
+* meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * ^abstract = true 
 * identifier 1..* 
-* identifier.type 1..1
+* identifier.type 1..1 MS
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.ordered = false   // cannot be omitted, since false is the default
 * identifier ^slicing.description = "Slice based on value pattern"
 * identifier contains 
-   claimnumber 1..1 
-* identifier[claimnumber].value 1..1
+   claimnumber 1..1 MS
+* identifier[claimnumber].value 1..1 MS
 * identifier[claimnumber].type = #cn 
-* identifier[claimnumber] ^short = "Claim Number"* type 1..1
-* type from ClaimTypeVS (extensible)
-* claim MS
+* identifier[claimnumber] ^short = "Claim Number"* type 1..1 MS
+* type from $HL7ClaimTypeVS (required)
+//   * claim MS   - igor sez we discussed removing MS
 * use = #claim 
-* patient 1..1 
+* patient 1..1 MS
 * adjudication MS 
 * patient only Reference (CARINBBPatient)
 * billablePeriod 0..1 MS 
-* insurer 1..1
+* insurer 1..1 MS
 * insurer only Reference(CARINBBOrganization)
-* provider 1..1 
+* provider 1..1 MS
 * related 0..* MS
-* related.relationship 1..1
+* related.relationship 1..1 MS
 //* related.relationship from RelatedClaimVS (extensible)
 * payee 0..1 MS
-* payee.type 1..1
-* payee.party 1..1
+* payee.type 1..1 MS
+* payee.party 1..1 MS
 * payee.party only Reference(CARINBBPractitionerRole | CARINBBPatient)
 * careTeam 0..* MS 
-* careTeam.provider 1..1
+* careTeam.provider 1..1 MS
 * careTeam.responsible 0..1 MS 
-* careTeam.role 1..1 
+* careTeam.role 1..1 MS
 //* careTeam.role from PayerProviderRoleVS (required)
 * supportingInfo 0..* MS
-* supportingInfo.category 1..1
+* supportingInfo.category 1..1 MS
 * supportingInfo.category from ClaimInformationCategoryVS
 * supportingInfo.code 0..1 MS 
 * supportingInfo.timing[x] 0..1 MS 
@@ -83,13 +83,14 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * procedure 0..* MS 
 * procedure.type 0..* MS 
 * procedure.date 0..1 MS 
-* procedure.procedure[x] 1..1 
+* procedure.procedure[x] 1..1 MS
 * procedure.procedure[x] only CodeableConcept   
-* insurance 1..2
+* insurance 1..* MS
 * insurance ^slicing.discriminator.type = #pattern
-* insurance.coverage 1..1
-* insurance.focal 1..1 
+* insurance.coverage 1..1 MS
+* insurance.focal 1..1  MS
 * insurance.coverage only Reference(CARINBBCoverage)
+/*   Eliminate slicing on focal.   Constraint ensures that only one element with focal = true
 * insurance ^slicing.discriminator.path = "value:focal"
 * insurance ^slicing.rules = #closed
 * insurance ^slicing.ordered = false   // can be omitted, since false is the default
@@ -99,9 +100,10 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
    SecondaryInsurance 0..1
 * insurance[PrimaryInsurance].focal = false
 * insurance[SecondaryInsurance].focal = true 
+*/
 * item 0..* MS
 * item.adjudication MS 
-* item.adjudication.category 1..1 
+* item.adjudication.category 1..1 MS
 * item.adjudication.category from ClaimAdjudicationCategoryVS
 * total.category from PayerAdjudicationAmountCategoryVS (extensible)
 * payment MS 
@@ -118,12 +120,12 @@ Title: "CARIN BB ExplanationOfBenefit Inpatient Facility"
 Description: "The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at a facility as part of an overnight stay. 
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
 
-* type.coding 1..1
-* type.coding.code = #inpatient-facility
-* diagnosis 1..*
-* diagnosis.type 1..1
+* type.coding 1..1 MS
+* type.coding.code = #institutional
+* diagnosis 1..* MS
+* diagnosis.type 1..1 MS
 * diagnosis.type from DiagnosisTypeFacilityVS (required)
-* diagnosis.diagnosis[x] 1..1 
+* diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept 
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
 * diagnosis.onAdmission 0..1 MS
@@ -136,7 +138,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo ^slicing.description = "Slice based on value pattern"
 * supportingInfo ^slicing.discriminator.type = #value
 * supportingInfo ^slicing.discriminator.path = "category.coding.code"
-* supportingInfo.category 1..1 
+* supportingInfo.category 1..1 MS
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    attendingnetworkcontractingstatus 0..1 MS and
@@ -149,20 +151,20 @@ The claims data is based on the institutional claim format UB-04, submission sta
    ms-drg 0..1 MS
 * supportingInfo[billingnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
-* supportingInfo[billingnetworkcontractingstatus].code 1..1
+* supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
 * supportingInfo[attendingnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#attendingnetworkcontractingstatus
 * supportingInfo[attendingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
-* supportingInfo[attendingnetworkcontractingstatus].code 1..1
+* supportingInfo[attendingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[attendingnetworkcontractingstatus] ^short = "Claim attending provider network status"
 * supportingInfo[referringnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#referringnetworkcontractingstatus
 * supportingInfo[referringnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
-* supportingInfo[referringnetworkcontractingstatus].code 1..1
+* supportingInfo[referringnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[referringnetworkcontractingstatus] ^short = "Claim attending provider network status"
 * supportingInfo[clmrecvddate].category.coding.code = #clmrecvddate
 * supportingInfo[clmrecvddate] ^short = "Claim Received Date"
 * supportingInfo[clmrecvddate].timing[x] only date 
-* supportingInfo[clmrecvddate].timing[x] 1..1
+* supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[typeofbill].category.coding.code = ClaimInformationCategoryCS#typeofbill
 * supportingInfo[typeofbill] ^short = "Type of Bill"
 * supportingInfo[typeofbill].code from NUBCTypeOfBillVS (required)
@@ -232,7 +234,7 @@ Id: CARIN-BB-ExplanationOfBenefit-Outpatient-Facility
 Title: "CARIN BB ExplanationOfBenefit Outpatient Facility"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at a facility that are not part of an overnight stay. 
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
-* type.coding.code = #outpatient-facility
+* type.coding.code = #institutional
 * diagnosis 1..*
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
 * provider only Reference(CARINBBOrganization)
@@ -291,16 +293,16 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
-* item.adjudication[denialreason].reason 1..1
+* item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
-* item.adjudication[adjudicationamounttype].amount 1..1
+* item.adjudication[adjudicationamounttype].amount 1..1 MS
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
 * adjudication ^slicing.discriminator.type = #value
 * adjudication ^slicing.discriminator.path = "category.coding.code"
-* adjudication.category 1..1
+* adjudication.category 1..1 MS
 * adjudication.category from ClaimAdjudicationCategoryVS
 * adjudication contains
    adjudicationamounttype 0..* MS and
@@ -312,15 +314,15 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication[denialreason] ^short = "Denial Reason"
 * adjudication[denialreason].category.coding.code = #denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReasonVS
-* adjudication[denialreason].reason 1..1
+* adjudication[denialreason].reason 1..1 MS
 * adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
 * adjudication[adjudicationamounttype] ^short = "Amounts"
-* adjudication[adjudicationamounttype].amount 1..1
+* adjudication[adjudicationamounttype].amount 1..1 MS
 * careTeam.role from PayerOutpatientFacilityProviderRoleVS (required)
 * diagnosis 1..*
-* diagnosis.type 1..1
+* diagnosis.type 1..1 MS
 * diagnosis.type from DiagnosisTypeFacilityVS (required)
-* diagnosis.diagnosis[x] 1..1 
+* diagnosis.diagnosis[x] 1..1  MS
 * diagnosis.diagnosis[x] only CodeableConcept 
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
 * payment.type from  BenefitPaymentStatusVS (required)
@@ -416,7 +418,7 @@ Id: CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
 Title: "CARIN BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. 
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
-* type.coding.code = #professional-nonclinician 
+* type.coding.code = #professional
 * provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
 * supportingInfo.category.coding.system = "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory" // ClaimInformationCategoryCS 
 * supportingInfo ^slicing.discriminator.type = #value
@@ -467,14 +469,11 @@ The claims data is based on the professional claim form 1500, submission standar
    inoutnetwork 1..1
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
-* item.adjudication[denialreason].reason 1..1
+* item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[denialreason] ^short = "Denial Reason"
-* item.adjudication[denialreason].category.coding.code = #denialreason 
-* item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
-* item.adjudication[denialreason].reason 1..1
 * item.adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS (required)
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
-* item.adjudication[adjudicationamounttype].amount 1..1
+* item.adjudication[adjudicationamounttype].amount 1..1 MS
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * item.adjudication[inoutnetwork].category.coding.code = #inoutnetwork
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
@@ -486,23 +485,23 @@ Parent:  $USCoreOrganization
 Id:  CARIN-BB-Organization
 Title: "CARIN BB Organization"
 Description: "CARIN Blue Button Organization Profile."
-* meta.lastUpdated 1..1
+* meta.lastUpdated 1..1  MS
 * meta.profile 1..* MS
-* identifier.type 1..1
+* identifier.type 1..1 MS
 * identifier contains 
    TIN 0..* MS and
    payerid 0..* MS
 * identifier.type from IdentifierTypeVS (extensible)
 * identifier[NPI].type.coding.code = #NPI
-* identifier[NPI].type.coding 1..1
-* identifier[NPI].type.coding.code 1..1 
+* identifier[NPI].type.coding 1..1 MS
+* identifier[NPI].type.coding.code 1..1  MS
 * identifier[TIN].type.coding.code = #TAX
-* identifier[TIN].type.coding 1..1
-* identifier[TIN].type.coding.code 1..1 
+* identifier[TIN].type.coding 1..1 MS
+* identifier[TIN].type.coding.code 1..1  MS
 * identifier[TIN].system = "urn:oid:2.16.840.1.113883.4.4"
 * identifier[payerid].type.coding.code = #PAYERID
-* identifier[payerid].type.coding 1..1
-* identifier[payerid].type.coding.code 1..1 
+* identifier[payerid].type.coding 1..1 MS
+* identifier[payerid].type.coding.code 1..1  MS
 //* identifier[payerid].system = <what>
 
 Profile: CARINBBPatient
@@ -510,7 +509,7 @@ Parent: $USCorePatient
 Id: CARIN-BB-Patient
 Title: "CARIN BB Patient"
 Description: "CARIN Blue Button Patient Profile."
-* meta.lastUpdated 1..1
+* meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * identifier.type from IdentifierTypeVS (extensible)
 * identifier ^slicing.discriminator.type = #value 
@@ -525,19 +524,19 @@ Description: "CARIN Blue Button Patient Profile."
    patacctnum 0..* MS 
 * identifier[memberid].type.coding.code = #MB
 * identifier[memberid] ^short = "Member ID"
-* identifier[memberid].type.coding 1..*
-* identifier[memberid].type.coding.code 1..1 
+* identifier[memberid].type.coding 1..* MS
+* identifier[memberid].type.coding.code 1..1  MS
 * identifier[medrecnum].type.coding.code = #MR
 * identifier[medrecnum] ^short = "Medical Record Number"
-* identifier[medrecnum].type.coding 1..*
-* identifier[medrecnum].type.coding.code 1..1 
+* identifier[medrecnum].type.coding 1..* MS
+* identifier[medrecnum].type.coding.code 1..1  MS
 * identifier[patacctnum].type.coding.code = #PT
 * identifier[patacctnum] ^short = "Patient Account Number"
-* identifier[patacctnum].type.coding 1..*
-* identifier[patacctnum].type.coding.code 1..1 
+* identifier[patacctnum].type.coding 1..* MS
+* identifier[patacctnum].type.coding.code 1..1  MS
 * identifier[uniquememberid] ^short = "Unique Member ID"
-* identifier[uniquememberid].type.coding 1..*
-* identifier[uniquememberid].type.coding.code 1..1 
+* identifier[uniquememberid].type.coding 1..* MS
+* identifier[uniquememberid].type.coding.code 1..1  MS
 * identifier[uniquememberid].type.coding.code = #UM 
 
 
@@ -547,7 +546,7 @@ Parent: $USCorePractitionerRole
 Id: CARIN-BB-PractitionerRole
 Title: "CARIN BB PractitionerRole"
 Description: "CARIN Blue Button PractitionerRole Profile."
-* meta.lastUpdated 1..1
+* meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * organization only Reference(CARINBBOrganization)
 * practitioner only Reference(CARINBBPractitioner)
@@ -562,7 +561,7 @@ Parent: $USCorePractitioner
 Id: CARIN-BB-Practitioner
 Title: "CARIN BB Practitioner"
 Description: "CARIN Blue Button Practitioner Profile."
-* meta.lastUpdated 1..1
+* meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 
 // WHat needs to change?
@@ -571,10 +570,10 @@ Parent: $USCoreLocation
 Id: CARIN-BB-Location
 Title: "CARIN BB Location"
 Description: "CARIN Blue Button Location Profile."
-* meta.lastUpdated 1..1
+* meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 
 Invariant:  EOB-insurance-focal  
-Description: "EOB.insurance:  if focal is true, EOB.insurance.coverage.payor must equal EOB.insurer"
+Description: "EOB.insurance:  at most one slice with focal = true"
 Expression: "insurance.select (focal = true).count() < 2"
 Severity:   #error
