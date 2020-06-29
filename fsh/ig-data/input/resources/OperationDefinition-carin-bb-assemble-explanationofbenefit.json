@@ -71,7 +71,7 @@
       "min": 0,
       "max": "1",
       "documentation": "Claim Number / Business Identifier of the ExplanationOfBenefit resource.",
-      "type": "identifier"
+      "type": "Identifier"
     },
     {
       "name": "_id",
@@ -79,7 +79,7 @@
       "min": 0,
       "max": "1",
       "documentation": "Logical id for the ExplanationOfBenefit resource.",
-      "type": "identifier"
+      "type": "id"
     },
     {
       "name": "return",
