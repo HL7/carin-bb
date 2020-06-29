@@ -3,13 +3,13 @@
 
 <h3>Search Behavior</h3>
 
-The ExplanationOfBenefit (EOB) Resource is the focal Consumer-Directed Payer Data Exchange (CDPDE) Resource. Several Reference Resources are defined directly/indirectly from the EOB: Coverage, Patient, Organization (Payer ID), Practioner, Organization (Facility), PractionerRole, Location.
+The EOB Resource is the focal Consumer-Directed Payer Data Exchange (CDPDE) Resource. Several Reference Resources are defined directly/indirectly from the EOB: Coverage, Patient, Organization (Payer ID), Practioner, Organization (Facility), PractionerRole, Location.
 
-The Coverage Reference Resource SHALL be returned with data that was effective as of the date of service of the claim; for example, the data will reflect the employer name in effect at that time. However, for other reference resources, if payers have the data as of the date of service that data SHALL be provided in the reference resource and they SHALL populate meta.lastUpdated with the date that the payer record for that resource was created. If payers do not have the data as of the date of service, they MAY provide their available data in the reference resource and they SHALL populate meta.lastUpdated with the date the data was updated.
+The Coverage Reference Resource SHALL be returned with data that was effective as of the date of service of the claim; for example, the data will reflect the employer name in effect at that time. However, for other reference resources, if payers have the data as of the date of service that data SHALL be provided in the reference resource and they SHALL populate meta.lastUpdated with the date that the payer record for that resource was created. If payers do not have the data as of the date of service, they SHALL provide their available data in the reference resource and they SHALL populate meta.lastUpdated with the date the data was updated.
 
 <h3>RESTful Capabilities by Resource/Profile</h3>
 
-A server will always treat a search request as if a client indicated \"_include=*\" and SHALL return all EOB & reference resources in the response bundle. Bundle.link.url (self) would show that "_include=*" was added by the server as an additional parameter. Bundle.total will count only EOB resources (this is a normal practice in FHIR to only count the searched resources and not the included / reference resources).
+A server will support an "$assemble-eob" operation which will return all patient's EOB resources matching the search request along with all the reference resources in the response bundle. Bundle.total will show a count of the EOB.
 
 <h4>Explanation of Benefit Profiles</h4>
 
