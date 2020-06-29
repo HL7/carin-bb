@@ -10,7 +10,7 @@ This IG includes value set bindings to code systems that reference industry stan
 <li><a href="http://www.ama-assn.org/go/cpt">AMA CPT</a>: The CPT procedure and modifier codes are owned by the American Medical Association.</li>
 <li> <a href="http://www.x12.org/codes/claim-adjustment-reason-codes/">X12</a>:  CARC (Claim Adjustment Reason Codes are owned by X12.</a>.</li>
 <li><a href="https://www.nubc.org">NUBC</a>: The NUBC secretariat is the American Hospital Association..</li>
-<li><a href="http://www.nucc.org/">NUCC</a>:  National Uniform Claim Committee (NUCC) is presently maintaining the Taxonomy code set. The codes are free and publically available for download and use. If the use however is “For commercial use, including sales or licensing, a license must be obtained”. It would be appropriate for an app developer to file the license form just like they would for any other code set; however, there is no fee.  
+<li><a href="http://www.nucc.org/">NUCC</a>:  National Uniform Claim Committee (NUCC) is presently maintaining the Taxonomy code set. The codes are free and publically available for download and use. If the use however is “For commercial use, including sales or licensing, a license must be obtained”. It would be appropriate for an app developer to file the license form just like they would for any other code set; however, there is no fee.  </li>
 <li><a href="https://www.ncpdp.org">NCPDP</a>: Retail Pharmacy data standards are defined by the NCPDP. .</li>
 </ul>
 <h3>Code Systems Not Requiring Licenses </h3>
