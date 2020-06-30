@@ -124,7 +124,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * type.coding.code = #institutional
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
-* diagnosis.type from DiagnosisTypeFacilityVS (required)
+* diagnosis.type from PayerInpatientfacilitydiagnosistype (required)
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept 
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
@@ -321,7 +321,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * careTeam.role from PayerOutpatientFacilityProviderRoleVS (required)
 * diagnosis 1..*
 * diagnosis.type 1..1 MS
-* diagnosis.type from DiagnosisTypeFacilityVS (required)
+* diagnosis.type from PayerOutpatientfacilitydiagnosistype (required)
 * diagnosis.diagnosis[x] 1..1  MS
 * diagnosis.diagnosis[x] only CodeableConcept 
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
@@ -452,7 +452,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * careTeam.role from PayerProfessionalAndNonClinicianProviderRoleVS (required)
 * diagnosis 1..*
 * diagnosis.type 1..1
-* diagnosis.type from DiagnosisTypeProfessionalNonClinicianVS (required)
+* diagnosis.type from PayerProfessionalandnoncliniciandiagnosistype (required)
 * diagnosis.diagnosis[x] 1..1 
 * diagnosis.diagnosis[x] only CodeableConcept 
 * diagnosis.diagnosis[x] from ICD10CMVS (required)

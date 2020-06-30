@@ -59,6 +59,8 @@ Description: "Payer Diagnosis Type"
 * #external-cause-of-injury "external-cause-of-injury" "external-cause-of-injury"
 * #patient-reason-for-visit "patient-reason-for-visit" "patient-reason-for-visit"
 * #first-listed  "first-listed"  "first-listed"
+* #admitting "admitting" "admitting"
+
 
 CodeSystem: ClaimAdjudicationCategoryCS
 Title: "Claim Adjudication Category"

@@ -122,23 +122,41 @@ Description: "Payer Diagnosis Type"
 * #patient-reason-for-visit "patient-reason-for-visit" "patient-reason-for-visit"
 * #first-listed  "first-listed"  "first-listed"
 
-ValueSet: DiagnosisTypeFacilityVS
+/*ValueSet: DiagnosisTypeFacilityVS
 Title: "Diagnosis Type -- Facility"
 Description: "Indicates if the facility diagnosis is principal, secondary, an external cause of injury, a patient reason for visit, or first-listed"
 * codes from system PayerDiagnosisTypeCS 
+*/
 
-ValueSet: DiagnosisTypeProfessionalNonClinicianVS
+ValueSet: PayerProfessionalandnoncliniciandiagnosistype
 Title: "Diagnosis Type -- Professional and Non-Clinician"
 Description: "Indicates if the professional and non-clinician diagnosis is principal, secondary, or first-listed"
 * PayerDiagnosisTypeCS#principal "principal"
 * PayerDiagnosisTypeCS#secondary "secondary"
 * PayerDiagnosisTypeCS#first-listed "first-listed"
 
-ValueSet: PresentOnAdmissionDiagnosisTypeVS
+/*
+ValueSet: PresentOnAdmissionTypeVS
 Title: "Present-on-admission Diagnosis Type"
 Description: "Indicates if the Present on Admission Code applies to the Primary or secondary diagnosis"
-* PayerDiagnosisTypeCS#principal "principal"
-* PayerDiagnosisTypeCS#secondary "secondary"
+* PayerDiagnosisTypeCS#principal 
+* PayerDiagnosisTypeCS#secondary 
+* PayerDiagnosisTypeCS#external-cause-of-injury 
+*/
+
+ValueSet: PayerInpatientfacilitydiagnosistype
+Title: "Payer Inpatient Facility Diagnosis Type"
+Description: "Payer Inpatient Facility Diagnosis Type"
+* PayerDiagnosisTypeCS#principal 
+* PayerDiagnosisTypeCS#secondary  
+* PayerDiagnosisTypeCS#external-cause-of-injury 
+* PayerDiagnosisTypeCS#first-listed  
+* PayerDiagnosisTypeCS#admitting 
+
+ValueSet: PayerOutpatientfacilitydiagnosistype
+Title: "Payer Outpatient Facility Diagnosis Type"
+Description: "Payer Outpatient Facility Diagnosis Type"
+* codes from system PayerDiagnosisTypeCS
 
 ValueSet: NUBCPresentOnAdmissionVS
 Title: "NUBC Present On Admission"
