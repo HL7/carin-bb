@@ -65,7 +65,7 @@ These $assemble-eob operation SHALL support the following parameters:
               <td>identifier</td>
               <td>Identifier</td>
               <td>0..1</td>
-              <td>Claim Number / Business Identifier of the ExplanationOfBenefit resource.</td>
+              <td>Payer Claim Number / Business Identifier of the ExplanationOfBenefit resource.</td>
               <td>(none))</td>
     </tr>
     <tr>
