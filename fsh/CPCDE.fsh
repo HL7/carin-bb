@@ -491,15 +491,18 @@ Description: "CARIN Blue Button Organization Profile."
 * identifier contains 
    TIN 0..* MS and
    payerid 0..* MS
-* identifier.type from IdentifierTypeVS (extensible)
-* identifier[NPI].type.coding.code = #NPI
+* identifier.type from OrganizationIdentifierTypeVS (extensible)
+* identifier[NPI] ^short = "National Provider Identifier"
+* identifier[NPI].type.coding.code = #npi
 * identifier[NPI].type.coding 1..1 MS
 * identifier[NPI].type.coding.code 1..1  MS
-* identifier[TIN].type.coding.code = #TAX
+* identifier[TIN] ^short = "Tax ID Number"
+* identifier[TIN].type.coding.code = #tax
 * identifier[TIN].type.coding 1..1 MS
 * identifier[TIN].type.coding.code 1..1  MS
 * identifier[TIN].system = "urn:oid:2.16.840.1.113883.4.4"
-* identifier[payerid].type.coding.code = #PAYERID
+* identifier[payerid] ^short = "Payer ID"
+* identifier[payerid].type.coding.code = #payerid 
 * identifier[payerid].type.coding 1..1 MS
 * identifier[payerid].type.coding.code 1..1  MS
 //* identifier[payerid].system = <what>
@@ -511,7 +514,7 @@ Title: "CARIN BB Patient"
 Description: "CARIN Blue Button Patient Profile."
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
-* identifier.type from IdentifierTypeVS (extensible)
+* identifier.type from PatientIdentifierTypeVS (extensible)
 * identifier ^slicing.discriminator.type = #value 
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
@@ -522,22 +525,22 @@ Description: "CARIN Blue Button Patient Profile."
    medrecnum 0..* MS and
    uniquememberid 0..* MS and
    patacctnum 0..* MS 
-* identifier[memberid].type.coding.code = #MB
+* identifier[memberid].type.coding.code = #mb
 * identifier[memberid] ^short = "Member ID"
 * identifier[memberid].type.coding 1..* MS
 * identifier[memberid].type.coding.code 1..1  MS
-* identifier[medrecnum].type.coding.code = #MR
+* identifier[medrecnum].type.coding.code = #mr
 * identifier[medrecnum] ^short = "Medical Record Number"
 * identifier[medrecnum].type.coding 1..* MS
 * identifier[medrecnum].type.coding.code 1..1  MS
-* identifier[patacctnum].type.coding.code = #PT
+* identifier[patacctnum].type.coding.code = #pt
 * identifier[patacctnum] ^short = "Patient Account Number"
 * identifier[patacctnum].type.coding 1..* MS
 * identifier[patacctnum].type.coding.code 1..1  MS
 * identifier[uniquememberid] ^short = "Unique Member ID"
 * identifier[uniquememberid].type.coding 1..* MS
 * identifier[uniquememberid].type.coding.code 1..1  MS
-* identifier[uniquememberid].type.coding.code = #UM 
+* identifier[uniquememberid].type.coding.code = #um
 
 
 

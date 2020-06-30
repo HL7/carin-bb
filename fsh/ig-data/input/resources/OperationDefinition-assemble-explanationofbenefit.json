@@ -1,11 +1,11 @@
 {
   "resourceType": "OperationDefinition",
-  "id": "CARIN-BB-Assemble-ExplanationOfBenefit",
+  "id": "Assemble-ExplanationOfBenefit",
 
   "url": "http://hl7.org/fhir/us/carin-bb/OperationDefinition/assemble-eob",
   "version": "0.1.0",
-  "name": "CARINBBAssembleEOB",
-  "title": "CARIN BB Assemble EOB",
+  "name": "AssembleExplanationOfBenefit",
+  "title": "Assemble ExplanationOfBenefit",
   "status": "active",
   "kind": "operation",
   "date": "2020-06-24T00:00:00+00:00",

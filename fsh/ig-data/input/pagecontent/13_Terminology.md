@@ -149,6 +149,14 @@ This IG includes value set bindings to code systems that are industry standard c
 <td> Code System http://www.nubc.org/type-of-bill,</td>
 </tr>
 <tr>
+<td> <a href="ValueSet-OrganizationIdentifierTypeVS.html">Organization Identifier Type</a></td>
+<td> Organization  Identifier Type</td>
+</tr>
+<tr>
+<td> <a href="ValueSet-PatientIdentifierTypeVS.html">Patient Identifier Type</a></td>
+<td> Patient Identifier Type</td>
+</tr>
+<tr>
 <td> <a href="ValueSet-PayerInpatientFacilityProviderRoleVSProviderRoleVS.html">Payer - Inpatient Facility Provider Role</a></td>
 <td> Indicates the role of the provider providing the care.</td>
 </tr>
@@ -207,6 +215,10 @@ This IG includes value set bindings to code systems that are industry standard c
 <tr>
 <td> <a href="CodeSystem-ClaimInformationCategoryCS.html">Claim Information Category</a></td>
 <td> Claim Information Category - Used as the discriminator for supportingInfo</td>
+</tr>
+<tr>
+<td> <a href="CodeSystem-IdentifierTypeCS.html">Identifier Type</a></td>
+<td> Identifier Type</td>
 </tr>
 <tr>
 <td> <a href="CodeSystem-PayerAdjudicationCategoryCS.html">Payer Adjudication Category</a></td>

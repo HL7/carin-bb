@@ -215,9 +215,20 @@ Description: "Code System http://www.nubc.org/type-of-bill,"
 //ValueSet: TypeOfBillClassificationVS
 //Title: "Type of Bill (Classification)"
 
-ValueSet: IdentifierTypeVS
-Title: "Identifier Type"
-Description: "IdentifierType"
+ValueSet: PatientIdentifierTypeVS
+Title: "Patient Identifier Type"
+Description: "Patient Identifier Type"
+* IdentifierTypeCS#um
+* IdentifierTypeCS#mb
+* IdentifierTypeCS#mr
+* IdentifierTypeCS#pt
+
+ValueSet: OrganizationIdentifierTypeVS
+Title: "Organization Identifier Type"
+Description: "Organization  Identifier Type"
+* IdentifierTypeCS#tax
+* IdentifierTypeCS#npi
+* IdentifierTypeCS#payerid
 
 ValueSet: NCPDPDispensedAsWrittenVS
 Title: "NCPDP Dispensed As Written (DAW)"
