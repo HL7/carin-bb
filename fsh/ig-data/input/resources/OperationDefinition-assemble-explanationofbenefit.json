@@ -50,7 +50,7 @@
       "use": "in",
       "min": 0,
       "max": "1",
-      "documentation": "The type of the ExplanationOfBenefit, e.g. inpatient, outpatient, pharmacy, etc.",
+      "documentation": "The type of the ExplanationOfBenefit, e.g. instituional, professional,  pharmacy, etc.",
       "type": "CodeableConcept",
       "binding": {
         "strength": "required",

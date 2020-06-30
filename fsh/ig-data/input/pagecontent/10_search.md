@@ -9,7 +9,7 @@ The Coverage Reference Resource SHALL be returned with data that was effective a
 
 <h3>RESTful Capabilities by Resource/Profile</h3>
 
-A server will support an <a href="OperationDefinition-CARIN-BB-Assemble-ExplanationOfBenefit.html">$assemble-eob"</a> operation which will return a bundle including all  ExplanationOfBenefits resources from the four supported profiles  matching the search request along with all the reference resources in the response bundle. Bundle.total will show a count of the EOB instances returned.
+A server will support an <a href="OperationDefinition-Assemble-ExplanationOfBenefit.html">$assemble-eob"</a> operation which will return a bundle including all  ExplanationOfBenefits resources from the four supported profiles  matching the search request along with all the reference resources in the response bundle. Bundle.total will show a count of the EOB instances returned.
 
 These $assemble-eob operation SHALL support the following parameters:
 <table border="1" class="codesytems local">
