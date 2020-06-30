@@ -23,7 +23,7 @@
     }
   ],
   "code": "assemble-eob",
-  "comment": " - The server is responsible for determining the reference resources to return as [included](http://hl7.org/fhir/R4/search.html#revinclude) resources rather than the client specifying which ones. This frees the client from needing to determine what it could or should ask for. Rhe server SHALL return all the reference resources within the return bundle along with the ExplanationOfBenefitn resources. The server's CapabilityStatement should document this behavior.",
+  "comment": " - The server is responsible for determining the reference resources to return as [included](http://hl7.org/fhir/R4/search.html#revinclude) resources rather than the client specifying which ones. This frees the client from needing to determine what it could or should ask for. The server SHALL return all the reference resources within the return bundle along with the ExplanationOfBenefit resources. The server's CapabilityStatement should document this behavior.",
   "resource" : ["ExplanationOfBenefit"],
   "system": false,
   "type": true,
