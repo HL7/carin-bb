@@ -70,7 +70,7 @@
       "use": "in",
       "min": 0,
       "max": "1",
-      "documentation": "Claim Number / Business Identifier of the ExplanationOfBenefit resource.",
+      "documentation": "Payer Claim Number / Business Identifier of the ExplanationOfBenefit resource.",
       "type": "Identifier"
     },
     {
@@ -86,7 +86,7 @@
       "use": "out",
       "min": 1,
       "max": "1",
-      "documentation": "The bundle type is \"searchset\"containing [CARIN BB ExplanationOfBenefit and reference resources](https://build.fhir.org/ig/HL7/carin-bb/profiles.html)",
+      "documentation": "The bundle type is \"searchset\"containing [CARIN BB ExplanationOfBenefit and reference resources](https://build.fhir.org/ig/HL7/carin-bb/profiles.html). The bundle total will reflect the number of ExplanationOfBenefit instances returned.",
       "type": "Bundle"
     }
   ]
