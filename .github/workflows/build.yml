@@ -30,7 +30,7 @@ jobs:
       - name: Run fsh-sushi
         run: cd fsh;../node_modules/.bin/sushi . ; ls -l build
       - name: Update and run ig-publisher
-        run: cd ./fsh/build; mkdir input-cache; ls -l ;wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -O input-cache/publisher.jar ; ./_genonce.sh
+        run: cd ./fsh/build; mkdir input-cache; ls -l ;curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar --output input-cache/org.hl7.fhir.publisher.jar ; ./_genonce.sh
 #      - name: Run ig-publisher
  #       run: cd fsh/build && ./_genonce.sh
       - name: Push changes
