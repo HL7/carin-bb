@@ -504,57 +504,33 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/carin-bb-searchparameter-coverage-patient"
+          "reference": "SearchParameter/explanationofbenefit-identifier"
         },
-        "name": "CARINBlueButton_Coverage_Patient_SearchParameter",
-        "description": "Retrieve coverages for a patient",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-created"
-        },
-        "name": "CARINBlueButton_ExplanationOfBenefit_Created_SearchParameter",
-        "description": "The creation date for the EOB",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-identifier"
-        },
-        "name": "CARINBlueButton_ExplanationOfBenefit_Identifier_SearchParameter",
+        "name": "ExplanationOfBenefit_Identifier",
         "description": "The business/claim identifier of the Explanation of Benefit",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-insurer"
+          "reference": "SearchParameter/explanationofbenefit-patient"
         },
-        "name": "CARINBlueButton_ExplanationOfBenefit_Insurer_SearchParameter",
-        "description": "The party responsible for the claim",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient"
-        },
-        "name": "CARINBlueButton_ExplanationOfBenefit_Patient_SearchParameter",
+        "name": "ExplanationOfBenefit_Patient",
         "description": "The reference to the patient",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-service-date"
+          "reference": "SearchParameter/explanationofbenefit-service-date"
         },
-        "name": "CARINBlueButton_ExplanationOfBenefit_ServiceDate_SearchParameter",
+        "name": "ExplanationOfBenefit_ServiceDate",
         "description": "Date of the service for the EOB",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-type"
+          "reference": "SearchParameter/explanationofbenefit-type"
         },
-        "name": "CARINBlueButton_ExplanationOfBenefit_Type_SearchParameter",
+        "name": "ExplanationOfBenefit_Type",
         "description": "The type of the ExplanationOfBenefit",
         "exampleBoolean": false
       }
