@@ -378,7 +378,7 @@
         "reference": {
           "reference": "ValueSet/PayerInpatientfacilitydiagnosistype"
         },
-        "name": "Payer Inpatient Facility Diagnosis Type",
+        "name": "Diagnosis Type -- Inpatient Facility",
         "description": "Payer Inpatient Facility Diagnosis Type",
         "exampleBoolean": false
       },
@@ -394,7 +394,7 @@
         "reference": {
           "reference": "ValueSet/PayerOutpatientfacilitydiagnosistype"
         },
-        "name": "Payer Outpatient Facility Diagnosis Type",
+        "name": "Diagnosis Type -- Outpatient Facility",
         "description": "Payer Outpatient Facility Diagnosis Type",
         "exampleBoolean": false
       },
@@ -419,7 +419,7 @@
           "reference": "ValueSet/PayerProfessionalandnoncliniciandiagnosistype"
         },
         "name": "Diagnosis Type -- Professional and Non-Clinician",
-        "description": "Indicates if the professional and non-clinician diagnosis is principal, secondary, or first-listed",
+        "description": "Payer Professional and Non-Clinician Diagnosis Type",
         "exampleBoolean": false
       },
       {
@@ -504,10 +504,58 @@
       },
       {
         "reference": {
-          "reference": "OperationDefinition/Assemble-ExplanationOfBenefit"
+          "reference": "SearchParameter/carin-bb-searchparameter-coverage-patient"
         },
-        "name": "Assemble ExplanationOfBenefit",
-        "description": "This operation is used to return ExplanationOfBenefit resources related to a patient along with all the reference resources. \n\n The operation takes the optional input parameters: \n  - patient id\n  - start date\n  - end date\n  - document type \n\n and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type \"searchset\" containing [CARIN BB ExplanationOfBenefit and reference resources](https://build.fhir.org/ig/HL7/carin-bb/profiles.html) for the patient. The principle intended use for this operation is to provide a patient with access to their available ExplanationOfBenefit information.",
+        "name": "CARINBlueButton_Coverage_Patient_SearchParameter",
+        "description": "Retrieve coverages for a patient",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-created"
+        },
+        "name": "CARINBlueButton_ExplanationOfBenefit_Created_SearchParameter",
+        "description": "The creation date for the EOB",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-identifier"
+        },
+        "name": "CARINBlueButton_ExplanationOfBenefit_Identifier_SearchParameter",
+        "description": "The business/claim identifier of the Explanation of Benefit",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-insurer"
+        },
+        "name": "CARINBlueButton_ExplanationOfBenefit_Insurer_SearchParameter",
+        "description": "The party responsible for the claim",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-patient"
+        },
+        "name": "CARINBlueButton_ExplanationOfBenefit_Patient_SearchParameter",
+        "description": "The reference to the patient",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-service-date"
+        },
+        "name": "CARINBlueButton_ExplanationOfBenefit_ServiceDate_SearchParameter",
+        "description": "Date of the service for the EOB",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/carin-bb-searchparameter-explanationofbenefit-type"
+        },
+        "name": "CARINBlueButton_ExplanationOfBenefit_Type_SearchParameter",
+        "description": "The type of the ExplanationOfBenefit",
         "exampleBoolean": false
       }
     ],

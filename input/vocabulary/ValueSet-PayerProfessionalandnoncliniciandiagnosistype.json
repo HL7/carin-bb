@@ -4,7 +4,7 @@
   "name": "PayerProfessionalandnoncliniciandiagnosistype",
   "id": "PayerProfessionalandnoncliniciandiagnosistype",
   "title": "Diagnosis Type -- Professional and Non-Clinician",
-  "description": "Indicates if the professional and non-clinician diagnosis is principal, secondary, or first-listed",
+  "description": "Payer Professional and Non-Clinician Diagnosis Type",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerProfessionalandnoncliniciandiagnosistype",
   "compose": {

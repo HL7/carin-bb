@@ -187,7 +187,7 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>Payer Inpatient Facility Diagnosis Type</td>
 </tr>
 <tr>
-<td><a href="ValueSet-PayerOutpatientfacilitydiagnosistype.html">Payer Outpatient Facility Diagnosis Type</a></td>
+<td><a href="ValueSet-PayerOutpatientfacilitydiagnosstype.html">Payer Outpatient Facility Diagnosis Type</a></td>
 <td>Payer Outpatient Facility Diagnosis Type</td>
 </tr>
 <tr>

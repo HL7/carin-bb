@@ -3,7 +3,7 @@
   "status": "active",
   "name": "PayerInpatientfacilitydiagnosistype",
   "id": "PayerInpatientfacilitydiagnosistype",
-  "title": "Payer Inpatient Facility Diagnosis Type",
+  "title": "Diagnosis Type -- Inpatient Facility",
   "description": "Payer Inpatient Facility Diagnosis Type",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerInpatientfacilitydiagnosistype",

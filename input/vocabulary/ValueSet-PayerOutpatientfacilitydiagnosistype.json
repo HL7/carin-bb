@@ -3,7 +3,7 @@
   "status": "active",
   "name": "PayerOutpatientfacilitydiagnosistype",
   "id": "PayerOutpatientfacilitydiagnosistype",
-  "title": "Payer Outpatient Facility Diagnosis Type",
+  "title": "Diagnosis Type -- Outpatient Facility",
   "description": "Payer Outpatient Facility Diagnosis Type",
   "version": "0.1.0",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerOutpatientfacilitydiagnosistype",
