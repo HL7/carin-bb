@@ -113,39 +113,17 @@ Description: "This describes the various amount fields used when payers receive 
 * PayerAdjudicationCategoryCS#discount "discount" 
 * PayerAdjudicationCategoryCS#drugcost "drug cost"
 
-CodeSystem: PayerDiagnosisTypeCS
-Title: "Payer Diagnosis Type"
-Description: "Payer Diagnosis Type"
-* #principal "principal" "principal"
-* #secondary  "secondary"  "secondary"
-* #external-cause-of-injury "external-cause-of-injury" "external-cause-of-injury"
-* #patient-reason-for-visit "patient-reason-for-visit" "patient-reason-for-visit"
-* #first-listed  "first-listed"  "first-listed"
-
-/*ValueSet: DiagnosisTypeFacilityVS
-Title: "Diagnosis Type -- Facility"
-Description: "Indicates if the facility diagnosis is principal, secondary, an external cause of injury, a patient reason for visit, or first-listed"
-* codes from system PayerDiagnosisTypeCS 
-*/
 
 ValueSet: PayerProfessionalandnoncliniciandiagnosistype
 Title: "Diagnosis Type -- Professional and Non-Clinician"
-Description: "Indicates if the professional and non-clinician diagnosis is principal, secondary, or first-listed"
+Description: "Payer Professional and Non-Clinician Diagnosis Type"
 * PayerDiagnosisTypeCS#principal "principal"
 * PayerDiagnosisTypeCS#secondary "secondary"
 * PayerDiagnosisTypeCS#first-listed "first-listed"
 
-/*
-ValueSet: PresentOnAdmissionTypeVS
-Title: "Present-on-admission Diagnosis Type"
-Description: "Indicates if the Present on Admission Code applies to the Primary or secondary diagnosis"
-* PayerDiagnosisTypeCS#principal 
-* PayerDiagnosisTypeCS#secondary 
-* PayerDiagnosisTypeCS#external-cause-of-injury 
-*/
 
 ValueSet: PayerInpatientfacilitydiagnosistype
-Title: "Payer Inpatient Facility Diagnosis Type"
+Title: "Diagnosis Type -- Inpatient Facility"
 Description: "Payer Inpatient Facility Diagnosis Type"
 * PayerDiagnosisTypeCS#principal 
 * PayerDiagnosisTypeCS#secondary  
@@ -154,7 +132,7 @@ Description: "Payer Inpatient Facility Diagnosis Type"
 * PayerDiagnosisTypeCS#admitting 
 
 ValueSet: PayerOutpatientfacilitydiagnosistype
-Title: "Payer Outpatient Facility Diagnosis Type"
+Title: "Diagnosis Type -- Outpatient Facility"
 Description: "Payer Outpatient Facility Diagnosis Type"
 * codes from system PayerDiagnosisTypeCS
 
@@ -162,45 +140,9 @@ ValueSet: NUBCPresentOnAdmissionVS
 Title: "NUBC Present On Admission"
 Description: "NUBC Present On Admission"
 
-/*
-CodeSystem: ClaimTypeCS 
-Title: "Claim Types"
-Description:  "Proposed replacement/update for http://hl7.org/fhir/ValueSet/claim-type and http://terminology.hl7.org/CodeSystem/claim-type"
-* #institutional-inpatient "Institutional - Inpatient" "Claims submitted by clinics, hospitals, skilled nursing facilities, and other institutions for inpatient services, including the use of equipment and supplies, laboratory services, radiology services, and other charges.  Inpatient claims are submitted for admissions for which there is an overnight stay. The claims data is based on submission standards adopted by the Department of Health and Human Services (CMS-1450)."
-* #institutional-outpatient "Institutional - Outpatient" "Claims submitted by clinics, hospitals, skilled nursing facilities, and other institutions for outpatient services, including the use of equipment and supplies, laboratory services, radiology services, and other charges.  Outpatient claims are submitted for admissions for which there is not an overnight stay. The claims data is based on submission standards adopted by the Department of Health and Human Services (CMS-1450)."
-* #professional-nonclinician "Professional and Non-Clinician" "Claims submitted by physicians, suppliers, and other non-institutional providers for inpatient, outpatient and non-institutional services.  The claims data is based on submission standards adopted by the Department of Health and Human Services (CMS-1500).  Claims with CPT (Current Procedural Terminology) codes represent physician services and claims with Level II HCPCS codes represent non-physician services like ambulance rides, wheelchairs, walkers, other durable medical equipment, and other medical services that are not identified by CPT/HCPCS Level I codes."
-* #retail-pharmacy "Retail Pharmacy" "Claims submitted by retail pharmacies.  The claims data is based on submission standards adopted by the Department of Health and Human  Services defined by NCPDP (National Council for Prescription Drug Program)"
-
-ValueSet: ClaimTypeVS
-Title: "Claim Types"
-Description: "Proposed replacement/update for http://hl7.org/fhir/ValueSet/claim-type"
-* codes from system ClaimTypeCS
-*/
-
-//ValueSet: RelatedClaimVS
-//Title: "Related Claim"
-
-//ValueSet: CareTeamRoleVS
-//Title: "Care Team Roles"
-
-//ValueSet: InformationCategoryVS
-//Title: "Information Categories"
-
-//ValueSet: DiagnosisTypeVS
-//Title: "Diagnosis Type"
-
-//ValueSet: AdjudicationAmountCategoryVS
-//Title: "Adjudication Amount Category"
-
 ValueSet: AdjudicationDenialReasonVS
 Title: "Adjudication Denial Reason"
 Description: "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC"
-
-//ValueSet: TypeOfServiceVS 
-//Title: "Type Of Service"
-
-//ValueSet: TypeOfFacilityVS 
-//Title: "Type of Facility"
 
 
 ValueSet: MSDRGVS
