@@ -1,1 +1,0 @@
-UB-04 Type of Admission/Visit (FL-14)

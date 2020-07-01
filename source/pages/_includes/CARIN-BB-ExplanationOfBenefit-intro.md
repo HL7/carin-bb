@@ -1,2 +1,0 @@
-This profile is built upon the ExplanationOfBenefit Resource. It includes constraints that are common to the more specific EOB profiles defined in this IG. Each of the more specific EOB profiles builds upon this profile. MustSupport implementer guidance is included in this base profile (e.g. profile flags). The more specific EOB profiles therefore inherit MustSupport guidance from this base profile.
-

@@ -1,1 +1,0 @@
-The creation date for the EOB
