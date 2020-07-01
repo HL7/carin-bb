@@ -92,7 +92,23 @@ Description: "Indicates whether the claim / item was paid or denied."
 * PayerAdjudicationCategoryCS#paid "paid"
 * PayerAdjudicationCategoryCS#denied "denied"
 
-
+ValueSet: PayerAdjudicationAmountCategoryVS
+Title: "Payer Adjudication Amount Category"
+Description: "This describes the various amount fields used when payers receive and adjudicate a claim."
+* PayerAdjudicationCategoryCS#submitted "Submitted" 
+* PayerAdjudicationCategoryCS#allowed "Allowed" 
+* PayerAdjudicationCategoryCS#deductible "Deductible" 
+* PayerAdjudicationCategoryCS#coins "coins" 
+* PayerAdjudicationCategoryCS#copay "copay"
+* PayerAdjudicationCategoryCS#noncovered "noncovered" 
+* PayerAdjudicationCategoryCS#priorpayerpaid "priorpayerpaid" 
+* PayerAdjudicationCategoryCS#payment "payment" 
+* PayerAdjudicationCategoryCS#paidbypatient "paid by patient"  
+* PayerAdjudicationCategoryCS#paidtopatient "paid to patient"  
+* PayerAdjudicationCategoryCS#paidtoprovider "paid to provider" 
+* PayerAdjudicationCategoryCS#memberliability "member liability" 
+* PayerAdjudicationCategoryCS#discount "discount" 
+* PayerAdjudicationCategoryCS#drugcost "drug cost"
 
 
 ValueSet: PayerProfessionalandnoncliniciandiagnosistype
@@ -121,16 +137,28 @@ ValueSet: NUBCPresentOnAdmission
 Title: "NUBC Present On Admission"
 Description: "NUBC Present On Admission"
 
+<<<<<<< HEAD
 ValueSet: AdjudicationDenialReason
+=======
+ValueSet: AdjudicationDenialReasonVS
+>>>>>>> Valuesets and scripts
 Title: "Adjudication Denial Reason"
 Description: "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC"
 
 
+<<<<<<< HEAD
 ValueSet: CMSDRG
 Title: "CMS-DRG"
 Description: "CMS-DRG"
 
 ValueSet: NUBCPatientDischargeStatus
+=======
+ValueSet: MSDRGVS
+Title: "MS-DRG"
+Description: "MS-DRG"
+
+ValueSet: NUBCPatientDischargeStatusVS
+>>>>>>> Valuesets and scripts
 Title: "NUBC Patient Discharge Status"
 Description: "NUBC Patient Discharge Status"
 //* codes from system $NUBCPatientDischargeCS
