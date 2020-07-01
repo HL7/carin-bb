@@ -44,7 +44,7 @@ These search parameters are required (SHALL). The term EOB refers to the four no
   </thead>
   <tbody>
     <tr>
-              <td><a href="SearchParameter-carinbb-_id.html">_id</a></td>
+              <td>_id</td>
               <td>EOB</td>
               <td>token</td>
               <td>{% capture md_text %}_id{% endcapture %}{{ md_text | markdownify }}</td>
@@ -52,7 +52,7 @@ These search parameters are required (SHALL). The term EOB refers to the four no
               <td>{% capture md_text %}GET [base]/ExplanationOfBenefit?_id=[id]{% endcapture %}{{ md_text | markdownify }}</td>
             </tr>
             <tr>
-              <td><a href="SearchParameter-carinbb-patient.html">patient</a></td>
+              <td><a href="SearchParameter-explanationofbenefit-patient.html">patient</a></td>
               <td>EOB</td>
               <td>reference</td>
               <td>{% capture md_text %}patient{% endcapture %}{{ md_text | markdownify }}</td>
@@ -60,7 +60,7 @@ These search parameters are required (SHALL). The term EOB refers to the four no
               <td>{% capture md_text %}GET [base]/ExplanationOfBenefit?patient=[patient]{% endcapture %}{{ md_text | markdownify }}</td>
             </tr>
             <tr>
-              <td><a href="SearchParameter-carinbb-_lastUpdated_.html">_lastUpdated</a></td>
+              <td>_lastUpdated</td>
               <td>EOB</td>
               <td>date</td>
               <td>{% capture md_text %}_lastUpdated{% endcapture %}{{ md_text | markdownify }}</td>
@@ -69,7 +69,7 @@ These search parameters are required (SHALL). The term EOB refers to the four no
 {% endcapture %}{{ md_text | markdownify }}</td>
             </tr>
                       <tr>
-              <td><a href="SearchParameter-carinbb-type.html">type</a></td>
+              <td><a href="SearchParameter-explanationofbenefit-type.html">type</a></td>
               <td>EOB</td>
               <td>date</td>
               <td>{% capture md_text %}type{% endcapture %}{{ md_text | markdownify }}</td>
@@ -78,7 +78,7 @@ These search parameters are required (SHALL). The term EOB refers to the four no
 {% endcapture %}{{ md_text | markdownify }}</td>
             </tr>
             <tr>
-              <td><a href="SearchParameter-carinbb-identifier.html">identifier</a></td>
+              <td><a href="SearchParameter-explanationofbenefit-identifier.html">identifier</a></td>
               <td>EOB</td>
               <td>token</td>
               <td>{% capture md_text %}identifier{% endcapture %}{{ md_text | markdownify }}</td>
@@ -86,7 +86,7 @@ These search parameters are required (SHALL). The term EOB refers to the four no
                <td>{% capture md_text %}GET [base]/ExplanationOfBenefit?identifier=[system]|[value]{% endcapture %}{{ md_text | markdownify }}</td>
             </tr>
             <tr>
-              <td><a href="SearchParameter-carinbb-service-date.html">type</a></td>
+              <td><a href="SearchParameter-explanationofbenefit-service-date.html">service-date</a></td>
               <td>EOB</td>
               <td>date</td>
               <td>{% capture md_text %}service-date{% endcapture %}{{ md_text | markdownify }}</td>
