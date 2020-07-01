@@ -3,26 +3,33 @@
 
 <h3>Search Behavior</h3>
 
-The EOB Resource is the focal Consumer-Directed Payer Data Exchange (CDPDE) Resource. Several Reference Resources are defined directly/indirectly from the EOB: Coverage, Patient, Organization (Payer ID), Practioner, Organization (Facility), PractionerRole, Location.
+The ExplanationOfBenefit (EOB) Resource is the focal Consumer-Directed Payer Data Exchange (CDPDE) Resource. Several Reference Resources are defined directly/indirectly from the EOB: Coverage, Patient, Organization (Payer ID), Practioner, Organization (Facility), PractionerRole, Location.
 
-The Coverage Reference Resource SHALL be returned with data that was effective as of the date of service of the claim; for example, the data will reflect the employer name in effect at that time. However, for other reference resources, if payers have the data as of the date of service that data SHALL be provided in the reference resource and they SHALL populate meta.lastUpdated with the date that the payer record for that resource was created. If payers do not have the data as of the date of service, they SHALL provide their available data in the reference resource and they SHALL populate meta.lastUpdated with the date the data was updated.
+The Coverage Reference Resource SHALL be returned with data that was effective as of the date of service of the claim; for example, the data will reflect the employer name in effect at that time. However, for other reference resources, if payers have the data as of the date of service that data SHALL be provided in the reference resource and they SHALL populate meta.lastUpdated with the date that the payer record for that resource was created. If payers do not have the data as of the date of service, they MAY provide their available data in the reference resource and they SHALL populate meta.lastUpdated with the date the data was updated.
 
 <h3>RESTful Capabilities by Resource/Profile</h3>
 
-A server will support an <a href="OperationDefinition-Assemble-ExplanationOfBenefit.html">$assemble-eob"</a> operation which will return a bundle including all  ExplanationOfBenefits resources from the four supported profiles  matching the search request along with all the reference resources in the response bundle. Bundle.total will show a count of the ExplanationOfBenefit instances returned.
+A server will always treat a search request as if a client indicated \"_include=*\" and SHALL return all EOB & reference resources in the response bundle. Bundle.link.url (self) would show that "_include=*" was added by the server as an additional parameter. Bundle.total will count only EOB resources (this is a normal practice in FHIR to only count the searched resources and not the included / reference resources).
 
-These $assemble-eob operation SHALL support the following parameters:
-<table border="1" class="codesytems local">
- <thead>
+<h4>Explanation of Benefit Profiles</h4>
+
+Supported Profiles: CARIN BB ExplanationOfBenefit Inpatient Facility Profile; CARIN BB ExplanationOfBenefit Outpatient Facility Profile; CARIN BB ExplanationOfBenefit Pharmacy Profile; CARIN BB ExplanationOfBenefit Professional NonClinician Profile
+
+<h5>Search Parameters"</h5>
+
+These search parameters are required (SHALL). The term EOB refers to the four non-abstract profiles of ExplanationOfBenefit defined in this implementation guide.
+
+<table border="1" class="codes">
+  <thead>
     <tr>
       <td>
-        <b>Parameter Name</b>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Base Resources</b>
       </td>
       <td>
         <b>Type</b>
-      </td>
-      <td>
-        <b>Cardinality</b>
       </td>
       <td>
         <b>Description</b>
@@ -30,53 +37,70 @@ These $assemble-eob operation SHALL support the following parameters:
       <td>
         <b>Notes</b>
       </td>
+        <td>
+        <b>Example</b>
+      </td>
     </tr>
   </thead>
- <tbody>
+  <tbody>
     <tr>
-              <td>_id</td>
-              <td>id</td>
-              <td>0..1</td>
-              <td>Logical id for the ExplanationOfBenefit resource.</td>
-              <td>(none))</td>
-    </tr>
-     <tr>
-              <td>patient</td>
-              <td>id</td>
-              <td>1..1</td>
-              <td>Required.  The id of the patient resource located on the server on which this operation is executed. If there is no match, an empty Bundle is returned</td>
-              <td>(none))</td>
-    </tr>
-    <tr>
-              <td>_since</td>
-              <td>instant</td>
-              <td>0..1</td>
-              <td>ExplanationOfBenefit resources updated after this period will be included in the response. The intent of this parameter is to allow a client to request only records that have changed since the last request.</td>
-              <td>(none))</td>
-    </tr>
-    <tr>
-              <td>type</td>
-              <td>CodeableConcept</td>
-              <td>0..1</td>
-              <td>The type of the ExplanationOfBenefit, e.g. institutional, pharmacy, professional</td>
-              <td>(none))</td>
-    </tr>
-        <tr>
-              <td>identifier</td>
-              <td>Identifier</td>
-              <td>0..1</td>
-              <td>Payer Claim Number / Business Identifier of the ExplanationOfBenefit resource.</td>
-              <td>(none))</td>
-    </tr>
-    <tr>
-              <td>service-date</td>
+              <td><a href="SearchParameter-carinbb-_id.html">_id</a></td>
+              <td>EOB</td>
+              <td>token</td>
+              <td>{% capture md_text %}_id{% endcapture %}{{ md_text | markdownify }}</td>
+              <td>none</td>
+              <td>{% capture md_text %}GET [base]/ExplanationOfBenefit?_id=[id]{% endcapture %}{{ md_text | markdownify }}</td>
+            </tr>
+            <tr>
+              <td><a href="SearchParameter-carinbb-patient.html">patient</a></td>
+              <td>EOB</td>
+              <td>reference</td>
+              <td>{% capture md_text %}patient{% endcapture %}{{ md_text | markdownify }}</td>
+              <td></td>
+              <td>{% capture md_text %}GET [base]/ExplanationOfBenefit?patient=[patient]{% endcapture %}{{ md_text | markdownify }}</td>
+            </tr>
+            <tr>
+              <td><a href="SearchParameter-carinbb-_lastUpdated_.html">_lastUpdated</a></td>
+              <td>EOB</td>
               <td>date</td>
-              <td>0..1</td>
-              <td>Date of the service for the ExplanationOfBenefit.</td>
-              <td>(none))</td>
-    </tr>
-</tbody>
+              <td>{% capture md_text %}_lastUpdated{% endcapture %}{{ md_text | markdownify }}</td>
+              <td>Only in combination with the patient search parameter.</td>
+              <td>{% capture md_text %}GET [base]/ExplanationOfBenefit?_lastUpdated=[prefix][date]
+{% endcapture %}{{ md_text | markdownify }}</td>
+            </tr>
+                      <tr>
+              <td><a href="SearchParameter-carinbb-type.html">type</a></td>
+              <td>EOB</td>
+              <td>date</td>
+              <td>{% capture md_text %}type{% endcapture %}{{ md_text | markdownify }}</td>
+              <td>Only in combination with the patient search parameter.</td>
+              <td>{% capture md_text %}GET [base]/ExplanationOfBenefit?type=[system]|[code]
+{% endcapture %}{{ md_text | markdownify }}</td>
+            </tr>
+            <tr>
+              <td><a href="SearchParameter-carinbb-identifier.html">identifier</a></td>
+              <td>EOB</td>
+              <td>token</td>
+              <td>{% capture md_text %}identifier{% endcapture %}{{ md_text | markdownify }}</td>
+               <td>none</td>
+               <td>{% capture md_text %}GET [base]/ExplanationOfBenefit?identifier=[system]|[value]{% endcapture %}{{ md_text | markdownify }}</td>
+            </tr>
+            <tr>
+              <td><a href="SearchParameter-carinbb-service-date.html">type</a></td>
+              <td>EOB</td>
+              <td>date</td>
+              <td>{% capture md_text %}service-date{% endcapture %}{{ md_text | markdownify }}</td>
+               <td>Only in combination with the patient search parameter.</td>
+               <td>{% capture md_text %}GET [base]/ExplanationOfBenefit?service-date=[prefix][date]
+{% endcapture %}{{ md_text | markdownify }} </td>
+            </tr>
+           </tbody>
 </table>
+The rationale for requiring specification of a patient for searches not constrained by _id or identifier  is as follows:
+<ul>
+<li>Search by _id or identifer returns at most a single unique EOB.  A patient parameter is redundant, but is allowed.</li>
+<li>Search by type or date (lastUpdated or service-date) must be constrained by a patient to reduce computationial burden, and provide an additional layer of security if a server validates this parameter against the token before processing the request</li>
+</ul>
 
 <h4>Other Profiles</h4>
 No search capabilities are defined for the other profiles defined in the Implementation Guide.  
