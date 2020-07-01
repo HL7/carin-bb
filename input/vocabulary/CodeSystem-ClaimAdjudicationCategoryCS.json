@@ -1,0 +1,93 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "ClaimAdjudicationCategoryCS",
+  "id": "ClaimAdjudicationCategoryCS",
+  "title": "Claim Adjudication Category",
+  "description": "Values for EOB.item.adjudication.category",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimAdjudicationCategoryCS",
+  "concept": [
+    {
+      "code": "benefitPaymentStatusCode",
+      "display": "Benefit payment status code",
+      "definition": "Benefit payment status code"
+    },
+    {
+      "code": "paymentDenialCode",
+      "display": "Payment denial code",
+      "definition": "Payment Denial Code"
+    },
+    {
+      "code": "submittedamount",
+      "display": "submitted amount",
+      "definition": "Undefined"
+    },
+    {
+      "code": "allowedamount",
+      "display": "allowed amount",
+      "definition": "Undefined"
+    },
+    {
+      "code": "deductibleamount",
+      "display": "deductible amount",
+      "definition": "Undefined"
+    },
+    {
+      "code": "coinsuranceamount",
+      "display": "coinsurance amount",
+      "definition": "Undefined"
+    },
+    {
+      "code": "copayamount",
+      "display": "copay amount",
+      "definition": "Undefined"
+    },
+    {
+      "code": "noncoveredamount",
+      "display": "noncovered amount",
+      "definition": "Undefined"
+    },
+    {
+      "code": "cobamount",
+      "display": "cob amount",
+      "definition": "Undefined"
+    },
+    {
+      "code": "paymentamount",
+      "display": "payment amount",
+      "definition": "Undefined"
+    },
+    {
+      "code": "patientpayamount",
+      "display": "patient pay amount",
+      "definition": "Undefined"
+    },
+    {
+      "code": "denialreason",
+      "display": "payment denial reason",
+      "definition": "Undefined"
+    },
+    {
+      "code": "innetworkbenefitpaymentstatus",
+      "display": "in network benefit payment status",
+      "definition": "Undefined"
+    },
+    {
+      "code": "outofnetworkbenefitpaymentstatus",
+      "display": "out of network benefit payment status",
+      "definition": "Undefined"
+    },
+    {
+      "code": "otherbenefitpaymentstatus",
+      "display": "other benefit payment status",
+      "definition": "Undefined"
+    },
+    {
+      "code": "allowedunits",
+      "display": "allowed units",
+      "definition": "Undefined"
+    }
+  ]
+}

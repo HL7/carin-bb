@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "NCPDPDispensedAsWrittenVS",
+  "id": "NCPDPDispensedAsWrittenVS",
+  "title": "NCPDP Dispensed As Written (DAW)",
+  "description": "http://www.ncpdp.org/dispensed-as-written-or-product-selection-code",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenVS"
+}

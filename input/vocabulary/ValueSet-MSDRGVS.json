@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MSDRGVS",
+  "id": "MSDRGVS",
+  "title": "MS-DRG",
+  "description": "MS-DRG",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/MSDRGVS"
+}

@@ -1,0 +1,508 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CARIN-BB-ExplanationOfBenefit-Pharmacy",
+  "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy",
+  "version": "0.1.0",
+  "name": "CARINBBExplanationOfBenefitPharmacy",
+  "title": "CARIN BB ExplanationOfBenefit Pharmacy",
+  "status": "active",
+  "description": "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies. \nThe claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "ExplanationOfBenefit",
+  "baseDefinition": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ExplanationOfBenefit",
+        "path": "ExplanationOfBenefit"
+      },
+      {
+        "id": "ExplanationOfBenefit.type",
+        "path": "ExplanationOfBenefit.type"
+      },
+      {
+        "id": "ExplanationOfBenefit.type.coding",
+        "path": "ExplanationOfBenefit.type.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.type.coding.code",
+        "path": "ExplanationOfBenefit.type.coding.code",
+        "patternCode": "pharmacy"
+      },
+      {
+        "id": "ExplanationOfBenefit.provider",
+        "path": "ExplanationOfBenefit.provider",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization",
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-PractitionerRole",
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit.careTeam",
+        "path": "ExplanationOfBenefit.careTeam"
+      },
+      {
+        "id": "ExplanationOfBenefit.careTeam.role",
+        "path": "ExplanationOfBenefit.careTeam.role",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerPharmacyProviderRoleVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo",
+        "path": "ExplanationOfBenefit.supportingInfo",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "category.coding.code"
+            }
+          ],
+          "rules": "open",
+          "ordered": false,
+          "description": "Slice based on value pattern"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:billingnetworkcontractingstatus",
+        "path": "ExplanationOfBenefit.supportingInfo",
+        "sliceName": "billingnetworkcontractingstatus",
+        "short": "Billing Network Contracting Status",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:billingnetworkcontractingstatus.category",
+        "path": "ExplanationOfBenefit.supportingInfo.category"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:billingnetworkcontractingstatus.category.coding",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:billingnetworkcontractingstatus.category.coding.code",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding.code",
+        "min": 1,
+        "patternCode": "billingnetworkcontractingstatus"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:billingnetworkcontractingstatus.code",
+        "path": "ExplanationOfBenefit.supportingInfo.code",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ProviderNetworkStatusVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:brandgenericcode",
+        "path": "ExplanationOfBenefit.supportingInfo",
+        "sliceName": "brandgenericcode",
+        "short": "BrandGeneric",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:brandgenericcode.category",
+        "path": "ExplanationOfBenefit.supportingInfo.category"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:brandgenericcode.category.coding",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:brandgenericcode.category.coding.code",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding.code",
+        "min": 1,
+        "patternCode": "brandGenericCode"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:brandgenericcode.code",
+        "path": "ExplanationOfBenefit.supportingInfo.code",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericCodeVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:rxoriginCode",
+        "path": "ExplanationOfBenefit.supportingInfo",
+        "sliceName": "rxoriginCode",
+        "short": "RxOrigin",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:rxoriginCode.category",
+        "path": "ExplanationOfBenefit.supportingInfo.category"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:rxoriginCode.category.coding",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:rxoriginCode.category.coding.code",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding.code",
+        "min": 1,
+        "patternCode": "rxOriginCode"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:rxoriginCode.code",
+        "path": "ExplanationOfBenefit.supportingInfo.code",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCodeVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:refillNum",
+        "path": "ExplanationOfBenefit.supportingInfo",
+        "sliceName": "refillNum",
+        "short": "RefillNum",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:refillNum.category",
+        "path": "ExplanationOfBenefit.supportingInfo.category"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:refillNum.category.coding",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:refillNum.category.coding.code",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding.code",
+        "min": 1,
+        "patternCode": "refillnum"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dawcode",
+        "path": "ExplanationOfBenefit.supportingInfo",
+        "sliceName": "dawcode",
+        "short": "Dispense As Written",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dawcode.category",
+        "path": "ExplanationOfBenefit.supportingInfo.category"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dawcode.category.coding",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dawcode.category.coding.code",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding.code",
+        "min": 1,
+        "patternCode": "dawCode"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dawcode.code",
+        "path": "ExplanationOfBenefit.supportingInfo.code",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:clmrecvddate",
+        "path": "ExplanationOfBenefit.supportingInfo",
+        "sliceName": "clmrecvddate",
+        "short": "Claim Received Date",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:clmrecvddate.category",
+        "path": "ExplanationOfBenefit.supportingInfo.category"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:clmrecvddate.category.coding",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:clmrecvddate.category.coding.code",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding.code",
+        "min": 1,
+        "patternCode": "clmrecvddate"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dayssupply",
+        "path": "ExplanationOfBenefit.supportingInfo",
+        "sliceName": "dayssupply",
+        "short": "Days Supply",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dayssupply.category",
+        "path": "ExplanationOfBenefit.supportingInfo.category"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dayssupply.category.coding",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dayssupply.category.coding.code",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding.code",
+        "min": 1,
+        "patternCode": "daysSupply"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dispensingstatus",
+        "path": "ExplanationOfBenefit.supportingInfo",
+        "sliceName": "dispensingstatus",
+        "short": "Dispensing Status",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dispensingstatus.category",
+        "path": "ExplanationOfBenefit.supportingInfo.category"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dispensingstatus.category.coding",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo:dispensingstatus.category.coding.code",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding.code",
+        "min": 1,
+        "patternCode": "dispensingstatus"
+      },
+      {
+        "id": "ExplanationOfBenefit.item",
+        "path": "ExplanationOfBenefit.item"
+      },
+      {
+        "id": "ExplanationOfBenefit.item.productOrService",
+        "path": "ExplanationOfBenefit.item.productOrService",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/FDANDCNCPDPCompoundCodeVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication",
+        "path": "ExplanationOfBenefit.item.adjudication",
+        "slicing": {
+          "rules": "closed",
+          "ordered": false,
+          "description": "Slice based on value pattern",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "category.coding.code"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:adjudicationamounttype",
+        "path": "ExplanationOfBenefit.item.adjudication",
+        "sliceName": "adjudicationamounttype",
+        "short": "Amounts",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:adjudicationamounttype.category",
+        "path": "ExplanationOfBenefit.item.adjudication.category",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/AdjudicationPayerValueCodesVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:adjudicationamounttype.amount",
+        "path": "ExplanationOfBenefit.item.adjudication.amount",
+        "min": 1
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:denialreason",
+        "path": "ExplanationOfBenefit.item.adjudication",
+        "sliceName": "denialreason",
+        "short": "Denial Reason",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:denialreason.category",
+        "path": "ExplanationOfBenefit.item.adjudication.category"
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:denialreason.category.coding",
+        "path": "ExplanationOfBenefit.item.adjudication.category.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:denialreason.category.coding.code",
+        "path": "ExplanationOfBenefit.item.adjudication.category.coding.code",
+        "min": 1,
+        "patternCode": "denialreason"
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:denialreason.reason",
+        "path": "ExplanationOfBenefit.item.adjudication.reason",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPRejectCodeVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:inoutnetwork",
+        "path": "ExplanationOfBenefit.item.adjudication",
+        "sliceName": "inoutnetwork",
+        "short": "Benefit Payment Status",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:inoutnetwork.category",
+        "path": "ExplanationOfBenefit.item.adjudication.category",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/BenefitPaymentStatusCategoryVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:inoutnetwork.category.coding",
+        "path": "ExplanationOfBenefit.item.adjudication.category.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication:inoutnetwork.category.coding.code",
+        "path": "ExplanationOfBenefit.item.adjudication.category.coding.code",
+        "min": 1,
+        "patternCode": "inoutnetwork"
+      },
+      {
+        "id": "ExplanationOfBenefit.item.detail",
+        "path": "ExplanationOfBenefit.item.detail",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.item.detail.productOrService",
+        "path": "ExplanationOfBenefit.item.detail.productOrService",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/FDANationalDrugCodeVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.item.detail.quantity",
+        "path": "ExplanationOfBenefit.item.detail.quantity",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication",
+        "path": "ExplanationOfBenefit.adjudication",
+        "slicing": {
+          "rules": "closed",
+          "ordered": false,
+          "description": "Slice based on value pattern",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "category.coding.code"
+            }
+          ]
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication.category",
+        "path": "ExplanationOfBenefit.adjudication.category",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimAdjudicationCategoryVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication:adjudicationamounttype",
+        "path": "ExplanationOfBenefit.adjudication",
+        "sliceName": "adjudicationamounttype",
+        "short": "Amounts",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication:adjudicationamounttype.category",
+        "path": "ExplanationOfBenefit.adjudication.category",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/AdjudicationPayerValueCodesVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication:adjudicationamounttype.amount",
+        "path": "ExplanationOfBenefit.adjudication.amount",
+        "min": 1
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication:inoutnetwork",
+        "path": "ExplanationOfBenefit.adjudication",
+        "sliceName": "inoutnetwork",
+        "short": "Benefit Payment Status",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication:inoutnetwork.category",
+        "path": "ExplanationOfBenefit.adjudication.category",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/BenefitPaymentStatusCategoryVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication:inoutnetwork.category.coding",
+        "path": "ExplanationOfBenefit.adjudication.category.coding"
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication:inoutnetwork.category.coding.code",
+        "path": "ExplanationOfBenefit.adjudication.category.coding.code",
+        "min": 1,
+        "patternCode": "inoutnetwork"
+      }
+    ]
+  }
+}

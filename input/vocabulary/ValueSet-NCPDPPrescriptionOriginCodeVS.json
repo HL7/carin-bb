@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "NCPDPPrescriptionOriginCodeVS",
+  "id": "NCPDPPrescriptionOriginCodeVS",
+  "title": "NCPDP Prescription Origin Code",
+  "description": "http://www.ncpdp.org/prescription-origin-code",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCodeVS"
+}

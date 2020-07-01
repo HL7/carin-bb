@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CPTHCPCSProcedureCodeVS",
+  "id": "CPTHCPCSProcedureCodeVS",
+  "title": "AMA CPT and CMS HCPCS Procedure Codes",
+  "description": "AMA CPT and CMS HCPCS Procedure Codes",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/CPTHCPCSProcedureCodeVS"
+}

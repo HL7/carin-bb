@@ -1,0 +1,590 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.us.carin-bb",
+  "url": "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb",
+  "version": "0.1.0",
+  "name": "CARINConsumerDirectedPayerDataExchange",
+  "title": "CARIN Consumer Directed Payer Data Exchange",
+  "status": "active",
+  "publisher": "HL7 Financial Management Working Group",
+  "contact": [
+    {
+      "name": "HL7 Financial Management Working Group",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fm/index.cfm"
+        },
+        {
+          "system": "email",
+          "value": "fm@lists.HL7.org"
+        }
+      ]
+    }
+  ],
+  "description": "CARIN Consumer Directed Payer Data Exchange",
+  "packageId": "hl7.fhir.us.carin-bb",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+      "packageId": "hl7.fhir.us.core",
+      "id": "hl7_fhir_us_core",
+      "version": "3.1.0"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-Coverage"
+        },
+        "name": "CARIN BB Coverage",
+        "description": "CARIN Blue Button Coverage Profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit"
+        },
+        "name": "CARIN BB Explanation Of Benefit",
+        "description": "Abstract parent profile that includes constraints that are common to the four specific ExplanationOfBenefit (EOB) profiles defined in this Implementation Guide.\nAll EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inpatient-Facility"
+        },
+        "name": "CARIN BB ExplanationOfBenefit Inpatient Facility",
+        "description": "The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at a facility as part of an overnight stay. \nThe claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Outpatient-Facility"
+        },
+        "name": "CARIN BB ExplanationOfBenefit Outpatient Facility",
+        "description": "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at a facility that are not part of an overnight stay. \nThe claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy"
+        },
+        "name": "CARIN BB ExplanationOfBenefit Pharmacy",
+        "description": "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies. \nThe claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician"
+        },
+        "name": "CARIN BB ExplanationOfBenefit Professional NonClinician",
+        "description": "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. \nThe claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-Location"
+        },
+        "name": "CARIN BB Location",
+        "description": "CARIN Blue Button Location Profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-Organization"
+        },
+        "name": "CARIN BB Organization",
+        "description": "CARIN Blue Button Organization Profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-Patient"
+        },
+        "name": "CARIN BB Patient",
+        "description": "CARIN Blue Button Patient Profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-Practitioner"
+        },
+        "name": "CARIN BB Practitioner",
+        "description": "CARIN Blue Button Practitioner Profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CARIN-BB-PractitionerRole"
+        },
+        "name": "CARIN BB PractitionerRole",
+        "description": "CARIN Blue Button PractitionerRole Profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AdjudicationDenialReasonVS"
+        },
+        "name": "Adjudication Denial Reason",
+        "description": "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AdjudicationPayerValueCodesVS"
+        },
+        "name": "Payer Adjudication Value Codes",
+        "description": "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AdjudicationValueCodesVS"
+        },
+        "name": "Benefit Payment Status Category",
+        "description": "Benefit Payment Status Category",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AdjustmentAmountCategoryVS"
+        },
+        "name": "Adjustment Amount Category",
+        "description": "Describes the various amount fields used when submitting and adjudicating a claim.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BenefitPaymentStatusCategoryVS"
+        },
+        "name": "Benefit Payment Status Category",
+        "description": "Benefit Payment Status Category",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BenefitPaymentStatusVS"
+        },
+        "name": "Benefit Payment Status",
+        "description": "Indicates the in network or out of network payment status of the claim.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CPTHCPCSModifierCodeVS"
+        },
+        "name": "AMA CPT and CMS HCPCS Modifier Codes",
+        "description": "AMA CPT and CMS HCPCS Modifier Codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CPTHCPCSProcedureCodeVS"
+        },
+        "name": "AMA CPT and CMS HCPCS Procedure Codes",
+        "description": "AMA CPT and CMS HCPCS Procedure Codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ClaimAdjudicationCategoryVS"
+        },
+        "name": "Claim Adjudication Category",
+        "description": "Values for EOB.item.adjudication.category",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ClaimInformationCategoryVS"
+        },
+        "name": "Claim Information Category",
+        "description": "Claim Information Category - Used as the discriminator for supportingInfo",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ClaimPayeeTypeCodeVS"
+        },
+        "name": "Claim Payee Type Code",
+        "description": "Identifies recipient of benefits payable; i.e., provider or subscriber.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ClaimPaymentStatusCodeVS"
+        },
+        "name": "Claim Payment Status Code",
+        "description": "Indicates whether the claim / item was paid or denied.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/FDANDCNCPDPCompoundCodeVS"
+        },
+        "name": "FDA NDC NCPDP Compound Code",
+        "description": "NCPDP field # 407-D7 (National Drug Code (NDC)) or NCPDP field # 406-D6 (Compound Code)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/FDANationalDrugCodeVS"
+        },
+        "name": "FDA National Drug Code (NDC)",
+        "description": "FDA National Drug Code (NDC)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ICD10CMVS"
+        },
+        "name": "ICD-10-CM Diagnosis Codes",
+        "description": "ICD-10-CM Diagnosis Codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ICD10PCSVS"
+        },
+        "name": "ICD-10-PCS",
+        "description": "ICD-10-PCS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/MSDRGVS"
+        },
+        "name": "MS-DRG",
+        "description": "MS-DRG",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NCPDPBrandGenericCodeVS"
+        },
+        "name": "NCPDP Brand Generic Code",
+        "description": "http://www.ncpdp.org/brand-generic-code",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NCPDPDispensedAsWrittenVS"
+        },
+        "name": "NCPDP Dispensed As Written (DAW)",
+        "description": "http://www.ncpdp.org/dispensed-as-written-or-product-selection-code",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NCPDPPrescriptionOriginCodeVS"
+        },
+        "name": "NCPDP Prescription Origin Code",
+        "description": "http://www.ncpdp.org/prescription-origin-code",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NCPDPRejectCodeVS"
+        },
+        "name": "NCPDP Reject Code",
+        "description": "http://www.ncpdp.org/reject-code",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NUBCPatientDischargeStatusVS"
+        },
+        "name": "NUBC Patient Discharge Status",
+        "description": "NUBC Patient Discharge Status",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NUBCPointOfOriginVS"
+        },
+        "name": "NUBC Point of Origin of Admission",
+        "description": "NUBC Point of Origin of Admission",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NUBCPresentOnAdmissionVS"
+        },
+        "name": "NUBC Present On Admission",
+        "description": "NUBC Present On Admission",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NUBCPriorityOfAdmissionnVS"
+        },
+        "name": "NUBC Priority of Admission",
+        "description": "NUBC Priority of Admission",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NUBCRevenueCodeVS"
+        },
+        "name": "NUBC Revenue Code",
+        "description": "NUBC Revenue Code",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NUBCTypeOfBillVS"
+        },
+        "name": "NUBC Type of Bill",
+        "description": "Code System http://www.nubc.org/type-of-bill,",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/OrganizationIdentifierTypeVS"
+        },
+        "name": "Organization Identifier Type",
+        "description": "Organization  Identifier Type",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PatientIdentifierTypeVS"
+        },
+        "name": "Patient Identifier Type",
+        "description": "Patient Identifier Type",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PayerAdjudicationAmountCategoryVS"
+        },
+        "name": "Payer Adjudication Amount Category",
+        "description": "This describes the various amount fields used when payers receive and adjudicate a claim.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PayerInpatientFacilityProviderRoleVSProviderRoleVS"
+        },
+        "name": "Payer - Inpatient Facility Provider Role",
+        "description": "Indicates the role of the provider providing the care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PayerInpatientfacilitydiagnosistype"
+        },
+        "name": "Payer Inpatient Facility Diagnosis Type",
+        "description": "Payer Inpatient Facility Diagnosis Type",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PayerOutpatientFacilityProviderRoleVS"
+        },
+        "name": "Payer - Outpatient Facility Provider Role",
+        "description": "Indicates the role of the provider providing the care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PayerOutpatientfacilitydiagnosistype"
+        },
+        "name": "Payer Outpatient Facility Diagnosis Type",
+        "description": "Payer Outpatient Facility Diagnosis Type",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PayerPharmacyProviderRoleVS"
+        },
+        "name": "Payer - Pharmacy Provider Role",
+        "description": "Indicates the role of the provider providing the care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PayerProfessionalAndNonClinicianProviderRoleVS"
+        },
+        "name": "Payer - Professional and Non-Clinician Provider Role",
+        "description": "Indicates the role of the provider providing the care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PayerProfessionalandnoncliniciandiagnosistype"
+        },
+        "name": "Diagnosis Type -- Professional and Non-Clinician",
+        "description": "Indicates if the professional and non-clinician diagnosis is principal, secondary, or first-listed",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PayerProviderRoleVS"
+        },
+        "name": "Payer Provider Role",
+        "description": "Payer Provider Role",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ProviderNetworkStatusVS"
+        },
+        "name": "Provider Network Status",
+        "description": "Indicates that the Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ClaimAdjudicationCategoryCS"
+        },
+        "name": "Claim Adjudication Category",
+        "description": "Values for EOB.item.adjudication.category",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ClaimInformationCategoryCS"
+        },
+        "name": "Claim Information Category",
+        "description": "Claim Information Category - Used as the discriminator for supportingInfo",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/IdentifierTypeCS"
+        },
+        "name": "Identifier Type",
+        "description": "Identifier Type",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/PayerAdjudicationCategoryCS"
+        },
+        "name": "Payer Adjudication Category",
+        "description": "Payer Adjudication Category",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/PayerDiagnosisTypeCS"
+        },
+        "name": "Payer Diagnosis Type",
+        "description": "Payer Diagnosis Type",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/PayerProviderRoleCS"
+        },
+        "name": "Payer Provider Role",
+        "description": "Payer Provider Role",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/carin-bb-capabilitystatement-consumer-app"
+        },
+        "name": "CARIN BlueButton Consumer App CapabilityStatement",
+        "description": "The Section describes the expected capabilities of the Consumer-Directed Payer Data Exchange Consumer App which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by Consumer-Directed Payer Data Exchange Servers are defined in the [Conformance Requirements for Server](carin-bb-capabilitystatement-healthplan-api.html). Consumer-Directed Payer Data Exchange Consumer Apps have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/carin-bb-capabilitystatement-healthplan-api"
+        },
+        "name": "Consumer-Directed Payer Data Exchange HealthPlan API CapabilityStatement",
+        "description": "This Section describes the expected capabilities of the Consumer-Directed Payer Data Exchange Server actor which is responsible for providing responses to the queries submitted by the Consumer-Directed Payer Data Exchange Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by Consumer-Directed Payer Data Exchange Servers are defined.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/Assemble-ExplanationOfBenefit"
+        },
+        "name": "Assemble ExplanationOfBenefit",
+        "description": "This operation is used to return ExplanationOfBenefit resources related to a patient along with all the reference resources. \n\n The operation takes the optional input parameters: \n  - patient id\n  - start date\n  - end date\n  - document type \n\n and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type \"searchset\" containing [CARIN BB ExplanationOfBenefit and reference resources](https://build.fhir.org/ig/HL7/carin-bb/profiles.html) for the patient. The principle intended use for this operation is to provide a patient with access to their available ExplanationOfBenefit information.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Background.html",
+          "title": "Background",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Use_Case.html",
+          "title": "Use Case",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Authorization_Authentication_and_Registration.html",
+          "title": "Authorization Authentication and Registration",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "search.html",
+          "title": "Search",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Guidance.html",
+          "title": "Guidance",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Notes_To_Developers.html",
+          "title": "Notes To Developers",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Terminology.html",
+          "title": "Terminology",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "STU1"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      },
+      {
+        "code": "path-history",
+        "value": "http://hl7.org/fhir/us/carin-bb/history.html"
+      }
+    ]
+  }
+}

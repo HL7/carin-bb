@@ -1,0 +1,75 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "PayerAdjudicationAmountCategoryVS",
+  "id": "PayerAdjudicationAmountCategoryVS",
+  "title": "Payer Adjudication Amount Category",
+  "description": "This describes the various amount fields used when payers receive and adjudicate a claim.",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerAdjudicationAmountCategoryVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/PayerAdjudicationCategoryCS",
+        "concept": [
+          {
+            "code": "submitted",
+            "display": "Submitted"
+          },
+          {
+            "code": "allowed",
+            "display": "Allowed"
+          },
+          {
+            "code": "deductible",
+            "display": "Deductible"
+          },
+          {
+            "code": "coins",
+            "display": "coins"
+          },
+          {
+            "code": "copay",
+            "display": "copay"
+          },
+          {
+            "code": "noncovered",
+            "display": "noncovered"
+          },
+          {
+            "code": "priorpayerpaid",
+            "display": "priorpayerpaid"
+          },
+          {
+            "code": "payment",
+            "display": "payment"
+          },
+          {
+            "code": "paidbypatient",
+            "display": "paid by patient"
+          },
+          {
+            "code": "paidtopatient",
+            "display": "paid to patient"
+          },
+          {
+            "code": "paidtoprovider",
+            "display": "paid to provider"
+          },
+          {
+            "code": "memberliability",
+            "display": "member liability"
+          },
+          {
+            "code": "discount",
+            "display": "discount"
+          },
+          {
+            "code": "drugcost",
+            "display": "drug cost"
+          }
+        ]
+      }
+    ]
+  }
+}

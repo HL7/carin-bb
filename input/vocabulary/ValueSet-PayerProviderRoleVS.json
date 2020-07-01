@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "PayerProviderRoleVS",
+  "id": "PayerProviderRoleVS",
+  "title": "Payer Provider Role",
+  "description": "Payer Provider Role",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerProviderRoleVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/PayerProviderRoleCS"
+      }
+    ]
+  }
+}

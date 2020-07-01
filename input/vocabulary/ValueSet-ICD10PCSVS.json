@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ICD10PCSVS",
+  "id": "ICD10PCSVS",
+  "title": "ICD-10-PCS",
+  "description": "ICD-10-PCS",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/ICD10PCSVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/icd10pcs"
+      }
+    ]
+  }
+}

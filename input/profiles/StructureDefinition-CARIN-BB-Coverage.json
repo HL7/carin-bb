@@ -1,0 +1,201 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CARIN-BB-Coverage",
+  "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Coverage",
+  "version": "0.1.0",
+  "name": "CARINBBCoverage",
+  "title": "CARIN BB Coverage",
+  "status": "active",
+  "description": "CARIN Blue Button Coverage Profile.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "cdanetv4",
+      "uri": "http://www.cda-adc.ca/en/services/cdanet/",
+      "name": "Canadian Dental Association eclaims standard"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "cpha3pharm",
+      "uri": "http://www.pharmacists.ca/",
+      "name": "Canadian Pharmacy Associaiton eclaims standard"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Coverage",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Coverage",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Coverage",
+        "path": "Coverage"
+      },
+      {
+        "id": "Coverage.meta",
+        "path": "Coverage.meta"
+      },
+      {
+        "id": "Coverage.meta.lastUpdated",
+        "path": "Coverage.meta.lastUpdated",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.meta.profile",
+        "path": "Coverage.meta.profile",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.identifier",
+        "path": "Coverage.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.status",
+        "path": "Coverage.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.subscriber",
+        "path": "Coverage.subscriber",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Coverage.subscriberId",
+        "path": "Coverage.subscriberId",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.beneficiary",
+        "path": "Coverage.beneficiary",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.relationship",
+        "path": "Coverage.relationship",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/subscriber-relationship"
+        }
+      },
+      {
+        "id": "Coverage.payor",
+        "path": "Coverage.payor",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.class",
+        "path": "Coverage.class",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "type.coding.code"
+            }
+          ],
+          "rules": "open",
+          "ordered": false,
+          "description": "Slice based on value pattern"
+        },
+        "min": 2,
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.class.name",
+        "path": "Coverage.class.name",
+        "mustSupport": true
+      },
+      {
+        "id": "Coverage.class:Group",
+        "path": "Coverage.class",
+        "sliceName": "Group",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Coverage.class:Group.type",
+        "path": "Coverage.class.type"
+      },
+      {
+        "id": "Coverage.class:Group.type.coding",
+        "path": "Coverage.class.type.coding"
+      },
+      {
+        "id": "Coverage.class:Group.type.coding.code",
+        "path": "Coverage.class.type.coding.code",
+        "min": 1,
+        "patternCode": "group"
+      },
+      {
+        "id": "Coverage.class:Plan",
+        "path": "Coverage.class",
+        "sliceName": "Plan",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Coverage.class:Plan.type",
+        "path": "Coverage.class.type"
+      },
+      {
+        "id": "Coverage.class:Plan.type.coding",
+        "path": "Coverage.class.type.coding"
+      },
+      {
+        "id": "Coverage.class:Plan.type.coding.code",
+        "path": "Coverage.class.type.coding.code",
+        "min": 1,
+        "patternCode": "plan"
+      }
+    ]
+  }
+}

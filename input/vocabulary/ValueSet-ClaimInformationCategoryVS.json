@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ClaimInformationCategoryVS",
+  "id": "ClaimInformationCategoryVS",
+  "title": "Claim Information Category",
+  "description": "Claim Information Category - Used as the discriminator for supportingInfo",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimInformationCategoryVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimInformationCategoryCS"
+      }
+    ]
+  }
+}

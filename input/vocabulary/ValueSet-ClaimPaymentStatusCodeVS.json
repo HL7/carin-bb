@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ClaimPaymentStatusCodeVS",
+  "id": "ClaimPaymentStatusCodeVS",
+  "title": "Claim Payment Status Code",
+  "description": "Indicates whether the claim / item was paid or denied.",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimPaymentStatusCodeVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/PayerAdjudicationCategoryCS",
+        "concept": [
+          {
+            "code": "paid",
+            "display": "paid"
+          },
+          {
+            "code": "denied",
+            "display": "denied"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,1 +1,0 @@
-This is the description for the MS-DRG value set.

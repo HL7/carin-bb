@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "AdjudicationDenialReasonVS",
+  "id": "AdjudicationDenialReasonVS",
+  "title": "Adjudication Denial Reason",
+  "description": "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/AdjudicationDenialReasonVS"
+}

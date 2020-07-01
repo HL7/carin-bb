@@ -1,0 +1,423 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CARIN-BB-ExplanationOfBenefit",
+  "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit",
+  "version": "0.1.0",
+  "name": "CARINBBExplanationOfBenefit",
+  "title": "CARIN BB Explanation Of Benefit",
+  "status": "active",
+  "description": "Abstract parent profile that includes constraints that are common to the four specific ExplanationOfBenefit (EOB) profiles defined in this Implementation Guide.\nAll EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": true,
+  "type": "ExplanationOfBenefit",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ExplanationOfBenefit",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ExplanationOfBenefit",
+        "path": "ExplanationOfBenefit",
+        "constraint": [
+          {
+            "key": "dom-2",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL NOT contain nested Resources",
+            "expression": "contained.contained.empty()",
+            "xpath": "not(parent::f:contained and f:contained)",
+            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
+          },
+          {
+            "key": "dom-3",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource",
+            "expression": "contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()",
+            "xpath": "not(exists(for $id in f:contained/*/f:id/@value return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))",
+            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
+          },
+          {
+            "key": "dom-4",
+            "severity": "error",
+            "human": "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated",
+            "expression": "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()",
+            "xpath": "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))",
+            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
+          },
+          {
+            "key": "dom-5",
+            "severity": "error",
+            "human": "If a resource is contained in another resource, it SHALL NOT have a security label",
+            "expression": "contained.meta.security.empty()",
+            "xpath": "not(exists(f:contained/*/f:meta/f:security))",
+            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation",
+                "valueMarkdown": "When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."
+              }
+            ],
+            "key": "dom-6",
+            "severity": "warning",
+            "human": "A resource should have narrative for robust management",
+            "expression": "text.`div`.exists()",
+            "xpath": "exists(f:text/h:div)",
+            "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
+          },
+          {
+            "key": "EOB-insurance-focal",
+            "severity": "error",
+            "human": "EOB.insurance:  at most one slice with focal = true",
+            "expression": "insurance.select (focal = true).count() < 2",
+            "source": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit"
+          }
+        ]
+      },
+      {
+        "id": "ExplanationOfBenefit.meta",
+        "path": "ExplanationOfBenefit.meta"
+      },
+      {
+        "id": "ExplanationOfBenefit.meta.lastUpdated",
+        "path": "ExplanationOfBenefit.meta.lastUpdated",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.meta.profile",
+        "path": "ExplanationOfBenefit.meta.profile",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.identifier",
+        "path": "ExplanationOfBenefit.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "path": "type",
+              "type": "value"
+            }
+          ],
+          "rules": "open",
+          "ordered": false,
+          "description": "Slice based on value pattern"
+        },
+        "min": 1
+      },
+      {
+        "id": "ExplanationOfBenefit.identifier.type",
+        "path": "ExplanationOfBenefit.identifier.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.identifier:claimnumber",
+        "path": "ExplanationOfBenefit.identifier",
+        "sliceName": "claimnumber",
+        "short": "Claim Number",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.identifier:claimnumber.type",
+        "path": "ExplanationOfBenefit.identifier.type",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "cn"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.identifier:claimnumber.value",
+        "path": "ExplanationOfBenefit.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.type",
+        "path": "ExplanationOfBenefit.type",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/claim-type"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.use",
+        "path": "ExplanationOfBenefit.use",
+        "patternCode": "claim"
+      },
+      {
+        "id": "ExplanationOfBenefit.patient",
+        "path": "ExplanationOfBenefit.patient",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.billablePeriod",
+        "path": "ExplanationOfBenefit.billablePeriod",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.insurer",
+        "path": "ExplanationOfBenefit.insurer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.provider",
+        "path": "ExplanationOfBenefit.provider",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.related",
+        "path": "ExplanationOfBenefit.related",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.related.relationship",
+        "path": "ExplanationOfBenefit.related.relationship",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.payee",
+        "path": "ExplanationOfBenefit.payee",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.payee.type",
+        "path": "ExplanationOfBenefit.payee.type",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimPayeeTypeCodeVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.payee.party",
+        "path": "ExplanationOfBenefit.payee.party",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-PractitionerRole",
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.careTeam",
+        "path": "ExplanationOfBenefit.careTeam",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.careTeam.provider",
+        "path": "ExplanationOfBenefit.careTeam.provider",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.careTeam.responsible",
+        "path": "ExplanationOfBenefit.careTeam.responsible",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.careTeam.role",
+        "path": "ExplanationOfBenefit.careTeam.role",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo",
+        "path": "ExplanationOfBenefit.supportingInfo",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo.category",
+        "path": "ExplanationOfBenefit.supportingInfo.category",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimInformationCategoryVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo.category.coding",
+        "path": "ExplanationOfBenefit.supportingInfo.category.coding",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimInformationCategoryVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo.code",
+        "path": "ExplanationOfBenefit.supportingInfo.code",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo.timing[x]",
+        "path": "ExplanationOfBenefit.supportingInfo.timing[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.supportingInfo.value[x]",
+        "path": "ExplanationOfBenefit.supportingInfo.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.procedure",
+        "path": "ExplanationOfBenefit.procedure",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.procedure.type",
+        "path": "ExplanationOfBenefit.procedure.type",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.procedure.date",
+        "path": "ExplanationOfBenefit.procedure.date",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.procedure.procedure[x]",
+        "path": "ExplanationOfBenefit.procedure.procedure[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.insurance",
+        "path": "ExplanationOfBenefit.insurance",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.insurance.focal",
+        "path": "ExplanationOfBenefit.insurance.focal",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.insurance.coverage",
+        "path": "ExplanationOfBenefit.insurance.coverage",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Coverage"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.item",
+        "path": "ExplanationOfBenefit.item",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication",
+        "path": "ExplanationOfBenefit.item.adjudication",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.item.adjudication.category",
+        "path": "ExplanationOfBenefit.item.adjudication.category",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimAdjudicationCategoryVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication",
+        "path": "ExplanationOfBenefit.adjudication",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.total",
+        "path": "ExplanationOfBenefit.total"
+      },
+      {
+        "id": "ExplanationOfBenefit.total.category",
+        "path": "ExplanationOfBenefit.total.category",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerAdjudicationAmountCategoryVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.payment",
+        "path": "ExplanationOfBenefit.payment",
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.payment.type",
+        "path": "ExplanationOfBenefit.payment.type",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimPaymentStatusCodeVS"
+        }
+      },
+      {
+        "id": "ExplanationOfBenefit.payment.adjustmentReason",
+        "path": "ExplanationOfBenefit.payment.adjustmentReason",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/AdjudicationDenialReasonVS"
+        }
+      }
+    ]
+  }
+}

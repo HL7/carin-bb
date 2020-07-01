@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ClaimPayeeTypeCodeVS",
+  "id": "ClaimPayeeTypeCodeVS",
+  "title": "Claim Payee Type Code",
+  "description": "Identifies recipient of benefits payable; i.e., provider or subscriber.",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimPayeeTypeCodeVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/PayerAdjudicationCategoryCS",
+        "concept": [
+          {
+            "code": "provider",
+            "display": "provider"
+          },
+          {
+            "code": "subscriber",
+            "display": "subscriber"
+          },
+          {
+            "code": "other",
+            "display": "other"
+          }
+        ]
+      }
+    ]
+  }
+}

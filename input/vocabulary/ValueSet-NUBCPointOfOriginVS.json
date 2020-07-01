@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "NUBCPointOfOriginVS",
+  "id": "NUBCPointOfOriginVS",
+  "title": "NUBC Point of Origin of Admission",
+  "description": "NUBC Point of Origin of Admission",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/NUBCPointOfOriginVS"
+}

@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "PayerOutpatientFacilityProviderRoleVS",
+  "id": "PayerOutpatientFacilityProviderRoleVS",
+  "title": "Payer - Outpatient Facility Provider Role",
+  "description": "Indicates the role of the provider providing the care.",
+  "version": "0.1.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerOutpatientFacilityProviderRoleVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/PayerProviderRoleCS",
+        "concept": [
+          {
+            "code": "pcp",
+            "display": "Primary Care Provider"
+          },
+          {
+            "code": "performing",
+            "display": "Performing Provider"
+          },
+          {
+            "code": "referring",
+            "display": "Referring Provider"
+          }
+        ]
+      }
+    ]
+  }
+}
