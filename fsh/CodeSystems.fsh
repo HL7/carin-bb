@@ -59,12 +59,10 @@ Description: "Payer Diagnosis Type"
 * #external-cause-of-injury "external-cause-of-injury" "external-cause-of-injury"
 * #patient-reason-for-visit "patient-reason-for-visit" "patient-reason-for-visit"
 * #first-listed  "first-listed"  "first-listed"
-* #admitting "admitting" "admitting"
-
 
 CodeSystem: ClaimAdjudicationCategoryCS
 Title: "Claim Adjudication Category"
-Description: "Values for EOB.item.adjudication.category"
+Description: "Values for EOB.item.adjudication.category and total.category"
 * #benefitPaymentStatusCode	"Benefit payment status code"	"Benefit payment status code"
 * #paymentDenialCode	"Payment denial code"	"Payment Denial Code"
 * #submittedamount	"submitted amount"	        "Undefined"
@@ -92,3 +90,13 @@ Description: "Identifier Type"
 * #mr "Medical Record Number" "Medical Record Number"
 * #pt "Patient Account Number" "Patient Account Number"
 * #um "Unique Member ID" "Unique Member ID"
+
+CodeSystem: PayerProviderRoleCS
+Title: "Payer Provider Role"
+Description: "Payer Provider Role"
+* #attending  "attending"  "Attending Provider"
+* #performing "performing"  "Performing Provider"
+* #referring "referring"  "Referring Provider"
+* #pcp "pcp" "Primary Care Provider"
+* #site "site"  "Site Provider"
+* #prescribing "prescribing" "Prescribing Provider"

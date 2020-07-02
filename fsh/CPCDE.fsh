@@ -51,7 +51,8 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
    claimnumber 1..1 MS
 * identifier[claimnumber].value 1..1 MS
 * identifier[claimnumber].type = #cn 
-* identifier[claimnumber] ^short = "Claim Number"* type 1..1 MS
+* identifier[claimnumber] ^short = "Claim Number"
+* type 1..1 MS
 * type from $HL7ClaimTypeVS (required)
 //   * claim MS   - igor sez we discussed removing MS
 * use = #claim 
@@ -104,13 +105,12 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * item 0..* MS
 * item.adjudication MS 
 * item.adjudication.category 1..1 MS
-* item.adjudication.category from ClaimAdjudicationCategoryVS
-* total.category from PayerAdjudicationAmountCategoryVS (extensible)
+* item.adjudication.category from ClaimAdjudicationCategoryVS (required)  // IS THIS RIGHT?
+* total.category from PayerAdjudicationAmountCategoryVS (extensible)    // IS THIS RIGHT?
 * payment MS 
 * payment.adjustmentReason from AdjudicationDenialReasonVS (extensible)
 * payment.type from ClaimPaymentStatusCodeVS (required)
 * payee.type from ClaimPayeeTypeCodeVS (required)
-* supportingInfo.category.coding from ClaimInformationCategoryVS (required)
 
 
 Profile: CARINBBExplanationOfBenefitInpatientFacility
@@ -209,23 +209,22 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication ^slicing.discriminator.type = #value
 * adjudication ^slicing.discriminator.path = "category.coding.code"
 * adjudication.category 1..1
-* adjudication.category from ClaimAdjudicationCategoryVS
+* adjudication.category from AdjudicationPayerValueCodesVS (required)   // IS THIS RIGHT?
 * adjudication contains
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS and
    inoutnetwork 1..1 MS
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * adjudication[inoutnetwork].category.coding.code = #inoutnetwork
-* adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
+* adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 * adjudication[denialreason] ^short = "Denial Reason"
 * adjudication[denialreason].category.coding.code = #denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * adjudication[denialreason].reason 1..1
-* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
+* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
 * careTeam.role from PayerInpatientFacilityProviderRoleVSProviderRoleVS (required)
-* payment.type from  BenefitPaymentStatusVS (required)
 
 
 Profile: CARINBBExplanationOfBenefitOutpatientFacility
@@ -303,19 +302,19 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication ^slicing.discriminator.type = #value
 * adjudication ^slicing.discriminator.path = "category.coding.code"
 * adjudication.category 1..1 MS
-* adjudication.category from ClaimAdjudicationCategoryVS
+* adjudication.category from AdjudicationPayerValueCodesVS (required)    // IS THIS RIGHT?
 * adjudication contains
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS and
    inoutnetwork 1..1 MS
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * adjudication[inoutnetwork].category.coding.code = #inoutnetwork
-* adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
+* adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 * adjudication[denialreason] ^short = "Denial Reason"
 * adjudication[denialreason].category.coding.code = #denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * adjudication[denialreason].reason 1..1 MS
-* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
+* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1 MS
 * careTeam.role from PayerOutpatientFacilityProviderRoleVS (required)
@@ -325,7 +324,6 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis.diagnosis[x] 1..1  MS
 * diagnosis.diagnosis[x] only CodeableConcept 
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
-* payment.type from  BenefitPaymentStatusVS (required)
 
 Profile: CARINBBExplanationOfBenefitPharmacy
 Parent: CARIN-BB-ExplanationOfBenefit
@@ -387,7 +385,7 @@ The claims data is based on submission standards adopted by the Department of He
    inoutnetwork 0..1 MS
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * item.adjudication[inoutnetwork].category.coding.code = #inoutnetwork
-* item.adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
+* item.adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[denialreason].category.coding.code = #denialreason 
 * item.adjudication[denialreason].reason from NCPDPRejectCodeVS
@@ -401,14 +399,14 @@ The claims data is based on submission standards adopted by the Department of He
 * adjudication ^slicing.discriminator.type = #value
 * adjudication ^slicing.discriminator.path = "category.coding.code"
 * adjudication.category 1..1
-* adjudication.category from ClaimAdjudicationCategoryVS
+* adjudication.category from ClaimAdjudicationCategoryVS      // IS THIS RIGHT?
 * adjudication contains
    adjudicationamounttype 0..* MS and
    inoutnetwork 1..1 MS
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * adjudication[inoutnetwork].category.coding.code = #inoutnetwork
-* adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
-* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
+* adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
+* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
 
@@ -476,7 +474,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[adjudicationamounttype].amount 1..1 MS
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * item.adjudication[inoutnetwork].category.coding.code = #inoutnetwork
-* item.adjudication[inoutnetwork].category from BenefitPaymentStatusCategoryVS (required)
+* item.adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 
 
 // Do all references to Organization in this profile need to target CARINBBOrganization?

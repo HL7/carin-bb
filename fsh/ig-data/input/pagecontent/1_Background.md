@@ -8,6 +8,7 @@ The goal of the CARIN Alliance Health Plan Workgroup is to develop an agreed upo
 
 <b>@Amol / Ryan – recommend removing reference to the Argonaut Project as it was not balloted by FM and it speaks to provider data, not payer data.</b>  The <a href="http://argonautwiki.hl7.org/index.php?title=Main_Page">>Argonaut Project </a>was formed in December 2014 as an implementation community comprising leading technology vendors and provider organizations to accelerate the use of FHIR and OAuth in health care information exchange. The Argonaut project is private-sector initiated and funded and works collaboratively with other FHIR initiatives to create open industry Implementation Guides in high priority use cases of importance to patients, providers and the industry as a whole. 
 
+The CARIN health plan workgroup was organized to develop a FHIR‐based API that could be implemented by a consumer‐facing application.
 <h3>Consumer-directed exchange</h3>
 Consumer-directed exchange occurs when a consumer or an individual authorized by a Payer to access another person’s information, invokes their <a href="https://www.govregs.com/regulations/title45_chapterA_part164_subpartE_section164.524">HIPAA Individual Right of Access (45 CFR 164.524) </a> and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.
 
@@ -46,7 +47,7 @@ Payers must educate patients about sharing their health information with third p
 <li>Payers may not limit access to information for a patient through an application that fails to voluntarily attest to specific statements or if an enrollee chooses to disregard warnings about data use.</li>
 </ul>
 The implementation date is January 1, 2021.  Patient education is out of scope for this Implementation Guide.  
-
+<h3>CARIN Alliance Code of Conduct</h3>
 <h3>CARIN BB IG Relation to other IGs</h3>
 <h4>US Core</h4>
 CARIN BB uses the ExplanationOfBenefit Resource as its primary resource.  Reference Resources are Coverage, Patient, Practitioner, PractitionerRole, Organization and Location.
@@ -65,15 +66,21 @@ The SMART App IG provides guidance on how to configure OAuth 2.0 servers to medi
 The SMART App IG also provides guidance on how to handle authentication. If the app needs to authenticate the identity of the end-user, it should include two OpenID Connect scopes: openid and fhirUser. When these scopes are requested, and the request is granted, the app will receive an id_token along with the access token. For details, see the description <a href ="http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html">here</a>. 
 
 <h4>PDEX</h4>
+CMS Guidance defines two sets of data be made available by payers in the Patient Access API: Claims and Encounter Data and Clinical data. They provide links to specific implementations guides for the Patient Access API to provide guidance. Use of these implementation guides is not required, but if used these guides will provide information payers can use to meet the requirements of the policies being finalized.
+This IG defines how Claims and Encounter Data are to be provided; the DaVinci <a href="http://build.fhir.org/ig/HL7/davinci-epdx/">PDEX</a> (Payer Data Exchange) and <a href="http://hl7.org/fhir/us/core/STU3/index.html">US Core</a> Implementation Guides define how Clinical Data is to be provided.
 <h4>RTPBC</h4>
-Using the RTPBC (Real Time Pharmacy Benefit Check), a patient can learn the cost and insurance coverage related to medications they’ve been prescribed.  A person would typically use the RTPBC prior to the dispensing of the prescription and the filing of the claim.  CARIIN BB provides the capability to access how pharmacy (and medical) benefits have been applied by the payer as a result of a claim filed by the pharmacy.  
+Using the <a href="http://build.fhir.org/ig/HL7/carin-rtpbc">RTPBC</a> (Real Time Pharmacy Benefit Check), a patient can learn the cost and insurance coverage related to medications they’ve been prescribed.  A person would typically use the RTPBC prior to the dispensing of the prescription and the filing of the claim.  CARIIN BB provides the capability to access how pharmacy (and medical) benefits have been applied by the payer as a result of a claim filed by the pharmacy.  
 
 <h3>Guide Overview</h3>
 <h4>How to Read This Guide</h4>
 <h4>Actors</h4>
+The following actors are part of the CARIN BB IG:
+<ul>
+<li>CARIN BB Requestor: An application that initiates a data access request to
+ retrieve patient data. This can be thought of as the client in a client-server
+ interaction.</li>
+ <li>CARIN BB Responder: A product that responds to the data access request
+ providing patient data. This can be thought of as the server in a client-server
+ interaction.</li>
+ </ul>
 <h4>Conformance Requirementse</h4>
-<h4>Acknowledgements</h4>
-<h4>Blue Button Trademark Information</h4>
-<h4>Authors</h4>
-Financial Management Workgroup, Payer / Provider Information Exchange Workgroup, Amol Vyas, Pat Taylor.
-Secondary Authors: Mark Roberts, Saul Kravitz, Igor Sirkovich.

@@ -5,14 +5,6 @@ Title: "Claim Information Category"
 Description: "Claim Information Category - Used as the discriminator for supportingInfo" 
 * codes from system ClaimInformationCategoryCS 
 
-CodeSystem: PayerProviderRoleCS
-Title: "Payer Provider Role"
-Description: "Payer Provider Role"
-* #attending  "attending"  "Attending Provider"
-* #performing "performing"  "Performing Provider"
-* #pcp "pcp" "Primary Care Provider"
-* #site "site"  "Site Provider"
-* #prescribing "prescribing" "Prescribing Provider"
 
 ValueSet: PayerProviderRoleVS
 Title: "Payer Provider Role"
@@ -57,16 +49,28 @@ Description: "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication co
 * $HL7AdjudicationCS#deductible  
 * $HL7AdjudicationCS#benefit 
 * PayerAdjudicationCategoryCS#coinsurance "Coinsurance" 
-* PayerAdjudicationCategoryCS#copay "Copay" 
 * PayerAdjudicationCategoryCS#noncovered "Noncovered" 
 * PayerAdjudicationCategoryCS#priorpayerpaid "Prior payer paid" 
-* PayerAdjudicationCategoryCS#payment   "Payment" 
 * PayerAdjudicationCategoryCS#paidbypatient "Paid by patient" 
 * PayerAdjudicationCategoryCS#paidtopatient "Paid to patient"
 * PayerAdjudicationCategoryCS#paidtoprovider "Paid to provider" 
 * PayerAdjudicationCategoryCS#memberliability "Member liability" 
 * PayerAdjudicationCategoryCS#discount "Discount" 
 * PayerAdjudicationCategoryCS#drugcost "Drug cost" 
+
+
+ValueSet: PayerAdjudicationAmountCategoryVS
+Title: "Payer Adjudication Amount Category"
+Description: "This describes the various amount fields used when payers receive and adjudicate a claim."
+* ClaimAdjudicationCategoryCS#submittedamount
+* ClaimAdjudicationCategoryCS#allowedamount
+* ClaimAdjudicationCategoryCS#deductibleamount 
+* ClaimAdjudicationCategoryCS#coinsuranceamount 
+* ClaimAdjudicationCategoryCS#copayamount
+* ClaimAdjudicationCategoryCS#noncoveredamount
+* ClaimAdjudicationCategoryCS#cobamount
+* ClaimAdjudicationCategoryCS#paymentamount
+* ClaimAdjudicationCategoryCS#patientpayamount
 
 
 ValueSet: ProviderNetworkStatusVS
@@ -95,23 +99,7 @@ Description: "Indicates whether the claim / item was paid or denied."
 * PayerAdjudicationCategoryCS#paid "paid"
 * PayerAdjudicationCategoryCS#denied "denied"
 
-ValueSet: PayerAdjudicationAmountCategoryVS
-Title: "Payer Adjudication Amount Category"
-Description: "This describes the various amount fields used when payers receive and adjudicate a claim."
-* PayerAdjudicationCategoryCS#submitted "Submitted" 
-* PayerAdjudicationCategoryCS#allowed "Allowed" 
-* PayerAdjudicationCategoryCS#deductible "Deductible" 
-* PayerAdjudicationCategoryCS#coins "coins" 
-* PayerAdjudicationCategoryCS#copay "copay"
-* PayerAdjudicationCategoryCS#noncovered "noncovered" 
-* PayerAdjudicationCategoryCS#priorpayerpaid "priorpayerpaid" 
-* PayerAdjudicationCategoryCS#payment "payment" 
-* PayerAdjudicationCategoryCS#paidbypatient "paid by patient"  
-* PayerAdjudicationCategoryCS#paidtopatient "paid to patient"  
-* PayerAdjudicationCategoryCS#paidtoprovider "paid to provider" 
-* PayerAdjudicationCategoryCS#memberliability "member liability" 
-* PayerAdjudicationCategoryCS#discount "discount" 
-* PayerAdjudicationCategoryCS#drugcost "drug cost"
+
 
 
 ValueSet: PayerProfessionalandnoncliniciandiagnosistype
@@ -217,7 +205,7 @@ Description: "FDA National Drug Code (NDC)"
 
 ValueSet: ICD10CMVS
 Title: "ICD-10-CM Diagnosis Codes"
-Description: "ICD-10-CM Diagnosis Codes"
+Description: "ICD-10-CM Diagnosis Codes.  ***We need ALL Codes, inactive and inactive.   Current binding is to active codes only***"
 * codes from system $ICD10CM
 
 ValueSet: ICD10PCSVS

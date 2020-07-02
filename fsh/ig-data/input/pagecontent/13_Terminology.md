@@ -77,8 +77,16 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>Indicates whether the claim / item was paid or denied.</td>
 </tr>
 <tr>
+<td><a href="ValueSet-PayerInpatientfacilitydiagnosistype.html">Diagnosis Type -- Inpatient Facility</a></td>
+<td>Payer Inpatient Facility Diagnosis Type</td>
+</tr>
+<tr>
+<td><a href="ValueSet-PayerOutpatientfacilitydiagnosistype.html">Diagnosis Type -- Outpatient Facility</a></td>
+<td>Payer Outpatient Facility Diagnosis Type</td>
+</tr>
+<tr>
 <td><a href="ValueSet-PayerProfessionalandnoncliniciandiagnosistype.html">Diagnosis Type -- Professional and Non-Clinician</a></td>
-<td>Indicates if the professional and non-clinician diagnosis is principal, secondary, or first-listed</td>
+<td>Payer Professional and Non-Clinician Diagnosis Type</td>
 </tr>
 <tr>
 <td><a href="ValueSet-FDANDCNCPDPCompoundCodeVS.html">FDA NDC NCPDP Compound Code</a></td>
@@ -171,14 +179,6 @@ This IG includes value set bindings to code systems that are industry standard c
 <tr>
 <td><a href="ValueSet-AdjudicationPayerValueCodesVS.html">Payer Adjudication Value Codes</a></td>
 <td>As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem</td>
-</tr>
-<tr>
-<td><a href="ValueSet-PayerInpatientfacilitydiagnosistype.html">Payer Inpatient Facility Diagnosis Type</a></td>
-<td>Payer Inpatient Facility Diagnosis Type</td>
-</tr>
-<tr>
-<td><a href="ValueSet-PayerOutpatientfacilitydiagnosstype.html">Payer Outpatient Facility Diagnosis Type</a></td>
-<td>Payer Outpatient Facility Diagnosis Type</td>
 </tr>
 <tr>
 <td><a href="ValueSet-PayerProviderRoleVS.html">Payer Provider Role</a></td>

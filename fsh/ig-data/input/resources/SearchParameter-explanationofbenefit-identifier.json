@@ -12,6 +12,7 @@
     "url": "http://hl7.org/fhir/us/carin/SearchParameter/explanationofbenefit-identifier",
     "version": "0.1.0",
     "name": "ExplanationOfBenefit_Identifier",
+    "derivedFrom": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-identifier",
     "status": "draft",
     "experimental": false,
     "date": "2020-03-31T19:48:45+10:00",
