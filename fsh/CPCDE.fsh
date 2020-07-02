@@ -65,6 +65,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * provider 1..1 MS
 * related 0..* MS
 * related.relationship 1..1 MS
+* diagnosis.diagnosis[x] only CodeableConcept 
 //* related.relationship from RelatedClaimVS (extensible)
 * payee 0..1 MS
 * payee.type 1..1 MS
@@ -126,7 +127,6 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerInpatientfacilitydiagnosistype (required)
 * diagnosis.diagnosis[x] 1..1 MS
-* diagnosis.diagnosis[x] only CodeableConcept 
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
 * diagnosis.onAdmission 0..1 MS
 * diagnosis.onAdmission from NUBCPresentOnAdmissionVS (required)
@@ -322,7 +322,6 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerOutpatientfacilitydiagnosistype (required)
 * diagnosis.diagnosis[x] 1..1  MS
-* diagnosis.diagnosis[x] only CodeableConcept 
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
 
 Profile: CARINBBExplanationOfBenefitPharmacy
@@ -452,7 +451,6 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.type 1..1
 * diagnosis.type from PayerProfessionalandnoncliniciandiagnosistype (required)
 * diagnosis.diagnosis[x] 1..1 
-* diagnosis.diagnosis[x] only CodeableConcept 
 * diagnosis.diagnosis[x] from ICD10CMVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
