@@ -126,8 +126,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerInpatientfacilitydiagnosistype (required)
-* diagnosis.diagnosis[x] 1..1 MS
-* diagnosis.diagnosis[x] from ICD10CMVS (required)
+* diagnosis.diagnosis[x] only CodeableConcept 
+* diagnosis.diagnosisCodeableConcept 1..1 MS
+* diagnosis.diagnosisCodeableConcept from ICD10CMVS (required)
 * diagnosis.onAdmission 0..1 MS
 * diagnosis.onAdmission from NUBCPresentOnAdmissionVS (required)
 * procedure.procedure[x] from ICD10PCSVS (required)
