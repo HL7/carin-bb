@@ -3,7 +3,7 @@ Parent: Coverage
 Id: CARIN-BB-Coverage
 Title: "CARIN BB Coverage"
 Description: "CARIN Blue Button Coverage Profile."
-//* ^jurisdiction.valueCodeableConcept = "US#urn:iso:std:iso:3166"
+// * ^jurisdiction.valueCodeableConcept = "US#urn:iso:std:iso:3166"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * identifier MS 
