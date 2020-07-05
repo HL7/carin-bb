@@ -459,7 +459,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
-* supportingInfo ^slicing.description = "Slice based on value pattern"
+* supportingInfo ^slicing.description = "Slice based on $this pattern"
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    referringnetworkcontractingstatus 0..1 MS and
