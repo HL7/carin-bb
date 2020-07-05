@@ -85,9 +85,8 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * procedure 0..* MS 
 * procedure.type 0..* MS 
 * procedure.date 0..1 MS 
-* procedure.procedure[x] 1..1 MS
 * procedure.procedure[x] only CodeableConcept 
-* procedure.procedureCodeableConcept 1..1 MS
+* procedure.procedure[x] 1..1 MS
 * procedure.procedureCodeableConcept from ICD10PCSVS (required) 
 * insurance 1..* MS
 * insurance.coverage 1..1 MS
@@ -129,12 +128,10 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerInpatientfacilitydiagnosistype (required)
-* diagnosis.diagnosis[x] only CodeableConcept 
-* diagnosis.diagnosisCodeableConcept 1..1 MS
+* diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosisCodeableConcept from ICD10CMVS (required)
 * diagnosis.onAdmission 0..1 MS
 * diagnosis.onAdmission from NUBCPresentOnAdmissionVS (required)
-* procedure.procedure[x] from ICD10PCSVS (required)
 * provider 1..1
 * provider only Reference(CARINBBOrganization)
 * supportingInfo ^slicing.rules = #open
@@ -239,8 +236,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
 * type.coding.code = #institutional
 * diagnosis 1..*
-* diagnosis.diagnosis[x] only CodeableConcept 
-* diagnosis.diagnosisCodeableConcept 1..1 MS
+* diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosisCodeableConcept from ICD10CMVS (required)
 * provider only Reference(CARINBBOrganization)
 * supportingInfo ^slicing.rules = #open
@@ -326,9 +322,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis 1..*
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerOutpatientfacilitydiagnosistype (required)
-* diagnosis.diagnosis[x] 1..1  MS
-* diagnosis.diagnosis[x] only CodeableConcept 
-* diagnosis.diagnosisCodeableConcept 1..1 MS
+* diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosisCodeableConcept from ICD10CMVS (required)
 
 Profile: CARINBBExplanationOfBenefitPharmacy
@@ -456,9 +450,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis 1..*
 * diagnosis.type 1..1
 * diagnosis.type from PayerProfessionalandnoncliniciandiagnosistype (required)
-* diagnosis.diagnosis[x] 1..1 
-* diagnosis.diagnosis[x] only CodeableConcept 
-* diagnosis.diagnosisCodeableConcept 1..1 MS
+* diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosisCodeableConcept from ICD10CMVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
