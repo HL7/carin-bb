@@ -90,6 +90,7 @@ Description: "Identifier Type"
 * #mr "Medical Record Number" "Medical Record Number"
 * #pt "Patient Account Number" "Patient Account Number"
 * #um "Unique Member ID" "Unique Member ID"
+* #cn "Claim Number" "Claim Number"
 
 CodeSystem: PayerProviderRoleCS
 Title: "Payer Provider Role"
@@ -100,3 +101,9 @@ Description: "Payer Provider Role"
 * #pcp "pcp" "Primary Care Provider"
 * #site "site"  "Site Provider"
 * #prescribing "prescribing" "Prescribing Provider"
+
+CodeSystem: CoverageClassCS
+Title: "Coverage Class"
+Description: "Coverage Class"
+* #group "Group" "Undefined"
+* #plan "Plan" "Undefined"
