@@ -216,8 +216,13 @@ Title: "AMA CPT and CMS HCPCS Modifier Codes"
 ValueSet: ClaimAdjudicationCategory
 Title: "Claim Adjudication Category"
 Description: "Values for EOB.item.adjudication.category, as per Igor"
+<<<<<<< HEAD
 * codes from valueset AdjudicationCarinBBValueCodes
 * codes from valueset BenefitPaymentStatus
+=======
+* codes from valueset AdjudicationPayerValueCodesVS
+* codes from valueset BenefitPaymentStatusVS
+>>>>>>> fixed up slicing
 * ClaimAdjudicationCategoryCS#denialreason 
 * ClaimAdjudicationCategoryCS#allowedunits 
 
