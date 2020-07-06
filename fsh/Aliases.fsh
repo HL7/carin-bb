@@ -17,6 +17,7 @@ Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-co
 Alias:   $SubscriberRelationishipVS = http://hl7.org/fhir/ValueSet/subscriber-relationship
 Alias:   $HL7AdjudicationCS = 	http://terminology.hl7.org/CodeSystem/adjudication
 Alias:   $HL7ClaimTypeVS = http://hl7.org/fhir/ValueSet/claim-type
+Alias:   $HL7ClaimTypeCS = http://terminology.hl7.org/CodeSystem/claim-type
 Alias:   $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
 
 // CodeSystem Aliases due to bugs in Sushi 0.12.7 and 0.13.2 ..hopefully resolved and deleted at some point

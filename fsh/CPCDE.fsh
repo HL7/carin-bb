@@ -26,8 +26,8 @@ Description: "CARIN Blue Button Coverage Profile."
 * class contains 
    Group 1..1  MS and
    Plan 1..1 MS
-* class[Group] ^patternIdentifier.type = $CoverageClassCS#group
-* class[Plan] ^patternIdentifier.type = $CoverageClassCS#plan
+* class[Group].type = $CoverageClassCS#group
+* class[Plan].type = $CoverageClassCS#plan
  
 
 Profile: CARINBBExplanationOfBenefit
@@ -53,7 +53,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * identifier[claimnumber] ^patternIdentifier.type = $IdentifierTypeCS#cn 
 * identifier[claimnumber] ^short = "Claim Number"
 * type 1..1 MS
-* type from $HL7ClaimTypeVS (required)
+* type from $HL7ClaimTypeCS (required)
 //   * claim MS   - igor sez we discussed removing MS
 * use = #claim 
 * patient 1..1 MS
@@ -124,7 +124,7 @@ Description: "The profile is used for Explanation of Benefits (EOBs) based on cl
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
 
 * type.coding 1..1 MS
-* type = $HL7ClaimTypeVS#institutional
+* type = $HL7ClaimTypeCS#institutional
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerInpatientfacilitydiagnosistype (required)
@@ -232,7 +232,7 @@ Id: CARIN-BB-ExplanationOfBenefit-Outpatient-Facility
 Title: "CARIN BB ExplanationOfBenefit Outpatient Facility"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at a facility that are not part of an overnight stay. 
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
-* type  = $HL7ClaimTypeVS##institutional
+* type  = $HL7ClaimTypeCS##institutional
 * diagnosis 1..*
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosisCodeableConcept from ICD10CMVS (required)
@@ -329,7 +329,7 @@ Id: CARIN-BB-ExplanationOfBenefit-Pharmacy
 Title: "CARIN BB ExplanationOfBenefit Pharmacy"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies. 
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
-* type = $HL7ClaimTypeVS##pharmacy 
+* type = $HL7ClaimTypeCS##pharmacy 
 * provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
 * supportingInfo ^slicing.discriminator.type = #pattern 
 * supportingInfo ^slicing.discriminator.path = "$path"
@@ -349,20 +349,20 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Billing Network Contracting Status"
 * supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatusVS (required) 
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
-* supportingInfo[brandgenericcode].category = ClaimInformationCategoryCS#brandGenericCode   
+* supportingInfo[brandgenericcode].category = ClaimInformationCategoryCS#brandgenericcode   
 * supportingInfo[brandgenericcode] ^short = "BrandGeneric"
 * supportingInfo[brandgenericcode].code from NCPDPBrandGenericCodeVS (required)
-* supportingInfo[rxoriginCode].category = ClaimInformationCategoryCS#rxOriginCode   
+* supportingInfo[rxoriginCode].category = ClaimInformationCategoryCS#rxorigincode   
 * supportingInfo[rxoriginCode] ^short = "RxOrigin"
 * supportingInfo[rxoriginCode].code from NCPDPPrescriptionOriginCodeVS (required)
 * supportingInfo[refillNum].category = ClaimInformationCategoryCS#refillnum
 * supportingInfo[refillNum] ^short = "RefillNum"
-* supportingInfo[dawcode].category = ClaimInformationCategoryCS#dawCode       
+* supportingInfo[dawcode].category = ClaimInformationCategoryCS#dawcode       
 * supportingInfo[dawcode] ^short = "Dispense As Written" 
 * supportingInfo[dawcode].code from NCPDPDispensedAsWrittenVS (required)
 * supportingInfo[clmrecvddate].category = ClaimInformationCategoryCS#clmrecvddate
 * supportingInfo[clmrecvddate] ^short = "Claim Received Date"
-* supportingInfo[dayssupply].category = ClaimInformationCategoryCS#daysSupply
+* supportingInfo[dayssupply].category = ClaimInformationCategoryCS#dayssupply
 * supportingInfo[dayssupply] ^short = "Days Supply"
 * supportingInfo[dispensingstatus].category = ClaimInformationCategoryCS#dispensingstatus
 //* supportingInfo[dispensingstatus].code from --- shouldn't this be bound to a VS
@@ -413,7 +413,7 @@ Id: CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
 Title: "CARIN BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. 
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
-* type = $HL7ClaimTypeVS##professional
+* type = $HL7ClaimTypeCS##professional
 * provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
 * supportingInfo ^slicing.discriminator.type = #pattern 
 * supportingInfo ^slicing.discriminator.path = "$this"

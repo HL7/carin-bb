@@ -22,6 +22,7 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #refillnum	"refillnum"	                                                "The number fill of the current dispensed supply (0, 1, 2, etc.)."	
 * #rxorigincode	"rxorigincode"	                                            "Whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy"	
 * #brandgenericcode	"brandgenericcode"                                      "Whether the plan adjudicated the claim as a brand or generic drug."	
+* #typeofbill "Type of Bill"                                                "Type of Bill"
 
 CodeSystem: PayerAdjudicationCategoryCS
 Title: "Payer Adjudication Category"
@@ -79,6 +80,7 @@ Description: "Values for EOB.item.adjudication.category and total.category"
 * #outofnetworkbenefitpaymentstatus	"out of network benefit payment status" "Undefined"
 * #otherbenefitpaymentstatus	"other benefit payment status"	"Undefined"
 * #allowedunits	"allowed units" "Undefined"
+* #inoutnetwork "In or Out of Network" "Undefined"
 
 CodeSystem: IdentifierTypeCS
 Title: "Identifier Type"

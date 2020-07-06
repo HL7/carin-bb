@@ -29,6 +29,7 @@ parameters:
   show-inherited-invariants: false
 copyrightYear: 2020+
 releaseLabel: STU1
+jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
 # │  To control the ig.ini using this config, uncomment and set the "template" property.           │
