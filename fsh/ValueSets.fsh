@@ -229,7 +229,7 @@ ValueSet: ClaimAdjudicationCategoryVS
 Title: "Claim Adjudication Category"
 Description: "Values for EOB.item.adjudication.category, as per Igor"
 * codes from valueset AdjudicationPayerValueCodesVS
-* codes from valueset BenefitPaymentStatusCategoryVS
+* codes from valueset BenefitPaymentStatusVS
 * ClaimAdjudicationCategoryCS#denialreason 
 * ClaimAdjudicationCategoryCS#allowedunits 
 
