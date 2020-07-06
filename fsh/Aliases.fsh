@@ -9,8 +9,13 @@ Alias:   $USCoreProviderSpecialty = http://hl7.org/fhir/us/core/ValueSet/us-core
 
 Alias:   $SubscriberRelationiship = http://hl7.org/fhir/ValueSet/subscriber-relationship
 Alias:   $HL7AdjudicationCS = 	http://terminology.hl7.org/CodeSystem/adjudication
+<<<<<<< HEAD
 Alias:   $HL7ClaimType = http://hl7.org/fhir/ValueSet/claim-type
 Alias:   $HL7ClaimTypeCS = http://terminology.hl7.org/CodeSystem/claim-type   
+=======
+Alias:   $HL7ClaimTypeVS = http://hl7.org/fhir/ValueSet/claim-type
+Alias:   $HL7ClaimTypeCS = http://terminology.hl7.org/CodeSystem/claim-type
+>>>>>>> more tweaks to slicing and addressing IG publisher errors
 Alias:   $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
 Alias:   $OrganizationIdentifierTypeCS   =  http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $ClaimPayeeTypeCode = http://hl7.org/fhir/ValueSet/payeetype
