@@ -23,6 +23,7 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #rxorigincode	"rxorigincode"	                                            "Whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy"	
 * #brandgenericcode	"brandgenericcode"                                      "Whether the plan adjudicated the claim as a brand or generic drug."	
 * #typeofbill "Type of Bill"                                                "Type of Bill"
+* #dispensingstatus "Dispensing Status"                                     "Dispensing Status"
 
 CodeSystem: PayerAdjudicationCategoryCS
 Title: "Payer Adjudication Category"
