@@ -101,9 +101,3 @@ Description: "Payer Provider Role"
 * #pcp "pcp" "Primary Care Provider"
 * #site "site"  "Site Provider"
 * #prescribing "prescribing" "Prescribing Provider"
-
-CodeSystem: CoverageClassCS
-Title: "Coverage Class"
-Description: "Coverage Class"
-* #group "Group" "Undefined"
-* #plan "Plan" "Undefined"

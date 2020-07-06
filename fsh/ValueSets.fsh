@@ -140,14 +140,17 @@ Description: "MS-DRG"
 ValueSet: NUBCPatientDischargeStatusVS
 Title: "NUBC Patient Discharge Status"
 Description: "NUBC Patient Discharge Status"
+* codes from system $NUBCPatientDischargeCS
 
 ValueSet: NUBCPriorityOfAdmissionnVS
 Title: "NUBC Priority of Admission"
 Description: "NUBC Priority of Admission"
+* codes from system $NUBCPriorityOfAdmissionOrVisitCS
 
 ValueSet: NUBCPointOfOriginVS
 Title: "NUBC Point of Origin of Admission"
 Description: "NUBC Point of Origin of Admission"
+* codes from system $NUBCPointOfOriginCS
 
 ValueSet: NUBCRevenueCodeVS
 Title: "NUBC Revenue Code"

@@ -26,8 +26,8 @@ Description: "CARIN Blue Button Coverage Profile."
 * class contains 
    Group 1..1  MS and
    Plan 1..1 MS
-* class[Group].type.coding.code = CoverageClassCS#group
-* class[Plan].type.coding.code = CoverageClassCS#plan
+* class[Group] ^patternIdentifier.type = $CoverageClassCS#group
+* class[Plan] ^patternIdentifier.type = $CoverageClassCS#plan
  
 
 Profile: CARINBBExplanationOfBenefit
@@ -50,7 +50,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * identifier contains 
    claimnumber 1..1 MS
 * identifier[claimnumber].value 1..1 MS
-* identifier[claimnumber].type = IdentifierTypeCS#cn 
+* identifier[claimnumber] ^patternIdentifier.type = $IdentifierTypeCS#cn 
 * identifier[claimnumber] ^short = "Claim Number"
 * type 1..1 MS
 * type from $HL7ClaimTypeVS (required)
@@ -78,7 +78,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 //* careTeam.role from PayerProviderRoleVS (required)
 * supportingInfo 0..* MS
 * supportingInfo.category 1..1 MS
-* supportingInfo.category from ClaimInformationCategoryVS
+* supportingInfo.category from ClaimInformationCategoryVS (required)
 * supportingInfo.code 0..1 MS 
 * supportingInfo.timing[x] 0..1 MS 
 * supportingInfo.value[x] 0..1 MS 
@@ -151,7 +151,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
    admtype 0..1 MS and 
    discharge-status 0..1 MS and 
    ms-drg 0..1 MS
-* supportingInfo[billingnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus] ^patternIdentifier.category = $ClaimInformationCategoryCS#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
@@ -417,7 +417,6 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 * type.coding.code = #professional
 * provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
-* supportingInfo.category.coding.system = "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claiminformationcategory" // ClaimInformationCategoryCS 
 * supportingInfo ^slicing.discriminator.type = #pattern 
 * supportingInfo ^slicing.discriminator.path = "$this"
 * supportingInfo ^slicing.rules = #open
@@ -429,19 +428,19 @@ The claims data is based on the professional claim form 1500, submission standar
    performingnetworkcontractingstatus 0..1 MS and
    sitenetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS 
-* supportingInfo[billingnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus] ^patternIdentifier.category = $ClaimInformationCategoryCS#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
-* supportingInfo[billingnetworkcontractingstatus].code 1..1
+* supportingInfo[billingnetworkcontractingstatus].code 1..1 
 * supportingInfo[billingnetworkcontractingstatus].category.coding 1..1
 * supportingInfo[billingnetworkcontractingstatus].category.coding.system 1..1
 * supportingInfo[billingnetworkcontractingstatus].category.coding.code 1..1
-* supportingInfo[referringnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#referringnetworkcontractingstatus
+* supportingInfo[referringnetworkcontractingstatus] ^patternIdentifier.category = $ClaimInformationCategoryCS#referringnetworkcontractingstatus
 * supportingInfo[referringnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[referringnetworkcontractingstatus].code 1..1
-* supportingInfo[performingnetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#performingnetworkcontractingstatus
+* supportingInfo[performingnetworkcontractingstatus] ^patternIdentifier.category = $ClaimInformationCategoryCS#performingnetworkcontractingstatus
 * supportingInfo[performingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[performingnetworkcontractingstatus].code 1..1
-* supportingInfo[sitenetworkcontractingstatus].category.coding.code = ClaimInformationCategoryCS#sitenetworkcontractingstatus
+* supportingInfo[sitenetworkcontractingstatus] ^patternIdentifier.category = $ClaimInformationCategoryCS#sitenetworkcontractingstatus
 * supportingInfo[sitenetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[clmrecvddate].category.coding.code = ClaimInformationCategoryCS#clmrecvddate
 * supportingInfo[clmrecvddate].timing[x] only date 
@@ -496,16 +495,16 @@ Description: "CARIN Blue Button Organization Profile."
    payerid 0..* MS
 * identifier.type from OrganizationIdentifierTypeVS (extensible)
 * identifier[NPI] ^short = "National Provider Identifier"
-* identifier[NPI].type.coding.code = IdentifierTypeCS#npi
+* identifier[NPI] ^patternIdentifier.type = $IdentifierTypeCS#npi 
 * identifier[NPI].type.coding 1..1 MS
 * identifier[NPI].type.coding.code 1..1  MS
 * identifier[TIN] ^short = "Tax ID Number"
-* identifier[TIN].type.coding.code = IdentifierTypeCS#tax
+* identifier[TIN] ^patternIdentifier.type  = $IdentifierTypeCS#tax
 * identifier[TIN].type.coding 1..1 MS
 * identifier[TIN].type.coding.code 1..1  MS
 * identifier[TIN].system = "urn:oid:2.16.840.1.113883.4.4"
 * identifier[payerid] ^short = "Payer ID"
-* identifier[payerid].type.coding.code = IdentifierTypeCS#payerid 
+* identifier[payerid] ^patternIdentifier.type  = $IdentifierTypeCS#payerid 
 * identifier[payerid].type.coding 1..1 MS
 * identifier[payerid].type.coding.code 1..1  MS
 //* identifier[payerid].system = <what>
@@ -528,22 +527,22 @@ Description: "CARIN Blue Button Patient Profile."
    medrecnum 0..* MS and
    uniquememberid 0..* MS and
    patacctnum 0..* MS 
-* identifier[memberid].type.coding.code = IdentifierTypeCS#mb
+* identifier[memberid] ^patternIdentifier.type = $IdentifierTypeCS#mb
 * identifier[memberid] ^short = "Member ID"
 * identifier[memberid].type.coding 1..* MS
 * identifier[memberid].type.coding.code 1..1  MS
-* identifier[medrecnum].type.coding.code = IdentifierTypeCS#mr
+* identifier[medrecnum] ^patternIdentifier.type = $IdentifierTypeCS#mr
 * identifier[medrecnum] ^short = "Medical Record Number"
 * identifier[medrecnum].type.coding 1..* MS
 * identifier[medrecnum].type.coding.code 1..1  MS
-* identifier[patacctnum].type.coding.code = IdentifierTypeCS#pt
+* identifier[patacctnum] ^patternIdentifier.type = $IdentifierTypeCS#pt
 * identifier[patacctnum] ^short = "Patient Account Number"
 * identifier[patacctnum].type.coding 1..* MS
 * identifier[patacctnum].type.coding.code 1..1  MS
 * identifier[uniquememberid] ^short = "Unique Member ID"
 * identifier[uniquememberid].type.coding 1..* MS
 * identifier[uniquememberid].type.coding.code 1..1  MS
-* identifier[uniquememberid].type.coding.code = IdentifierTypeCS#um
+* identifier[uniquememberid] ^patternIdentifier.type = $IdentifierTypeCS#um
 
 
 

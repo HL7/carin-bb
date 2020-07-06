@@ -17,6 +17,11 @@ Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-co
 Alias:   $SubscriberRelationishipVS = http://hl7.org/fhir/ValueSet/subscriber-relationship
 Alias:   $HL7AdjudicationCS = 	http://terminology.hl7.org/CodeSystem/adjudication
 Alias:   $HL7ClaimTypeVS = http://hl7.org/fhir/ValueSet/claim-type
+Alias:   $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
+
+// CodeSystem Aliases due to bugs in Sushi 0.12.7 and 0.13.2 ..hopefully resolved and deleted at some point
+Alias: $IdentifierTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS
+Alias: $ClaimInformationCategoryCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimInformationCategoryCS
 
 // Code Systems
 Alias:   $LNC = http://loinc.org
@@ -27,3 +32,8 @@ Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   $CPT = http://www.ama-assn.org/go/cpt
 Alias:   $ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
 Alias:   $FDANationalDrugCodeCS = http://hl7.org/fhir/sid/ndc
+
+
+Alias:  $NUBCPointOfOriginCS = https://www.nubc.org/point-of-origin-for-admission-or-visit
+Alias: $NUBCPatientDischargeCS   = https://www.nubc.org/patient-discharge
+Alias: $NUBCPriorityOfAdmissionOrVisitCS = https://www.nubc.org/priority-type-of-admission-or-visit
