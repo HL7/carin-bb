@@ -19,7 +19,7 @@ Description: "CARIN Blue Button Coverage Profile."
 * class MS 
 * class.name MS 
 * class ^slicing.discriminator.type = #pattern
-* class ^slicing.discriminator.path = "$this"
+* class ^slicing.discriminator.path = "type"
 * class ^slicing.rules = #open
 * class ^slicing.ordered = false   // can be omitted, since false is the default
 * class ^slicing.description = "Slice based on value pattern"
@@ -92,18 +92,6 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * insurance.coverage 1..1 MS
 * insurance.focal 1..1  MS
 * insurance.coverage only Reference(CARINBBCoverage)
-/*   Eliminate slicing on focal.   Constraint ensures that only one element with focal = true
-* insurance ^slicing.discriminator.type = #pattern
-* insurance ^slicing.discriminator.path = "value:focal"
-* insurance ^slicing.rules = #closed
-* insurance ^slicing.ordered = false   // can be omitted, since false is the default
-* insurance ^slicing.description = "Slice based on value pattern"
-* insurance contains 
-   PrimaryInsurance 0..1 and
-   SecondaryInsurance 0..1
-* insurance[PrimaryInsurance].focal = false
-* insurance[SecondaryInsurance].focal = true 
-*/
 * adjudication.category from ClaimAdjudicationCategoryVS (required)   // per Igor
 * item 0..* MS
 * item.adjudication MS 
@@ -136,9 +124,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * provider only Reference(CARINBBOrganization)
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
-* supportingInfo ^slicing.description = "Slice based on $this pattern"
+* supportingInfo ^slicing.description = "Slice based on value pattern"
 * supportingInfo ^slicing.discriminator.type = #pattern
-* supportingInfo ^slicing.discriminator.path = "$this"
+* supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    attendingnetworkcontractingstatus 0..1 MS and
@@ -186,7 +174,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* item.adjudication ^slicing.description = "Slice based on $this pattern"
+* item.adjudication ^slicing.description = "Slice based on value pattern"
 * item.adjudication ^slicing.discriminator.type = #pattern 
 * item.adjudication ^slicing.discriminator.path = "$this"
 * item.adjudication contains
@@ -205,9 +193,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * item.adjudication[adjudicationamounttype].amount 1..1
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* adjudication ^slicing.description = "Slice based on $this pattern"
+* adjudication ^slicing.description = "Slice based on value pattern"
 * adjudication ^slicing.discriminator.type = #pattern
-* adjudication ^slicing.discriminator.path = "$this"
+* adjudication ^slicing.discriminator.path = "category"
 * adjudication.category 1..1 MS 
 * adjudication contains
    adjudicationamounttype 0..* MS and
@@ -239,9 +227,9 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * provider only Reference(CARINBBOrganization)
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
-* supportingInfo ^slicing.description = "Slice based on $this pattern"
+* supportingInfo ^slicing.description = "Slice based on value pattern"
 * supportingInfo ^slicing.discriminator.type = #pattern
-* supportingInfo ^slicing.discriminator.path = "$this"
+* supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    referringnetworkcontractingstatus 0..1 MS and
@@ -281,7 +269,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on $this pattern"
 * item.adjudication ^slicing.discriminator.type = #pattern
-* item.adjudication ^slicing.discriminator.path = "$this"
+* item.adjudication ^slicing.discriminator.path = "category"
 * item.adjudication contains
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS and
@@ -300,7 +288,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on $this pattern"
 * adjudication ^slicing.discriminator.type = #pattern
-* adjudication ^slicing.discriminator.path = "$this"
+* adjudication ^slicing.discriminator.path = "category"
 * adjudication.category 1..1 MS
 * adjudication contains
    adjudicationamounttype 0..* MS and
@@ -332,10 +320,10 @@ The claims data is based on submission standards adopted by the Department of He
 * type = $HL7ClaimTypeCS##pharmacy 
 * provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
 * supportingInfo ^slicing.discriminator.type = #pattern 
-* supportingInfo ^slicing.discriminator.path = "$path"
+* supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
-* supportingInfo ^slicing.description = "Slice based on $this pattern"
+* supportingInfo ^slicing.description = "Slice based on $value pattern"
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    brandgenericcode 0..1 MS and
@@ -376,7 +364,7 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on $this pattern"
 * item.adjudication ^slicing.discriminator.type = #pattern
-* item.adjudication ^slicing.discriminator.path = "$this"
+* item.adjudication ^slicing.discriminator.path = "category"
 * item.adjudication contains
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS and
@@ -395,7 +383,7 @@ The claims data is based on submission standards adopted by the Department of He
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on $this vpattern"
 * adjudication ^slicing.discriminator.type = #pattern
-* adjudication ^slicing.discriminator.path = "$this"
+* adjudication ^slicing.discriminator.path = "category"
 * adjudication.category 1..1
 * adjudication contains
    adjudicationamounttype 0..* MS and
@@ -416,10 +404,10 @@ The claims data is based on the professional claim form 1500, submission standar
 * type = $HL7ClaimTypeCS##professional
 * provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
 * supportingInfo ^slicing.discriminator.type = #pattern 
-* supportingInfo ^slicing.discriminator.path = "$this"
+* supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
-* supportingInfo ^slicing.description = "Slice based on $this pattern"
+* supportingInfo ^slicing.description = "Slice based on value pattern"
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    referringnetworkcontractingstatus 0..1 MS and
@@ -451,7 +439,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* item.adjudication ^slicing.description = "Slice based on $this pattern"
+* item.adjudication ^slicing.description = "Slice based on value pattern"
 * item.adjudication ^slicing.discriminator.type = #pattern
 * item.adjudication ^slicing.discriminator.path = "category"
 * item.adjudication contains
