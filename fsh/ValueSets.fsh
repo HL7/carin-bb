@@ -40,7 +40,7 @@ Description: "Indicates the role of the provider providing the care."
 * PayerProviderRoleCS#pcp "Primary Care Provider"
 * PayerProviderRoleCS#prescribing "Prescribing Provider"
 
-ValueSet: AdjudicationPayerValueCodesVS
+ValueSet: PayerAdjudicationValueCodesVS
 Title: "Payer Adjudication Value Codes"
 Description: "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem"
 * $HL7AdjudicationCS#submitted 
@@ -228,7 +228,7 @@ Title: "AMA CPT and CMS HCPCS Modifier Codes"
 ValueSet: ClaimAdjudicationCategoryVS
 Title: "Claim Adjudication Category"
 Description: "Values for EOB.item.adjudication.category, as per Igor"
-* codes from valueset AdjudicationPayerValueCodesVS
+* codes from valueset PayerAdjudicationValueCodesVS
 * codes from valueset BenefitPaymentStatusVS
 * ClaimAdjudicationCategoryCS#denialreason 
 * ClaimAdjudicationCategoryCS#allowedunits 

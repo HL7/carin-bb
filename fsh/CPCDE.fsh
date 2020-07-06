@@ -200,7 +200,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
+* item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount 1..1
 * adjudication ^slicing.rules = #closed
@@ -220,7 +220,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * adjudication[denialreason].reason 1..1
-* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS  (required)
+* adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS  (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
 * careTeam.role from PayerInpatientFacilityProviderRoleVSProviderRoleVS (required)
@@ -293,7 +293,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * item.adjudication[denialreason].reason 1..1 MS
-* item.adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
+* item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount 1..1 MS
 * adjudication ^slicing.rules = #closed
@@ -313,7 +313,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * adjudication[denialreason].reason 1..1 MS
-* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS (required)
+* adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1 MS
 * careTeam.role from PayerOutpatientFacilityProviderRoleVS (required)
@@ -388,7 +388,7 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * item.adjudication[denialreason].reason from NCPDPRejectCodeVS
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS
+* item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount 1..1
 * adjudication ^slicing.rules = #closed
@@ -403,7 +403,7 @@ The claims data is based on submission standards adopted by the Department of He
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * adjudication[inoutnetwork].category = ClaimAdjudicationCategoryCS#inoutnetwork
 * adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
-* adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS (required)
+* adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
 
@@ -462,7 +462,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[denialreason].reason from AdjudicationDenialReasonVS
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[denialreason] ^short = "Denial Reason"
-* item.adjudication[adjudicationamounttype].category from AdjudicationPayerValueCodesVS 
+* item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS 
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount 1..1 MS
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
