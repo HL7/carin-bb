@@ -174,12 +174,10 @@ Description: "Patient Identifier Type"
 * IdentifierTypeCS#mr
 * IdentifierTypeCS#pt
 
-ValueSet: OrganizationIdentifierTypeVS
-Title: "Organization Identifier Type"
-Description: "Organization  Identifier Type"
-* IdentifierTypeCS#tax
-* IdentifierTypeCS#npi
-* IdentifierTypeCS#payerid
+//alueSet: OrganizationIdentifierTypeVS
+//Title: "Organization Identifier Type"
+//Description: "Organization  Identifier Type"
+//* codes from system $OrganizationIdentifierTypeCS
 
 ValueSet: NCPDPDispensedAsWrittenVS
 Title: "NCPDP Dispensed As Written (DAW)"

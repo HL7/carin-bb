@@ -6,7 +6,7 @@ The CARIN Blue Button Framework was designed to answer the challenge for health 
 
 The goal of the CARIN Alliance Health Plan Workgroup is to develop an agreed upon set of data fields to exchange with consumers and a FHIR-based implementation guide for health plans to use to implement the API.
 
-<b>@Amol / Ryan – recommend removing reference to the Argonaut Project as it was not balloted by FM and it speaks to provider data, not payer data.</b>  The <a href="http://argonautwiki.hl7.org/index.php?title=Main_Page">>Argonaut Project </a>was formed in December 2014 as an implementation community comprising leading technology vendors and provider organizations to accelerate the use of FHIR and OAuth in health care information exchange. The Argonaut project is private-sector initiated and funded and works collaboratively with other FHIR initiatives to create open industry Implementation Guides in high priority use cases of importance to patients, providers and the industry as a whole. 
+<b>@Ryan – Add some text about FHIR Accelerators here. </b>  
 
 The CARIN health plan workgroup was organized to develop a FHIR‐based API that could be implemented by a consumer‐facing application.
 <h3>Consumer-directed exchange</h3>
@@ -15,7 +15,7 @@ Consumer-directed exchange occurs when a consumer or an individual authorized by
 <h3>CMS Patient Access and Interoperability Rules</h3>
 Although the following is out of scope for this Implementation Guide, it is provided as background.  
 
-Data from health plans is not currently available to a consumer through an open API framework and therefore is not accessible by third party applications authorized by the consumer. 
+Data from health plans is not currently available to a consumer through an open API framework and therefore is not accessible by third party applications authorized by the consumer.
 
 The Centers for Medicare & Medicaid Services (CMS) released March 9, 2020 and finalized May 1, 2020 On May 1st, 2020, its <a href="https://www.federalregister.gov/documents/2020/05/01/2020-05050/medicare-and-medicaid-programs-patient-protection-and-affordable-care-act-interoperability-and">
 Interoperability and Patient Access Final Rule</a> on patient access to health data. Under the final rule, Medicare Advantage (MA) plans, state Medicaid and Children’s Health Insurance Program (CHIP) agencies, Medicaid and CHIP managed care plans, and qualified health plan (QHP) issuers in the federally-facilitated exchanges (FFEs) must meet certain requirements regarding patient access to their health care information, including requirements related to application programming interfaces (APIs).  
@@ -28,7 +28,7 @@ The proposed rule includes four types of information for dissemination:
 <li>Clinical data, including lab results, if available no later than (1) business day after received</li>
 </ul>
 
-The CARIN Alliance defined the Consumer Directed Payer Data Exchange (CARIN BB) Implementation Guide to meet CMS requirements to provide adjudicated claims and encounter data.  Provisioning provider directory data and clinical data are defined by the DaVinci Payer Network (PDex Plan Net) and Payer Data Exchange (PDex) Implementation Guides.  
+The CARIN Alliance defined the Consumer Directed Payer Data Exchange (CARIN BB) Implementation Guide to meet CMS requirements to provide adjudicated claims and encounter data.  Provisioning provider directory data and clinical data are defined by the <a href="http://hl7.org/fhir/us/davinci-pdex-plan-net/">DaVinci Payer Network (PDex Plan Net)</a> and <a href="http://hl7.org/fhir/us/davinci-pdex-plan-net/">ayer Data Exchange (PDex) Implementation Guides.  
 
 The implementation date is January 1, 2021.
 

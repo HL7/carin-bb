@@ -467,17 +467,16 @@ Description: "CARIN Blue Button Organization Profile."
 * meta.lastUpdated 1..1  MS
 * meta.profile 1..* MS
 // Slicing stuff missing?
-* identifier.type from OrganizationIdentifierTypeVS (extensible)
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #pattern 
 * identifier ^slicing.ordered = false   // can be omitted, since false is the default
 * identifier ^slicing.description = "Slice based on $this pattern"
-* identifier.type 1..1 MS
+//* identifier.type 1..1 MS
+//* identifier.type from OrganizationIdentifierTypeVS (extensible)
 * identifier contains 
    TIN 0..* MS and
    payerid 0..* MS
-* identifier.type from OrganizationIdentifierTypeVS (extensible)
 * identifier[NPI] ^short = "National Provider Identifier"
 * identifier[NPI] ^patternIdentifier.type = $IdentifierTypeCS#npi 
 * identifier[NPI].type.coding 1..1 MS
