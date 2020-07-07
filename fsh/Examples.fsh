@@ -85,7 +85,7 @@ Usage: #example
 * identifier[0].type = IdentifierTypeCS#cn
 * identifier[0].value = "AW123412341234123412341234123412"
 * identifier[0].system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
-* type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
+* type = $HL7ClaimTypeCS#institutional
 * type.text = "Inpatient Facility"
 * use = #claim 
 * created = "2019-07-02T00:00:00+00:00"
@@ -114,5 +114,5 @@ Usage: #example
 * total[2].category.text = "Patient Pay Amount"
 * total[2].amount.value = 0.00
 * total[2].amount.currency = #USD
-
+* adjudication[0].category = PayerAdjudicationCategoryCS#other
  

@@ -202,7 +202,6 @@ The claims data is based on the institutional claim format UB-04, submission sta
    denialreason 0..1 MS and
    inoutnetwork 1..1 MS
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
-* adjudication[inoutnetwork].category = ClaimAdjudicationCategoryCS#inoutnetwork
 * adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 * adjudication[denialreason] ^short = "Denial Reason"
 * adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
@@ -295,7 +294,6 @@ The claims data is based on the institutional claim form UB-04, submission stand
    denialreason 0..1 MS and
    inoutnetwork 1..1 MS
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
-* adjudication[inoutnetwork].category = ClaimAdjudicationCategoryCS#inoutnetwork
 * adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 * adjudication[denialreason] ^short = "Denial Reason"
 * adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
@@ -370,7 +368,6 @@ The claims data is based on submission standards adopted by the Department of He
    denialreason 0..1 MS and
    inoutnetwork 0..1 MS
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
-* item.adjudication[inoutnetwork].category = ClaimAdjudicationCategoryCS#inoutnetwork
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
@@ -389,7 +386,6 @@ The claims data is based on submission standards adopted by the Department of He
    adjudicationamounttype 0..* MS and
    inoutnetwork 1..1 MS
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
-* adjudication[inoutnetwork].category = ClaimAdjudicationCategoryCS#inoutnetwork
 * adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 * adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
@@ -437,10 +433,10 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.diagnosisCodeableConcept from ICD10CMVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
-* item.adjudication ^slicing.rules = #closed
+* item.adjudication ^slicing.rules = #open
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on value pattern"
-* item.adjudication ^slicing.discriminator.type = #pattern
+* item.adjudication ^slicing.discriminator.type = #pattern 
 * item.adjudication ^slicing.discriminator.path = "category"
 * item.adjudication contains
    adjudicationamounttype 0..* and
@@ -454,7 +450,6 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount 1..1 MS
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
-* item.adjudication[inoutnetwork].category  = $ClaimAdjudicationCategoryCS#inoutnetwork
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 
 
