@@ -115,4 +115,6 @@ Usage: #example
 * total[2].amount.value = 0.00
 * total[2].amount.currency = #USD
 * adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#other
- 
+* adjudication[inoutnetwork].extension[http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
+* adjudication[denialreason].extension[http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType].valueCodeableConcept = AdjudicationSliceCodesCS#denialreason
+* adjudication[adjudicationamounttype].extension[http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType].valueCodeableConcept = AdjudicationSliceCodesCS#adjudicationamounttype

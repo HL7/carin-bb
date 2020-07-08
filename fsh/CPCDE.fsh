@@ -58,6 +58,8 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * use = #claim 
 * patient 1..1 MS
 * adjudication MS 
+* adjudication.extension contains
+   AdjudicationType named adjudication-type 1..1 MS
 * patient only Reference (CARINBBPatient)
 * billablePeriod 0..1 MS 
 * insurer 1..1 MS
@@ -195,12 +197,17 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
 * adjudication ^slicing.discriminator.type = #pattern
-* adjudication ^slicing.discriminator.path = "category"
+
 * adjudication.category 1..1 MS 
 * adjudication contains
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS and
    inoutnetwork 1..1 MS
+// * adjudication ^slicing.discriminator.path = "category"
+* adjudication ^slicing.discriminator.path = "extension(http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType).valueCodeableConcept"
+* adjudication[inoutnetwork].extension[http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
+* adjudication[denialreason].extension[http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType].valueCodeableConcept = AdjudicationSliceCodesCS#denialreason
+* adjudication[adjudicationamounttype].extension[http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType].valueCodeableConcept = AdjudicationSliceCodesCS#adjudicationamounttype
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 * adjudication[denialreason] ^short = "Denial Reason"
@@ -212,6 +219,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication[adjudicationamounttype].amount 1..1
 * careTeam.role from PayerInpatientFacilityProviderRoleVSProviderRoleVS (required)
 
+Alias: $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
 
 Profile: CARINBBExplanationOfBenefitOutpatientFacility
 Parent: CARIN-BB-ExplanationOfBenefit
@@ -433,7 +441,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.diagnosisCodeableConcept from ICD10CMVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
-* item.adjudication ^slicing.rules = #open
+* item.adjudication ^slicing.rules = #closed 
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on value pattern"
 * item.adjudication ^slicing.discriminator.type = #pattern 
@@ -553,3 +561,24 @@ Invariant:  EOB-insurance-focal
 Description: "EOB.insurance:  at most one slice with focal = true"
 Expression: "insurance.select (focal = true).count() < 2"
 Severity:   #error
+
+//  Proposed Change to Slicing Style 
+Extension: AdjudicationType
+Title: "Adjudication Type"
+Description: "An extension to provide a human-readable description of an organization."
+* value[x] 1..1 MS
+* value[x] only CodeableConcept
+* valueCodeableConcept from AdjudicationSlideCodesVS (required) 
+
+ValueSet: AdjudicationSlideCodesVS
+Title: "Adjudication Slice Codes"
+Description: "Codes used to discriminate slices of adjudication and item.adjudication"
+* codes from system AdjudicationSliceCodesCS
+
+CodeSystem: AdjudicationSliceCodesCS
+Title: "Adjudication Slice Codes"
+Description: "Codes used to discriminate slices of adjudication and item.adjudication"
+* #inoutnetwork "In Out Network" "In Out Network"
+* #denialreaason "Denial Reason" "Denial Reason"
+* #adjudicationamounttype "Ajudication Amount Type" "Ajudication Amount Type" 
+* #allowedunits "Allowed Units" "Allowed Units"
