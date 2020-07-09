@@ -58,8 +58,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * use = #claim 
 * patient 1..1 MS
 * adjudication MS 
-* adjudication.extension contains
-   AdjudicationType named adjudication-type 1..1 MS
+
 * patient only Reference (CARINBBPatient)
 * billablePeriod 0..1 MS 
 * insurer 1..1 MS
@@ -94,6 +93,8 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * insurance.coverage 1..1 MS
 * insurance.focal 1..1  MS
 * insurance.coverage only Reference(CARINBBCoverage)
+* adjudication.extension contains
+   AdjudicationType named adjudication-type 1..1 MS
 * adjudication.category from ClaimAdjudicationCategoryVS (required)   // per Igor
 * item 0..* MS
 * item.adjudication MS 
@@ -204,10 +205,10 @@ The claims data is based on the institutional claim format UB-04, submission sta
    denialreason 0..1 MS and
    inoutnetwork 1..1 MS
 // * adjudication ^slicing.discriminator.path = "category"
-* adjudication ^slicing.discriminator.path = "extension(http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType).valueCodeableConcept"
-* adjudication[inoutnetwork].extension[http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
-* adjudication[denialreason].extension[http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType].valueCodeableConcept = AdjudicationSliceCodesCS#denialreason
-* adjudication[adjudicationamounttype].extension[http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType].valueCodeableConcept = AdjudicationSliceCodesCS#adjudicationamounttype
+* adjudication ^slicing.discriminator.path = "extension(adjudication-type).valueCodeableConcept"
+* adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
+* adjudication[denialreason].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#denialreason
+* adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#adjudicationamounttype
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 * adjudication[denialreason] ^short = "Denial Reason"
