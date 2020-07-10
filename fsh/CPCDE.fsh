@@ -539,6 +539,7 @@ Description: "CARIN Blue Button PractitionerRole Profile."
 * practitioner only Reference(CARINBBPractitioner)
 * location only Reference (CARINBBLocation)
 * code from PayerProviderRoleVS (required)
+* specialty from $NUCCProviderTaxonomy (required)
 // * specialty  - same binding as Plan-Net
 
 // What needs to change?
