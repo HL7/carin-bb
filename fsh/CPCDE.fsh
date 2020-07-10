@@ -140,7 +140,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
    admtype 0..1 MS and 
    discharge-status 0..1 MS and 
    ms-drg 0..1 MS
-* supportingInfo[billingnetworkcontractingstatus].category = $ClaimInformationCategoryCS#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
@@ -205,7 +205,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
    denialreason 0..1 MS and
    inoutnetwork 1..1 MS
 // * adjudication ^slicing.discriminator.path = "category"
-* adjudication ^slicing.discriminator.path = "extension(adjudication-type).valueCodeableConcept"
+* adjudication ^slicing.discriminator.path = "extension(http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
+).valueCodeableConcept"
+// * adjudication ^slicing.discriminator.path = "extension(adjudication-type).valueCodeableConcept"
 * adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
 * adjudication[denialreason].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#denialreason
 * adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#adjudicationamounttype
