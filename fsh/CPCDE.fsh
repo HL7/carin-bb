@@ -143,35 +143,43 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
-* supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
+* supportingInfo[billingnetworkcontractingstatus] ^short = "Claim billing provider network status"
+* supportingInfo[billingnetworkcontractingstatus] ^definition = "Claim billing provider network status"
 * supportingInfo[attendingnetworkcontractingstatus].category = ClaimInformationCategoryCS#attendingnetworkcontractingstatus
 * supportingInfo[attendingnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[attendingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[attendingnetworkcontractingstatus] ^short = "Claim attending provider network status"
+* supportingInfo[attendingnetworkcontractingstatus] ^definition = "Claim attending provider network status"
 * supportingInfo[referringnetworkcontractingstatus].category  = ClaimInformationCategoryCS#referringnetworkcontractingstatus
 * supportingInfo[referringnetworkcontractingstatus].code from ProviderNetworkStatusVS  (required)
 * supportingInfo[referringnetworkcontractingstatus].code 1..1 MS
-* supportingInfo[referringnetworkcontractingstatus] ^short = "Claim attending provider network status"
+* supportingInfo[referringnetworkcontractingstatus] ^short = "Claim referring provider network status"
+* supportingInfo[referringnetworkcontractingstatus] ^definition = "Claim referring provider network status"
 * supportingInfo[clmrecvddate].category  = ClaimInformationCategoryCS#clmrecvddate
 * supportingInfo[clmrecvddate] ^short = "Claim Received Date"
+* supportingInfo[clmrecvddate] ^definition  = "Claim Received Date: The date the claim for payment was received"
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[typeofbill].category  = ClaimInformationCategoryCS#typeofbill
 * supportingInfo[typeofbill] ^short = "Type of Bill"
+* supportingInfo[typeofbill] ^definition = "Type of Bill"
 * supportingInfo[typeofbill].code from NUBCTypeOfBillVS (required)
 * supportingInfo[pointoforigin].category  = ClaimInformationCategoryCS#admsrc
 * supportingInfo[pointoforigin].code from NUBCPointOfOriginVS (required)
 * supportingInfo[pointoforigin] ^short = "Claim Point of Origin for Admission or Visit"
+* supportingInfo[pointoforigin] ^definition = "Claim Point of Origin for Admission or Visit"
 * supportingInfo[admtype].category  = ClaimInformationCategoryCS#admtype
 * supportingInfo[admtype].code from NUBCPriorityOfAdmissionnVS  (required)
 * supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit "
+* supportingInfo[admtype] ^definition = "Claim Priority (Type) of Admission or Visit "
 * supportingInfo[discharge-status].category  = ClaimInformationCategoryCS#discharge-status
 * supportingInfo[discharge-status].code from NUBCPatientDischargeStatusVS   (required)
 * supportingInfo[discharge-status] ^short = "Discharge Status"
+* supportingInfo[discharge-status] ^definition = "Discharge Status"
 * supportingInfo[ms-drg].category  = ClaimInformationCategoryCS#ms-drg
 * supportingInfo[ms-drg].code from MSDRGVS  (required)
-* supportingInfo[ms-drg] ^short = "Claim diagnosis related group (DRG), including the code system, the DRG version and the code value"
-
+* supportingInfo[ms-drg] ^short = "Claim diagnosis related group (DRG)"
+* supportingInfo[ms-drg] ^definition = "Claim diagnosis related group (DRG), including the code system, the DRG version and the code value"
 * item.revenue from NUBCRevenueCodeVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
@@ -206,7 +214,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
    inoutnetwork 1..1 MS
 // * adjudication ^slicing.discriminator.path = "category"
 * adjudication ^slicing.discriminator.path = "extension(http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
-).valueCodeableConcept"
+)"
 // * adjudication ^slicing.discriminator.path = "extension(adjudication-type).valueCodeableConcept"
 * adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
 * adjudication[denialreason].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#denialreason
@@ -275,6 +283,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.revenue from NUBCRevenueCodeVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
+* item.productOrService ^comment = "Put the definition here for item.productOrService here"
+* item  ^comment = "Put the definition here for item"
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on $this pattern"
@@ -355,7 +365,8 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[refillNum].category = ClaimInformationCategoryCS#refillnum
 * supportingInfo[refillNum] ^short = "RefillNum"
 * supportingInfo[dawcode].category = ClaimInformationCategoryCS#dawcode       
-* supportingInfo[dawcode] ^short = "Dispense As Written" 
+* supportingInfo[dawcode] ^short = "Dispense As Written product selection code" 
+* supportingInfo[dawcode] ^definition = "Dispense As Written product selection code: Prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication." 
 * supportingInfo[dawcode].code from NCPDPDispensedAsWrittenVS (required)
 * supportingInfo[clmrecvddate].category = ClaimInformationCategoryCS#clmrecvddate
 * supportingInfo[clmrecvddate] ^short = "Claim Received Date"
