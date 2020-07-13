@@ -213,7 +213,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
    denialreason 0..1 MS and
    inoutnetwork 1..1 MS
 // * adjudication ^slicing.discriminator.path = "category"
-* adjudication ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType').valueCodeableConcept"
+* adjudication ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType').value"
 * adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#inoutnetwork
 * adjudication[denialreason].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#denialreason
 * adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#adjudicationamounttype
@@ -282,7 +282,11 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
 * item.productOrService ^definition = "Put the definition here for item.productOrService here"
+* item.productOrService ^short = "Put the short definition here for item.productOrService here"
+* item.productOrService ^comment = "Put the comment here for item.productOrService here"
 * item  ^definition = "Put the definition here for item"
+* item  ^short = "Put the short definition here for item"
+* item  ^comment = "Put the comment here for item"
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on $this pattern"
