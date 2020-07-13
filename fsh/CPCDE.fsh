@@ -19,15 +19,15 @@ Description: "CARIN Blue Button Coverage Profile."
 * class MS 
 * class.name MS 
 * class ^slicing.discriminator.type = #pattern
-* class ^slicing.discriminator.path = "type"
+* class ^slicing.discriminator.path = "$this"
 * class ^slicing.rules = #open
 * class ^slicing.ordered = false   // can be omitted, since false is the default
 * class ^slicing.description = "Slice based on value pattern"
 * class contains 
    Group 1..1  MS and
    Plan 1..1 MS
-* class[Group].type = $CoverageClassCS#group
-* class[Plan].type = $CoverageClassCS#plan
+* class[Group] ^patternIdentifier.type = $CoverageClassCS#group
+* class[Plan]  ^patternIdentifier.type = $CoverageClassCS#plan
  
 
 Profile: CARINBBExplanationOfBenefit
@@ -205,7 +205,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
-* adjudication ^slicing.discriminator.type = #pattern
+* adjudication ^slicing.discriminator.type = #value
 
 * adjudication.category 1..1 MS 
 * adjudication contains
@@ -213,12 +213,10 @@ The claims data is based on the institutional claim format UB-04, submission sta
    denialreason 0..1 MS and
    inoutnetwork 1..1 MS
 // * adjudication ^slicing.discriminator.path = "category"
-* adjudication ^slicing.discriminator.path = "extension(http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
-)"
-// * adjudication ^slicing.discriminator.path = "extension(adjudication-type).valueCodeableConcept"
-* adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
-* adjudication[denialreason].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#denialreason
-* adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#adjudicationamounttype
+* adjudication ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType').valueCodeableConcept"
+* adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#inoutnetwork
+* adjudication[denialreason].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#denialreason
+* adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#adjudicationamounttype
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 * adjudication[denialreason] ^short = "Denial Reason"
@@ -283,8 +281,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.revenue from NUBCRevenueCodeVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
-* item.productOrService ^comment = "Put the definition here for item.productOrService here"
-* item  ^comment = "Put the definition here for item"
+* item.productOrService ^definition = "Put the definition here for item.productOrService here"
+* item  ^definition = "Put the definition here for item"
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on $this pattern"
@@ -594,6 +592,8 @@ CodeSystem: AdjudicationSliceCodesCS
 Title: "Adjudication Slice Codes"
 Description: "Codes used to discriminate slices of adjudication and item.adjudication"
 * #inoutnetwork "In Out Network" "In Out Network"
-* #denialreaason "Denial Reason" "Denial Reason"
+* #denialreason "Denial Reason" "Denial Reason"
 * #adjudicationamounttype "Ajudication Amount Type" "Ajudication Amount Type" 
 * #allowedunits "Allowed Units" "Allowed Units"
+
+Alias: $AdjudicationSliceCodesCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/AdjudicationSliceCodesCS
