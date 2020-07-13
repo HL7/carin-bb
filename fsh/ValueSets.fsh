@@ -11,20 +11,16 @@ Title: "Payer Provider Role"
 Description: "Payer Provider Role"
 * codes from system PayerProviderRoleCS
 
-ValueSet: PayerInpatientFacilityProviderRoleVSProviderRoleVS
+ValueSet: PayerInstitutionalProviderRoleVS
 Title: "Payer - Inpatient Facility Provider Role"
 Description: "Indicates the role of the provider providing the care."
 * PayerProviderRoleCS#attending "AttendingProvider"
 * PayerProviderRoleCS#pcp "Primary Care Provider"
 * PayerProviderRoleCS#performing "Performing Provider"
 * PayerProviderRoleCS#referring "Referring Provider"
+* PayerProviderRoleCS#supervising "Supervising Provider"
 
-ValueSet: PayerOutpatientFacilityProviderRoleVS
-Title: "Payer - Outpatient Facility Provider Role"
-Description: "Indicates the role of the provider providing the care."
-* PayerProviderRoleCS#pcp "Primary Care Provider"
-* PayerProviderRoleCS#performing "Performing Provider"
-* PayerProviderRoleCS#referring "Referring Provider"
+
 
 ValueSet: PayerProfessionalAndNonClinicianProviderRoleVS
 Title: "Payer - Professional and Non-Clinician Provider Role"

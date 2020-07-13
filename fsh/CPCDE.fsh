@@ -227,7 +227,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS  (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
-* careTeam.role from PayerInpatientFacilityProviderRoleVSProviderRoleVS (required)
+* careTeam.role from PayerInstitutionalProviderRoleVS (required)
 
 Alias: $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
 
@@ -326,7 +326,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1 MS
-* careTeam.role from PayerOutpatientFacilityProviderRoleVS (required)
+* careTeam.role from PayerInstitutionalProviderRoleVS (required)
 * diagnosis 1..*
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerOutpatientfacilitydiagnosistype (required)
