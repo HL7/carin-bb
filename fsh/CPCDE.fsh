@@ -75,6 +75,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * payee.party only Reference(CARINBBPractitionerRole | CARINBBPatient)
 * careTeam 0..* MS 
 * careTeam.provider 1..1 MS
+* careTeam.provider = Reference(  CarinBBPractitioner |  CarinBBOrganization )
 * careTeam.responsible 0..1 MS 
 * careTeam.role 1..1 MS
 //* careTeam.role from PayerProviderRoleVS (required)
@@ -228,6 +229,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
 * careTeam.role from PayerInstitutionalProviderRoleVS (required)
+
 
 Alias: $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
 
