@@ -3,6 +3,7 @@ Parent: Coverage
 Id: CARIN-BB-Coverage
 Title: "CARIN BB Coverage"
 Description: "CARIN Blue Button Coverage Profile."
+//* ^jurisdiction.valueCodeableConcept = "US#urn:iso:std:iso:3166"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * identifier MS 
@@ -19,15 +20,15 @@ Description: "CARIN Blue Button Coverage Profile."
 * class MS 
 * class.name MS 
 * class ^slicing.discriminator.type = #pattern
-* class ^slicing.discriminator.path = "$this"
+* class ^slicing.discriminator.path = "type"
 * class ^slicing.rules = #open
 * class ^slicing.ordered = false   // can be omitted, since false is the default
 * class ^slicing.description = "Slice based on value pattern"
 * class contains 
-   Group 1..1  MS and
-   Plan 1..1 MS
-* class[Group] ^patternIdentifier.type = $CoverageClassCS#group
-* class[Plan]  ^patternIdentifier.type = $CoverageClassCS#plan
+   group 1..1  MS and
+   plan 1..1 MS
+* class[group].type = $CoverageClassCS#group
+* class[plan].type = $CoverageClassCS#plan
  
 
 Profile: CARINBBExplanationOfBenefit
@@ -53,7 +54,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * identifier[claimnumber] ^patternIdentifier.type = $IdentifierTypeCS#cn 
 * identifier[claimnumber] ^short = "Claim Number"
 * type 1..1 MS
-* type from $HL7ClaimTypeCS (required)
+* type from $HL7ClaimTypeVS (required)
 //   * claim MS   - igor sez we discussed removing MS
 * use = #claim 
 * patient 1..1 MS
@@ -494,15 +495,16 @@ Description: "CARIN Blue Button Organization Profile."
 //* identifier.type 1..1 MS
 //* identifier.type from OrganizationIdentifierTypeVS (extensible)
 * identifier contains 
-   TIN 0..* MS and
+   tax 0..* MS and
+   npi 0..* MS and 
    payerid 0..* MS
-* identifier[NPI] ^short = "National Provider Identifier"
-* identifier[NPI] ^patternIdentifier.type = $IdentifierTypeCS#npi 
-* identifier[NPI].type.coding 1..1 MS
-* identifier[TIN] ^short = "Tax ID Number"
-* identifier[TIN] ^patternIdentifier.type  = $IdentifierTypeCS#tax
-* identifier[TIN].type.coding 1..1 MS
-* identifier[TIN].system = "urn:oid:2.16.840.1.113883.4.4"
+* identifier[npi] ^short = "National Provider Identifier"
+* identifier[npi] ^patternIdentifier.type = $IdentifierTypeCS#npi 
+* identifier[npi].type.coding 1..1 MS
+* identifier[tax] ^short = "Tax ID Number"
+* identifier[tax] ^patternIdentifier.type  = $IdentifierTypeCS#tax
+* identifier[tax].type.coding 1..1 MS
+* identifier[tax].system = "urn:oid:2.16.840.1.113883.4.4"
 * identifier[payerid] ^short = "Payer ID"
 * identifier[payerid] ^patternIdentifier.type  = $IdentifierTypeCS#payerid 
 * identifier[payerid].type.coding 1..1 MS
