@@ -115,7 +115,8 @@ Id: CARIN-BB-ExplanationOfBenefit-Inpatient-Facility
 Title: "CARIN BB ExplanationOfBenefit Inpatient Facility"
 Description: "The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at a facility as part of an overnight stay. 
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
-
+* obeys EOB-inst-careTeam-practitioner
+* obeys EOB-inst-careTeam-organization
 * type.coding 1..1 MS
 * type = $HL7ClaimTypeCS#institutional
 * diagnosis 1..* MS
@@ -239,6 +240,8 @@ Id: CARIN-BB-ExplanationOfBenefit-Outpatient-Facility
 Title: "CARIN BB ExplanationOfBenefit Outpatient Facility"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at a facility that are not part of an overnight stay. 
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
+* obeys EOB-inst-careTeam-practitioner
+* obeys EOB-inst-careTeam-organization
 * type  = $HL7ClaimTypeCS#institutional
 * diagnosis 1..*
 * diagnosis.diagnosis[x] 1..1 MS
@@ -582,6 +585,20 @@ Invariant:  EOB-insurance-focal
 Description: "EOB.insurance:  at most one slice with focal = true"
 Expression: "insurance.select (focal = true).count() < 2"
 Severity:   #error
+
+
+Invariant: EOB-inst-careTeam-practitioner
+Description: "Institutional EOB:  Careteam roles refer to a practitioner"
+Expression: "(ExplanationOfBenefit.careTeam.role.coding.code in 
+('attending' | 'pcp' | 'referring' | 'supervising')) implies 
+ExplanationOfBenefit.careTeam.provider.reference.resolve().conformsTo('http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Practitioner')"
+Severity: #error
+
+Invariant: EOB-inst-careTeam-organization
+Description: "Institutional EOB:  Careteam roles refer to a practitioner"
+Expression: "(ExplanationOfBenefit.careTeam.role.coding.code='performing') implies 
+ExplanationOfBenefit.careTeam.provider.reference.resolve().conformsTo('http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization')"
+Severity: #error
 
 //  Proposed Change to Slicing Style 
 Extension: AdjudicationType
