@@ -344,6 +344,8 @@ Id: CARIN-BB-ExplanationOfBenefit-Pharmacy
 Title: "CARIN BB ExplanationOfBenefit Pharmacy"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies. 
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
+* obeys EOB-pharm-careTeam-practitioner
+* obeys EOB-pharm-careTeam-organization
 * type = $HL7ClaimTypeCS#pharmacy 
 * provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
 * supportingInfo ^slicing.discriminator.type = #pattern 
@@ -427,6 +429,8 @@ Id: CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
 Title: "CARIN BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. 
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
+* obeys EOB-prof-careTeam-practitioner
+* obeys EOB-prof-careTeam-organization
 * type = $HL7ClaimTypeCS#professional
 * provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
 * supportingInfo ^slicing.discriminator.type = #pattern 
