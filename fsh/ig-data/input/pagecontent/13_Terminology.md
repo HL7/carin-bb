@@ -53,15 +53,11 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>Codes used to discriminate slices of adjudication and item.adjudication</td>
 </tr>
 <tr>
-<td><a href="ValueSet-AdjustmentAmountCategoryVS.html">Adjustment Amount Category</a></td>
-<td>Describes the various amount fields used when submitting and adjudicating a claim.</td>
-</tr>
-<tr>
 <td><a href="ValueSet-BenefitPaymentStatusVS.html">Benefit Payment Status</a></td>
 <td>Indicates the in network or out of network payment status of the claim.</td>
 </tr>
 <tr>
-<td><a href="ValueSet-BenefitPaymentStatusCategoryVS.html">Benefit Payment Status Category</a></td>
+<td><a href="ValueSet-AdjudicationValueCodesVS.html">Benefit Payment Status Category</a></td>
 <td>Benefit Payment Status Category</td>
 </tr>
 <tr>
@@ -137,24 +133,12 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>NUBC Patient Discharge Status</td>
 </tr>
 <tr>
-<td><a href="ValueSet-NUBCPointOfOriginVS.html">NUBC Point of Origin of Admission</a></td>
-<td>NUBC Point of Origin of Admission</td>
-</tr>
-<tr>
 <td><a href="ValueSet-NUBCPresentOnAdmissionVS.html">NUBC Present On Admission</a></td>
 <td>NUBC Present On Admission</td>
 </tr>
 <tr>
 <td><a href="ValueSet-NUBCPriorityOfAdmissionnVS.html">NUBC Priority of Admission</a></td>
 <td>NUBC Priority of Admission</td>
-</tr>
-<tr>
-<td><a href="ValueSet-NUBCRevenueCodeVS.html">NUBC Revenue Code</a></td>
-<td>NUBC Revenue Code</td>
-</tr>
-<tr>
-<td><a href="ValueSet-NUBCTypeOfBillVS.html">NUBC Type of Bill</a></td>
-<td>Code System http://www.nubc.org/type-of-bill,</td>
 </tr>
 <tr>
 <td><a href="ValueSet-PatientIdentifierTypeVS.html">Patient Identifier Type</a></td>
@@ -204,15 +188,6 @@ This IG includes value set bindings to code systems that are industry standard c
     </tr>
   </thead>
   <tbody> 
-<tr>
-<td><a href="CodeSystem-AdjudicationSliceCodesCS.html">Adjudication Slice Codes</a></td>
-<td>Codes used to discriminate slices of adjudication and item.adjudication</td>
-</tr>
-<tr>
-<td><a href="CodeSystem-CMSPlaceOfServiceCS.html">CMS Place of Service</a></td>
-<td>https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .   
-The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.  
-The code set is owned by CMS and is available for use.</td>
 <tr>
 <td><a href="CodeSystem-AdjudicationSliceCodesCS.html">Adjudication Slice Codes</a></td>
 <td>Codes used to discriminate slices of adjudication and item.adjudication</td>
