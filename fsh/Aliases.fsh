@@ -41,3 +41,7 @@ Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy
 Alias:  $NUBCPointOfOriginForAdmissionOrVisitCS = https://www.nubc.org/point-of-origin-for-admission-or-visit
 Alias: $NUBCPatientDischargeCS   = https://www.nubc.org/patient-discharge
 Alias: $NUBCPriorityOfAdmissionOrVisitCS = https://www.nubc.org/priority-type-of-admission-or-visit
+Alias: $NUBCPointOfOriginForAdmissionOrVisitVS = http://hl7.org/fhir/ValueSet/nubc-admission-source
+Alias: $NUBCRevenueCode = http://hl7.org/fhir/ValueSet/nubc-service-line-revenue
+Alias: $NUBCTypeOfBill = http://hl7.org/fhir/ValueSet/nubc-type-of-bill
+

@@ -143,15 +143,17 @@ Title: "NUBC Priority of Admission"
 Description: "NUBC Priority of Admission"
 * codes from system $NUBCPriorityOfAdmissionOrVisitCS
 
+/*
 ValueSet: NUBCPointOfOriginForAdmissionOrVisitVS
 Title: "NUBC Point of Origin of Admission"
 Description: "NUBC Point of Origin of Admission  https://jira.hl7.org/browse/FHIR-27020"
 * codes from system $NUBCPointOfOriginForAdmissionOrVisitCS
 
+
 ValueSet: NUBCRevenueCodeVS
 Title: "NUBC Revenue Code"
 Description: "NUBC Revenue Code"
-
+*/
 ValueSet: NUBCTypeOfBillVS
 Title: "NUBC Type of Bill"
 Description: "Code System http://www.nubc.org/type-of-bill,"
@@ -227,7 +229,7 @@ Description: "Values for EOB.item.adjudication.category, as per Igor"
 * ClaimAdjudicationCategoryCS#denialreason 
 * ClaimAdjudicationCategoryCS#allowedunits 
 
-ValueSet: AdjustmentAmountCategoryVS
+/* ValueSet: 
 Title: "Adjustment Amount Category"
 Description: "Describes the various amount fields used when submitting and adjudicating a claim."
 * ClaimAdjudicationCategoryCS#submittedamount	"submitted amount"	
@@ -240,12 +242,14 @@ Description: "Describes the various amount fields used when submitting and adjud
 * ClaimAdjudicationCategoryCS#paymentamount	"payment amount"
 * ClaimAdjudicationCategoryCS#patientpayamount	"patient pay amount"
 
+
 ValueSet: BenefitPaymentStatusCategoryVS
 Title: "Benefit Payment Status Category"
 Description: "Benefit Payment Status Category"
 * ClaimAdjudicationCategoryCS#innetworkbenefitpaymentstatus	"in network benefit payment status"
 * ClaimAdjudicationCategoryCS#outofnetworkbenefitpaymentstatus	"out of network benefit payment status"
 * ClaimAdjudicationCategoryCS#otherbenefitpaymentstatus	"other benefit payment status"	
+*/
 
 ValueSet: AdjudicationValueCodesVS
 Title: "Benefit Payment Status Category"

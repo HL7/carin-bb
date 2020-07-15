@@ -49,6 +49,10 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC</td>
 </tr>
 <tr>
+<td><a href="ValueSet-AdjudicationSlideCodesVS.html">Adjudication Slice Codes</a></td>
+<td>Codes used to discriminate slices of adjudication and item.adjudication</td>
+</tr>
+<tr>
 <td><a href="ValueSet-AdjustmentAmountCategoryVS.html">Adjustment Amount Category</a></td>
 <td>Describes the various amount fields used when submitting and adjudicating a claim.</td>
 </tr>
@@ -61,8 +65,12 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>Benefit Payment Status Category</td>
 </tr>
 <tr>
+<td><a href="ValueSet-CMSPlaceOfServiceVS.html">CMS Place of Service</a></td>
+<td>https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .  The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.   The code set is owned by CMS and is available for use.</td>
+</tr>
+<tr>
 <td><a href="ValueSet-ClaimAdjudicationCategoryVS.html">Claim Adjudication Category</a></td>
-<td>Values for EOB.item.adjudication.category</td>
+<td>Values for EOB.item.adjudication.category, as per Igor</td>
 </tr>
 <tr>
 <td><a href="ValueSet-ClaimInformationCategoryVS.html">Claim Information Category</a></td>
@@ -98,7 +106,7 @@ This IG includes value set bindings to code systems that are industry standard c
 </tr>
 <tr>
 <td><a href="ValueSet-ICD10CMVS.html">ICD-10-CM Diagnosis Codes</a></td>
-<td>ICD-10-CM Diagnosis Codes</td>
+<td>ICD-10-CM Diagnosis Codes.  ***We need ALL Codes, inactive and inactive.   Current binding is to active codes only***</td>
 </tr>
 <tr>
 <td><a href="ValueSet-ICD10PCSVS.html">ICD-10-PCS</a></td>
@@ -149,19 +157,11 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>Code System http://www.nubc.org/type-of-bill,</td>
 </tr>
 <tr>
-<td><a href="ValueSet-OrganizationIdentifierTypeVS.html">Organization Identifier Type</a></td>
-<td>Organization  Identifier Type</td>
-</tr>
-<tr>
 <td><a href="ValueSet-PatientIdentifierTypeVS.html">Patient Identifier Type</a></td>
 <td>Patient Identifier Type</td>
 </tr>
 <tr>
-<td><a href="ValueSet-PayerInpatientFacilityProviderRoleVSProviderRoleVS.html">Payer - Inpatient Facility Provider Role</a></td>
-<td>Indicates the role of the provider providing the care.</td>
-</tr>
-<tr>
-<td><a href="ValueSet-PayerOutpatientFacilityProviderRoleVS.html">Payer - Outpatient Facility Provider Role</a></td>
+<td><a href="ValueSet-PayerInstitutionalProviderRoleVS.html">Payer - Inpatient Facility Provider Role</a></td>
 <td>Indicates the role of the provider providing the care.</td>
 </tr>
 <tr>
@@ -177,7 +177,7 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>This describes the various amount fields used when payers receive and adjudicate a claim.</td>
 </tr>
 <tr>
-<td><a href="ValueSet-AdjudicationPayerValueCodesVS.html">Payer Adjudication Value Codes</a></td>
+<td><a href="ValueSet-PayerAdjudicationValueCodesVS.html">Payer Adjudication Value Codes</a></td>
 <td>As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem</td>
 </tr>
 <tr>
@@ -205,8 +205,18 @@ This IG includes value set bindings to code systems that are industry standard c
   </thead>
   <tbody> 
 <tr>
+<td><a href="CodeSystem-AdjudicationSliceCodesCS.html">Adjudication Slice Codes</a></td>
+<td>Codes used to discriminate slices of adjudication and item.adjudication</td>
+</tr>
+<tr>
+<td><a href="CodeSystem-CMSPlaceOfServiceCS.html">CMS Place of Service</a></td>
+<td>https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .   
+The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.  
+The code set is owned by CMS and is available for use.</td>
+</tr>
+<tr>
 <td><a href="CodeSystem-ClaimAdjudicationCategoryCS.html">Claim Adjudication Category</a></td>
-<td>Values for EOB.item.adjudication.category</td>
+<td>Values for EOB.item.adjudication.category and total.category</td>
 </tr>
 <tr>
 <td><a href="CodeSystem-ClaimInformationCategoryCS.html">Claim Information Category</a></td>

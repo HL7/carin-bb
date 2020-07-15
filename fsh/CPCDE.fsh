@@ -165,9 +165,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[typeofbill].category  = ClaimInformationCategoryCS#typeofbill
 * supportingInfo[typeofbill] ^short = "Type of Bill"
 * supportingInfo[typeofbill] ^definition = "Type of Bill"
-* supportingInfo[typeofbill].code from NUBCTypeOfBillVS (required)
+* supportingInfo[typeofbill].code from $NUBCTypeOfBillVS (required)
 * supportingInfo[pointoforigin].category  = ClaimInformationCategoryCS#admsrc
-* supportingInfo[pointoforigin].code from NUBCPointOfOriginForAdmissionOrVisitVS (required)
+* supportingInfo[pointoforigin].code from $NUBCPointOfOriginForAdmissionOrVisitVS (required)
 * supportingInfo[pointoforigin] ^short = "Claim Point of Origin for Admission or Visit"
 * supportingInfo[pointoforigin] ^definition = "Claim Point of Origin for Admission or Visit"
 * supportingInfo[admtype].category  = ClaimInformationCategoryCS#admtype
@@ -273,9 +273,9 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[clmrecvddate].timing[x] 1..1
 * supportingInfo[typeofbill].category = ClaimInformationCategoryCS#typeofbill
 * supportingInfo[typeofbill] ^short = "Type of Bill"
-* supportingInfo[typeofbill].code from NUBCTypeOfBillVS (required)
+* supportingInfo[typeofbill].code from $NUBCTypeOfBillVS (required)
 * supportingInfo[pointoforigin].category = ClaimInformationCategoryCS#admsrc
-* supportingInfo[pointoforigin].code from NUBCPointOfOriginForAdmissionOrVisitVS (required)
+* supportingInfo[pointoforigin].code from $NUBCPointOfOriginForAdmissionOrVisitVS (required)
 * supportingInfo[pointoforigin] ^short = "Claim Point of Origin for Admission or Visit"
 * supportingInfo[admtype].category = ClaimInformationCategoryCS#admtype
 * supportingInfo[admtype].code from NUBCPriorityOfAdmissionnVS  (required)
