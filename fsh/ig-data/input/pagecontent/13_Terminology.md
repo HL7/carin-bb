@@ -213,6 +213,15 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .   
 The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.  
 The code set is owned by CMS and is available for use.</td>
+<tr>
+<td><a href="CodeSystem-AdjudicationSliceCodesCS.html">Adjudication Slice Codes</a></td>
+<td>Codes used to discriminate slices of adjudication and item.adjudication</td>
+</tr>
+<tr>
+<td><a href="CodeSystem-CMSPlaceOfServiceCS.html">CMS Place of Service</a></td>
+<td>https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .   
+The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.  
+The code set is owned by CMS and is available for use.</td>
 </tr>
 <tr>
 <td><a href="CodeSystem-ClaimAdjudicationCategoryCS.html">Claim Adjudication Category</a></td>

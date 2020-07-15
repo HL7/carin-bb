@@ -182,7 +182,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[ms-drg].code from MSDRGVS  (required)
 * supportingInfo[ms-drg] ^short = "Claim diagnosis related group (DRG)"
 * supportingInfo[ms-drg] ^definition = "Claim diagnosis related group (DRG), including the code system, the DRG version and the code value"
-* item.revenue from NUBCRevenueCodeVS (required)
+* item.revenue from $NUBCRevenueCodeVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
 * item.adjudication ^slicing.rules = #closed
@@ -283,7 +283,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[discharge-status].category = ClaimInformationCategoryCS#discharge-status
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[discharge-status].code from NUBCPatientDischargeStatusVS   (required)
-* item.revenue from NUBCRevenueCodeVS (required)
+* item.revenue from $NUBCRevenueCodeVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
 * item.productOrService ^definition = "Put the definition here for item.productOrService here"
