@@ -38,6 +38,6 @@ Alias:   $FDANationalDrugCodeCS = http://hl7.org/fhir/sid/ndc
 Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy
 
 
-Alias:  $NUBCPointOfOriginCS = https://www.nubc.org/point-of-origin-for-admission-or-visit
+Alias:  $NUBCPointOfOriginForAdmissionOrVisitCS = https://www.nubc.org/point-of-origin-for-admission-or-visit
 Alias: $NUBCPatientDischargeCS   = https://www.nubc.org/patient-discharge
 Alias: $NUBCPriorityOfAdmissionOrVisitCS = https://www.nubc.org/priority-type-of-admission-or-visit

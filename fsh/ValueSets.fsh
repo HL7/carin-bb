@@ -143,10 +143,10 @@ Title: "NUBC Priority of Admission"
 Description: "NUBC Priority of Admission"
 * codes from system $NUBCPriorityOfAdmissionOrVisitCS
 
-ValueSet: NUBCPointOfOriginVS
+ValueSet: NUBCPointOfOriginForAdmissionOrVisitVS
 Title: "NUBC Point of Origin of Admission"
-Description: "NUBC Point of Origin of Admission"
-* codes from system $NUBCPointOfOriginCS
+Description: "NUBC Point of Origin of Admission  https://jira.hl7.org/browse/FHIR-27020"
+* codes from system $NUBCPointOfOriginForAdmissionOrVisitCS
 
 ValueSet: NUBCRevenueCodeVS
 Title: "NUBC Revenue Code"
