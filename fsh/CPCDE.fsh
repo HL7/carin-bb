@@ -104,7 +104,6 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * item.adjudication.category from ClaimAdjudicationCategoryVS (required)  // Per Igor
 * total.category from PayerAdjudicationAmountCategoryVS (extensible)    // IS THIS RIGHT?
 * payment MS 
-* payment.adjustmentReason from AdjudicationDenialReasonVS (extensible)
 * payment.type from ClaimPaymentStatusCodeVS (required)
 * payee.type from ClaimPayeeTypeCodeVS (required)
 
@@ -204,7 +203,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * item.adjudication[denialreason].reason 1..1
 * item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
-* item.adjudication[adjudicationamounttype].amount 1..1
+* item.adjudication[adjudicationamounttype].amount MS
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
@@ -230,7 +229,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
 * careTeam.role from PayerInstitutionalProviderRoleVS (required)
-
+* payment.adjustmentReason from AdjudicationDenialReasonVS (extensible)
 
 Alias: $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
 
@@ -311,7 +310,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
-* item.adjudication[adjudicationamounttype].amount 1..1 MS
+* item.adjudication[adjudicationamounttype].amount  MS
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on $this pattern"
@@ -337,6 +336,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis.type from PayerOutpatientfacilitydiagnosistype (required)
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosisCodeableConcept from ICD10CMVS (required)
+* payment.adjustmentReason from AdjudicationDenialReasonVS (extensible)
 
 Profile: CARINBBExplanationOfBenefitPharmacy
 Parent: CARIN-BB-ExplanationOfBenefit
@@ -405,7 +405,7 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication[denialreason].reason 1..1
 * item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
-* item.adjudication[adjudicationamounttype].amount 1..1
+* item.adjudication[adjudicationamounttype].amount  MS
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on $this vpattern"
@@ -463,6 +463,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.diagnosisCodeableConcept from ICD10CMVS (required)
 * item.modifier from CPTHCPCSModifierCodeVS (required)
 * item.productOrService from CPTHCPCSProcedureCodeVS (required)
+* item.locationCodeableConcept from CMSPlaceOfServiceVS (required)
 * item.adjudication ^slicing.rules = #closed 
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on value pattern"
@@ -478,7 +479,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodesVS 
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
-* item.adjudication[adjudicationamounttype].amount 1..1 MS
+* item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatusVS (required)
 
@@ -591,14 +592,41 @@ Invariant: EOB-inst-careTeam-practitioner
 Description: "Institutional EOB:  Careteam roles refer to a practitioner"
 Expression: "(ExplanationOfBenefit.careTeam.role.coding.code in 
 ('attending' | 'pcp' | 'referring' | 'supervising')) implies 
-ExplanationOfBenefit.careTeam.provider.reference.resolve().conformsTo('http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Practitioner')"
+ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
 Severity: #error
 
 Invariant: EOB-inst-careTeam-organization
 Description: "Institutional EOB:  Careteam roles refer to a practitioner"
 Expression: "(ExplanationOfBenefit.careTeam.role.coding.code='performing') implies 
-ExplanationOfBenefit.careTeam.provider.reference.resolve().conformsTo('http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization')"
+ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Organization)"
 Severity: #error
+
+Invariant: EOB-pharm-careTeam-practitioner
+Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
+Expression: "(ExplanationOfBenefit.careTeam.role.coding.code in 
+( 'pcp' | 'prescribing')) implies 
+ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
+Severity: #error
+
+Invariant: EOB-pharm-careTeam-organization
+Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
+Expression: "(ExplanationOfBenefit.careTeam.role.coding.code='performing') implies 
+ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Organization)"
+Severity: #error
+
+Invariant: EOB-prof-careTeam-practitioner
+Description: "Institutional EOB:  Careteam roles refer to a practitioner"
+Expression: "(ExplanationOfBenefit.careTeam.role.coding.code in 
+('performing' | 'pcp' | 'referring' | 'supervising')) implies 
+ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
+Severity: #error
+
+Invariant: EOB-prof-careTeam-organization
+Description: "Institutional EOB:  Careteam roles refer to a practitioner"
+Expression: "(ExplanationOfBenefit.careTeam.role.coding.code='site') implies 
+ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Organization)"
+Severity: #error
+
 
 //  Proposed Change to Slicing Style 
 Extension: AdjudicationType

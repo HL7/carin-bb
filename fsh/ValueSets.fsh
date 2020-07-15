@@ -254,3 +254,7 @@ Description: "Benefit Payment Status Category"
 * ClaimAdjudicationCategoryCS#allowedamount	"allowed amount"
 * ClaimAdjudicationCategoryCS#deductibleamount	"deductible amount"	
 
+ValueSet: CMSPlaceOfServiceVS
+Title: "CMS Place of Service"
+Description: "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .  The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.   The code set is owned by CMS and is available for use."
+* codes from system CMSPlaceOfServiceCS 
