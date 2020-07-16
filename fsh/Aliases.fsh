@@ -4,23 +4,16 @@ Alias:   $USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-cor
 Alias:   $USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 Alias:   $USCorePractitionerRole = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
 Alias:   $USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
-/*Alias:   $USCoreCondition = http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
-Alias:   USCoreMedicationRequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
-Alias:   USCoreProcedure = http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
-Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-Alias:   USCoreBirthSex = http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
-Alias:   USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
-Alias:   USCoreDiagnosticReportLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
-Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
-Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
-*/
+Alias:   $USCoreProviderRole = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role
+Alias:   $USCoreProviderSpecialty = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty
+
 Alias:   $SubscriberRelationiship = http://hl7.org/fhir/ValueSet/subscriber-relationship
 Alias:   $HL7AdjudicationCS = 	http://terminology.hl7.org/CodeSystem/adjudication
 Alias:   $HL7ClaimType = http://hl7.org/fhir/ValueSet/claim-type
 Alias:   $HL7ClaimTypeCS = http://terminology.hl7.org/CodeSystem/claim-type   
 Alias:   $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
 Alias:   $OrganizationIdentifierTypeCS   =  http://terminology.hl7.org/CodeSystem/v2-0203
-
+Alias:   $ClaimPayeeTypeCode = http://hl7.org/fhir/ValueSet/payeetype
 // CodeSystem Aliases due to bugs in Sushi 0.12.7 and 0.13.2 ..hopefully resolved and deleted at some point
 Alias: $IdentifierTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS
 Alias: $ClaimInformationCategoryCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimInformationCategoryCS

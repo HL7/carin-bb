@@ -1,12 +1,13 @@
 CodeSystem: ClaimInformationCategoryCS
 Title: "Claim Information Category"
 Description: "Claim Information Category - Used as the discriminator for supportingInfo" 
-* #billingnetworkcontractingstatus	"billingnetworkcontractingstatus"       "Indicates the in network or out of network payment status of the claim."	
-* #attendingnetworkcontractingstatus "attendingnetworkcontractingstatus"    "Indicates the in network or out of network payment status of the claim."	
-* #sitenetworkcontractingstatus	"sitenetworkcontractingstatus"	            "Indicates the in network or out of network payment status of the claim."	
-* #referringnetworkcontractingstatus	"referringnetworkcontractingstatus"	"Indicates the in network or out of network payment status of the claim."	
-* #performingnetworkcontractingstatus	"performingnetworkcontractingstatus" "Indicates the in network or out of network payment status of the claim."		
-* #prescribingnetworkcontractingstatus	"prescribingnetworkcontractingstatus"	"Indicates the in network or out of network payment status of the claim."	
+* #billingnetworkcontractingstatus	"billingnetworkcontractingstatus"       "Indicates the network  status of the billing physician."	
+* #attendingnetworkcontractingstatus "attendingnetworkcontractingstatus"    "Indicates the network  status of the attending physician."	
+* #sitenetworkcontractingstatus	"sitenetworkcontractingstatus"	            "Indicates the network  status of the site of service."	
+* #referringnetworkcontractingstatus	"referringnetworkcontractingstatus"	"Indicates the network  status of the referring physician."	
+* #performingnetworkcontractingstatus	"performingnetworkcontractingstatus" "Indicates the network  status of the performing physician."		
+* #prescribingnetworkcontractingstatus	"prescribingnetworkcontractingstatus"	"Indicates the network  status of the prescribing physician."	
+* #supervisingnetworkcontractingstatus	"supervisingingnetworkcontractingstatus"	"Indicates the network  status of the supervising physician."	
 * #clmrecvddate	"clmrecvddate"	                                            "The date the claim was received by the payer."	
 * #typeofservice	"typeofservice"	                                        "High level classification of services into logical grouping."	
 * #tob-typeoffacility	"tob-typeoffacility"	                            "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of facility."	
@@ -15,7 +16,7 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #admsrc	"admsrc"                                                        "Identifies the place where the patient was identified as needing admission to a facility. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15)."	
 * #admtype	"admtype"	                                                    "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled."	
 * #discharge-status	"discharge-status"                                      "Patient’s status as of the discharge date for a facility stay."		
-* #ms-drg	"ms-drg"	                                                    "Diagnosis Related Group"	
+* #drg	"drg"	                                                            "Diagnosis Related Group"	
 * #placeofservice	"placeofservice"	                                    "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed."	
 * #dayssupply	"dayssupply"	                                            "Number of days supply of medication dispensed by the pharmacy."	
 * #dawcode	"dawcode"	                                                    "Prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication."	
@@ -23,7 +24,6 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #rxorigincode	"rxorigincode"	                                            "Whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy"	
 * #brandgenericcode	"brandgenericcode"                                      "Whether the plan adjudicated the claim as a brand or generic drug."	
 * #typeofbill "Type of Bill"                                                "Type of Bill"
-* #dispensingstatus "Dispensing Status"                                     "Dispensing Status"
 
 CodeSystem: PayerAdjudicationCategoryCS
 Title: "Payer Adjudication Category"
@@ -106,8 +106,4 @@ Description: "Payer Provider Role"
 * #prescribing "prescribing" "Prescribing Provider"
 * #supervising "supervising" "Supervising"
 
-CodeSystem: CMSPlaceOfServiceCS
-Title: "CMS Place of Service"
-Description: "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .   
-The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.  
-The code set is owned by CMS and is available for use."
+

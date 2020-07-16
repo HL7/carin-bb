@@ -6,10 +6,12 @@ Description: "Claim Information Category - Used as the discriminator for support
 * codes from system ClaimInformationCategoryCS 
 
 
+/*
 ValueSet: PayerProviderRole
 Title: "Payer Provider Role"
 Description: "Payer Provider Role"
 * codes from system PayerProviderRoleCS
+*/
 
 ValueSet: PayerInstitutionalProviderRole
 Title: "Payer - Inpatient Facility Provider Role"
@@ -80,13 +82,6 @@ Title: "Benefit Payment Status"
 Description: "Indicates the in network or out of network payment status of the claim."
 * PayerAdjudicationCategoryCS#in-network "in-network"
 * PayerAdjudicationCategoryCS#out-of-network "out-of-network"
-* PayerAdjudicationCategoryCS#other "other"
-
-ValueSet: ClaimPayeeTypeCode
-Title: "Claim Payee Type Code"
-Description: "Identifies recipient of benefits payable; i.e., provider or subscriber."
-* PayerAdjudicationCategoryCS#provider "provider"
-* PayerAdjudicationCategoryCS#subscriber "subscriber"
 * PayerAdjudicationCategoryCS#other "other"
 
 ValueSet: ClaimPaymentStatusCode
@@ -256,4 +251,4 @@ Description: "Benefit Payment Status Category"
 ValueSet: CMSPlaceOfService
 Title: "CMS Place of Service"
 Description: "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .  The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.   The code set is owned by CMS and is available for use."
-* codes from system CMSPlaceOfServiceCS 
+//* codes from system CMSPlaceOfServiceCS 
