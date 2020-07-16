@@ -14,9 +14,9 @@ Alias:   USCoreDiagnosticReportLab = http://hl7.org/fhir/us/core/StructureDefini
 Alias:   USCoreDocumentReference = http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentReference
 Alias:   USCoreEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 */
-Alias:   $SubscriberRelationishipVS = http://hl7.org/fhir/ValueSet/subscriber-relationship
+Alias:   $SubscriberRelationiship = http://hl7.org/fhir/ValueSet/subscriber-relationship
 Alias:   $HL7AdjudicationCS = 	http://terminology.hl7.org/CodeSystem/adjudication
-Alias:   $HL7ClaimTypeVS = http://hl7.org/fhir/ValueSet/claim-type
+Alias:   $HL7ClaimType = http://hl7.org/fhir/ValueSet/claim-type
 Alias:   $HL7ClaimTypeCS = http://terminology.hl7.org/CodeSystem/claim-type   
 Alias:   $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
 Alias:   $OrganizationIdentifierTypeCS   =  http://terminology.hl7.org/CodeSystem/v2-0203
@@ -41,7 +41,7 @@ Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy
 Alias:  $NUBCPointOfOriginForAdmissionOrVisitCS = https://www.nubc.org/point-of-origin-for-admission-or-visit
 Alias: $NUBCPatientDischargeCS   = https://www.nubc.org/patient-discharge
 Alias: $NUBCPriorityOfAdmissionOrVisitCS = https://www.nubc.org/priority-type-of-admission-or-visit
-Alias: $NUBCPointOfOriginForAdmissionOrVisitVS = http://hl7.org/fhir/ValueSet/nubc-admission-source
-Alias: $NUBCRevenueCodeVS = http://hl7.org/fhir/ValueSet/nubc-service-line-revenue
-Alias: $NUBCTypeOfBillVS = http://hl7.org/fhir/ValueSet/nubc-type-of-bill
+Alias: $NUBCPointOfOriginForAdmissionOrVisit = http://hl7.org/fhir/ValueSet/nubc-admission-source
+Alias: $NUBCRevenueCode = http://hl7.org/fhir/ValueSet/nubc-service-line-revenue
+Alias: $NUBCTypeOfBill = http://hl7.org/fhir/ValueSet/nubc-type-of-bill
 
