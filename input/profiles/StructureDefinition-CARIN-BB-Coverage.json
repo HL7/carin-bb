@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-Coverage",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Coverage",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "CARINBBCoverage",
   "title": "CARIN BB Coverage",
   "status": "active",
@@ -75,7 +75,13 @@
       {
         "id": "Coverage.status",
         "path": "Coverage.status",
+        "short": "Identfies the status of the coverage information (default: active) (133 )",
         "mustSupport": true
+      },
+      {
+        "id": "Coverage.type",
+        "path": "Coverage.type",
+        "short": "Identifies if the coverage is PPO, HMO, POS, etc.   (3 )"
       },
       {
         "id": "Coverage.subscriber",
@@ -92,6 +98,7 @@
       {
         "id": "Coverage.subscriberId",
         "path": "Coverage.subscriberId",
+        "short": "Identifies the subscriber identification (132 )",
         "min": 1,
         "mustSupport": true
       },
@@ -111,6 +118,7 @@
       {
         "id": "Coverage.relationship",
         "path": "Coverage.relationship",
+        "short": "Relationship of the member to the person insured (subscriber). (72 )",
         "min": 1,
         "mustSupport": true,
         "binding": {
@@ -119,8 +127,14 @@
         }
       },
       {
+        "id": "Coverage.period",
+        "path": "Coverage.period",
+        "short": "Date that the contract was terminated or coverage changed (75 )"
+      },
+      {
         "id": "Coverage.payor",
         "path": "Coverage.payor",
+        "short": "Issuer of the Policy (2 )",
         "max": "1",
         "type": [
           {
@@ -138,8 +152,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
-              "path": "type.coding.code"
+              "type": "pattern",
+              "path": "type"
             }
           ],
           "rules": "open",
@@ -155,46 +169,62 @@
         "mustSupport": true
       },
       {
-        "id": "Coverage.class:Group",
+        "id": "Coverage.class:group",
         "path": "Coverage.class",
-        "sliceName": "Group",
+        "sliceName": "group",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Coverage.class:Group.type",
-        "path": "Coverage.class.type"
+        "id": "Coverage.class:group.type",
+        "path": "Coverage.class.type",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "group",
+              "system": "http://terminology.hl7.org/CodeSystem/coverage-class"
+            }
+          ]
+        }
       },
       {
-        "id": "Coverage.class:Group.type.coding",
-        "path": "Coverage.class.type.coding"
+        "id": "Coverage.class:group.value",
+        "path": "Coverage.class.value",
+        "short": "Employer account identifier (134 )"
       },
       {
-        "id": "Coverage.class:Group.type.coding.code",
-        "path": "Coverage.class.type.coding.code",
-        "min": 1,
-        "patternCode": "group"
+        "id": "Coverage.class:group.name",
+        "path": "Coverage.class.name",
+        "short": "Name of the Employer Account (135 )"
       },
       {
-        "id": "Coverage.class:Plan",
+        "id": "Coverage.class:plan",
         "path": "Coverage.class",
-        "sliceName": "Plan",
+        "sliceName": "plan",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Coverage.class:Plan.type",
-        "path": "Coverage.class.type"
+        "id": "Coverage.class:plan.type",
+        "path": "Coverage.class.type",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "plan",
+              "system": "http://terminology.hl7.org/CodeSystem/coverage-class"
+            }
+          ]
+        }
       },
       {
-        "id": "Coverage.class:Plan.type.coding",
-        "path": "Coverage.class.type.coding"
+        "id": "Coverage.class:plan.value",
+        "path": "Coverage.class.value",
+        "short": "Business concept used by a health plan to describe its benefit offerings (154 )"
       },
       {
-        "id": "Coverage.class:Plan.type.coding.code",
-        "path": "Coverage.class.type.coding.code",
-        "min": 1,
-        "patternCode": "plan"
+        "id": "Coverage.class:plan.name",
+        "path": "Coverage.class.name",
+        "short": "Name of the health plan benefit offering assigned to the Plan Identfier (155 )"
       }
     ]
   }

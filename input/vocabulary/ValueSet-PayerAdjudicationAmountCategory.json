@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "PayerAdjudicationAmountCategory",
+  "id": "PayerAdjudicationAmountCategory",
+  "title": "Payer Adjudication Amount Category",
+  "description": "This describes the various amount fields used when payers receive and adjudicate a claim.",
+  "version": "0.2.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerAdjudicationAmountCategory",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimAdjudicationCategoryCS",
+        "concept": [
+          {
+            "code": "submittedamount"
+          },
+          {
+            "code": "allowedamount"
+          },
+          {
+            "code": "deductibleamount"
+          },
+          {
+            "code": "coinsuranceamount"
+          },
+          {
+            "code": "copayamount"
+          },
+          {
+            "code": "noncoveredamount"
+          },
+          {
+            "code": "cobamount"
+          },
+          {
+            "code": "paymentamount"
+          },
+          {
+            "code": "patientpayamount"
+          }
+        ]
+      }
+    ]
+  }
+}

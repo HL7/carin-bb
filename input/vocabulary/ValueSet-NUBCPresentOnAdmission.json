@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "NUBCPresentOnAdmission",
+  "id": "NUBCPresentOnAdmission",
+  "title": "NUBC Present On Admission",
+  "description": "NUBC Present On Admission",
+  "version": "0.2.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/NUBCPresentOnAdmission"
+}

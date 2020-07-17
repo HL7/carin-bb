@@ -5,7 +5,7 @@
   "id": "PayerInpatientfacilitydiagnosistype",
   "title": "Diagnosis Type -- Inpatient Facility",
   "description": "Payer Inpatient Facility Diagnosis Type",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerInpatientfacilitydiagnosistype",
   "compose": {
     "include": [

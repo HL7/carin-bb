@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-Organization",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "CARINBBOrganization",
   "title": "CARIN BB Organization",
   "status": "active",
@@ -59,72 +59,81 @@
       },
       {
         "id": "Organization.identifier",
-        "path": "Organization.identifier"
-      },
-      {
-        "id": "Organization.identifier.type",
-        "path": "Organization.identifier.type",
-        "min": 1,
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/OrganizationIdentifierTypeVS"
+        "path": "Organization.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false,
+          "description": "Slice based on $this pattern"
         }
       },
       {
-        "id": "Organization.identifier:NPI",
+        "id": "Organization.identifier:tax",
         "path": "Organization.identifier",
-        "sliceName": "NPI",
-        "short": "National Provider Identifier"
-      },
-      {
-        "id": "Organization.identifier:NPI.type",
-        "path": "Organization.identifier.type"
-      },
-      {
-        "id": "Organization.identifier:NPI.type.coding",
-        "path": "Organization.identifier.type.coding",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:NPI.type.coding.code",
-        "path": "Organization.identifier.type.coding.code",
-        "min": 1,
-        "patternCode": "npi",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:TIN",
-        "path": "Organization.identifier",
-        "sliceName": "TIN",
+        "sliceName": "tax",
         "short": "Tax ID Number",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "tax",
+                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS"
+              }
+            ]
+          }
+        }
       },
       {
-        "id": "Organization.identifier:TIN.type",
+        "id": "Organization.identifier:tax.type",
         "path": "Organization.identifier.type"
       },
       {
-        "id": "Organization.identifier:TIN.type.coding",
+        "id": "Organization.identifier:tax.type.coding",
         "path": "Organization.identifier.type.coding",
         "min": 1,
         "max": "1",
         "mustSupport": true
       },
       {
-        "id": "Organization.identifier:TIN.type.coding.code",
-        "path": "Organization.identifier.type.coding.code",
-        "min": 1,
-        "patternCode": "tax",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:TIN.system",
+        "id": "Organization.identifier:tax.system",
         "path": "Organization.identifier.system",
         "patternUri": "urn:oid:2.16.840.1.113883.4.4"
+      },
+      {
+        "id": "Organization.identifier:npi",
+        "path": "Organization.identifier",
+        "sliceName": "npi",
+        "short": "National Provider Identifier",
+        "min": 0,
+        "max": "*",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "npi",
+                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "Organization.identifier:npi.type",
+        "path": "Organization.identifier.type"
+      },
+      {
+        "id": "Organization.identifier:npi.type.coding",
+        "path": "Organization.identifier.type.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Organization.identifier:payerid",
@@ -132,7 +141,17 @@
         "sliceName": "payerid",
         "short": "Payer ID",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "payerid",
+                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS"
+              }
+            ]
+          }
+        }
       },
       {
         "id": "Organization.identifier:payerid.type",
@@ -143,13 +162,6 @@
         "path": "Organization.identifier.type.coding",
         "min": 1,
         "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:payerid.type.coding.code",
-        "path": "Organization.identifier.type.coding.code",
-        "min": 1,
-        "patternCode": "payerid",
         "mustSupport": true
       }
     ]

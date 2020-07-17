@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "FDANationalDrugCode",
+  "id": "FDANationalDrugCode",
+  "title": "FDA National Drug Code (NDC)",
+  "description": "FDA National Drug Code (NDC)",
+  "version": "0.2.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/FDANationalDrugCode",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/sid/ndc"
+      }
+    ]
+  }
+}

@@ -6,7 +6,7 @@
   "id": "PayerProviderRoleCS",
   "title": "Payer Provider Role",
   "description": "Payer Provider Role",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "url": "http://hl7.org/fhir/us/carin-bb/CodeSystem/PayerProviderRoleCS",
   "concept": [
     {
@@ -18,6 +18,11 @@
       "code": "performing",
       "display": "performing",
       "definition": "Performing Provider"
+    },
+    {
+      "code": "referring",
+      "display": "referring",
+      "definition": "Referring Provider"
     },
     {
       "code": "pcp",
@@ -33,6 +38,11 @@
       "code": "prescribing",
       "display": "prescribing",
       "definition": "Prescribing Provider"
+    },
+    {
+      "code": "supervising",
+      "display": "supervising",
+      "definition": "Supervising"
     }
   ]
 }

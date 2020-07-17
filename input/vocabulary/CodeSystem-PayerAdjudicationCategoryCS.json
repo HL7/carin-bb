@@ -6,7 +6,7 @@
   "id": "PayerAdjudicationCategoryCS",
   "title": "Payer Adjudication Category",
   "description": "Payer Adjudication Category",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "url": "http://hl7.org/fhir/us/carin-bb/CodeSystem/PayerAdjudicationCategoryCS",
   "concept": [
     {

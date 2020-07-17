@@ -5,7 +5,7 @@
   "id": "PayerOutpatientfacilitydiagnosistype",
   "title": "Diagnosis Type -- Outpatient Facility",
   "description": "Payer Outpatient Facility Diagnosis Type",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerOutpatientfacilitydiagnosistype",
   "compose": {
     "include": [

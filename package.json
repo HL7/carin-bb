@@ -1,6 +1,6 @@
 {
   "name": "hl7.fhir.us.carin-bb",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "canonical": "http://hl7.org/fhir/us/carin-bb",
   "url": "http://hl7.org/fhir/us/carin-bb",
   "title": "CARIN Consumer Directed Payer Data Exchange",

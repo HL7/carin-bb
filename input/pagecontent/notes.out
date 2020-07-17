@@ -1,0 +1,7327 @@
+>>> Coverage
+* payor ^short = "Issuer of the Policy (2 )"
+* type ^short = "Identifies if the coverage is PPO, HMO, POS, etc.   (3 )"
+* relationship ^short = "Relationship of the member to the person insured (subscriber). (72 )"
+* period ^short = "Date that the contract became effective (74 )"
+* period ^short = "Date that the contract was terminated or coverage changed (75 )"
+* subscriberId ^short = "Identifies the subscriber identification (132 )"
+* status ^short = "Identfies the status of the coverage information (default: active) (133 )"
+* class.value ^short = "Employer account identifier (134 )"
+* class.name ^short = "Name of the Employer Account (135 )"
+* class.value ^short = "Business concept used by a health plan to describe its benefit offerings (154 )"
+* class.name ^short = "Name of the health plan benefit offering assigned to the Plan Identfier (155 )"
+<tr>
+<td>
+2
+</td>
+<td>
+Payer Identifier
+</td>
+<td>
+Issuer of the Policy
+</td>
+<td>
+payor
+</td>
+<td>
+
+</td>
+<td>
+Issuer of the policy
+</td>
+<td>
+Reference(Organization)
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+Coverage type
+</td>
+<td>
+Identifies if the coverage is PPO, HMO, POS, etc.  
+</td>
+<td>
+type
+</td>
+<td>
+
+</td>
+<td>
+Coverage Type and Self-Pay Codes (Preferred)
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+72
+</td>
+<td>
+Relationship to subscriber
+</td>
+<td>
+Relationship of the member to the person insured (subscriber).
+</td>
+<td>
+relationship
+</td>
+<td>
+
+</td>
+<td>
+Beneficiary relationship to the subscriber
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+74
+</td>
+<td>
+Start date
+</td>
+<td>
+Date that the contract became effective
+</td>
+<td>
+period
+</td>
+<td>
+
+</td>
+<td>
+Coverage start and end dates
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+75
+</td>
+<td>
+End date
+</td>
+<td>
+Date that the contract was terminated or coverage changed
+</td>
+<td>
+period
+</td>
+<td>
+
+</td>
+<td>
+Coverage start and end dates
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+132
+</td>
+<td>
+Subscriber id
+</td>
+<td>
+Identifies the subscriber identification
+</td>
+<td>
+subscriberId
+</td>
+<td>
+
+</td>
+<td>
+ID assigned to the subscriber
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+133
+</td>
+<td>
+Coverage status
+</td>
+<td>
+Identfies the status of the coverage information (default: active)
+</td>
+<td>
+status
+</td>
+<td>
+
+</td>
+<td>
+active | cancelled | draft | entered-in-error
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+134
+</td>
+<td>
+Group id
+</td>
+<td>
+Employer account identifier
+</td>
+<td>
+class
+</td>
+<td>
+value
+</td>
+<td>
+Value associated with the type
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+135
+</td>
+<td>
+Group name
+</td>
+<td>
+Name of the Employer Account
+</td>
+<td>
+class
+</td>
+<td>
+name
+</td>
+<td>
+Human readable description of the type and value
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+154
+</td>
+<td>
+Plan Identifier
+</td>
+<td>
+Business concept used by a health plan to describe its benefit offerings
+</td>
+<td>
+class
+</td>
+<td>
+value
+</td>
+<td>
+Value associated with the type
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+155
+</td>
+<td>
+Plan Name
+</td>
+<td>
+Name of the health plan benefit offering assigned to the Plan Identfier
+</td>
+<td>
+class
+</td>
+<td>
+name
+</td>
+<td>
+Human readable description of the type and value
+</td>
+<td>
+
+</td>
+</tr>
+>>> Patient
+* birthDate ^short = "Date of birth of the member (70 )"
+* gender ^short = "Gender of the member (71 )"
+* deceased.deceasedDateTime ^short = "Date of death of the member (124 )"
+* address ^short = "The county for the member's primary address (125 )"
+* address ^short = "The state for the member's primary address (126 )"
+* address ^short = "The country for the member's primary address (127 )"
+* extension ^short = "The race of the member (128 )"
+* extension ^short = "The ethnicity of the member (129 )"
+* name ^short = "The name of the patient (130 )"
+* address ^short = "This represents the member's 5 digit zip code (131 )"
+* deceased.deceasedBoolean ^short = "Indicates if the patient is deceased (150 )"
+* extension ^short = "The gender of the member at birth (153 )"
+<tr>
+<td>
+70
+</td>
+<td>
+Date of birth
+</td>
+<td>
+Date of birth of the member
+</td>
+<td>
+birthDate
+</td>
+<td>
+
+</td>
+<td>
+The date of birth for the individual
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+71
+</td>
+<td>
+Gender code
+</td>
+<td>
+Gender of the member
+</td>
+<td>
+gender
+</td>
+<td>
+
+</td>
+<td>
+male | female | other | unknown
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+124
+</td>
+<td>
+Date of death
+</td>
+<td>
+Date of death of the member
+</td>
+<td>
+deceased
+</td>
+<td>
+deceasedDateTime
+</td>
+<td>
+dateTime
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+125
+</td>
+<td>
+County
+</td>
+<td>
+The county for the member's primary address
+</td>
+<td>
+address
+</td>
+<td>
+
+</td>
+<td>
+An address for the individual
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+126
+</td>
+<td>
+State
+</td>
+<td>
+The state for the member's primary address
+</td>
+<td>
+address
+</td>
+<td>
+
+</td>
+<td>
+An address for the individual
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+127
+</td>
+<td>
+Country
+</td>
+<td>
+The country for the member's primary address
+</td>
+<td>
+address
+</td>
+<td>
+
+</td>
+<td>
+An address for the individual
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+128
+</td>
+<td>
+Race Code
+</td>
+<td>
+The race of the member
+</td>
+<td>
+extension
+</td>
+<td>
+
+</td>
+<td>
+The race of the patient
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+129
+</td>
+<td>
+Ethnicity
+</td>
+<td>
+The ethnicity of the member
+</td>
+<td>
+extension
+</td>
+<td>
+
+</td>
+<td>
+The ethnicity of the patient
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+130
+</td>
+<td>
+Patient Name
+</td>
+<td>
+The name of the patient
+</td>
+<td>
+name
+</td>
+<td>
+
+</td>
+<td>
+A name associated with the patient
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+131
+</td>
+<td>
+ZIP Code
+</td>
+<td>
+This represents the member's 5 digit zip code
+</td>
+<td>
+address
+</td>
+<td>
+
+</td>
+<td>
+An address for the individual
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+150
+</td>
+<td>
+Deceased
+</td>
+<td>
+Indicates if the patient is deceased
+</td>
+<td>
+deceased
+</td>
+<td>
+deceasedBoolean
+</td>
+<td>
+boolean
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+153
+</td>
+<td>
+Birth sex
+</td>
+<td>
+The gender of the member at birth
+</td>
+<td>
+extension
+</td>
+<td>
+
+</td>
+<td>
+The sex of the patient at birth
+</td>
+<td>
+
+</td>
+</tr>
+>>> EOB Outpatient Facility
+* patient ^short = "Unique identifier for a member  (1 )"
+* insurance.coverage ^short = "Unique identifier for a member  (1 )"
+* insurance ^short = "Code of the primary payer responsible for the claim (2 )"
+* diagnosis ^short = "ICD-9-CM code describing the condition chiefly responsible for a patient's admission to a facility. It may be different from the principal diagnosis, which is the diagnosis assigned after evaluation. (UB04 Form Locator 69). Decimals will be included. (6 )"
+* diagnosis ^short = "The member's principal condition treated during this service. (UB04 Form Locator 67). This may or may not be different from the admitting diagnosis. Decimals will be included. (7 )"
+* diagnosis ^short = "Additional diagnosis identified for this member. Decimals will be included.  (8 )"
+* supportingInfo.code ^short = "The source of admission identifies the place where the patient was identified as needing admission to a facility. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13 )"
+* supportingInfo.code ^short = "Priority of the inpatient admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14 )"
+* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).  (16 )"
+* billablePeriod.period.start
+period.end ^short = "Identifies the date the patient was admitted for facility care (18 )"
+* billablePeriod.period.start
+period.end ^short = "Date patient was discharged from a facility. (19 )"
+* adjudication.amount ^short = "Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services. (20 )"
+* item.adjudication ^short = "Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services. (20 )"
+* adjudication.amount ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary. (20 )"
+* item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary. (20 )"
+* adjudication.amount ^short = "The portion of this service that the member
+must pay which is applied to the total period
+deductible. Deductibles are usually
+applied over a specific time period, such as
+per calendar year, per benefit period, (20 )"
+* item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. (20 )"
+* adjudication.amount ^short = "The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%.  (20 )"
+* item.adjudication ^short = "The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%.  (20 )"
+* adjudication.amount ^short = "Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit. (20 )"
+* item.adjudication ^short = "Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit. (20 )"
+* adjudication.amount ^short = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract. (20 )"
+* item.adjudication ^short = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract. (20 )"
+* adjudication.amount ^short = "The reduction in the payment amount to reflect the carrier as a secondary payor. (20 )"
+* item.adjudication ^short = "The reduction in the payment amount to reflect the carrier as a secondary payor. (20 )"
+* adjudication.amount ^short = "The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments. (20 )"
+* item.adjudication ^short = "The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments. (20 )"
+* adjudication.amount ^short = "The amount paid by the member at the point of service. (20 )"
+* item.adjudication ^short = "The amount paid by the member at the point of service. (20 )"
+* adjudication.amount ^short = "The amount of the discount (20 )"
+* item.adjudication ^short = "The amount of the discount (20 )"
+* adjudication.amount ^short = "The amount paid to the provider. (20 )"
+* item.adjudication ^short = "The amount paid to the provider. (20 )"
+* adjudication.amount ^short = "The amount paid to the member. (20 )"
+* item.adjudication ^short = "The amount paid to the member. (20 )"
+* adjudication.amount ^short = "The amount of the member's liability. (20 )"
+* item.adjudication ^short = "The amount of the member's liability. (20 )"
+* diagnosis ^short = "ICD-10-CM code describing the condition chiefly responsible for a patient's admission to a facility. It may be different from the principal diagnosis, which is the diagnosis assigned after evaluation. Decimals will be included. (21 )"
+* diagnosis ^short = "The member's principal condition treated during this service. This may or may not be different from the admitting diagnosis. Decimals will be included.  (22 )"
+* diagnosis ^short = "Additional diagnosis identified for this member. Decimals will be included.  (23 )"
+* diagnosis ^short = "This is any valid ICD-10 Diagnosis code in the range V00.* through Y99.*. (30 )"
+* diagnosis ^short = "This is the reason given by the patient for visiting the doctor or practitioner. It is not the doctor's or practitioner's diagnosis. Patient Reason for Visit Codes can be any ICD-10diagnosis and may or may not be a repeat of an ICD-10 Principal or Secondary diagnosis field. (31 )"
+* item.category ^short = "High level classification of services into logical groupings (34 )"
+* identifier ^short = "Claim identifier for a claim. (35 )"
+* item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36 )"
+* item.productOrService ^short = "Medical procedure a patient received from a health care provider. Current coding methods include: CPT-4 and HCFA Common Procedure Coding System Level II - (HCPCSII). (40 )"
+* item.modifier ^short = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41 )"
+* item.quantity ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (42 )"
+* supportingInfo.code ^short = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46 )"
+* item.revenue ^short = "Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed (86 )"
+* supportingInfo.timing ^short = "The date the claim for payment was received (88 )"
+* item.serviced ^short = "Date on which services began.  UB04
+(Form Locator 45). (90 )"
+* payment.type ^short = "Indicates whether the claim was paid or denied. (91 )"
+* payment.adjustmentReason ^short = "Reason codes used to interpret the Non-Covered Amount (92 )"
+* item.adjudication ^short = "Reason codes used to interpret the Non-Covered Amount (92 )"
+* provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94 )"
+* careTeam.provider ^short = "The National Provider Identifier assigned to the Rendering Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided). (95 )"
+* careTeam.provider ^short = "The identifier assigned to the PCP Provider. (96 )"
+* careTeam.provider ^short = "The NPI of the referring physician. (99 )"
+* supportingInfo.code ^short = "Indicates that the Rendering Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101 )"
+* supportingInfo.code ^short = "Indicates the network status of the referring physician (101 )"
+* payment.date ^short = "The date the claim was paid. (107 )"
+* patient ^short = "Provider submitted information that can be included on the claim (109 )"
+* patient ^short = "Provider submitted information that can be included on the claim (110 )"
+* related ^short = "Prior claim number (111 )"
+* related ^short = "Replaced or Merged claim number (112 )"
+* supportingInfo.code ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of facility. (114 )"
+* supportingInfo.code ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The second digit classifies the type of care (service classification) being billed. (115 )"
+* supportingInfo.code ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (116 )"
+* supportingInfo.code ^short = "Patient’s status as of the discharge date for a facility stay. Information located on UB04 (Form Locator 17). (117 )"
+* payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber 
+ (120 )"
+* payee.party ^short = "Recipient reference
+ (121 )"
+* status ^short = " (140 )"
+* insurance ^short = "Identifies the primary payer.  For use only on secondary claims.   (141 )"
+* adjudication.category ^short = "Indicates the in network or out of network payment status of the claim. (142 )"
+* diagnosis.diagnosis ^short = "A plain text representation of the diagnosis (145 )"
+* item.productOrService ^short = "A plain text representation of the CPT / HCPCS procedure (147 )"
+* total.amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.) (148 )"
+* item.adjudication ^short = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149 )"
+<tr>
+<td>
+1
+</td>
+<td>
+Member id
+</td>
+<td>
+Unique identifier for a member 
+</td>
+<td>
+patient
+</td>
+<td>
+
+</td>
+<td>
+The recipient of the products and services
+</td>
+<td>
+Reference(Patient)
+</td>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+Member id
+</td>
+<td>
+Unique identifier for a member 
+</td>
+<td>
+insurance
+</td>
+<td>
+coverage
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+Claim payer Identifier
+</td>
+<td>
+Code of the primary payer responsible for the claim
+</td>
+<td>
+insurance
+</td>
+<td>
+
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+Diagnosis code - ICD-9 admitting
+</td>
+<td>
+ICD-9-CM code describing the condition chiefly responsible for a patient's admission to a facility. It may be different from the principal diagnosis, which is the diagnosis assigned after evaluation. (UB04 Form Locator 69). Decimals will be included.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+Diagnosis code - ICD-9 principal
+</td>
+<td>
+The member's principal condition treated during this service. (UB04 Form Locator 67). This may or may not be different from the admitting diagnosis. Decimals will be included.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+Diagnosis code - ICD-9 secondary
+</td>
+<td>
+Additional diagnosis identified for this member. Decimals will be included. 
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+Claim source inpatient admission code
+</td>
+<td>
+The source of admission identifies the place where the patient was identified as needing admission to a facility. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15).
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+Claim inpatient admission type code
+</td>
+<td>
+Priority of the inpatient admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+Claim type
+</td>
+<td>
+Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.). 
+</td>
+<td>
+type
+</td>
+<td>
+
+</td>
+<td>
+Category or discipline
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+Member admission date
+</td>
+<td>
+Identifies the date the patient was admitted for facility care
+</td>
+<td>
+billablePeriod
+</td>
+<td>
+period.start
+period.end
+</td>
+<td>
+Relevant time frame for the claim
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+Member discharge date
+</td>
+<td>
+Date patient was discharged from a facility.
+</td>
+<td>
+billablePeriod
+</td>
+<td>
+period.start
+period.end
+</td>
+<td>
+Relevant time frame for the claim
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim total submitted amount
+</td>
+<td>
+Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line submitted amount
+</td>
+<td>
+Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim total allowed amount
+</td>
+<td>
+The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line allowed amount
+</td>
+<td>
+The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Member paid deductible
+
+</td>
+<td>
+The portion of this service that the member
+must pay which is applied to the total period
+deductible. Deductibles are usually
+applied over a specific time period, such as
+per calendar year, per benefit period,
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line patient deductible
+</td>
+<td>
+The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Co-insurance liability amount
+
+
+</td>
+<td>
+The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%. 
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line coinsurance amount
+
+</td>
+<td>
+The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%. 
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Copay amount
+
+
+
+</td>
+<td>
+Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line copay amount
+
+
+</td>
+<td>
+Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim disallowed amount
+
+
+
+
+
+</td>
+<td>
+The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line disallowed amount
+
+
+
+
+</td>
+<td>
+The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim primary payer paid amount
+</td>
+<td>
+The reduction in the payment amount to reflect the carrier as a secondary payor.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line primary payer paid amount
+</td>
+<td>
+The reduction in the payment amount to reflect the carrier as a secondary payor.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim payment amount
+</td>
+<td>
+The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line payment amount
+</td>
+<td>
+The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Amount paid by patient
+</td>
+<td>
+The amount paid by the member at the point of service.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line amount paid by patient
+</td>
+<td>
+The amount paid by the member at the point of service.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim total discount amount
+</td>
+<td>
+The amount of the discount
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line discount amount
+</td>
+<td>
+The amount of the discount
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim amount paid to provider
+</td>
+<td>
+The amount paid to the provider.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line amount paid to provider
+</td>
+<td>
+The amount paid to the provider.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Member reimbursement
+</td>
+<td>
+The amount paid to the member.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line member reimbursement
+</td>
+<td>
+The amount paid to the member.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Member liability
+</td>
+<td>
+The amount of the member's liability.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line member liability
+</td>
+<td>
+The amount of the member's liability.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+Diagnosis code - ICD-10 admitting
+</td>
+<td>
+ICD-10-CM code describing the condition chiefly responsible for a patient's admission to a facility. It may be different from the principal diagnosis, which is the diagnosis assigned after evaluation. Decimals will be included.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+Diagnosis code - ICD-10 principal
+</td>
+<td>
+The member's principal condition treated during this service. This may or may not be different from the admitting diagnosis. Decimals will be included. 
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+Diagnosis code - ICD-10 secondary
+</td>
+<td>
+Additional diagnosis identified for this member. Decimals will be included. 
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+Is E code
+</td>
+<td>
+This is any valid ICD-10 Diagnosis code in the range V00.* through Y99.*.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+Patient reason for visit
+</td>
+<td>
+This is the reason given by the patient for visiting the doctor or practitioner. It is not the doctor's or practitioner's diagnosis. Patient Reason for Visit Codes can be any ICD-10diagnosis and may or may not be a repeat of an ICD-10 Principal or Secondary diagnosis field.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+Type of service
+</td>
+<td>
+High level classification of services into logical groupings
+</td>
+<td>
+item
+</td>
+<td>
+category
+</td>
+<td>
+Benefit classification
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+Claim unique identifier
+</td>
+<td>
+Claim identifier for a claim.
+</td>
+<td>
+identifier
+</td>
+<td>
+
+</td>
+<td>
+Business Identifier for the resource
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+Line number
+</td>
+<td>
+Line identification number that represents the number assigned in a source system for identification and processing.
+</td>
+<td>
+item
+</td>
+<td>
+sequence
+</td>
+<td>
+Item instance identifier
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+Procedure Code - CPT / HCPCS
+</td>
+<td>
+Medical procedure a patient received from a health care provider. Current coding methods include: CPT-4 and HCFA Common Procedure Coding System Level II - (HCPCSII).
+</td>
+<td>
+item
+</td>
+<td>
+productOrService
+</td>
+<td>
+Billing, service, product, or drug code
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+Procedure Code Modifier - CPT / HCPCS
+</td>
+<td>
+Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service.
+</td>
+<td>
+item
+</td>
+<td>
+modifier
+</td>
+<td>
+Product or service billing modifiers
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+Number of units
+</td>
+<td>
+The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. 
+</td>
+<td>
+item
+</td>
+<td>
+quantity
+</td>
+<td>
+Count of products or services
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+Place of service code
+</td>
+<td>
+Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td>
+Revenue center code
+</td>
+<td>
+Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed
+</td>
+<td>
+item
+</td>
+<td>
+revenue
+</td>
+<td>
+Revenue or cost center code
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+Claim received date
+</td>
+<td>
+The date the claim for payment was received
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+timing
+</td>
+<td>
+timing | date
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td>
+Service (from) date
+</td>
+<td>
+Date on which services began.  UB04
+(Form Locator 45).
+</td>
+<td>
+item
+</td>
+<td>
+serviced
+</td>
+<td>
+Date or dates of service or product delivery
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+Claim payment status code
+</td>
+<td>
+Indicates whether the claim was paid or denied.
+</td>
+<td>
+payment
+</td>
+<td>
+type
+</td>
+<td>
+Partial or complete payment
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+Claim payment denial code
+</td>
+<td>
+Reason codes used to interpret the Non-Covered Amount
+</td>
+<td>
+payment
+</td>
+<td>
+adjustmentReason
+</td>
+<td>
+Explanation for the variance
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+Line payment denial code
+</td>
+<td>
+Reason codes used to interpret the Non-Covered Amount
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+Explanation of adjudication outcome
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+Claim billing provider NPI
+</td>
+<td>
+The National Provider Identifier assigned to the Billing Provider.
+</td>
+<td>
+provider
+</td>
+<td>
+
+</td>
+<td>
+Party responsible for the claim
+</td>
+<td>
+Reference(Organization)
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+Claim performing provider NPI
+</td>
+<td>
+The National Provider Identifier assigned to the Rendering Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided).
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td>
+Claim PCP NPI
+</td>
+<td>
+The identifier assigned to the PCP Provider.
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td>
+Claim Referring Physician NPI
+</td>
+<td>
+The NPI of the referring physician.
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+Claim billing provider network status
+</td>
+<td>
+Indicates that the Rendering Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+Claim Referring Physican Network Status
+</td>
+<td>
+Indicates the network status of the referring physician
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+Claim paid date
+</td>
+<td>
+The date the claim was paid.
+</td>
+<td>
+payment
+</td>
+<td>
+date
+</td>
+<td>
+Expected date of payment
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td>
+Patient account number
+</td>
+<td>
+Provider submitted information that can be included on the claim
+</td>
+<td>
+patient
+</td>
+<td>
+
+</td>
+<td>
+The recipient of the products and services
+</td>
+<td>
+identifier
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td>
+Medical record number
+</td>
+<td>
+Provider submitted information that can be included on the claim
+</td>
+<td>
+patient
+</td>
+<td>
+
+</td>
+<td>
+The recipient of the products and services
+</td>
+<td>
+identifier
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+Claim adjusted from identifier
+</td>
+<td>
+Prior claim number
+</td>
+<td>
+related
+</td>
+<td>
+
+</td>
+<td>
+Prior or corollary claims
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+Claim adjusted to identifier
+</td>
+<td>
+Replaced or Merged claim number
+</td>
+<td>
+related
+</td>
+<td>
+
+</td>
+<td>
+Prior or corollary claims
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td>
+Claim bill facility type code
+</td>
+<td>
+UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of facility.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td>
+Claim service classification type code
+</td>
+<td>
+UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The second digit classifies the type of care (service classification) being billed.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td>
+Claim frequency code
+</td>
+<td>
+UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td>
+Patient discharge status code
+</td>
+<td>
+Patient’s status as of the discharge date for a facility stay. Information located on UB04 (Form Locator 17).
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td>
+Claim payee type code
+</td>
+<td>
+Identifies recipient of benefits payable; i.e., provider or subscriber 
+</td>
+<td>
+payee
+</td>
+<td>
+type
+</td>
+<td>
+Category of recipient
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+Claim payee
+</td>
+<td>
+Recipient reference
+</td>
+<td>
+payee
+</td>
+<td>
+party
+</td>
+<td>
+Recipient reference
+</td>
+<td>
+Reference(PractitionerRole | Patient)
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td>
+Claim processing status code
+</td>
+<td>
+
+</td>
+<td>
+status
+</td>
+<td>
+
+</td>
+<td>
+active | cancelled | draft | entered-in-error
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td>
+Claim primary payer identifier
+</td>
+<td>
+Identifies the primary payer.  For use only on secondary claims.  
+</td>
+<td>
+insurance
+</td>
+<td>
+
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td>
+Line benefit payment status
+</td>
+<td>
+Indicates the in network or out of network payment status of the claim.
+</td>
+<td>
+adjudication
+</td>
+<td>
+category
+</td>
+<td>
+Type of adjudication information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td>
+Diagnosis Code Description
+</td>
+<td>
+A plain text representation of the diagnosis
+</td>
+<td>
+diagnosis
+</td>
+<td>
+diagnosis
+</td>
+<td>
+CodeableConcept
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+147
+</td>
+<td>
+CPT / HCPCS Procedure Code Description
+</td>
+<td>
+A plain text representation of the CPT / HCPCS procedure
+</td>
+<td>
+item
+</td>
+<td>
+productOrService
+</td>
+<td>
+Billing, service, product, or drug code
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td>
+Total Amount
+</td>
+<td>
+Total amount for each category (i.e., submitted, allowed, etc.)
+</td>
+<td>
+total
+</td>
+<td>
+amount
+</td>
+<td>
+Financial total for the category
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td>
+Allowed number of units
+</td>
+<td>
+The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. 
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+Non-monitary value
+</td>
+<td>
+
+</td>
+</tr>
+>>> EOB Inpatient Facility
+* patient ^short = "Unique identifier for a member  (1 )"
+* insurance.coverage ^short = "Unique identifier for a member  (1 )"
+* insurance ^short = "Code of the primary payer responsible for the claim (2 )"
+* diagnosis ^short = "ICD-9-CM code describing the condition chiefly responsible for a patient's admission to a facility. It may be different from the principal diagnosis, which is the diagnosis assigned after evaluation. (UB04 Form Locator 69). Decimals will be included. (6 )"
+* diagnosis ^short = "The member's principal condition treated during this service. (UB04 Form Locator 67). This may or may not be different from the admitting diagnosis. Decimals will be included. (7 )"
+* diagnosis ^short = "Additional diagnosis identified for this member. Decimals will be included.  (8 )"
+* procedure ^short = "Principal medical procedure a patient received during inpatient stay. Current coding methods include: International Classification of Diseases Surgical Procedures (ICD-9). Information located on UB04 (Form Locator 74). (9 )"
+* procedure ^short = "Date of Procedure. Information located on UB04 (Form Locator 74). (10 )"
+* procedure ^short = "Additional surgical procedure surgical (ICD-9) administered during inpatient stay. (11 )"
+* procedure ^short = "Date of Procedure. (UB04 Form Locator 74). (12 )"
+* supportingInfo.code ^short = "The source of admission identifies the place where the patient was identified as needing admission to a facility. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13 )"
+* supportingInfo.code ^short = "Priority of the inpatient admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14 )"
+* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).  (16 )"
+* billablePeriod.period.start
+period.end ^short = "Identifies the date the patient was admitted for facility care (18 )"
+* billablePeriod.period.start
+period.end ^short = "Date patient was discharged from a facility. (19 )"
+* adjudication.amount ^short = "Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services. (20 )"
+* item.adjudication ^short = "Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services. (20 )"
+* adjudication.amount ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary. (20 )"
+* item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary. (20 )"
+* adjudication.amount ^short = "The portion of this service that the member
+must pay which is applied to the total period
+deductible. Deductibles are usually
+applied over a specific time period, such as
+per calendar year, per benefit period, (20 )"
+* item.adjudication ^short = "The portion of this service that the member
+must pay which is applied to the total period
+deductible. Deductibles are usually
+applied over a specific time period, such as
+per calendar year, per benefit period, (20 )"
+* adjudication.amount ^short = "The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%.  (20 )"
+* item.adjudication ^short = "The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%.  (20 )"
+* adjudication.amount ^short = "Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit. (20 )"
+* item.adjudication ^short = "Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit. (20 )"
+* adjudication.amount ^short = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract. (20 )"
+* item.adjudication ^short = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract. (20 )"
+* adjudication.amount ^short = "The reduction in the payment amount to reflect the carrier as a secondary payor. (20 )"
+* item.adjudication ^short = "The reduction in the payment amount to reflect the carrier as a secondary payor. (20 )"
+* adjudication.amount ^short = "The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments. (20 )"
+* item.adjudication ^short = "The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments. (20 )"
+* adjudication.amount ^short = "The amount paid by the member at the point of service. (20 )"
+* item.adjudication ^short = "The amount paid by the member at the point of service. (20 )"
+* adjudication.amount ^short = "The amount of the discount (20 )"
+* item.adjudication ^short = "The amount of the discount (20 )"
+* adjudication.amount ^short = "The amount paid to the provider. (20 )"
+* item.adjudication ^short = "The amount paid to the provider. (20 )"
+* adjudication.amount ^short = "The amount paid to the member. (20 )"
+* item.adjudication ^short = "The amount paid to the member. (20 )"
+* adjudication.amount ^short = "The amount of the member's liability. (20 )"
+* item.adjudication ^short = "The amount of the member's liability. (20 )"
+* diagnosis ^short = "ICD-10-CM code describing the condition chiefly responsible for a patient's admission to a facility. It may be different from the principal diagnosis, which is the diagnosis assigned after evaluation. Decimals will be included. (21 )"
+* diagnosis ^short = "The member's principal condition treated during this service. This may or may not be different from the admitting diagnosis. Decimals will be included.  (22 )"
+* diagnosis ^short = "Additional diagnosis identified for this member. Decimals will be included.  (23 )"
+* procedure ^short = "Principal medical procedure a patient received during inpatient stay. Coding methods for this field is International Classification of Diseases Surgical Procedures (ICD-10). (24 )"
+* procedure ^short = "Date of Procedure - Principal (25 )"
+* procedure ^short = "Additional surgical procedure a patient received during inpatient stay. Coding methods for this field is International Classification of Diseases Surgical Procedures (ICD-10). (26 )"
+* procedure ^short = "Date of Procedure - Secondary (27 )"
+* diagnosis.onAdmission ^short = "Used to capture whether a diagnosis was present at time of a patient's admission. This is used to group diagnoses into the proper DRG for all claims involving inpatient admissions to general acute care facilities. (28 )"
+* diagnosis.onAdmission ^short = "Used to capture whether a diagnosis was present at time of a patient's admission. This is used to group diagnoses into the proper DRG for all claims involving inpatient admissions to general acute care facilities. (29 )"
+* diagnosis ^short = "This is any valid ICD-10 Diagnosis code in the range V00.* through Y99.*. (30 )"
+* diagnosis ^short = "This is the reason given by the patient for visiting the doctor or practitioner. It is not the doctor's or practitioner's diagnosis. Patient Reason for Visit Codes can be any ICD-10diagnosis and may or may not be a repeat of an ICD-10 Principal or Secondary diagnosis field. (31 )"
+* supportingInfo.code ^short = "Version of the AP-DRG codes assigned for inpatient facility claims. (32 )"
+* supportingInfo.code ^short = "DRG codes assigned (33 )"
+* supportingInfo.code ^short = "High level classification of services into logical groupings (34 )"
+* identifier ^short = "Claim identifier for a claim. (35 )"
+* item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36 )"
+* item.quantity ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (42 )"
+* supportingInfo.code ^short = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46 )"
+* item.revenue ^short = "Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed (86 )"
+* supportingInfo.timing ^short = "The date the claim for payment was received (88 )"
+* payment.type ^short = "Indicates whether the claim was paid or denied. (91 )"
+* payment.adjustmentReason ^short = "Reason codes used to interpret the Non-Covered Amount (92 )"
+* item.adjudication ^short = "Reason codes used to interpret the Non-Covered Amount (92 )"
+* careTeam.provider ^short = "The National Provider Identifier assigned to the Attending Physician for the admission (93 )"
+* provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94 )"
+* careTeam.provider ^short = "The National Provider Identifier assigned to the Rendering Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided). (95 )"
+* careTeam.provider ^short = "The identifier assigned to the PCP Provider. (96 )"
+* careTeam.provider ^short = "The NPI of the referring physician. (99 )"
+* supportingInfo.code ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101 )"
+* supportingInfo.code ^short = "Indicates the network status of the attending physician (101 )"
+* supportingInfo.code ^short = "Indicates the network status of the referring physician (101 )"
+* payment.date ^short = "The date the claim was paid. (107 )"
+* patient ^short = "Provider submitted information that can be included on the claim (109 )"
+* patient ^short = "Provider submitted information that can be included on the claim (110 )"
+* related ^short = "Prior claim number (111 )"
+* related ^short = "Replaced or Merged claim number (112 )"
+* supportingInfo.code ^short = "Name of the DRG grouper assigned (113 )"
+* supportingInfo.code ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of facility. (114 )"
+* supportingInfo.code ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The second digit classifies the type of care (service classification) being billed. (115 )"
+* supportingInfo.code ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (116 )"
+* supportingInfo.code ^short = "Patient’s status as of the discharge date for a facility stay. Information located on UB04 (Form Locator 17). (117 )"
+* payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber 
+ (120 )"
+* payee.party ^short = "Recipient reference
+ (121 )"
+* status ^short = " (140 )"
+* insurance ^short = "Identifies the primary payer.  For use only on secondary claims.   (141 )"
+* adjudication.category ^short = "Indicates the in network or out of network payment status of the claim. (142 )"
+* diagnosis.diagnosis ^short = "A plain text representation of the diagnosis (145 )"
+* diagnosis.diagnosis ^short = "A plain text representation of the ICD procedure (146 )"
+* total.amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.) (148 )"
+* item.adjudication ^short = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149 )"
+<tr>
+<td>
+1
+</td>
+<td>
+Member id
+</td>
+<td>
+Unique identifier for a member 
+</td>
+<td>
+patient
+</td>
+<td>
+
+</td>
+<td>
+The recipient of the products and services
+</td>
+<td>
+Reference(Patient)
+</td>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+Member id
+</td>
+<td>
+Unique identifier for a member 
+</td>
+<td>
+insurance
+</td>
+<td>
+coverage
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+Claim payer Identifier
+</td>
+<td>
+Code of the primary payer responsible for the claim
+</td>
+<td>
+insurance
+</td>
+<td>
+
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+6
+</td>
+<td>
+Diagnosis code - ICD-9 admitting
+</td>
+<td>
+ICD-9-CM code describing the condition chiefly responsible for a patient's admission to a facility. It may be different from the principal diagnosis, which is the diagnosis assigned after evaluation. (UB04 Form Locator 69). Decimals will be included.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+Diagnosis code - ICD-9 principal
+</td>
+<td>
+The member's principal condition treated during this service. (UB04 Form Locator 67). This may or may not be different from the admitting diagnosis. Decimals will be included.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+Diagnosis code - ICD-9 secondary
+</td>
+<td>
+Additional diagnosis identified for this member. Decimals will be included. 
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+9
+</td>
+<td>
+Procedure Code - ICD-9 PCS principal
+</td>
+<td>
+Principal medical procedure a patient received during inpatient stay. Current coding methods include: International Classification of Diseases Surgical Procedures (ICD-9). Information located on UB04 (Form Locator 74).
+</td>
+<td>
+procedure
+</td>
+<td>
+
+</td>
+<td>
+Specific clinical procedure
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+10
+</td>
+<td>
+Procedure Date - ICD-9 principal
+</td>
+<td>
+Date of Procedure. Information located on UB04 (Form Locator 74).
+</td>
+<td>
+procedure
+</td>
+<td>
+
+</td>
+<td>
+When the procedure was performed
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+11
+</td>
+<td>
+Procedure Code - ICD-10 PCS secondary
+</td>
+<td>
+Additional surgical procedure surgical (ICD-9) administered during inpatient stay.
+</td>
+<td>
+procedure
+</td>
+<td>
+
+</td>
+<td>
+Specific clinical procedure
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+12
+</td>
+<td>
+Procedure Date - ICD-9 secondary
+</td>
+<td>
+Date of Procedure. (UB04 Form Locator 74).
+</td>
+<td>
+procedure
+</td>
+<td>
+
+</td>
+<td>
+When the procedure was performed
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+13
+</td>
+<td>
+Claim source inpatient admission code
+</td>
+<td>
+The source of admission identifies the place where the patient was identified as needing admission to a facility. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15).
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+14
+</td>
+<td>
+Claim inpatient admission type code
+</td>
+<td>
+Priority of the inpatient admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+Claim type
+</td>
+<td>
+Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.). 
+</td>
+<td>
+type
+</td>
+<td>
+
+</td>
+<td>
+Category or discipline
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+18
+</td>
+<td>
+Member admission date
+</td>
+<td>
+Identifies the date the patient was admitted for facility care
+</td>
+<td>
+billablePeriod
+</td>
+<td>
+period.start
+period.end
+</td>
+<td>
+Relevant time frame for the claim
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+19
+</td>
+<td>
+Member discharge date
+</td>
+<td>
+Date patient was discharged from a facility.
+</td>
+<td>
+billablePeriod
+</td>
+<td>
+period.start
+period.end
+</td>
+<td>
+Relevant time frame for the claim
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim total submitted amount
+</td>
+<td>
+Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line submitted amount
+</td>
+<td>
+Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim total allowed amount
+</td>
+<td>
+The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line allowed amount
+</td>
+<td>
+The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Member paid deductible
+
+</td>
+<td>
+The portion of this service that the member
+must pay which is applied to the total period
+deductible. Deductibles are usually
+applied over a specific time period, such as
+per calendar year, per benefit period,
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line patient deductible
+</td>
+<td>
+The portion of this service that the member
+must pay which is applied to the total period
+deductible. Deductibles are usually
+applied over a specific time period, such as
+per calendar year, per benefit period,
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Co-insurance liability amount
+
+
+</td>
+<td>
+The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%. 
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line coinsurance amount
+
+</td>
+<td>
+The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%. 
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Copay amount
+
+
+
+</td>
+<td>
+Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line copay amount
+
+
+</td>
+<td>
+Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim disallowed amount
+
+
+
+
+
+</td>
+<td>
+The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line disallowed amount
+
+
+
+
+</td>
+<td>
+The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim primary payer paid amount
+</td>
+<td>
+The reduction in the payment amount to reflect the carrier as a secondary payor.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line primary payer paid amount
+</td>
+<td>
+The reduction in the payment amount to reflect the carrier as a secondary payor.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim payment amount
+</td>
+<td>
+The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line payment amount
+</td>
+<td>
+The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Amount paid by patient
+</td>
+<td>
+The amount paid by the member at the point of service.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line amount paid by patient
+</td>
+<td>
+The amount paid by the member at the point of service.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim total discount amount
+</td>
+<td>
+The amount of the discount
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line discount amount
+</td>
+<td>
+The amount of the discount
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Claim amount paid to provider
+</td>
+<td>
+The amount paid to the provider.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line amount paid to provider
+</td>
+<td>
+The amount paid to the provider.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Member reimbursement
+</td>
+<td>
+The amount paid to the member.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line member reimbursement
+</td>
+<td>
+The amount paid to the member.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Member liability
+</td>
+<td>
+The amount of the member's liability.
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+Monetary amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line member liability
+</td>
+<td>
+The amount of the member's liability.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+21
+</td>
+<td>
+Diagnosis code - ICD-10 admitting
+</td>
+<td>
+ICD-10-CM code describing the condition chiefly responsible for a patient's admission to a facility. It may be different from the principal diagnosis, which is the diagnosis assigned after evaluation. Decimals will be included.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+Diagnosis code - ICD-10 principal
+</td>
+<td>
+The member's principal condition treated during this service. This may or may not be different from the admitting diagnosis. Decimals will be included. 
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+Diagnosis code - ICD-10 secondary
+</td>
+<td>
+Additional diagnosis identified for this member. Decimals will be included. 
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+24
+</td>
+<td>
+Procedure Code - ICD-10 PCS primary
+</td>
+<td>
+Principal medical procedure a patient received during inpatient stay. Coding methods for this field is International Classification of Diseases Surgical Procedures (ICD-10).
+</td>
+<td>
+procedure
+</td>
+<td>
+
+</td>
+<td>
+Specific clinical procedure
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+25
+</td>
+<td>
+Procedure Date - ICD-10 primary
+</td>
+<td>
+Date of Procedure - Principal
+</td>
+<td>
+procedure
+</td>
+<td>
+
+</td>
+<td>
+When the procedure was performed
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+26
+</td>
+<td>
+Procedure Code - ICD-10 PCS secondary
+</td>
+<td>
+Additional surgical procedure a patient received during inpatient stay. Coding methods for this field is International Classification of Diseases Surgical Procedures (ICD-10).
+</td>
+<td>
+procedure
+</td>
+<td>
+
+</td>
+<td>
+Specific clinical procedure
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+27
+</td>
+<td>
+Procedure Date - ICD-10 secondary
+</td>
+<td>
+Date of Procedure - Secondary
+</td>
+<td>
+procedure
+</td>
+<td>
+
+</td>
+<td>
+When the procedure was performed
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+28
+</td>
+<td>
+Present on admission
+</td>
+<td>
+Used to capture whether a diagnosis was present at time of a patient's admission. This is used to group diagnoses into the proper DRG for all claims involving inpatient admissions to general acute care facilities.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+onAdmission
+</td>
+<td>
+Present on admission
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+Present on admission
+</td>
+<td>
+Used to capture whether a diagnosis was present at time of a patient's admission. This is used to group diagnoses into the proper DRG for all claims involving inpatient admissions to general acute care facilities.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+onAdmission
+</td>
+<td>
+Present on admission
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+30
+</td>
+<td>
+Is E code
+</td>
+<td>
+This is any valid ICD-10 Diagnosis code in the range V00.* through Y99.*.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+ICD-10 Codes (Example)
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+31
+</td>
+<td>
+Patient reason for visit
+</td>
+<td>
+This is the reason given by the patient for visiting the doctor or practitioner. It is not the doctor's or practitioner's diagnosis. Patient Reason for Visit Codes can be any ICD-10diagnosis and may or may not be a repeat of an ICD-10 Principal or Secondary diagnosis field.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+ICD-10 Codes (Example)
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+32
+</td>
+<td>
+Claim diagnosis related group (DRG)
+</td>
+<td>
+Version of the AP-DRG codes assigned for inpatient facility claims.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Classification of the supplied information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+33
+</td>
+<td>
+Claim diagnosis related group (DRG)
+</td>
+<td>
+DRG codes assigned
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Classification of the supplied information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+Type of service
+</td>
+<td>
+High level classification of services into logical groupings
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+Claim unique identifier
+</td>
+<td>
+Claim identifier for a claim.
+</td>
+<td>
+identifier
+</td>
+<td>
+
+</td>
+<td>
+Business Identifier for the resource
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+Line number
+</td>
+<td>
+Line identification number that represents the number assigned in a source system for identification and processing.
+</td>
+<td>
+item
+</td>
+<td>
+sequence
+</td>
+<td>
+Item instance identifier
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+Number of units
+</td>
+<td>
+The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. 
+</td>
+<td>
+item
+</td>
+<td>
+quantity
+</td>
+<td>
+Count of products or services
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+Place of service code
+</td>
+<td>
+Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+86
+</td>
+<td>
+Revenue center code
+</td>
+<td>
+Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed
+</td>
+<td>
+item
+</td>
+<td>
+revenue
+</td>
+<td>
+Revenue or cost center code
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+Claim received date
+</td>
+<td>
+The date the claim for payment was received
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+timing
+</td>
+<td>
+timing | date
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+Claim payment status code
+</td>
+<td>
+Indicates whether the claim was paid or denied.
+</td>
+<td>
+payment
+</td>
+<td>
+type
+</td>
+<td>
+Partial or complete payment
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+Claim payment denial code
+</td>
+<td>
+Reason codes used to interpret the Non-Covered Amount
+</td>
+<td>
+payment
+</td>
+<td>
+adjustmentReason
+</td>
+<td>
+Explanation for the variance
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+Line payment denial code
+</td>
+<td>
+Reason codes used to interpret the Non-Covered Amount
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+Explanation of adjudication outcome
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+93
+</td>
+<td>
+Claim attending provider NPI
+</td>
+<td>
+The National Provider Identifier assigned to the Attending Physician for the admission
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+Claim billing provider NPI
+</td>
+<td>
+The National Provider Identifier assigned to the Billing Provider.
+</td>
+<td>
+provider
+</td>
+<td>
+
+</td>
+<td>
+Party responsible for the claim
+</td>
+<td>
+Reference(PractionerRole)
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+Claim performing provider NPI
+</td>
+<td>
+The National Provider Identifier assigned to the Rendering Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided).
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td>
+Claim PCP NPI
+</td>
+<td>
+The identifier assigned to the PCP Provider.
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td>
+Claim Referring Physician NPI
+</td>
+<td>
+The NPI of the referring physician.
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+Claim billing provider network status
+</td>
+<td>
+Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+Claim attending provider network status
+</td>
+<td>
+Indicates the network status of the attending physician
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+Claim Referring Physican Network Status
+</td>
+<td>
+Indicates the network status of the referring physician
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+Claim paid date
+</td>
+<td>
+The date the claim was paid.
+</td>
+<td>
+payment
+</td>
+<td>
+date
+</td>
+<td>
+Expected date of payment
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td>
+Patient account number
+</td>
+<td>
+Provider submitted information that can be included on the claim
+</td>
+<td>
+patient
+</td>
+<td>
+
+</td>
+<td>
+The recipient of the products and services
+</td>
+<td>
+identifier
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td>
+Medical record number
+</td>
+<td>
+Provider submitted information that can be included on the claim
+</td>
+<td>
+patient
+</td>
+<td>
+
+</td>
+<td>
+The recipient of the products and services
+</td>
+<td>
+identifier
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+Claim adjusted from identifier
+</td>
+<td>
+Prior claim number
+</td>
+<td>
+related
+</td>
+<td>
+
+</td>
+<td>
+Prior or corollary claims
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+Claim adjusted to identifier
+</td>
+<td>
+Replaced or Merged claim number
+</td>
+<td>
+related
+</td>
+<td>
+
+</td>
+<td>
+Prior or corollary claims
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+113
+</td>
+<td>
+Claim diagnosis related group (DRG)
+</td>
+<td>
+Name of the DRG grouper assigned
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Classification of the supplied information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+114
+</td>
+<td>
+Claim bill facility type code
+</td>
+<td>
+UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of facility.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+115
+</td>
+<td>
+Claim service classification type code
+</td>
+<td>
+UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The second digit classifies the type of care (service classification) being billed.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+116
+</td>
+<td>
+Claim frequency code
+</td>
+<td>
+UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+117
+</td>
+<td>
+Patient discharge status code
+</td>
+<td>
+Patient’s status as of the discharge date for a facility stay. Information located on UB04 (Form Locator 17).
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td>
+Claim payee type code
+</td>
+<td>
+Identifies recipient of benefits payable; i.e., provider or subscriber 
+</td>
+<td>
+payee
+</td>
+<td>
+type
+</td>
+<td>
+Category of recipient
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+Claim payee
+</td>
+<td>
+Recipient reference
+</td>
+<td>
+payee
+</td>
+<td>
+party
+</td>
+<td>
+Recipient reference
+</td>
+<td>
+Reference(PractitionerRole | Patient)
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td>
+Claim processing status code
+</td>
+<td>
+
+</td>
+<td>
+status
+</td>
+<td>
+
+</td>
+<td>
+active | cancelled | draft | entered-in-error
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td>
+Claim primary payer identifier
+</td>
+<td>
+Identifies the primary payer.  For use only on secondary claims.  
+</td>
+<td>
+insurance
+</td>
+<td>
+
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td>
+Line benefit payment status
+</td>
+<td>
+Indicates the in network or out of network payment status of the claim.
+</td>
+<td>
+adjudication
+</td>
+<td>
+category
+</td>
+<td>
+Type of adjudication information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td>
+Diagnosis Code Description
+</td>
+<td>
+A plain text representation of the diagnosis
+</td>
+<td>
+diagnosis
+</td>
+<td>
+diagnosis
+</td>
+<td>
+CodeableConcept
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+146
+</td>
+<td>
+ICD Procedure Code Description
+</td>
+<td>
+A plain text representation of the ICD procedure
+</td>
+<td>
+diagnosis
+</td>
+<td>
+diagnosis
+</td>
+<td>
+CodeableConcept
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td>
+Total Amount
+</td>
+<td>
+Total amount for each category (i.e., submitted, allowed, etc.)
+</td>
+<td>
+total
+</td>
+<td>
+amount
+</td>
+<td>
+Financial total for the category
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td>
+Allowed number of units
+</td>
+<td>
+The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. 
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+Non-monitary value
+</td>
+<td>
+
+</td>
+</tr>
+>>> EOB Pharmacy
+* patient ^short = "Unique identifier for a member  (1 )"
+* insurance.coverage ^short = "Unique identifier for a member  (1 )"
+* insurance ^short = "Code of the primary payer responsible for the claim (2 )"
+* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).  (16 )"
+* item.adjudication ^short = "Represents the Usual & Customary Charge Amount or the Average Wholesale Price (AWP) for the Quantity Dispensed plus the Dispensing Fee Paid. (20 )"
+* item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary. (20 )"
+* item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. (20 )"
+* item.adjudication ^short = "Amount to be collected from a patient that is included in the Patient Pay Amount that is due to a per prescription copay or coinsurance. (20 )"
+* item.adjudication ^short = "Amount to be collected from a patient that is included in the Patient Pay Amount that is due to a per prescription copay or coinsurance. (20 )"
+* item.adjudication ^short = "Non-Covered Amount represents the NCPDP financial response field Amount Exceeding Periodic Benefit Maximum. (20 )"
+* item.adjudication ^short = "The reduction in the payment amount to reflect the carrier as a secondary payor. (20 )"
+* item.adjudication ^short = "The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments. (20 )"
+* item.adjudication ^short = "Amount that is calculated by the processor and returned to the pharmacy as the total amount to be paid by the patient to the pharmacy; the patient’s total cost share, including copayments, amounts applied to deductible, over maximum amounts, penalties, etc (20 )"
+* item.adjudication ^short = "The amount of the discount (20 )"
+* item.adjudication ^short = "Price paid for the drug excluding mfr discounts.  It is the sum of the following components:ingredient cost, dispensing fee, sales tax, and vaccine administration fee (20 )"
+* item.adjudication ^short = "The amount paid to the provider. (20 )"
+* item.adjudication ^short = "The amount paid to the member. (20 )"
+* item.adjudication ^short = "The amount of the member's liability. (20 )"
+* item.category ^short = "High level classification of services into logical groupings (34 )"
+* identifier ^short = "Assigned by the pharmacy at the time the prescription is filled
+ (35 )"
+* item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36 )"
+* item.productOrService ^short = "National Drug Code (NDC) (38 )"
+* item.quantity ^short = "Quantity dispensed for the drug (39 )"
+* supportingInfo.value ^short = "Number of days supply of medication dispensed by the pharmacy (77 )"
+* item.productOrService ^short = "The code indicating whether or not the prescription is a compound (78 )"
+* supportingInfo.code ^short = "Prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication
+ (79 )"
+* supportingInfo.timing ^short = "The date the claim for payment was received (88 )"
+* item.serviced ^short = "Identifies date the prescription was filled or
+professional service rendered (90 )"
+* payment.type ^short = "Indicates whether the claim was paid or denied. (91 )"
+* item.adjudication ^short = "Reason codes used to interpret the Non-Covered Amount (92 )"
+* provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94 )"
+* careTeam.provider ^short = "The identifier assigned to the PCP Provider. (95 )"
+* supportingInfo.code ^short = "Indicates that the Rendering Provider has a
+contract with the Plan (regardless of the
+network) that is effective on the date of
+service or admission. (101 )"
+* payment.date ^short = "The date the claim was paid. (107 )"
+* related ^short = "Prior claim number (111 )"
+* related ^short = "Replaced or Merged claim number (112 )"
+* payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber 
+ (120 )"
+* payee.party ^short = "Recipient reference
+ (121 )"
+* careTeam.provider ^short = "The identifier from NCPDP field # 411-DB (Prescriber ID) that identifies the National Provider Identifier (NPI) of the provider who prescribed the pharmaceutical. (122 )"
+*  ^short = "Indicates the network status of the prescribing physician (123 )"
+* supportingInfo.value ^short = "The number fill of the current dispensed supply (0, 1, 2, etc.)
+ (137 )"
+* status ^short = " (140 )"
+* insurance ^short = "Identifies the primary payer.  For use only on secondary claims.   (141 )"
+* item.adjudication ^short = "Indicates the in network or out of network payment status of the claim. (142 )"
+* supportingInfo.code ^short = "Whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy
+ (143 )"
+* supportingInfo.code ^short = "Whether the plan adjudicated the claim as a brand or generic drug
+ (144 )"
+* total.amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.) (148 )"
+* item.quantity ^short = "The unit of measurement for the drug. (gram, ml, etc.) (151 )"
+*  ^short = "Where the beneficiary lived when the prescription was filled; i.e., home, SNF, Homeless shelter, etc (152 )"
+<tr>
+<td>
+1
+</td>
+<td>
+Member id
+</td>
+<td>
+Unique identifier for a member 
+</td>
+<td>
+patient
+</td>
+<td>
+
+</td>
+<td>
+The recipient of the products and services
+</td>
+<td>
+Reference(Patient)
+</td>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+Member id
+</td>
+<td>
+Unique identifier for a member 
+</td>
+<td>
+insurance
+</td>
+<td>
+coverage
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+Claim payer Identifier
+</td>
+<td>
+Code of the primary payer responsible for the claim
+</td>
+<td>
+insurance
+</td>
+<td>
+
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+Claim type
+</td>
+<td>
+Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.). 
+</td>
+<td>
+type
+</td>
+<td>
+
+</td>
+<td>
+Category or discipline
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line submitted amount
+</td>
+<td>
+Represents the Usual & Customary Charge Amount or the Average Wholesale Price (AWP) for the Quantity Dispensed plus the Dispensing Fee Paid.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line allowed amount
+</td>
+<td>
+The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line patient deductible
+</td>
+<td>
+The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line coinsurance amount
+
+</td>
+<td>
+Amount to be collected from a patient that is included in the Patient Pay Amount that is due to a per prescription copay or coinsurance.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line copay amount
+
+
+</td>
+<td>
+Amount to be collected from a patient that is included in the Patient Pay Amount that is due to a per prescription copay or coinsurance.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line disallowed amount
+
+
+
+
+</td>
+<td>
+Non-Covered Amount represents the NCPDP financial response field Amount Exceeding Periodic Benefit Maximum.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line primary payer paid amount
+</td>
+<td>
+The reduction in the payment amount to reflect the carrier as a secondary payor.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line payment amount
+</td>
+<td>
+The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line amount paid by patient
+</td>
+<td>
+Amount that is calculated by the processor and returned to the pharmacy as the total amount to be paid by the patient to the pharmacy; the patient’s total cost share, including copayments, amounts applied to deductible, over maximum amounts, penalties, etc
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line discount amount
+</td>
+<td>
+The amount of the discount
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Drug cost
+</td>
+<td>
+Price paid for the drug excluding mfr discounts.  It is the sum of the following components:ingredient cost, dispensing fee, sales tax, and vaccine administration fee
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line amount paid to provider
+</td>
+<td>
+The amount paid to the provider.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line member reimbursement
+</td>
+<td>
+The amount paid to the member.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line member liability
+</td>
+<td>
+The amount of the member's liability.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+Type of service
+</td>
+<td>
+High level classification of services into logical groupings
+</td>
+<td>
+item
+</td>
+<td>
+category
+</td>
+<td>
+category
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+RX service reference number
+</td>
+<td>
+Assigned by the pharmacy at the time the prescription is filled
+</td>
+<td>
+identifier
+</td>
+<td>
+
+</td>
+<td>
+Business Identifier for the resource
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+Line number
+</td>
+<td>
+Line identification number that represents the number assigned in a source system for identification and processing.
+</td>
+<td>
+item
+</td>
+<td>
+sequence
+</td>
+<td>
+Item instance identifier
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+38
+</td>
+<td>
+National drug code
+</td>
+<td>
+National Drug Code (NDC)
+</td>
+<td>
+item
+</td>
+<td>
+productOrService
+</td>
+<td>
+Billing, service, product, or drug code
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+39
+</td>
+<td>
+Quantity dispensed
+</td>
+<td>
+Quantity dispensed for the drug
+</td>
+<td>
+item
+</td>
+<td>
+quantity
+</td>
+<td>
+Count of products or services
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+77
+</td>
+<td>
+Days supply
+</td>
+<td>
+Number of days supply of medication dispensed by the pharmacy
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+value
+</td>
+<td>
+Quantity
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+78
+</td>
+<td>
+Compound code
+</td>
+<td>
+The code indicating whether or not the prescription is a compound
+</td>
+<td>
+item
+</td>
+<td>
+productOrService
+</td>
+<td>
+Billing, service, product, or drug code
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+79
+</td>
+<td>
+DAW product selection code
+</td>
+<td>
+Prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+CodeableConcept
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+Claim received date
+</td>
+<td>
+The date the claim for payment was received
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+timing
+</td>
+<td>
+timing | date
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+90
+</td>
+<td>
+Service (from) date
+</td>
+<td>
+Identifies date the prescription was filled or
+professional service rendered
+</td>
+<td>
+item
+</td>
+<td>
+serviced
+</td>
+<td>
+Date or dates of service or product delivery
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+Claim payment status code
+</td>
+<td>
+Indicates whether the claim was paid or denied.
+</td>
+<td>
+payment
+</td>
+<td>
+type
+</td>
+<td>
+Partial or complete payment
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+Line payment denial code
+</td>
+<td>
+Reason codes used to interpret the Non-Covered Amount
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+Explanation of adjudication outcome
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+Claim billing provider NPI
+</td>
+<td>
+The National Provider Identifier assigned to the Billing Provider.
+</td>
+<td>
+provider
+</td>
+<td>
+
+</td>
+<td>
+Party responsible for the claim
+</td>
+<td>
+Reference(Organization)
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+Claim PCP NPI
+</td>
+<td>
+The identifier assigned to the PCP Provider.
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+Claim billing provider network status
+</td>
+<td>
+Indicates that the Rendering Provider has a
+contract with the Plan (regardless of the
+network) that is effective on the date of
+service or admission.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+Claim paid date
+</td>
+<td>
+The date the claim was paid.
+</td>
+<td>
+payment
+</td>
+<td>
+date
+</td>
+<td>
+Expected date of payment
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+Claim adjusted from identifier
+</td>
+<td>
+Prior claim number
+</td>
+<td>
+related
+</td>
+<td>
+
+</td>
+<td>
+Prior or corollary claims
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+Claim adjusted to identifier
+</td>
+<td>
+Replaced or Merged claim number
+</td>
+<td>
+related
+</td>
+<td>
+
+</td>
+<td>
+Prior or corollary claims
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td>
+Claim payee type code
+</td>
+<td>
+Identifies recipient of benefits payable; i.e., provider or subscriber 
+</td>
+<td>
+payee
+</td>
+<td>
+type
+</td>
+<td>
+Category of recipient
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+Claim payee
+</td>
+<td>
+Recipient reference
+</td>
+<td>
+payee
+</td>
+<td>
+party
+</td>
+<td>
+Recipient reference
+</td>
+<td>
+Reference(PractitionerRole | Patient)
+</td>
+</tr>
+<tr>
+<td>
+122
+</td>
+<td>
+Claim prescribing physician NPI
+</td>
+<td>
+The identifier from NCPDP field # 411-DB (Prescriber ID) that identifies the National Provider Identifier (NPI) of the provider who prescribed the pharmaceutical.
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+123
+</td>
+<td>
+Claim prescriber Network Status
+</td>
+<td>
+Indicates the network status of the prescribing physician
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+137
+</td>
+<td>
+Refill number
+</td>
+<td>
+The number fill of the current dispensed supply (0, 1, 2, etc.)
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+value
+</td>
+<td>
+Quantity
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td>
+Claim processing status code
+</td>
+<td>
+
+</td>
+<td>
+status
+</td>
+<td>
+
+</td>
+<td>
+active | cancelled | draft | entered-in-error
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td>
+Claim primary payer identifier
+</td>
+<td>
+Identifies the primary payer.  For use only on secondary claims.  
+</td>
+<td>
+insurance
+</td>
+<td>
+
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td>
+Line benefit payment status
+</td>
+<td>
+Indicates the in network or out of network payment status of the claim.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+CodeableConcept
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+143
+</td>
+<td>
+Prescription origin code
+</td>
+<td>
+Whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+CodeableConcept
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+144
+</td>
+<td>
+Plan reported brand-generic code
+</td>
+<td>
+Whether the plan adjudicated the claim as a brand or generic drug
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+CodeableConcept
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td>
+Total Amount
+</td>
+<td>
+Total amount for each category (i.e., submitted, allowed, etc.)
+</td>
+<td>
+total
+</td>
+<td>
+amount
+</td>
+<td>
+Financial total for the category
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+151
+</td>
+<td>
+Quantity qualifier code
+</td>
+<td>
+The unit of measurement for the drug. (gram, ml, etc.)
+</td>
+<td>
+item
+</td>
+<td>
+quantity
+</td>
+<td>
+Count of products or services
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+152
+</td>
+<td>
+Patient residence code
+</td>
+<td>
+Where the beneficiary lived when the prescription was filled; i.e., home, SNF, Homeless shelter, etc
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+<td>
+
+</td>
+</tr>
+>>> EOB Professional | Non-Physician
+* patient ^short = "Unique identifier for a member  (1 )"
+* insurance.coverage ^short = "Unique identifier for a member  (1 )"
+* insurance ^short = "Code of the primary payer responsible for the claim (2 )"
+* diagnosis ^short = "The member's principal condition treated during this service.  (7 )"
+* diagnosis ^short = "Additional diagnosis identified for this member. Decimals will be included.  (8 )"
+* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).  (16 )"
+* item.adjudication ^short = "Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services. (20 )"
+* item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary. (20 )"
+* item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. (20 )"
+* item.adjudication ^short = "The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%.  (20 )"
+* item.adjudication ^short = "Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit. (20 )"
+* item.adjudication ^short = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract. (20 )"
+* item.adjudication ^short = "The reduction in the payment amount to reflect the carrier as a secondary payor. (20 )"
+* item.adjudication ^short = "The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments. (20 )"
+* item.adjudication ^short = "The amount paid by the member at the point of service. (20 )"
+* item.adjudication ^short = "The amount of the discount (20 )"
+* item.adjudication ^short = "The amount paid to the provider. (20 )"
+* item.adjudication ^short = "The amount paid to the member. (20 )"
+* item.adjudication ^short = "The amount of the member's liability. (20 )"
+* diagnosis ^short = "The member's principal condition treated on the claim (837P Data Element HI01 or CMS 1500 Item 21A). Decimals will be included.  (22 )"
+* diagnosis ^short = "The member's principal condition treated during this service. This may or may not be different from the admitting diagnosis. Decimals will be included.  (22 )"
+* diagnosis ^short = "Additional diagnosis identified for this member (837P Data Element HI02 or CMS 1500 Item 21B). Decimals will be included. (23 )"
+* diagnosis ^short = "Additional diagnosis identified for this member. Decimals will be included.  (23 )"
+* item.category ^short = "High level classification of services into logical groupings (34 )"
+* identifier ^short = "Claim identifier for a claim. (35 )"
+* item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36 )"
+* item.productOrService ^short = "Medical procedure a patient received from a health care provider. Current coding methods include: CPT-4 and HCFA Common Procedure Coding System Level II - (HCPCSII). (40 )"
+* item.modifier ^short = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41 )"
+* item.quantity ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (42 )"
+* item.location ^short = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46 )"
+* supportingInfo.timing ^short = "The date the claim for payment was received (88 )"
+* payment.type ^short = "Indicates whether the claim was paid or denied. (91 )"
+* item.adjudication ^short = "Reason codes used to interpret the Non-Covered Amount (92 )"
+* provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94 )"
+* careTeam.provider ^short = "The National Provider Identifier assigned to the Rendering Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided). (95 )"
+* careTeam.provider ^short = "The identifier assigned to the PCP Provider. (96 )"
+* facility ^short = "The NPI of the facility where the services were rendered. (97 )"
+* careTeam.provider ^short = "The NPI of the referring physician. (99 )"
+* supportingInfo.code ^short = "Indicates that the Rendering Provider has a
+contract with the Plan (regardless of the
+network) that is effective on the date of
+service or admission. (101 )"
+* supportingInfo.code ^short = "Indicates that the Rendering Provider has a
+contract with the Plan (regardless of the
+network) that is effective on the date of
+service or admission. (101 )"
+* supportingInfo.code ^short = "Indicates the network status of the referring physician (101 )"
+* supportingInfo.code ^short = "Indicates the network status of the site of service (101 )"
+* payment.date ^short = "The date the claim was paid. (107 )"
+* patient ^short = "Provider submitted information that can be included on the claim (109 )"
+* patient ^short = "Provider submitted information that can be included on the claim (110 )"
+* related ^short = "Prior claim number (111 )"
+* related ^short = "Replaced or Merged claim number (112 )"
+* item.servicedPeriod ^short = "Date on which services began. Located on
+CMS 1500 (Form Locator 24A) (118 )"
+* item.servicedPeriod ^short = "Date on which services ended. Located on
+CMS 1500 (Form Locator 24A) (119 )"
+* payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber 
+ (120 )"
+* payee.party ^short = "Recipient reference
+ (121 )"
+* status ^short = " (140 )"
+* insurance ^short = "Identifies the primary payer.  For use only on secondary claims.   (141 )"
+* item.adjudication ^short = "Indicates the in network or out of network payment status of the claim. (142 )"
+* diagnosis.diagnosis ^short = "A plain text representation of the diagnosis (145 )"
+* item.productOrService ^short = "A plain text representation of the CPT / HCPCS procedure (147 )"
+* total.amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.) (148 )"
+* item.adjudication ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149 )"
+<tr>
+<td>
+1
+</td>
+<td>
+Member id
+</td>
+<td>
+Unique identifier for a member 
+</td>
+<td>
+patient
+</td>
+<td>
+
+</td>
+<td>
+The recipient of the products and services
+</td>
+<td>
+Reference(Patient)
+</td>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+Member id
+</td>
+<td>
+Unique identifier for a member 
+</td>
+<td>
+insurance
+</td>
+<td>
+coverage
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+Claim payer Identifier
+</td>
+<td>
+Code of the primary payer responsible for the claim
+</td>
+<td>
+insurance
+</td>
+<td>
+
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+7
+</td>
+<td>
+Diagnosis code - ICD-9 principal
+</td>
+<td>
+The member's principal condition treated during this service. 
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+8
+</td>
+<td>
+Diagnosis code - ICD-9 secondary
+</td>
+<td>
+Additional diagnosis identified for this member. Decimals will be included. 
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+16
+</td>
+<td>
+Claim type
+</td>
+<td>
+Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.). 
+</td>
+<td>
+type
+</td>
+<td>
+
+</td>
+<td>
+Category or discipline
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line submitted amount
+</td>
+<td>
+Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line allowed amount
+</td>
+<td>
+The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line patient deductible
+</td>
+<td>
+The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line coinsurance amount
+
+</td>
+<td>
+The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%. 
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line copay amount
+
+
+</td>
+<td>
+Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line disallowed amount
+
+
+
+
+</td>
+<td>
+The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line primary payer paid amount
+</td>
+<td>
+The reduction in the payment amount to reflect the carrier as a secondary payor.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line payment amount
+</td>
+<td>
+The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line amount paid by patient
+</td>
+<td>
+The amount paid by the member at the point of service.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line discount amount
+</td>
+<td>
+The amount of the discount
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line amount paid to provider
+</td>
+<td>
+The amount paid to the provider.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line member reimbursement
+</td>
+<td>
+The amount paid to the member.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+20
+</td>
+<td>
+Line member liability
+</td>
+<td>
+The amount of the member's liability.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+amount
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+Diagnosis code - ICD-10 header principal
+</td>
+<td>
+The member's principal condition treated on the claim (837P Data Element HI01 or CMS 1500 Item 21A). Decimals will be included. 
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+22
+</td>
+<td>
+Diagnosis code - ICD-10 principal
+</td>
+<td>
+The member's principal condition treated during this service. This may or may not be different from the admitting diagnosis. Decimals will be included. 
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+Diagnosis code - ICD-10 header secondary
+</td>
+<td>
+Additional diagnosis identified for this member (837P Data Element HI02 or CMS 1500 Item 21B). Decimals will be included.
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+23
+</td>
+<td>
+Diagnosis code - ICD-10 secondary
+</td>
+<td>
+Additional diagnosis identified for this member. Decimals will be included. 
+</td>
+<td>
+diagnosis
+</td>
+<td>
+
+</td>
+<td>
+Nature of illness or problem
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+34
+</td>
+<td>
+Type of service
+</td>
+<td>
+High level classification of services into logical groupings
+</td>
+<td>
+item
+</td>
+<td>
+category
+</td>
+<td>
+Benefit classification
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+35
+</td>
+<td>
+Claim unique identifier
+</td>
+<td>
+Claim identifier for a claim.
+</td>
+<td>
+identifier
+</td>
+<td>
+
+</td>
+<td>
+Business Identifier for the resource
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+36
+</td>
+<td>
+Line number
+</td>
+<td>
+Line identification number that represents the number assigned in a source system for identification and processing.
+</td>
+<td>
+item
+</td>
+<td>
+sequence
+</td>
+<td>
+Item instance identifier
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+40
+</td>
+<td>
+Procedure Code - CPT / HCPCS
+</td>
+<td>
+Medical procedure a patient received from a health care provider. Current coding methods include: CPT-4 and HCFA Common Procedure Coding System Level II - (HCPCSII).
+</td>
+<td>
+item
+</td>
+<td>
+productOrService
+</td>
+<td>
+Billing, service, product, or drug code
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+41
+</td>
+<td>
+Procedure Code Modifier - CPT / HCPCS
+</td>
+<td>
+Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service.
+</td>
+<td>
+item
+</td>
+<td>
+modifier
+</td>
+<td>
+Product or service billing modifiers
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+42
+</td>
+<td>
+Number of units
+</td>
+<td>
+The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. 
+</td>
+<td>
+item
+</td>
+<td>
+quantity
+</td>
+<td>
+Count of products or services
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+46
+</td>
+<td>
+Place of service code
+</td>
+<td>
+Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed.
+</td>
+<td>
+item
+</td>
+<td>
+location
+</td>
+<td>
+Place of service or where product was supplied
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+88
+</td>
+<td>
+Claim received date
+</td>
+<td>
+The date the claim for payment was received
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+timing
+</td>
+<td>
+timing | date
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+91
+</td>
+<td>
+Claim payment status code
+</td>
+<td>
+Indicates whether the claim was paid or denied.
+</td>
+<td>
+payment
+</td>
+<td>
+type
+</td>
+<td>
+Partial or complete payment
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+92
+</td>
+<td>
+Line payment denial code
+</td>
+<td>
+Reason codes used to interpret the Non-Covered Amount
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+Explanation of adjudication outcome
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+94
+</td>
+<td>
+Claim billing provider NPI
+</td>
+<td>
+The National Provider Identifier assigned to the Billing Provider.
+</td>
+<td>
+provider
+</td>
+<td>
+
+</td>
+<td>
+Party responsible for the claim
+</td>
+<td>
+Reference(Organization)
+</td>
+</tr>
+<tr>
+<td>
+95
+</td>
+<td>
+Claim performing provider NPI
+</td>
+<td>
+The National Provider Identifier assigned to the Rendering Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided).
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+96
+</td>
+<td>
+Claim PCP NPI
+</td>
+<td>
+The identifier assigned to the PCP Provider.
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+97
+</td>
+<td>
+Claim site of service NPI
+</td>
+<td>
+The NPI of the facility where the services were rendered.
+</td>
+<td>
+facility
+</td>
+<td>
+
+</td>
+<td>
+Servicing Facility
+</td>
+<td>
+Reference(Location)
+</td>
+</tr>
+<tr>
+<td>
+99
+</td>
+<td>
+Claim Referring Physician NPI
+</td>
+<td>
+The NPI of the referring physician.
+</td>
+<td>
+careTeam
+</td>
+<td>
+provider
+</td>
+<td>
+Practitioner or organization depending on PractionerRole.code
+</td>
+<td>
+Reference(Practitioner | PractitionerRole | Organization)
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+Claim billing provider network status
+</td>
+<td>
+Indicates that the Rendering Provider has a
+contract with the Plan (regardless of the
+network) that is effective on the date of
+service or admission.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+Claim performing provider network status
+</td>
+<td>
+Indicates that the Rendering Provider has a
+contract with the Plan (regardless of the
+network) that is effective on the date of
+service or admission.
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+Claim Referring Physican Network Status
+</td>
+<td>
+Indicates the network status of the referring physician
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+Claim site of service network status
+</td>
+<td>
+Indicates the network status of the site of service
+</td>
+<td>
+supportingInfo
+</td>
+<td>
+code
+</td>
+<td>
+Type of information
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+107
+</td>
+<td>
+Claim paid date
+</td>
+<td>
+The date the claim was paid.
+</td>
+<td>
+payment
+</td>
+<td>
+date
+</td>
+<td>
+Expected date of payment
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+109
+</td>
+<td>
+Patient account number
+</td>
+<td>
+Provider submitted information that can be included on the claim
+</td>
+<td>
+patient
+</td>
+<td>
+
+</td>
+<td>
+The recipient of the products and services
+</td>
+<td>
+identifier
+</td>
+</tr>
+<tr>
+<td>
+110
+</td>
+<td>
+Medical record number
+</td>
+<td>
+Provider submitted information that can be included on the claim
+</td>
+<td>
+patient
+</td>
+<td>
+
+</td>
+<td>
+The recipient of the products and services
+</td>
+<td>
+identifier
+</td>
+</tr>
+<tr>
+<td>
+111
+</td>
+<td>
+Claim adjusted from identifier
+</td>
+<td>
+Prior claim number
+</td>
+<td>
+related
+</td>
+<td>
+
+</td>
+<td>
+Prior or corollary claims
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+112
+</td>
+<td>
+Claim adjusted to identifier
+</td>
+<td>
+Replaced or Merged claim number
+</td>
+<td>
+related
+</td>
+<td>
+
+</td>
+<td>
+Prior or corollary claims
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+118
+</td>
+<td>
+Service (from) date
+</td>
+<td>
+Date on which services began. Located on
+CMS 1500 (Form Locator 24A)
+</td>
+<td>
+item
+</td>
+<td>
+servicedPeriod
+</td>
+<td>
+Relevant time frame for the line
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+119
+</td>
+<td>
+Service to date
+</td>
+<td>
+Date on which services ended. Located on
+CMS 1500 (Form Locator 24A)
+</td>
+<td>
+item
+</td>
+<td>
+servicedPeriod
+</td>
+<td>
+Relevant time frame for the line
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+120
+</td>
+<td>
+Claim payee type code
+</td>
+<td>
+Identifies recipient of benefits payable; i.e., provider or subscriber 
+</td>
+<td>
+payee
+</td>
+<td>
+type
+</td>
+<td>
+Category of recipient
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+121
+</td>
+<td>
+Claim payee
+</td>
+<td>
+Recipient reference
+</td>
+<td>
+payee
+</td>
+<td>
+party
+</td>
+<td>
+Recipient reference
+</td>
+<td>
+Reference(PractitionerRole | Patient)
+</td>
+</tr>
+<tr>
+<td>
+140
+</td>
+<td>
+Claim processing status code
+</td>
+<td>
+
+</td>
+<td>
+status
+</td>
+<td>
+
+</td>
+<td>
+active | cancelled | draft | entered-in-error
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+141
+</td>
+<td>
+Claim primary payer identifier
+</td>
+<td>
+Identifies the primary payer.  For use only on secondary claims.  
+</td>
+<td>
+insurance
+</td>
+<td>
+
+</td>
+<td>
+Insurance information
+</td>
+<td>
+Reference(Coverage)
+</td>
+</tr>
+<tr>
+<td>
+142
+</td>
+<td>
+Line benefit payment status
+</td>
+<td>
+Indicates the in network or out of network payment status of the claim.
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+CodeableConcept
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+145
+</td>
+<td>
+Diagnosis Code Description
+</td>
+<td>
+A plain text representation of the diagnosis
+</td>
+<td>
+diagnosis
+</td>
+<td>
+diagnosis
+</td>
+<td>
+CodeableConcept
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+147
+</td>
+<td>
+CPT / HCPCS Procedure Code Description
+</td>
+<td>
+A plain text representation of the CPT / HCPCS procedure
+</td>
+<td>
+item
+</td>
+<td>
+productOrService
+</td>
+<td>
+Billing, service, product, or drug code
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+148
+</td>
+<td>
+Total Amount
+</td>
+<td>
+Total amount for each category (i.e., submitted, allowed, etc.)
+</td>
+<td>
+total
+</td>
+<td>
+amount
+</td>
+<td>
+Financial total for the category
+</td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+149
+</td>
+<td>
+Allowed number of units
+</td>
+<td>
+The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. 
+</td>
+<td>
+item
+</td>
+<td>
+adjudication
+</td>
+<td>
+Non-monitary value
+</td>
+<td>
+
+</td>
+</tr>

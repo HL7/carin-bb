@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CMSPlaceOfService",
+  "id": "CMSPlaceOfService",
+  "title": "CMS Place of Service",
+  "description": "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .  The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.   The code set is owned by CMS and is available for use.",
+  "version": "0.2.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceOfService"
+}

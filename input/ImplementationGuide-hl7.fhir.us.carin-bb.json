@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.carin-bb",
   "url": "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-bb",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "CARINConsumerDirectedPayerDataExchange",
   "title": "CARIN Consumer Directed Payer Data Exchange",
   "status": "active",
@@ -128,7 +128,15 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/AdjudicationDenialReasonVS"
+          "reference": "StructureDefinition/AdjudicationType"
+        },
+        "name": "Adjudication Type",
+        "description": "An extension to provide a human-readable description of an organization.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AdjudicationDenialReason"
         },
         "name": "Adjudication Denial Reason",
         "description": "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC",
@@ -136,31 +144,15 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/AdjudicationPayerValueCodesVS"
+          "reference": "ValueSet/AdjudicationSlideCodes"
         },
-        "name": "Payer Adjudication Value Codes",
-        "description": "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem",
+        "name": "Adjudication Slice Codes",
+        "description": "Codes used to discriminate slices of adjudication and item.adjudication",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/AdjudicationValueCodesVS"
-        },
-        "name": "Benefit Payment Status Category",
-        "description": "Benefit Payment Status Category",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/AdjustmentAmountCategoryVS"
-        },
-        "name": "Adjustment Amount Category",
-        "description": "Describes the various amount fields used when submitting and adjudicating a claim.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/BenefitPaymentStatusCategoryVS"
+          "reference": "ValueSet/AdjudicationValueCodes"
         },
         "name": "Benefit Payment Status Category",
         "description": "Benefit Payment Status Category",
@@ -168,7 +160,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/BenefitPaymentStatusVS"
+          "reference": "ValueSet/BenefitPaymentStatus"
         },
         "name": "Benefit Payment Status",
         "description": "Indicates the in network or out of network payment status of the claim.",
@@ -176,7 +168,15 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/CPTHCPCSModifierCodeVS"
+          "reference": "ValueSet/CMSPlaceOfService"
+        },
+        "name": "CMS Place of Service",
+        "description": "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .  The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.   The code set is owned by CMS and is available for use.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CPTHCPCSModifierCode"
         },
         "name": "AMA CPT and CMS HCPCS Modifier Codes",
         "description": "AMA CPT and CMS HCPCS Modifier Codes",
@@ -184,7 +184,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/CPTHCPCSProcedureCodeVS"
+          "reference": "ValueSet/CPTHCPCSProcedureCode"
         },
         "name": "AMA CPT and CMS HCPCS Procedure Codes",
         "description": "AMA CPT and CMS HCPCS Procedure Codes",
@@ -192,15 +192,15 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/ClaimAdjudicationCategoryVS"
+          "reference": "ValueSet/ClaimAdjudicationCategory"
         },
         "name": "Claim Adjudication Category",
-        "description": "Values for EOB.item.adjudication.category",
+        "description": "Values for EOB.item.adjudication.category, as per Igor",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/ClaimInformationCategoryVS"
+          "reference": "ValueSet/ClaimInformationCategory"
         },
         "name": "Claim Information Category",
         "description": "Claim Information Category - Used as the discriminator for supportingInfo",
@@ -208,15 +208,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/ClaimPayeeTypeCodeVS"
-        },
-        "name": "Claim Payee Type Code",
-        "description": "Identifies recipient of benefits payable; i.e., provider or subscriber.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/ClaimPaymentStatusCodeVS"
+          "reference": "ValueSet/ClaimPaymentStatusCode"
         },
         "name": "Claim Payment Status Code",
         "description": "Indicates whether the claim / item was paid or denied.",
@@ -224,7 +216,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/FDANDCNCPDPCompoundCodeVS"
+          "reference": "ValueSet/FDANDCNCPDPCompoundCode"
         },
         "name": "FDA NDC NCPDP Compound Code",
         "description": "NCPDP field # 407-D7 (National Drug Code (NDC)) or NCPDP field # 406-D6 (Compound Code)",
@@ -232,7 +224,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/FDANationalDrugCodeVS"
+          "reference": "ValueSet/FDANationalDrugCode"
         },
         "name": "FDA National Drug Code (NDC)",
         "description": "FDA National Drug Code (NDC)",
@@ -240,15 +232,15 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/ICD10CMVS"
+          "reference": "ValueSet/ICD10CM"
         },
         "name": "ICD-10-CM Diagnosis Codes",
-        "description": "ICD-10-CM Diagnosis Codes",
+        "description": "ICD-10-CM Diagnosis Codes.  ***We need ALL Codes, inactive and inactive.   Current binding is to active codes only***",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/ICD10PCSVS"
+          "reference": "ValueSet/ICD10PCS"
         },
         "name": "ICD-10-PCS",
         "description": "ICD-10-PCS",
@@ -256,7 +248,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/MSDRGVS"
+          "reference": "ValueSet/MSDRG"
         },
         "name": "MS-DRG",
         "description": "MS-DRG",
@@ -264,7 +256,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/NCPDPBrandGenericCodeVS"
+          "reference": "ValueSet/NCPDPBrandGenericCode"
         },
         "name": "NCPDP Brand Generic Code",
         "description": "http://www.ncpdp.org/brand-generic-code",
@@ -272,7 +264,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/NCPDPDispensedAsWrittenVS"
+          "reference": "ValueSet/NCPDPDispensedAsWritten"
         },
         "name": "NCPDP Dispensed As Written (DAW)",
         "description": "http://www.ncpdp.org/dispensed-as-written-or-product-selection-code",
@@ -280,7 +272,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/NCPDPPrescriptionOriginCodeVS"
+          "reference": "ValueSet/NCPDPPrescriptionOriginCode"
         },
         "name": "NCPDP Prescription Origin Code",
         "description": "http://www.ncpdp.org/prescription-origin-code",
@@ -288,7 +280,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/NCPDPRejectCodeVS"
+          "reference": "ValueSet/NCPDPRejectCode"
         },
         "name": "NCPDP Reject Code",
         "description": "http://www.ncpdp.org/reject-code",
@@ -296,7 +288,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/NUBCPatientDischargeStatusVS"
+          "reference": "ValueSet/NUBCPatientDischargeStatus"
         },
         "name": "NUBC Patient Discharge Status",
         "description": "NUBC Patient Discharge Status",
@@ -304,15 +296,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/NUBCPointOfOriginVS"
-        },
-        "name": "NUBC Point of Origin of Admission",
-        "description": "NUBC Point of Origin of Admission",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/NUBCPresentOnAdmissionVS"
+          "reference": "ValueSet/NUBCPresentOnAdmission"
         },
         "name": "NUBC Present On Admission",
         "description": "NUBC Present On Admission",
@@ -320,7 +304,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/NUBCPriorityOfAdmissionnVS"
+          "reference": "ValueSet/NUBCPriorityOfAdmissionn"
         },
         "name": "NUBC Priority of Admission",
         "description": "NUBC Priority of Admission",
@@ -328,31 +312,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/NUBCRevenueCodeVS"
-        },
-        "name": "NUBC Revenue Code",
-        "description": "NUBC Revenue Code",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/NUBCTypeOfBillVS"
-        },
-        "name": "NUBC Type of Bill",
-        "description": "Code System http://www.nubc.org/type-of-bill,",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/OrganizationIdentifierTypeVS"
-        },
-        "name": "Organization Identifier Type",
-        "description": "Organization  Identifier Type",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/PatientIdentifierTypeVS"
+          "reference": "ValueSet/PatientIdentifierType"
         },
         "name": "Patient Identifier Type",
         "description": "Patient Identifier Type",
@@ -360,7 +320,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/PayerAdjudicationAmountCategoryVS"
+          "reference": "ValueSet/PayerAdjudicationAmountCategory"
         },
         "name": "Payer Adjudication Amount Category",
         "description": "This describes the various amount fields used when payers receive and adjudicate a claim.",
@@ -368,10 +328,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/PayerInpatientFacilityProviderRoleVSProviderRoleVS"
+          "reference": "ValueSet/PayerAdjudicationValueCodes"
         },
-        "name": "Payer - Inpatient Facility Provider Role",
-        "description": "Indicates the role of the provider providing the care.",
+        "name": "Payer Adjudication Value Codes",
+        "description": "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem",
         "exampleBoolean": false
       },
       {
@@ -384,9 +344,9 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/PayerOutpatientFacilityProviderRoleVS"
+          "reference": "ValueSet/PayerInstitutionalProviderRole"
         },
-        "name": "Payer - Outpatient Facility Provider Role",
+        "name": "Payer - Inpatient Facility Provider Role",
         "description": "Indicates the role of the provider providing the care.",
         "exampleBoolean": false
       },
@@ -400,7 +360,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/PayerPharmacyProviderRoleVS"
+          "reference": "ValueSet/PayerPharmacyProviderRole"
         },
         "name": "Payer - Pharmacy Provider Role",
         "description": "Indicates the role of the provider providing the care.",
@@ -408,7 +368,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/PayerProfessionalAndNonClinicianProviderRoleVS"
+          "reference": "ValueSet/PayerProfessionalAndNonClinicianProviderRole"
         },
         "name": "Payer - Professional and Non-Clinician Provider Role",
         "description": "Indicates the role of the provider providing the care.",
@@ -424,15 +384,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/PayerProviderRoleVS"
-        },
-        "name": "Payer Provider Role",
-        "description": "Payer Provider Role",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/ProviderNetworkStatusVS"
+          "reference": "ValueSet/ProviderNetworkStatus"
         },
         "name": "Provider Network Status",
         "description": "Indicates that the Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission.",
@@ -440,10 +392,18 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/AdjudicationSliceCodesCS"
+        },
+        "name": "Adjudication Slice Codes",
+        "description": "Codes used to discriminate slices of adjudication and item.adjudication",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/ClaimAdjudicationCategoryCS"
         },
         "name": "Claim Adjudication Category",
-        "description": "Values for EOB.item.adjudication.category",
+        "description": "Values for EOB.item.adjudication.category and total.category",
         "exampleBoolean": false
       },
       {
@@ -485,6 +445,46 @@
         "name": "Payer Provider Role",
         "description": "Payer Provider Role",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Coverage/Coverage1"
+        },
+        "name": "Coverage1",
+        "description": "Coverage Example1",
+        "exampleCanonical": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Coverage"
+      },
+      {
+        "reference": {
+          "reference": "ExplanationOfBenefit/EOBInpatient1"
+        },
+        "name": "EOBInpatient1",
+        "description": "EOB Inpatient Example1",
+        "exampleCanonical": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inpatient-Facility"
+      },
+      {
+        "reference": {
+          "reference": "Organization/OrganizationPayer1"
+        },
+        "name": "OrganizationPayer1",
+        "description": "Payer1",
+        "exampleCanonical": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/OrganizationProvider1"
+        },
+        "name": "OrganizationProvider1",
+        "description": "Provider 1",
+        "exampleCanonical": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization"
+      },
+      {
+        "reference": {
+          "reference": "Patient/Patient1"
+        },
+        "name": "Patient1",
+        "description": "Patient Example1",
+        "exampleCanonical": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Patient"
       },
       {
         "reference": {
@@ -566,6 +566,11 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "Common_Payer_Consumer_Data_Set.html",
+          "title": "Common Payer Consumer Data Set",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "downloads.html",
           "title": "Downloads",
           "generation": "markdown"
@@ -588,6 +593,16 @@
         {
           "nameUrl": "Terminology.html",
           "title": "Terminology",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Capability.html",
+          "title": "Capability",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Examples.html",
+          "title": "Examples",
           "generation": "markdown"
         }
       ]

@@ -5,8 +5,8 @@
   "name": "ClaimAdjudicationCategoryCS",
   "id": "ClaimAdjudicationCategoryCS",
   "title": "Claim Adjudication Category",
-  "description": "Values for EOB.item.adjudication.category",
-  "version": "0.1.0",
+  "description": "Values for EOB.item.adjudication.category and total.category",
+  "version": "0.2.0",
   "url": "http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimAdjudicationCategoryCS",
   "concept": [
     {
@@ -87,6 +87,11 @@
     {
       "code": "allowedunits",
       "display": "allowed units",
+      "definition": "Undefined"
+    },
+    {
+      "code": "inoutnetwork",
+      "display": "In or Out of Network",
       "definition": "Undefined"
     }
   ]

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-PractitionerRole",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-PractitionerRole",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "CARINBBPractitionerRole",
   "title": "CARIN BB PractitionerRole",
   "status": "active",
@@ -86,7 +86,15 @@
         "path": "PractitionerRole.code",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerProviderRoleVS"
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role"
+        }
+      },
+      {
+        "id": "PractitionerRole.specialty",
+        "path": "PractitionerRole.specialty",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty"
         }
       },
       {

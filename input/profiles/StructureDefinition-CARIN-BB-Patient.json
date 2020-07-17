@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-Patient",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Patient",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "CARINBBPatient",
   "title": "CARIN BB Patient",
   "status": "active",
@@ -73,13 +73,13 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "value",
-              "path": "type.coding.code"
+              "path": "$this",
+              "type": "pattern"
             }
           ],
           "rules": "open",
           "ordered": false,
-          "description": "Slice based on  pattern"
+          "description": "Slice based on $this pattern"
         }
       },
       {
@@ -87,7 +87,7 @@
         "path": "Patient.identifier.type",
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/PatientIdentifierTypeVS"
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/PatientIdentifierType"
         }
       },
       {
@@ -96,7 +96,17 @@
         "sliceName": "memberid",
         "short": "Member ID",
         "min": 1,
-        "max": "*"
+        "max": "*",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "mb",
+                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS"
+              }
+            ]
+          }
+        }
       },
       {
         "id": "Patient.identifier:memberid.type",
@@ -109,19 +119,22 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.identifier:memberid.type.coding.code",
-        "path": "Patient.identifier.type.coding.code",
-        "min": 1,
-        "patternCode": "mb",
-        "mustSupport": true
-      },
-      {
         "id": "Patient.identifier:medrecnum",
         "path": "Patient.identifier",
         "sliceName": "medrecnum",
         "short": "Medical Record Number",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "mr",
+                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS"
+              }
+            ]
+          }
+        }
       },
       {
         "id": "Patient.identifier:medrecnum.type",
@@ -134,19 +147,22 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.identifier:medrecnum.type.coding.code",
-        "path": "Patient.identifier.type.coding.code",
-        "min": 1,
-        "patternCode": "mr",
-        "mustSupport": true
-      },
-      {
         "id": "Patient.identifier:uniquememberid",
         "path": "Patient.identifier",
         "sliceName": "uniquememberid",
         "short": "Unique Member ID",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "um",
+                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS"
+              }
+            ]
+          }
+        }
       },
       {
         "id": "Patient.identifier:uniquememberid.type",
@@ -159,19 +175,22 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.identifier:uniquememberid.type.coding.code",
-        "path": "Patient.identifier.type.coding.code",
-        "min": 1,
-        "patternCode": "um",
-        "mustSupport": true
-      },
-      {
         "id": "Patient.identifier:patacctnum",
         "path": "Patient.identifier",
         "sliceName": "patacctnum",
         "short": "Patient Account Number",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "pt",
+                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS"
+              }
+            ]
+          }
+        }
       },
       {
         "id": "Patient.identifier:patacctnum.type",
@@ -181,13 +200,6 @@
         "id": "Patient.identifier:patacctnum.type.coding",
         "path": "Patient.identifier.type.coding",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.identifier:patacctnum.type.coding.code",
-        "path": "Patient.identifier.type.coding.code",
-        "min": 1,
-        "patternCode": "pt",
         "mustSupport": true
       }
     ]

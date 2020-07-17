@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "PatientIdentifierType",
+  "id": "PatientIdentifierType",
+  "title": "Patient Identifier Type",
+  "description": "Patient Identifier Type",
+  "version": "0.2.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PatientIdentifierType",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS",
+        "concept": [
+          {
+            "code": "um"
+          },
+          {
+            "code": "mb"
+          },
+          {
+            "code": "mr"
+          },
+          {
+            "code": "pt"
+          }
+        ]
+      }
+    ]
+  }
+}

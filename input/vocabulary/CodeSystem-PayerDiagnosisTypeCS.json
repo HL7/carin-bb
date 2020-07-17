@@ -6,7 +6,7 @@
   "id": "PayerDiagnosisTypeCS",
   "title": "Payer Diagnosis Type",
   "description": "Payer Diagnosis Type",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "url": "http://hl7.org/fhir/us/carin-bb/CodeSystem/PayerDiagnosisTypeCS",
   "concept": [
     {
@@ -33,11 +33,6 @@
       "code": "first-listed",
       "display": "first-listed",
       "definition": "first-listed"
-    },
-    {
-      "code": "admitting",
-      "display": "admitting",
-      "definition": "admitting"
     }
   ]
 }

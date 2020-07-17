@@ -6,38 +6,43 @@
   "id": "ClaimInformationCategoryCS",
   "title": "Claim Information Category",
   "description": "Claim Information Category - Used as the discriminator for supportingInfo",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "url": "http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimInformationCategoryCS",
   "concept": [
     {
       "code": "billingnetworkcontractingstatus",
       "display": "billingnetworkcontractingstatus",
-      "definition": "Indicates the in network or out of network payment status of the claim."
+      "definition": "Indicates the network  status of the billing physician."
     },
     {
       "code": "attendingnetworkcontractingstatus",
       "display": "attendingnetworkcontractingstatus",
-      "definition": "Indicates the in network or out of network payment status of the claim."
+      "definition": "Indicates the network  status of the attending physician."
     },
     {
       "code": "sitenetworkcontractingstatus",
       "display": "sitenetworkcontractingstatus",
-      "definition": "Indicates the in network or out of network payment status of the claim."
+      "definition": "Indicates the network  status of the site of service."
     },
     {
       "code": "referringnetworkcontractingstatus",
       "display": "referringnetworkcontractingstatus",
-      "definition": "Indicates the in network or out of network payment status of the claim."
+      "definition": "Indicates the network  status of the referring physician."
     },
     {
       "code": "performingnetworkcontractingstatus",
       "display": "performingnetworkcontractingstatus",
-      "definition": "Indicates the in network or out of network payment status of the claim."
+      "definition": "Indicates the network  status of the performing physician."
     },
     {
       "code": "prescribingnetworkcontractingstatus",
       "display": "prescribingnetworkcontractingstatus",
-      "definition": "Indicates the in network or out of network payment status of the claim."
+      "definition": "Indicates the network  status of the prescribing physician."
+    },
+    {
+      "code": "supervisingnetworkcontractingstatus",
+      "display": "supervisingingnetworkcontractingstatus",
+      "definition": "Indicates the network  status of the supervising physician."
     },
     {
       "code": "clmrecvddate",
@@ -80,8 +85,8 @@
       "definition": "Patient’s status as of the discharge date for a facility stay."
     },
     {
-      "code": "ms-drg",
-      "display": "ms-drg",
+      "code": "drg",
+      "display": "drg",
       "definition": "Diagnosis Related Group"
     },
     {
@@ -113,6 +118,11 @@
       "code": "brandgenericcode",
       "display": "brandgenericcode",
       "definition": "Whether the plan adjudicated the claim as a brand or generic drug."
+    },
+    {
+      "code": "typeofbill",
+      "display": "Type of Bill",
+      "definition": "Type of Bill"
     }
   ]
 }

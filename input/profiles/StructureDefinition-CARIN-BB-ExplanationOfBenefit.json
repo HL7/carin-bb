@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-ExplanationOfBenefit",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "CARINBBExplanationOfBenefit",
   "title": "CARIN BB Explanation Of Benefit",
   "status": "active",
@@ -122,13 +122,13 @@
         "slicing": {
           "discriminator": [
             {
-              "path": "type",
-              "type": "value"
+              "path": "$this",
+              "type": "pattern"
             }
           ],
           "rules": "open",
           "ordered": false,
-          "description": "Slice based on value pattern"
+          "description": "Slice based on $this pattern"
         },
         "min": 1
       },
@@ -145,18 +145,17 @@
         "short": "Claim Number",
         "min": 1,
         "max": "1",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "cn",
+                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS"
+              }
+            ]
+          }
+        },
         "mustSupport": true
-      },
-      {
-        "id": "ExplanationOfBenefit.identifier:claimnumber.type",
-        "path": "ExplanationOfBenefit.identifier.type",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "cn"
-            }
-          ]
-        }
       },
       {
         "id": "ExplanationOfBenefit.identifier:claimnumber.value",
@@ -237,7 +236,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimPayeeTypeCodeVS"
+          "valueSet": "http://hl7.org/fhir/ValueSet/payeetype"
         }
       },
       {
@@ -248,7 +247,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-PractitionerRole",
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization",
               "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Patient"
             ]
           }
@@ -263,6 +262,9 @@
       {
         "id": "ExplanationOfBenefit.careTeam.provider",
         "path": "ExplanationOfBenefit.careTeam.provider",
+        "patternReference": {
+          "reference": "  CarinBBPractitioner"
+        },
         "mustSupport": true
       },
       {
@@ -287,15 +289,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimInformationCategoryVS"
-        }
-      },
-      {
-        "id": "ExplanationOfBenefit.supportingInfo.category.coding",
-        "path": "ExplanationOfBenefit.supportingInfo.category.coding",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimInformationCategoryVS"
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimInformationCategory"
         }
       },
       {
@@ -312,6 +306,19 @@
         "id": "ExplanationOfBenefit.supportingInfo.value[x]",
         "path": "ExplanationOfBenefit.supportingInfo.value[x]",
         "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.diagnosis",
+        "path": "ExplanationOfBenefit.diagnosis"
+      },
+      {
+        "id": "ExplanationOfBenefit.diagnosis.diagnosis[x]",
+        "path": "ExplanationOfBenefit.diagnosis.diagnosis[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
       },
       {
         "id": "ExplanationOfBenefit.procedure",
@@ -331,12 +338,32 @@
       {
         "id": "ExplanationOfBenefit.procedure.procedure[x]",
         "path": "ExplanationOfBenefit.procedure.procedure[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "type": [
           {
             "code": "CodeableConcept"
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.procedure.procedureCodeableConcept",
+        "path": "ExplanationOfBenefit.procedure.procedureCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ICD10PCS"
+        }
       },
       {
         "id": "ExplanationOfBenefit.insurance",
@@ -377,13 +404,57 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimAdjudicationCategoryVS"
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimAdjudicationCategory"
         }
       },
       {
         "id": "ExplanationOfBenefit.adjudication",
         "path": "ExplanationOfBenefit.adjudication",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication.extension",
+        "path": "ExplanationOfBenefit.adjudication.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication.extension:adjudication-type",
+        "path": "ExplanationOfBenefit.adjudication.extension",
+        "sliceName": "adjudication-type",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ExplanationOfBenefit.adjudication.category",
+        "path": "ExplanationOfBenefit.adjudication.category",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimAdjudicationCategory"
+        }
       },
       {
         "id": "ExplanationOfBenefit.total",
@@ -394,7 +465,7 @@
         "path": "ExplanationOfBenefit.total.category",
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerAdjudicationAmountCategoryVS"
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerAdjudicationAmountCategory"
         }
       },
       {
@@ -407,15 +478,7 @@
         "path": "ExplanationOfBenefit.payment.type",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimPaymentStatusCodeVS"
-        }
-      },
-      {
-        "id": "ExplanationOfBenefit.payment.adjustmentReason",
-        "path": "ExplanationOfBenefit.payment.adjustmentReason",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/AdjudicationDenialReasonVS"
+          "valueSet": "http://hl7.org/fhir/us/carin-bb/ValueSet/ClaimPaymentStatusCode"
         }
       }
     ]

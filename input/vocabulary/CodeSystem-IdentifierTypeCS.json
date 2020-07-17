@@ -6,7 +6,7 @@
   "id": "IdentifierTypeCS",
   "title": "Identifier Type",
   "description": "Identifier Type",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "url": "http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS",
   "concept": [
     {
@@ -43,6 +43,11 @@
       "code": "um",
       "display": "Unique Member ID",
       "definition": "Unique Member ID"
+    },
+    {
+      "code": "cn",
+      "display": "Claim Number",
+      "definition": "Claim Number"
     }
   ]
 }

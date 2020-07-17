@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "NCPDPRejectCode",
+  "id": "NCPDPRejectCode",
+  "title": "NCPDP Reject Code",
+  "description": "http://www.ncpdp.org/reject-code",
+  "version": "0.2.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPRejectCode"
+}

@@ -1,0 +1,10 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CPTHCPCSModifierCode",
+  "id": "CPTHCPCSModifierCode",
+  "title": "AMA CPT and CMS HCPCS Modifier Codes",
+  "description": "AMA CPT and CMS HCPCS Modifier Codes",
+  "version": "0.2.0",
+  "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/CPTHCPCSModifierCode"
+}
