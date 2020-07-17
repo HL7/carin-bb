@@ -9,7 +9,7 @@ See the [Table of Contents](toc.html) for more information.
 
 <h3>Authors</h3>
 
-<table border="1" style="width:100%">
+<table border="1" style="width:70%">
   <tr>
     <th>Primary or Secondary</th>
     <th>Name</th>
@@ -53,12 +53,22 @@ See the [Table of Contents](toc.html) for more information.
    <tr>
    <td></td>
   <td>Igor Sirkovich </td>
-  <td>igor@simpatico.ai</td>
+  <td>igor@smilecdr.com</td>
   </tr>
   </table>
 <h3>Acknowledgements</h3>
 The Consumer-Directed Payer Data Exchange Implementation Guide is also known as the CARIN Blue Button&reg; Implementation Guide.
-
+<h3>Log of Continuous Integration Build Changes</h3>
+<ul>
+<li>Version 0.2 - July 17, 2002</li>
+<ol>
+<li>Corrections to slices defined and value sets referenced in 4 EOB profiles following review</li>
+<li>Changes to Value Set names (removing VS suffix)</li>
+<li>Experimental labeling of Coverage profile with annotation from CPCDS-FHIR mapping spreadsheet.  Inclusion of CPCDS mapping table in Coverage intro</li>
+<li>Addition of (empty) Capability Statement page.</li>
+<li>Addition of initial set of examples.   Will be expanded to cover all resources.</li>
+</ol>
+</ul>
 
 
 <div class="footnote">
