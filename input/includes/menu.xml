@@ -15,16 +15,15 @@
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
-     <li><a href="index.html#description">Introduction          </a></li>
-     <li><a href="Background.html#the-carin-alliance">The CARIN Alliance</a></li>
-      <li><a href="Background.html#guide-overview">Guide Overview       </a></li>
+     <li><a   href="Background.html#the-carin-alliance">The CARIN Alliance</a></li>
+      <li><a      href="Background.html#guide-overview">Guide Overview    </a></li>
     </ul>
   </li>
      <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases<b class="caret"> </b></a>
     <ul class="dropdown-menu">
        <li><a href="Use_Case.html#terms-and-concepts">Terms and Concepts</a></li>
-       <li><a href="Use_Case.html#use-cases">Use Cases            </a></li>
+       <li><a href=         "Use_Case.html#use-cases">Use Cases         </a></li>
     </ul>
    </li>
     <li class="dropdown">
@@ -55,10 +54,7 @@
     <li>
     <a href="Examples.html">Examples</a>
     </li>
-        <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Downloads<b class="caret"> </b></a>
-    <ul class="dropdown-menu">
-    <li><a href="downloads.html">Downloads</a></li>  
-    </ul>
-   </li>
+    <li>
+    <a href="downloads.html">Downloads</a>
+    </li>
 </ul>
