@@ -6,7 +6,7 @@ The CARIN Blue Button Framework was designed to answer the challenge for health 
 
 The goal of the CARIN Alliance Health Plan Workgroup is to develop an agreed upon set of data fields to exchange with consumers and a FHIR-based implementation guide for health plans to use to implement the API.
 
-<b>@Ryan – Add some text about FHIR Accelerators here. </b>  
+<b>Work-in-progress:Add some text about FHIR Accelerators here. </b>  
 
 The CARIN health plan workgroup was organized to develop a FHIR‐based API that could be implemented by a consumer‐facing application.
 <h3>Consumer-directed exchange</h3>
