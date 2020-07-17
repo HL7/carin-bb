@@ -32,15 +32,15 @@
      <li><a href="profiles.html">Profiles</a></li>
     <li><a href="search.html">Search Behavior and Parameters</a></li>
     <li><a href="Terminology.html">Terminology </a></li>
-    <li><a href="capability.html">Capability Statements</a></li>
+    <li><a href="Capability.html">Capability Statements</a></li>
     </ul>
    </li>
      </li>
      <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Security<b class="caret"> </b></a>
     <ul class="dropdown-menu">
-     <li><a href="Authorization_Authentication_and_Registration.html">Authentication and Authorization</a></li>
-      <li><a href="Authorization_Authentication_and_Registration.html">SMARTonFHIR App Launch</a></li>
+           <li><a href="Authorization_Authentication_and_Registration.html">SMARTonFHIR App Launch</a></li>
+           <li><a href="Authorization_Authentication_and_Registration.html">Authentication and Authorization</a></li>
     </ul>
    </li>
         <li class="dropdown">
