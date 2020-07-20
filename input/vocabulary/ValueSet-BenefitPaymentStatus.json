@@ -5,7 +5,7 @@
   "id": "BenefitPaymentStatus",
   "title": "Benefit Payment Status",
   "description": "Indicates the in network or out of network payment status of the claim.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/BenefitPaymentStatus",
   "compose": {
     "include": [

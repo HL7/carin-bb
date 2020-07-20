@@ -5,7 +5,7 @@
   "id": "PayerProfessionalandnoncliniciandiagnosistype",
   "title": "Diagnosis Type -- Professional and Non-Clinician",
   "description": "Payer Professional and Non-Clinician Diagnosis Type",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerProfessionalandnoncliniciandiagnosistype",
   "compose": {
     "include": [

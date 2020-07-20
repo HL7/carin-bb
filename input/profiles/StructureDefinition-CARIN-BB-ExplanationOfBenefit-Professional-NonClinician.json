@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-ExplanationOfBenefit-Professional-NonClinician",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "CARINBBExplanationOfBenefitProfessionalNonClinician",
   "title": "CARIN BB ExplanationOfBenefit Professional NonClinician",
   "status": "active",

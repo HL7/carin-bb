@@ -6,7 +6,7 @@
   "id": "ClaimAdjudicationCategoryCS",
   "title": "Claim Adjudication Category",
   "description": "Values for EOB.item.adjudication.category and total.category",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimAdjudicationCategoryCS",
   "concept": [
     {

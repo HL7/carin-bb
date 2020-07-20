@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "AdjudicationType",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "AdjudicationType",
   "title": "Adjudication Type",
   "status": "active",

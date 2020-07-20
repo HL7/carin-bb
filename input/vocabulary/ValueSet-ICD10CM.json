@@ -5,7 +5,7 @@
   "id": "ICD10CM",
   "title": "ICD-10-CM Diagnosis Codes",
   "description": "ICD-10-CM Diagnosis Codes.  ***We need ALL Codes, inactive and inactive.   Current binding is to active codes only***",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/ICD10CM",
   "compose": {
     "include": [

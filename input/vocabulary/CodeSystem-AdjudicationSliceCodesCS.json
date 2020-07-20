@@ -6,7 +6,7 @@
   "id": "AdjudicationSliceCodesCS",
   "title": "Adjudication Slice Codes",
   "description": "Codes used to discriminate slices of adjudication and item.adjudication",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/CodeSystem/AdjudicationSliceCodesCS",
   "concept": [
     {

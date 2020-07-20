@@ -5,6 +5,6 @@
   "id": "CPTHCPCSProcedureCode",
   "title": "AMA CPT and CMS HCPCS Procedure Codes",
   "description": "AMA CPT and CMS HCPCS Procedure Codes",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/CPTHCPCSProcedureCode"
 }

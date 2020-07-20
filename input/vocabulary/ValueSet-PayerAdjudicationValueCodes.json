@@ -5,7 +5,7 @@
   "id": "PayerAdjudicationValueCodes",
   "title": "Payer Adjudication Value Codes",
   "description": "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerAdjudicationValueCodes",
   "compose": {
     "include": [

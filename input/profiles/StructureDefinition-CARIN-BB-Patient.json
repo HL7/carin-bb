@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-Patient",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Patient",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "CARINBBPatient",
   "title": "CARIN BB Patient",
   "status": "active",

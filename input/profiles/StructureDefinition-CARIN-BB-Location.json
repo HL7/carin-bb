@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-Location",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Location",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "CARINBBLocation",
   "title": "CARIN BB Location",
   "status": "active",

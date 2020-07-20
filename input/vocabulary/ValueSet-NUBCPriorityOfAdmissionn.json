@@ -5,6 +5,6 @@
   "id": "NUBCPriorityOfAdmissionn",
   "title": "NUBC Priority of Admission",
   "description": "NUBC Priority of Admission",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/NUBCPriorityOfAdmissionn"
 }

@@ -5,6 +5,6 @@
   "id": "NCPDPRejectCode",
   "title": "NCPDP Reject Code",
   "description": "http://www.ncpdp.org/reject-code",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPRejectCode"
 }

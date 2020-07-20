@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-ExplanationOfBenefit",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "CARINBBExplanationOfBenefit",
   "title": "CARIN BB Explanation Of Benefit",
   "status": "active",

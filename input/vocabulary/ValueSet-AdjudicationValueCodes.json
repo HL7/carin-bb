@@ -5,7 +5,7 @@
   "id": "AdjudicationValueCodes",
   "title": "Benefit Payment Status Category",
   "description": "Benefit Payment Status Category",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/AdjudicationValueCodes",
   "compose": {
     "include": [

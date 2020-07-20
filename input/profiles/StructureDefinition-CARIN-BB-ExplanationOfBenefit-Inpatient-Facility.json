@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-ExplanationOfBenefit-Inpatient-Facility",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inpatient-Facility",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "CARINBBExplanationOfBenefitInpatientFacility",
   "title": "CARIN BB ExplanationOfBenefit Inpatient Facility",
   "status": "active",

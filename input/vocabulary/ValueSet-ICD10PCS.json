@@ -5,7 +5,7 @@
   "id": "ICD10PCS",
   "title": "ICD-10-PCS",
   "description": "ICD-10-PCS",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/ICD10PCS",
   "compose": {
     "include": [

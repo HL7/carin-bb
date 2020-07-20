@@ -5,6 +5,6 @@
   "id": "NUBCPatientDischargeStatus",
   "title": "NUBC Patient Discharge Status",
   "description": "NUBC Patient Discharge Status",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/NUBCPatientDischargeStatus"
 }

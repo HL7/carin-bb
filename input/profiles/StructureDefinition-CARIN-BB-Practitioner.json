@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "CARIN-BB-Practitioner",
   "url": "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Practitioner",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "CARINBBPractitioner",
   "title": "CARIN BB Practitioner",
   "status": "active",

@@ -5,7 +5,7 @@
   "id": "PayerProfessionalAndNonClinicianProviderRole",
   "title": "Payer - Professional and Non-Clinician Provider Role",
   "description": "Indicates the role of the provider providing the care.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerProfessionalAndNonClinicianProviderRole",
   "compose": {
     "include": [

@@ -5,7 +5,7 @@
   "id": "PayerAdjudicationAmountCategory",
   "title": "Payer Adjudication Amount Category",
   "description": "This describes the various amount fields used when payers receive and adjudicate a claim.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/ValueSet/PayerAdjudicationAmountCategory",
   "compose": {
     "include": [

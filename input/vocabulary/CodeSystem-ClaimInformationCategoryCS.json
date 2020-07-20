@@ -6,7 +6,7 @@
   "id": "ClaimInformationCategoryCS",
   "title": "Claim Information Category",
   "description": "Claim Information Category - Used as the discriminator for supportingInfo",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "url": "http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimInformationCategoryCS",
   "concept": [
     {
