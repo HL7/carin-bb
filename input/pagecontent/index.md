@@ -18,7 +18,7 @@ See the [Table of Contents](toc.html) for more information.
 
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
-<li>Version 0.2 - July 17, 2002</li>
+<li>Version 0.2 - July 17, 2020</li>
 <ol>
 <li>Corrections to slices defined and value sets referenced in 4 EOB profiles following review</li>
 <li>Changes to Value Set names (removing VS suffix)</li>
