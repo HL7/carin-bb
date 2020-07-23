@@ -79,7 +79,7 @@ InstanceOf: CARINBBExplanationOfBenefitInpatientFacility
 Description: "EOB Inpatient Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inpatient-Facility"
+* meta.profile = $InpatientEOBProfile
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -117,6 +117,157 @@ Usage: #example
 * total[2].amount.currency = #USD
 * adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#other
 * adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
+
+Instance: EOBOutpatientFacility1
+InstanceOf: CARINBBExplanationOfBenefitOutpatientFacility
+Description: "EOB Outpatient Example1"
+Usage: #example
+//* id = "1234-234-1243-12345678901-20190101-20191031"
+* meta.profile = $OutpatientEOBProfile
+* meta.lastUpdated = "2019-12-12T09:14:11+00:00"
+* language = #en-US
+* status = #active
+* identifier[claimnumber].type = IdentifierTypeCS#cn
+* identifier[claimnumber].value = "AW123412341234123412341234123412"
+* identifier[claimnumber].system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* type = $HL7ClaimTypeCS#institutional
+* type.text = "Outpatient Facility"
+* use = #claim 
+* created = "2019-07-02T00:00:00+00:00"
+* insurer = Reference(OrganizationPayer1)
+* insurer.display = "XXX Health Plan"
+* patient = Reference(Patient1)
+* billablePeriod.start = "2019-01-01T00:00:00+00:00"
+* billablePeriod.end = "2019-10-31T00:00:00+00:00"
+* provider = Reference(OrganizationProvider1)
+* provider.display = "XXX Health Plan"
+* outcome = #partial
+* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
+* diagnosis[0].type = PayerDiagnosisTypeCS#principal
+* diagnosis[0].sequence = 1 
+* insurance[0].focal = true
+* insurance[0].coverage[0] = Reference(Coverage1)
+* total[0].category = ClaimAdjudicationCategoryCS#paymentamount
+* total[0].category.text = "Payment Amount"
+* total[0].amount.value = 620.00
+* total[0].amount.currency = #USD
+* total[1].category = ClaimAdjudicationCategoryCS#submittedamount
+* total[1].category.text = "Submitted Amount"
+* total[1].amount.value = 2650.00
+* total[1].amount.currency = #USD
+* total[2].category = ClaimAdjudicationCategoryCS#patientpayamount
+* total[2].category.text = "Patient Pay Amount"
+* total[2].amount.value = 0.00
+* total[2].amount.currency = #USD
+* adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#other
+* adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
+
+Instance: EOBProfessional1
+InstanceOf: CARINBBExplanationOfBenefitProfessionalNonClinician 
+Description: "EOB Professional  Example1"
+Usage: #example
+//* id = "1234-234-1243-12345678901-20190101-20191031"
+* meta.profile = $ProfessionalEOBProfile
+* meta.lastUpdated = "2019-12-12T09:14:11+00:00"
+* language = #en-US
+* status = #active
+* identifier[claimnumber].type = IdentifierTypeCS#cn
+* identifier[claimnumber].value = "AW123412341234123412341234123413"
+* identifier[claimnumber].system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* type = $HL7ClaimTypeCS#professional
+* type.text = "Outpatient Facility"
+* use = #claim 
+* created = "2019-07-02T00:00:00+00:00"
+* insurer = Reference(OrganizationPayer1)
+* insurer.display = "XXX Health Plan"
+* patient = Reference(Patient1)
+* billablePeriod.start = "2019-01-01T00:00:00+00:00"
+* billablePeriod.end = "2019-10-31T00:00:00+00:00"
+* provider = Reference(OrganizationProvider1)
+* provider.display = "XXX Health Plan"
+* outcome = #partial
+* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
+* diagnosis[0].type = PayerDiagnosisTypeCS#principal
+* diagnosis[0].sequence = 1 
+* insurance[0].focal = true
+* insurance[0].coverage[0] = Reference(Coverage1)
+* total[0].category = ClaimAdjudicationCategoryCS#paymentamount
+* total[0].category.text = "Payment Amount"
+* total[0].amount.value = 620.00
+* total[0].amount.currency = #USD
+* total[1].category = ClaimAdjudicationCategoryCS#submittedamount
+* total[1].category.text = "Submitted Amount"
+* total[1].amount.value = 2650.00
+* total[1].amount.currency = #USD
+* total[2].category = ClaimAdjudicationCategoryCS#patientpayamount
+* total[2].category.text = "Patient Pay Amount"
+* total[2].amount.value = 0.00
+* total[2].amount.currency = #USD
+//* adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#other
+//* adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
+
+Instance: EOBPharmacy1
+InstanceOf: CARINBBExplanationOfBenefitPharmacy
+Description: "EOB PHarmacy Example1"
+Usage: #example
+//* id = "1234-234-1243-12345678901-20190101-20191031"
+* meta.profile = $PharmacyEOBProfile
+* meta.lastUpdated = "2019-12-12T09:14:11+00:00"
+* language = #en-US
+* status = #active
+* identifier[claimnumber].type = IdentifierTypeCS#cn
+* identifier[claimnumber].value = "AW123412341234123412341234123412"
+* identifier[claimnumber].system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* type = $HL7ClaimTypeCS#pharmacy
+* type.text = "Inpatient Facility"
+* use = #claim 
+* created = "2019-07-02T00:00:00+00:00"
+* insurer = Reference(OrganizationPayer1)
+* insurer.display = "XXX Health Plan"
+* patient = Reference(Patient1)
+* billablePeriod.start = "2019-01-01T00:00:00+00:00"
+* billablePeriod.end = "2019-10-31T00:00:00+00:00"
+* provider = Reference(OrganizationProvider1)
+* provider.display = "XXX Health Plan"
+* outcome = #partial
+* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
+* diagnosis[0].type = PayerDiagnosisTypeCS#principal
+* diagnosis[0].sequence = 1 
+* insurance[0].focal = true
+* insurance[0].coverage[0] = Reference(Coverage1)
+* total[0].category = ClaimAdjudicationCategoryCS#paymentamount
+* total[0].category.text = "Payment Amount"
+* total[0].amount.value = 620.00
+* total[0].amount.currency = #USD
+* total[1].category = ClaimAdjudicationCategoryCS#submittedamount
+* total[1].category.text = "Submitted Amount"
+* total[1].amount.value = 2650.00
+* total[1].amount.currency = #USD
+* total[2].category = ClaimAdjudicationCategoryCS#patientpayamount
+* total[2].category.text = "Patient Pay Amount"
+* total[2].amount.value = 0.00
+* total[2].amount.currency = #USD
+* adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#other
+* adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
+* item[0].productOrService = $FDANationalDrugCodeCS#0777-3105-02 "100-count bottle of Prozac 20 mg"
+* item[0].sequence = 1 
+* item[0].adjudication[0].category = $HL7AdjudicationCS#submitted
+* item[0].adjudication[0].amount.value = 1000.00
+* item[0].adjudication[0].amount.currency = #USD
+* item[0].adjudication[1].category = $HL7AdjudicationCS#benefit 
+//* item[0].adjudication[1].amount.value = 20.00
+//* item[0].adjudication[1].amount.currency = #USD
+* item[0].adjudication[2].category = PayerAdjudicationCategoryCS#discount
+//* item[0].adjudication[2].amount.value = 900.00
+//* item[0].adjudication[2].amount.currency = #USD
+* item[0].adjudication[3].category = PayerAdjudicationCategoryCS#memberliability
+//* item[0].adjudication[3].amount.value = 80.00
+//* item[0].adjudication[3].amount.currency = #USD
+* item[0].adjudication[4].category = PayerAdjudicationCategoryCS#paidtoprovider
+//* item[0].adjudication[4].amount.value = 20.00
+//* item[0].adjudication[4].amount.currency = #USD
+* item[0].adjudication[5].category = PayerAdjudicationCategoryCS#in-network
+
 
 Instance: OrganizationPayer1
 InstanceOf: CARINBBOrganization

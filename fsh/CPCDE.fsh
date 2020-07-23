@@ -82,10 +82,10 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * payee 0..1 MS
 * payee.type 1..1 MS
 * payee.party 1..1 MS
-* payee.party only Reference(CARINBBOrganization | CARINBBPatient | CARINBBPractitioner)
+* payee.party only Reference(CARINBBOrganization or CARINBBPatient or CARINBBPractitioner)
 * careTeam 0..* MS 
 * careTeam.provider 1..1 MS
-* careTeam.provider = Reference(  CarinBBPractitioner |  CarinBBOrganization )
+* careTeam.provider only Reference(CARINBBOrganization or CARINBBPractitioner)
 * careTeam.responsible 0..1 MS 
 * careTeam.role 1..1 MS
 * supportingInfo 0..* MS
@@ -377,7 +377,7 @@ The claims data is based on submission standards adopted by the Department of He
 * obeys EOB-pharm-careTeam-practitioner
 * obeys EOB-pharm-careTeam-organization
 * type = $HL7ClaimTypeCS#pharmacy 
-* provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
+* provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner)
 * supportingInfo ^slicing.discriminator.type = #pattern 
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #open
@@ -454,7 +454,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * obeys EOB-prof-careTeam-practitioner
 * obeys EOB-prof-careTeam-organization
 * type = $HL7ClaimTypeCS#professional
-* provider only Reference(CARINBBOrganization | CARINBBPractitionerRole | CARINBBPractitioner)
+* provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner)
 * supportingInfo ^slicing.discriminator.type = #pattern 
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #open
@@ -621,7 +621,7 @@ Severity:   #error
 Invariant: EOB-inst-careTeam-practitioner
 Description: "Institutional EOB:  Careteam roles refer to a practitioner"
 Expression: "(ExplanationOfBenefit.careTeam.role.coding.code in 
-('attending' | 'pcp' | 'referring' | 'supervising')) implies 
+('attending' or 'pcp' or 'referring' or 'supervising')) implies 
 ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
 Severity: #error
 
@@ -634,7 +634,7 @@ Severity: #error
 Invariant: EOB-pharm-careTeam-practitioner
 Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
 Expression: "(ExplanationOfBenefit.careTeam.role.coding.code in 
-( 'pcp' | 'prescribing')) implies 
+( 'pcp' or 'prescribing')) implies 
 ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
 Severity: #error
 
@@ -647,7 +647,7 @@ Severity: #error
 Invariant: EOB-prof-careTeam-practitioner
 Description: "Institutional EOB:  Careteam roles refer to a practitioner"
 Expression: "(ExplanationOfBenefit.careTeam.role.coding.code in 
-('performing' | 'pcp' | 'referring' | 'supervising')) implies 
+('performing' or 'pcp' or 'referring' or 'supervising')) implies 
 ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
 Severity: #error
 
