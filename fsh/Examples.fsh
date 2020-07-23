@@ -251,22 +251,22 @@ Usage: #example
 * adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
 * item[0].productOrService = $FDANationalDrugCodeCS#0777-3105-02 "100-count bottle of Prozac 20 mg"
 * item[0].sequence = 1 
-* item[0].adjudication[0].category = $HL7AdjudicationCS#submitted
-* item[0].adjudication[0].amount.value = 1000.00
-* item[0].adjudication[0].amount.currency = #USD
-* item[0].adjudication[1].category = $HL7AdjudicationCS#benefit 
-//* item[0].adjudication[1].amount.value = 20.00
-//* item[0].adjudication[1].amount.currency = #USD
-* item[0].adjudication[2].category = PayerAdjudicationCategoryCS#discount
-//* item[0].adjudication[2].amount.value = 900.00
-//* item[0].adjudication[2].amount.currency = #USD
-* item[0].adjudication[3].category = PayerAdjudicationCategoryCS#memberliability
-//* item[0].adjudication[3].amount.value = 80.00
-//* item[0].adjudication[3].amount.currency = #USD
-* item[0].adjudication[4].category = PayerAdjudicationCategoryCS#paidtoprovider
-//* item[0].adjudication[4].amount.value = 20.00
-//* item[0].adjudication[4].amount.currency = #USD
-* item[0].adjudication[5].category = PayerAdjudicationCategoryCS#in-network
+* item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00
+* item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit 
+* item[0].adjudication[adjudicationamounttype][1].amount.value = 20.00
+* item[0].adjudication[adjudicationamounttype][1].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][2].category = PayerAdjudicationCategoryCS#discount
+* item[0].adjudication[adjudicationamounttype][2].amount.value = 900.00
+* item[0].adjudication[adjudicationamounttype][2].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][3].category = PayerAdjudicationCategoryCS#memberliability
+* item[0].adjudication[adjudicationamounttype][3].amount.value = 80.00
+* item[0].adjudication[adjudicationamounttype][3].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][4].category = PayerAdjudicationCategoryCS#paidtoprovider
+* item[0].adjudication[adjudicationamounttype][4].amount.value = 20.00
+* item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD
+
 
 
 Instance: OrganizationPayer1
