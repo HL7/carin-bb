@@ -65,6 +65,10 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .  The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.   The code set is owned by CMS and is available for use.</td>
 </tr>
 <tr>
+<td><a href="ValueSet-CMSDRG.html">CMS-DRG</a></td>
+<td>CMS-DRG</td>
+</tr>
+<tr>
 <td><a href="ValueSet-ClaimAdjudicationCategory.html">Claim Adjudication Category</a></td>
 <td>Values for EOB.item.adjudication.category, as per Igor</td>
 </tr>
@@ -105,10 +109,6 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>ICD-10-PCS</td>
 </tr>
 <tr>
-<td><a href="ValueSet-MSDRG.html">MS-DRG</a></td>
-<td>MS-DRG</td>
-</tr>
-<tr>
 <td><a href="ValueSet-NCPDPBrandGenericCode.html">NCPDP Brand Generic Code</a></td>
 <td>http://www.ncpdp.org/brand-generic-code</td>
 </tr>
@@ -141,15 +141,15 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>Patient Identifier Type</td>
 </tr>
 <tr>
-<td><a href="ValueSet-PayerInstitutionalProviderRole.html">Payer - Inpatient Facility Provider Role</a></td>
+<td><a href="ValueSet-CARINBBInstitutionalClaimCareTeamRoleCodes.html">Payer - Inpatient Facility Provider Role</a></td>
 <td>Indicates the role of the provider providing the care.</td>
 </tr>
 <tr>
-<td><a href="ValueSet-PayerPharmacyProviderRole.html">Payer - Pharmacy Provider Role</a></td>
+<td><a href="ValueSet-CARINBBPharmacyClaimCareTeamRoleCodes.html">Payer - Pharmacy Provider Role</a></td>
 <td>Indicates the role of the provider providing the care.</td>
 </tr>
 <tr>
-<td><a href="ValueSet-PayerProfessionalAndNonClinicianProviderRole.html">Payer - Professional and Non-Clinician Provider Role</a></td>
+<td><a href="ValueSet-CARINBBProfessionalAndNonclinicanClaimCareTeamRoleCodes.html">Payer - Professional and Non-Clinician Provider Role</a></td>
 <td>Indicates the role of the provider providing the care.</td>
 </tr>
 <tr>
@@ -157,11 +157,11 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>This describes the various amount fields used when payers receive and adjudicate a claim.</td>
 </tr>
 <tr>
-<td><a href="ValueSet-PayerAdjudicationValueCodes.html">Payer Adjudication Value Codes</a></td>
+<td><a href="ValueSet-AdjudicationCarinBBValueCodes.html">Payer Adjudication Value Codes</a></td>
 <td>As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem</td>
 </tr>
 <tr>
-<td><a href="ValueSet-ProviderNetworkStatus.html">Provider Network Status</a></td>
+<td><a href="ValueSet-PayerProviderContractingStatus.html">Provider Network Status</a></td>
 <td>Indicates that the Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission.</td>
 </tr>
   </tbody>
@@ -205,7 +205,7 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>Payer Diagnosis Type</td>
 </tr>
 <tr>
-<td><a href="CodeSystem-PayerProviderRoleCS.html">Payer Provider Role</a></td>
+<td><a href="CodeSystem-CareTeamRoleCS.html">Payer Provider Role</a></td>
 <td>Payer Provider Role</td>
 </tr>
 </tbody>

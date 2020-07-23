@@ -2,7 +2,7 @@
 
 <h3>Introduction</h3>
 
-This implementation guide describes the CARIN Blue Button&reg; <sup>[<a name="id1" href="#ftn.id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
+This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a name="id1" href="#ftn.id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.
 
 See the [Table of Contents](toc.html) for more information.
 
@@ -69,7 +69,7 @@ See the [Table of Contents](toc.html) for more information.
   </tr>
   </table>
 <h3>Acknowledgements</h3>
-The Consumer-Directed Payer Data Exchange Implementation Guide is also known as the CARIN Blue Button&reg; Implementation Guide.
+The CARIN Consumer Directed Payer Data Exchange Implementation Guide  is also known as the CARIN IG for Blue Button&reg; Implementation Guide.
 
 <div class="footnote">
 <sup>[<a name="ftn.id1" href="#id1">*</a>]</sup>Blue Button, the slogan, 'Download My Data,' the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services.

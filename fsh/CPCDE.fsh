@@ -82,24 +82,21 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * payee 0..1 MS
 * payee.type 1..1 MS
 * payee.party 1..1 MS
-* payee.party only Reference(CARINBBOrganization | CARINBBPatient)
+* payee.party only Reference(CARINBBOrganization | CARINBBPatient | CARINBBPractitioner)
 * careTeam 0..* MS 
 * careTeam.provider 1..1 MS
 * careTeam.provider = Reference(  CarinBBPractitioner |  CarinBBOrganization )
 * careTeam.responsible 0..1 MS 
 * careTeam.role 1..1 MS
 * supportingInfo 0..* MS
-* supportingInfo.category 1..1 MS
-* supportingInfo.category from ClaimInformationCategory (required)
+//* supportingInfo.category 1..1 MS
+//* supportingInfo.category from ClaimInformationCategory (required)
 * supportingInfo.code 0..1 MS 
 * supportingInfo.timing[x] 0..1 MS 
 * supportingInfo.value[x] 0..1 MS 
 * procedure 0..* MS 
 * procedure.type 0..* MS 
 * procedure.date 0..1 MS 
-* procedure.procedure[x] only CodeableConcept 
-* procedure.procedure[x] 1..1 MS
-* procedure.procedureCodeableConcept from ICD10PCS (required) 
 * insurance 1..* MS
 * insurance.coverage 1..1 MS
 * insurance.focal 1..1  MS
@@ -114,7 +111,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * total.category from PayerAdjudicationAmountCategory (extensible)    // IS THIS RIGHT?
 * payment MS 
 * payment.type from ClaimPaymentStatusCode (required)
-* payee.type from $ClaimPayeeTypeCode (required)
+
 
 
 Profile: CARINBBExplanationOfBenefitInpatientFacility
@@ -127,7 +124,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * obeys EOB-inst-careTeam-organization
 * type.coding 1..1 MS
 * type = $HL7ClaimTypeCS#institutional
-* careTeam.role from PayerInstitutionalProviderRole (required)
+* careTeam.role from CARINBBInstitutionalClaimCareTeamRoleCodes (required)  // was  PayerInstitutionalProviderRole 
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerInpatientfacilitydiagnosistype (required)
@@ -135,6 +132,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * diagnosis.diagnosisCodeableConcept from ICD10CM (required)
 * diagnosis.onAdmission 0..1 MS
 * diagnosis.onAdmission from NUBCPresentOnAdmission (required)
+* procedure.procedure[x] only CodeableConcept 
+* procedure.procedure[x] 1..1 MS
+* procedure.procedureCodeableConcept from ICD10PCS (required) 
 * provider 1..1
 * provider only Reference(CARINBBOrganization)
 * supportingInfo ^slicing.rules = #open
@@ -154,22 +154,22 @@ The claims data is based on the institutional claim format UB-04, submission sta
    discharge-status 0..1 MS and 
    drg 0..1 MS
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
-* supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim billing provider network status"
 * supportingInfo[billingnetworkcontractingstatus] ^definition = "Claim billing provider network status"
 * supportingInfo[attendingnetworkcontractingstatus].category = ClaimInformationCategoryCS#attendingnetworkcontractingstatus
-* supportingInfo[attendingnetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[attendingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[attendingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[attendingnetworkcontractingstatus] ^short = "Claim attending provider network status"
 * supportingInfo[attendingnetworkcontractingstatus] ^definition = "Claim attending provider network status"
 * supportingInfo[referringnetworkcontractingstatus].category  = ClaimInformationCategoryCS#referringnetworkcontractingstatus
-* supportingInfo[referringnetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[referringnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[referringnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[referringnetworkcontractingstatus] ^short = "Claim referring provider network status"
 * supportingInfo[referringnetworkcontractingstatus] ^definition = "Claim referring provider network status"
 * supportingInfo[supervisingnetworkcontractingstatus].category  = ClaimInformationCategoryCS#supervisingnetworkcontractingstatus
-* supportingInfo[supervisingnetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[supervisingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[supervisingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[supervisingnetworkcontractingstatus] ^short = "Claim supervising provider network status"
 * supportingInfo[supervisingnetworkcontractingstatus] ^definition = "Claim supervising provider network status"
@@ -195,7 +195,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[discharge-status] ^definition = "Discharge Status"
 * supportingInfo[drg].category  = ClaimInformationCategoryCS#drg
-* supportingInfo[drg].code from MSDRG  (required)
+* supportingInfo[drg].code from CMSDRG  (required)
 * supportingInfo[drg] ^short = "Claim diagnosis related group (DRG)"
 * supportingInfo[drg] ^definition = "Claim diagnosis related group (DRG), including the code system, the DRG version and the code value"
 * item.revenue from $NUBCRevenueCode (required)
@@ -217,7 +217,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReason
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodes
+* item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount MS
 * adjudication ^slicing.rules = #closed
@@ -241,7 +241,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReason
 * adjudication[denialreason].reason 1..1
-* adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodes  (required)
+* adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
 * payment.adjustmentReason from AdjudicationDenialReason (extensible)
@@ -257,7 +257,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * obeys EOB-inst-careTeam-practitioner
 * obeys EOB-inst-careTeam-organization
 * type  = $HL7ClaimTypeCS#institutional
-* careTeam.role from PayerInstitutionalProviderRole (required)
+* careTeam.role from CARINBBInstitutionalClaimCareTeamRoleCodes (required)   // was PayerInstitutionalProviderRole
 * diagnosis 1..*
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosisCodeableConcept from ICD10CM (required)
@@ -278,20 +278,20 @@ The claims data is based on the institutional claim form UB-04, submission stand
    admtype 0..1 MS and 
    discharge-status 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
-* supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
 * supportingInfo[attendingnetworkcontractingstatus].category = ClaimInformationCategoryCS#attendingnetworkcontractingstatus
-* supportingInfo[attendingnetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[attendingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[attendingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[attendingnetworkcontractingstatus] ^short = "Claim attending provider network status"
 * supportingInfo[attendingnetworkcontractingstatus] ^definition = "Claim attending provider network status"
 * supportingInfo[referringnetworkcontractingstatus].category = ClaimInformationCategoryCS#referringnetworkcontractingstatus
-* supportingInfo[referringnetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[referringnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[referringnetworkcontractingstatus].code 1..1
 * supportingInfo[referringnetworkcontractingstatus] ^short = "Claim attending provider network status"
 * supportingInfo[supervisingnetworkcontractingstatus].category  = ClaimInformationCategoryCS#supervisingnetworkcontractingstatus
-* supportingInfo[supervisingnetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[supervisingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[supervisingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[supervisingnetworkcontractingstatus] ^short = "Claim supervising provider network status"
 * supportingInfo[supervisingnetworkcontractingstatus] ^definition = "Claim supervising provider network status"
@@ -336,7 +336,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReason
 * item.adjudication[denialreason].reason 1..1 MS
-* item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodes
+* item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
 * adjudication ^slicing.rules = #closed
@@ -355,7 +355,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReason
 * adjudication[denialreason].reason 1..1 MS
-* adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodes (required)
+* adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1 MS
 * diagnosis 1..*
@@ -364,6 +364,9 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosisCodeableConcept from ICD10CM (required)
 * payment.adjustmentReason from AdjudicationDenialReason (extensible)
+
+
+
 
 Profile: CARINBBExplanationOfBenefitPharmacy
 Parent: CARIN-BB-ExplanationOfBenefit
@@ -390,7 +393,7 @@ The claims data is based on submission standards adopted by the Department of He
    dayssupply 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Billing Network Contracting Status"
-* supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatus (required) 
+* supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus (required) 
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
 * supportingInfo[brandgenericcode].category = ClaimInformationCategoryCS#brandgenericcode   
 * supportingInfo[brandgenericcode] ^short = "BrandGeneric"
@@ -412,7 +415,7 @@ The claims data is based on submission standards adopted by the Department of He
 * item.detail.productOrService  from FDANationalDrugCode (required)
 * item.detail MS
 * item.detail.quantity MS 
-* careTeam.role from PayerPharmacyProviderRole (required)
+* careTeam.role from CARINBBPharmacyClaimCareTeamRoleCodes (required)   // was PayerPharmacyProviderRole
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on $this pattern"
@@ -428,7 +431,7 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * item.adjudication[denialreason].reason from NCPDPRejectCode
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodes
+* item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
 * adjudication ^slicing.rules = #closed
@@ -438,13 +441,9 @@ The claims data is based on submission standards adopted by the Department of He
 * adjudication ^slicing.discriminator.path = "category"
 * adjudication.category 1..1
 * adjudication contains
-   adjudicationamounttype 0..* MS and
    inoutnetwork 1..1 MS
 * adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
-* adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodes (required)
-* adjudication[adjudicationamounttype] ^short = "Amounts"
-* adjudication[adjudicationamounttype].amount 1..1
 
 Profile: CARINBBExplanationOfBenefitProfessionalNonClinician
 Parent: CARIN-BB-ExplanationOfBenefit
@@ -468,21 +467,21 @@ The claims data is based on the professional claim form 1500, submission standar
    sitenetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = $ClaimInformationCategoryCS#billingnetworkcontractingstatus 
-* supportingInfo[billingnetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 
 * supportingInfo[billingnetworkcontractingstatus].category.coding 1..1
 * supportingInfo[referringnetworkcontractingstatus].category = $ClaimInformationCategoryCS#referringnetworkcontractingstatus
-* supportingInfo[referringnetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[referringnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[referringnetworkcontractingstatus].code 1..1
 * supportingInfo[performingnetworkcontractingstatus].category = $ClaimInformationCategoryCS#performingnetworkcontractingstatus
-* supportingInfo[performingnetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[performingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[performingnetworkcontractingstatus].code 1..1
 * supportingInfo[sitenetworkcontractingstatus].category = $ClaimInformationCategoryCS#sitenetworkcontractingstatus
-* supportingInfo[sitenetworkcontractingstatus].code from ProviderNetworkStatus  (required)
+* supportingInfo[sitenetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[clmrecvddate].category = ClaimInformationCategoryCS#clmrecvddate
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1
-* careTeam.role from PayerProfessionalAndNonClinicianProviderRole (required)
+* careTeam.role from CARINBBProfessionalAndNonclinicanClaimCareTeamRoleCodes  (required)  // was PayerProfessionalAndNonClinicianProviderRole
 * diagnosis 1..*
 * diagnosis.type 1..1
 * diagnosis.type from PayerProfessionalandnoncliniciandiagnosistype (required)
@@ -499,12 +498,16 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication contains
    adjudicationamounttype 0..* and
    denialreason 0..1 and
-   inoutnetwork 1..1
+   inoutnetwork 1..1 and
+   allowedunits 0..1 MS
+* item.adjudication[allowedunits] ^short = "Allowed number of units"
+* item.adjudication[allowedunits].category = ClaimAdjudicationCategoryCS#allowedunits
+* item.adjudication[allowedunits].value only decimal
 * item.adjudication[denialreason].category  = $ClaimAdjudicationCategoryCS#denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReason
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[denialreason] ^short = "Denial Reason"
-* item.adjudication[adjudicationamounttype].category from PayerAdjudicationValueCodes 
+* item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes 
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"

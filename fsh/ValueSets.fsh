@@ -10,36 +10,38 @@ Description: "Claim Information Category - Used as the discriminator for support
 ValueSet: PayerProviderRole
 Title: "Payer Provider Role"
 Description: "Payer Provider Role"
-* codes from system PayerProviderRoleCS
+* codes from system CareTeamRoleCS
 */
 
-ValueSet: PayerInstitutionalProviderRole
-Title: "Payer - Inpatient Facility Provider Role"
+ValueSet: CARINBBInstitutionalClaimCareTeamRoleCodes
+Title: "CARINBB Institutional Claim Care Team Roles"
 Description: "Indicates the role of the provider providing the care."
-* PayerProviderRoleCS#attending "AttendingProvider"
-* PayerProviderRoleCS#pcp "Primary Care Provider"
-* PayerProviderRoleCS#performing "Performing Provider"
-* PayerProviderRoleCS#referring "Referring Provider"
-* PayerProviderRoleCS#supervising "Supervising Provider"
+* $CareTeamRoleCodeCS#supervisor "Supervising Provider"
+* $CareTeamRoleCodeCS#primary "Primary provider." 
+* CareTeamRoleCS#attending "Attending Provider"
+* CareTeamRoleCS#performing "Performing Provider"
+* CareTeamRoleCS#referring "Referring Provider"
+* CareTeamRoleCS#site "Site Provider"
+* CareTeamRoleCS#prescribing "Prescribing Provider"
 
+// attending | performing | pcp  | site | prescribing | referring | supervising
 
-
-ValueSet: PayerProfessionalAndNonClinicianProviderRole
-Title: "Payer - Professional and Non-Clinician Provider Role"
+ValueSet: CARINBBProfessionalAndNonclinicanClaimCareTeamRoleCodes  
+Title: "CARINBB Professional and Non-Clinician CareTeam Roles"
 Description: "Indicates the role of the provider providing the care."
-* PayerProviderRoleCS#pcp "Primary Care Provider"
-* PayerProviderRoleCS#performing "Performing Provider"
-* PayerProviderRoleCS#referring "Referring Provider"
-* PayerProviderRoleCS#site  "Site Provider"
+* $CareTeamRoleCodeCS#primary "Primary provider." 
+* CareTeamRoleCS#performing "Performing Provider"
+* CareTeamRoleCS#referring "Referring Provider"
 
-ValueSet: PayerPharmacyProviderRole
-Title: "Payer - Pharmacy Provider Role"
+ValueSet: CARINBBPharmacyClaimCareTeamRoleCodes
+Title: "CARINBB Pharmacy CareTeam Roles"
 Description: "Indicates the role of the provider providing the care."
-* PayerProviderRoleCS#pcp "Primary Care Provider"
-* PayerProviderRoleCS#prescribing "Prescribing Provider"
+* CareTeamRoleCS#pcp "Primary Care Provider"
+* CareTeamRoleCS#prescribing "Prescribing Provider"
+* CareTeamRoleCS#performing "Performing Provider"
 
-ValueSet: PayerAdjudicationValueCodes
-Title: "Payer Adjudication Value Codes"
+ValueSet: AdjudicationCarinBBValueCodes   // was PayerAdjudicationValueCodes
+Title: "Adjudication CARINBB Value Codes"
 Description: "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem"
 * $HL7AdjudicationCS#submitted 
 * $HL7AdjudicationCS#copay 
@@ -71,8 +73,8 @@ Description: "This describes the various amount fields used when payers receive 
 * ClaimAdjudicationCategoryCS#patientpayamount
 
 
-ValueSet: ProviderNetworkStatus
-Title: "Provider Network Status"
+ValueSet: PayerProviderContractingStatus
+Title: "Provider Provider Contracting Status"
 Description: "Indicates that the Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission."
 * PayerAdjudicationCategoryCS#contracted "contracted"
 * PayerAdjudicationCategoryCS#non-contracted "non-contracted"
@@ -124,9 +126,9 @@ Title: "Adjudication Denial Reason"
 Description: "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC"
 
 
-ValueSet: MSDRG
-Title: "MS-DRG"
-Description: "MS-DRG"
+ValueSet: CMSDRG
+Title: "CMS-DRG"
+Description: "CMS-DRG"
 
 ValueSet: NUBCPatientDischargeStatus
 Title: "NUBC Patient Discharge Status"
@@ -214,7 +216,7 @@ Title: "AMA CPT and CMS HCPCS Modifier Codes"
 ValueSet: ClaimAdjudicationCategory
 Title: "Claim Adjudication Category"
 Description: "Values for EOB.item.adjudication.category, as per Igor"
-* codes from valueset PayerAdjudicationValueCodes
+* codes from valueset AdjudicationCarinBBValueCodes
 * codes from valueset BenefitPaymentStatus
 * ClaimAdjudicationCategoryCS#denialreason 
 * ClaimAdjudicationCategoryCS#allowedunits 

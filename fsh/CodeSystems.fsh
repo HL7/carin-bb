@@ -95,7 +95,7 @@ Description: "Identifier Type"
 * #um "Unique Member ID" "Unique Member ID"
 * #cn "Claim Number" "Claim Number"
 
-CodeSystem: PayerProviderRoleCS
+CodeSystem: CareTeamRoleCS
 Title: "Payer Provider Role"
 Description: "Payer Provider Role"
 * #attending  "attending"  "Attending Provider"

@@ -13,13 +13,13 @@
         <b>FHIR Resource L0</b>
       </td>
       <td>
-        <b>FHIR Resource L1</b>
+        <b>FHIR Resource L1 Element</b>
       </td>
         <td>
-        <b>FHIR Resource L2</b>
+        <b>FHIR Resource L2 Element</b>
       </td>
       <td>
-        <b>FHIR Resource L3/4</b>
+        <b>FHIR Element Description or L3/4</b>
       </td>
         <td>
         <b>FHIR Reference</b>

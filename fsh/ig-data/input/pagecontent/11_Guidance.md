@@ -28,8 +28,8 @@ If the source system does not have data for a *Must Support* data element with m
 ## Conformance to US Core Profiles
 Any actor acting as a Health Plan API actor in this IG **SHALL**:
 * 	Be able to populate all profile data elements that have a minimum cardinality >= 1 and/or flagged as *Must Support* as defined by that profiles StructureDefinition.
-* 	Conform to the US Core Server Capability Statement expectations for that profiles type.
-* Any actor acting a FHIR Client in this IG **SHALL**:
+* 	Conform to the US Core Server Capability Statement expectations for that profile's type.
+Any actor acting a FHIR Client in this IG **SHALL**:
 * 	Be able to process and retain all profile data elements that have a minimum cardinality >= 1 and/or flagged as Must Support as defined by that profiles StructureDefinition.
 * 	Conform to the US Core Client Capability Statement expectations for that profiles type.
 
