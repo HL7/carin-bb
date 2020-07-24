@@ -508,7 +508,8 @@ Description: "BBEoB from Jeff"
 * supportingInfo[4].timingDate = "2019-01-18"
 * supportingInfo[4].sequence = 5
 * supportingInfo[5].category = ClaimInformationCategoryCS#dayssupply
+// Why doesn't this work?
+//* supportingInfo[dayssupply][5].valueQuantity.value = 30
 * supportingInfo[5].valueQuantity.value = 30
 * supportingInfo[5].sequence = 6
-// Why doesn't this work?
-// * supportingInfo[dayssupply][6].value = 30
+
