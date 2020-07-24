@@ -18,6 +18,7 @@
   </thead>
   <tbody> 
 <tr>
+<tr>
 <td>Coverage</td>
 <td><a href="StructureDefinition-CARIN-BB-Coverage.html">CARIN-BB-Coverage</a></td>
 <td><a href="Coverage-Coverage1.html">Coverage1</a></td>
@@ -26,6 +27,21 @@
 <td>ExplanationOfBenefit</td>
 <td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Inpatient-Facility.html">CARIN-BB-ExplanationOfBenefit-Inpatient-Facility</a></td>
 <td><a href="ExplanationOfBenefit-EOBInpatient1.html">EOBInpatient1</a></td>
+</tr>
+<tr>
+<td>ExplanationOfBenefit</td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.html">CARIN-BB-ExplanationOfBenefit-Outpatient-Facility</a></td>
+<td><a href="ExplanationOfBenefit-EOBOutpatientFacility1.html">EOBOutpatientFacility1</a></td>
+</tr>
+<tr>
+<td>ExplanationOfBenefit</td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html">CARIN-BB-ExplanationOfBenefit-Pharmacy</a></td>
+<td><a href="ExplanationOfBenefit-EOBPharmacy1.html">EOBPharmacy1</a></td>
+</tr>
+<tr>
+<td>ExplanationOfBenefit</td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Professional-NonClinician.html">CARIN-BB-ExplanationOfBenefit-Professional-NonClinician</a></td>
+<td><a href="ExplanationOfBenefit-EOBProfessional1.html">EOBProfessional1</a></td>
 </tr>
 <tr>
 <td>Organization</td>

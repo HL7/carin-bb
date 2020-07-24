@@ -45,6 +45,10 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>AMA CPT and CMS HCPCS Procedure Codes</td>
 </tr>
 <tr>
+<td><a href="ValueSet-AdjudicationCarinBBValueCodes.html">Adjudication CARINBB Value Codes</a></td>
+<td>As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem</td>
+</tr>
+<tr>
 <td><a href="ValueSet-AdjudicationDenialReason.html">Adjudication Denial Reason</a></td>
 <td>Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC</td>
 </tr>
@@ -59,6 +63,18 @@ This IG includes value set bindings to code systems that are industry standard c
 <tr>
 <td><a href="ValueSet-AdjudicationValueCodes.html">Benefit Payment Status Category</a></td>
 <td>Benefit Payment Status Category</td>
+</tr>
+<tr>
+<td><a href="ValueSet-CARINBBInstitutionalClaimCareTeamRoleCodes.html">CARINBB Institutional Claim Care Team Roles</a></td>
+<td>Indicates the role of the provider providing the care.</td>
+</tr>
+<tr>
+<td><a href="ValueSet-CARINBBPharmacyClaimCareTeamRoleCodes.html">CARINBB Pharmacy CareTeam Roles</a></td>
+<td>Indicates the role of the provider providing the care.</td>
+</tr>
+<tr>
+<td><a href="ValueSet-CARINBBProfessionalAndNonclinicanClaimCareTeamRoleCodes.html">CARINBB Professional and Non-Clinician CareTeam Roles</a></td>
+<td>Indicates the role of the provider providing the care.</td>
 </tr>
 <tr>
 <td><a href="ValueSet-CMSPlaceOfService.html">CMS Place of Service</a></td>
@@ -141,27 +157,11 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>Patient Identifier Type</td>
 </tr>
 <tr>
-<td><a href="ValueSet-CARINBBInstitutionalClaimCareTeamRoleCodes.html">Payer - Inpatient Facility Provider Role</a></td>
-<td>Indicates the role of the provider providing the care.</td>
-</tr>
-<tr>
-<td><a href="ValueSet-CARINBBPharmacyClaimCareTeamRoleCodes.html">Payer - Pharmacy Provider Role</a></td>
-<td>Indicates the role of the provider providing the care.</td>
-</tr>
-<tr>
-<td><a href="ValueSet-CARINBBProfessionalAndNonclinicanClaimCareTeamRoleCodes.html">Payer - Professional and Non-Clinician Provider Role</a></td>
-<td>Indicates the role of the provider providing the care.</td>
-</tr>
-<tr>
 <td><a href="ValueSet-PayerAdjudicationAmountCategory.html">Payer Adjudication Amount Category</a></td>
 <td>This describes the various amount fields used when payers receive and adjudicate a claim.</td>
 </tr>
 <tr>
-<td><a href="ValueSet-AdjudicationCarinBBValueCodes.html">Payer Adjudication Value Codes</a></td>
-<td>As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem</td>
-</tr>
-<tr>
-<td><a href="ValueSet-PayerProviderContractingStatus.html">Provider Network Status</a></td>
+<td><a href="ValueSet-PayerProviderContractingStatus.html">Provider Provider Contracting Status</a></td>
 <td>Indicates that the Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission.</td>
 </tr>
   </tbody>
@@ -210,8 +210,4 @@ This IG includes value set bindings to code systems that are industry standard c
 </tr>
 </tbody>
 </table>
-
-<h3>Externally Published CodeSystems. </h3>
-
-
 </div>

@@ -8,6 +8,13 @@ See the [Table of Contents](toc.html) for more information.
 
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
+<li>Version 0.3.0 - July 24, 2020</li>
+<ol>
+<li>Corrections to slices defined and names of value sets referenced in 4 EOB profiles following review.  These are now in line with <a href="EOBtypes.png">the EOB Profile Summary</a>.</li>
+<li>Addition of initial skeletal examples for 4 EOB profiles. Feedback/input/suggestions welcome! </li>
+<li>Eliminated  CPCDS mapping table in Coverage intro.  CPCDS  information is to be moved to an external reference only based on FW WG direction.</li>
+<li>Committing FSH/sushi inputs to github now that mismatch between Sushi 0.14.0 and the latest IG publisher has been addressed. </li>
+</ol>
 <li>Version 0.2.0 - July 17, 2020</li>
 <ol>
 <li>Corrections to slices defined and value sets referenced in 4 EOB profiles following review</li>
@@ -69,7 +76,7 @@ See the [Table of Contents](toc.html) for more information.
   </tr>
   </table>
 <h3>Acknowledgements</h3>
-The CARIN Consumer Directed Payer Data Exchange Implementation Guide  is also known as the CARIN IG for Blue Button&reg; Implementation Guide.
+The CARIN Consumer Directed Payer Data Exchange Implementation Guide is also known as the CARIN IG for Blue Button&reg; Implementation Guide.
 
 <div class="footnote">
 <sup>[<a name="ftn.id1" href="#id1">*</a>]</sup>Blue Button, the slogan, 'Download My Data,' the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services.
