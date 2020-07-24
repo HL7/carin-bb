@@ -276,8 +276,8 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization"
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
-* identifier[npi].type = IdentifierTypeCS#npi
-* identifier[npi].value = "345678"
+* identifier[NPI].type = IdentifierTypeCS#npi
+* identifier[NPI].value = "345678"
 * identifier[payerid].type = IdentifierTypeCS#payerid
 * identifier[payerid].value = "901234"
 * name = "Payer 1"
@@ -290,8 +290,8 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization"
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
-* identifier[npi].type = IdentifierTypeCS#npi
-* identifier[npi].value = "345678"
+* identifier[NPI].type = IdentifierTypeCS#npi
+* identifier[NPI].value = "345678"
 * identifier[tax].type = IdentifierTypeCS#tax
 * identifier[tax].value = "123-45-6789"
 * name = "Provider 1"
