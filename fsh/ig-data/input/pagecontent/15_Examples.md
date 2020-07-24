@@ -18,6 +18,10 @@
   </thead>
   <tbody> 
 <tr>
+<td>ExplanationOfBenefit</td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html">CARIN-BB-ExplanationOfBenefit-Pharmacy</a></td>
+<td><a href="ExplanationOfBenefit-BBEobPharmacy.html">BBEobPharmacy</a></td>
+</tr>
 <tr>
 <td>Coverage</td>
 <td><a href="StructureDefinition-CARIN-BB-Coverage.html">CARIN-BB-Coverage</a></td>
