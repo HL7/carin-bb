@@ -14,7 +14,6 @@ See the [Table of Contents](toc.html) for more information.
 <li>Correction to example</li>
 <li>Correct version of CPCDS mapping spreadsheet linked. </li>
 </ol>
-<ul>
 <li>Version 0.3.0 - July 24, 2020</li>
 <ol>
 <li>Corrections to slices defined and names of value sets referenced in 4 EOB profiles following review.  These are now in line with <a href="EOBtypes.png">the EOB Profile Summary</a>.</li>
