@@ -17,7 +17,7 @@ Additional EOB profiles for Vision and Dental benefits are planned for future ve
 A Mapping Worksheet is included with this IG to aid implementers in understanding the data representation requirements of each EOB Profile and the referenced resources used by these profiles.
 
 ​Download your local copy of the CPCDS to FHIR Profiles Mapping Excel worksheet from
-<a download="CARINMappingtoFHIR.xlsx" href="CARINMappingtoFHIR20191002copy.xlsx"> here </a>.
+<a download="CARINMappingtoFHIR.xlsx" href="CARINMappingtoFHIRInterim20200513.xlsx"> here </a>.
 
 The following documentation describes the layout of the Mapping Worksheet and how to use it to
 understand the profiled data mappings to the FHIR resources.  The Data Element Index tab of the 
