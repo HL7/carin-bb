@@ -57,7 +57,6 @@ Description: "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication co
 * PayerAdjudicationCategoryCS#memberliability "Member liability" 
 * PayerAdjudicationCategoryCS#discount "Discount" 
 * PayerAdjudicationCategoryCS#drugcost "Drug cost" 
-* PayerAdjudicationCategoryCS#allowed "Allowed"   // SHOULD THIS BE HERE?  ASK PAT!
 
 
 ValueSet: PayerAdjudicationAmountCategory
