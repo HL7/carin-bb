@@ -119,11 +119,11 @@ Id: CARIN-BB-ExplanationOfBenefit-Inpatient-Facility
 Title: "CARIN BB ExplanationOfBenefit Inpatient Facility"
 Description: "The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at a facility as part of an overnight stay. 
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
-* obeys EOB-inst-careTeam-practitioner
-* obeys EOB-inst-careTeam-organization
 * type.coding 1..1 MS
 * type = $HL7ClaimTypeCS#institutional
 * careTeam.role from CARINBBInstitutionalClaimCareTeamRoleCodes (required)  // was  PayerInstitutionalProviderRole 
+* careTeam obeys EOB-inst-careTeam-practitioner
+* careTeam obeys EOB-inst-careTeam-organization
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerInpatientfacilitydiagnosistype (required)
@@ -224,7 +224,6 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
 * adjudication ^slicing.discriminator.type = #value
-
 * adjudication.category 1..1 MS 
 * adjudication contains
    adjudicationamounttype 0..* MS and
@@ -254,10 +253,10 @@ Id: CARIN-BB-ExplanationOfBenefit-Outpatient-Facility
 Title: "CARIN BB ExplanationOfBenefit Outpatient Facility"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at a facility that are not part of an overnight stay. 
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
-* obeys EOB-inst-careTeam-practitioner
-* obeys EOB-inst-careTeam-organization
 * type  = $HL7ClaimTypeCS#institutional
 * careTeam.role from CARINBBInstitutionalClaimCareTeamRoleCodes (required)   // was PayerInstitutionalProviderRole
+* careTeam obeys EOB-inst-careTeam-practitioner
+* careTeam obeys EOB-inst-careTeam-organization
 * diagnosis 1..*
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] 1..1 MS
@@ -373,10 +372,10 @@ Id: CARIN-BB-ExplanationOfBenefit-Pharmacy
 Title: "CARIN BB ExplanationOfBenefit Pharmacy"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies. 
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
-* obeys EOB-pharm-careTeam-practitioner
-* obeys EOB-pharm-careTeam-organization
 * type = $HL7ClaimTypeCS#pharmacy 
 // * provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner)   Set in Abstract Class.  No need to set here.
+* careTeam obeys EOB-pharm-careTeam-practitioner
+* careTeam obeys EOB-pharm-careTeam-organization
 * supportingInfo ^slicing.discriminator.type = #pattern 
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #open
@@ -450,8 +449,8 @@ Id: CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
 Title: "CARIN BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. 
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
-* obeys EOB-prof-careTeam-practitioner
-* obeys EOB-prof-careTeam-organization
+* careTeam obeys EOB-prof-careTeam-practitioner
+* careTeam obeys EOB-prof-careTeam-organization
 * type = $HL7ClaimTypeCS#professional
 // * provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner) -- set in base class
 * supportingInfo ^slicing.discriminator.type = #pattern 
@@ -616,41 +615,41 @@ Severity:   #error
 
 Invariant: EOB-inst-careTeam-practitioner
 Description: "Institutional EOB:  Careteam roles refer to a practitioner"
-Expression: "(ExplanationOfBenefit.careTeam.role.coding.code in 
+Expression: "( careTeam.role.coding.code in 
 ('attending' or 'pcp' or 'referring' or 'supervising')) implies 
-ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
+ careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
 Severity: #error
 
 Invariant: EOB-inst-careTeam-organization
 Description: "Institutional EOB:  Careteam roles refer to a practitioner"
-Expression: "(ExplanationOfBenefit.careTeam.role.coding.code='performing') implies 
-ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Organization)"
+Expression: "( careTeam.role.coding.code='performing') implies 
+ careTeam.provider.reference.resolve().is(FHIR.Organization)"
 Severity: #error
 
 Invariant: EOB-pharm-careTeam-practitioner
 Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
-Expression: "(ExplanationOfBenefit.careTeam.role.coding.code in 
+Expression: "( careTeam.role.coding.code in 
 ( 'pcp' or 'prescribing')) implies 
-ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
+ careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
 Severity: #error
 
 Invariant: EOB-pharm-careTeam-organization
 Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
-Expression: "(ExplanationOfBenefit.careTeam.role.coding.code='performing') implies 
-ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Organization)"
+Expression: "( careTeam.role.coding.code='performing') implies 
+ careTeam.provider.reference.resolve().is(FHIR.Organization)"
 Severity: #error
 
 Invariant: EOB-prof-careTeam-practitioner
 Description: "Institutional EOB:  Careteam roles refer to a practitioner"
-Expression: "(ExplanationOfBenefit.careTeam.role.coding.code in 
+Expression: "( careTeam.role.coding.code in 
 ('performing' or 'pcp' or 'referring' or 'supervising')) implies 
-ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
+ careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
 Severity: #error
 
 Invariant: EOB-prof-careTeam-organization
 Description: "Institutional EOB:  Careteam roles refer to a practitioner"
-Expression: "(ExplanationOfBenefit.careTeam.role.coding.code='site') implies 
-ExplanationOfBenefit.careTeam.provider.reference.resolve().is(FHIR.Organization)"
+Expression: "( careTeam.role.coding.code='site') implies 
+ careTeam.provider.reference.resolve().is(FHIR.Organization)"
 Severity: #error
 
 
