@@ -47,7 +47,6 @@ Id: CARIN-BB-ExplanationOfBenefit
 Title: "CARIN BB Explanation Of Benefit"
 Description: "Abstract parent profile that includes constraints that are common to the four specific ExplanationOfBenefit (EOB) profiles defined in this Implementation Guide.
 All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
-* obeys EOB-insurance-focal 
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * ^abstract = true 
@@ -69,7 +68,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * use = #claim 
 * patient 1..1 MS
 * adjudication MS 
-
+* provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner)   // based on BV2a comments 7/27
 * patient only Reference (CARINBBPatient)
 * billablePeriod 0..1 MS 
 * insurer 1..1 MS
@@ -77,7 +76,6 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * provider 1..1 MS
 * related 0..* MS
 * related.relationship 1..1 MS
-* diagnosis.diagnosis[x] only CodeableConcept 
 //* related.relationship from RelatedClaim (extensible)
 * payee 0..1 MS
 * payee.type 1..1 MS
@@ -100,6 +98,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * insurance 1..* MS
 * insurance.coverage 1..1 MS
 * insurance.focal 1..1  MS
+* insurance obeys EOB-insurance-focal 
 * insurance.coverage only Reference(CARINBBCoverage)
 * adjudication.extension contains
    AdjudicationType named adjudication-type 1..1 MS
@@ -128,6 +127,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerInpatientfacilitydiagnosistype (required)
+* diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosisCodeableConcept from ICD10CM (required)
 * diagnosis.onAdmission 0..1 MS
@@ -259,6 +259,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * type  = $HL7ClaimTypeCS#institutional
 * careTeam.role from CARINBBInstitutionalClaimCareTeamRoleCodes (required)   // was PayerInstitutionalProviderRole
 * diagnosis 1..*
+* diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosisCodeableConcept from ICD10CM (required)
 * provider only Reference(CARINBBOrganization)
@@ -361,8 +362,6 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis 1..*
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerOutpatientfacilitydiagnosistype (required)
-* diagnosis.diagnosis[x] 1..1 MS
-* diagnosis.diagnosisCodeableConcept from ICD10CM (required)
 * payment.adjustmentReason from AdjudicationDenialReason (extensible)
 
 
@@ -377,7 +376,7 @@ The claims data is based on submission standards adopted by the Department of He
 * obeys EOB-pharm-careTeam-practitioner
 * obeys EOB-pharm-careTeam-organization
 * type = $HL7ClaimTypeCS#pharmacy 
-* provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner)
+// * provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner)   Set in Abstract Class.  No need to set here.
 * supportingInfo ^slicing.discriminator.type = #pattern 
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #open
@@ -454,7 +453,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * obeys EOB-prof-careTeam-practitioner
 * obeys EOB-prof-careTeam-organization
 * type = $HL7ClaimTypeCS#professional
-* provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner)
+// * provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner) -- set in base class
 * supportingInfo ^slicing.discriminator.type = #pattern 
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #open
@@ -485,6 +484,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis 1..*
 * diagnosis.type 1..1
 * diagnosis.type from PayerProfessionalandnoncliniciandiagnosistype (required)
+* diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosisCodeableConcept from ICD10CM (required)
 * item.modifier from CPTHCPCSModifierCode (required)
@@ -609,7 +609,7 @@ Description: "CARIN Blue Button Location Profile."
 * meta.profile 1..* MS
 
 Invariant:  EOB-insurance-focal  
-Description: "EOB.insurance:  at most one slice with focal = true"
+Description: "EOB.insurance:  at most one with focal = true"
 Expression: "insurance.select (focal = true).count() < 2"
 Severity:   #error
 

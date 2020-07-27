@@ -115,7 +115,7 @@ Usage: #example
 * total[2].category.text = "Patient Pay Amount"
 * total[2].amount.value = 0.00
 * total[2].amount.currency = #USD
-* adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#other
+* adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#in-network 
 * adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept = AdjudicationSliceCodesCS#inoutnetwork
 
 Instance: EOBOutpatientFacility1
