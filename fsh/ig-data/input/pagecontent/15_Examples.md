@@ -19,6 +19,11 @@
   <tbody> 
 <tr>
 <td>ExplanationOfBenefit</td>
+<td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Outpatient-Facility.html">CARIN-BB-ExplanationOfBenefit-Outpatient-Facility</a></td>
+<td><a href="ExplanationOfBenefit-BBEobOutpatientFacility.html">BBEobOutpatientFacility</a></td>
+</tr>
+<tr>
+<td>ExplanationOfBenefit</td>
 <td><a href="StructureDefinition-CARIN-BB-ExplanationOfBenefit-Pharmacy.html">CARIN-BB-ExplanationOfBenefit-Pharmacy</a></td>
 <td><a href="ExplanationOfBenefit-BBEobPharmacy.html">BBEobPharmacy</a></td>
 </tr>
