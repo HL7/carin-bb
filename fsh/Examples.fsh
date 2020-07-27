@@ -268,7 +268,6 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD
 
 
-
 Instance: OrganizationPayer1
 InstanceOf: CARINBBOrganization
 Description: "Payer1"
@@ -380,9 +379,9 @@ Description: "BBEoB from Jeff"
 * item[0].adjudication[adjudicationamounttype][2].category = $HL7AdjudicationCS#submitted  "Submitted"
 * item[0].adjudication[adjudicationamounttype][2].amount.value = 81.86
 * item[0].adjudication[adjudicationamounttype][2].amount.currency = #USD  
-* item[0].adjudication[adjudicationamounttype][3].category = PayerAdjudicationCategoryCS#allowed "Allowed"
-* item[0].adjudication[adjudicationamounttype][3].amount.value = 81.86
-* item[0].adjudication[adjudicationamounttype][3].amount.currency = #USD
+// * item[0].adjudication[3].category = PayerAdjudicationCategoryCS#allowed "Allowed"
+// * item[0].adjudication[3].amount.value = 81.86
+// * item[0].adjudication[3].amount.currency = #USD
 // * item[0].adjudication[4].category.coding[0].system = "https://bluebutton.cms.gov/resources/codesystem/adjudication"
 // * item[0].adjudication[4].category.coding[0].code = #https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd
 // * item[0].adjudication[4].category.coding[0].display = "Line Processing Indicator Code"
@@ -421,9 +420,9 @@ Description: "BBEoB from Jeff"
 * item[1].adjudication[adjudicationamounttype][2].category = $HL7AdjudicationCS#submitted  "Submitted"
 * item[1].adjudication[adjudicationamounttype][2].amount.value = 11.43
 * item[1].adjudication[adjudicationamounttype][2].amount.currency = #USD   
-// * item[1].adjudication[adjudicationamounttype][3].category = PayerAdjudicationCategoryCS#allowed "Allowed"
-// * item[1].adjudication[adjudicationamounttype][3].amount.value = 11.43
-// * item[1].adjudication[adjudicationamounttype][3].amount.currency = #USD
+// * item[2].adjudication[adjudicationamounttype][3].category = PayerAdjudicationCategoryCS#allowed "Allowed"
+// * item[1].adjudication[3].amount.value = 11.43
+// * item[1].adjudication[3].amount.currency = #USD
 // * item[1].adjudication[4].category.coding[0].system = "https://bluebutton.cms.gov/resources/codesystem/adjudication"
 // * item[1].adjudication[4].category.coding[0].code = #https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd
 // * item[1].adjudication[4].category.coding[0].display = "Line Processing Indicator Code"
@@ -453,18 +452,18 @@ Description: "BBEoB from Jeff"
 * item[2].unitPrice.currency = #USD
 * item[2].net.value = 4.08
 * item[2].net.currency = #USD
-* item[1].adjudication[adjudicationamounttype][0].category = PayerAdjudicationCategoryCS#coinsurance "Beneficiary Coinsurance Amount"
-* item[1].adjudication[adjudicationamounttype][0].amount.value = 4.08
-* item[1].adjudication[adjudicationamounttype][0].amount.currency = #USD
-* item[1].adjudication[adjudicationamounttype][1].category = PayerAdjudicationCategoryCS#paidtoprovider "Paid to provider"  
-* item[1].adjudication[adjudicationamounttype][1].amount.value = 0.0
-* item[1].adjudication[adjudicationamounttype][1].amount.currency = #USD
-* item[1].adjudication[adjudicationamounttype][2].category = $HL7AdjudicationCS#submitted  "Submitted"
-* item[1].adjudication[adjudicationamounttype][2].amount.value = 4.08
-* item[1].adjudication[adjudicationamounttype][2].amount.currency = #USD   
-// * item[1].adjudication[adjudicationamounttype][3].category = PayerAdjudicationCategoryCS#allowed "Allowed"
-// * item[1].adjudication[adjudicationamounttype][3].amount.value = 4.08
-// * item[1].adjudication[adjudicationamounttype][3].amount.currency = #USD
+* item[2].adjudication[adjudicationamounttype][0].category = PayerAdjudicationCategoryCS#coinsurance "Beneficiary Coinsurance Amount"
+* item[2].adjudication[adjudicationamounttype][0].amount.value = 4.08
+* item[2].adjudication[adjudicationamounttype][0].amount.currency = #USD
+* item[2].adjudication[adjudicationamounttype][1].category = PayerAdjudicationCategoryCS#paidtoprovider "Paid to provider"  
+* item[2].adjudication[adjudicationamounttype][1].amount.value = 0.0
+* item[2].adjudication[adjudicationamounttype][1].amount.currency = #USD
+* item[2].adjudication[adjudicationamounttype][2].category = $HL7AdjudicationCS#submitted  "Submitted"
+* item[2].adjudication[adjudicationamounttype][2].amount.value = 4.08
+* item[2].adjudication[adjudicationamounttype][2].amount.currency = #USD   
+// * item[1].adjudication[3].category = PayerAdjudicationCategoryCS#allowed "Allowed"
+// * item[1].adjudication[3].amount.value = 4.08
+// * item[1].adjudication[3].amount.currency = #USD
 // * item[2].adjudication[4].category.coding[0].system = "https://bluebutton.cms.gov/resources/codesystem/adjudication"
 // * item[2].adjudication[4].category.coding[0].code = #https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd
 // * item[2].adjudication[4].category.coding[0].display = "Line Processing Indicator Code"
