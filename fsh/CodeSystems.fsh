@@ -104,9 +104,6 @@ Description: "Payer Provider Role"
 * #pcp "pcp" "Primary Care Provider"
 * #site "site"  "Site Provider"
 * #prescribing "prescribing" "Prescribing Provider"
-<<<<<<< HEAD
 * #supervising "supervising" "Supervising"
 
 
-=======
->>>>>>> trying to do patternIdentifier and generating errors 'error Cannot resolve element from path: patternIdentifier.category'

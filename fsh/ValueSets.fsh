@@ -40,13 +40,8 @@ Description: "Indicates the role of the provider providing the care."
 * CareTeamRoleCS#prescribing "Prescribing Provider"
 * CareTeamRoleCS#performing "Performing Provider"
 
-<<<<<<< HEAD
 ValueSet: AdjudicationCarinBBValueCodes   // was PayerAdjudicationValueCodes
 Title: "Adjudication CARINBB Value Codes"
-=======
-ValueSet: PayerAdjudicationValueCodesVS
-Title: "Payer Adjudication Value Codes"
->>>>>>> Changed AdjudicationPayerValueCodes to PayerAdjudicationValueCodes
 Description: "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem"
 * $HL7AdjudicationCS#submitted 
 * $HL7AdjudicationCS#copay 
@@ -221,17 +216,8 @@ Title: "AMA CPT and CMS HCPCS Modifier Codes"
 ValueSet: ClaimAdjudicationCategory
 Title: "Claim Adjudication Category"
 Description: "Values for EOB.item.adjudication.category, as per Igor"
-<<<<<<< HEAD
-<<<<<<< HEAD
 * codes from valueset AdjudicationCarinBBValueCodes
 * codes from valueset BenefitPaymentStatus
-=======
-* codes from valueset AdjudicationPayerValueCodesVS
-=======
-* codes from valueset PayerAdjudicationValueCodesVS
->>>>>>> Changed AdjudicationPayerValueCodes to PayerAdjudicationValueCodes
-* codes from valueset BenefitPaymentStatusVS
->>>>>>> fixed up slicing
 * ClaimAdjudicationCategoryCS#denialreason 
 * ClaimAdjudicationCategoryCS#allowedunits 
 
