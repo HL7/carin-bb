@@ -2,7 +2,7 @@
 <h3>The CARIN Alliance</h3>
 The <a href="https://www.carinalliance.com/our-work/health-plan/">CARIN Alliance Health Plan Workgroup</a> was organized to develop a FHIR-based API that could be sent to a consumer-facing application.
 
-The CARIN Blue Button Framework was designed to answer the challenge for health plans to ‘meet or exceed’ the <a href="https://bluebutton.cms.gov/">CMS Blue Button 2.0</a> capabilities. The CMS Blue Button 2.0 project provides over 53 million Medicare fee-for-service beneficiaries access to their electronic claims information.
+The CARIN for Blue Button Framework was designed to answer the challenge for health plans to ‘meet or exceed’ the <a href="https://bluebutton.cms.gov/">CMS Blue Button 2.0</a> capabilities. The CMS Blue Button 2.0 project provides over 53 million Medicare fee-for-service beneficiaries access to their electronic claims information.
 
 The goal of the CARIN Alliance Health Plan Workgroup is to develop an agreed upon set of data fields to exchange with consumers and a FHIR-based implementation guide for health plans to use to implement the API.
 
@@ -55,7 +55,7 @@ CARIN BB uses the ExplanationOfBenefit Resource as its primary resource.  Refere
 Since the ExplanationOfBenefit and Coverage profiles are not included in the US Core, there is no alignment requirement for these profiles.  Patient, Practitioner, PractitionerRole, Organization and Location are US Core Profiles. Since these are supporting / reference profiles (rather than a focus profile) in CARIN BB, the alignment with the US Core is on the content of these profiles, but not on the search parameters. 
 
 The following diagram provides a high-level view of the relationships between resources used in this IG. It does not necessarily reflect all of the relationships/references between resources.
-<img style="width:100%;height:auto;float:none;align:middle;" src="CarinBBResources.png"/>
+<img style="width:100%;height:auto;float:none;align:middle;" src="CARINBBResources.png"/>
 
 <h4>SMART Application Launch</h4>
 
