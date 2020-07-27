@@ -11,13 +11,13 @@ Based on CPCDS, the mappings define the minimum mandatory elements, extensions a
 This implementation guide establishes a set of profiles for the Explanation of Benefit (EOB) resource and other referenced FHIR resources. As shown here, the data represented in each of the 4 concrete EOB profiles aligns with claim submission standards adopted by the US Department of Health and Human Services for a specific type of benefit.   The fifth EOB profile, not shown in this table, is a design artifact that includes data representation constraints common across all types of EOBs, and this profile should not be used for actual data instances. 
 
 Additional EOB profiles for Vision and Dental benefits are planned for future versions of this IG.
-<img style="width:100%;height:auto;float:none;align:middle;" src="EOBtypes.png"/>
+<!-- <img style="width:100%;height:auto;float:none;align:middle;" src="EOBtypes.png"/> -->
 
 <h3>Mapping Worksheet</h3>
 A Mapping Worksheet is included with this IG to aid implementers in understanding the data representation requirements of each EOB Profile and the referenced resources used by these profiles.
 
 ​Download your local copy of the CPCDS to FHIR Profiles Mapping Excel worksheet from here.
-<a download="CARINMappingtoFHIR.xlsx" href="CARINMappingtoFHIR20191002copy.xlsx"> here </a>
+<a download="CARINMappingtoFHIR.xlsx" href="CARINMappingtoFHIRInterim20200513.xlsx"> here </a>
 
 The following documentation describes the layout of the Mapping Worksheet and how to use it to
 understand the profiled data mappings to the FHIR resources.  The Data Element Index tab of the 
