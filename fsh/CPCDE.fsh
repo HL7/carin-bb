@@ -107,7 +107,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * item.adjudication MS 
 * item.adjudication.category 1..1 MS
 * item.adjudication.category from ClaimAdjudicationCategory (required)  // Per Igor
-* total.category from PayerAdjudicationAmountCategory (extensible)    // IS THIS RIGHT?
+* total.category from ClaimAdjudicationCategory (required)
 * payment MS 
 * payment.type from ClaimPaymentStatusCode (required)
 
@@ -126,10 +126,10 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * careTeam obeys EOB-inst-careTeam-organization
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
-* diagnosis.type from PayerInpatientfacilitydiagnosistype (required)
-* diagnosis.diagnosis[x] only CodeableConcept
+* diagnosis.type from PayerInpatientfacilitydiagnosistype (required)   
 * diagnosis.diagnosis[x] 1..1 MS
-* diagnosis.diagnosisCodeableConcept from ICD10CM (required)
+* diagnosis.diagnosis[x] only CodeableConcept
+* diagnosis.diagnosis[x] from ICD10CM (required)
 * diagnosis.onAdmission 0..1 MS
 * diagnosis.onAdmission from NUBCPresentOnAdmission (required)
 * procedure.procedure[x] only CodeableConcept 
@@ -152,7 +152,8 @@ The claims data is based on the institutional claim format UB-04, submission sta
    pointoforigin 0..1 MS and 
    admtype 0..1 MS and 
    discharge-status 0..1 MS and 
-   drg 0..1 MS
+   drg 0..1 MS and
+   onadmissiontype 0..1 MS    // // https://jira.hl7.org/browse/FHIR-27012
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
@@ -198,6 +199,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[drg].code from CMSDRG  (required)
 * supportingInfo[drg] ^short = "Claim diagnosis related group (DRG)"
 * supportingInfo[drg] ^definition = "Claim diagnosis related group (DRG), including the code system, the DRG version and the code value"
+* supportingInfo[onadmissiontype].code from PayerDiagnosisPresentOnAdmissionDiagnosisType  (required) // new 7/28
+* supportingInfo[onadmissiontype] ^short = "On Admission Type"
+* supportingInfo[onadmissiontype] ^definition = "On Admission Type"
 * item.revenue from $NUBCRevenueCode (required)
 * item.modifier from CPTHCPCSModifierCode (required)
 * item.productOrService from CPTHCPCSProcedureCode (required)
@@ -227,15 +231,10 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication.category 1..1 MS 
 * adjudication contains
    adjudicationamounttype 0..* MS and
-   denialreason 0..1 MS and
-   inoutnetwork 1..1 MS
-// * adjudication ^slicing.discriminator.path = "category"
+   denialreason 0..1 MS 
 * adjudication ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType').value"
-* adjudication[inoutnetwork].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#inoutnetwork
 * adjudication[denialreason].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#denialreason
 * adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#adjudicationamounttype
-* adjudication[inoutnetwork] ^short = "Benefit Payment Status"
-* adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
 * adjudication[denialreason] ^short = "Denial Reason"
 * adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReason
@@ -243,7 +242,20 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
-* payment.adjustmentReason from AdjudicationDenialReason (extensible)
+* total ^slicing.rules = #closed
+* total ^slicing.ordered = false   // can be omitted, since false is the default
+* total ^slicing.description = "Slice based on value pattern"
+* total  ^slicing.discriminator.type = #value
+* total.category 1..1 MS 
+* total contains
+   adjudicationamounttype 0..* MS and
+   inoutnetwork 1..1 MS 
+* total[inoutnetwork] ^short = "Benefit Payment Status"
+* total[inoutnetwork].category from BenefitPaymentStatus (required)
+* total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
+* total[adjudicationamounttype] ^short = "Amounts"
+* total[adjudicationamounttype].amount 1..1
+
 
 Alias: $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
 
@@ -258,9 +270,9 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * careTeam obeys EOB-inst-careTeam-practitioner
 * careTeam obeys EOB-inst-careTeam-organization
 * diagnosis 1..*
-* diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] 1..1 MS
-* diagnosis.diagnosisCodeableConcept from ICD10CM (required)
+* diagnosis.diagnosis[x] only CodeableConcept
+* diagnosis.diagnosis[x] from ICD10CM (required)
 * provider only Reference(CARINBBOrganization)
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
@@ -347,10 +359,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication.category 1..1 MS
 * adjudication contains
    adjudicationamounttype 0..* MS and
-   denialreason 0..1 MS and
-   inoutnetwork 1..1 MS
-* adjudication[inoutnetwork] ^short = "Benefit Payment Status"
-* adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
+   denialreason 0..1 MS 
 * adjudication[denialreason] ^short = "Denial Reason"
 * adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReason
@@ -361,9 +370,99 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis 1..*
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerOutpatientfacilitydiagnosistype (required)
-* payment.adjustmentReason from AdjudicationDenialReason (extensible)
+* total ^slicing.rules = #closed
+* total ^slicing.ordered = false   // can be omitted, since false is the default
+* total ^slicing.description = "Slice based on value pattern"
+* total  ^slicing.discriminator.type = #value
+* total.category 1..1 MS 
+* total contains
+   adjudicationamounttype 0..* MS and
+   inoutnetwork 1..1 MS 
+* total[inoutnetwork] ^short = "Benefit Payment Status"
+* total[inoutnetwork].category from BenefitPaymentStatus (required)
+* total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
+* total[adjudicationamounttype] ^short = "Amounts"
+* total[adjudicationamounttype].amount 1..1
 
 
+Profile: CARINBBExplanationOfBenefitProfessionalNonClinician
+Parent: CARIN-BB-ExplanationOfBenefit
+Id: CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
+Title: "CARIN BB ExplanationOfBenefit Professional NonClinician"
+Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. 
+The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
+* careTeam obeys EOB-prof-careTeam-practitioner
+* careTeam obeys EOB-prof-careTeam-organization
+* type = $HL7ClaimTypeCS#professional
+// * provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner) -- set in base class
+* supportingInfo ^slicing.discriminator.type = #pattern 
+* supportingInfo ^slicing.discriminator.path = "category"
+* supportingInfo ^slicing.rules = #open
+* supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
+* supportingInfo ^slicing.description = "Slice based on $this pattern"
+* supportingInfo contains 
+   billingnetworkcontractingstatus 0..1 MS and
+   referringnetworkcontractingstatus 0..1 MS and
+   performingnetworkcontractingstatus 0..1 MS and
+   sitenetworkcontractingstatus 0..1 MS and
+   clmrecvddate 0..1 MS 
+* supportingInfo[billingnetworkcontractingstatus].category = $ClaimInformationCategoryCS#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
+* supportingInfo[billingnetworkcontractingstatus].code 1..1 
+* supportingInfo[billingnetworkcontractingstatus].category.coding 1..1
+* supportingInfo[referringnetworkcontractingstatus].category = $ClaimInformationCategoryCS#referringnetworkcontractingstatus
+* supportingInfo[referringnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
+* supportingInfo[referringnetworkcontractingstatus].code 1..1
+* supportingInfo[performingnetworkcontractingstatus].category = $ClaimInformationCategoryCS#performingnetworkcontractingstatus
+* supportingInfo[performingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
+* supportingInfo[performingnetworkcontractingstatus].code 1..1
+* supportingInfo[sitenetworkcontractingstatus].category = $ClaimInformationCategoryCS#sitenetworkcontractingstatus
+* supportingInfo[sitenetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
+* supportingInfo[clmrecvddate].category = ClaimInformationCategoryCS#clmrecvddate
+* supportingInfo[clmrecvddate].timing[x] only date 
+* supportingInfo[clmrecvddate].timing[x] 1..1
+* careTeam.role from CARINBBProfessionalAndNonclinicanClaimCareTeamRoleCodes  (required)  // was PayerProfessionalAndNonClinicianProviderRole
+* diagnosis 1..*
+* diagnosis.type 1..1
+* diagnosis.type from PayerProfessionalandnoncliniciandiagnosistype (required)
+* diagnosis.diagnosis[x] 1..1 MS
+* diagnosis.diagnosis[x] only CodeableConcept
+* diagnosis.diagnosis[x] from ICD10CM (required)
+* item.modifier from CPTHCPCSModifierCode (required)
+* item.productOrService from CPTHCPCSProcedureCode (required)
+* item.locationCodeableConcept from CMSPlaceOfService (required)
+* item.adjudication ^slicing.rules = #closed 
+* item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
+* item.adjudication ^slicing.description = "Slice based on value pattern"
+* item.adjudication ^slicing.discriminator.type = #pattern 
+* item.adjudication ^slicing.discriminator.path = "category"
+* item.adjudication contains
+   adjudicationamounttype 0..* and
+   denialreason 0..1 and
+   inoutnetwork 1..1 and
+   allowedunits 0..1 MS
+* item.adjudication[allowedunits] ^short = "Allowed number of units"
+* item.adjudication[allowedunits].category = ClaimAdjudicationCategoryCS#allowedunits
+* item.adjudication[allowedunits].value only decimal
+* item.adjudication[denialreason].category  = $ClaimAdjudicationCategoryCS#denialreason 
+* item.adjudication[denialreason].reason from AdjudicationDenialReason
+* item.adjudication[denialreason].reason 1..1 MS
+* item.adjudication[denialreason] ^short = "Denial Reason"
+* item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes 
+* item.adjudication[adjudicationamounttype] ^short = "Amounts"
+* item.adjudication[adjudicationamounttype].amount  MS
+* item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
+* item.adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
+* total ^slicing.rules = #closed
+* total ^slicing.ordered = false   // can be omitted, since false is the default
+* total ^slicing.description = "Slice based on value pattern"
+* total  ^slicing.discriminator.type = #value
+* total.category 1..1 MS 
+* total contains
+   adjudicationamounttype 0..* MS 
+* total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
+* total[adjudicationamounttype] ^short = "Amounts"
+* total[adjudicationamounttype].amount 1..1
 
 
 Profile: CARINBBExplanationOfBenefitPharmacy
@@ -432,85 +531,20 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
-* adjudication ^slicing.rules = #closed
-* adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* adjudication ^slicing.description = "Slice based on $this vpattern"
-* adjudication ^slicing.discriminator.type = #pattern
-* adjudication ^slicing.discriminator.path = "category"
-* adjudication.category 1..1
-* adjudication contains
-   inoutnetwork 1..1 MS
-* adjudication[inoutnetwork] ^short = "Benefit Payment Status"
-* adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
+* total ^slicing.rules = #closed
+* total ^slicing.ordered = false   // can be omitted, since false is the default
+* total ^slicing.description = "Slice based on value pattern"
+* total  ^slicing.discriminator.type = #value
+* total.category 1..1 MS 
+* total contains
+   adjudicationamounttype 0..* MS and 
+   inoutnetwork 1..1 MS 
+* total[inoutnetwork] ^short = "Benefit Payment Status"
+* total[inoutnetwork].category from BenefitPaymentStatus (required)
+* total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
+* total[adjudicationamounttype] ^short = "Amounts"
+* total[adjudicationamounttype].amount 1..1
 
-Profile: CARINBBExplanationOfBenefitProfessionalNonClinician
-Parent: CARIN-BB-ExplanationOfBenefit
-Id: CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
-Title: "CARIN BB ExplanationOfBenefit Professional NonClinician"
-Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. 
-The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
-* careTeam obeys EOB-prof-careTeam-practitioner
-* careTeam obeys EOB-prof-careTeam-organization
-* type = $HL7ClaimTypeCS#professional
-// * provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner) -- set in base class
-* supportingInfo ^slicing.discriminator.type = #pattern 
-* supportingInfo ^slicing.discriminator.path = "category"
-* supportingInfo ^slicing.rules = #open
-* supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
-* supportingInfo ^slicing.description = "Slice based on $this pattern"
-* supportingInfo contains 
-   billingnetworkcontractingstatus 0..1 MS and
-   referringnetworkcontractingstatus 0..1 MS and
-   performingnetworkcontractingstatus 0..1 MS and
-   sitenetworkcontractingstatus 0..1 MS and
-   clmrecvddate 0..1 MS 
-* supportingInfo[billingnetworkcontractingstatus].category = $ClaimInformationCategoryCS#billingnetworkcontractingstatus 
-* supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
-* supportingInfo[billingnetworkcontractingstatus].code 1..1 
-* supportingInfo[billingnetworkcontractingstatus].category.coding 1..1
-* supportingInfo[referringnetworkcontractingstatus].category = $ClaimInformationCategoryCS#referringnetworkcontractingstatus
-* supportingInfo[referringnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
-* supportingInfo[referringnetworkcontractingstatus].code 1..1
-* supportingInfo[performingnetworkcontractingstatus].category = $ClaimInformationCategoryCS#performingnetworkcontractingstatus
-* supportingInfo[performingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
-* supportingInfo[performingnetworkcontractingstatus].code 1..1
-* supportingInfo[sitenetworkcontractingstatus].category = $ClaimInformationCategoryCS#sitenetworkcontractingstatus
-* supportingInfo[sitenetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
-* supportingInfo[clmrecvddate].category = ClaimInformationCategoryCS#clmrecvddate
-* supportingInfo[clmrecvddate].timing[x] only date 
-* supportingInfo[clmrecvddate].timing[x] 1..1
-* careTeam.role from CARINBBProfessionalAndNonclinicanClaimCareTeamRoleCodes  (required)  // was PayerProfessionalAndNonClinicianProviderRole
-* diagnosis 1..*
-* diagnosis.type 1..1
-* diagnosis.type from PayerProfessionalandnoncliniciandiagnosistype (required)
-* diagnosis.diagnosis[x] only CodeableConcept
-* diagnosis.diagnosis[x] 1..1 MS
-* diagnosis.diagnosisCodeableConcept from ICD10CM (required)
-* item.modifier from CPTHCPCSModifierCode (required)
-* item.productOrService from CPTHCPCSProcedureCode (required)
-* item.locationCodeableConcept from CMSPlaceOfService (required)
-* item.adjudication ^slicing.rules = #closed 
-* item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* item.adjudication ^slicing.description = "Slice based on value pattern"
-* item.adjudication ^slicing.discriminator.type = #pattern 
-* item.adjudication ^slicing.discriminator.path = "category"
-* item.adjudication contains
-   adjudicationamounttype 0..* and
-   denialreason 0..1 and
-   inoutnetwork 1..1 and
-   allowedunits 0..1 MS
-* item.adjudication[allowedunits] ^short = "Allowed number of units"
-* item.adjudication[allowedunits].category = ClaimAdjudicationCategoryCS#allowedunits
-* item.adjudication[allowedunits].value only decimal
-* item.adjudication[denialreason].category  = $ClaimAdjudicationCategoryCS#denialreason 
-* item.adjudication[denialreason].reason from AdjudicationDenialReason
-* item.adjudication[denialreason].reason 1..1 MS
-* item.adjudication[denialreason] ^short = "Denial Reason"
-* item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes 
-* item.adjudication[adjudicationamounttype] ^short = "Amounts"
-* item.adjudication[adjudicationamounttype].amount  MS
-* item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
-* item.adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
 
 
 // Do all references to Organization in this profile need to target CARINBBOrganization?

@@ -161,6 +161,10 @@ This IG includes value set bindings to code systems that are industry standard c
 <td>This describes the various amount fields used when payers receive and adjudicate a claim.</td>
 </tr>
 <tr>
+<td><a href="ValueSet-PayerDiagnosisPresentOnAdmissionDiagnosisType.html">Payer Diagnosis Present On Admission Diagnosis Type</a></td>
+<td>Payer Diagnosis Present On Admission Diagnosis Type</td>
+</tr>
+<tr>
 <td><a href="ValueSet-PayerProviderContractingStatus.html">Provider Provider Contracting Status</a></td>
 <td>Indicates that the Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission.</td>
 </tr>

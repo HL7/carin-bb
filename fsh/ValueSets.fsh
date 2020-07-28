@@ -117,6 +117,14 @@ Title: "Diagnosis Type -- Outpatient Facility"
 Description: "Payer Outpatient Facility Diagnosis Type"
 * codes from system PayerDiagnosisTypeCS
 
+ValueSet: PayerDiagnosisPresentOnAdmissionDiagnosisType    // https://jira.hl7.org/browse/FHIR-27012
+Title: "Payer Diagnosis Present On Admission Diagnosis Type"
+Description: "Payer Diagnosis Present On Admission Diagnosis Type"
+* PayerDiagnosisTypeCS#principal 
+* PayerDiagnosisTypeCS#secondary  
+* PayerDiagnosisTypeCS#external-cause-of-injury 
+
+
 ValueSet: NUBCPresentOnAdmission
 Title: "NUBC Present On Admission"
 Description: "NUBC Present On Admission"
