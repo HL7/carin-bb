@@ -1,12 +1,11 @@
 {
-    "drivedFrom" : "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-coverage",
-    "resource" : {
       "resourceType" : "SearchParameter",
       "id" : "ExplanationOfBenefit-coverage",
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
         "valueCode" : "trial-use"
       }],
+      "derivedFrom" : "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-coverage",
       "url" : "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-coverage",
       "version" : "4.0.1",
       "name" : "coverage",
@@ -34,5 +33,4 @@
       "xpath" : "f:ExplanationOfBenefit/f:insurance/f:coverage",
       "xpathUsage" : "normal",
       "target" : ["Coverage"]
-    }
   }

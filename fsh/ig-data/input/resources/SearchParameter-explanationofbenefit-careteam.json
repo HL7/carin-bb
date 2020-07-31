@@ -1,4 +1,6 @@
 {
+    "resourceType" : "SearchParameter",
+    "id" : "ExplanationOfBenefit-care-team",
     "derivedfrom" : "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-care-team",
     "resource" : {
       "resourceType" : "SearchParameter",

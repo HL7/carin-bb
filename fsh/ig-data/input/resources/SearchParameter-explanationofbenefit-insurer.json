@@ -13,7 +13,8 @@
         "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
         "valueCode": "trial-use"
     }],
-    "url": "http://hl7.org/fhir/us/carin/SearchParameter/explanationofbenefit-insurer",
+    "url": "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-insurer",
+    "derivedFrom": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-insurer",
     "version": "0.1.0",
     "name": "CARINBlueButton_ExplanationOfBenefit_Insurer_SearchParameter",
     "status": "active",
