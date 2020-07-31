@@ -84,6 +84,9 @@ See the [Table of Contents](toc.html) for more information.
 <h3>Acknowledgements</h3>
 The CARIN Consumer Directed Payer Data Exchange Implementation Guide is also known as the CARIN IG for Blue Button&reg; Implementation Guide.
 
+This IG was developed using [FHIR Shorthand syntax](https://build.fhir.org/ig/HL7/fhir-shorthand/) and the [SUSHI tookit](https://github.com/FHIR/sushi),  a free, open source toolchain from the MITRE Corporation.  
+The capability statements were developed with support of tools and valuable guidance from Eric Haas.
+
 <div class="footnote">
 <sup>[<a name="ftn.id1" href="#id1">*</a>]</sup>Blue Button, the slogan, 'Download My Data,' the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services.
 </div>
