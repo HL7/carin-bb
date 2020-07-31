@@ -9,7 +9,7 @@
     "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
     "valueCode": "trial-use"
   }],
-  "url": "http://hl7.org/fhir/us/carin/SearchParameter/explanationofbenefit-type",
+  "url": "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-type",
   "version": "0.1.0",
   "name": "ExplanationOfBenefit_Type",
   "status": "active",

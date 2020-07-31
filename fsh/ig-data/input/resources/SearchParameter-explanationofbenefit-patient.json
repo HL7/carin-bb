@@ -9,8 +9,8 @@
         "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
         "valueCode": "trial-use"
     }],
-    "url": "http://hl7.org/fhir/us/carin/SearchParameter/explanationofbenefit-patient",
-    "version": "0.1.0",
+    "url": "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-patient",
+     "version": "0.1.0",
     "name": "ExplanationOfBenefit_Patient",
     "derivedFrom": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-patient",
     "status": "active",
