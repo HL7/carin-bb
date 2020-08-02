@@ -1,17 +1,14 @@
 {
     "resourceType" : "SearchParameter",
-    "id" : "ExplanationOfBenefit-care-team",
-    "derivedfrom" : "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-care-team",
-    "resource" : {
-      "resourceType" : "SearchParameter",
-      "id" : "ExplanationOfBenefit-care-team",
+      "id" : "explanationofbenefit-care-team",
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
         "valueCode" : "trial-use"
       }],
+      "derivedFrom": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-care-team",
       "url" : "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-care-team",
       "version" : "4.0.1",
-      "name" : "care-team",
+      "name" : "ExplanationOfBenefit_Careteam",
       "status" : "draft",
       "experimental" : false,
       "date" : "2019-11-01T09:29:23+11:00",
@@ -38,5 +35,4 @@
       "target" : ["Practitioner",
       "Organization",
       "PractitionerRole"]
-    }
-  }
+     }

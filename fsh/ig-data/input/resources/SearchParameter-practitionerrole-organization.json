@@ -1,12 +1,12 @@
 {
-    "derivedFrom" : "http://hl7.org/fhir/SearchParameter/PractitionerRole-organization",
       "resourceType" : "SearchParameter",
-      "id" : "PractitionerRole-organization",
+      "id" : "practitionerrole-organization",
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
         "valueCode" : "trial-use"
       }],
       "url" : "http://hl7.org/fhir/us/carin-bb/SearchParameter/practitionerrole-organization",
+      "derivedFrom" : "http://hl7.org/fhir/SearchParameter/PractitionerRole-organization",
       "version" : "4.0.1",
       "name" : "organization",
       "status" : "draft",

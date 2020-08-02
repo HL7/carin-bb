@@ -1,13 +1,14 @@
 
 {
-    "derivedFrom" : "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner",
+
       "resourceType" : "SearchParameter",
-      "id" : "PractitionerRole-practitioner",
+      "id" : "practitionerrole-practitioner",
       "extension" : [{
         "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
         "valueCode" : "trial-use"
       }],
       "url" : "http://hl7.org/fhir/us/carin-bb/SearchParameter/practitionerrole-practitioner",
+      "derivedFrom" : "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner",
       "version" : "4.0.1",
       "name" : "practitioner",
       "status" : "draft",

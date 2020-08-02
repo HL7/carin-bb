@@ -11,9 +11,7 @@ The Coverage Reference Resource SHALL be returned with data that was effective a
 
 <h3>RESTful Capabilities by Resource/Profile</h3>
 
-To fetch supporting Reference Resources, payers SHALL support _include for all resources referenced by an ExplanationOfBenefit as well as "_include=*", which would bring all referenced resources in the bundle. Client's ExplanationOfBenefit searches can use "_include=*", "_include" for specific reference resources or no "_include" at all (atomic calls) as best suits their use case. Payers SHALL also support resource reads by _id for all profiles defined by this implementation guide.
-
-Payers SHALL provide equivalency for “query via _id” (when a client requests data for the referenced resources using a separate call to each resource by its id) and “query via _include" (when a client requests data from all referenced resources to be bundled in one response with the EOB resources). Equivalency means that the same data SHALL be returned regardless whether the client uses “_id” or “_include”. Particularly, if a payer returns point in time versioned reference resources in response to a "_include" request", the same point in time versioned reference resources SHALL be returned in response to the atomic calls / reads for these reference resources).
+When an EOB references another resource (e.g., Patient or Practitioner), the reference may be versioned or versionless. Payers SHALL use versioned references whenever they maintain point-in-time data (data that was effective as of the date of service or date of admission on the claim), but MAY use versionless references when they do not maintain versioned data. Clients MAY request referenced resources as part of an EOB search (by supplying the _include parameter) or directly using read or vread. Payers SHALL support both approaches, and SHALL return the same content for referenced resources in either case.
 
 <h4>Explanation of Benefit Profiles</h4>
 
