@@ -128,6 +128,7 @@ Description: "Payer Diagnosis Present On Admission Diagnosis Type"
 ValueSet: NUBCPresentOnAdmission
 Title: "NUBC Present On Admission"
 Description: "NUBC Present On Admission"
+* codes from system $PresentOnAdmissionV2CS
 
 ValueSet: AdjudicationDenialReason
 Title: "Adjudication Denial Reason"

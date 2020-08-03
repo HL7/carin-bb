@@ -15,6 +15,7 @@ Alias:   $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
 Alias:   $OrganizationIdentifierTypeCS   =  http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $ClaimPayeeTypeCode = http://hl7.org/fhir/ValueSet/payeetype
 Alias:   $CareTeamRoleCodeCS = http://terminology.hl7.org/CodeSystem/claimcareteamrole
+Alias:   $PresentOnAdmissionV2CS = http://terminology.hl7.org/CodeSystem/v2-0895 
 
 // CodeSystem Aliases due to bugs in Sushi 0.12.7 and 0.13.2 ..hopefully resolved and deleted at some point
 Alias: $IdentifierTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS
