@@ -115,9 +115,9 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[3].category = PayerAdjudicationCategoryCS#innetwork 
-* total[3].amount.value = 0.00
-* total[3].amount.currency = #USD
+* total[inoutnetwork].category = PayerAdjudicationCategoryCS#innetwork 
+* total[inoutnetwork].amount.value = 0.00
+* total[inoutnetwork].amount.currency = #USD
 //* adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#innetwork 
 
 
@@ -162,9 +162,9 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[inoutnetwork][3].category = PayerAdjudicationCategoryCS#innetwork
-* total[inoutnetwork][3].amount.value = 0.00
-* total[inoutnetwork][3].amount.currency = #USD
+* total[inoutnetwork].category = PayerAdjudicationCategoryCS#innetwork
+* total[inoutnetwork].amount.value = 0.00
+* total[inoutnetwork].amount.currency = #USD
 //* adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#other
 
 Instance: EOBProfessional1
@@ -208,9 +208,7 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[inoutnetwork][3].category = PayerAdjudicationCategoryCS#innetwork
-* total[inoutnetwork][3].amount.value = 0.00
-* total[inoutnetwork][3].amount.currency = #USD
+
 
 Instance: EOBPharmacy1
 InstanceOf: CARINBBExplanationOfBenefitPharmacy
@@ -253,9 +251,9 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[3].category = PayerAdjudicationCategoryCS#innetwork 
-* total[3].amount.value = 0.00
-* total[3].amount.currency = #USD
+* total[inoutnetwork].category = PayerAdjudicationCategoryCS#innetwork 
+* total[inoutnetwork].amount.value = 0.00
+* total[inoutnetwork].amount.currency = #USD
 //* adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#other
 * item[0].productOrService = $FDANationalDrugCodeCS#0777-3105-02 "100-count bottle of Prozac 20 mg"
 * item[0].sequence = 1 
@@ -483,9 +481,12 @@ Description: "BBEoB from Jeff"
 // * item[2].adjudication[5].category.coding[0].display = "Line Beneficiary Part B Deductible Amount"
 // * item[2].adjudication[5].amount.value = 500.0
 // * item[2].adjudication[5].amount.currency = #USD
-* total[0].category = $HL7AdjudicationCS#submitted
-* total[0].amount.value = 97.37
-* total[0].amount.currency = #USD
+* total[adjudicationamounttype].category = $HL7AdjudicationCS#submitted
+* total[adjudicationamounttype].amount.value = 97.37
+* total[adjudicationamounttype].amount.currency = #USD
+* total[inoutnetwork].category = PayerAdjudicationCategoryCS#innetwork 
+* total[inoutnetwork].amount.value = 0.00
+* total[inoutnetwork].amount.currency = #USD
 * payment.amount.value = 0.0
 * payment.amount.currency = #USD
 // Added since these were missing and required from original example

@@ -181,10 +181,12 @@ Description: "BBEoB from Jeff"
 * payment.amount.value = 0
 * payment.amount.currency = #USD
 // Added since these were missing and required from original example
-* total[inoutnetwork][0].category = PayerAdjudicationCategoryCS#innetwork 
-* total[adjudicationamounttype][1].category =  $HL7AdjudicationCS#submitted
-* total[adjudicationamounttype][1].amount.value = 81.86
-* total[adjudicationamounttype][1].amount.currency = #USD
+* total[inoutnetwork].category = PayerAdjudicationCategoryCS#innetwork 
+* total[inoutnetwork].amount.value = 0.00
+* total[inoutnetwork].amount.currency = #USD
+* total[adjudicationamounttype][0].category =  $HL7AdjudicationCS#submitted
+* total[adjudicationamounttype][0].amount.value = 81.86
+* total[adjudicationamounttype][0].amount.currency = #USD
 * provider.display = "Bay Area Family Practice"
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
