@@ -125,8 +125,9 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * insurance.focal 1..1  MS
 * insurance obeys EOB-insurance-focal 
 * insurance.coverage only Reference(CARINBBCoverage)
-* adjudication.extension contains
+/* * adjudication.extension contains
    AdjudicationType named adjudication-type 1..1 MS
+*/
 * adjudication.category from ClaimAdjudicationCategory (required)   // per Igor
 * item 0..* MS
 * item.adjudication MS 
@@ -257,9 +258,10 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication contains
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS 
-* adjudication ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType').value"
-* adjudication[denialreason].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#denialreason
-* adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#adjudicationamounttype
+// * adjudication ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType').value"
+//* adjudication[denialreason].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#denialreason
+//* adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#adjudicationamounttype
+* adjudication ^slicing.discriminator.path = "category"
 * adjudication[denialreason] ^short = "Denial Reason"
 * adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * adjudication[denialreason].reason from AdjudicationDenialReason
@@ -267,10 +269,11 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
-* total ^slicing.rules = #closed
+* total ^slicing.rules = #open
 * total ^slicing.ordered = false   // can be omitted, since false is the default
 * total ^slicing.description = "Slice based on value pattern"
 * total  ^slicing.discriminator.type = #value
+* total  ^slicing.discriminator.path = "category"
 * total.category 1..1 MS 
 * total contains
    adjudicationamounttype 0..* MS and
@@ -279,7 +282,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * total[inoutnetwork].category from BenefitPaymentStatus (required)
 * total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
-* total[adjudicationamounttype].amount 1..1
+//* total[adjudicationamounttype].amount 1..1
 
 
 Alias: $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
@@ -395,10 +398,11 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis 1..*
 * diagnosis.type 1..1 MS
 * diagnosis.type from PayerOutpatientfacilitydiagnosistype (required)
-* total ^slicing.rules = #closed
+* total ^slicing.rules = #open
 * total ^slicing.ordered = false   // can be omitted, since false is the default
 * total ^slicing.description = "Slice based on value pattern"
 * total  ^slicing.discriminator.type = #value
+* total  ^slicing.discriminator.path = "category"
 * total.category 1..1 MS 
 * total contains
    adjudicationamounttype 0..* MS and
@@ -407,7 +411,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * total[inoutnetwork].category from BenefitPaymentStatus (required)
 * total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
-* total[adjudicationamounttype].amount 1..1
+//* total[adjudicationamounttype].amount 1..1
 
 
 Profile: CARINBBExplanationOfBenefitProfessionalNonClinician
@@ -478,16 +482,17 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
-* total ^slicing.rules = #closed
+* total ^slicing.rules = #open
 * total ^slicing.ordered = false   // can be omitted, since false is the default
 * total ^slicing.description = "Slice based on value pattern"
 * total  ^slicing.discriminator.type = #value
+* total  ^slicing.discriminator.path = "category"
 * total.category 1..1 MS 
 * total contains
    adjudicationamounttype 0..* MS 
 * total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
-* total[adjudicationamounttype].amount 1..1
+//* total[adjudicationamounttype].amount 1..1
 
 
 Profile: CARINBBExplanationOfBenefitPharmacy
@@ -556,10 +561,11 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
-* total ^slicing.rules = #closed
+* total ^slicing.rules = #open 
 * total ^slicing.ordered = false   // can be omitted, since false is the default
 * total ^slicing.description = "Slice based on value pattern"
 * total  ^slicing.discriminator.type = #value
+* total  ^slicing.discriminator.path = "category"
 * total.category 1..1 MS 
 * total contains
    adjudicationamounttype 0..* MS and 
@@ -568,7 +574,7 @@ The claims data is based on submission standards adopted by the Department of He
 * total[inoutnetwork].category from BenefitPaymentStatus (required)
 * total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
-* total[adjudicationamounttype].amount 1..1
+//* total[adjudicationamounttype].amount 1..1
 
 
 
@@ -717,7 +723,7 @@ Expression: "( careTeam.role.coding.code='site') implies
  careTeam.provider.reference.resolve().is(FHIR.Organization)"
 Severity: #error
 
-
+/*
 //  Proposed Change to Slicing Style 
 Extension: AdjudicationType
 Title: "Adjudication Type"
@@ -740,3 +746,4 @@ Description: "Codes used to discriminate slices of adjudication and item.adjudic
 * #allowedunits "Allowed Units" "Allowed Units"
 
 Alias: $AdjudicationSliceCodesCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/AdjudicationSliceCodesCS
+*/

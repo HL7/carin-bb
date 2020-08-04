@@ -29,8 +29,8 @@ Description: "Claim Information Category - Used as the discriminator for support
 CodeSystem: PayerAdjudicationCategoryCS
 Title: "Payer Adjudication Category"
 Description: "Payer Adjudication Category"
-* #in-network "In-network" "in-network"
-* #out-of-network "Out-of-network" "out-of-network"
+* #innetwork "In-network" "in-network"
+* #outofnetwork "Out-of-network" "out-of-network"
 * #other "Other" "other"
 * #contracted "Contracted" "contracted"
 * #non-contracted "Non-contracted" "non-contracted"

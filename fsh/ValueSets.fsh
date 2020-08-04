@@ -82,8 +82,8 @@ Description: "Indicates that the Provider has a contract with the Plan (regardle
 ValueSet: BenefitPaymentStatus
 Title: "Benefit Payment Status"
 Description: "Indicates the in network or out of network payment status of the claim."
-* PayerAdjudicationCategoryCS#in-network "in-network"
-* PayerAdjudicationCategoryCS#out-of-network "out-of-network"
+* PayerAdjudicationCategoryCS#innetwork "in-network"
+* PayerAdjudicationCategoryCS#outofnetwork "out-of-network"
 * PayerAdjudicationCategoryCS#other "other"
 
 ValueSet: ClaimPaymentStatusCode
