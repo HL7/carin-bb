@@ -1,9 +1,8 @@
 
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
-<h3>
-Profiles defined as part of this Implementation Guide
-</h3>
+<h3>Profiles defined as part of this Implementation Guide</h3>
+The list of CARIN Profiles is shown below. Each profile defines the minimum mandatory elements, extensions and terminology requirements that SHALL be present.  Extensions are not defined for this Implementation Guide.  Required data elements that are not defined in the base ExplanationOfBenefits resource are defined as slices of existing fields.
 <table class="codes">
   <thead>
     <tr>
@@ -55,11 +54,6 @@ The claims data is based on submission standards adopted by the Department of He
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-CARIN-BB-Location.html">CARIN-BB-Location</a></td>
-      <td><a href="http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-location.html">Location (US Core)</a></td>
-      <td>{% capture md_text %}A CARIN Blue Button Practitioner Profile.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
       <td><a href="StructureDefinition-CARIN-BB-Organization.html">CARIN-BB-Organization</a></td>
       <td><a href="http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-organization.html">Organization (US Core)</a></td>
       <td>{% capture md_text %}A CARIN Blue Button Organization Profile.{% endcapture %}{{ md_text | markdownify }}</td>
@@ -76,7 +70,7 @@ The claims data is based on the professional claim form 1500, submission standar
     </tr>
     <tr>
       <td><a href="StructureDefinition-CARIN-BB-PractitionerRole.html">CARIN-BB-PractitionerRole</a></td>
-      <td><a href="http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-practitionerrole.html">PractitionerRole (US Core)</a></td>
+      <td><a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole (R4)</a></td>
       <td>{% capture md_text %}A CARIN Blue Button PractitionerRole Profile.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>    
   </tbody>
