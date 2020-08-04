@@ -1,3 +1,28 @@
+/*
+Coverage:  Data that reflect a payer's coverage that was effective as of the date of service  or the date of admission of the claim will be added to the Coverage Profile overview.  
+
+CARIN BB EOB:  Abstract parent profile that includes constraints that are common to the four specific ExplanationOfBenefit (EOB) profiles defined in this Implementation Guide. All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide: Inpatient, Outpatient, Pharmacy, and Professional/NonClinician
+
+CARIN BB EOB Inpatient Facility:  The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at a facility as part of an overnight stay. The claims data is based on the institutional claim format UB-04, standards adopted by the Department of Health and Human Services.
+
+CARIN BB EOB Outpatient Facility:  The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at a facility that are not part of an overnight stay. The claims data is based on the institutional claim form UB-04, standards adopted by the Department of Health and Human Services.
+
+CARIN BB EOB Professional and NonClinician:  This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. The claims data is based on the professional claim form CMS-1500.
+
+CARIN BB EOB Pharmacy: The profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies. The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program).
+
+CARIN BB Location:  This profile may be removed pending the resolution of FHIR-26705. This profile is used to convey the location where the services reported on a Professional and NonClinician claim were rendered when the location is not part of the Billing Provider of the physician or nonclinician.  
+
+CARIN BB Organization:  This profile builds upon the US Core Organization profile. It is used to convey a payer or provider organization may be updated to include service facility pending resolution of FHIR-26705.
+
+CARIN BB Patient:  This profile builds upon the US Core Organization profile. It is used to convey patient information about the patient who received the services described on the claim. 
+
+CARIN BB Practioner:  This profile builds upon the US Core Organization profile. It is used to convey practitioner information who provided the services to the patient.
+
+CARIN BB PractionerRole:  This profile builds upon the R4 PractitionerRole Resource.   It is used to map to Organization or Practitioner. Conditional acceptance if this is not addressed by the errata addressed in released 3.1.1 in US Core. We are planning on harmonizing this work with Plan-Net.
+*/
+
+
 Profile: CARINBBCoverage
 Parent: Coverage
 Id: CARIN-BB-Coverage
@@ -566,13 +591,17 @@ Description: "CARIN Blue Button Organization Profile."
 * identifier contains 
    tax 0..* MS and
    payerid 0..* MS
+* identifier[CLIA] ^patternIdentifier.type  = $IdentifierTypeCS#clia 
+* identifier[CLIA].type 1..1 MS
+* identifier[NPI] ^patternIdentifier.type  = $IdentifierTypeCS#npi 
+* identifier[NPI].type 1..1 MS
 * identifier[tax] ^short = "Tax ID Number"
 * identifier[tax] ^patternIdentifier.type  = $IdentifierTypeCS#tax
-* identifier[tax].type.coding 1..1 MS
+* identifier[tax].type 1..1 MS
 * identifier[tax].system = "urn:oid:2.16.840.1.113883.4.4"
 * identifier[payerid] ^short = "Payer ID"
 * identifier[payerid] ^patternIdentifier.type  = $IdentifierTypeCS#payerid 
-* identifier[payerid].type.coding 1..1 MS
+* identifier[payerid].type 1..1 MS
 //* identifier[payerid].system = <what>
 
 Profile: CARINBBPatient
@@ -609,7 +638,7 @@ Description: "CARIN Blue Button Patient Profile."
 
 
 Profile: CARINBBPractitionerRole
-Parent: $USCorePractitionerRole
+Parent: PractitionerRole       // Changed to be R4 base, and not USCore FHIR-28124
 Id: CARIN-BB-PractitionerRole
 Title: "CARIN BB PractitionerRole"
 Description: "CARIN Blue Button PractitionerRole Profile."
@@ -617,7 +646,7 @@ Description: "CARIN Blue Button PractitionerRole Profile."
 * meta.profile 1..* MS
 * organization only Reference(CARINBBOrganization)
 * practitioner only Reference(CARINBBPractitioner)
-* location only Reference (CARINBBLocation)
+//* location only Reference (CARINBBLocation)
 * code from $USCoreProviderRole (required)   
 * specialty from $USCoreProviderSpecialty (required )
 
@@ -632,6 +661,7 @@ Description: "CARIN Blue Button Practitioner Profile."
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 
+/*
 // WHat needs to change?
 Profile: CARINBBLocation
 Parent: $USCoreLocation
@@ -640,6 +670,7 @@ Title: "CARIN BB Location"
 Description: "CARIN Blue Button Location Profile."
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
+*/
 
 Invariant:  EOB-insurance-focal  
 Description: "EOB.insurance:  at most one with focal = true"
