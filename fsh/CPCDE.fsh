@@ -598,7 +598,7 @@ Description: "CARIN Blue Button Organization Profile."
 * identifier[tax] ^short = "Tax ID Number"
 * identifier[tax] ^patternIdentifier.type  = $IdentifierTypeCS#tax
 * identifier[tax].type 1..1 MS
-* identifier[tax].system = "urn:oid:2.16.840.1.113883.4.4"
+* identifier[tax] ^patternIdentifier.system = "urn:oid:2.16.840.1.113883.4.4"
 * identifier[payerid] ^short = "Payer ID"
 * identifier[payerid] ^patternIdentifier.type  = $IdentifierTypeCS#payerid 
 * identifier[payerid].type 1..1 MS
