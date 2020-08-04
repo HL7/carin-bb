@@ -1,6 +1,6 @@
 
 <h3>The CARIN Alliance</h3>
-The <a href="https://www.carinalliance.com/our-work/health-plan/">CARIN Alliance Health Plan Workgroup</a> was organized to develop a FHIR-based API that could be sent to a consumer-facing application.
+The <a href="https://www.carinalliance.com/our-work/health-plan/">CARIN Alliance Health Plan Workgroup</a> was organized to develop a FHIR-based API that could be implemented by a consumer-facing application.
 
 The CARIN for Blue Button Framework was designed to answer the challenge for health plans to ‘meet or exceed’ the <a href="https://bluebutton.cms.gov/">CMS Blue Button 2.0</a> capabilities. The CMS Blue Button 2.0 project provides over 53 million Medicare fee-for-service beneficiaries access to their electronic claims information.
 
