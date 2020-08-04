@@ -213,13 +213,18 @@ Title: "ICD-10-PCS"
 Description: "ICD-10-PCS"
 * codes from system $ICD10PCS 
 
-ValueSet: CPTHCPCSProcedureCode 
+ValueSet: AMACPTCMSHCPCSProcedureCodes
 Description: "AMA CPT and CMS HCPCS Procedure Codes"
 Title: "AMA CPT and CMS HCPCS Procedure Codes"
+* codes from valueset $CPTALLVS
+* codes from system $HCPCSProcedureCodesCS
 
-ValueSet:  CPTHCPCSModifierCode
+
+ValueSet:  AMACPTCMSHCPCSProcedureModifiers
 Description: "AMA CPT and CMS HCPCS Modifier Codes"
 Title: "AMA CPT and CMS HCPCS Modifier Codes"
+* codes from system $AMACPTMODIFIERS 
+* codes from system $HCPCSMODIFIERS 
 
 
 ValueSet: ClaimAdjudicationCategory

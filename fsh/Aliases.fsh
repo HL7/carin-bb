@@ -15,7 +15,10 @@ Alias:   $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
 Alias:   $OrganizationIdentifierTypeCS   =  http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $ClaimPayeeTypeCode = http://hl7.org/fhir/ValueSet/payeetype
 Alias:   $CareTeamRoleCodeCS = http://terminology.hl7.org/CodeSystem/claimcareteamrole
-Alias:   $PresentOnAdmissionV2CS = http://terminology.hl7.org/CodeSystem/v2-0895 
+Alias:   $PresentOnAdmissionV2CS = urn:oid:2.16.840.1.113883.6.301.11
+Alias:   $HCPCSProcedureCodesCS = urn:oid:2.16.840.1.113883.6.285
+Alias:   $AMACPTMODIFIERS = http://www.ama-assn.org/go/cpt-modifiers
+Alias:   $HCPCSMODIFIERS = http://www.cms.gov/hcpcs-level-II-modifiers
 
 // CodeSystem Aliases due to bugs in Sushi 0.12.7 and 0.13.2 ..hopefully resolved and deleted at some point
 Alias: $IdentifierTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS
@@ -29,6 +32,7 @@ Alias:   $UCUM = http://unitsofmeasure.org
 Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
 Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   $CPT = http://www.ama-assn.org/go/cpt
+Alias:   $CPTALLVS = http://hl7.org/fhir/ValueSet/cpt-all
 Alias:   $ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
 Alias:   $FDANationalDrugCodeCS = http://hl7.org/fhir/sid/ndc
 Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy

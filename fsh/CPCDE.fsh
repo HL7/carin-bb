@@ -203,8 +203,8 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[onadmissiontype] ^short = "On Admission Type"
 * supportingInfo[onadmissiontype] ^definition = "On Admission Type"
 * item.revenue from $NUBCRevenueCode (required)
-* item.modifier from CPTHCPCSModifierCode (required)
-* item.productOrService from CPTHCPCSProcedureCode (required)
+* item.modifier from AMACPTCMSHCPCSProcedureModifiers (required)
+* item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on value pattern"
@@ -324,8 +324,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[discharge-status].code from NUBCPatientDischargeStatus   (required)
 * item.revenue from $NUBCRevenueCode (required)
-* item.modifier from CPTHCPCSModifierCode (required)
-* item.productOrService from CPTHCPCSProcedureCode (required)
+* item.modifier from AMACPTCMSHCPCSProcedureModifiers (required)
+* item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.productOrService ^definition = "Put the definition here for item.productOrService here"
 * item.productOrService ^short = "Put the short definition here for item.productOrService here"
 * item.productOrService ^comment = "Put the comment here for item.productOrService here"
@@ -428,8 +428,8 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from ICD10CM (required)
-* item.modifier from CPTHCPCSModifierCode (required)
-* item.productOrService from CPTHCPCSProcedureCode (required)
+* item.modifier from AMACPTCMSHCPCSProcedureModifiers (required)
+* item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.locationCodeableConcept from CMSPlaceOfService (required)
 * item.adjudication ^slicing.rules = #closed 
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
