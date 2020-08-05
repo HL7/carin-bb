@@ -22,6 +22,7 @@ xlsx.each do |row|
 
  profiles.each do |profile|
     puts ">>> #{profile}"
+    puts ">>>>>> Short Descriptions"
     profilecontent[profile].each do |element|
         # First output all of the short descriptions
         l1 = ""
@@ -36,6 +37,22 @@ xlsx.each do |row|
         end
         name = l1 + l2
         puts "* #{name} ^short = \"#{element[:description]} \(#{element[:mapid].to_s} \)\""
+    end
+    puts ">>>>>> MS"
+    profilecontent[profile].each do |element|
+        # First output all of the short descriptions
+        l1 = ""
+        if element[:l1element]
+            element[:l1element].slice!("-->")
+            l1 = element[:l1element]
+        end
+        l2 = ""
+        if element[:l2element]
+            element[:l2element].slice!("-->")
+            l2 = "." + element[:l2element]
+        end
+        name = l1 + l2
+        puts "* #{name} MS"
     end
 
      # Second output a table

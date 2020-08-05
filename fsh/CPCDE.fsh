@@ -44,6 +44,7 @@ Description: "CARIN Blue Button Coverage Profile."
 * payor only Reference (CARINBBOrganization) 
 * class MS 
 * class.name MS 
+* class.value MS
 * class ^slicing.discriminator.type = #pattern
 * class ^slicing.discriminator.path = "type"
 * class ^slicing.rules = #open
@@ -65,6 +66,12 @@ Description: "CARIN Blue Button Coverage Profile."
 * class[group].name ^short = "Name of the Employer Account (135 )"
 * class[plan].value ^short = "Business concept used by a health plan to describe its benefit offerings (154 )"
 * class[plan].name ^short = "Name of the health plan benefit offering assigned to the Plan Identfier (155 )"
+* payor MS
+* type MS
+* relationship MS
+* period MS
+
+
 
 Profile: CARINBBExplanationOfBenefit
 Parent: ExplanationOfBenefit
@@ -138,7 +145,6 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * payment.type from ClaimPaymentStatusCode (required)
 
 
-
 Profile: CARINBBExplanationOfBenefitInpatientFacility
 Parent: CARIN-BB-ExplanationOfBenefit
 Id: CARIN-BB-ExplanationOfBenefit-Inpatient-Facility
@@ -180,38 +186,40 @@ The claims data is based on the institutional claim format UB-04, submission sta
    discharge-status 0..1 MS and 
    drg 0..1 MS and
    onadmissiontype 0..1 MS    // // https://jira.hl7.org/browse/FHIR-27012
+* supportingInfo[pointoforigin] ^short = "Identifies the place where the patient was identified as needing admission to a facility. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13 )"
+* supportingInfo[admtype] ^short = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14 )"
+* supportingInfo[typeofbill] ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of facility, the second digit classifies the type of care being billed, and the third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (17 )"
+* supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88 )"
+* supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101 )"
+* supportingInfo[attendingnetworkcontractingstatus] ^short = "Indicates the network status of the attending physician (101 )"
+* supportingInfo[referringnetworkcontractingstatus] ^short = "Indicates the network status of the referring physician (101 )"
+//* supportingInfo ^short = "Version of the AP-DRG codes assigned for inpatient facility claims. (32 )"
+* supportingInfo[drg] ^short = "DRG codes assigned (33 )"
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
-* supportingInfo[billingnetworkcontractingstatus] ^short = "Claim billing provider network status"
 * supportingInfo[billingnetworkcontractingstatus] ^definition = "Claim billing provider network status"
 * supportingInfo[attendingnetworkcontractingstatus].category = ClaimInformationCategoryCS#attendingnetworkcontractingstatus
 * supportingInfo[attendingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[attendingnetworkcontractingstatus].code 1..1 MS
-* supportingInfo[attendingnetworkcontractingstatus] ^short = "Claim attending provider network status"
 * supportingInfo[attendingnetworkcontractingstatus] ^definition = "Claim attending provider network status"
 * supportingInfo[referringnetworkcontractingstatus].category  = ClaimInformationCategoryCS#referringnetworkcontractingstatus
 * supportingInfo[referringnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[referringnetworkcontractingstatus].code 1..1 MS
-* supportingInfo[referringnetworkcontractingstatus] ^short = "Claim referring provider network status"
 * supportingInfo[referringnetworkcontractingstatus] ^definition = "Claim referring provider network status"
 * supportingInfo[supervisingnetworkcontractingstatus].category  = ClaimInformationCategoryCS#supervisingnetworkcontractingstatus
 * supportingInfo[supervisingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[supervisingnetworkcontractingstatus].code 1..1 MS
-* supportingInfo[supervisingnetworkcontractingstatus] ^short = "Claim supervising provider network status"
 * supportingInfo[supervisingnetworkcontractingstatus] ^definition = "Claim supervising provider network status"
 * supportingInfo[clmrecvddate].category  = ClaimInformationCategoryCS#clmrecvddate
-* supportingInfo[clmrecvddate] ^short = "Claim Received Date"
 * supportingInfo[clmrecvddate] ^definition  = "Claim Received Date: The date the claim for payment was received"
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[typeofbill].category  = ClaimInformationCategoryCS#typeofbill
-* supportingInfo[typeofbill] ^short = "Type of Bill"
 * supportingInfo[typeofbill] ^definition = "Type of Bill"
 * supportingInfo[typeofbill].code from $NUBCTypeOfBill (required)
 * supportingInfo[pointoforigin].category  = ClaimInformationCategoryCS#admsrc
 * supportingInfo[pointoforigin].code from $NUBCPointOfOriginForAdmissionOrVisit (required)
-* supportingInfo[pointoforigin] ^short = "Claim Point of Origin for Admission or Visit"
 * supportingInfo[pointoforigin] ^definition = "Claim Point of Origin for Admission or Visit"
 * supportingInfo[admtype].category  = ClaimInformationCategoryCS#admtype
 * supportingInfo[admtype].code from NUBCPriorityOfAdmissionn  (required)
@@ -283,6 +291,71 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
 //* total[adjudicationamounttype].amount 1..1
+* patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1 )"
+* insurance.coverage ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1 )"
+* insurance ^short = "Code of the primary payer responsible for the claim (2 )"
+* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).  (16 )"
+* billablePeriod ^short = "Identifies the date the patient was admitted/discharged for facility care (18,19 )"
+* diagnosis ^short = "ICD-10-CM code describing the condition chiefly responsible for a patient's admission to a facility. It may be different from the principal diagnosis, which is the diagnosis assigned after evaluation. Decimals will be included. (21 )"
+* procedure ^short = "Principal medical procedure a patient received during inpatient stay. Coding methods for this field is International Classification of Diseases Surgical Procedures (ICD-10). (24 )"
+* diagnosis.onAdmission ^short = "Used to capture whether a diagnosis was present at time of a patient's admission. This is used to group diagnoses into the proper DRG for all claims involving inpatient admissions to general acute care facilities. (28 )"
+//* diagnosis ^short = "This is any valid ICD-10 Diagnosis code in the range V00.* through Y99.*. (30 )"
+* diagnosis ^short = "This is the reason given by the patient for visiting the doctor or practitioner. It is not the doctor's or practitioner's diagnosis. Patient Reason for Visit Codes can be any ICD-10diagnosis and may or may not be a repeat of an ICD-10 Principal or Secondary diagnosis field. (31 )"
+* identifier ^short = "Claim identifier for a claim. (35 )"
+* item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36 )"
+* item.productOrService ^short = "Medical procedure a patient received from a health care provider. Current coding methods include: CPT-4 and HCFA Common Procedure Coding System Level II - (HCPCSII). (40 )"
+* item.modifier ^short = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41 )"
+* item.quantity ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (42 )"
+* item.revenue ^short = "Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed (86 )"
+* payment.type ^short = "Indicates whether the claim was paid or denied. (91 )"
+* payment.adjustmentReason ^short = "Reason codes used to interpret the Non-Covered Amount (92 )"
+* item.adjudication ^short = "Reason codes used to interpret the Non-Covered Amount (92 )"
+* careTeam.provider ^short = "The National Provider Identifier assigned to the Attending Physician for the admission (93 )"
+* provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94 )"
+* careTeam.provider ^short = "The National Provider Identifier assigned to the Rendering Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided). (95 )"
+* careTeam.provider ^short = "The identifier assigned to the PCP Provider. (96 )"
+* careTeam.provider ^short = "The NPI of the referring physician. (99 )"
+* payment.date ^short = "The date the claim was paid. (107 )"
+* patient ^short = "Provider submitted information that can be included on the claim (109 )"
+* patient ^short = "Provider submitted information that can be included on the claim (110 )"
+* related ^short = "Prior claim number (111 )"
+* related ^short = "Replaced or Merged claim number (112 )"
+* supportingInfo.code ^short = "Name of the DRG grouper assigned (113 )"
+* supportingInfo.code ^short = "Patient’s status as of the discharge date for a facility stay. Information located on UB04 (Form Locator 17). (117 )"
+* payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber (120 )"
+* payee.party ^short = "Recipient reference (121 )"
+* status ^short = " (140 )"
+* insurance ^short = "Identifies the primary payer.  For use only on secondary claims.   (141 )"
+* adjudication.category ^short = "Indicates the in network or out of network payment status of the claim. (142 )"
+* diagnosis.diagnosis[x] ^short = "A plain text representation of the diagnosis (145 )"
+* total.amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.) (148 )"
+* item.adjudication ^short = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149 )"
+* patient MS
+* insurance.coverage MS
+* insurance MS
+* billablePeriod MS
+* diagnosis MS
+* procedure MS
+* diagnosis.onAdmission MS
+* identifier MS
+* item.sequence MS
+* item.productOrService MS
+* item.modifier MS
+* item.quantity MS
+* item.revenue MS
+* payment.type MS
+* payment.adjustmentReason MS
+* provider MS
+* careTeam.provider MS
+* payment.date MS
+* patient MS
+* related MS
+* supportingInfo.code MS
+* payee.type MS
+* payee.party MS
+* status MS
+* insurance MS
+* total.amount MS
 
 
 Alias: $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
@@ -435,6 +508,11 @@ The claims data is based on the professional claim form 1500, submission standar
    performingnetworkcontractingstatus 0..1 MS and
    sitenetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS 
+* supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88 )"
+* supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101 )"
+* supportingInfo[performingnetworkcontractingstatus] ^short = "Indicates that the Performing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101 )"
+* supportingInfo[referringnetworkcontractingstatus] ^short = "Indicates the network status of the referring physician (101 )"
+* supportingInfo[sitenetworkcontractingstatus] ^short = "Indicates the network status of the site of service (101 )"
 * supportingInfo[billingnetworkcontractingstatus].category = $ClaimInformationCategoryCS#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 
@@ -451,8 +529,8 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1
 * careTeam.role from CARINBBProfessionalAndNonclinicanClaimCareTeamRoleCodes  (required)  // was PayerProfessionalAndNonClinicianProviderRole
-* diagnosis 1..*
-* diagnosis.type 1..1
+* diagnosis 1..* MS
+* diagnosis.type 1..1 MS
 * diagnosis.type from PayerProfessionalandnoncliniciandiagnosistype (required)
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
@@ -470,17 +548,17 @@ The claims data is based on the professional claim form 1500, submission standar
    denialreason 0..1 and
    inoutnetwork 1..1 and
    allowedunits 0..1 MS
-* item.adjudication[allowedunits] ^short = "Allowed number of units"
+* item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149 )"
 * item.adjudication[allowedunits].category = ClaimAdjudicationCategoryCS#allowedunits
 * item.adjudication[allowedunits].value only decimal
 * item.adjudication[denialreason].category  = $ClaimAdjudicationCategoryCS#denialreason 
 * item.adjudication[denialreason].reason from AdjudicationDenialReason
 * item.adjudication[denialreason].reason 1..1 MS
-* item.adjudication[denialreason] ^short = "Denial Reason"
+* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92 )"
 * item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes 
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
-* item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
+* item.adjudication[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142 )"
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
 * total ^slicing.rules = #open
 * total ^slicing.ordered = false   // can be omitted, since false is the default
@@ -493,6 +571,81 @@ The claims data is based on the professional claim form 1500, submission standar
 * total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
 //* total[adjudicationamounttype].amount 1..1
+* patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1 )"
+* insurance.coverage ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1 )"
+* insurance ^short = "Code of the primary payer responsible for the claim (2 )"
+* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).  (16 )"
+// * item.adjudication ^short = "Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services. (20 )"
+// * item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary. (20 )"
+// * item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. (20 )"
+// * item.adjudication ^short = "The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%.  (20 )"
+// * item.adjudication ^short = "Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit. (20 )"
+// * item.adjudication ^short = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract. (20 )"
+// * item.adjudication ^short = "The reduction in the payment amount to reflect the carrier as a secondary payor. (20 )"
+// * item.adjudication ^short = "The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments. (20 )"
+// * item.adjudication ^short = "The amount paid by the member at the point of service. (20 )"
+// * item.adjudication ^short = "The amount of the discount (20 )"
+// * item.adjudication ^short = "The amount paid to the provider. (20 )"
+// * item.adjudication ^short = "The amount paid to the member. (20 )"
+// * item.adjudication ^short = "The amount of the member's liability. (20 )"
+* diagnosis ^short = "The member's principal condition treated on the claim (837P Data Element HI01 or CMS 1500 Item 21A). Decimals will be included.  (22 )"
+// * diagnosis ^short = "The member's principal condition treated during this service. This may or may not be different from the admitting diagnosis. Decimals will be included.  (22 )"
+// * diagnosis ^short = "Additional diagnosis identified for this member (837P Data Element HI02 or CMS 1500 Item 21B). Decimals will be included. (23 )"
+// * diagnosis ^short = "Additional diagnosis identified for this member. Decimals will be included.  (23 )"
+* diagnosis.diagnosis[x] ^short = "A plain text representation of the diagnosis (145 )"
+* identifier ^short = "Claim identifier for a claim. (35 )"
+* item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36 )"
+* item.productOrService ^short = "Medical procedure a patient received from a health care provider. Current coding methods include: CPT-4 and HCFA Common Procedure Coding System Level II - (HCPCSII). (40 )"
+* item.modifier ^short = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41 )"
+* item.quantity ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (42 )"
+* item.location[x] ^short = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46 )"
+* provider ^short = "This field identifies the specialty of the physician or duly licensed professional practitioner for the claim. For physicians, this usually represents his/her board registered specialty.  (47 )"
+* payment.type ^short = "Indicates whether the claim was paid or denied. (91 )"
+* provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94 )"
+* careTeam.provider ^short = "The National Provider Identifier assigned to the Rendering Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided). (95 )"
+* careTeam.provider ^short = "The identifier assigned to the PCP Provider. (96 )"
+* facility ^short = "The NPI of the facility where the services were rendered. (97 )"
+* careTeam.provider ^short = "The NPI of the referring physician. (99 )"
+* payment.date ^short = "The date the claim was paid. (107 )"
+// * patient ^short = "Provider submitted information that can be included on the claim (109 )"
+// * patient ^short = "Provider submitted information that can be included on the claim (110 )"
+// * related ^short = "Prior claim number (111 )"
+// * related ^short = "Replaced or Merged claim number (112 )"
+* item.servicedPeriod ^short = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118 )"
+* payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber  (120 )"
+* payee.party ^short = "Recipient reference (121 )"
+* insurance ^short = "Identifies the primary payer.  For use only on secondary claims.   (141 )"
+* item.productOrService ^short = "A plain text representation of the CPT / HCPCS procedure (147 )"
+* total.amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.) (148 )"
+* patient MS
+* insurance.coverage MS
+* insurance MS
+* type MS
+* identifier MS
+* item.sequence MS
+* item.productOrService MS
+* item.modifier MS
+* item.quantity MS
+* item.location[x] MS
+* provider MS
+* payment.type MS
+* item.adjudication MS
+* provider MS
+* careTeam.provider MS
+* careTeam.provider MS
+* facility MS
+* careTeam.provider MS
+* payment.date MS
+* patient MS
+* related MS
+* item.servicedPeriod MS
+* payee.type MS
+* payee.party MS
+* status MS
+* insurance MS
+* diagnosis.diagnosis[x] MS
+* item.productOrService MS
+* total.amount MS
 
 
 Profile: CARINBBExplanationOfBenefitPharmacy
@@ -519,25 +672,25 @@ The claims data is based on submission standards adopted by the Department of He
    clmrecvddate 0..1 MS and
    dayssupply 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus
-* supportingInfo[billingnetworkcontractingstatus] ^short = "Billing Network Contracting Status"
+* supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101 )"
 * supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus (required) 
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
 * supportingInfo[brandgenericcode].category = ClaimInformationCategoryCS#brandgenericcode   
-* supportingInfo[brandgenericcode] ^short = "BrandGeneric"
+* supportingInfo[brandgenericcode] ^short = "Whether the plan adjudicated the claim as a brand or generic drug (144 )"
 * supportingInfo[brandgenericcode].code from NCPDPBrandGenericCode (required)
 * supportingInfo[rxoriginCode].category = ClaimInformationCategoryCS#rxorigincode   
-* supportingInfo[rxoriginCode] ^short = "RxOrigin"
+* supportingInfo[rxoriginCode] ^short = "Whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy (143 )"
 * supportingInfo[rxoriginCode].code from NCPDPPrescriptionOriginCode (required)
 * supportingInfo[refillNum].category = ClaimInformationCategoryCS#refillnum
-* supportingInfo[refillNum] ^short = "RefillNum"
+* supportingInfo[refillNum] ^short = "The number fill of the current dispensed supply (0, 1, 2, etc.) (137 )"
 * supportingInfo[dawcode].category = ClaimInformationCategoryCS#dawcode       
 * supportingInfo[dawcode] ^short = "Dispense As Written product selection code" 
-* supportingInfo[dawcode] ^definition = "Dispense As Written product selection code: Prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication." 
+* supportingInfo[dawcode] ^definition = "Prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication (79 )"
 * supportingInfo[dawcode].code from NCPDPDispensedAsWritten (required)
 * supportingInfo[clmrecvddate].category = ClaimInformationCategoryCS#clmrecvddate
-* supportingInfo[clmrecvddate] ^short = "Claim Received Date"
+* supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88 )"
 * supportingInfo[dayssupply].category = ClaimInformationCategoryCS#dayssupply
-* supportingInfo[dayssupply] ^short = "Days Supply"
+* supportingInfo[dayssupply] ^short = "Number of days supply of medication dispensed by the pharmacy (77 )"
 * item.productOrService from FDANDCNCPDPCompoundCode (required)
 * item.detail.productOrService  from FDANationalDrugCode (required)
 * item.detail MS
@@ -552,9 +705,9 @@ The claims data is based on submission standards adopted by the Department of He
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS and
    inoutnetwork 0..1 MS
-* item.adjudication[inoutnetwork] ^short = "Benefit Payment Status"
+* item.adjudication[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142 )"
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
-* item.adjudication[denialreason] ^short = "Denial Reason"
+* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92 )"
 * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * item.adjudication[denialreason].reason from NCPDPRejectCode
 * item.adjudication[denialreason].reason 1..1
@@ -575,7 +728,65 @@ The claims data is based on submission standards adopted by the Department of He
 * total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
 //* total[adjudicationamounttype].amount 1..1
-
+* patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1 )"
+* insurance.coverage ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1 )"
+* insurance ^short = "Code of the primary payer responsible for the claim (2 )"
+* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).  (16 )"
+/*
+* item.adjudication ^short = "Represents the Usual & Customary Charge Amount or the Average Wholesale Price (AWP) for the Quantity Dispensed plus the Dispensing Fee Paid. (20 )"
+* item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary. (20 )"
+* item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. (20 )"
+* item.adjudication ^short = "Amount to be collected from a patient that is included in the Patient Pay Amount that is due to a per prescription copay or coinsurance. (20 )"
+* item.adjudication ^short = "Amount to be collected from a patient that is included in the Patient Pay Amount that is due to a per prescription copay or coinsurance. (20 )"
+* item.adjudication ^short = "Non-Covered Amount represents the NCPDP financial response field Amount Exceeding Periodic Benefit Maximum. (20 )"
+* item.adjudication ^short = "The reduction in the payment amount to reflect the carrier as a secondary payor. (20 )"
+* item.adjudication ^short = "The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments. (20 )"
+* item.adjudication ^short = "Amount that is calculated by the processor and returned to the pharmacy as the total amount to be paid by the patient to the pharmacy; the patient’s total cost share, including copayments, amounts applied to deductible, over maximum amounts, penalties, etc (20 )"
+* item.adjudication ^short = "The amount of the discount (20 )"
+* item.adjudication ^short = "Price paid for the drug excluding mfr discounts.  It is the sum of the following components:ingredient cost, dispensing fee, sales tax, and vaccine administration fee (20 )"
+* item.adjudication ^short = "The amount paid to the provider. (20 )"
+* item.adjudication ^short = "The amount paid to the member. (20 )"
+* item.adjudication ^short = "The amount of the member's liability. (20 )"
+* item.adjudication ^short = "Reason codes used to interpret the Non-Covered Amount (92 )"
+* item.adjudication ^short = "Indicates the in network or out of network payment status of the claim. (142 )"
+*/
+* identifier ^short = "Assigned by the pharmacy at the time the prescription is filled (35 )"
+* item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36 )"
+* item.productOrService ^short = "National Drug Code (NDC) (38 )"
+* item.quantity ^short = "Quantity dispensed for the drug (39 )"
+* item.productOrService ^short = "The code indicating whether or not the prescription is a compound (78 )"
+* item.quantity ^short = "The unit of measurement for the drug. (gram, ml, etc.) (151 )"
+* payment.type ^short = "Indicates whether the claim was paid or denied. (91 )"
+* provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94 )"
+* careTeam.provider ^short = "The identifier assigned to the PCP Provider. (95 )"
+* payment.date ^short = "The date the claim was paid. (107 )"
+* payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber (120 )"
+* payee.party ^short = "Recipient reference (121 )"
+* careTeam.provider ^short = "The identifier from NCPDP field # 411-DB (Prescriber ID) that identifies the National Provider Identifier (NPI) of the provider who prescribed the pharmaceutical. (122 )" 
+* insurance ^short = "Identifies the primary payer.  For use only on secondary claims.   (141 )"
+* total.amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.) (148 )"
+* patient MS
+* insurance.coverage MS
+* insurance MS
+* type MS
+* identifier MS
+* item.sequence MS
+* item.productOrService MS
+* item.quantity MS
+* item.productOrService MS
+* item.serviced[x] ^short = "Identifies date the prescription was filled or professional service rendered (90 )"   // listed as item.serviced in CPCDS spreadsheet
+* item.serviced[x] MS       // listed as item.serviced in CPCDS spreadsheet
+* payment.type MS
+* provider MS
+* careTeam.provider MS
+* payment.date MS
+* related MS
+* payee.type MS
+* payee.party MS
+* careTeam.provider MS
+* status MS
+* insurance MS
+* total.amount MS
 
 
 // Do all references to Organization in this profile need to target CARINBBOrganization?
@@ -640,7 +851,19 @@ Description: "CARIN Blue Button Patient Profile."
 * identifier[uniquememberid] ^short = "Unique Member ID"
 * identifier[uniquememberid].type.coding 1..* MS
 * identifier[uniquememberid] ^patternIdentifier.type = $IdentifierTypeCS#um
-
+* birthDate ^short = "Date of birth of the member (70 )"
+* gender ^short = "Gender of the member (71 )"
+* deceasedDateTime ^short = "Date of death of the member (124 )"
+* name ^short = "The name of the patient (130 )"
+* address ^short = "This represents the member's 5 digit zip code (131 )"
+* deceasedBoolean ^short = "Indicates if the patient is deceased (150 )"
+* birthDate MS
+* gender MS
+* address MS
+* name MS
+* address MS
+* deceasedBoolean MS
+* deceasedDateTime MS
 
 
 Profile: CARINBBPractitionerRole
