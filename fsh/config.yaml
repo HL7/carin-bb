@@ -54,14 +54,14 @@ menu:
     Common Payer Consumer Data Set (CPCDS): Common_Payer_Consumer_Data_Set.html
     Notes To Developers: Notes_To_Developers.html
   FHIR Artifacts:
-    Profiles: profiles.html
+    Profiles: artifacts.html#3
     Search Parameters: search.html
-    Terminology: Terminology.html
+    Terminology: artifacts.html#5
     Capability Statement: CapabilityStatement-carin-bb.html
   Security:
     SMART on FHIR Application Launch: Authorization_Authentication_and_Registration.html#smart-on-fhir-application-launch
     Authorization and Authentication: https://build.fhir.org/ig/HL7/carin-bb/Authorization_Authentication_and_Registration.html#authorization-and-authentication
-  Examples: examples.html
+  Examples:  artifacts.html#7
   Downloads: downloads.html
 
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
