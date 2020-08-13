@@ -8,7 +8,7 @@
       "url" : "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-provider",
       "derivedFrom": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-provider",
       "version" : "4.0.1",
-      "name" : "provider",
+      "name" : "ExplanationOfBenefit_Provider",
       "status" : "draft",
       "experimental" : false,
       "date" : "2019-11-01T09:29:23+11:00",
