@@ -103,7 +103,7 @@ Description: "Payer Professional and Non-Clinician Diagnosis Type"
 * PayerDiagnosisTypeCS#first-listed "first-listed"
 
 
-ValueSet: PayerInpatientfacilitydiagnosistype
+ValueSet: PayerInpatientinstitutionaldiagnosistype
 Title: "Diagnosis Type -- Inpatient Facility"
 Description: "Payer Inpatient Facility Diagnosis Type"
 * PayerDiagnosisTypeCS#principal 
@@ -112,7 +112,7 @@ Description: "Payer Inpatient Facility Diagnosis Type"
 * PayerDiagnosisTypeCS#first-listed  
 * PayerDiagnosisTypeCS#admitting 
 
-ValueSet: PayerOutpatientfacilitydiagnosistype
+ValueSet: PayerOutpatientinstitutionaldiagnosistype
 Title: "Diagnosis Type -- Outpatient Facility"
 Description: "Payer Outpatient Facility Diagnosis Type"
 * codes from system PayerDiagnosisTypeCS
@@ -130,8 +130,8 @@ Title: "NUBC Present On Admission"
 Description: "NUBC Present On Admission"
 * codes from system $PresentOnAdmissionV2CS
 
-ValueSet: AdjudicationDenialReason
-Title: "Adjudication Denial Reason"
+ValueSet: X12CARCCMSRARC
+Title: "Adjudication Denial Reason from X12 CARC and CMS RARC"
 Description: "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC"
 
 
@@ -268,3 +268,8 @@ ValueSet: CMSPlaceOfService
 Title: "CMS Place of Service"
 Description: "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .  The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.   The code set is owned by CMS and is available for use."
 //* codes from system CMSPlaceOfServiceCS 
+
+ValueSet: NUCCHealthcareProviderTaxonomy
+Title: "NUCC Healthcare Provider Taxonomy"
+Description:  "NUCC Healthcare Provider Taxonomy"
+* codes from system $NUCCProviderTaxonomy

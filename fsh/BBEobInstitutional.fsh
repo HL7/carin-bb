@@ -36,10 +36,10 @@ Description: "BBEoB from Jeff"
 // * extension[9].url = "https://bluebutton.cms.gov/assets/ig/StructureDefinition-bluebutton-outpatient-fi-num-extension"
 // * extension[9].valueIdentifier.system = "https://bluebutton.cms.gov/assets/ig/CodeSystem-fi-num"
 // * extension[9].valueIdentifier.value = 002000
-* identifier[claimnumber][0].value = "8ceaca46-ba97-4748-bbf7-80a4d54dc978"
-* identifier[claimnumber][0].system = "https://bluebutton.cms.gov/resources/variables/clm_id"
-* identifier[claimnumber][0].use = #official
-* identifier[claimnumber][0].type = $IdentifierTypeCS#cn 
+* identifier.value = "8ceaca46-ba97-4748-bbf7-80a4d54dc978"
+* identifier.system = "https://bluebutton.cms.gov/resources/variables/clm_id"
+* identifier.use = #official
+* identifier.type = $IdentifierTypeCS#cn 
 * use = #claim 
 * status = #active
 // * identifier[0].use = "official"
