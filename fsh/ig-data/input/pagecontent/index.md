@@ -1,5 +1,8 @@
 
 
+<h3>Disclaimer</h3>
+This build has NOT been approved by HL7 and should NOT be widely distributed. It's a draft build the CARIN for Blue Button technology team is using to update BEFORE the changes have been approved by HL7 and made to the CI build. It's meant to be a directional resource only for payers who are currently implementing.
+
 <h3>Introduction</h3>
 
 This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a name="id1" href="#ftn.id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API.

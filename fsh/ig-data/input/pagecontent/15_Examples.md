@@ -11,17 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      {% for sd in site.data.structuredefinitions %}
-        {% assign path = sd[1].path %}
-        {% assign resourceType = sd[1].type %}
-        {% for example in site.data.pages[path].examples %}
-          <tr>
-              <td><a href="{{example.url}}">{{example.title}}</a></td>
-              <td><a href="http://hl7.org/fhir/R4/{{resourceType|lower}}.html">{{resourceType}}</a></td>
-              <td><a href="{{path}}">{{sd[1].name}}</a></td>
-          </tr>
-        {% endfor %}
-      {% endfor %}
+
     </tbody>
   </table>
 </div>

@@ -3,7 +3,7 @@ InstanceOf: CARINBBPatient
 Description: "Patient Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Patient"
+* meta.profile = Canonical(CARINBBPatient)
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
 * active = true
@@ -41,7 +41,7 @@ InstanceOf: CARINBBCoverage
 Description: "Coverage Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Coverage"
+* meta.profile = Canonical(CARINBBCoverage)
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
 * status = #active
@@ -79,7 +79,7 @@ InstanceOf: CARINBBExplanationOfBenefitInpatientFacility
 Description: "EOB Inpatient Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = $InpatientEOBProfile
+* meta.profile = Canonical(CARINBBExplanationOfBenefitInpatientFacility)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -126,7 +126,7 @@ InstanceOf: CARINBBExplanationOfBenefitOutpatientFacility
 Description: "EOB Outpatient Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = $OutpatientEOBProfile
+* meta.profile = Canonical(CARINBBExplanationOfBenefitOutpatientFacility)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -172,7 +172,7 @@ InstanceOf: CARINBBExplanationOfBenefitProfessionalNonClinician
 Description: "EOB Professional  Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = $ProfessionalEOBProfile
+* meta.profile = Canonical(CARINBBExplanationOfBenefitProfessionalNonClinician)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -215,7 +215,7 @@ InstanceOf: CARINBBExplanationOfBenefitPharmacy
 Description: "EOB PHarmacy Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = $PharmacyEOBProfile
+* meta.profile = Canonical(CARINBBExplanationOfBenefitPharmacy)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -278,7 +278,7 @@ Instance: OrganizationPayer1
 InstanceOf: CARINBBOrganization
 Description: "Payer1"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization"
+* meta.profile = Canonical(CARINBBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * identifier[NPI].type = IdentifierTypeCS#npi
@@ -292,7 +292,7 @@ Instance: OrganizationProvider1
 InstanceOf: CARINBBOrganization
 Description: "Provider 1"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Organization"
+* meta.profile = Canonical(CARINBBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * identifier[NPI].type = IdentifierTypeCS#npi
@@ -308,7 +308,7 @@ Description: "BBEoB from Jeff"
 * meta.versionId = "1"
 * meta.lastUpdated = "2020-07-23T16:04:04.584-04:00"
 * meta.source = "#2Htk0DNoUEbccjg0"
-* meta.profile[0] = $PharmacyEOBProfile
+* meta.profile[0] = Canonical(CARINBBExplanationOfBenefitPharmacy)
 * identifier[claimnumber][0].value = "7d0c2c7f-8049-445a-a283-41cf91d09a38"
 * identifier[claimnumber][0].system = "https://bluebutton.cms.gov/resources/variables/clm_id"
 * identifier[claimnumber][0].use = #official
