@@ -7,6 +7,7 @@ Alias:   $USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/u
 Alias:   $USCoreProviderRole = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role
 Alias:   $USCoreProviderSpecialty = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty
 
+Alias:   $RelatedClaimRelationship = http://hl7.org/fhir/ValueSet/related-claim-relationship
 Alias:   $SubscriberRelationiship = http://hl7.org/fhir/ValueSet/subscriber-relationship
 Alias:   $HL7AdjudicationCS = 	http://terminology.hl7.org/CodeSystem/adjudication
 Alias:   $HL7ClaimType = http://hl7.org/fhir/ValueSet/claim-type
