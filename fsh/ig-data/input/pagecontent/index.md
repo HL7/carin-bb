@@ -13,6 +13,17 @@
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the [Table of Contents](toc.html) for more information.</p>
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
+<li>Interim Version 0.4.1 - August 13, 2020</li>
+<ol>
+<li>Update to EOBComparisonv13 from Pat</li>
+<li>Imported comments and MS from CPCDS spreadsheet</li>
+<li>Further corrections to capability statement based on Igor comments.   supported_profiles vs profiles deferred.</li>
+</ol>
+<li>Interim Version 0.4. - August 5, 2020</li>
+<ol>
+<li>Update to EOBComparisonv13 from Pat</li>
+<li>Imported comments and MS from CPCDS spreadsheet</li>
+</ol>
 <li>Version 0.3.1 - July 26, 2020</li>
 <ol>
 <li>Corrections to slices defined and names of value sets referenced in 4 EOB profiles following review. EOB Profile Summary withdrawn pending review..</li>
