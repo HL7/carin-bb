@@ -39,7 +39,7 @@ Description: "BBEoB from Jeff"
 * identifier.value = "8ceaca46-ba97-4748-bbf7-80a4d54dc978"
 * identifier.system = "https://bluebutton.cms.gov/resources/variables/clm_id"
 * identifier.use = #official
-* identifier.type = $IdentifierTypeCS#cn 
+* identifier.type = IdentifierTypeCS#cn 
 * use = #claim 
 * status = #active
 // * identifier[0].use = "official"

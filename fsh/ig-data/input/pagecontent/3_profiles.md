@@ -68,11 +68,11 @@ The claims data is based on the professional claim form 1500, submission standar
       <td><a href="http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-practitioner.html">Practitioner (US Core)</a></td>
       <td>{% capture md_text %}A CARIN Blue Button Practitioner Profile.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td><a href="StructureDefinition-CARIN-BB-PractitionerRole.html">CARIN-BB-PractitionerRole</a></td>
       <td><a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole (R4)</a></td>
       <td>{% capture md_text %}A CARIN Blue Button PractitionerRole Profile.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>    
+    </tr>     -->
   </tbody>
 </table>
 </div>

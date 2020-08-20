@@ -312,7 +312,7 @@ Description: "BBEoB from Jeff"
 * identifier.value = "7d0c2c7f-8049-445a-a283-41cf91d09a38"
 * identifier.system = "https://bluebutton.cms.gov/resources/variables/clm_id"
 * identifier.use = #official
-* identifier.type = $IdentifierTypeCS#cn 
+* identifier.type = IdentifierTypeCS#cn 
 * use = #claim 
 * status = #active
 * type.coding[0].system = "http://terminology.hl7.org/CodeSystem/claim-type"
