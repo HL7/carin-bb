@@ -30,14 +30,17 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * identifier[uniquememberid] ^patternIdentifier.type = IdentifierTypeCS#um
 * birthDate ^short = "Date of birth of the member (70)"
 * gender ^short = "Gender of the member (71)"
-* deceasedDateTime ^short = "Date of death of the member (124)"
+
 * name ^short = "The name of the patient (130)"
-* address ^short = "This represents the member's 5 digit zip code (131)"
-* deceasedBoolean ^short = "Indicates if the patient is deceased (150)"
+* birthDate ^short = "Date of birth of the member (70,DOB_DT)"
 * birthDate MS
+* gender ^short = "Gender of the member (71,GNDR_CD)"
 * gender MS
-* address MS
-* name MS
-* address MS
-* deceasedBoolean MS
+* deceasedDateTime ^short = "Date of death of the member (124)"
 * deceasedDateTime MS
+* deceasedBoolean MS
+* deceasedBoolean ^short = "Indicates if the patient is deceased (150)"
+* name ^short = "The name of the patient (130)"
+* name MS
+* meta.lastUpdated ^short = "Defines the date the member demographics were updated (163)"
+* meta.lastUpdated MS
