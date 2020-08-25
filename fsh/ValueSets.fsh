@@ -193,6 +193,7 @@ Description: "http://www.ncpdp.org/prescription-origin-code"
 ValueSet: NCPDPRejectCode
 Title: "NCPDP Reject Code"
 Description: "http://www.ncpdp.org/reject-code"
+* codes from system NCPDPRejectCodeCS 
 
 ValueSet: FDANDCNCPDPCompoundCode
 Title: "FDA NDC NCPDP Compound Code"

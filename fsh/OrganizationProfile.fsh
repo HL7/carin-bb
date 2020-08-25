@@ -22,7 +22,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * identifier[NPI] ^patternIdentifier.type  = IdentifierTypeCS#npi 
 * identifier[NPI].type 1..1 MS
 * identifier[tax] ^short = "Tax ID Number"
-* identifier[tax] ^patternIdentifier.type  = IdentifierTypeCS#tax
+* identifier[tax] ^patternIdentifier.type  = $IdentifierTypeCS#TAX
 * identifier[tax].type 1..1 MS
 * identifier[tax] ^patternIdentifier.system = "urn:oid:2.16.840.1.113883.4.4"
 * identifier[payerid] ^short = "Payer ID"

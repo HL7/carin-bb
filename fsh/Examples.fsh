@@ -26,7 +26,7 @@ Usage: #example
 * identifier[memberid].type = IdentifierTypeCS#mb
 * identifier[memberid].value = "1234-234-1243-12345678901"
 * identifier[memberid].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
-* identifier[medrecnum].type = IdentifierTypeCS#mr
+* identifier[medrecnum].type = $IdentifierTypeCS#MR
 * identifier[medrecnum].value = "1234-234-1243-12345678901m"
 * identifier[medrecnum].system = "https://www.xxxhealthplan.com/fhir/medicalrecordnumber"
 * identifier[uniquememberid].type = IdentifierTypeCS#um
@@ -297,7 +297,7 @@ Usage: #example
 * language = #en-US
 * identifier[NPI].type = IdentifierTypeCS#npi
 * identifier[NPI].value = "345678"
-* identifier[tax].type = IdentifierTypeCS#tax
+* identifier[tax].type = $IdentifierTypeCS#TAX
 * identifier[tax].value = "123-45-6789"
 * name = "Provider 1"
 * active = true 

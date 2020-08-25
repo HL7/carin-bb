@@ -19,7 +19,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * identifier[memberid] ^patternIdentifier.type = IdentifierTypeCS#mb
 * identifier[memberid] ^short = "Member ID"
 * identifier[memberid].type.coding 1..* MS
-* identifier[medrecnum] ^patternIdentifier.type = IdentifierTypeCS#mr
+* identifier[medrecnum] ^patternIdentifier.type = $IdentifierTypeCS#MR
 * identifier[medrecnum] ^short = "Medical Record Number"
 * identifier[medrecnum].type.coding 1..* MS
 * identifier[patacctnum] ^patternIdentifier.type = IdentifierTypeCS#pt

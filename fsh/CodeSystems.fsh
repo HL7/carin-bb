@@ -86,13 +86,13 @@ Description: "Values for EOB.item.adjudication.category and total.category"
 
 CodeSystem: IdentifierTypeCS
 Title: "Identifier Type"
-Description: "Identifier Type"
-* #tax "Tax ID Number" "Tax ID Number"
+Description: "Identifier Type codes that extend those defined in http://terminology.hl7.org/CodeSystem/v2-0203"
+// * #tax "Tax ID Number" "Tax ID Number"  - use the TAX code from the base codesystem
 * #npi "National Provider Identifier" "National Provider Identifier"
 * #clia "CLIA" "CLIA"
 * #payerid "Payer ID" "Payer ID"
 * #mb "Member ID" "Member ID"
-* #mr "Medical Record Number" "Medical Record Number"
+// * #mr "Medical Record Number" "Medical Record Number" - use the MR code from the base codesystem
 * #pt "Patient Account Number" "Patient Account Number"
 * #um "Unique Member ID" "Unique Member ID"
 * #cn "Claim Number" "Claim Number"
