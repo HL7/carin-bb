@@ -52,9 +52,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[typeofbill].category  = ClaimInformationCategoryCS#typeofbill
-* supportingInfo[typeofbill].code from $NUBCTypeOfBill (required)
+* supportingInfo[typeofbill].code from NUBCTypeOfBill (required)
 * supportingInfo[pointoforigin].category  = ClaimInformationCategoryCS#admsrc
-* supportingInfo[pointoforigin].code from $NUBCPointOfOriginForAdmissionOrVisit (required)
+* supportingInfo[pointoforigin].code from NUBCPointOfOriginForAdmissionOrVisit (required)
 * supportingInfo[admtype].category  = ClaimInformationCategoryCS#admtype
 * supportingInfo[admtype].code from NUBCPriorityOfAdmissionn  (required)
 * supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit "
@@ -64,7 +64,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[drg].category  = ClaimInformationCategoryCS#drg
 * supportingInfo[drg].code from CMSDRG  (required)
 * supportingInfo[drg] ^short = "Claim diagnosis related group (DRG)"
-* item.revenue from $NUBCRevenueCode (required)
+* item.revenue from NUBCRevenueCode (required)
 * item.modifier from AMACPTCMSHCPCSProcedureModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.adjudication ^slicing.rules = #closed

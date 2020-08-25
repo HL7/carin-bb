@@ -16,13 +16,12 @@ Alias:   $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
 Alias:   $OrganizationIdentifierTypeCS   =  http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $IdentifierTypeCS   =  http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $ClaimPayeeTypeCode = http://hl7.org/fhir/ValueSet/payeetype
-                               
+Alias:   $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
+
 Alias:   $CareTeamRoleCodeCS = http://terminology.hl7.org/CodeSystem/claimcareteamrole
 Alias:   $PresentOnAdmissionV2CS = urn:oid:2.16.840.1.113883.6.301.11
-Alias:   $HCPCSProcedureCodesCS = urn:oid:2.16.840.1.113883.6.285
-Alias:   $AMACPTMODIFIERS = http://www.ama-assn.org/go/cpt-modifiers
-Alias:   $HCPCSMODIFIERS = http://www.cms.gov/hcpcs-level-II-modifiers
-Alias: $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
+
+
 
 // CodeSystem Aliases due to bugs in Sushi 0.12.7 and 0.13.2 ..hopefully resolved and deleted at some point
 //Alias: $IdentifierTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS
@@ -36,21 +35,25 @@ Alias:   $UCUM = http://unitsofmeasure.org
 Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
 Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   $CPT = http://www.ama-assn.org/go/cpt
+Alias:   $HCPCSProcedureCodesCS = urn:oid:2.16.840.1.113883.6.285
+Alias:   $AMACPTMODIFIERS = http://www.ama-assn.org/go/cpt-modifiers
+Alias:   $HCPCSMODIFIERS = http://www.cms.gov/hcpcs-level-II-modifiers
+Alias:   $CMSDRGCS = http://www.cms.gov/ms-drg
+Alias:  $CMSPlaceOfServiceCS = http://www.cms.gov/place-of-service
 Alias:   $CPTALLVS = http://hl7.org/fhir/ValueSet/cpt-all
 Alias:   $ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
 Alias:   $FDANationalDrugCodeCS = http://hl7.org/fhir/sid/ndc
 Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy
 
 
-Alias:  $NUBCPointOfOriginForAdmissionOrVisitCS = https://www.nubc.org/point-of-origin-for-admission-or-visit
+//Alias:  $NUBCPointOfOriginForAdmissionOrVisitCS = https://www.nubc.org/point-of-origin-for-admission-or-visit
 Alias: $NUBCPatientDischargeCS   = https://www.nubc.org/patient-discharge
 Alias: $NUBCPriorityOfAdmissionOrVisitCS = https://www.nubc.org/priority-type-of-admission-or-visit
-Alias: $NUBCPointOfOriginForAdmissionOrVisit = http://hl7.org/fhir/ValueSet/nubc-admission-source
-Alias: $NUBCRevenueCode = http://hl7.org/fhir/ValueSet/nubc-service-line-revenue
-Alias: $NUBCTypeOfBill = http://hl7.org/fhir/ValueSet/nubc-type-of-bill
+//Alias: $NUBCPointOfOriginForAdmissionOrVisit = http://hl7.org/fhir/ValueSet/nubc-admission-source
+//Alias: $NUBCTypeOfBill = http://hl7.org/fhir/ValueSet/nubc-type-of-bill
 
 // Profiles
-Alias:  $InpatientEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inpatient-Facility
-Alias:  $OutpatientEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Outpatient-Facility
-Alias:  $ProfessionalEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
-Alias:  $PharmacyEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy
+// Alias:  $InpatientEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inpatient-Facility
+// Alias:  $OutpatientEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Outpatient-Facility
+// Alias:  $ProfessionalEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
+// Alias:  $PharmacyEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy

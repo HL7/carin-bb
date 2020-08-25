@@ -6,13 +6,6 @@ Description: "Claim Information Category - Used as the discriminator for support
 * codes from system ClaimInformationCategoryCS 
 
 
-/*
-ValueSet: PayerProviderRole
-Title: "Payer Provider Role"
-Description: "Payer Provider Role"
-* codes from system CareTeamRoleCS
-*/
-
 ValueSet: CARINBBInstitutionalClaimCareTeamRoleCodes
 Title: "CARINBB Institutional Claim Care Team Roles"
 Description: "Indicates the role of the provider providing the care."
@@ -23,8 +16,6 @@ Description: "Indicates the role of the provider providing the care."
 * CareTeamRoleCS#referring "Referring Provider"
 * CareTeamRoleCS#site "Site Provider"
 * CareTeamRoleCS#prescribing "Prescribing Provider"
-
-// attending | performing | pcp  | site | prescribing | referring | supervising
 
 ValueSet: CARINBBProfessionalAndNonclinicanClaimCareTeamRoleCodes  
 Title: "CARINBB Professional and Non-Clinician CareTeam Roles"
@@ -40,7 +31,7 @@ Description: "Indicates the role of the provider providing the care."
 * CareTeamRoleCS#prescribing "Prescribing Provider"
 * CareTeamRoleCS#performing "Performing Provider"
 
-ValueSet: AdjudicationCarinBBValueCodes   // was PayerAdjudicationValueCodes
+ValueSet: AdjudicationCarinBBValueCodes   
 Title: "Adjudication CARINBB Value Codes"
 Description: "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem"
 * $HL7AdjudicationCS#submitted 
@@ -92,9 +83,6 @@ Description: "Indicates whether the claim / item was paid or denied."
 * PayerAdjudicationCategoryCS#paid "paid"
 * PayerAdjudicationCategoryCS#denied "denied"
 
-
-
-
 ValueSet: PayerProfessionalandnoncliniciandiagnosistype
 Title: "Diagnosis Type -- Professional and Non-Clinician"
 Description: "Payer Professional and Non-Clinician Diagnosis Type"
@@ -124,53 +112,52 @@ Description: "Payer Diagnosis Present On Admission Diagnosis Type"
 * PayerDiagnosisTypeCS#secondary  
 * PayerDiagnosisTypeCS#external-cause-of-injury 
 
+ValueSet: X12CARCCMSRARC
+Title: "Adjudication Denial Reason from X12 CARC and CMS RARC (* NO CodeSystem*)"
+Description: "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC"
+
+ValueSet: CMSDRG 
+Title: "CMS-DRG"
+Description: "CMS-DRG"
+* codes from system $CMSDRGCS
 
 ValueSet: NUBCPresentOnAdmission
 Title: "NUBC Present On Admission"
 Description: "NUBC Present On Admission"
 * codes from system $PresentOnAdmissionV2CS
 
-ValueSet: X12CARCCMSRARC
-Title: "Adjudication Denial Reason from X12 CARC and CMS RARC"
-Description: "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC"
-
-
-ValueSet: CMSDRG
-Title: "CMS-DRG"
-Description: "CMS-DRG"
-
 ValueSet: NUBCPatientDischargeStatus
 Title: "NUBC Patient Discharge Status"
 Description: "NUBC Patient Discharge Status"
-//* codes from system $NUBCPatientDischargeCS
+* codes from system NUBCPatientDischargeCS
 
 ValueSet: NUBCPriorityOfAdmissionn
 Title: "NUBC Priority of Admission"
 Description: "NUBC Priority of Admission"
-//* codes from system $NUBCPriorityOfAdmissionOrVisitCS
-
-/*
-ValueSet: NUBCPointOfOriginForAdmissionOrVisit
-Title: "NUBC Point of Origin of Admission"
-Description: "NUBC Point of Origin of Admission  https://jira.hl7.org/browse/FHIR-27020"
-* codes from system $NUBCPointOfOriginForAdmissionOrVisitCS
-
+* codes from system NUBCPriorityOfAdmissionOrVisitCS
 
 ValueSet: NUBCRevenueCode
-Title: "NUBC Revenue Code"
-Description: "NUBC Revenue Code"
+Title: "NUBC Revenue Codes."
+Description: "NUBC Revenue codes are used to convey specific accomodation, ancillary service or unique billing calculations or arrangements. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)"
+* codes from system NUBCRevenueCodeCS
 
 ValueSet: NUBCTypeOfBill
 Title: "NUBC Type of Bill"
-Description: "Code System http://www.nubc.org/type-of-bill,"
-*/
+Description: "NUBC Type of Bill codes. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)."
+* codes from system NUBCTypeOfBillCS 
+
+ValueSet: NUBCPointOfOriginForAdmissionOrVisit
+Title: "NUBC Point Of Origin For Admission Or Visit"
+Description: "NUBC Point of Origin for Admission or Visit. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)."
+* codes from system NUBCPointOfOriginForAdmissionOrVisitCS
+
 
 ValueSet: PatientIdentifierType
 Title: "Patient Identifier Type"
 Description: "Patient Identifier Type"
 * IdentifierTypeCS#um
 * IdentifierTypeCS#mb
-* IdentifierTypeCS#mr
+* $IdentifierTypeCS#MR
 * IdentifierTypeCS#pt
 
 //alueSet: OrganizationIdentifierType
@@ -180,24 +167,30 @@ Description: "Patient Identifier Type"
 
 ValueSet: NCPDPDispensedAsWritten
 Title: "NCPDP Dispensed As Written (DAW)"
-Description: "http://www.ncpdp.org/dispensed-as-written-or-product-selection-code"
+Description: "NCPDP field # 408-D8 (Dispensed As Written (DAW) / Product Selection Code) "
+* codes from system NCPDPDispensedAsWrittenCS
 
 ValueSet: NCPDPBrandGenericCode
 Title: "NCPDP Brand Generic Code"
-Description: "http://www.ncpdp.org/brand-generic-code"
+Description: "National Council for Prescription Drug Programs, (NCPDP) field # 686, BrandGenericCode."
+* codes from system NCPDPBrandGenericCodeCS 
 
 ValueSet: NCPDPPrescriptionOriginCode
 Title: "NCPDP Prescription Origin Code"
-Description: "http://www.ncpdp.org/prescription-origin-code"
+Description: "National Council for Prescription Drug Programs, (NCPDP)  field # 419-DJ (Prescription Origin Code)."
+* codes from system NCPDPPrescriptionOriginCodeCS
 
 ValueSet: NCPDPRejectCode
 Title: "NCPDP Reject Code"
-Description: "http://www.ncpdp.org/reject-code"
+Description: "This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing. 
+Values are defined in the NCPDP-maintained Reject Code (511-FB) code set."
 * codes from system NCPDPRejectCodeCS 
 
 ValueSet: FDANDCNCPDPCompoundCode
 Title: "FDA NDC NCPDP Compound Code"
 Description: "NCPDP field # 407-D7 (National Drug Code (NDC)) or NCPDP field # 406-D6 (Compound Code)"
+* codes from system $FDANationalDrugCodeCS
+* codes from system NCPDPCompoundCodeCS
 
 ValueSet: FDANationalDrugCode
 Title: "FDA National Drug Code (NDC)"
@@ -206,7 +199,7 @@ Description: "FDA National Drug Code (NDC)"
 
 ValueSet: ICD10CM
 Title: "ICD-10-CM Diagnosis Codes"
-Description: "ICD-10-CM Diagnosis Codes.  ***We need ALL Codes, inactive and inactive.   Current binding is to active codes only***"
+Description: "ICD-10-CM Diagnosis Codes."
 * codes from system $ICD10CM
 
 ValueSet: ICD10PCS
@@ -230,33 +223,11 @@ Title: "AMA CPT and CMS HCPCS Modifier Codes"
 
 ValueSet: ClaimAdjudicationCategory
 Title: "Claim Adjudication Category"
-Description: "Values for EOB.item.adjudication.category, as per Igor"
+Description: "Values for EOB.item.adjudication.category"
 * codes from valueset AdjudicationCarinBBValueCodes
 * codes from valueset BenefitPaymentStatus
 * ClaimAdjudicationCategoryCS#denialreason 
 * ClaimAdjudicationCategoryCS#allowedunits 
-
-/* ValueSet: 
-Title: "Adjustment Amount Category"
-Description: "Describes the various amount fields used when submitting and adjudicating a claim."
-* ClaimAdjudicationCategoryCS#submittedamount	"submitted amount"	
-* ClaimAdjudicationCategoryCS#allowedamount	"allowed amount"
-* ClaimAdjudicationCategoryCS#deductibleamount	"deductible amount"	
-* ClaimAdjudicationCategoryCS#coinsuranceamount	"coinsurance amount"	
-* ClaimAdjudicationCategoryCS#copayamount	"copay amount"	
-* ClaimAdjudicationCategoryCS#noncoveredamount	"noncovered amount"	
-* ClaimAdjudicationCategoryCS#cobamount	"cob amount"	
-* ClaimAdjudicationCategoryCS#paymentamount	"payment amount"
-* ClaimAdjudicationCategoryCS#patientpayamount	"patient pay amount"
-
-
-ValueSet: BenefitPaymentStatusCategory
-Title: "Benefit Payment Status Category"
-Description: "Benefit Payment Status Category"
-* ClaimAdjudicationCategoryCS#innetworkbenefitpaymentstatus	"in network benefit payment status"
-* ClaimAdjudicationCategoryCS#outofnetworkbenefitpaymentstatus	"out of network benefit payment status"
-* ClaimAdjudicationCategoryCS#otherbenefitpaymentstatus	"other benefit payment status"	
-*/
 
 ValueSet: AdjudicationValueCodes
 Title: "Benefit Payment Status Category"
@@ -267,8 +238,8 @@ Description: "Benefit Payment Status Category"
 
 ValueSet: CMSPlaceOfService
 Title: "CMS Place of Service"
-Description: "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .  The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.   The code set is owned by CMS and is available for use."
-//* codes from system CMSPlaceOfServiceCS 
+Description: "CMS Place of Service"
+* codes from system $CMSPlaceOfServiceCS 
 
 ValueSet: NUCCHealthcareProviderTaxonomy
 Title: "NUCC Healthcare Provider Taxonomy"
