@@ -129,12 +129,12 @@ Description: "NUBC Present On Admission"
 ValueSet: NUBCPatientDischargeStatus
 Title: "NUBC Patient Discharge Status"
 Description: "NUBC Patient Discharge Status"
-* codes from system NUBCPatientDischargeCS
+* codes from system $NUBCPatientDischargeCS
 
 ValueSet: NUBCPriorityOfAdmissionn
 Title: "NUBC Priority of Admission"
 Description: "NUBC Priority of Admission"
-* codes from system NUBCPriorityOfAdmissionOrVisitCS
+* codes from system $NUBCPriorityOfAdmissionOrVisitCS
 
 ValueSet: NUBCRevenueCode
 Title: "NUBC Revenue Codes."
