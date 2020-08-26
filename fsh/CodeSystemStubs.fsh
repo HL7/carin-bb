@@ -118,7 +118,8 @@ Title: "AHA NUBC Discharge Status"
 * ^jurisdiction[0].coding[0].system = "urn:iso:std:iso:3166"
 * ^jurisdiction[0].coding[0].code = #US
 * ^jurisdiction[0].coding[0].display = "United States of America"
-* ^copyright = "AHANUBCCopyright"
+* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
+No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions.\nAs HL7 is working with the owning authority to finalize the url, this url is subject to change."
 * ^content = #not-present
 
 
