@@ -16,7 +16,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from ICD10CM (required)
 * diagnosis.onAdmission 0..1 MS
-* diagnosis.onAdmission from NUBCPresentOnAdmission (required)
+* diagnosis.onAdmission from AHANUBCPresentOnAdmission (required)
 * procedure.procedure[x] only CodeableConcept 
 * procedure.procedure[x] 1..1 MS
 * procedure.procedureCodeableConcept from ICD10PCS (required) 
@@ -52,19 +52,19 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[typeofbill].category  = ClaimInformationCategoryCS#typeofbill
-* supportingInfo[typeofbill].code from NUBCTypeOfBill (required)
+* supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
 * supportingInfo[pointoforigin].category  = ClaimInformationCategoryCS#admsrc
-* supportingInfo[pointoforigin].code from NUBCPointOfOriginForAdmissionOrVisit (required)
+* supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
 * supportingInfo[admtype].category  = ClaimInformationCategoryCS#admtype
-* supportingInfo[admtype].code from NUBCPriorityOfAdmissionn  (required)
+* supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
 * supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit "
 * supportingInfo[discharge-status].category  = ClaimInformationCategoryCS#discharge-status
-* supportingInfo[discharge-status].code from NUBCPatientDischargeStatus   (required)
+* supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[drg].category  = ClaimInformationCategoryCS#drg
 * supportingInfo[drg].code from CMSDRG  (required)
 * supportingInfo[drg] ^short = "Claim diagnosis related group (DRG)"
-* item.revenue from NUBCRevenueCode (required)
+* item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSProcedureModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.adjudication ^slicing.rules = #closed

@@ -52,17 +52,17 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[clmrecvddate].timing[x] 1..1
 * supportingInfo[typeofbill].category = ClaimInformationCategoryCS#typeofbill
 * supportingInfo[typeofbill] ^short = "Type of Bill"
-* supportingInfo[typeofbill].code from NUBCTypeOfBill (required)
+* supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
 * supportingInfo[pointoforigin].category = ClaimInformationCategoryCS#admsrc
-* supportingInfo[pointoforigin].code from NUBCPointOfOriginForAdmissionOrVisit (required)
+* supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
 * supportingInfo[pointoforigin] ^short = "Claim Point of Origin for Admission or Visit"
 * supportingInfo[admtype].category = ClaimInformationCategoryCS#admtype
-* supportingInfo[admtype].code from NUBCPriorityOfAdmissionn  (required)
+* supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
 * supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit "
 * supportingInfo[discharge-status].category = ClaimInformationCategoryCS#discharge-status
 * supportingInfo[discharge-status] ^short = "Discharge Status"
-* supportingInfo[discharge-status].code from NUBCPatientDischargeStatus   (required)
-* item.revenue from NUBCRevenueCode (required)
+* supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
+* item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSProcedureModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.productOrService ^short = "Put the short definition here for item.productOrService here"

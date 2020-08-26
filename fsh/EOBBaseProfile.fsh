@@ -43,6 +43,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * careTeam 0..* MS 
 * careTeam.provider 1..1 MS
 * careTeam.provider only Reference(CARINBBOrganization or CARINBBPractitioner)
+* careTeam.qualification from $USCoreProviderSpecialty (required)
 * careTeam.responsible 0..1 MS 
 * careTeam.role 1..1 MS
 * supportingInfo 0..* MS

@@ -48,7 +48,12 @@ Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy
 
 //Alias:  $NUBCPointOfOriginForAdmissionOrVisitCS = https://www.nubc.org/point-of-origin-for-admission-or-visit
 Alias: $NUBCPatientDischargeCS   = https://www.nubc.org/patient-discharge
-Alias: $NUBCPriorityOfAdmissionOrVisitCS = https://www.nubc.org/priority-type-of-admission-or-visit
+Alias: $AHANUBCPriorityOfAdmissionOrVisitCS = https://www.nubc.org/priority-type-of-admission-or-visit
+Alias: $AHANUBCPointOfOriginForAdmissionOrVisitOID = urn:oid:2.16.840.1.113883.6.301.4
+Alias: $AHANUBCTypeOfBillOID = urn:oid:2.16.840.1.113883.18.290
+Alias: $AHANUBCRevenueCodeOID = urn:oid:2.16.840.1.113883.13.18
+Alias: $AHANUBCPatientDischargeStatusOID = urn:oid:2.16.840.1.113883.6.301.5
+Alias: $AHANUBCPresentOnAdmissionOID  = urn:oid:2.16.840.1.113883.6.301.11
 //Alias: $NUBCPointOfOriginForAdmissionOrVisit = http://hl7.org/fhir/ValueSet/nubc-admission-source
 //Alias: $NUBCTypeOfBill = http://hl7.org/fhir/ValueSet/nubc-type-of-bill
 
@@ -57,3 +62,5 @@ Alias: $NUBCPriorityOfAdmissionOrVisitCS = https://www.nubc.org/priority-type-of
 // Alias:  $OutpatientEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Outpatient-Facility
 // Alias:  $ProfessionalEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
 // Alias:  $PharmacyEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy
+
+Alias:   $JoesGarageCS = http://joesgarage.com/something

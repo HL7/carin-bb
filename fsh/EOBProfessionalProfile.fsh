@@ -7,7 +7,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * careTeam obeys EOB-prof-careTeam-practitioner
 * careTeam obeys EOB-prof-careTeam-organization
 * careTeam.qualification MS 
-* careTeam.qualification from NUCCHealthcareProviderTaxonomy (required)  // cardinality constraint?
+//* careTeam.qualification from NUCCHealthcareProviderTaxonomy (required)  // cardinality constraint?
 * type = $HL7ClaimTypeCS#professional
 // * provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner) -- set in base class
 * supportingInfo ^slicing.discriminator.type = #pattern 

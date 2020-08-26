@@ -113,43 +113,62 @@ Description: "Payer Diagnosis Present On Admission Diagnosis Type"
 * PayerDiagnosisTypeCS#external-cause-of-injury 
 
 ValueSet: X12CARCCMSRARC
-Title: "Adjudication Denial Reason from X12 CARC and CMS RARC (* NO CodeSystem*)"
-Description: "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC"
+Title: "Denial Reasons - Reason codes used to interpret the adjudication denial reason. The Value Set is a combination of two Code Systems: X12 Claim Adjustment Reason Codes (CARC) and CMS Remittance Advice Remark Codes (RARC)"
+Description: "Reason codes used to interpret the adjudication denial reason.  RARC codes are available at http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes."
+* codes from system http://www.x12.org/codes/claim-adjustment-reason-codes
+* codes from system http://www.wpc-edi.com/remittance-advice-remark
+* ^copyright = "CARC codes are owned, maintained and distributed by X12. Use of X12 codes require licenses. RARC codes are owned by CMS and are available for use."
 
 ValueSet: CMSDRG 
 Title: "CMS-DRG"
-Description: "CMS-DRG"
+Description: "Diagnosis Related Group - any of the payment categories that are used to classify patients and especially Medicare patients for the purpose of reimbursing hospitals for each case in a 
+given category with a fixed fee regardless of the actual costs incurred (Other DRGs, such as AP-DRGs, requires defining their specific Value Sets and Code Systems.) 
+https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html This link takes one to a list of files. The code set is owned by CMS and is available for use."
 * codes from system $CMSDRGCS
+* ^copyright = "The code set is owned by CMS and is available for use."
 
-ValueSet: NUBCPresentOnAdmission
-Title: "NUBC Present On Admission"
-Description: "NUBC Present On Admission"
-* codes from system $PresentOnAdmissionV2CS
+ValueSet: AHANUBCPresentOnAdmission
+Title: "AHA NUBC Present On Admission"
+Description: "UB-04 Present on Admission (FL-67)"
+* codes from system $AHANUBCPresentOnAdmissionOID
+* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
+No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
-ValueSet: NUBCPatientDischargeStatus
-Title: "NUBC Patient Discharge Status"
-Description: "NUBC Patient Discharge Status"
-* codes from system $NUBCPatientDischargeCS
+ValueSet: AHANUBCPatientDischargeStatus
+Title: "AHA NUBC Patient Discharge Status"
+Description: "UB-04 Patient Discharge Status (FL-17)"
+* codes from system $AHANUBCPatientDischargeStatusOID
+* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
+No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
-ValueSet: NUBCPriorityOfAdmissionn
-Title: "NUBC Priority of Admission"
-Description: "NUBC Priority of Admission"
-* codes from system $NUBCPriorityOfAdmissionOrVisitCS
+ValueSet: AHANUBCPriorityTypeOfAdmissionOrVisit
+Title: "AHA NUBC Priority Type Of Admission Or Visit"
+Description: "AHA NUBC Priority Type Of Admission Or Visit"
+* codes from system $AHANUBCPriorityOfAdmissionOrVisitCS
+* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
+No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
-ValueSet: NUBCRevenueCode
-Title: "NUBC Revenue Codes."
+ValueSet: AHANUBCRevenueCodes
+Title: "UB-04 Revenue Code (FL-42)."
 Description: "NUBC Revenue codes are used to convey specific accomodation, ancillary service or unique billing calculations or arrangements. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)"
-* codes from system NUBCRevenueCodeCS
+//* codes from system NUBCRevenueCodeCS
+* codes from system $AHANUBCRevenueCodeOID
+* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
+No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
-ValueSet: NUBCTypeOfBill
-Title: "NUBC Type of Bill"
+ValueSet: AHANUBCTypeOfBill
+Title: "UB-04 Type of Bill (FL-4)"
 Description: "NUBC Type of Bill codes. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)."
-* codes from system NUBCTypeOfBillCS 
+* codes from system $AHANUBCTypeOfBillOID
+* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
+No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
-ValueSet: NUBCPointOfOriginForAdmissionOrVisit
-Title: "NUBC Point Of Origin For Admission Or Visit"
+ValueSet: AHANUBCPointOfOriginForAdmissionOrVisit
+Title: "UB-04 Point of Origin for Admission or Visit (FL-15)"
 Description: "NUBC Point of Origin for Admission or Visit. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)."
-* codes from system NUBCPointOfOriginForAdmissionOrVisitCS
+* codes from system $AHANUBCPointOfOriginForAdmissionOrVisitOID
+* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
+No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
 
 ValueSet: PatientIdentifierType
@@ -167,7 +186,7 @@ Description: "Patient Identifier Type"
 
 ValueSet: NCPDPDispensedAsWritten
 Title: "NCPDP Dispensed As Written (DAW)"
-Description: "NCPDP field # 408-D8 (Dispensed As Written (DAW) / Product Selection Code) "
+Description: "NCPDP field # 408-D8 (Dispensed As Written (DAW)/Product Selection Code) Prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication. "
 * codes from system NCPDPDispensedAsWrittenCS
 
 ValueSet: NCPDPBrandGenericCode
@@ -182,12 +201,11 @@ Description: "National Council for Prescription Drug Programs, (NCPDP)  field # 
 
 ValueSet: NCPDPRejectCode
 Title: "NCPDP Reject Code"
-Description: "This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing. 
-Values are defined in the NCPDP-maintained Reject Code (511-FB) code set."
+Description: "NCPDP field # 511-FB (Reject Code) Code indicating the error encountered."
 * codes from system NCPDPRejectCodeCS 
 
 ValueSet: FDANDCNCPDPCompoundCode
-Title: "FDA NDC NCPDP Compound Code"
+Title: "FDA NDC NCPDP Compound Code. Indicates whether or not the prescription is a compound."
 Description: "NCPDP field # 407-D7 (National Drug Code (NDC)) or NCPDP field # 406-D6 (Compound Code)"
 * codes from system $FDANationalDrugCodeCS
 * codes from system NCPDPCompoundCodeCS
@@ -208,18 +226,22 @@ Description: "ICD-10-PCS"
 * codes from system $ICD10PCS 
 
 ValueSet: AMACPTCMSHCPCSProcedureCodes
-Description: "AMA CPT and CMS HCPCS Procedure Codes"
 Title: "AMA CPT and CMS HCPCS Procedure Codes"
+Description: "AMA CPT and CMS HCPCS Procedure Codes. The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed.
+AMA CPT CMS HCPCS Procedure Codes leverage US Core Procedure Codes composition.CPT codes are available by subscription from the AMA at http://www.ama-assn.org/go/cpt.  HCPCS codes are available at https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html. 
+The link takes one to a list of files. The HCPCS ANWEB files include modifier and procedure codes. The target set for this Code System is the procedure codes from this file. The code set is owned by CMS and is available for use."
 * codes from valueset $CPTALLVS
 * codes from system $HCPCSProcedureCodesCS
-
+* ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved."
 
 ValueSet:  AMACPTCMSHCPCSProcedureModifiers
-Description: "AMA CPT and CMS HCPCS Modifier Codes"
+Description: "AMA CPT and CMS HCPCS Modifier Codes. The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure code modifiers. Modifiers help further describe a procedure code without changing its definition. 
+CPT modifiers are available by subscription from the AMA at http://www.ama-assn.org/go/cpt. HCPCS modifiers are available at https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html. The link takes one to a list of files. The HCPCS ANWEB files include modifier and procedure codes. 
+The target set for this Code System is the procedure code modifiers from this file. The code set is owned by CMS and is available for use."
 Title: "AMA CPT and CMS HCPCS Modifier Codes"
 * codes from system $AMACPTMODIFIERS 
 * codes from system $HCPCSMODIFIERS 
-
+* ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved."
 
 ValueSet: ClaimAdjudicationCategory
 Title: "Claim Adjudication Category"
@@ -238,10 +260,11 @@ Description: "Benefit Payment Status Category"
 
 ValueSet: CMSPlaceOfService
 Title: "CMS Place of Service"
-Description: "CMS Place of Service"
+Description: "Place of Service codes are placed on health care professional claims to indicate the setting in which a service was provided. https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html. The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound."
 * codes from system $CMSPlaceOfServiceCS 
+* ^copyright = "The code set is owned by CMS and is available for use."
 
-ValueSet: NUCCHealthcareProviderTaxonomy
-Title: "NUCC Healthcare Provider Taxonomy"
-Description:  "NUCC Healthcare Provider Taxonomy"
-* codes from system $NUCCProviderTaxonomy
+// ValueSet: NUCCHealthcareProviderTaxonomy
+// Title: "NUCC Healthcare Provider Taxonomy"
+// Description:  "NUCC Healthcare Provider Taxonomy"
+// * codes from system $NUCCProviderTaxonomy
