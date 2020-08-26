@@ -29,9 +29,6 @@ Alias:   $PresentOnAdmissionV2CS = urn:oid:2.16.840.1.113883.6.301.11
 //Alias: $ClaimAdjudicationCategoryCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimAdjudicationCategoryCS
 
 // Code Systems
-Alias:   $LNC = http://loinc.org
-Alias:   $SCT = http://snomed.info/sct
-Alias:   $UCUM = http://unitsofmeasure.org
 Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
 Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   $CPT = http://www.ama-assn.org/go/cpt
@@ -63,4 +60,4 @@ Alias: $AHANUBCPresentOnAdmissionOID  = urn:oid:2.16.840.1.113883.6.301.11
 // Alias:  $ProfessionalEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
 // Alias:  $PharmacyEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy
 
-Alias:   $JoesGarageCS = http://joesgarage.com/something
+

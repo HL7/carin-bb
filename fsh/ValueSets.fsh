@@ -130,45 +130,39 @@ https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/
 ValueSet: AHANUBCPresentOnAdmission
 Title: "AHA NUBC Present On Admission"
 Description: "UB-04 Present on Admission (FL-67)"
-* codes from system $AHANUBCPresentOnAdmissionOID
-* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
-No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
+* codes from system AHANUBCPresentOnAdmissionCS
+* ^copyright =  "AHANUBCCopyright"
 
 ValueSet: AHANUBCPatientDischargeStatus
 Title: "AHA NUBC Patient Discharge Status"
 Description: "UB-04 Patient Discharge Status (FL-17)"
-* codes from system $AHANUBCPatientDischargeStatusOID
-* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
-No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
+* codes from system AHANUBCPatientDischargeStatusCS
+* ^copyright = "AHANUBCCopyright"
 
 ValueSet: AHANUBCPriorityTypeOfAdmissionOrVisit
 Title: "AHA NUBC Priority Type Of Admission Or Visit"
 Description: "AHA NUBC Priority Type Of Admission Or Visit"
 * codes from system $AHANUBCPriorityOfAdmissionOrVisitCS
-* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
-No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
+* ^copyright = "AHANUBCCopyright"
 
 ValueSet: AHANUBCRevenueCodes
 Title: "UB-04 Revenue Code (FL-42)."
 Description: "NUBC Revenue codes are used to convey specific accomodation, ancillary service or unique billing calculations or arrangements. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)"
 //* codes from system NUBCRevenueCodeCS
-* codes from system $AHANUBCRevenueCodeOID
-* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
-No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
+* codes from system AHANUBCRevenueCodesCS
+* ^copyright = "AHANUBCCopyright"
 
 ValueSet: AHANUBCTypeOfBill
 Title: "UB-04 Type of Bill (FL-4)"
 Description: "NUBC Type of Bill codes. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)."
-* codes from system $AHANUBCTypeOfBillOID
-* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
-No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
+* codes from system AHANUBCTypeOfBillCS
+* ^copyright = "AHANUBCCopyright"
 
 ValueSet: AHANUBCPointOfOriginForAdmissionOrVisit
 Title: "UB-04 Point of Origin for Admission or Visit (FL-15)"
 Description: "NUBC Point of Origin for Admission or Visit. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)."
-* codes from system $AHANUBCPointOfOriginForAdmissionOrVisitOID
-* ^copyright = "The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. 
-No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
+* codes from system AHANUBCPointOfOriginForAdmissionOrVisitCS
+* ^copyright = "AHANUBCCopyright"
 
 
 ValueSet: PatientIdentifierType
