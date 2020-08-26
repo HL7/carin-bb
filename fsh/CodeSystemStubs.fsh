@@ -124,8 +124,8 @@ No other publication—governmental or private/commercial—can be considered au
 
 
 CodeSystem: AHANUBCPresentOnAdmissionCS
-Title: "UB-04 Present on Admission (FL-67)"
-Description: "These codes are used to convey specific accomodation, ancillary service or unique billing calculations or arrangements. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)."
+Title: "AHA NUBC PresentOn Admission"
+Description: "UB-04 Present on Admission (FL-67)."
 * ^url = $AHANUBCPresentOnAdmissionOID
 * ^version = "0.1.0"
 * ^publisher = "HL7 International - Financial Management Work Group"
@@ -144,8 +144,8 @@ Description: "These codes are used to convey specific accomodation, ancillary se
 * ^content = #not-present
 
 CodeSystem: AHANUBCRevenueCodesCS
-Title: "UB-04 Revenue Code (FL-42)."
-Description: "These codes are used to convey specific accomodation, ancillary service or unique billing calculations or arrangements. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)."
+Title: "AHA NUBC Revenue Codes"
+Description: "UB-04 Revenue Code (FL-42)."
 * ^url = $AHANUBCRevenueCodeOID
 * ^version = "0.1.0"
 * ^publisher = "HL7 International - Financial Management Work Group"
@@ -164,8 +164,8 @@ Description: "These codes are used to convey specific accomodation, ancillary se
 * ^content = #not-present
 
 CodeSystem: AHANUBCTypeOfBillCS
-Title: "NUBC Type of Bill"
-Description: "NUBC Type of Bill codes. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)."
+Title: "AHA NUBC Type of Bill"
+Description: "NUBC Type of Bill codes."
 * ^url = $AHANUBCTypeOfBillOID
 * ^version = "0.1.0"
 * ^publisher = "HL7 International - Financial Management Work Group"
