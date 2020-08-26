@@ -75,7 +75,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * payment.type from ClaimPaymentStatusCode (required)
 * processNote MS
 * processNote ^short = "Line member payment denial explanation"
-
+* priority from http://hl7.org/fhir/ValueSet/process-priority  // Fix a bug in R4 EOB which points to a CodeSystem.   Eliminates an error on output
 
 Invariant:  EOB-insurance-focal  
 Description: "EOB.insurance:  at most one with focal = true"
