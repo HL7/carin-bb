@@ -113,10 +113,10 @@ Description: "Payer Diagnosis Present On Admission Diagnosis Type"
 * PayerDiagnosisTypeCS#external-cause-of-injury 
 
 ValueSet: X12CARCCMSRARC
-Title: "Denial Reasons - Reason codes used to interpret the adjudication denial reason. The Value Set is a combination of two Code Systems: X12 Claim Adjustment Reason Codes (CARC) and CMS Remittance Advice Remark Codes (RARC)"
+Title: " X12 Claim Adjustment Reason Codes (CARC) and CMS Remittance Advice Remark Codes (RARC)"
 Description: "Reason codes used to interpret the adjudication denial reason.  RARC codes are available at http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes."
-* codes from system http://www.x12.org/codes/claim-adjustment-reason-codes
-* codes from system http://www.wpc-edi.com/remittance-advice-remark
+* codes from system X12CARCCS 
+* codes from system CMSRARCCS 
 * ^copyright = "CARC codes are owned, maintained and distributed by X12. Use of X12 codes require licenses. RARC codes are owned by CMS and are available for use."
 
 ValueSet: CMSDRG 
@@ -199,33 +199,33 @@ Description: "NCPDP field # 511-FB (Reject Code) Code indicating the error encou
 * codes from system NCPDPRejectCodeCS 
 
 ValueSet: FDANDCNCPDPCompoundCode
-Title: "FDA NDC NCPDP Compound Code. Indicates whether or not the prescription is a compound."
+Title: "FDA NDC NCPDP Compound Code"
 Description: "NCPDP field # 407-D7 (National Drug Code (NDC)) or NCPDP field # 406-D6 (Compound Code)"
-* codes from system $FDANationalDrugCodeCS
+* codes from system FDANationalDrugCodeCS
 * codes from system NCPDPCompoundCodeCS
 
 ValueSet: FDANationalDrugCode
 Title: "FDA National Drug Code (NDC)"
 Description: "FDA National Drug Code (NDC)"
-* codes from system $FDANationalDrugCodeCS
+* codes from system FDANationalDrugCodeCS
 
 ValueSet: ICD10CM
 Title: "ICD-10-CM Diagnosis Codes"
 Description: "ICD-10-CM Diagnosis Codes."
-* codes from system $ICD10CM
+* codes from system ICD10CMCS
 
 ValueSet: ICD10PCS
 Title: "ICD-10-PCS"
 Description: "ICD-10-PCS"
-* codes from system $ICD10PCS 
+* codes from system ICD10PCSCS
 
 ValueSet: AMACPTCMSHCPCSProcedureCodes
 Title: "AMA CPT and CMS HCPCS Procedure Codes"
 Description: "AMA CPT and CMS HCPCS Procedure Codes. The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed.
 AMA CPT CMS HCPCS Procedure Codes leverage US Core Procedure Codes composition.CPT codes are available by subscription from the AMA at http://www.ama-assn.org/go/cpt.  HCPCS codes are available at https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html. 
 The link takes one to a list of files. The HCPCS ANWEB files include modifier and procedure codes. The target set for this Code System is the procedure codes from this file. The code set is owned by CMS and is available for use."
-* codes from valueset $CPTALLVS
-* codes from system $HCPCSProcedureCodesCS
+* codes from system AMACPTCS
+* codes from system HCPCSProcedureCodesCS
 * ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved."
 
 ValueSet:  AMACPTCMSHCPCSProcedureModifiers
@@ -233,8 +233,8 @@ Description: "AMA CPT and CMS HCPCS Modifier Codes. The Value Set is a combinati
 CPT modifiers are available by subscription from the AMA at http://www.ama-assn.org/go/cpt. HCPCS modifiers are available at https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html. The link takes one to a list of files. The HCPCS ANWEB files include modifier and procedure codes. 
 The target set for this Code System is the procedure code modifiers from this file. The code set is owned by CMS and is available for use."
 Title: "AMA CPT and CMS HCPCS Modifier Codes"
-* codes from system $AMACPTMODIFIERS 
-* codes from system $HCPCSMODIFIERS 
+* codes from system AMACPTModifiersCS 
+* codes from system HCPCSModifiersCS
 * ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved."
 
 ValueSet: ClaimAdjudicationCategory
