@@ -39,6 +39,8 @@ Alias:   $CMSDRGCS = http://www.cms.gov/ms-drg
 Alias:  $CMSPlaceOfServiceCS = http://www.cms.gov/place-of-service
 Alias:   $CPTALLVS = http://hl7.org/fhir/ValueSet/cpt-all
 Alias:   $ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
+Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
+//Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   $FDANationalDrugCodeCS = http://hl7.org/fhir/sid/ndc
 Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy
 
@@ -51,13 +53,8 @@ Alias: $AHANUBCTypeOfBillOID = urn:oid:2.16.840.1.113883.18.290
 Alias: $AHANUBCRevenueCodeOID = urn:oid:2.16.840.1.113883.13.18
 Alias: $AHANUBCPatientDischargeStatusOID = urn:oid:2.16.840.1.113883.6.301.5
 Alias: $AHANUBCPresentOnAdmissionOID  = urn:oid:2.16.840.1.113883.6.301.11
-//Alias: $NUBCPointOfOriginForAdmissionOrVisit = http://hl7.org/fhir/ValueSet/nubc-admission-source
-//Alias: $NUBCTypeOfBill = http://hl7.org/fhir/ValueSet/nubc-type-of-bill
 
-// Profiles
-// Alias:  $InpatientEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Inpatient-Facility
-// Alias:  $OutpatientEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Outpatient-Facility
-// Alias:  $ProfessionalEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
-// Alias:  $PharmacyEOBProfile = http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy
+Alias: $X12CARCCS = http://www.x12.org/codes/claim-adjustment-reason-codes
+Alias: $CMSRARCCS = http://www.wpc-edi.com/remittance-advice-remark
 
 

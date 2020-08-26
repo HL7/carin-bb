@@ -4,6 +4,7 @@ Id: CARIN-BB-ExplanationOfBenefit
 Title: "CARIN BB Explanation Of Benefit"
 Description: "Abstract parent profile that includes constraints that are common to the four specific ExplanationOfBenefit (EOB) profiles defined in this Implementation Guide.
 All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
+* careTeam obeys EOB-careteam-qualification
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * ^abstract = true 
@@ -86,12 +87,12 @@ Severity:   #error
 Invariant: EOB-inst-careTeam-practitioner
 Description: "Institutional EOB:  Careteam roles refer to a practitioner"
 Expression: "( careTeam.role.coding.code in 
-('attending' or 'pcp' or 'referring' or 'supervising')) implies 
+('attending' or 'primary' or 'referring' or 'supervising')) implies 
  careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
 Severity: #error
 
 Invariant: EOB-inst-careTeam-organization
-Description: "Institutional EOB:  Careteam roles refer to a practitioner"
+Description: "Institutional EOB:  Careteam roles refer to an organization"
 Expression: "( careTeam.role.coding.code='performing') implies 
  careTeam.provider.reference.resolve().is(FHIR.Organization)"
 Severity: #error
@@ -99,7 +100,7 @@ Severity: #error
 Invariant: EOB-pharm-careTeam-practitioner
 Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
 Expression: "( careTeam.role.coding.code in 
-( 'pcp' or 'prescribing')) implies 
+( 'primary' or 'prescribing')) implies 
  careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
 Severity: #error
 
@@ -112,12 +113,17 @@ Severity: #error
 Invariant: EOB-prof-careTeam-practitioner
 Description: "Professional EOB:  Careteam roles refer to a practitioner"
 Expression: "( careTeam.role.coding.code in 
-('performing' or 'pcp' or 'referring' or 'supervising')) implies 
+('performing' or 'primary' or 'referring' or 'supervising')) implies 
  careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
 Severity: #error
 
 Invariant: EOB-prof-careTeam-organization
-Description: "Professional EOB:  Careteam roles refer to a practitioner"
+Description: "Professional EOB:  Careteam roles refer to an organization"
 Expression: "( careTeam.role.coding.code='site') implies 
  careTeam.provider.reference.resolve().is(FHIR.Organization)"
+Severity: #error
+
+Invariant: EOB-careteam-qualification
+Description: "Care Team Performing physician's qualifications are from US-Core-Provider-Specialty Value Set"
+Expression: "ExplanationOfBenefit.careTeam.role.coding.code='performing' implies ExplanationOfBenefit.careTeam.qualification.memberOf('http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty')"
 Severity: #error
