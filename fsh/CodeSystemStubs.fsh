@@ -70,6 +70,12 @@ Description: "Indicates whether or not the prescription is a compound NCPDP fiel
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
+ValueSet: NCPDPCompoundCode
+Title: "NCPDP Compound Code"
+Description: "Indicates whether or not the prescription is a compound NCPDP field # 406-D6."
+* codes from system NCPDPCompoundCodeCS
+* insert NCPDPCopyrightNotice
+
 CodeSystem: FDANationalDrugCodeCS
 Title: "FDA National Drug Code (NDC)"
 Description: "NCPDP field # 407-D7 National Drug Code (NDC)"
