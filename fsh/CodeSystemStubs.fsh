@@ -100,19 +100,22 @@ Description: "UB-04 Priority (Type) of Admission or Visit (FL-14)."
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
 
+RuleSet: AMACopyrightNotice
+* ^copyright = "Copyright 2014 American Medical Association (AMA). All rights reserved.  Available by subscription from the AMA."
+
 CodeSystem: AMACPTCS
 Title: "AMA CPT"
 Description: "American Medical Association (AMA) Current Procedural Codes (CPT)"
 * ^url = $CPT
 * insert CodeSystemStubBoilerplate
-* insert AHANUBCCopyrightNotice
+* insert AMACopyrightNotice
 
 CodeSystem: AMACPTModifiersCS
 Title: "AMA CPT Modifiers"
 Description: "American Medical Association (AMA) Current Procedural Codes (CPT) Modifiers"
 * ^url = $AMACPTMODIFIERS
 * insert CodeSystemStubBoilerplate
-* insert AHANUBCCopyrightNotice
+* insert AMACopyrightNotice
 
 CodeSystem: HCPCSProcedureCodesCS
 Title: "AMA CPT"
