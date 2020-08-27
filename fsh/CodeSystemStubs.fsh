@@ -17,12 +17,12 @@ RuleSet: CodeSystemStubBoilerplate
 RuleSet: NCPDPCopyrightNotice
 * ^copyright = "These codes  are copyrighted by National Council for Prescription Drugs Programs, Inc. (NCPDP), and are available by subscription."
 
-CodeSystem: NCPDPRejectCodeCS
-Title: "NCPDP Reject Code"
-Description: "The National Council for Prescription Drug Programs, (NCPDP) Reject Code (511-FB) code set contains exception definitions for use when transaction processing cannot be completed."
-* ^url = "http://ncpdp.org/reject-code"
-* insert CodeSystemStubBoilerplate
-* insert NCPDPCopyrightNotice
+// CodeSystem: NCPDPRejectCodeCS
+// Title: "NCPDP Reject Code"
+// Description: "The National Council for Prescription Drug Programs, (NCPDP) Reject Code (511-FB) code set contains exception definitions for use when transaction processing cannot be completed."
+// * ^url = "http://ncpdp.org/reject-code"
+// * insert CodeSystemStubBoilerplate
+// * insert NCPDPCopyrightNotice
 
 CodeSystem: NCPDPDispensedAsWrittenCS
 Title: "NCPDP Dispensed As Written (DAW)"
@@ -84,7 +84,6 @@ Description: "NUBC Type of Bill codes."
 * ^url = $AHANUBCTypeOfBillOID
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
-
 
 CodeSystem: AHANUBCPointOfOriginForAdmissionOrVisitCS
 Title: "AHA NUBC Point Of Origin For Admission Or Visit"

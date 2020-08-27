@@ -4,7 +4,6 @@ Id: CARIN-BB-ExplanationOfBenefit
 Title: "CARIN BB Explanation Of Benefit"
 Description: "Abstract parent profile that includes constraints that are common to the four specific ExplanationOfBenefit (EOB) profiles defined in this Implementation Guide.
 All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
-* careTeam obeys EOB-careteam-qualification
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * ^abstract = true 
@@ -44,7 +43,6 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * careTeam 0..* MS 
 * careTeam.provider 1..1 MS
 * careTeam.provider only Reference(CARINBBOrganization or CARINBBPractitioner)
-* careTeam.qualification from $USCoreProviderSpecialty (required)
 * careTeam.responsible 0..1 MS 
 * careTeam.role 1..1 MS
 * supportingInfo 0..* MS
@@ -82,7 +80,6 @@ Invariant:  EOB-insurance-focal
 Description: "EOB.insurance:  at most one with focal = true"
 Expression: "insurance.select (focal = true).count() < 2"
 Severity:   #error
-
 
 Invariant: EOB-inst-careTeam-practitioner
 Description: "Institutional EOB:  Careteam roles refer to a practitioner"

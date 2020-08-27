@@ -52,14 +52,14 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication ^slicing.discriminator.path = "category"
 * item.adjudication contains
    adjudicationamounttype 0..* MS and
-   denialreason 0..1 MS and
+//    denialreason 0..1 MS and
    inoutnetwork 0..1 MS
 * item.adjudication[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
-* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
-* item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
-* item.adjudication[denialreason].reason from NCPDPRejectCode
-* item.adjudication[denialreason].reason 1..1
+// * item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
+// * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
+// * item.adjudication[denialreason].reason from NCPDPRejectCode
+// * item.adjudication[denialreason].reason 1..1
 * item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS

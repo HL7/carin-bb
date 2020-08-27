@@ -193,10 +193,10 @@ Title: "NCPDP Prescription Origin Code"
 Description: "National Council for Prescription Drug Programs, (NCPDP)  field # 419-DJ (Prescription Origin Code)."
 * codes from system NCPDPPrescriptionOriginCodeCS
 
-ValueSet: NCPDPRejectCode
-Title: "NCPDP Reject Code"
-Description: "NCPDP field # 511-FB (Reject Code) Code indicating the error encountered."
-* codes from system NCPDPRejectCodeCS 
+// ValueSet: NCPDPRejectCode
+// Title: "NCPDP Reject Code"
+// Description: "NCPDP field # 511-FB (Reject Code) Code indicating the error encountered."
+// * codes from system NCPDPRejectCodeCS 
 
 ValueSet: FDANDCNCPDPCompoundCode
 Title: "FDA NDC NCPDP Compound Code"

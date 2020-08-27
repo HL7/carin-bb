@@ -8,6 +8,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * careTeam.role from CARINBBInstitutionalClaimCareTeamRoleCodes (required)   // was PayerInstitutionalProviderRole
 * careTeam obeys EOB-inst-careTeam-practitioner
 * careTeam obeys EOB-inst-careTeam-organization
+* careTeam obeys EOB-careteam-qualification
+* careTeam.qualification from $USCoreProviderSpecialty (required)
 * diagnosis 1..*
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
@@ -20,9 +22,6 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
-   // attendingnetworkcontractingstatus 0..1 MS and
-   // referringnetworkcontractingstatus 0..1 MS and
-   // supervisingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
    typeofbill 0..1 MS and 
    pointoforigin 0..1 MS and 
@@ -32,20 +31,6 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
-// * supportingInfo[attendingnetworkcontractingstatus].category = ClaimInformationCategoryCS#attendingnetworkcontractingstatus
-// * supportingInfo[attendingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
-// * supportingInfo[attendingnetworkcontractingstatus].code 1..1 MS
-// * supportingInfo[attendingnetworkcontractingstatus] ^short = "Claim attending provider network status"
-// * supportingInfo[attendingnetworkcontractingstatus] ^definition = "Claim attending provider network status"
-// * supportingInfo[referringnetworkcontractingstatus].category = ClaimInformationCategoryCS#referringnetworkcontractingstatus
-// * supportingInfo[referringnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
-// * supportingInfo[referringnetworkcontractingstatus].code 1..1
-// * supportingInfo[referringnetworkcontractingstatus] ^short = "Claim attending provider network status"
-// * supportingInfo[supervisingnetworkcontractingstatus].category  = ClaimInformationCategoryCS#supervisingnetworkcontractingstatus
-// * supportingInfo[supervisingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
-// * supportingInfo[supervisingnetworkcontractingstatus].code 1..1 MS
-// * supportingInfo[supervisingnetworkcontractingstatus] ^short = "Claim supervising provider network status"
-// * supportingInfo[supervisingnetworkcontractingstatus] ^definition = "Claim supervising provider network status"
 * supportingInfo[clmrecvddate].category = ClaimInformationCategoryCS#clmrecvddate
 * supportingInfo[clmrecvddate] ^short = "Claim Received Date"
 * supportingInfo[clmrecvddate].timing[x] only date 
