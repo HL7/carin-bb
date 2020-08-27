@@ -120,12 +120,6 @@ Description: "UB-04 Present on Admission (FL-67)"
 * codes from system AHANUBCPresentOnAdmissionCS
 * insert AHANUBCCopyrightNotice
 
-ValueSet: AHANUBCPresentOnAdmission
-Title: "AHA NUBC Present On Admission"
-Description: "UB-04 Present on Admission (FL-67)"
-* codes from system AHANUBCPresentOnAdmissionCS
-* insert AHANUBCCopyrightNotice
-
 CodeSystem: AHANUBCRevenueCodesCS
 Title: "AHA NUBC Revenue Codes"
 Description: "UB-04 Revenue Code (FL-42)."
