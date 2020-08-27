@@ -67,9 +67,9 @@ The SMART App IG also provides guidance on how to handle authentication. If the 
 
 <h4>PDEX</h4>
 CMS Guidance defines two sets of data be made available by payers in the Patient Access API: Claims and Encounter Data and Clinical data. They provide links to specific implementations guides for the Patient Access API to provide guidance. Use of these implementation guides is not required, but if used these guides will provide information payers can use to meet the requirements of the policies being finalized.
-This IG defines how Claims and Encounter Data are to be provided; the DaVinci <a href="http://build.fhir.org/ig/HL7/davinci-epdx/">PDEX</a> (Payer Data Exchange) and <a href="http://hl7.org/fhir/us/core/STU3/index.html">US Core</a> Implementation Guides define how Clinical Data is to be provided.
+This IG defines how Claims and Encounter Data are to be provided; the DaVinci <a href="http://hl7.org/fhir/us/davinci-pdex/">PDEX</a> (Payer Data Exchange) and <a href="http://hl7.org/fhir/us/core/STU3/index.html">US Core</a> Implementation Guides define how Clinical Data is to be provided.
 <h4>RTPBC</h4>
-Using the <a href="http://build.fhir.org/ig/HL7/carin-rtpbc">RTPBC</a> (Real Time Pharmacy Benefit Check), a patient can learn the cost and insurance coverage related to medications they’ve been prescribed.  A person would typically use the RTPBC prior to the dispensing of the prescription and the filing of the claim.  CARIIN BB provides the capability to access how pharmacy (and medical) benefits have been applied by the payer as a result of a claim filed by the pharmacy.  
+Using the <a href="http://hl7.org/fhir/us/carin-rtpbc/">RTPBC</a> (Real Time Pharmacy Benefit Check), a patient can learn the cost and insurance coverage related to medications they’ve been prescribed.  A person would typically use the RTPBC prior to the dispensing of the prescription and the filing of the claim.  CARIIN BB provides the capability to access how pharmacy (and medical) benefits have been applied by the payer as a result of a claim filed by the pharmacy.  
 
 <h3>Guide Overview</h3>
 <h4>How to Read This Guide</h4>
@@ -83,4 +83,4 @@ The following actors are part of the CARIN BB IG:
  providing patient data. This can be thought of as the server in a client-server
  interaction.</li>
  </ul>
-<h4>Conformance Requirementse</h4>
+<h4 name="conformance">Conformance Requirements</h4>
