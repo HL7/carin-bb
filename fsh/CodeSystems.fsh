@@ -1,13 +1,12 @@
+// Contains Codesystems Defined WITHIN this IG
+// CodeSystemStubs.fsh contains stubs for external codesystems.
+
 CodeSystem: ClaimInformationCategoryCS
 Title: "Claim Information Category"
 Description: "Claim Information Category - Used as the discriminator for supportingInfo" 
 * #billingnetworkcontractingstatus	"billingnetworkcontractingstatus"       "Indicates the network  status of the billing physician."	
-//* #attendingnetworkcontractingstatus "attendingnetworkcontractingstatus"    "Indicates the network  status of the attending physician."	
-//* #sitenetworkcontractingstatus	"sitenetworkcontractingstatus"	            "Indicates the network  status of the site of service."	
-//* #referringnetworkcontractingstatus	"referringnetworkcontractingstatus"	"Indicates the network  status of the referring physician."	
 * #performingnetworkcontractingstatus	"performingnetworkcontractingstatus" "Indicates the network  status of the performing physician."		
 * #prescribingnetworkcontractingstatus	"prescribingnetworkcontractingstatus"	"Indicates the network  status of the prescribing physician."	
-//* #supervisingnetworkcontractingstatus	"supervisingingnetworkcontractingstatus"	"Indicates the network  status of the supervising physician."	
 * #clmrecvddate	"clmrecvddate"	                                            "The date the claim was received by the payer."	
 * #typeofservice	"typeofservice"	                                        "High level classification of services into logical grouping."	
 * #tob-typeoffacility	"tob-typeoffacility"	                            "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of facility."	
@@ -26,6 +25,7 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #typeofbill "Type of Bill"                                                "Type of Bill"
 * #admissionperiod  "Admission Period"                                     "Admission Period"
 * #servicefacility  "Service Facility"                                     "Service Facility"
+
 CodeSystem: PayerAdjudicationCategoryCS
 Title: "Payer Adjudication Category"
 Description: "Payer Adjudication Category"
