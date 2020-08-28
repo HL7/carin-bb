@@ -55,7 +55,7 @@ menu:
     Notes To Developers: Notes_To_Developers.html
   FHIR Artifacts:
     Profiles: artifacts.html#3
-    Search Parameters: search.html
+    Search Parameters: artifacts.html#2
     Terminology: Terminology.html 
     Capability Statement: CapabilityStatement-carin-bb.html
   Security:
