@@ -53,7 +53,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from ICD10CM (required)
-* item.modifier from AMACPTCMSHCPCSProcedureModifiers (required)
+* item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.locationCodeableConcept from CMSPlaceOfService (required)
 * item.adjudication ^slicing.rules = #closed 

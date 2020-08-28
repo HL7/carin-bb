@@ -211,22 +211,24 @@ Description: "American Medical Association (AMA) Current Procedural Codes (CPT) 
 * insert AMACopyrightNotice
 
 ValueSet: AMACPTCMSHCPCSProcedureCodes
-Title: "AMA CPT and CMS HCPCS Procedure Codes"
-Description: "AMA CPT and CMS HCPCS Procedure Codes. The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed.
-AMA CPT CMS HCPCS Procedure Codes leverage US Core Procedure Codes composition.CPT codes are available by subscription from the AMA at http://www.ama-assn.org/go/cpt.  HCPCS codes are available at https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html. 
-The link takes one to a list of files. The HCPCS ANWEB files include modifier and procedure codes. The target set for this Code System is the procedure codes from this file. The code set is owned by CMS and is available for use."
+Title: "AMA CPT CMS HCPCS Procedure Codes"
+Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific 
+procedure performed. AMA CPT CMS HCPCS Procedure Codes leverage US Core Procedure Codes composition. CPT codes are available by subscription from the AMA at http://www.ama-assn.org/go/cpt. 
+HCPCS codes are available at https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html. 
+The link takes one to a list of files. The HCPCS ANWEB files include modifier and procedure codes. The target set for this Code System is the procedure codes from this file."
 * codes from system AMACPTCS
 * codes from system HCPCSProcedureCodesCS
-* insert AMACopyrightNotice
+* ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved. The HCPCS II codes are owned by CMS and are available for use. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
-ValueSet:  AMACPTCMSHCPCSProcedureModifiers
-Description: "AMA CPT and CMS HCPCS Modifier Codes. The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure code modifiers. Modifiers help further describe a procedure code without changing its definition. 
-CPT modifiers are available by subscription from the AMA at http://www.ama-assn.org/go/cpt. HCPCS modifiers are available at https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html. The link takes one to a list of files. The HCPCS ANWEB files include modifier and procedure codes. 
-The target set for this Code System is the procedure code modifiers from this file. The code set is owned by CMS and is available for use."
-Title: "AMA CPT and CMS HCPCS Modifier Codes"
+ValueSet:  AMACPTCMSHCPCSModifiers
+Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure code modifiers. 
+Modifiers help further describe a procedure code without changing its definition. CPT codes are available by subscription from the AMA at http://www.ama-assn.org/go/cpt. 
+HCPCS codes are available at https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS.html. 
+The link takes one to a list of files. The HCPCS ANWEB files include modifier and procedure codes. The target set for this Code System is the procedure code modifiers from this file."
+Title: "AMA CPT CMS HCPCS Modifiers"
 * codes from system AMACPTModifiersCS 
 * codes from system HCPCSModifiersCS
-* ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved."
+* ^copyright = "CCPT copyright 2014 American Medical Association. All rights reserved. The HCPCS II codes are owned by CMS and are available for use. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
 CodeSystem: HCPCSProcedureCodesCS
 Title: "HCPCS Procedure Codes"
@@ -290,10 +292,14 @@ Description: "Denial Reasons - Reason codes used to interpret the adjudication d
 
 ValueSet: X12CARCCMSRARC
 Title: " X12 Claim Adjustment Reason Codes (CARC) and CMS Remittance Advice Remark Codes (RARC)"
-Description: "Reason codes used to interpret the adjudication denial reason.  RARC codes are available at http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes."
+Description: "The Value Set is a combination of two sets of codes: X12 Claim Adjustment Reason Codes (CARC) and CMS Remittance Advice Remark Codes (RARC). 
+CARC codes describe why a claim or service line was paid differently than it was billed. RARC codes provide additional explanation for an adjustment already described by a 
+Claim Adjustment Reason Code (CARC) or convey information about remittance processing. CARC codes are owned, maintained and distributed by X12. 
+RARC codes are available at http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes."
 * codes from system X12CARCCS 
 * codes from system CMSRARCCS 
-* ^copyright = "CARC codes are owned, maintained and distributed by X12. Use of X12 codes require licenses. RARC codes are owned by CMS and are available for use."
+* ^copyright = "CARC codes are owned, maintained and distributed by X12. Use of X12 codes require licenses. RARC codes are owned by CMS and are available for useUse of X12 CARC codes require a license. Reference https://x12.org/codes/. 
+RARC codes are owned by CMS and are available for use. As HL7 is working with the owning authority to finalize the url, this url is subject to chang."
 
 
 

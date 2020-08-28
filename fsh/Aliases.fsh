@@ -54,7 +54,7 @@ Alias: $AHANUBCRevenueCodeOID = urn:oid:2.16.840.1.113883.13.18
 Alias: $AHANUBCPatientDischargeStatusOID = urn:oid:2.16.840.1.113883.6.301.5
 Alias: $AHANUBCPresentOnAdmissionOID  = urn:oid:2.16.840.1.113883.6.301.11
 
-Alias: $X12CARCCS = http://www.x12.org/codes/claim-adjustment-reason-codes
-Alias: $CMSRARCCS = http://www.wpc-edi.com/remittance-advice-remark
+Alias: $X12CARCCS = https://www.x12.org/carc
+Alias: $CMSRARCCS = https://www.cms.gov/rarc
 
 

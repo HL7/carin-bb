@@ -19,7 +19,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * diagnosis.onAdmission from AHANUBCPresentOnAdmission (required)
 * procedure.procedure[x] only CodeableConcept 
 * procedure.procedure[x] 1..1 MS
-* procedure.procedureCodeableConcept from ICD10PCS (required) 
+* procedure.procedure[x] from ICD10PCS (required) 
 * provider 1..1
 * provider only Reference(CARINBBOrganization)
 * supportingInfo ^slicing.rules = #open
@@ -65,7 +65,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[drg].code from CMSDRG  (required)
 * supportingInfo[drg] ^short = "Claim diagnosis related group (DRG)"
 * item.revenue from AHANUBCRevenueCodes (required)
-* item.modifier from AMACPTCMSHCPCSProcedureModifiers (required)
+* item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
@@ -132,6 +132,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * diagnosis.onAdmission ^short = "Used to capture whether a diagnosis was present at time of a patient's admission. This is used to group diagnoses into the proper DRG for all claims involving inpatient admissions to general acute care facilities."
 * diagnosis.onAdmission MS
 * diagnosis ^short = "This is the reason given by the patient for visiting the doctor or practitioner. It is not the doctor's or practitioner's diagnosis. Patient Reason for Visit Codes can be any ICD-10diagnosis and may or may not be a repeat of an ICD-10 Principal or Secondary diagnosis field."
+* diagnosis.type ^short =  "Description of this field"
 * supportingInfo[drg].code ^short = "Version of the AP-DRG codes assigned for inpatient facility claims."
 * supportingInfo[drg].code ^short = "DRG codes assigned"
 * identifier ^short = "Identifier assigned by a payer for a claim received from a provider or subscriber. It is not the same identifier as that assigned by a provider. This unique identifier assigned by the payer becomes the payer's EOB identifier."

@@ -48,7 +48,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 * item.revenue from AHANUBCRevenueCodes (required)
-* item.modifier from AMACPTCMSHCPCSProcedureModifiers (required)
+* item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.productOrService ^short = "Put the short definition here for item.productOrService here"
 * item.productOrService ^comment = "Put the comment here for item.productOrService here"
