@@ -13,13 +13,14 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on $value pattern"
+* supportingInfo MS 
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    brandgenericcode 0..1 MS and
    rxoriginCode 0..1 MS and
    refillNum 0..1 MS and
    dawcode 0..1 MS and
-   clmrecvddate 0..1 MS and
+   claimrecvddate 0..1 MS and
    dayssupply 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
@@ -36,8 +37,8 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[dawcode].category = ClaimInformationCategoryCS#dawcode       
 * supportingInfo[dawcode] ^short = "Dispense As Written product selection code" 
 * supportingInfo[dawcode].code from NCPDPDispensedAsWritten (required)
-* supportingInfo[clmrecvddate].category = ClaimInformationCategoryCS#clmrecvddate
-* supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88)"
+* supportingInfo[claimrecvddate].category = ClaimInformationCategoryCS#claimrecvddate
+* supportingInfo[claimrecvddate] ^short = "The date the claim was received by the payer (88)"
 * supportingInfo[dayssupply].category = ClaimInformationCategoryCS#dayssupply
 * supportingInfo[dayssupply] ^short = "Number of days supply of medication dispensed by the pharmacy (77)"
 * item.productOrService from FDANDCNCPDPCompoundCode (required)

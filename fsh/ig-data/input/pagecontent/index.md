@@ -15,16 +15,16 @@
 <ul>
 <li>Interim Version 0.4.2 - August 28, 2020</li>
 <ol>
-<li>Update to EOBComparisonv17 from Pat, still in draft form</li>
+<li>Update to <a href="CARINBBResourcesv17.png">EOBComparisonv17</a> from Pat, still in draft form.</li>
 <li>Created Codesystem stubs for all key external codesystems referenced by IG, along with corresponding ValueSets</li>
-<li>Further corrections to capability statement based on Igor comments.   supported_profiles vs profiles  still deferred.</li>
-<li>Resolved all but a handful of  remaining comments relating to BV1, BV2, BV2a, BV4, BV6</li>
+<li>Further corrections to capability statement based on Igor comments. supported_profiles vs profiles still deferred.</li>
+<li>Resolved all but a handful of remaining comments relating to BV1, BV2, BV2a, BV4, BV6</li>
 </ol>
 <li>Interim Version 0.4.1 - August 13, 2020</li>
 <ol>
 <li>Update to EOBComparisonv13 from Pat</li>
 <li>Imported comments and MS from CPCDS spreadsheet</li>
-<li>Further corrections to capability statement based on Igor comments.   supported_profiles vs profiles deferred.</li>
+<li>Further corrections to capability statement based on Igor comments. supported_profiles vs profiles deferred.</li>
 </ol>
 <li>Interim Version 0.4. - August 5, 2020</li>
 <ol>

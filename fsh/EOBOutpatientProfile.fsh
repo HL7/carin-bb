@@ -22,7 +22,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
-   clmrecvddate 0..1 MS and
+   claimrecvddate 0..1 MS and
    typeofbill 0..1 MS and 
    pointoforigin 0..1 MS and 
    admtype 0..1 MS and 
@@ -31,10 +31,10 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
-* supportingInfo[clmrecvddate].category = ClaimInformationCategoryCS#clmrecvddate
-* supportingInfo[clmrecvddate] ^short = "Claim Received Date"
-* supportingInfo[clmrecvddate].timing[x] only date 
-* supportingInfo[clmrecvddate].timing[x] 1..1
+* supportingInfo[claimrecvddate].category = ClaimInformationCategoryCS#claimrecvddate
+* supportingInfo[claimrecvddate] ^short = "Claim Received Date"
+* supportingInfo[claimrecvddate].timing[x] only date 
+* supportingInfo[claimrecvddate].timing[x] 1..1
 * supportingInfo[typeofbill].category = ClaimInformationCategoryCS#typeofbill
 * supportingInfo[typeofbill] ^short = "Type of Bill"
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)

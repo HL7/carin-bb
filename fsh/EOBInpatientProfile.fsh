@@ -27,9 +27,10 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo ^slicing.description = "Slice based on value pattern"
 * supportingInfo ^slicing.discriminator.type = #pattern
 * supportingInfo ^slicing.discriminator.path = "category"
+* supportingInfo MS 
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
-    clmrecvddate 0..1 MS and
+    claimrecvddate 0..1 MS and
     typeofbill 0..1 MS and 
    pointoforigin 0..1 MS and 
    admtype 0..1 MS and 
@@ -39,7 +40,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[pointoforigin] ^short = "Identifies the place where the patient was identified as needing admission to a facility. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13)"
 * supportingInfo[admtype] ^short = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14)"
 * supportingInfo[typeofbill] ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of facility, the second digit classifies the type of care being billed, and the third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (17)"
-* supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88)"
+* supportingInfo[claimrecvddate] ^short = "The date the claim was received by the payer (88)"
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * supportingInfo[admissionperiod] ^short = "Admission Period"
 * supportingInfo[drg] ^short = "DRG codes assigned (33)"
@@ -48,9 +49,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[admissionperiod].category = ClaimInformationCategoryCS#admissionperiod  
 * supportingInfo[admissionperiod].timingPeriod 1..1 MS
-* supportingInfo[clmrecvddate].category  = ClaimInformationCategoryCS#clmrecvddate
-* supportingInfo[clmrecvddate].timing[x] only date 
-* supportingInfo[clmrecvddate].timing[x] 1..1 MS
+* supportingInfo[claimrecvddate].category  = ClaimInformationCategoryCS#claimrecvddate
+* supportingInfo[claimrecvddate].timing[x] only date 
+* supportingInfo[claimrecvddate].timing[x] 1..1 MS
 * supportingInfo[typeofbill].category  = ClaimInformationCategoryCS#typeofbill
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
 * supportingInfo[pointoforigin].category  = ClaimInformationCategoryCS#admsrc
@@ -147,7 +148,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * item.quantity MS
 * item.revenue ^short = "Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed"
 * item.revenue MS
-* supportingInfo[clmrecvddate].timingDate ^short = "The date the claim was received by the payer"
+* supportingInfo[claimrecvddate].timingDate ^short = "The date the claim was received by the payer"
 * payment.type ^short = "Indicates whether the claim was paid or denied."
 * payment.type MS
 * adjudication[denialreason].reason ^short = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider"

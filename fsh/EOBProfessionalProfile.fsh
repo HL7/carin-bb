@@ -15,34 +15,26 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on $this pattern"
+* supportingInfo MS 
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
-   // referringnetworkcontractingstatus 0..1 MS and
    performingnetworkcontractingstatus 0..1 MS and
-   // sitenetworkcontractingstatus 0..1 MS and
-   clmrecvddate 0..1 MS and
+   claimrecvddate 0..1 MS and
    servicefacility 0..1 MS 
-* supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88)"
+* supportingInfo[claimrecvddate] ^short = "The date the claim was received by the payer (88)"
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
 * supportingInfo[performingnetworkcontractingstatus] ^short = "Indicates that the Performing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
 * supportingInfo[servicefacility] ^short = "Service Facility"
-// * supportingInfo[referringnetworkcontractingstatus] ^short = "Indicates the network status of the referring physician (101)"
-// * supportingInfo[sitenetworkcontractingstatus] ^short = "Indicates the network status of the site of service (101)"
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 
 * supportingInfo[billingnetworkcontractingstatus].category.coding 1..1
-// * supportingInfo[referringnetworkcontractingstatus].category = ClaimInformationCategoryCS#referringnetworkcontractingstatus
-// * supportingInfo[referringnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
-// * supportingInfo[referringnetworkcontractingstatus].code 1..1
 * supportingInfo[performingnetworkcontractingstatus].category = ClaimInformationCategoryCS#performingnetworkcontractingstatus
 * supportingInfo[performingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
 * supportingInfo[performingnetworkcontractingstatus].code 1..1
-// * supportingInfo[sitenetworkcontractingstatus].category = ClaimInformationCategoryCS#sitenetworkcontractingstatus
-// * supportingInfo[sitenetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
-* supportingInfo[clmrecvddate].category = ClaimInformationCategoryCS#clmrecvddate
-* supportingInfo[clmrecvddate].timing[x] only date 
-* supportingInfo[clmrecvddate].timing[x] 1..1
+* supportingInfo[claimrecvddate].category = ClaimInformationCategoryCS#claimrecvddate
+* supportingInfo[claimrecvddate].timing[x] only date 
+* supportingInfo[claimrecvddate].timing[x] 1..1
 * supportingInfo[servicefacility].category = ClaimInformationCategoryCS#servicefacility
 * supportingInfo[servicefacility].valueReference 1..1 MS 
 * supportingInfo[servicefacility].valueReference only Reference(Organization)
@@ -93,23 +85,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * insurance.coverage ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
 * insurance ^short = "Code of the primary payer responsible for the claim (2)"
 * type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).  (16)"
-// * item.adjudication ^short = "Amount submitted by the provider for reimbursement of health care services. This amount includes non-covered services. (20)"
-// * item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary. (20)"
-// * item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. (20)"
-// * item.adjudication ^short = "The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%.  (20)"
-// * item.adjudication ^short = "Amount an insured individual pays directly to a provider at the time the services or supplies are rendered. Usually, a copay will be a fixed amount per service, such as $15.00 per office visit. (20)"
-// * item.adjudication ^short = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract. (20)"
-// * item.adjudication ^short = "The reduction in the payment amount to reflect the carrier as a secondary payor. (20)"
-// * item.adjudication ^short = "The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments. (20)"
-// * item.adjudication ^short = "The amount paid by the member at the point of service. (20)"
-// * item.adjudication ^short = "The amount of the discount (20)"
-// * item.adjudication ^short = "The amount paid to the provider. (20)"
-// * item.adjudication ^short = "The amount paid to the member. (20)"
-// * item.adjudication ^short = "The amount of the member's liability. (20)"
 * diagnosis ^short = "The member's principal condition treated on the claim (837P Data Element HI01 or CMS 1500 Item 21A). Decimals will be included.  (22)"
-// * diagnosis ^short = "The member's principal condition treated during this service. This may or may not be different from the admitting diagnosis. Decimals will be included.  (22)"
-// * diagnosis ^short = "Additional diagnosis identified for this member (837P Data Element HI02 or CMS 1500 Item 21B). Decimals will be included. (23)"
-// * diagnosis ^short = "Additional diagnosis identified for this member. Decimals will be included.  (23)"
 * diagnosis.diagnosis[x] ^short = "A plain text representation of the diagnosis (145)"
 * identifier ^short = "Claim identifier for a claim. (35)"
 * item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36)"
@@ -125,10 +101,6 @@ The claims data is based on the professional claim form 1500, submission standar
 * facility ^short = "The NPI of the facility where the services were rendered. (97)"
 * careTeam.provider ^short = "The NPI of the referring physician. (99)"
 * payment.date ^short = "The date the claim was paid. (107)"
-// * patient ^short = "Provider submitted information that can be included on the claim (109)"
-// * patient ^short = "Provider submitted information that can be included on the claim (110)"
-// * related ^short = "Prior claim number (111)"
-// * related ^short = "Replaced or Merged claim number (112)"
 * item.servicedPeriod ^short = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
 * payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber  (120)"
 * payee.party ^short = "Recipient reference (121)"
