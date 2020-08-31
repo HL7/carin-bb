@@ -109,8 +109,8 @@ RuleSet: AHANUBCCopyrightNotice
 No other publication—governmental or private/commercial—can be considered authoritative. See their website for licensing terms and conditions.\nAs HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
 CodeSystem: AHANUBCPatientDischargeStatusCS
-Description: "UB-04 Patient Discharge Status (FL-17)"
 Title: "AHA NUBC Discharge Status"
+Description: "UB-04 Patient Discharge Status (FL-17)"
 * ^url = $AHANUBCPatientDischargeStatusOID
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
@@ -136,14 +136,14 @@ Description: "UB-04 Present on Admission (FL-67)"
 
 CodeSystem: AHANUBCRevenueCodesCS
 Title: "AHA NUBC Revenue Codes"
-Description: "UB-04 Revenue Code (FL-42)."
+Description: "NUBC Revenue codes are used to convey specific accomodation, ancillary service or unique billing calculations or arrangements. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)"
 * ^url = $AHANUBCRevenueCodeOID
 * ^version = "0.1.0"
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
 
 ValueSet: AHANUBCRevenueCodes
-Title: "UB-04 Revenue Code (FL-42)."
+Title: "AHA NUBC Revenue Codes"
 Description: "NUBC Revenue codes are used to convey specific accomodation, ancillary service or unique billing calculations or arrangements. They are listed within the UB-04 Data Specifications Manual and maintained by the National Uniform Billing Committee (NUBC)"
 //* codes from system NUBCRevenueCodeCS
 * codes from system AHANUBCRevenueCodesCS
@@ -157,7 +157,7 @@ Description: "AHA NUBC Type of Bill codes."
 * insert AHANUBCCopyrightNotice
 
 ValueSet: AHANUBCTypeOfBill
-Title: "UB-04 Type of Bill (FL-4)"
+Title: "AHA NUBC Type of Bill"
 Description: "AHA NUBC Type of Bill codes."
 * codes from system AHANUBCTypeOfBillCS
 * insert AHANUBCCopyrightNotice
@@ -170,8 +170,8 @@ Description: "UB-04 Point of Origin for Admission or Visit (FL-15)"
 * insert AHANUBCCopyrightNotice
 
 ValueSet: AHANUBCPointOfOriginForAdmissionOrVisit
-Title: "UB-04 Point of Origin for Admission or Visit (FL-15)"
-Description: "NUBC Point of Origin for Admission or Visit."
+Title: "AHA NUBC Point of Origin for Admission or Visit."
+Description: "UB-04 Point of Origin for Admission or Visit (FL-15)"
 * codes from system AHANUBCPointOfOriginForAdmissionOrVisitCS
 * insert AHANUBCCopyrightNotice
 
@@ -187,16 +187,6 @@ Title: "AHA NUBC Priority Type Of Admission Or Visit"
 Description: "AHA NUBC Priority Type Of Admission Or Visit"
 * codes from system $AHANUBCPriorityOfAdmissionOrVisitCS
 * insert AHANUBCCopyrightNotice
-
-
-
-
-
-
-
-
-
-
 
 
 
