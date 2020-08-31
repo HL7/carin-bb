@@ -21,10 +21,11 @@ The claims data is based on submission standards adopted by the Department of He
    refillNum 0..1 MS and
    dawcode 0..1 MS and
    claimrecvddate 0..1 MS and
-   dayssupply 0..1 MS 
+   dayssupply 0..1 MS and
+   compoundcode 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
-* supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus (required) 
+* supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus (required) 
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
 * supportingInfo[brandgenericcode].category = ClaimInformationCategoryCS#brandgenericcode   
 * supportingInfo[brandgenericcode] ^short = "Whether the plan adjudicated the claim as a brand or generic drug (144)"
@@ -41,27 +42,22 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[claimrecvddate] ^short = "The date the claim was received by the payer (88)"
 * supportingInfo[dayssupply].category = ClaimInformationCategoryCS#dayssupply
 * supportingInfo[dayssupply] ^short = "Number of days supply of medication dispensed by the pharmacy (77)"
-* item.productOrService from FDANDCNCPDPCompoundCode (required)
-* item.detail.productOrService  from FDANationalDrugCode (required)
+* supportingInfo[compoundcode].category = ClaimInformationCategoryCS#compoundcode
+* supportingInfo[compoundcode] ^short = "NCPDP Compound code"
+* supportingInfo[compoundcode].code from NCPDPCompoundCode (required)
+* item.productOrService from FDANDCOrCompound (required)
+* item.detail.productOrService  from FDANDC  (required)
 * item.detail MS
 * item.detail.quantity MS 
-* careTeam.role from CARINBBPharmacyClaimCareTeamRoleCodes (required)   // was PayerPharmacyProviderRole
+* careTeam.role from C4BBClaimPharmacyTeamRole  (required)   // was PayerPharmacyProviderRole
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on $this pattern"
 * item.adjudication ^slicing.discriminator.type = #pattern
 * item.adjudication ^slicing.discriminator.path = "category"
 * item.adjudication contains
-   adjudicationamounttype 0..* MS and
-//    denialreason 0..1 MS and
-   inoutnetwork 0..1 MS
-* item.adjudication[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* item.adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
-// * item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
-// * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
-// * item.adjudication[denialreason].reason from NCPDPRejectCode
-// * item.adjudication[denialreason].reason 1..1
-* item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes
+   adjudicationamounttype 0..* MS 
+* item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
 * total ^slicing.rules = #open 
@@ -74,8 +70,8 @@ The claims data is based on submission standards adopted by the Department of He
    adjudicationamounttype 0..* MS and 
    inoutnetwork 1..1 MS 
 * total[inoutnetwork] ^short = "Benefit Payment Status"
-* total[inoutnetwork].category from BenefitPaymentStatus (required)
-* total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
+* total[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
+* total[adjudicationamounttype].category from C4BBAdjudication  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
 //* total[adjudicationamounttype].amount 1..1
 * patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"

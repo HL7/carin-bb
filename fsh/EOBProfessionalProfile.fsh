@@ -26,11 +26,11 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[performingnetworkcontractingstatus] ^short = "Indicates that the Performing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
 * supportingInfo[servicefacility] ^short = "Service Facility"
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
-* supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
+* supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 
 * supportingInfo[billingnetworkcontractingstatus].category.coding 1..1
 * supportingInfo[performingnetworkcontractingstatus].category = ClaimInformationCategoryCS#performingnetworkcontractingstatus
-* supportingInfo[performingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
+* supportingInfo[performingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[performingnetworkcontractingstatus].code 1..1
 * supportingInfo[claimrecvddate].category = ClaimInformationCategoryCS#claimrecvddate
 * supportingInfo[claimrecvddate].timing[x] only date 
@@ -38,10 +38,10 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[servicefacility].category = ClaimInformationCategoryCS#servicefacility
 * supportingInfo[servicefacility].valueReference 1..1 MS 
 * supportingInfo[servicefacility].valueReference only Reference(Organization)
-* careTeam.role from CARINBBProfessionalAndNonclinicanClaimCareTeamRoleCodes  (required)  // was PayerProfessionalAndNonClinicianProviderRole
+* careTeam.role from C4BBClaimProfessionalAndNonClinicianCareTeamRole   (required)  // was PayerProfessionalAndNonClinicianProviderRole
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
-* diagnosis.type from PayerProfessionalandnoncliniciandiagnosistype (required)
+* diagnosis.type from C4BBClaimProfessionalAndNonClinicianDiagnosisType  (required)
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from ICD10CM (required)
@@ -65,11 +65,11 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[denialreason].reason from X12CARCCMSRARC
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
-* item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes 
+* item.adjudication[adjudicationamounttype].category from C4BBAdjudication 
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* item.adjudication[inoutnetwork].category from BenefitPaymentStatus (required)
+* item.adjudication[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
 * total ^slicing.rules = #open
 * total ^slicing.ordered = false   // can be omitted, since false is the default
 * total ^slicing.description = "Slice based on value pattern"
@@ -78,7 +78,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * total.category 1..1 MS 
 * total contains
    adjudicationamounttype 0..* MS 
-* total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
+* total[adjudicationamounttype].category from C4BBAdjudication  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
 //* total[adjudicationamounttype].amount 1..1
 * patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"

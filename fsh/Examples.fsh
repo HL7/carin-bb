@@ -99,11 +99,11 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = PayerDiagnosisTypeCS#principal
+* diagnosis[0].type = C4BBClaimDiagnosisType#principal
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
-* total[adjudicationamounttype][0].category = PayerAdjudicationCategoryCS#paidtoprovider
+* total[adjudicationamounttype][0].category = C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
 * total[adjudicationamounttype][0].amount.value = 620.00
 * total[adjudicationamounttype][0].amount.currency = #USD
@@ -111,14 +111,14 @@ Usage: #example
 * total[adjudicationamounttype][1].category.text = "Submitted Amount"
 * total[adjudicationamounttype][1].amount.value = 2650.00
 * total[adjudicationamounttype][1].amount.currency = #USD
-* total[adjudicationamounttype][2].category = PayerAdjudicationCategoryCS#paidbypatient
+* total[adjudicationamounttype][2].category = C4BBAdjudicationCS#paidbypatient
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[inoutnetwork].category = PayerAdjudicationCategoryCS#innetwork 
+* total[inoutnetwork].category = C4BBAdjudicationCS#innetwork 
 * total[inoutnetwork].amount.value = 0.00
 * total[inoutnetwork].amount.currency = #USD
-//* adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#innetwork 
+//* adjudication[inoutnetwork].category = C4BBAdjudicationCS#innetwork 
 
 
 Instance: EOBOutpatientFacility1
@@ -146,11 +146,11 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = PayerDiagnosisTypeCS#principal
+* diagnosis[0].type = C4BBClaimDiagnosisType#principal
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
-* total[adjudicationamounttype][0].category = PayerAdjudicationCategoryCS#paidtoprovider
+* total[adjudicationamounttype][0].category = C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
 * total[adjudicationamounttype][0].amount.value = 620.00
 * total[adjudicationamounttype][0].amount.currency = #USD
@@ -158,14 +158,14 @@ Usage: #example
 * total[adjudicationamounttype][1].category.text = "Submitted Amount"
 * total[adjudicationamounttype][1].amount.value = 2650.00
 * total[adjudicationamounttype][1].amount.currency = #USD
-* total[adjudicationamounttype][2].category = PayerAdjudicationCategoryCS#paidbypatient
+* total[adjudicationamounttype][2].category = C4BBAdjudicationCS#paidbypatient
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[inoutnetwork].category = PayerAdjudicationCategoryCS#innetwork
+* total[inoutnetwork].category = C4BBAdjudicationCS#innetwork
 * total[inoutnetwork].amount.value = 0.00
 * total[inoutnetwork].amount.currency = #USD
-//* adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#other
+//* adjudication[inoutnetwork].category = C4BBAdjudicationCS#other
 
 Instance: EOBProfessional1
 InstanceOf: CARINBBExplanationOfBenefitProfessionalNonClinician 
@@ -192,11 +192,11 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = PayerDiagnosisTypeCS#principal
+* diagnosis[0].type = C4BBClaimDiagnosisType#principal
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
-* total[adjudicationamounttype][0].category = PayerAdjudicationCategoryCS#paidtoprovider
+* total[adjudicationamounttype][0].category = C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
 * total[adjudicationamounttype][0].amount.value = 620.00
 * total[adjudicationamounttype][0].amount.currency = #USD
@@ -204,7 +204,7 @@ Usage: #example
 * total[adjudicationamounttype][1].category.text = "Submitted Amount"
 * total[adjudicationamounttype][1].amount.value = 2650.00
 * total[adjudicationamounttype][1].amount.currency = #USD
-* total[adjudicationamounttype][2].category = PayerAdjudicationCategoryCS#paidbypatient
+* total[adjudicationamounttype][2].category = C4BBAdjudicationCS#paidbypatient
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
@@ -235,11 +235,11 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = PayerDiagnosisTypeCS#principal
+* diagnosis[0].type = C4BBClaimDiagnosisType#principal
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
-* total[adjudicationamounttype][0].category = PayerAdjudicationCategoryCS#paidtoprovider
+* total[adjudicationamounttype][0].category = C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
 * total[adjudicationamounttype][0].amount.value = 620.00
 * total[adjudicationamounttype][0].amount.currency = #USD
@@ -247,14 +247,14 @@ Usage: #example
 * total[adjudicationamounttype][1].category.text = "Submitted Amount"
 * total[adjudicationamounttype][1].amount.value = 2650.00
 * total[adjudicationamounttype][1].amount.currency = #USD
-* total[adjudicationamounttype][2].category = PayerAdjudicationCategoryCS#paidbypatient
+* total[adjudicationamounttype][2].category = C4BBAdjudicationCS#paidbypatient
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[inoutnetwork].category = PayerAdjudicationCategoryCS#innetwork 
+* total[inoutnetwork].category = C4BBAdjudicationCS#innetwork 
 * total[inoutnetwork].amount.value = 0.00
 * total[inoutnetwork].amount.currency = #USD
-//* adjudication[inoutnetwork].category = PayerAdjudicationCategoryCS#other
+//* adjudication[inoutnetwork].category = C4BBAdjudicationCS#other
 * item[0].productOrService = $FDANationalDrugCodeCS#0777-3105-02 "100-count bottle of Prozac 20 mg"
 * item[0].sequence = 1 
 * item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
@@ -263,13 +263,13 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit 
 * item[0].adjudication[adjudicationamounttype][1].amount.value = 20.00
 * item[0].adjudication[adjudicationamounttype][1].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][2].category = PayerAdjudicationCategoryCS#discount
+* item[0].adjudication[adjudicationamounttype][2].category = C4BBAdjudicationCS#discount
 * item[0].adjudication[adjudicationamounttype][2].amount.value = 900.00
 * item[0].adjudication[adjudicationamounttype][2].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][3].category = PayerAdjudicationCategoryCS#memberliability
+* item[0].adjudication[adjudicationamounttype][3].category = C4BBAdjudicationCS#memberliability
 * item[0].adjudication[adjudicationamounttype][3].amount.value = 80.00
 * item[0].adjudication[adjudicationamounttype][3].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][4].category = PayerAdjudicationCategoryCS#paidtoprovider
+* item[0].adjudication[adjudicationamounttype][4].category = C4BBAdjudicationCS#paidtoprovider
 * item[0].adjudication[adjudicationamounttype][4].amount.value = 20.00
 * item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD
 

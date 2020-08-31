@@ -104,10 +104,10 @@ Description: "BBEoB from Jeff"
 // * item[0].adjudication[3].category.coding[0].display = "Line Allowed Charge Amount"
 // * item[0].adjudication[3].amount.value = 106.39
 // * item[0].adjudication[3].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][0].category = PayerAdjudicationCategoryCS#coinsurance "Beneficiary Coinsurance Amount"
+* item[0].adjudication[adjudicationamounttype][0].category = C4BBAdjudicationCS#coinsurance "Beneficiary Coinsurance Amount"
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 81.86
 * item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][1].category = PayerAdjudicationCategoryCS#paidtoprovider "Paid to provider"  
+* item[0].adjudication[adjudicationamounttype][1].category = C4BBAdjudicationCS#paidtoprovider "Paid to provider"  
 * item[0].adjudication[adjudicationamounttype][1].amount.value = 0.0
 * item[0].adjudication[adjudicationamounttype][1].amount.currency = #USD
 * item[0].adjudication[adjudicationamounttype][2].category = $HL7AdjudicationCS#submitted  "Submitted"
@@ -129,7 +129,7 @@ Description: "BBEoB from Jeff"
 * payment.amount.value = 0
 * payment.amount.currency = #USD
 // Added since these were missing and required from original example
-* total[inoutnetwork].category = PayerAdjudicationCategoryCS#innetwork 
+* total[inoutnetwork].category = C4BBAdjudicationCS#innetwork 
 * total[inoutnetwork].amount.value = 0.00
 * total[inoutnetwork].amount.currency = #USD
 * total[adjudicationamounttype][0].category =  $HL7AdjudicationCS#submitted
@@ -140,10 +140,10 @@ Description: "BBEoB from Jeff"
 * insurance[0].coverage[0] = Reference(Coverage1)
 * outcome = #complete 
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = PayerDiagnosisTypeCS#principal
+* diagnosis[0].type = C4BBClaimDiagnosisType#principal
 * diagnosis[0].sequence = 1 
 // added as embellishments
 //* supportingInfo[0].sequence = 1
 * supportingInfo[0].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus
-* supportingInfo[0].code = PayerAdjudicationCategoryCS#contracted 
+* supportingInfo[0].code = C4BBAdjudicationCS#contracted 
 * supportingInfo[0].sequence = 1

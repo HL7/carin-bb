@@ -9,17 +9,6 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * ^abstract = true 
 * identifier 1..* 
 * identifier.type 1..1 MS
-// Dropped in EOBComparsionv13 8/13/2020
-// * identifier ^slicing.discriminator.path = "$this"
-// * identifier ^slicing.rules = #open
-// * identifier ^slicing.discriminator.type = #pattern 
-// * identifier ^slicing.ordered = false   // cannot be omitted, since false is the default
-// * identifier ^slicing.description = "Slice based on $this pattern"
-// * identifier contains 
-//    claimnumber 1..1 MS
-// * identifier[claimnumber].value 1..1 MS
-// * identifier[claimnumber] ^patternIdentifier.type = $IdentifierTypeCS#cn 
-// * identifier[claimnumber] ^short = "Claim Number"
 * type 1..1 MS
 * type from $HL7ClaimType (required)
 //   * claim MS   - igor sez we discussed removing MS
@@ -59,22 +48,66 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * insurance.focal 1..1  MS
 * insurance obeys EOB-insurance-focal 
 * insurance.coverage only Reference(CARINBBCoverage)
-/* * adjudication.extension contains
-   AdjudicationType named adjudication-type 1..1 MS
-*/
-* adjudication.category from ClaimAdjudicationCategory (required)   // per Igor
+//* adjudication.category from ClaimAdjudicationCategory (required)   // per Igor
 * item 0..* MS
 * item.adjudication MS 
 * item.adjudication.category 1..1 MS
-* item.adjudication.category from ClaimAdjudicationCategory (required)  // Per Igor
+//* item.adjudication.category from ClaimAdjudicationCategory (required)  // Per Igor
 * item.noteNumber MS
 * item.noteNumber ^short = "References number of the associated processNote"
-* total.category from ClaimAdjudicationCategory (required)
+//* total.category from ClaimAdjudicationCategory (required)
 * payment MS 
-* payment.type from ClaimPaymentStatusCode (required)
+* payment.type from C4BBPayerClaimPaymentStatusCode (required)
 * processNote MS
 * processNote ^short = "Line member payment denial explanation"
 * priority from http://hl7.org/fhir/ValueSet/process-priority  // Fix a bug in R4 EOB which points to a CodeSystem.   Eliminates an error on output
+
+/*
+* identifier ^short = ""
+* identifier.type ^ short = ""
+* type ^short = ""
+* use ^short = ""
+* patient ^short = ""
+* adjudication ^short = ""
+* provider ^short = ""
+* patient ^short = ""
+* billablePeriod ^short = ""
+* billablePeriod.start ^short = ""
+* billablePeriod.end ^short = ""
+* insurer ^short = ""
+* related ^short = ""
+* related.relationship ^short = ""
+* related ^short = ""
+* payee ^short = ""
+* payee.type ^short = ""
+* payee.party ^short = ""
+* careTeam ^short = ""
+* careTeam.provider ^short = ""
+* careTeam.responsible ^short = ""
+* careTeam.role ^short = ""
+* careTeam.qualification ^short = ""
+* procedure ^short = ""
+* procedure.type ^short = ""
+* procedure.date ^short = ""
+* insurance ^short = ""
+* insurance.coverage ^short = ""
+* insurance.focal ^short = ""
+* insurance.coverage ^short = ""
+* adjudication.category ^short = ""
+* item ^short = ""
+* item.adjudication ^short = ""
+* item.adjudication.category ^short = ""
+* item.noteNumber ^short = "References number of the associated processNote"
+* total.category ^short = ""
+* total ^short = ""
+* payment ^short = ""
+* payment.type ^short = ""
+* processNote ^short = ""
+*/
+
+
+
+
 
 Invariant:  EOB-insurance-focal  
 Description: "EOB.insurance:  at most one with focal = true"

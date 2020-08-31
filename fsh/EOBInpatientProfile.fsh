@@ -6,12 +6,12 @@ Description: "The profile is used for Explanation of Benefits (EOBs) based on cl
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
 * type.coding 1..1 MS
 * type = $HL7ClaimTypeCS#institutional
-* careTeam.role from CARINBBInstitutionalClaimCareTeamRoleCodes (required)  // was  PayerInstitutionalProviderRole 
+* careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)  // was  PayerInstitutionalProviderRole 
 * careTeam obeys EOB-inst-careTeam-practitioner
 * careTeam obeys EOB-inst-careTeam-organization
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
-* diagnosis.type from PayerInpatientinstitutionaldiagnosistype (required)   
+* diagnosis.type from C4BBClaimInpatientInstitutionalDiagnosisType  (required)   
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from ICD10CM (required)
@@ -45,7 +45,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[admissionperiod] ^short = "Admission Period"
 * supportingInfo[drg] ^short = "DRG codes assigned (33)"
 * supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
-* supportingInfo[billingnetworkcontractingstatus].code from PayerProviderContractingStatus  (required)
+* supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[admissionperiod].category = ClaimInformationCategoryCS#admissionperiod  
 * supportingInfo[admissionperiod].timingPeriod 1..1 MS
@@ -84,7 +84,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * item.adjudication[denialreason].reason from X12CARCCMSRARC
 * item.adjudication[denialreason].reason 1..1
-* item.adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes
+* item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount MS
 * adjudication ^slicing.rules = #closed
@@ -103,7 +103,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
 * adjudication[denialreason].reason from X12CARCCMSRARC
 * adjudication[denialreason].reason 1..1
-* adjudication[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
+* adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
 * total ^slicing.rules = #open
@@ -116,8 +116,8 @@ The claims data is based on the institutional claim format UB-04, submission sta
    adjudicationamounttype 0..* MS and
    inoutnetwork 1..1 MS 
 * total[inoutnetwork] ^short = "Benefit Payment Status"
-* total[inoutnetwork].category from BenefitPaymentStatus (required)
-* total[adjudicationamounttype].category from AdjudicationCarinBBValueCodes  (required)
+* total[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
+* total[adjudicationamounttype].category from C4BBAdjudication  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
 //* total[adjudicationamounttype].amount 1..1
 * patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided."

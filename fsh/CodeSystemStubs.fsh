@@ -83,11 +83,19 @@ Description: "NCPDP field # 407-D7 National Drug Code (NDC)"
 * insert CodeSystemStubBoilerplate
 * ^copyright = "The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  The NDC codes are available for use."
 
-ValueSet: FDANDCNCPDPCompoundCode
-Title: "FDA NDC NCPDP Compound Code"
-Description: "NCPDP field # 407-D7 (National Drug Code (NDC)) or NCPDP field # 406-D6 (Compound Code)"
-* codes from system FDANationalDrugCodeCS
-* codes from system NCPDPCompoundCodeCS
+
+ValueSet: FDANDC
+Title: "FDA NDC"
+Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7.  "
+* codes from system $FDANationalDrugCodeCS
+* ^copyright = "NDC codes are available for use.  As HL7 is working with the owning authority to finalize the url, this url is subject to change."
+
+ValueSet: FDANDCOrCompound
+Title: "FDA NDC or Compound "
+Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7.  
+Values will be the NDC Codes when the Compound Code value is 0 or 1.  When the Compound Code value = 2, the value will be the literal, ‘compound’"
+* codes from system $FDANationalDrugCodeCS
+* include C4BBBCompoundLiteralCS#compound 
 
 
 
@@ -265,16 +273,18 @@ https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/
 
 CodeSystem: CMSPlaceOfServiceCS
 Title: "CMS Place of Service"
-Description: "Place of Service codes are placed on health care professional claims to indicate the setting in which a service was provided"
+Description: "Place of Service codes are placed on health care professional claims to indicate the setting in which a service was provided. 
+CMS Place of Service codes are available at https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html."
 * ^url = $CMSPlaceOfServiceCS
 * insert CodeSystemStubBoilerplate
-* ^copyright = "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html.  The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.  The code set is owned by CMS and is available for use."
+* ^copyright = "CMS codes are available for use.  As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
 ValueSet: CMSPlaceOfService
 Title: "CMS Place of Service"
-Description: "Place of Service codes are placed on health care professional claims to indicate the setting in which a service was provided. https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html. The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound."
-* codes from system $CMSPlaceOfServiceCS 
-* ^copyright = "The code set is owned by CMS and is available for use."
+Description: "Place of Service codes are placed on health care professional claims to indicate the setting in which a service was provided. 
+CMS Place of Service codes are available at https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html."
+* codes from system CMSPlaceOfServiceCS 
+* ^copyright = "CMS codes are available for use.  As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
 CodeSystem: CMSRARCCS
 Title: "CMS Remittance Advice Remark Codes (RARC)"
