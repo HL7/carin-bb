@@ -41,7 +41,7 @@ Description: "Indicates if the institutional diagnosis is admitting, principal, 
 
 
 CodeSystem: C4BBClaimCareTeamRoleCS
-Title: "C4BBB Claim Care Team Role"
+Title: "C4BB Claim Care Team Role"
 Description: "Describes functional roles of the care team members.  Complements http://terminology.hl7.org/CodeSystem/claimcareteamrole"
 * #attending  "Attending"  "The attending physicianr"
 * #referring "Referring"  "The referring physician"
@@ -84,7 +84,6 @@ CodeSystem: ClaimInformationCategoryCS
 Title: "Claim Information Category"
 Description: "Claim Information Category - Used as the discriminator for supportingInfo" 
 * #admissionperiod  "Admission Period"                                     "Admission Period"
-//* #admsrc	"admsrc"                                                        "Identifies the place where the patient was identified as needing admission to a facility. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15)."	
 * #admtype	"admtype"	                                                    "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled."	
 * #billingnetworkcontractingstatus	"billingnetworkcontractingstatus"       "Indicates the network  status of the billing physician."	
 * #brandgenericcode	"brandgenericcode"                                      "Whether the plan adjudicated the claim as a brand or generic drug."

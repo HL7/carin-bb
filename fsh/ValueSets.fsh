@@ -73,16 +73,16 @@ Description: "Indicates whether the claim / item was paid or denied."
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimProfessionalAndNonClinicianDiagnosisType 
-Title: "Diagnosis Type -- Professional and Non-Clinician"
-Description: "Payer Professional and Non-Clinician Diagnosis Type"
+Title: "C4BB Claim Professional And Non Clinician Diagnosis Type"
+Description: "Indicates if the professional and non-clinician diagnosis is principal or secondary"
 * C4BBClaimDiagnosisType#principal "principal"
 * C4BBClaimDiagnosisType#secondary "secondary"
 * C4BBClaimDiagnosisType#first-listed "first-listed"
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimInpatientInstitutionalDiagnosisType 
-Title: "Diagnosis Type -- Inpatient Facility"
-Description: "Payer Inpatient Facility Diagnosis Type"
+Title: "C4BB Claim Inpatient Institutional Diagnosis Type"
+Description: "Indicates if the inpatient institutional diagnosis is admitting, principal, secondary or an external cause of injury."
 * C4BBClaimDiagnosisType#principal 
 * C4BBClaimDiagnosisType#secondary  
 * C4BBClaimDiagnosisType#external-cause-of-injury 
@@ -91,8 +91,8 @@ Description: "Payer Inpatient Facility Diagnosis Type"
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimOutpatientInstitutionalDiagnosisType 
-Title: "Diagnosis Type -- Outpatient Facility"
-Description: "Payer Outpatient Facility Diagnosis Type"
+Title: "C4BB Claim Outpatient Institutional Diagnosis Type"
+Description: "Indicates if the outpatient institutional diagnosis is admitting, principal, secondary an external cause of injury or a patient reason for visit"
 * codes from system C4BBClaimDiagnosisType
 
 ValueSet: ClaimInformationCategory
