@@ -31,8 +31,8 @@ Description: "Describes the various amount fields used when payers receive and a
 // * #payment "Payment" "payment"
 
 CodeSystem: C4BBClaimDiagnosisType
-Title: "Payer Diagnosis Type"
-Description: "Payer Diagnosis Type"
+Title: "C4BB Claim Diagnosis Type"
+Description: "Indicates if the institutional diagnosis is admitting, principal, secondary an external cause of injury or a patient reason for visit.  Complements http://terminology.hl7.org/CodeSystem/ex-diagnosistype."
 * #external-cause-of-injury "External Cause of Injury" "Required when an external cause of injury is needed to describe the injury"
 * #patient-reason-for-visit "Patient Reason for Visit" "Identifies the patient's reason for the outpatient institutional visit"
 * #other "Other"  "Required when other conditions coexist or develop subsequently during the treatment"
@@ -41,8 +41,8 @@ Description: "Payer Diagnosis Type"
 
 
 CodeSystem: C4BBClaimCareTeamRoleCS
-Title: "Payer Provider Role"
-Description: "Payer Provider Role"
+Title: "C4BBB Claim Care Team Role"
+Description: "Describes functional roles of the care team members.  Complements http://terminology.hl7.org/CodeSystem/claimcareteamrole"
 * #attending  "Attending"  "The attending physicianr"
 * #referring "Referring"  "The referring physician"
 * #operating "Operating"  "The operating physician"
