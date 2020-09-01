@@ -59,7 +59,7 @@ Description: "Indicates that the Provider has a contract with the Plan (regardle
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBPayerBenefitPaymentStatus
-Title: "Benefit Payment Status"
+Title: "C4BB Payer Benefit Payment Status"
 Description: "Indicates the in network or out of network payment status of the claim."
 * C4BBAdjudicationCS#innetwork "in-network"
 * C4BBAdjudicationCS#outofnetwork "out-of-network"
@@ -67,7 +67,7 @@ Description: "Indicates the in network or out of network payment status of the c
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBPayerClaimPaymentStatusCode
-Title: "Claim Payment Status Code"
+Title: "C4BB Payer Claim Payment Status Code"
 Description: "Indicates whether the claim / item was paid or denied."
 * C4BBAdjudicationCS#paid "paid"
 * C4BBAdjudicationCS#denied "denied"
