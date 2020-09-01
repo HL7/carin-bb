@@ -5,7 +5,7 @@
 <tr><td>id</td><td>
 "Patient1"
 </td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Patient"</td>
+<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Patient"</td></tr>
 <tr><td>meta.lastUpdated</td><td>
 "2020-07-07T13:26:22.0314215+00:00"
 </td></tr>
@@ -66,7 +66,7 @@
 <tr><td>name[0].family</td><td>
 "Example1"
 </td></tr>
-<tr><td>name[0].given[0]</td><td>"Johnny"</td>
+<tr><td>name[0].given[0]</td><td>"Johnny"</td></tr>
 <tr><td>telecom[0].system</td><td>
 "phone"
 </td></tr>
@@ -85,7 +85,7 @@
 <tr><td>address[0].type</td><td>
 "physical"
 </td></tr>
-<tr><td>address[0].line[0]</td><td>"123 Main Street"</td>
+<tr><td>address[0].line[0]</td><td>"123 Main Street"</td></tr>
 <tr><td>address[0].city</td><td>
 "Pittsburgh"
 </td></tr>

@@ -5,7 +5,7 @@
 <tr><td>id</td><td>
 "Coverage1"
 </td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Coverage"</td>
+<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-Coverage"</td></tr>
 <tr><td>meta.lastUpdated</td><td>
 "2020-07-07T13:26:22.0314215+00:00"
 </td></tr>

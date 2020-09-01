@@ -5,7 +5,7 @@
 <tr><td>id</td><td>
 "BBEobOutpatientFacility"
 </td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Outpatient-Facility"</td>
+<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Outpatient-Facility"</td></tr>
 <tr><td>meta.versionId</td><td>
 "1"
 </td></tr>
@@ -201,7 +201,7 @@
 <tr><td>item[0].sequence</td><td>
 1
 </td></tr>
-<tr><td>item[0].informationSequence[0]</td><td>"1"</td>
+<tr><td>item[0].informationSequence[0]</td><td>"1"</td></tr>
 <tr><td>item[0].category.coding[0].system</td><td>
 "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd"
 </td></tr>

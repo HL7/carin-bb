@@ -5,7 +5,7 @@
 <tr><td>id</td><td>
 "BBEobPharmacy"
 </td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy"</td>
+<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Pharmacy"</td></tr>
 <tr><td>meta.versionId</td><td>
 "1"
 </td></tr>
@@ -102,7 +102,7 @@
 <tr><td>item[0].sequence</td><td>
 1
 </td></tr>
-<tr><td>item[0].informationSequence[0]</td><td>"1"</td>
+<tr><td>item[0].informationSequence[0]</td><td>"1"</td></tr>
 <tr><td>item[0].category.coding[0].system</td><td>
 "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd"
 </td></tr>
@@ -187,7 +187,7 @@
 <tr><td>item[1].sequence</td><td>
 2
 </td></tr>
-<tr><td>item[1].informationSequence[0]</td><td>"2"</td>
+<tr><td>item[1].informationSequence[0]</td><td>"2"</td></tr>
 <tr><td>item[1].category.coding[0].system</td><td>
 "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd"
 </td></tr>
@@ -284,7 +284,7 @@
 <tr><td>item[2].sequence</td><td>
 3
 </td></tr>
-<tr><td>item[2].informationSequence[0]</td><td>"3"</td>
+<tr><td>item[2].informationSequence[0]</td><td>"3"</td></tr>
 <tr><td>item[2].category.coding[0].system</td><td>
 "https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd"
 </td></tr>

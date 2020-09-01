@@ -5,7 +5,7 @@
 <tr><td>id</td><td>
 "EOBProfessional1"
 </td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician"</td>
+<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/CARIN-BB-ExplanationOfBenefit-Professional-NonClinician"</td></tr>
 <tr><td>meta.lastUpdated</td><td>
 "2019-12-12T09:14:11+00:00"
 </td></tr>
