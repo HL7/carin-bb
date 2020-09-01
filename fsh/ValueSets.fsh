@@ -31,8 +31,9 @@ Description: "Indicates the role of the provider providing the care."
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBAdjudication   
-Title: "Adjudication CARINBB Value Codes"
-Description: "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem"
+Title: "C4BB Adjudication"
+Description: "Describes the various amount fields used when payers receive and adjudicate a claim.  It includes the values 
+defined in http://terminology.hl7.org/CodeSystem/adjudication, as well as those defined in the C4BB Adjudication CodeSystem."
 * $HL7AdjudicationCS#submitted 
 * $HL7AdjudicationCS#copay 
 * $HL7AdjudicationCS#eligible
