@@ -13,44 +13,20 @@
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the [Table of Contents](toc.html) for more information.</p>
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
-<li>Interim Version 0.4.2 - August 28, 2020</li>
+<li>Interim Version 0.1.3 - September 4, 2020</li>
+<ol>
+<li>Pat's updates to CodeSystem stubs and Codesystems/Valuesets</li>
+<li>Updates to Graphics</li>
+<li>Changed references to CARIN-BB to C4BB, including profile, codesystem, and valueset names</li>
+<li>Changed naming convention for releases to Release.Ballot.Version. </li>
+</ol>
+</ul>
+<li>Interim Version 0.1.2 - August 28, 2020</li>
 <ol>
 <li>Update to <a href="CARINBBResourcesv17.png">EOBComparisonv17</a> from Pat, still in draft form.</li>
 <li>Created Codesystem stubs for all key external codesystems referenced by IG, along with corresponding ValueSets</li>
 <li>Further corrections to capability statement based on Igor comments. supported_profiles vs profiles still deferred.</li>
 <li>Resolved all but a handful of remaining comments relating to BV1, BV2, BV2a, BV4, BV6</li>
-</ol>
-<li>Interim Version 0.4.1 - August 13, 2020</li>
-<ol>
-<li>Update to EOBComparisonv13 from Pat</li>
-<li>Imported comments and MS from CPCDS spreadsheet</li>
-<li>Further corrections to capability statement based on Igor comments. supported_profiles vs profiles deferred.</li>
-</ol>
-<li>Interim Version 0.4. - August 5, 2020</li>
-<ol>
-<li>Update to EOBComparisonv13 from Pat</li>
-<li>Imported comments and MS from CPCDS spreadsheet</li>
-</ol>
-<li>Version 0.3.1 - July 26, 2020</li>
-<ol>
-<li>Corrections to slices defined and names of value sets referenced in 4 EOB profiles following review. EOB Profile Summary withdrawn pending review..</li>
-<li>Correction to example</li>
-<li>Correct version of CPCDS mapping spreadsheet linked.</li>
-</ol>
-<li>Version 0.3.0 - July 24, 2020</li>
-<ol>
-<li>Corrections to slices defined and names of value sets referenced in 4 EOB profiles following review. These are now in line with <a href="EOBtypes.png">the EOB Profile Summary</a>.</li>
-<li>Addition of initial skeletal examples for 4 EOB profiles. Feedback/input/suggestions welcome!</li>
-<li>Eliminated CPCDS mapping table in Coverage intro. CPCDS information is to be moved to an external reference only based on FW WG direction.</li>
-<li>Committing FSH/sushi inputs to github now that mismatch between Sushi 0.14.0 and the latest IG publisher has been addressed.</li>
-</ol>
-<li>Version 0.2.0 - July 17, 2020</li>
-<ol>
-<li>Corrections to slices defined and value sets referenced in 4 EOB profiles following review</li>
-<li>Changes to Value Set names (removing VS suffix)</li>
-<li>Experimental labeling of Coverage profile with annotation from CPCDS-FHIR mapping spreadsheet. Inclusion of CPCDS mapping table in Coverage intro</li>
-<li>Addition of (empty) Capability Statement page.</li>
-<li>Addition of initial set of examples. Will be expanded to cover all resources.</li>
 </ol>
 </ul>
 <h3>Authors</h3>
