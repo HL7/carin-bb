@@ -1,8 +1,8 @@
-Profile: CARINBBExplanationOfBenefitInpatientFacility
-Parent: CARIN-BB-ExplanationOfBenefit
-Id: CARIN-BB-ExplanationOfBenefit-Inpatient-Facility
-Title: "CARIN BB ExplanationOfBenefit Inpatient Facility"
-Description: "The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at a facility as part of an overnight stay. 
+Profile: C4BBExplanationOfBenefitInpatientInstitutional
+Parent: C4BB-ExplanationOfBenefit
+Id: C4BB-ExplanationOfBenefit-Inpatient-Institutional
+Title: "C4BB ExplanationOfBenefit Inpatient Institutional"
+Description: "The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at an institution as part of an overnight stay. 
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
 * type.coding 1..1 MS
 * type = $HL7ClaimTypeCS#institutional
@@ -21,7 +21,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * procedure.procedure[x] 1..1 MS
 * procedure.procedure[x] from ICD10PCS (required) 
 * provider 1..1
-* provider only Reference(CARINBBOrganization)
+* provider only Reference(C4BBOrganization)
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on value pattern"
@@ -37,9 +37,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
    discharge-status 0..1 MS and 
    drg 0..1 MS and
    admissionperiod 0..1 MS  // EOBComparisonv13
-* supportingInfo[pointoforigin] ^short = "Identifies the place where the patient was identified as needing admission to a facility. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13)"
+* supportingInfo[pointoforigin] ^short = "Identifies the place where the patient was identified as needing admission to an institution. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13)"
 * supportingInfo[admtype] ^short = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14)"
-* supportingInfo[typeofbill] ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of facility, the second digit classifies the type of care being billed, and the third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (17)"
+* supportingInfo[typeofbill] ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of institution, the second digit classifies the type of care being billed, and the third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (17)"
 * supportingInfo[claimrecvddate] ^short = "The date the claim was received by the payer (88)"
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * supportingInfo[admissionperiod] ^short = "Admission Period"
@@ -126,7 +126,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * insurer MS
 * insurance ^short = "Code of the payer responsible for the claim"
 * insurance MS
-* supportingInfo[pointoforigin].code ^short = "Identifies the place where the patient was identified as needing admission to a facility. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15)."
+* supportingInfo[pointoforigin].code ^short = "Identifies the place where the patient was identified as needing admission to an institution. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15)."
 * supportingInfo[admtype].code ^short = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled."
 * type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.). "
 * type MS
@@ -134,7 +134,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * diagnosis.onAdmission MS
 * diagnosis ^short = "This is the reason given by the patient for visiting the doctor or practitioner. It is not the doctor's or practitioner's diagnosis. Patient Reason for Visit Codes can be any ICD-10diagnosis and may or may not be a repeat of an ICD-10 Principal or Secondary diagnosis field."
 * diagnosis.type ^short =  "Description of this field"
-* supportingInfo[drg].code ^short = "Version of the AP-DRG codes assigned for inpatient facility claims."
+* supportingInfo[drg].code ^short = "Version of the AP-DRG codes assigned for inpatient institution claims."
 * supportingInfo[drg].code ^short = "DRG codes assigned"
 * identifier ^short = "Identifier assigned by a payer for a claim received from a provider or subscriber. It is not the same identifier as that assigned by a provider. This unique identifier assigned by the payer becomes the payer's EOB identifier."
 * identifier MS
@@ -169,7 +169,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * related MS
 * related ^short = "If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number.  "
 * related MS
-* supportingInfo[discharge-status].code ^short = "Patient’s status as of the discharge date for a facility stay. Information located on UB04 (Form Locator 17)."
+* supportingInfo[discharge-status].code ^short = "Patient’s status as of the discharge date for an institutional stay. Information located on UB04 (Form Locator 17)."
 * payee.type ^short = "Identifies the type of recipient of the adjudication amount; i.e., provider or subscriber or another recipient
 "
 * payee.type MS

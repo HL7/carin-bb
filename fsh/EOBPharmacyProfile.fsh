@@ -1,11 +1,11 @@
-Profile: CARINBBExplanationOfBenefitPharmacy
-Parent: CARIN-BB-ExplanationOfBenefit
-Id: CARIN-BB-ExplanationOfBenefit-Pharmacy
-Title: "CARIN BB ExplanationOfBenefit Pharmacy"
+Profile: C4BBExplanationOfBenefitPharmacy
+Parent: C4BB-ExplanationOfBenefit
+Id: C4BB-ExplanationOfBenefit-Pharmacy
+Title: "C4BB ExplanationOfBenefit Pharmacy"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies. 
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
 * type = $HL7ClaimTypeCS#pharmacy 
-// * provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner)   Set in Abstract Class.  No need to set here.
+// * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner)   Set in Abstract Class.  No need to set here.
 * careTeam obeys EOB-pharm-careTeam-practitioner
 * careTeam obeys EOB-pharm-careTeam-organization
 * supportingInfo ^slicing.discriminator.type = #pattern 

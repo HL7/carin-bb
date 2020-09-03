@@ -1,7 +1,7 @@
-Profile: CARINBBOrganization
+Profile: C4BBOrganization
 Parent:  $USCoreOrganization
-Id:  CARIN-BB-Organization
-Title: "CARIN BB Organization"
+Id:  C4BB-Organization
+Title: "C4BB Organization"
 Description: "This profile builds upon the US Core Organization profile. It is used to convey a payer or provider organization may be updated to include service facility pending resolution of FHIR-26705.
 ."
 * meta.lastUpdated 1..1  MS

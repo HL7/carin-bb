@@ -1,9 +1,9 @@
 Instance: Patient1
-InstanceOf: CARINBBPatient
+InstanceOf: C4BBPatient
 Description: "Patient Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901"
-* meta.profile = Canonical(CARINBBPatient)
+* meta.profile = Canonical(C4BBPatient)
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
 * active = true
@@ -37,11 +37,11 @@ Usage: #example
 * identifier[patacctnum].system = "https://www.xxxhealthplan.com/fhir/patacctnum"
 
 Instance: Coverage1
-InstanceOf: CARINBBCoverage
+InstanceOf: C4BBCoverage
 Description: "Coverage Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = Canonical(CARINBBCoverage)
+* meta.profile = Canonical(C4BBCoverage)
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
 * status = #active
@@ -75,11 +75,11 @@ Usage: #example
 * payor = Reference(OrganizationPayer1)
 
 Instance: EOBInpatient1
-InstanceOf: CARINBBExplanationOfBenefitInpatientFacility
+InstanceOf: C4BBExplanationOfBenefitInpatientInstitutional
 Description: "EOB Inpatient Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = Canonical(CARINBBExplanationOfBenefitInpatientFacility)
+* meta.profile = Canonical(C4BBExplanationOfBenefitInpatientInstitutional)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -87,7 +87,7 @@ Usage: #example
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
-* type.text = "Inpatient Facility"
+* type.text = "Inpatient Institution"
 * use = #claim 
 * created = "2019-07-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
@@ -121,12 +121,12 @@ Usage: #example
 //* adjudication[inoutnetwork].category = C4BBAdjudicationCS#innetwork 
 
 
-Instance: EOBOutpatientFacility1
-InstanceOf: CARINBBExplanationOfBenefitOutpatientFacility
+Instance: EOBOutpatientInstitutional1
+InstanceOf: C4BBExplanationOfBenefitOutpatientInstitutional
 Description: "EOB Outpatient Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = Canonical(CARINBBExplanationOfBenefitOutpatientFacility)
+* meta.profile = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -134,7 +134,7 @@ Usage: #example
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
-* type.text = "Outpatient Facility"
+* type.text = "Outpatient Institution"
 * use = #claim 
 * created = "2019-07-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
@@ -168,11 +168,11 @@ Usage: #example
 //* adjudication[inoutnetwork].category = C4BBAdjudicationCS#other
 
 Instance: EOBProfessional1
-InstanceOf: CARINBBExplanationOfBenefitProfessionalNonClinician 
+InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician 
 Description: "EOB Professional  Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = Canonical(CARINBBExplanationOfBenefitProfessionalNonClinician)
+* meta.profile = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -180,7 +180,7 @@ Usage: #example
 * identifier.value = "AW123412341234123412341234123413"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#professional
-* type.text = "Outpatient Facility"
+* type.text = "Outpatient Institution"
 * use = #claim 
 * created = "2019-07-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
@@ -211,11 +211,11 @@ Usage: #example
 
 
 Instance: EOBPharmacy1
-InstanceOf: CARINBBExplanationOfBenefitPharmacy
+InstanceOf: C4BBExplanationOfBenefitPharmacy
 Description: "EOB PHarmacy Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = Canonical(CARINBBExplanationOfBenefitPharmacy)
+* meta.profile = Canonical(C4BBExplanationOfBenefitPharmacy)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -223,7 +223,7 @@ Usage: #example
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#pharmacy
-* type.text = "Inpatient Facility"
+* type.text = "Inpatient Institution"
 * use = #claim 
 * created = "2019-07-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
@@ -275,10 +275,10 @@ Usage: #example
 
 
 Instance: OrganizationPayer1
-InstanceOf: CARINBBOrganization
+InstanceOf: C4BBOrganization
 Description: "Payer1"
 Usage: #example
-* meta.profile = Canonical(CARINBBOrganization)
+* meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * identifier[NPI].type = IdentifierTypeCS#npi
@@ -289,10 +289,10 @@ Usage: #example
 * active = true 
 
 Instance: OrganizationProvider1
-InstanceOf: CARINBBOrganization
+InstanceOf: C4BBOrganization
 Description: "Provider 1"
 Usage: #example
-* meta.profile = Canonical(CARINBBOrganization)
+* meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * identifier[NPI].type = IdentifierTypeCS#npi

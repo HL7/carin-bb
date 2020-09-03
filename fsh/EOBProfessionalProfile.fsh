@@ -1,7 +1,7 @@
-Profile: CARINBBExplanationOfBenefitProfessionalNonClinician
-Parent: CARIN-BB-ExplanationOfBenefit
-Id: CARIN-BB-ExplanationOfBenefit-Professional-NonClinician
-Title: "CARIN BB ExplanationOfBenefit Professional NonClinician"
+Profile: C4BBExplanationOfBenefitProfessionalNonClinician
+Parent: C4BB-ExplanationOfBenefit
+Id: C4BB-ExplanationOfBenefit-Professional-NonClinician
+Title: "C4BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. 
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 * careTeam obeys EOB-prof-careTeam-practitioner
@@ -9,7 +9,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * careTeam.qualification MS 
 //* careTeam.qualification from NUCCHealthcareProviderTaxonomy (required)  // cardinality constraint?
 * type = $HL7ClaimTypeCS#professional
-// * provider only Reference(CARINBBOrganization or CARINBBPractitionerRole or CARINBBPractitioner) -- set in base class
+// * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner) -- set in base class
 * supportingInfo ^slicing.discriminator.type = #pattern 
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #open

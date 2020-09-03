@@ -1,10 +1,10 @@
 Instance: BBEobPharmacy
-InstanceOf: CARINBBExplanationOfBenefitPharmacy
+InstanceOf: C4BBExplanationOfBenefitPharmacy
 Description: "BBEoB from Jeff"
 * meta.versionId = "1"
 * meta.lastUpdated = "2020-07-23T16:04:04.584-04:00"
 * meta.source = "#2Htk0DNoUEbccjg0"
-* meta.profile[0] = Canonical(CARINBBExplanationOfBenefitPharmacy)
+* meta.profile[0] = Canonical(C4BBExplanationOfBenefitPharmacy)
 * identifier.value = "7d0c2c7f-8049-445a-a283-41cf91d09a38"
 * identifier.system = "https://bluebutton.cms.gov/resources/variables/clm_id"
 * identifier.use = #official

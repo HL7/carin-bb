@@ -1,7 +1,7 @@
-Profile: CARINBBExplanationOfBenefit
+Profile: C4BBExplanationOfBenefit
 Parent: ExplanationOfBenefit
-Id: CARIN-BB-ExplanationOfBenefit
-Title: "CARIN BB Explanation Of Benefit"
+Id: C4BB-ExplanationOfBenefit
+Title: "C4BB Explanation Of Benefit"
 Description: "Abstract parent profile that includes constraints that are common to the four specific ExplanationOfBenefit (EOB) profiles defined in this Implementation Guide.
 All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
 * meta.lastUpdated 1..1 MS
@@ -15,11 +15,11 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * use = #claim 
 * patient 1..1 MS
 * adjudication MS 
-* provider only Reference(CARINBBOrganization or CARINBBPractitioner)   // based on BV2a comments 7/27
-* patient only Reference (CARINBBPatient)
+* provider only Reference(C4BBOrganization or C4BBPractitioner)   // based on BV2a comments 7/27
+* patient only Reference (C4BBPatient)
 * billablePeriod 0..1 MS 
 * insurer 1..1 MS
-* insurer only Reference(CARINBBOrganization)
+* insurer only Reference(C4BBOrganization)
 * provider 1..1 MS
 * related 0..* MS
 * related.relationship 1..1 MS
@@ -28,10 +28,10 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * payee.type 1..1 MS
 * payee.type from $ClaimPayeeTypeCode (required)
 * payee.party 1..1 MS
-* payee.party only Reference(CARINBBOrganization or CARINBBPatient or CARINBBPractitioner)
+* payee.party only Reference(C4BBOrganization or C4BBPatient or C4BBPractitioner)
 * careTeam 0..* MS 
 * careTeam.provider 1..1 MS
-* careTeam.provider only Reference(CARINBBOrganization or CARINBBPractitioner)
+* careTeam.provider only Reference(C4BBOrganization or C4BBPractitioner)
 * careTeam.responsible 0..1 MS 
 * careTeam.role 1..1 MS
 * supportingInfo 0..* MS
@@ -47,7 +47,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * insurance.coverage 1..1 MS
 * insurance.focal 1..1  MS
 * insurance obeys EOB-insurance-focal 
-* insurance.coverage only Reference(CARINBBCoverage)
+* insurance.coverage only Reference(C4BBCoverage)
 //* adjudication.category from ClaimAdjudicationCategory (required)   // per Igor
 * item 0..* MS
 * item.adjudication MS 

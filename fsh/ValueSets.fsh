@@ -23,7 +23,7 @@ Description: "Describes functional roles of the care team members"
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimPharmacyTeamRole 
-Title: "CARINBB Pharmacy CareTeam Roles"
+Title: "C4BB Pharmacy CareTeam Roles"
 Description: "Indicates the role of the provider providing the care."
 * $CareTeamRoleCodeCS#primary 
 * C4BBClaimCareTeamRoleCS#prescribing 

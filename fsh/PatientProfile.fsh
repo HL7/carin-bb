@@ -1,7 +1,7 @@
-Profile: CARINBBPatient
+Profile: C4BBPatient
 Parent: $USCorePatient
-Id: CARIN-BB-Patient
-Title: "CARIN BB Patient"
+Id: C4BB-Patient
+Title: "C4BB Patient"
 Description: "This profile builds upon the US Core Organization profile. It is used to convey patient information about the patient who received the services described on the claim."
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS

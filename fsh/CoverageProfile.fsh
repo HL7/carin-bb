@@ -1,22 +1,22 @@
 
-Profile: CARINBBCoverage
+Profile: C4BBCoverage
 Parent: Coverage
-Id: CARIN-BB-Coverage
-Title: "CARIN BB Coverage"
+Id: C4BB-Coverage
+Title: "C4BB Coverage"
 Description: "Data that reflect a payer's coverage that was effective as of the date of service  or the date of admission of the claim will be added to the Coverage Profile overview."
 //* ^jurisdiction.valueCodeableConcept = "US#urn:iso:std:iso:3166"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * identifier MS 
 * subscriber 0..1 
-* subscriber only Reference(CARINBBPatient)
+* subscriber only Reference(C4BBPatient)
 * subscriberId 1..1 MS
 * beneficiary 1..1 MS
-* beneficiary only Reference(CARINBBPatient) 
+* beneficiary only Reference(C4BBPatient) 
 * relationship 1..1 MS
 * relationship from $SubscriberRelationiship (required)
 * payor 1..1 MS   // was 1..* in Balloted STU
-* payor only Reference (CARINBBOrganization) 
+* payor only Reference (C4BBOrganization) 
 * class MS 
 * class ^slicing.discriminator.type = #pattern
 * class ^slicing.discriminator.path = "type"
