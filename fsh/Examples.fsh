@@ -255,7 +255,7 @@ Usage: #example
 * total[inoutnetwork].amount.value = 0.00
 * total[inoutnetwork].amount.currency = #USD
 //* adjudication[inoutnetwork].category = C4BBAdjudicationCS#other
-* item[0].productOrService = $FDANationalDrugCodeCS#0777-3105-02 "100-count bottle of Prozac 20 mg"
+* item[0].productOrService = $FDANationalDrugCode#0777-3105-02 "100-count bottle of Prozac 20 mg"
 * item[0].sequence = 1 
 * item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00

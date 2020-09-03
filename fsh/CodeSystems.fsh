@@ -53,7 +53,7 @@ Description: "Describes functional roles of the care team members.  Complements 
 //* #supervising "supervising" "Supervising"
 * ^copyright = "This Code System is not copyrighted."
 
-CodeSystem: C4BBBCompoundLiteralCS
+CodeSystem: C4BBCompoundLiteral
 Title: "C4BB Compound Literal Code System"
 Description: "CodeSystem for a Literal 'compound' value"
 * #compound "compound" "Compound"

@@ -77,7 +77,7 @@ Description: "BBEoB from Jeff"
 * item[0].productOrService.coding[0].display = "Consultation for treatment"
 * item[0].servicedPeriod.start = "2019-01-08T08:40:00-05:00"
 * item[0].servicedPeriod.end = "2019-01-08T09:00:00-05:00"
-* item[0].locationCodeableConcept.coding[0].system = $CMSPlaceOfServiceCS#49
+* item[0].locationCodeableConcept.coding[0].system = $CMS_PlaceofServiceCodes#49
 * item[0].locationCodeableConcept.coding[0].display = "Independent Clinic"
 * item[0].quantity.value = 1
 * item[0].unitPrice.value = 106.39

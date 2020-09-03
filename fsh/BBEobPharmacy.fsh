@@ -59,10 +59,10 @@ Description: "BBEoB from Jeff"
 * item[0].category.coding[0].code = #1
 * item[0].category.coding[0].display = "Medical care"
 // This should be an NDC Code!
-* item[0].productOrService.coding[0].system = $FDANationalDrugCodeCS#860518 "24 HR carvedilol phosphate 20 MG Extended Release Oral Capsule [Coreg]"
+* item[0].productOrService.coding[0].system = $FDANationalDrugCode#860518 "24 HR carvedilol phosphate 20 MG Extended Release Oral Capsule [Coreg]"
 * item[0].servicedPeriod.start = "2019-01-18T15:40:00-05:00"
 * item[0].servicedPeriod.end = "2019-01-18T16:00:00-05:00"
-* item[0].locationCodeableConcept.coding[0].system =  $CMSPlaceOfServiceCS#49 "Independent Clinic"
+* item[0].locationCodeableConcept.coding[0].system =  $CMS_PlaceofServiceCodes#49 "Independent Clinic"
 * item[0].quantity.value = 30
 * item[0].unitPrice.value = 81.86
 * item[0].unitPrice.currency = #USD
@@ -193,13 +193,13 @@ Description: "BBEoB from Jeff"
 * supportingInfo[0].code = #contracted 
 * supportingInfo[0].sequence = 1
 * supportingInfo[1].category = ClaimInformationCategoryCS#brandgenericcode   
-* supportingInfo[1].code = NCPDPBrandGenericCodeCS#generic 
+* supportingInfo[1].code = NCPDPBrandGenericCode#generic 
 * supportingInfo[1].sequence = 2
 * supportingInfo[2].category = ClaimInformationCategoryCS#refillnum
 * supportingInfo[2].valueQuantity.value = 10
 * supportingInfo[2].sequence = 3
 * supportingInfo[3].category = ClaimInformationCategoryCS#dawcode       
-* supportingInfo[3].code = NCPDPDispensedAsWrittenCS#brandOnly  
+* supportingInfo[3].code = NCPDPDispensedAsWrittenOrProductSelectionCode#brandOnly  
 * supportingInfo[3].sequence = 4
 * supportingInfo[4].category = ClaimInformationCategoryCS#clmrecvddate
 * supportingInfo[4].timingDate = "2019-01-18"

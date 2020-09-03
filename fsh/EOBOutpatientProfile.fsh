@@ -69,7 +69,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[allowedunits].value only decimal
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
-* item.adjudication[denialreason].reason from X12CARCCMSRARC
+* item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
@@ -85,7 +85,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
    denialreason 0..1 MS 
 * adjudication[denialreason] ^short = "Denial Reason"
 * adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
-* adjudication[denialreason].reason from X12CARCCMSRARC
+* adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * adjudication[denialreason].reason 1..1 MS
 * adjudication[adjudicationamounttype].category from C4BBAdjudication (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"

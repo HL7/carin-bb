@@ -47,7 +47,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.diagnosis[x] from ICD10CM (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
-* item.locationCodeableConcept from CMSPlaceOfService (required)
+* item.locationCodeableConcept from CMSPlaceofServiceCodes (required)
 * item.adjudication ^slicing.rules = #closed 
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on value pattern"
@@ -62,7 +62,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[allowedunits].category = ClaimAdjudicationCategoryCS#allowedunits
 * item.adjudication[allowedunits].value only decimal
 * item.adjudication[denialreason].category  = ClaimAdjudicationCategoryCS#denialreason 
-* item.adjudication[denialreason].reason from X12CARCCMSRARC
+* item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication 

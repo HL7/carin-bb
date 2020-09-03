@@ -37,7 +37,7 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[refillNum] ^short = "The number fill of the current dispensed supply (0, 1, 2, etc.) (137)"
 * supportingInfo[dawcode].category = ClaimInformationCategoryCS#dawcode       
 * supportingInfo[dawcode] ^short = "Dispense As Written product selection code" 
-* supportingInfo[dawcode].code from NCPDPDispensedAsWritten (required)
+* supportingInfo[dawcode].code from NCPDPDispensedAsWrittenOrProductSelectionCode (required)
 * supportingInfo[claimrecvddate].category = ClaimInformationCategoryCS#claimrecvddate
 * supportingInfo[claimrecvddate] ^short = "The date the claim was received by the payer (88)"
 * supportingInfo[dayssupply].category = ClaimInformationCategoryCS#dayssupply

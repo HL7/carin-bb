@@ -28,21 +28,7 @@ Alias:   $PresentOnAdmissionV2CS = urn:oid:2.16.840.1.113883.6.301.11
 //Alias: $ClaimInformationCategoryCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimInformationCategoryCS
 //Alias: $ClaimAdjudicationCategoryCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimAdjudicationCategoryCS
 
-// Code Systems
-Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
-Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
-Alias:   $CPT = http://www.ama-assn.org/go/cpt
-Alias:   $HCPCSProcedureCodesCS = urn:oid:2.16.840.1.113883.6.285
-Alias:   $AMACPTMODIFIERS = http://www.ama-assn.org/go/cpt-modifiers
-Alias:   $HCPCSMODIFIERS = http://www.cms.gov/hcpcs-level-II-modifiers
-Alias:   $CMSDRGCS = http://www.cms.gov/ms-drg
-Alias:  $CMSPlaceOfServiceCS = http://www.cms.gov/place-of-service
-Alias:   $CPTALLVS = http://hl7.org/fhir/ValueSet/cpt-all
-Alias:   $ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
-Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
-//Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
-Alias:   $FDANationalDrugCodeCS = http://hl7.org/fhir/sid/ndc
-Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy
+
 
 
 //Alias:  $NUBCPointOfOriginForAdmissionOrVisitCS = https://www.nubc.org/point-of-origin-for-admission-or-visit
