@@ -5,7 +5,7 @@ Based on CPCDS, the mappings define the minimum mandatory elements, extensions a
 This implementation guide establishes a set of profiles for the Explanation of Benefit (EOB) resource and other referenced FHIR resources. As shown here, the data represented in each of the 4 concrete EOB profiles aligns with claim submission standards adopted by the US Department of Health and Human Services for a specific type of benefit. The fifth EOB profile, not shown in this table, is a design artifact that includes data representation constraints common across all types of EOBs, and this profile should not be used for actual data instances.&nbsp; A side by side comparison of the abstract EOB profile, and the four concrete profiles is shown here.
 <br />&nbsp;<img style="width: 100%; height: auto; float: none; align: middle;" src="SidebySideProfiles.png" /></div>
 <br />&nbsp;
-<div><img style="width: 100%; height: auto; float: none; align: middle;" src="CARINBBResources17.png" /></div>
+<div><img style="width: 100%; height: auto; float: none; align: middle;" src="CARINBBResourcesv17.png" /></div>
 <div>&nbsp;</div>
 <div>Additional EOB profiles for Vision and Dental benefits are planned for future versions of this IG.</div>
 <div>&nbsp;</div>
