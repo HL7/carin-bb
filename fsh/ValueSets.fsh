@@ -3,7 +3,7 @@
 
 
 ValueSet: C4BBClaimInstitutionalCareTeamRole 
-Title: "C4BB Claim Institutional Care Team Role "
+Title: "C4BB Claim Institutional Care Team Role"
 Description: "Describes functional roles of the care team members."
 * $CareTeamRoleCodeCS#primary 
 * $CareTeamRoleCodeCS#supervisor 

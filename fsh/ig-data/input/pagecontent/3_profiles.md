@@ -55,17 +55,17 @@ The claims data is based on the professional claim form 1500, submission standar
     </tr>
     <tr>
       <td><a href="StructureDefinition-C4BB-Organization.html">C4BB-Organization</a></td>
-      <td><a href="http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-organization.html">Organization (US Core)</a></td>
+      <td><a href="http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-organization.html">Organization (US Core)</a></td>
       <td>{% capture md_text %}A CARIN Blue Button Organization Profile.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
         <tr>
       <td><a href="StructureDefinition-C4BB-Patient.html">C4BB-Patient</a></td>
-      <td><a href="http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-patient.html">Patient (US Core)</a></td>
+      <td><a href="http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-patient.html">Patient (US Core)</a></td>
       <td>{% capture md_text %}A CARIN Blue Button Patient Profile.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
         <tr>
       <td><a href="StructureDefinition-C4BB-Practitioner.html">C4BB-Practitioner</a></td>
-      <td><a href="http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-practitioner.html">Practitioner (US Core)</a></td>
+      <td><a href="http://hl7.org/fhir/us/core/STU3.1/StructureDefinition-us-core-practitioner.html">Practitioner (US Core)</a></td>
       <td>{% capture md_text %}A CARIN Blue Button Practitioner Profile.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <!-- <tr>

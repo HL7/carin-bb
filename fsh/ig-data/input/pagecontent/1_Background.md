@@ -1,4 +1,4 @@
-<h3>The CARIN Alliance</h3>
+<h3 name="the-carin-alliance">The CARIN Alliance</h3>
 <p>The <a href="https://www.carinalliance.com/our-work/health-plan/">CARIN Alliance Health Plan Workgroup</a> was organized to develop a FHIR-based API that could be implemented by a consumer-facing application. The CARIN for Blue Button Framework was designed to answer the challenge for health plans to &lsquo;meet or exceed&rsquo; the <a href="https://bluebutton.cms.gov/">CMS Blue Button 2.0</a> capabilities. The CMS Blue Button 2.0 project provides over 53 million Medicare fee-for-service beneficiaries access to their electronic claims information. The goal of the CARIN Alliance Health Plan Workgroup is to develop an agreed upon set of data fields to exchange with consumers and a FHIR-based implementation guide for health plans to use to implement the API. <strong>Work-in-progress:Add some text about FHIR Accelerators here. </strong> The CARIN health plan workgroup was organized to develop a FHIR‐based API that could be implemented by a consumer‐facing application.</p>
 <h3>Consumer-directed exchange</h3>
 <p>Consumer-directed exchange occurs when a consumer or an individual authorized by a Payer to access another person&rsquo;s information, invokes their <a href="https://www.govregs.com/regulations/title45_chapterA_part164_subpartE_section164.524">HIPAA Individual Right of Access (45 CFR 164.524) </a> and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.</p>
@@ -38,7 +38,7 @@
 <p>CMS Guidance defines two sets of data be made available by payers in the Patient Access API: Claims and Encounter Data and Clinical data. They provide links to specific implementations guides for the Patient Access API to provide guidance. Use of these implementation guides is not required, but if used these guides will provide information payers can use to meet the requirements of the policies being finalized. This IG defines how Claims and Encounter Data are to be provided; the DaVinci PDEX (Payer Data Exchange) and US Core Implementation Guides define how Clinical Data is to be provided.</p>
 <h4>RTPBC</h4>
 <p>Using the RTPBC (Real Time Pharmacy Benefit Check), a patient can learn the cost and insurance coverage related to medications they&rsquo;ve been prescribed. A person would typically use the RTPBC prior to the dispensing of the prescription and the filing of the claim. CARIIN BB provides the capability to access how pharmacy (and medical) benefits have been applied by the payer as a result of a claim filed by the pharmacy.</p>
-<h3>Guide Overview</h3>
+<h3 name="guide-overview">Guide Overview</h3>
 <h4>How to Read This Guide</h4>
 <h4>Actors</h4>
 <p>The following actors are part of the CARIN BB IG:</p>

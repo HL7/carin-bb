@@ -128,7 +128,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * insurance MS
 * supportingInfo[pointoforigin].code ^short = "Identifies the place where the patient was identified as needing admission to an institution. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15)."
 * supportingInfo[admtype].code ^short = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled."
-* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.). "
+* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).*
 * type MS
 * diagnosis.onAdmission ^short = "Used to capture whether a diagnosis was present at time of a patient's admission. This is used to group diagnoses into the proper DRG for all claims involving inpatient admissions to general acute care facilities."
 * diagnosis.onAdmission MS
@@ -144,7 +144,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * item.productOrService MS
 * item.modifier ^short = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service."
 * item.modifier MS
-* item.quantity ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. "
+* item.quantity ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.*
 * item.quantity MS
 * item.revenue ^short = "Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed"
 * item.revenue MS
@@ -167,7 +167,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * payment.date MS
 * related ^short = "If the current claim represents a claim that has been adjusted and was given a prior claim number, this field represents the prior claim number "
 * related MS
-* related ^short = "If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number.  "
+* related ^short = "If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number."
 * related MS
 * supportingInfo[discharge-status].code ^short = "Patient’s status as of the discharge date for an institutional stay. Information located on UB04 (Form Locator 17)."
 * payee.type ^short = "Identifies the type of recipient of the adjudication amount; i.e., provider or subscriber or another recipient
@@ -178,7 +178,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * payee.party MS
 * status ^short = ""
 * status MS
-* insurance ^short = "Identifies another payer who applied benefits for the service on another claim.  "
+* insurance ^short = "Identifies another payer who applied benefits for the service on another claim."
 * insurance MS
 * total[inoutnetwork].category ^short = "Indicates the in network or out of network payment status of the claim."
 * procedure ^short = "Additional surgical procedure a patient received during inpatient stay. Coding methods for this field is International Classification of Diseases Surgical Procedures (ICD-10)."
@@ -186,9 +186,9 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * procedure ^short = "Date of Procedure - Secondary"
 * procedure MS
 * total[adjudicationamounttype].amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.)"
-* meta ^short = "Defines the date the Resource was created or updated, whichever is later. "
+* meta ^short = "Defines the date the Resource was created or updated, whichever is later.*
 * meta MS
-* careTeam.role ^short = "The functional role of a provider on a claim.  "
+* careTeam.role ^short = "The functional role of a provider on a claim."
 * careTeam.role MS
 * careTeam.provider ^short = "The name of the Attending Physician for the admission"
 * careTeam.provider MS

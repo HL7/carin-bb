@@ -37,6 +37,9 @@ Description: "Indicates if the institutional diagnosis is admitting, principal, 
 * #patient-reason-for-visit "Patient Reason for Visit" "Identifies the patient's reason for the outpatient institutional visit"
 * #other "Other"  "Required when other conditions coexist or develop subsequently during the treatment"
 * #secondary  "Secondary"  "Required when necessary to report additional diagnoses on professional and non-clinician claims"
+* #principal "Principal" "Undefined"
+* #admitting "Admitting" "Undefined"
+* #first-listed "First Listed" "Undefined"
 * ^copyright = "This CodeSystem is not copyrighted."
 
 
