@@ -1,4 +1,4 @@
-<table style="border-color: red;" border="4">
+<!-- <table style="border-color: red;" border="4">
 <tbody>
 <tr>
 <td style="text-align: center;"><strong>DISCLAIMER</strong></td>
@@ -8,7 +8,7 @@
 </tr>
 </tbody>
 </table>
-<h3>&nbsp;</h3>
+<h3>&nbsp;</h3> -->
 <h3>Introduction</h3>
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the [Table of Contents](toc.html) for more information.</p>
 <h3>Log of Continuous Integration Build Changes</h3>
