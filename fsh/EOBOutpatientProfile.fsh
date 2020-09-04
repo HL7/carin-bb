@@ -28,24 +28,24 @@ The claims data is based on the institutional claim form UB-04, submission stand
    pointoforigin 0..1 MS and 
    admtype 0..1 MS and 
    discharge-status 0..1 MS 
-* supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategory#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
-* supportingInfo[claimrecvddate].category = ClaimInformationCategoryCS#claimrecvddate
+* supportingInfo[claimrecvddate].category = ClaimInformationCategory#claimrecvddate
 * supportingInfo[claimrecvddate] ^short = "Claim Received Date"
 * supportingInfo[claimrecvddate].timing[x] only date 
 * supportingInfo[claimrecvddate].timing[x] 1..1
-* supportingInfo[typeofbill].category = ClaimInformationCategoryCS#typeofbill
+* supportingInfo[typeofbill].category = ClaimInformationCategory#typeofbill
 * supportingInfo[typeofbill] ^short = "Type of Bill"
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
-* supportingInfo[pointoforigin].category = ClaimInformationCategoryCS#admsrc
+* supportingInfo[pointoforigin].category = ClaimInformationCategory#admsrc
 * supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
 * supportingInfo[pointoforigin] ^short = "Claim Point of Origin for Admission or Visit"
-* supportingInfo[admtype].category = ClaimInformationCategoryCS#admtype
+* supportingInfo[admtype].category = ClaimInformationCategory#admtype
 * supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
 * supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit "
-* supportingInfo[discharge-status].category = ClaimInformationCategoryCS#discharge-status
+* supportingInfo[discharge-status].category = ClaimInformationCategory#discharge-status
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 * item.revenue from AHANUBCRevenueCodes (required)
@@ -65,10 +65,10 @@ The claims data is based on the institutional claim form UB-04, submission stand
    denialreason 0..1 MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "Allowed number of units"
-* item.adjudication[allowedunits].category = ClaimAdjudicationCategoryCS#allowedunits
+* item.adjudication[allowedunits].category = ClaimAdjudicationCategory#allowedunits
 * item.adjudication[allowedunits].value only decimal
 * item.adjudication[denialreason] ^short = "Denial Reason"
-* item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
+* item.adjudication[denialreason].category = ClaimAdjudicationCategory#denialreason 
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
@@ -84,7 +84,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS 
 * adjudication[denialreason] ^short = "Denial Reason"
-* adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
+* adjudication[denialreason].category = ClaimAdjudicationCategory#denialreason 
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * adjudication[denialreason].reason 1..1 MS
 * adjudication[adjudicationamounttype].category from C4BBAdjudication (required)

@@ -25,8 +25,8 @@ Alias:   $PresentOnAdmissionV2CS = urn:oid:2.16.840.1.113883.6.301.11
 
 // CodeSystem Aliases due to bugs in Sushi 0.12.7 and 0.13.2 ..hopefully resolved and deleted at some point
 //Alias: $IdentifierTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS
-//Alias: $ClaimInformationCategoryCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimInformationCategoryCS
-//Alias: $ClaimAdjudicationCategoryCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimAdjudicationCategoryCS
+//Alias: $ClaimInformationCategory = http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimInformationCategory
+//Alias: $ClaimAdjudicationCategory = http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimAdjudicationCategory
 
 
 

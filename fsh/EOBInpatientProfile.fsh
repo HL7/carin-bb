@@ -44,25 +44,25 @@ The claims data is based on the institutional claim format UB-04, submission sta
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * supportingInfo[admissionperiod] ^short = "Admission Period"
 * supportingInfo[drg] ^short = "DRG codes assigned (33)"
-* supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategoryCS#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategory#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
-* supportingInfo[admissionperiod].category = ClaimInformationCategoryCS#admissionperiod  
+* supportingInfo[admissionperiod].category = ClaimInformationCategory#admissionperiod  
 * supportingInfo[admissionperiod].timingPeriod 1..1 MS
-* supportingInfo[claimrecvddate].category  = ClaimInformationCategoryCS#claimrecvddate
+* supportingInfo[claimrecvddate].category  = ClaimInformationCategory#claimrecvddate
 * supportingInfo[claimrecvddate].timing[x] only date 
 * supportingInfo[claimrecvddate].timing[x] 1..1 MS
-* supportingInfo[typeofbill].category  = ClaimInformationCategoryCS#typeofbill
+* supportingInfo[typeofbill].category  = ClaimInformationCategory#typeofbill
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
-* supportingInfo[pointoforigin].category  = ClaimInformationCategoryCS#admsrc
+* supportingInfo[pointoforigin].category  = ClaimInformationCategory#admsrc
 * supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
-* supportingInfo[admtype].category  = ClaimInformationCategoryCS#admtype
+* supportingInfo[admtype].category  = ClaimInformationCategory#admtype
 * supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
 * supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit "
-* supportingInfo[discharge-status].category  = ClaimInformationCategoryCS#discharge-status
+* supportingInfo[discharge-status].category  = ClaimInformationCategory#discharge-status
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 * supportingInfo[discharge-status] ^short = "Discharge Status"
-* supportingInfo[drg].category  = ClaimInformationCategoryCS#drg
+* supportingInfo[drg].category  = ClaimInformationCategory#drg
 * supportingInfo[drg].code from CMSDRG  (required)
 * supportingInfo[drg] ^short = "Claim diagnosis related group (DRG)"
 * item.revenue from AHANUBCRevenueCodes (required)
@@ -78,10 +78,10 @@ The claims data is based on the institutional claim format UB-04, submission sta
    denialreason 0..1 MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "Allowed number of units"
-* item.adjudication[allowedunits].category = ClaimAdjudicationCategoryCS#allowedunits
+* item.adjudication[allowedunits].category = ClaimAdjudicationCategory#allowedunits
 * item.adjudication[allowedunits].value only decimal
 * item.adjudication[denialreason] ^short = "Denial Reason"
-* item.adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
+* item.adjudication[denialreason].category = ClaimAdjudicationCategory#denialreason 
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
@@ -100,7 +100,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 //* adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#adjudicationamounttype
 * adjudication ^slicing.discriminator.path = "category"
 * adjudication[denialreason] ^short = "Denial Reason"
-* adjudication[denialreason].category = ClaimAdjudicationCategoryCS#denialreason 
+* adjudication[denialreason].category = ClaimAdjudicationCategory#denialreason 
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * adjudication[denialreason].reason 1..1
 * adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
