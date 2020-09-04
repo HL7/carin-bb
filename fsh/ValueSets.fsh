@@ -53,7 +53,7 @@ ValueSet: C4BBPayerProviderContractingStatus
 Title: "C4BB Payer Provider Contracting Status"
 Description: "Indicates that the Provider has a contract with the Payer as of the effective date of service or admission."
 * C4BBPayerAdjudicationStatus#contracted "Contracted" 
-* C4BBPayerAdjudicationStatus#nnoncontracted "Non-Contracted" 
+* C4BBPayerAdjudicationStatus#noncontracted "Non-Contracted" 
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBPayerBenefitPaymentStatus

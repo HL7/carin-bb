@@ -30,13 +30,13 @@ The list of CARIN Profiles is shown below. Each profile defines the minimum mand
 All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician  {% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Facility.html">C4BB-ExplanationOfBenefit-Inpatient-Facility</a></td>
+      <td><a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html">C4BB-ExplanationOfBenefit-Inpatient-Institutional</a></td>
       <td><a href="StructureDefinition-C4BB-ExplanationOfBenefit.html">C4BB-ExplanationOfBenefit </a></td>
       <td>{% capture md_text %}The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at a facility as part of an overnight stay. 
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
         <tr>
-      <td><a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Facility.html">C4BB-ExplanationOfBenefit-Outpatient-Facility</a></td>
+      <td><a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">C4BB-ExplanationOfBenefit-Outpatient-Institutional</a></td>
       <td><a href="StructureDefinition-C4BB-ExplanationOfBenefit.html">C4BB-ExplanationOfBenefit </a></td>
       <td>{% capture md_text %}The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at a facility that are not part of an overnight stay. 
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450.{% endcapture %}{{ md_text | markdownify }}</td>
