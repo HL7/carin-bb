@@ -56,10 +56,14 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication ^slicing.discriminator.type = #pattern
 * item.adjudication ^slicing.discriminator.path = "category"
 * item.adjudication contains
-   adjudicationamounttype 0..* MS 
+   adjudicationamounttype 0..* MS and
+   denialreason 0..1 MS 
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
+* item.adjudication[denialreason].reason from NCPDPRejectCode
+* item.adjudication[denialreason].reason 1..1 MS
+* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 * total ^slicing.rules = #open 
 * total ^slicing.ordered = false   // can be omitted, since false is the default
 * total ^slicing.description = "Slice based on value pattern"
