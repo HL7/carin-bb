@@ -113,7 +113,7 @@ Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA
 * ^copyright = "NDC codes are available for use.  As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
 ValueSet: FDANDCOrCompound
-Title: "FDA NDC or Compound "
+Title: "FDA NDC or Compound"
 Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7.  
 Values will be the NDC Codes when the Compound Code value is 0 or 1.  When the Compound Code value = 2, the value will be the literal, ‘compound’"
 * codes from system $FDANationalDrugCode

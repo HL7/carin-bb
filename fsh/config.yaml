@@ -57,7 +57,7 @@ menu:
     Profiles: artifacts.html#3
     Search Parameters: artifacts.html#2
     Terminology: Terminology.html 
-    Capability Statement: CapabilityStatement-c4bb.html
+    Capability Statement: CapabilityStatement-carin-bb.html
   Security:
     SMART on FHIR Application Launch: Authorization_Authentication_and_Registration.html#smart-on-fhir-application-launch
     Authorization and Authentication: https://build.fhir.org/ig/HL7/carin-bb/Authorization_Authentication_and_Registration.html#authorization-and-authentication
