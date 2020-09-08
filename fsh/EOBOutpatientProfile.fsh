@@ -3,7 +3,7 @@ Parent: C4BB-ExplanationOfBenefit
 Id: C4BB-ExplanationOfBenefit-Outpatient-Institutional
 Title: "C4BB ExplanationOfBenefit Outpatient Institutional"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at a Institutional that are not part of an overnight stay. 
-The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services as form CMS-1450."
+The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services ."
 * type  = $HL7ClaimTypeCS#institutional
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)   // was PayerInstitutionalProviderRole
 * careTeam obeys EOB-inst-careTeam-practitioner

@@ -167,7 +167,7 @@ Usage: #example
 * total[inoutnetwork].amount.currency = #USD
 //* adjudication[inoutnetwork].category = C4BBAdjudication#other
 
-Instance: EOBProfessional1
+Instance: EOBProfessional1a
 InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician 
 Description: "EOB Professional  Example1"
 Usage: #example
