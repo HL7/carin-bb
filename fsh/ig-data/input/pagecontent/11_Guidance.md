@@ -18,7 +18,7 @@ The CARIN BB’s interpretation of Must Support and Missing Data is aligned with
 <li>In situations where information on a particular data element is not present and the reason for absence is unknown, Health Plan API actors **SHALL NOT** include the data elements in the resource instance returned as part of the query results.</li>
 <li>When querying Health Plan API actors, Consumer App actors **SHALL** interpret missing data elements within resource instances as data not present in the Health Plan API actors system.</li>
 <li>In situations where information on a particular data element is missing and the Health Plan API actor knows the precise reason for the absence of data, Health Plan API actors **SHALL** send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or use the dataAbsentReason extension.</li>
-<li>Consumer App actors **SHALL** be able to process resource instances containing data elements asserting missing information.
+<li>Consumer App actors **SHALL** be able to process resource instances containing data elements asserting missing information.</li>
 <li>NOTE: The above definition of *Must Support* is derived from HL7v2 concept Required but may be empty - RE described in HL7v2 V28_CH02B_Conformance.doc.</li>
 <li>NOTE: Readers are advised to understand <a href="http://hl7.org/fhir/R4/terminologies.html">FHIR Terminology</a> requirements, <a href="http://hl7.org/fhir/R4/http.html">FHIR RESTful API</a>  based on the HTTP protocol, along with <a href="http://hl7.org/fhir/R4/datatypes.html">FHIR Data Types</a>, <a href="http://hl7.org/fhir/R4/search.html">FHIR Search</a> 
 and <a href="http://hl7.org/fhir/R4/resource.html">FHIR Resource</a> formats before implementing CARIN BB IG requirements.</li>
@@ -35,19 +35,16 @@ Any actor acting as a Health Plan API actor in this IG **SHALL**:
 </ul>
 Any actor acting a FHIR Client in this IG **SHALL**:
 <ul>
-<li>Be able to process and retain all profile data elements that have a minimum cardinality >= 1 and/or 
-flagged as Must Support as defined by that profiles StructureDefinition.</li>
+<li>Be able to process and retain all profile data elements that have a minimum cardinality >= 1 and/or flagged as Must Support as defined by that profiles StructureDefinition.</li>
 <li>Conform to the US Core Client Capability Statement expectations for that profiles type.</li>
 </ul>
 <h4 id="common-clinical-data-set">U.S. Core Data for Interoperability and 2015 Edition Common Clinical Data Set</h4>
 The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access - Data Category Request 170.315(g)(8). They were created for each item in the <a href="https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf">2015 Edition Common Clinical Data Set (CCDS)</a>]. The 3.1.0 version of the US Core Profiles IG includes new requirements from the latest proposed ONC  <a href="https://www.healthit.gov/topic/laws-regulation-and-policy/notice-proposed-rulemaking-improve-interoperability-health">U.S. Core Data for Interoperability(USCDI)</a>) and includes all the <a href="https://www.healthit.gov/isa/api-resource-collection-health-arch">API Resource Collection in Health (ARCH)</a> resources.
 
-
 <h4 id="code-systems">Access to Licensed Code Systems</h4>
 The Industry Standard Code Systems defined by this IG align with claims submission standards adopted by the Department of Health and Human  Services.  Some of the codes require licenses; others are available for use.  The CARIN team will be submitting proposed additions to the set of <a href="https://www.hl7.org/fhir/terminologies-systems.html">Externally Published code systems</a> ) for any Industry Standard Code Systems not included in this set.
 
 <h5 id="licensed"> Licensed Industry Standard Code Systems</h5>
- 
 This IG includes value set bindings to industry standard codes that reference Code Systems which require implementers to purchase a license before the coded concepts can be used.   HL7 presently addresses similar license requirements for LOINC and SNOMED CT codes, which although are not used by this IG, are required for other IGs.  The following information summarizes the set of licensed Code Systems required by this IG and provides links to the information about where to go to purchase a license.
 <ul>
 <li>CPT (Current Procedural Terminology) Procedure Codes and Modifiers:  
@@ -85,6 +82,5 @@ assigns the first 5 digits of the 11 digit code.  <a href="http://hl7.org/fhir/s
 </li>
 <li>RARC (Remittance Advice Remark Codes) Codes:  The RARC codes are owned by CMS.  
 <a href="http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes">
-http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes</a>.
-</li>
+http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes</a>.</li>
 </ul>
