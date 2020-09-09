@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.carin-bb
 canonical: http://hl7.org/fhir/us/carin-bb
-version: 0.1.2
+version: 0.1.3
 name: CARINConsumerDirectedPayerDataExchange
 title: CARIN Consumer Directed Payer Data Exchange
 status: active
@@ -54,14 +54,14 @@ menu:
     Common Payer Consumer Data Set (CPCDS): Common_Payer_Consumer_Data_Set.html
     Notes To Developers: Notes_To_Developers.html
   FHIR Artifacts:
-    Profiles: profiles.html
-    Search Parameters: search.html
-    Terminology: Terminology.html
-    Capability Statements: Capability.html
+    Profiles: artifacts.html#3
+    Search Parameters: artifacts.html#2
+    Terminology: Terminology.html 
+    Capability Statement: CapabilityStatement-c4bb.html
   Security:
     SMART on FHIR Application Launch: Authorization_Authentication_and_Registration.html#smart-on-fhir-application-launch
     Authorization and Authentication: https://build.fhir.org/ig/HL7/carin-bb/Authorization_Authentication_and_Registration.html#authorization-and-authentication
-  Examples: Examples.html
+  Examples:  artifacts.html#7
   Downloads: downloads.html
 
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮

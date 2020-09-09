@@ -10,7 +10,7 @@
         "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
         "valueCode": "trial-use"
     }],
-    "url": "http://hl7.org/fhir/us/carin/SearchParameter/explanationofbenefit-service-date",
+    "url": "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-service-date",
     "version": "0.1.0",
     "name": "ExplanationOfBenefit_ServiceDate",
     "status": "active",

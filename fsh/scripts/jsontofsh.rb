@@ -37,8 +37,8 @@ require 'json'
 
 
     jsonfile  = ARGV[0] 
-    binding.pry
+   # binding.pry
     s = File.read(jsonfile)
     h = JSON.parse(s)
-     # binding.pry
+      binding.pry
     recursiveHashToFSH("", h)

@@ -1,256 +1,110 @@
+// Contains ValueSets for Codes Defined WITHIN this IG  
 
 
-ValueSet: ClaimInformationCategory
-Title: "Claim Information Category"
-Description: "Claim Information Category - Used as the discriminator for supportingInfo" 
-* codes from system ClaimInformationCategoryCS 
+ValueSet: C4BBClaimInstitutionalCareTeamRole 
+Title: "C4BB Claim Institutional Care Team Role "
+Description: "Describes functional roles of the care team members."
+* $CareTeamRoleCodeCS#primary 
+* $CareTeamRoleCodeCS#supervisor 
+* C4BBClaimCareTeamRole#attending 
+* C4BBClaimCareTeamRole#referring
+* C4BBClaimCareTeamRole#operating 
+// * C4BBClaimCareTeamRoleCS#site 
+// * C4BBClaimCareTeamRoleCS#prescribing 
+* ^copyright = "This Valueset is not copyrighted."
 
-
-/*
-ValueSet: PayerProviderRole
-Title: "Payer Provider Role"
-Description: "Payer Provider Role"
-* codes from system CareTeamRoleCS
-*/
-
-ValueSet: CARINBBInstitutionalClaimCareTeamRoleCodes
-Title: "CARINBB Institutional Claim Care Team Roles"
-Description: "Indicates the role of the provider providing the care."
-* $CareTeamRoleCodeCS#supervisor "Supervising Provider"
+ValueSet: C4BBClaimProfessionalAndNonClinicianCareTeamRole   
+Title: "C4BB Claim Professional And Non Clinician Care Team Role "
+Description: "Describes functional roles of the care team members"
 * $CareTeamRoleCodeCS#primary "Primary provider." 
-* CareTeamRoleCS#attending "Attending Provider"
-* CareTeamRoleCS#performing "Performing Provider"
-* CareTeamRoleCS#referring "Referring Provider"
-* CareTeamRoleCS#site "Site Provider"
-* CareTeamRoleCS#prescribing "Prescribing Provider"
+* C4BBClaimCareTeamRole#performing 
+* C4BBClaimCareTeamRole#referring 
+* ^copyright = "This Valueset is not copyrighted."
 
-// attending | performing | pcp  | site | prescribing | referring | supervising
+ValueSet: C4BBClaimPharmacyTeamRole 
+Title: "C4BB Claim Pharmacy CareTeam Roles"
+Description: "Describes functional roles of the care team members"
+* $CareTeamRoleCodeCS#primary 
+* C4BBClaimCareTeamRole#prescribing 
+* ^copyright = "This Valueset is not copyrighted."
 
-ValueSet: CARINBBProfessionalAndNonclinicanClaimCareTeamRoleCodes  
-Title: "CARINBB Professional and Non-Clinician CareTeam Roles"
-Description: "Indicates the role of the provider providing the care."
-* $CareTeamRoleCodeCS#primary "Primary provider." 
-* CareTeamRoleCS#performing "Performing Provider"
-* CareTeamRoleCS#referring "Referring Provider"
-
-ValueSet: CARINBBPharmacyClaimCareTeamRoleCodes
-Title: "CARINBB Pharmacy CareTeam Roles"
-Description: "Indicates the role of the provider providing the care."
-* CareTeamRoleCS#pcp "Primary Care Provider"
-* CareTeamRoleCS#prescribing "Prescribing Provider"
-* CareTeamRoleCS#performing "Performing Provider"
-
-ValueSet: AdjudicationCarinBBValueCodes   // was PayerAdjudicationValueCodes
-Title: "Adjudication CARINBB Value Codes"
-Description: "As per Jira FHIR-26992... HL7 Requested to fix HL7 Adjudication codesystem"
+ValueSet: C4BBAdjudication   
+Title: "C4BB Adjudication"
+Description: "Describes the various amount fields used when payers receive and adjudicate a claim.  It includes the values 
+defined in http://terminology.hl7.org/CodeSystem/adjudication, as well as those defined in the C4BB Adjudication CodeSystem."
 * $HL7AdjudicationCS#submitted 
 * $HL7AdjudicationCS#copay 
 * $HL7AdjudicationCS#eligible
 * $HL7AdjudicationCS#deductible  
 * $HL7AdjudicationCS#benefit 
-* PayerAdjudicationCategoryCS#coinsurance "Coinsurance" 
-* PayerAdjudicationCategoryCS#noncovered "Noncovered" 
-* PayerAdjudicationCategoryCS#priorpayerpaid "Prior payer paid" 
-* PayerAdjudicationCategoryCS#paidbypatient "Paid by patient" 
-* PayerAdjudicationCategoryCS#paidtopatient "Paid to patient"
-* PayerAdjudicationCategoryCS#paidtoprovider "Paid to provider" 
-* PayerAdjudicationCategoryCS#memberliability "Member liability" 
-* PayerAdjudicationCategoryCS#discount "Discount" 
-* PayerAdjudicationCategoryCS#drugcost "Drug cost" 
+* C4BBAdjudication#coinsurance "Coinsurance" 
+* C4BBAdjudication#noncovered "Noncovered" 
+* C4BBAdjudication#priorpayerpaid "Prior payer paid" 
+* C4BBAdjudication#paidbypatient "Paid by patient" 
+* C4BBAdjudication#paidtopatient "Paid to patient"
+* C4BBAdjudication#paidtoprovider "Paid to provider" 
+* C4BBAdjudication#memberliability "Member liability" 
+* C4BBAdjudication#discount "Discount" 
+* C4BBAdjudication#drugcost "Drug cost" 
+* ^copyright = "This Valueset is not copyrighted."
 
 
-ValueSet: PayerAdjudicationAmountCategory
-Title: "Payer Adjudication Amount Category"
-Description: "This describes the various amount fields used when payers receive and adjudicate a claim."
-* ClaimAdjudicationCategoryCS#submittedamount
-* ClaimAdjudicationCategoryCS#allowedamount
-* ClaimAdjudicationCategoryCS#deductibleamount 
-* ClaimAdjudicationCategoryCS#coinsuranceamount 
-* ClaimAdjudicationCategoryCS#copayamount
-* ClaimAdjudicationCategoryCS#noncoveredamount
-* ClaimAdjudicationCategoryCS#cobamount
-* ClaimAdjudicationCategoryCS#paymentamount
-* ClaimAdjudicationCategoryCS#patientpayamount
+ValueSet: C4BBPayerProviderContractingStatus
+Title: "C4BB Payer Provider Contracting Status"
+Description: "Indicates that the Provider has a contract with the Payer as of the effective date of service or admission."
+* C4BBPayerAdjudicationStatus#contracted "Contracted" 
+* C4BBPayerAdjudicationStatus#noncontracted "Non-Contracted" 
+* ^copyright = "This Valueset is not copyrighted."
 
-
-ValueSet: PayerProviderContractingStatus
-Title: "Provider Provider Contracting Status"
-Description: "Indicates that the Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission."
-* PayerAdjudicationCategoryCS#contracted "contracted"
-* PayerAdjudicationCategoryCS#non-contracted "non-contracted"
-
-ValueSet: BenefitPaymentStatus
-Title: "Benefit Payment Status"
+ValueSet: C4BBPayerBenefitPaymentStatus
+Title: "C4BB Payer Benefit Payment Status"
 Description: "Indicates the in network or out of network payment status of the claim."
-* PayerAdjudicationCategoryCS#in-network "in-network"
-* PayerAdjudicationCategoryCS#out-of-network "out-of-network"
-* PayerAdjudicationCategoryCS#other "other"
+* C4BBPayerAdjudicationStatus#innetwork	"In Network"
+* C4BBPayerAdjudicationStatus#outofnetwork "Out Of Network"
+* C4BBPayerAdjudicationStatus#other "Other" 
+* ^copyright = "This Valueset is not copyrighted."
 
-ValueSet: ClaimPaymentStatusCode
-Title: "Claim Payment Status Code"
+ValueSet: C4BBPayerClaimPaymentStatusCode
+Title: "C4BB Payer Claim Payment Status Code"
 Description: "Indicates whether the claim / item was paid or denied."
-* PayerAdjudicationCategoryCS#paid "paid"
-* PayerAdjudicationCategoryCS#denied "denied"
+* C4BBAdjudication#paid "paid"
+* C4BBAdjudication#denied "denied"
+* ^copyright = "This Valueset is not copyrighted."
 
+ValueSet: C4BBClaimProfessionalAndNonClinicianDiagnosisType 
+Title: "C4BB Claim Professional And Non Clinician Diagnosis Type"
+Description: "Indicates if the professional and non-clinician diagnosis is principal or secondary"
+* C4BBClaimDiagnosisType#principal "principal"
+* C4BBClaimDiagnosisType#secondary "secondary"
+* C4BBClaimDiagnosisType#first-listed "first-listed"
+* ^copyright = "This Valueset is not copyrighted."
 
+ValueSet: C4BBClaimInpatientInstitutionalDiagnosisType 
+Title: "C4BB Claim Inpatient Institutional Diagnosis Type"
+Description: "Indicates if the inpatient institutional diagnosis is admitting, principal, secondary or an external cause of injury."
+* C4BBClaimDiagnosisType#principal 
+* C4BBClaimDiagnosisType#secondary  
+* C4BBClaimDiagnosisType#external-cause-of-injury 
+* C4BBClaimDiagnosisType#first-listed  
+* C4BBClaimDiagnosisType#admitting 
+* ^copyright = "This Valueset is not copyrighted."
 
+ValueSet: C4BBClaimOutpatientInstitutionalDiagnosisType 
+Title: "C4BB Claim Outpatient Institutional Diagnosis Type"
+Description: "Indicates if the outpatient institutional diagnosis is admitting, principal, secondary an external cause of injury or a patient reason for visit"
+* codes from system C4BBClaimDiagnosisType
 
-ValueSet: PayerProfessionalandnoncliniciandiagnosistype
-Title: "Diagnosis Type -- Professional and Non-Clinician"
-Description: "Payer Professional and Non-Clinician Diagnosis Type"
-* PayerDiagnosisTypeCS#principal "principal"
-* PayerDiagnosisTypeCS#secondary "secondary"
-* PayerDiagnosisTypeCS#first-listed "first-listed"
-
-
-ValueSet: PayerInpatientfacilitydiagnosistype
-Title: "Diagnosis Type -- Inpatient Facility"
-Description: "Payer Inpatient Facility Diagnosis Type"
-* PayerDiagnosisTypeCS#principal 
-* PayerDiagnosisTypeCS#secondary  
-* PayerDiagnosisTypeCS#external-cause-of-injury 
-* PayerDiagnosisTypeCS#first-listed  
-* PayerDiagnosisTypeCS#admitting 
-
-ValueSet: PayerOutpatientfacilitydiagnosistype
-Title: "Diagnosis Type -- Outpatient Facility"
-Description: "Payer Outpatient Facility Diagnosis Type"
-* codes from system PayerDiagnosisTypeCS
-
-ValueSet: NUBCPresentOnAdmission
-Title: "NUBC Present On Admission"
-Description: "NUBC Present On Admission"
-
-ValueSet: AdjudicationDenialReason
-Title: "Adjudication Denial Reason"
-Description: "Reason codes used to interpret the adjudication denial reason.  X12 CARC + CMS RARC"
-
-
-ValueSet: CMSDRG
-Title: "CMS-DRG"
-Description: "CMS-DRG"
-
-ValueSet: NUBCPatientDischargeStatus
-Title: "NUBC Patient Discharge Status"
-Description: "NUBC Patient Discharge Status"
-//* codes from system $NUBCPatientDischargeCS
-
-ValueSet: NUBCPriorityOfAdmissionn
-Title: "NUBC Priority of Admission"
-Description: "NUBC Priority of Admission"
-//* codes from system $NUBCPriorityOfAdmissionOrVisitCS
-
-/*
-ValueSet: NUBCPointOfOriginForAdmissionOrVisit
-Title: "NUBC Point of Origin of Admission"
-Description: "NUBC Point of Origin of Admission  https://jira.hl7.org/browse/FHIR-27020"
-* codes from system $NUBCPointOfOriginForAdmissionOrVisitCS
-
-
-ValueSet: NUBCRevenueCode
-Title: "NUBC Revenue Code"
-Description: "NUBC Revenue Code"
-
-ValueSet: NUBCTypeOfBill
-Title: "NUBC Type of Bill"
-Description: "Code System http://www.nubc.org/type-of-bill,"
-*/
+ValueSet: ClaimInformationCategory
+Title: "Claim Information Category"
+Description: "Claim Information Category - Used as the discriminator for supportingInfo" 
+* codes from system ClaimInformationCategory 
+* ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: PatientIdentifierType
 Title: "Patient Identifier Type"
 Description: "Patient Identifier Type"
 * IdentifierTypeCS#um
 * IdentifierTypeCS#mb
-* IdentifierTypeCS#mr
+* $IdentifierTypeCS#MR
 * IdentifierTypeCS#pt
-
-//alueSet: OrganizationIdentifierType
-//Title: "Organization Identifier Type"
-//Description: "Organization  Identifier Type"
-//* codes from system $OrganizationIdentifierTypeCS
-
-ValueSet: NCPDPDispensedAsWritten
-Title: "NCPDP Dispensed As Written (DAW)"
-Description: "http://www.ncpdp.org/dispensed-as-written-or-product-selection-code"
-
-ValueSet: NCPDPBrandGenericCode
-Title: "NCPDP Brand Generic Code"
-Description: "http://www.ncpdp.org/brand-generic-code"
-
-ValueSet: NCPDPPrescriptionOriginCode
-Title: "NCPDP Prescription Origin Code"
-Description: "http://www.ncpdp.org/prescription-origin-code"
-
-ValueSet: NCPDPRejectCode
-Title: "NCPDP Reject Code"
-Description: "http://www.ncpdp.org/reject-code"
-
-ValueSet: FDANDCNCPDPCompoundCode
-Title: "FDA NDC NCPDP Compound Code"
-Description: "NCPDP field # 407-D7 (National Drug Code (NDC)) or NCPDP field # 406-D6 (Compound Code)"
-
-ValueSet: FDANationalDrugCode
-Title: "FDA National Drug Code (NDC)"
-Description: "FDA National Drug Code (NDC)"
-* codes from system $FDANationalDrugCodeCS
-
-ValueSet: ICD10CM
-Title: "ICD-10-CM Diagnosis Codes"
-Description: "ICD-10-CM Diagnosis Codes.  ***We need ALL Codes, inactive and inactive.   Current binding is to active codes only***"
-* codes from system $ICD10CM
-
-ValueSet: ICD10PCS
-Title: "ICD-10-PCS"
-Description: "ICD-10-PCS"
-* codes from system $ICD10PCS 
-
-ValueSet: CPTHCPCSProcedureCode 
-Description: "AMA CPT and CMS HCPCS Procedure Codes"
-Title: "AMA CPT and CMS HCPCS Procedure Codes"
-
-ValueSet:  CPTHCPCSModifierCode
-Description: "AMA CPT and CMS HCPCS Modifier Codes"
-Title: "AMA CPT and CMS HCPCS Modifier Codes"
-
-
-ValueSet: ClaimAdjudicationCategory
-Title: "Claim Adjudication Category"
-Description: "Values for EOB.item.adjudication.category, as per Igor"
-* codes from valueset AdjudicationCarinBBValueCodes
-* codes from valueset BenefitPaymentStatus
-* ClaimAdjudicationCategoryCS#denialreason 
-* ClaimAdjudicationCategoryCS#allowedunits 
-
-/* ValueSet: 
-Title: "Adjustment Amount Category"
-Description: "Describes the various amount fields used when submitting and adjudicating a claim."
-* ClaimAdjudicationCategoryCS#submittedamount	"submitted amount"	
-* ClaimAdjudicationCategoryCS#allowedamount	"allowed amount"
-* ClaimAdjudicationCategoryCS#deductibleamount	"deductible amount"	
-* ClaimAdjudicationCategoryCS#coinsuranceamount	"coinsurance amount"	
-* ClaimAdjudicationCategoryCS#copayamount	"copay amount"	
-* ClaimAdjudicationCategoryCS#noncoveredamount	"noncovered amount"	
-* ClaimAdjudicationCategoryCS#cobamount	"cob amount"	
-* ClaimAdjudicationCategoryCS#paymentamount	"payment amount"
-* ClaimAdjudicationCategoryCS#patientpayamount	"patient pay amount"
-
-
-ValueSet: BenefitPaymentStatusCategory
-Title: "Benefit Payment Status Category"
-Description: "Benefit Payment Status Category"
-* ClaimAdjudicationCategoryCS#innetworkbenefitpaymentstatus	"in network benefit payment status"
-* ClaimAdjudicationCategoryCS#outofnetworkbenefitpaymentstatus	"out of network benefit payment status"
-* ClaimAdjudicationCategoryCS#otherbenefitpaymentstatus	"other benefit payment status"	
-*/
-
-ValueSet: AdjudicationValueCodes
-Title: "Benefit Payment Status Category"
-Description: "Benefit Payment Status Category"
-* ClaimAdjudicationCategoryCS#submittedamount	"submitted amount"	
-* ClaimAdjudicationCategoryCS#allowedamount	"allowed amount"
-* ClaimAdjudicationCategoryCS#deductibleamount	"deductible amount"	
-
-ValueSet: CMSPlaceOfService
-Title: "CMS Place of Service"
-Description: "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set.html .  The link takes one to the Place of Service list as an html document; it is not a file to which an IG can be bound.   The code set is owned by CMS and is available for use."
-//* codes from system CMSPlaceOfServiceCS 
+* ^copyright = "This Valueset is not copyrighted."
