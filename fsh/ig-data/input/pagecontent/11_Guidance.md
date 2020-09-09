@@ -1,7 +1,7 @@
-<h4 id="conformance-verbs"> Conformance Verbs</h4>
+<h3 id="conformance-verbs"> Conformance Verbs</h3>
 The conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined in <a href="http://hl7.org/fhir/R4/conformance-rules.html">FHIR Conformance Rules.</a>.
 
-<h4 id="must-support">Must Support</h4>
+<h3 id="must-support">Must Support</h3>
 For profiles defined in other IGs, the meaning of Must Support is established in the defining IG. 
 <br>
 Note that the Must Support requirements for this IG are modeled after the US Core implementation guide, with the requirements for CARIN Server APIs modeled on those for US Core Responders, and the requirements for CARIN Consumer Apps modeled on those for US Core Requestors.
@@ -28,10 +28,10 @@ The CARIN BB’s interpretation of Must Support and Missing Data is aligned with
 <a href="http://hl7.org/fhir/R4/resource.html">FHIR Resource</a> formats before implementing CARIN BB IG requirements.</li>
 </ul>
 
-<h4 id="missing-data">Missing Data</h4>
+<h3 id="missing-data">Missing Data</h3>
 If the source system does not have data for a *Must Support* data element with minimum cardinality = 0, the data element is omitted from the resource. If the source system does not have data for a required data element (in other words, where the minimum cardinality is > 0), follow guidance defined in the core FHIR specification and summarized in the <a href="http://hl7.org/fhir/us/core/general-guidance.html#missing-data">US Core</a>.
 
-<h4 id="conformance-to-us-core-profiles">Conformance to US Core Profiles</h4>
+<h3 id="conformance-to-us-core-profiles">Conformance to US Core Profiles</h3>
 Any actor acting as a Health Plan API actor in this IG **SHALL**:
 <ul>
 <li>Be able to populate all profile data elements that have a minimum cardinality >= 1 and/or flagged as *Must Support* as defined by that profiles StructureDefinition.</li>
@@ -42,13 +42,13 @@ Any actor acting a FHIR Client in this IG **SHALL**:
 <li>Be able to process and retain all profile data elements that have a minimum cardinality >= 1 and/or flagged as Must Support as defined by that profiles StructureDefinition.</li>
 <li>Conform to the US Core Client Capability Statement expectations for that profiles type.</li>
 </ul>
-<h4 id="common-clinical-data-set">U.S. Core Data for Interoperability and 2015 Edition Common Clinical Data Set</h4>
+<h3 id="common-clinical-data-set">U.S. Core Data for Interoperability and 2015 Edition Common Clinical Data Set</h3>
 The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access - Data Category Request 170.315(g)(8). They were created for each item in the <a href="https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf">2015 Edition Common Clinical Data Set (CCDS)</a>]. The 3.1.0 version of the US Core Profiles IG includes new requirements from the latest proposed ONC  <a href="https://www.healthit.gov/topic/laws-regulation-and-policy/notice-proposed-rulemaking-improve-interoperability-health">U.S. Core Data for Interoperability(USCDI)</a>) and includes all the <a href="https://www.healthit.gov/isa/api-resource-collection-health-arch">API Resource Collection in Health (ARCH)</a> resources.
 
-<h4 id="code-systems">Access to Licensed Code Systems</h4>
+<h3 id="code-systems">Access to Licensed Code Systems</h3>
 The Industry Standard Code Systems defined by this IG align with claims submission standards adopted by the Department of Health and Human  Services.  Some of the codes require licenses; others are available for use.  The CARIN team will be submitting proposed additions to the set of <a href="https://www.hl7.org/fhir/terminologies-systems.html">Externally Published code systems</a> ) for any Industry Standard Code Systems not included in this set.
 
-<h5 id="licensed"> Licensed Industry Standard Code Systems</h5>
+<h4 id="licensed"> Licensed Industry Standard Code Systems</h4>
 This IG includes value set bindings to industry standard codes that reference Code Systems which require implementers to purchase a license before the coded concepts can be used.   HL7 presently addresses similar license requirements for LOINC and SNOMED CT codes, which although are not used by this IG, are required for other IGs.  The following information summarizes the set of licensed Code Systems required by this IG and provides links to the information about where to go to purchase a license.
 <ul>
 <li>CPT (Current Procedural Terminology) Procedure Codes and Modifiers:  
@@ -61,7 +61,7 @@ The NUBC secretariat is the American Hospital Association.  <a href="https://www
 <li>NCPDP (National Council for Prescription Drug Program):  Retail Pharmacy data standards are defined by the NCPDP.  
 <a href="https://www.ncpdp.org">https://www.ncpdp.org</a>.</li>
 </ul>
-<h5 id="available">Available Industry Standard Code Systems</h5>
+<h4 id="available">Available Industry Standard Code Systems</h4>
 This IG includes value set bindings to industry standard codes that are available for use without licenses.  An example is the <a href="http://www.icd10data.com/icd10pcs">ICD-10</a> procedure codes ICD-10-PCS codes which are defined in <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure">US Core Procedure Profile</a>.  (However, the US Core Procedure Profile cannot be used by this IG as it includes LOINC and SNOMED CT codes, which are not defined by HHS for claims submissions).  The following information summarizes the set of Code Systems required by this IG that are available for use and provides links to the location of the information.
 <ul>
 <li>ICD-CM Diagnosis Codes: International Statistical Classification of Diseases and Related Health Problems (ICD).  
