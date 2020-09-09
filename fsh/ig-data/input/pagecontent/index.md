@@ -10,7 +10,7 @@
 </table>
 <h3>&nbsp;</h3> -->
 <h3>Introduction</h3>
-<p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the [Table of Contents](toc.html) for more information.</p>
+<p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.<br>
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
 <li>Interim Version 0.1.3 - September 6, 2020</li>
@@ -20,7 +20,6 @@
 <li>Changed references to CARIN-BB to C4BB, including profile, codesystem, and valueset names</li>
 <li>Changed naming convention for releases to Release.Ballot.Version. </li>
 </ol>
-</ul>
 <li>Interim Version 0.1.2 - August 28, 2020</li>
 <ol>
 <li>Update to <a href="CARINBBResourcesv17.png">EOBComparisonv17</a> from Pat, still in draft form.</li>

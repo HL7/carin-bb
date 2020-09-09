@@ -1,5 +1,5 @@
 <h4 id="conformance-verbs"> Conformance Verbs</h4>
-The conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined in <a href="http:/hl7.org/fhir/R4/conformance-rules.html">FHIR Conformance Rules.</a>.
+The conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined in <a href="http://hl7.org/fhir/R4/conformance-rules.html">FHIR Conformance Rules.</a>.
 
 <h4 id="must-support">Must Support</h4>
 For profiles defined in other IGs, the meaning of Must Support is established in the defining IG. 
@@ -20,12 +20,16 @@ The CARIN BB’s interpretation of Must Support and Missing Data is aligned with
 <li>In situations where information on a particular data element is missing and the Health Plan API actor knows the precise reason for the absence of data, Health Plan API actors **SHALL** send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or use the dataAbsentReason extension.</li>
 <li>Consumer App actors **SHALL** be able to process resource instances containing data elements asserting missing information.</li>
 <li>NOTE: The above definition of *Must Support* is derived from HL7v2 concept Required but may be empty - RE described in HL7v2 V28_CH02B_Conformance.doc.</li>
-<li>NOTE: Readers are advised to understand <a href="http://hl7.org/fhir/R4/terminologies.html">FHIR Terminology</a> requirements, <a href="http://hl7.org/fhir/R4/http.html">FHIR RESTful API</a>  based on the HTTP protocol, along with <a href="http://hl7.org/fhir/R4/datatypes.html">FHIR Data Types</a>, <a href="http://hl7.org/fhir/R4/search.html">FHIR Search</a> 
-and <a href="http://hl7.org/fhir/R4/resource.html">FHIR Resource</a> formats before implementing CARIN BB IG requirements.</li>
+<li>NOTE: Readers are advised to understand 
+<a href="http://hl7.org/fhir/R4/terminologies.html">FHIR Terminology</a> requirements, 
+<a href="http://hl7.org/fhir/R4/http.html">FHIR RESTful API</a>  based on the HTTP protocol, along with 
+<a href="http://hl7.org/fhir/R4/datatypes.html">FHIR Data Types</a>, 
+<a href="http://hl7.org/fhir/R4/search.html">FHIR Search</a> and 
+<a href="http://hl7.org/fhir/R4/resource.html">FHIR Resource</a> formats before implementing CARIN BB IG requirements.</li>
 </ul>
 
 <h4 id="missing-data">Missing Data</h4>
-If the source system does not have data for a *Must Support* data element with minimum cardinality = 0, the data element is omitted from the resource. If the source system does not have data for a required data element (in other words, where the minimum cardinality is > 0), follow guidance defined in the core FHIR specification and summarized in the <a href="http://hl7.org/fhir/us/core/general-guidance.html#missing-data">US Core</a>].
+If the source system does not have data for a *Must Support* data element with minimum cardinality = 0, the data element is omitted from the resource. If the source system does not have data for a required data element (in other words, where the minimum cardinality is > 0), follow guidance defined in the core FHIR specification and summarized in the <a href="http://hl7.org/fhir/us/core/general-guidance.html#missing-data">US Core</a>.
 
 <h4 id="conformance-to-us-core-profiles">Conformance to US Core Profiles</h4>
 Any actor acting as a Health Plan API actor in this IG **SHALL**:
@@ -49,14 +53,14 @@ This IG includes value set bindings to industry standard codes that reference Co
 <ul>
 <li>CPT (Current Procedural Terminology) Procedure Codes and Modifiers:  
 The CPT procedure and modifier codes are owned by the 
-<a href =http://www.ama-assn.org/go/cpt](http://www.ama-assn.org/go/cpt)>American Medical Association</a>. </li>
+<a href ="http://www.ama-assn.org/go/cpt">American Medical Association</a>. </li>
 <li>CARC (Claim Adjustment Reason Codes) Codes:  CARC Codes are owned by X12.  
 <a href="http://www.x12.org/codes/claim-adjustment-reason-codes/">http://www.x12.org/codes/claim-adjustment-reason-codes/</a>.</li>
 <li>NUBC (National Uniform Billing Committee) Codes:  
 The NUBC secretariat is the American Hospital Association.  <a href="https://www.nubc.org">https://www.nubc.org</a>. </li>
 <li>NCPDP (National Council for Prescription Drug Program):  Retail Pharmacy data standards are defined by the NCPDP.  
 <a href="https://www.ncpdp.org">https://www.ncpdp.org</a>.</li>
-</eul>
+</ul>
 <h5 id="available">Available Industry Standard Code Systems</h5>
 This IG includes value set bindings to industry standard codes that are available for use without licenses.  An example is the <a href="http://www.icd10data.com/icd10pcs">ICD-10</a> procedure codes ICD-10-PCS codes which are defined in <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure">US Core Procedure Profile</a>.  (However, the US Core Procedure Profile cannot be used by this IG as it includes LOINC and SNOMED CT codes, which are not defined by HHS for claims submissions).  The following information summarizes the set of Code Systems required by this IG that are available for use and provides links to the location of the information.
 <ul>

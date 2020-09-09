@@ -37,7 +37,7 @@
 <h4>PDEX</h4>
 <p>CMS Guidance defines two sets of data be made available by payers in the Patient Access API: Claims and Encounter Data and Clinical data. They provide links to specific implementations guides for the Patient Access API to provide guidance. Use of these implementation guides is not required, but if used these guides will provide information payers can use to meet the requirements of the policies being finalized. This IG defines how Claims and Encounter Data are to be provided; the DaVinci PDEX (Payer Data Exchange) and US Core Implementation Guides define how Clinical Data is to be provided.</p>
 <h4>RTPBC</h4>
-<p>Using the RTPBC (Real Time Pharmacy Benefit Check), a patient can learn the cost and insurance coverage related to medications they&rsquo;ve been prescribed. A person would typically use the RTPBC prior to the dispensing of the prescription and the filing of the claim. CARIIN BB provides the capability to access how pharmacy (and medical) benefits have been applied by the payer as a result of a claim filed by the pharmacy.</p>
+<p>Using the RTPBC (Real Time Pharmacy Benefit Check), a patient can learn the cost and insurance coverage related to medications they&rsquo;ve been prescribed. A person would typically use the RTPBC prior to the dispensing of the prescription and the filing of the claim. CARIN BB provides the capability to access how pharmacy (and medical) benefits have been applied by the payer as a result of a claim filed by the pharmacy.</p>
 <h3 id="guide-overview">Guide Overview</h3>
 <h4>How to Read This Guide</h4>
 <h4>Actors</h4>
