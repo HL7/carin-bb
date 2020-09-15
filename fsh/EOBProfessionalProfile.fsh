@@ -37,7 +37,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[claimrecvddate].timing[x] 1..1
 * supportingInfo[servicefacility].category = ClaimInformationCategory#servicefacility
 * supportingInfo[servicefacility].valueReference 1..1 MS 
-* supportingInfo[servicefacility].valueReference only Reference(Organization)
+* supportingInfo[servicefacility].valueReference only Reference(C4BBOrganization)
 * careTeam.role from C4BBClaimProfessionalAndNonClinicianCareTeamRole   (required)  // was PayerProfessionalAndNonClinicianProviderRole
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
