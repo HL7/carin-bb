@@ -1,4 +1,4 @@
-//USCore
+//USCore -
 Alias:   $USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
 Alias:   $USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 Alias:   $USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
