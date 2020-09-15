@@ -108,3 +108,17 @@ Description: "Patient Identifier Type"
 * $IdentifierTypeCS#MR
 * IdentifierTypeCS#pt
 * ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBRelatedClaimRelationshipCodes    // FHIR-26709
+Title: "C4BB Related Claim Relationship Codes"
+Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number."
+* ^copyright = "This Code System is not copyrighted."
+* http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#prior
+* codes from system C4BBRelatedClaimRelationshipCodes
+
+ValueSet: C4BBPayeeType    // FHIR-26708
+Title: "C4BB Payee Type"
+Description: "Identifies the type of recipient of the adjudication amount; i.e., provider, subscriber, beneficiary or another recipient."
+* ^copyright = "This Code System is not copyrighted."
+* codes from system http://terminology.hl7.org/CodeSystem/payeetype
+* codes from system C4BBPayeeType
