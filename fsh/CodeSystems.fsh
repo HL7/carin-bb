@@ -123,11 +123,11 @@ CodeSystem: C4BBRelatedClaimRelationshipCodes // FHIR-26709
 Title: "C4BB Related Claim Relationship Codes"
 Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number."
 * ^copyright = "This Code System is not copyrighted."
-* #replacedBy "Replaced by claim number"
+* #replacedBy "Replaced by" "Replaced by claim number"
 
 
 CodeSystem: C4BBPayeeType // FHIR-26708
 Title: "C4BB Related Claim Relationship Codes"
 Description: "Indicates that a payee type may be a beneficiary "
 * ^copyright = "This Code System is not copyrighted."
-* #beneficiary "Beneficiary"
+* #beneficiary "Beneficiary" "Beneficiary"
