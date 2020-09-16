@@ -16,18 +16,18 @@ Description: "This profile builds upon the US Core Organization profile. It is u
    medrecnum 0..* MS and
    uniquememberid 0..* MS and
    patacctnum 0..* MS 
-* identifier[memberid] ^patternIdentifier.type = IdentifierTypeCS#mb
+* identifier[memberid] ^patternIdentifier.type = C4BBIdentifierType#mb
 * identifier[memberid] ^short = "Member ID"
 * identifier[memberid].type.coding 1..* MS
-* identifier[medrecnum] ^patternIdentifier.type = $IdentifierTypeCS#MR
+* identifier[medrecnum] ^patternIdentifier.type = $IdentifierType#MR
 * identifier[medrecnum] ^short = "Medical Record Number"
 * identifier[medrecnum].type.coding 1..* MS
-* identifier[patacctnum] ^patternIdentifier.type = IdentifierTypeCS#pt
+* identifier[patacctnum] ^patternIdentifier.type = C4BBIdentifierType#pt
 * identifier[patacctnum] ^short = "Patient Account Number"
 * identifier[patacctnum].type.coding 1..* MS
 * identifier[uniquememberid] ^short = "Unique Member ID"
 * identifier[uniquememberid].type.coding 1..* MS
-* identifier[uniquememberid] ^patternIdentifier.type = IdentifierTypeCS#um
+* identifier[uniquememberid] ^patternIdentifier.type = C4BBIdentifierType#um
 * birthDate ^short = "Date of birth of the member (70)"
 * gender ^short = "Gender of the member (71)"
 

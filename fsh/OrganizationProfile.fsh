@@ -17,15 +17,15 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * identifier contains 
    tax 0..* MS and
    payerid 0..* MS
-* identifier[CLIA] ^patternIdentifier.type  = IdentifierTypeCS#clia 
+* identifier[CLIA] ^patternIdentifier.type  = C4BBIdentifierType#clia 
 * identifier[CLIA].type 1..1 MS
-* identifier[NPI] ^patternIdentifier.type  = IdentifierTypeCS#npi 
+* identifier[NPI] ^patternIdentifier.type  = C4BBIdentifierType#npi 
 * identifier[NPI].type 1..1 MS
 * identifier[tax] ^short = "Tax ID Number"
-* identifier[tax] ^patternIdentifier.type  = $IdentifierTypeCS#TAX
+* identifier[tax] ^patternIdentifier.type  = $IdentifierType#TAX
 * identifier[tax].type 1..1 MS
 * identifier[tax] ^patternIdentifier.system = "urn:oid:2.16.840.1.113883.4.4"
 * identifier[payerid] ^short = "Payer ID"
-* identifier[payerid] ^patternIdentifier.type  = IdentifierTypeCS#payerid 
+* identifier[payerid] ^patternIdentifier.type  = C4BBIdentifierType#payerid 
 * identifier[payerid].type 1..1 MS
 //* identifier[payerid].system = <what>

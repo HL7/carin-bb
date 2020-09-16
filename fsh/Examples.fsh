@@ -23,16 +23,16 @@ Usage: #example
 * address[0].state = "PA"
 * address[0].postalCode = "12519"
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK
-* identifier[memberid].type = IdentifierTypeCS#mb
+* identifier[memberid].type = C4BBIdentifierType#mb
 * identifier[memberid].value = "1234-234-1243-12345678901"
 * identifier[memberid].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
-* identifier[medrecnum].type = $IdentifierTypeCS#MR
+* identifier[medrecnum].type = $IdentifierType#MR
 * identifier[medrecnum].value = "1234-234-1243-12345678901m"
 * identifier[medrecnum].system = "https://www.xxxhealthplan.com/fhir/medicalrecordnumber"
-* identifier[uniquememberid].type = IdentifierTypeCS#um
+* identifier[uniquememberid].type = C4BBIdentifierType#um
 * identifier[uniquememberid].value = "1234-234-1243-12345678901u"
 * identifier[uniquememberid].system = "https://www.xxxhealthplan.com/fhir/iniquememberidentifier"
-* identifier[patacctnum].type = IdentifierTypeCS#pt
+* identifier[patacctnum].type = C4BBIdentifierType#pt
 * identifier[patacctnum].value = "1234-234-1243-12345678901a"
 * identifier[patacctnum].system = "https://www.xxxhealthplan.com/fhir/patacctnum"
 
@@ -45,7 +45,7 @@ Usage: #example
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
 * status = #active
-* identifier[0].type = IdentifierTypeCS#mb
+* identifier[0].type = C4BBIdentifierType#mb
 * identifier[0].value = "1234-234-1243-12345678901"
 * identifier[0].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP
@@ -83,7 +83,7 @@ Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = IdentifierTypeCS#cn
+* identifier.type = C4BBIdentifierType#cn
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
@@ -130,7 +130,7 @@ Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = IdentifierTypeCS#cn
+* identifier.type = C4BBIdentifierType#cn
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
@@ -176,7 +176,7 @@ Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = IdentifierTypeCS#cn
+* identifier.type = C4BBIdentifierType#cn
 * identifier.value = "AW123412341234123412341234123413"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#professional
@@ -219,7 +219,7 @@ Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = IdentifierTypeCS#cn
+* identifier.type = C4BBIdentifierType#cn
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#pharmacy
@@ -281,9 +281,9 @@ Usage: #example
 * meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
-* identifier[NPI].type = IdentifierTypeCS#npi
+* identifier[NPI].type = C4BBIdentifierType#npi
 * identifier[NPI].value = "345678"
-* identifier[payerid].type = IdentifierTypeCS#payerid
+* identifier[payerid].type = C4BBIdentifierType#payerid
 * identifier[payerid].value = "901234"
 * name = "Payer 1"
 * active = true 
@@ -295,9 +295,9 @@ Usage: #example
 * meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
-* identifier[NPI].type = IdentifierTypeCS#npi
+* identifier[NPI].type = C4BBIdentifierType#npi
 * identifier[NPI].value = "345678"
-* identifier[tax].type = $IdentifierTypeCS#TAX
+* identifier[tax].type = $IdentifierType#TAX
 * identifier[tax].value = "123-45-6789"
 * name = "Provider 1"
 * active = true 

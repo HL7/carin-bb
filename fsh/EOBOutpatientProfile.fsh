@@ -6,9 +6,9 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services."
 * type  = $HL7ClaimTypeCS#institutional
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)   // was PayerInstitutionalProviderRole
-* careTeam obeys EOB-inst-careTeam-practitioner
-* careTeam obeys EOB-inst-careTeam-organization
-* careTeam obeys EOB-careteam-qualification
+* obeys EOB-inst-careTeam-practitioner
+* obeys EOB-inst-careTeam-organization
+* obeys EOB-careteam-qualification
 * careTeam.qualification from $USCoreProviderSpecialty (required)
 * diagnosis 1..*
 * diagnosis.diagnosis[x] 1..1 MS
@@ -23,29 +23,29 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo MS 
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
-   claimrecvddate 0..1 MS and
+   clmrecvddate 0..1 MS and
    typeofbill 0..1 MS and 
    pointoforigin 0..1 MS and 
    admtype 0..1 MS and 
    discharge-status 0..1 MS 
-* supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategory#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Claim performing provider network status"
-* supportingInfo[claimrecvddate].category = ClaimInformationCategory#claimrecvddate
-* supportingInfo[claimrecvddate] ^short = "Claim Received Date"
-* supportingInfo[claimrecvddate].timing[x] only date 
-* supportingInfo[claimrecvddate].timing[x] 1..1
-* supportingInfo[typeofbill].category = ClaimInformationCategory#typeofbill
+* supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[clmrecvddate] ^short = "Claim Received Date"
+* supportingInfo[clmrecvddate].timing[x] only date 
+* supportingInfo[clmrecvddate].timing[x] 1..1
+* supportingInfo[typeofbill].category = C4BBSupportingInfoType#typeofbill
 * supportingInfo[typeofbill] ^short = "Type of Bill"
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
-* supportingInfo[pointoforigin].category = ClaimInformationCategory#admsrc
+* supportingInfo[pointoforigin].category = C4BBSupportingInfoType#pointoforigin
 * supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
 * supportingInfo[pointoforigin] ^short = "Claim Point of Origin for Admission or Visit"
-* supportingInfo[admtype].category = ClaimInformationCategory#admtype
+* supportingInfo[admtype].category = C4BBSupportingInfoType#admtype
 * supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
 * supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit "
-* supportingInfo[discharge-status].category = ClaimInformationCategory#discharge-status
+* supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 * item.revenue from AHANUBCRevenueCodes (required)
@@ -65,10 +65,10 @@ The claims data is based on the institutional claim form UB-04, submission stand
    denialreason 0..1 MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "Allowed number of units"
-* item.adjudication[allowedunits].category = ClaimAdjudicationCategory#allowedunits
+* item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
 * item.adjudication[denialreason] ^short = "Denial Reason"
-* item.adjudication[denialreason].category = ClaimAdjudicationCategory#denialreason 
+* item.adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
@@ -84,7 +84,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS 
 * adjudication[denialreason] ^short = "Denial Reason"
-* adjudication[denialreason].category = ClaimAdjudicationCategory#denialreason 
+* adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * adjudication[denialreason].reason 1..1 MS
 * adjudication[adjudicationamounttype].category from C4BBAdjudication (required)

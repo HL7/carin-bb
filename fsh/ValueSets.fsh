@@ -16,7 +16,7 @@ Description: "Describes functional roles of the care team members."
 ValueSet: C4BBClaimProfessionalAndNonClinicianCareTeamRole   
 Title: "C4BB Claim Professional And Non Clinician Care Team Role "
 Description: "Describes functional roles of the care team members"
-* $CareTeamRoleCodeCS#primary "Primary provider." 
+* $CareTeamRoleCodeCS#primary 
 * C4BBClaimCareTeamRole#performing 
 * C4BBClaimCareTeamRole#referring 
 * ^copyright = "This Valueset is not copyrighted."
@@ -67,58 +67,65 @@ Description: "Indicates the in network or out of network payment status of the c
 ValueSet: C4BBPayerClaimPaymentStatusCode
 Title: "C4BB Payer Claim Payment Status Code"
 Description: "Indicates whether the claim / item was paid or denied."
-* C4BBAdjudication#paid "paid"
-* C4BBAdjudication#denied "denied"
+* C4BBPayerAdjudicationStatus#paid 
+* C4BBPayerAdjudicationStatus#denied 
+* C4BBPayerAdjudicationStatus#partiallypaid 
+* ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBPayeeType
+Title: "C4BB Payee Type"
+Description: "Identifies the type of recipient of the adjudication amount; i.e., provider, subscriber, beneficiary or another recipient."
+* C4BBPayeeType#beneficiary 
+* http://terminology.hl7.org/CodeSystem/payeetype#subscriber 
+* http://terminology.hl7.org/CodeSystem/payeetype#provider
+* http://terminology.hl7.org/CodeSystem/payeetype#other 
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimProfessionalAndNonClinicianDiagnosisType 
 Title: "C4BB Claim Professional And Non Clinician Diagnosis Type"
 Description: "Indicates if the professional and non-clinician diagnosis is principal or secondary"
-* C4BBClaimDiagnosisType#principal "principal"
+* http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal "principal"
 * C4BBClaimDiagnosisType#secondary "secondary"
-* C4BBClaimDiagnosisType#first-listed "first-listed"
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimInpatientInstitutionalDiagnosisType 
 Title: "C4BB Claim Inpatient Institutional Diagnosis Type"
-Description: "Indicates if the inpatient institutional diagnosis is admitting, principal, secondary or an external cause of injury."
-* C4BBClaimDiagnosisType#principal 
-* C4BBClaimDiagnosisType#secondary  
-* C4BBClaimDiagnosisType#external-cause-of-injury 
-* C4BBClaimDiagnosisType#first-listed  
-* C4BBClaimDiagnosisType#admitting 
+Description: "Indicates if the inpatient institutional diagnosis is admitting, principal, other or an external cause of injury."
+* http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal 
+* C4BBClaimDiagnosisType#other  
+* C4BBClaimDiagnosisType#externalcauseofinjury   
+* http://terminology.hl7.org/CodeSystem/ex-diagnosistype#admitting 
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimOutpatientInstitutionalDiagnosisType 
 Title: "C4BB Claim Outpatient Institutional Diagnosis Type"
-Description: "Indicates if the outpatient institutional diagnosis is admitting, principal, secondary an external cause of injury or a patient reason for visit"
-* codes from system C4BBClaimDiagnosisType
+Description: "Indicates if the outpatient institutional diagnosis is principal, other, an external cause of injury or a patient reason for visit."
+* http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal 
+* C4BBClaimDiagnosisType#other  
+* C4BBClaimDiagnosisType#externalcauseofinjury   
+* C4BBClaimDiagnosisType#patientreasonforvisit 
+* ^copyright = "This Valueset is not copyrighted."
 
-ValueSet: ClaimInformationCategory
-Title: "Claim Information Category"
-Description: "Claim Information Category - Used as the discriminator for supportingInfo" 
-* codes from system ClaimInformationCategory 
+ValueSet: C4BBRelatedClaimRelationshipCodes
+Title: "C4BB Related Claim Relationship Codes"
+Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number."
+* http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#prior 
+* http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayeeType#provider
+* http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayeeType#other 
+* C4BBRelatedClaimRelationshipCodes#replacedby 
+* ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBSupportingInfoType
+Title: "C4BB SupportingInfo Type"
+Description: "Used as the discriminator for the types of supporting information for the CARIN IG for Blue Button� Implementation Guide." 
+* codes from system C4BBSupportingInfoType 
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: PatientIdentifierType
 Title: "Patient Identifier Type"
 Description: "Patient Identifier Type"
-* IdentifierTypeCS#um
-* IdentifierTypeCS#mb
-* $IdentifierTypeCS#MR
-* IdentifierTypeCS#pt
+* C4BBIdentifierType#um
+* C4BBIdentifierType#mb
+* $IdentifierType#MR
+* C4BBIdentifierType#pt
 * ^copyright = "This Valueset is not copyrighted."
-
-ValueSet: C4BBRelatedClaimRelationshipCodes    // FHIR-26709
-Title: "C4BB Related Claim Relationship Codes"
-Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number."
-* ^copyright = "This Code System is not copyrighted."
-* http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#prior
-* codes from system C4BBRelatedClaimRelationshipCodes
-
-ValueSet: C4BBPayeeType    // FHIR-26708
-Title: "C4BB Payee Type"
-Description: "Identifies the type of recipient of the adjudication amount; i.e., provider, subscriber, beneficiary or another recipient."
-* ^copyright = "This Code System is not copyrighted."
-* codes from system http://terminology.hl7.org/CodeSystem/payeetype
-* codes from system C4BBPayeeType

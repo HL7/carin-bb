@@ -8,7 +8,7 @@ Description: "BBEoB from Jeff"
 * identifier.value = "8ceaca46-ba97-4748-bbf7-80a4d54dc978"
 * identifier.system = "https://bluebutton.cms.gov/resources/variables/clm_id"
 * identifier.use = #official
-* identifier.type = IdentifierTypeCS#cn 
+* identifier.type = C4BBIdentifierType#cn 
 * use = #claim 
 * status = #active
 
@@ -144,6 +144,6 @@ Description: "BBEoB from Jeff"
 * diagnosis[0].sequence = 1 
 // added as embellishments
 //* supportingInfo[0].sequence = 1
-* supportingInfo[0].category = ClaimInformationCategory#billingnetworkcontractingstatus
+* supportingInfo[0].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[0].code = C4BBAdjudication#contracted 
 * supportingInfo[0].sequence = 1

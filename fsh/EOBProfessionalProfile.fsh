@@ -19,23 +19,23 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    performingnetworkcontractingstatus 0..1 MS and
-   claimrecvddate 0..1 MS and
+   clmrecvddate 0..1 MS and
    servicefacility 0..1 MS 
-* supportingInfo[claimrecvddate] ^short = "The date the claim was received by the payer (88)"
+* supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88)"
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
 * supportingInfo[performingnetworkcontractingstatus] ^short = "Indicates that the Performing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
 * supportingInfo[servicefacility] ^short = "Service Facility"
-* supportingInfo[billingnetworkcontractingstatus].category = ClaimInformationCategory#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 
 * supportingInfo[billingnetworkcontractingstatus].category.coding 1..1
-* supportingInfo[performingnetworkcontractingstatus].category = ClaimInformationCategory#performingnetworkcontractingstatus
+* supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
 * supportingInfo[performingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[performingnetworkcontractingstatus].code 1..1
-* supportingInfo[claimrecvddate].category = ClaimInformationCategory#claimrecvddate
-* supportingInfo[claimrecvddate].timing[x] only date 
-* supportingInfo[claimrecvddate].timing[x] 1..1
-* supportingInfo[servicefacility].category = ClaimInformationCategory#servicefacility
+* supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[clmrecvddate].timing[x] only date 
+* supportingInfo[clmrecvddate].timing[x] 1..1
+* supportingInfo[servicefacility].category = C4BBSupportingInfoType#servicefacility
 * supportingInfo[servicefacility].valueReference 1..1 MS 
 * supportingInfo[servicefacility].valueReference only Reference(C4BBOrganization)
 * careTeam.role from C4BBClaimProfessionalAndNonClinicianCareTeamRole   (required)  // was PayerProfessionalAndNonClinicianProviderRole
@@ -59,9 +59,9 @@ The claims data is based on the professional claim form 1500, submission standar
    inoutnetwork 1..1 and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
-* item.adjudication[allowedunits].category = ClaimAdjudicationCategory#allowedunits
+* item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
-* item.adjudication[denialreason].category  = ClaimAdjudicationCategory#denialreason 
+* item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason 
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"

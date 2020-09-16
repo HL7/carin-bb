@@ -8,7 +8,7 @@ Description: "BBEoB from Jeff"
 * identifier.value = "7d0c2c7f-8049-445a-a283-41cf91d09a38"
 * identifier.system = "https://bluebutton.cms.gov/resources/variables/clm_id"
 * identifier.use = #official
-* identifier.type = IdentifierTypeCS#cn 
+* identifier.type = C4BBIdentifierType#cn 
 * use = #claim 
 * status = #active
 * type.coding[0].system = "http://terminology.hl7.org/CodeSystem/claim-type"
@@ -189,22 +189,22 @@ Description: "BBEoB from Jeff"
 * outcome = #complete 
 // added as embellishments
 //* supportingInfo[0].sequence = 1
-* supportingInfo[0].category = ClaimInformationCategory#billingnetworkcontractingstatus
+* supportingInfo[0].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[0].code = #contracted 
 * supportingInfo[0].sequence = 1
-* supportingInfo[1].category = ClaimInformationCategory#brandgenericcode   
+* supportingInfo[1].category = C4BBSupportingInfoType#brandgenericcode   
 * supportingInfo[1].code = NCPDPBrandGenericCode#generic 
 * supportingInfo[1].sequence = 2
-* supportingInfo[2].category = ClaimInformationCategory#refillnum
+* supportingInfo[2].category = C4BBSupportingInfoType#refillnum
 * supportingInfo[2].valueQuantity.value = 10
 * supportingInfo[2].sequence = 3
-* supportingInfo[3].category = ClaimInformationCategory#dawcode       
+* supportingInfo[3].category = C4BBSupportingInfoType#dawcode       
 * supportingInfo[3].code = NCPDPDispensedAsWrittenOrProductSelectionCode#brandOnly  
 * supportingInfo[3].sequence = 4
-* supportingInfo[4].category = ClaimInformationCategory#clmrecvddate
+* supportingInfo[4].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[4].timingDate = "2019-01-18"
 * supportingInfo[4].sequence = 5
-* supportingInfo[5].category = ClaimInformationCategory#dayssupply
+* supportingInfo[5].category = C4BBSupportingInfoType#dayssupply
 // Why doesn't this work?
 //* supportingInfo[dayssupply][5].valueQuantity.value = 30
 * supportingInfo[5].valueQuantity.value = 30

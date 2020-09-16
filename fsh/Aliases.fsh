@@ -13,20 +13,12 @@ Alias:   $HL7AdjudicationCS = 	http://terminology.hl7.org/CodeSystem/adjudicatio
 Alias:   $HL7ClaimType = http://hl7.org/fhir/ValueSet/claim-type
 Alias:   $HL7ClaimTypeCS = http://terminology.hl7.org/CodeSystem/claim-type   
 Alias:   $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
-Alias:   $OrganizationIdentifierTypeCS   =  http://terminology.hl7.org/CodeSystem/v2-0203
-Alias:   $IdentifierTypeCS   =  http://terminology.hl7.org/CodeSystem/v2-0203
+Alias:   $OrganizationIdentifierType   =  http://terminology.hl7.org/CodeSystem/v2-0203
+Alias:   $IdentifierType   =  http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
 
 Alias:   $CareTeamRoleCodeCS = http://terminology.hl7.org/CodeSystem/claimcareteamrole
 Alias:   $PresentOnAdmissionV2CS = urn:oid:2.16.840.1.113883.6.301.11
-
-
-
-// CodeSystem Aliases due to bugs in Sushi 0.12.7 and 0.13.2 ..hopefully resolved and deleted at some point
-//Alias: $IdentifierTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS
-//Alias: $ClaimInformationCategory = http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimInformationCategory
-//Alias: $ClaimAdjudicationCategory = http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimAdjudicationCategory
-
 
 
 
