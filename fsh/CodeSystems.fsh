@@ -68,7 +68,7 @@ Description: "CodeSystem for a Literal 'compound' value"
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBIdentifierType
-Title: "Identifier Type"
+Title: "C4BB Identifier Type"
 Description: "Identifier Type codes that extend those defined in http://terminology.hl7.org/CodeSystem/v2-0203"
 // * #tax "Tax ID Number" "Tax ID Number"  - use the TAX code from the base codesystem
 * #npi "National Provider Identifier" "National Provider Identifier"
