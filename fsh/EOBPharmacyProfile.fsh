@@ -61,6 +61,7 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
+* item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason 
 * item.adjudication[denialreason].reason from NCPDPRejectCode
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
