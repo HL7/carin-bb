@@ -19,8 +19,7 @@ Alias:   $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinit
 
 Alias:   $CareTeamRoleCodeCS = http://terminology.hl7.org/CodeSystem/claimcareteamrole
 Alias:   $PresentOnAdmissionV2CS = urn:oid:2.16.840.1.113883.6.301.11
-
-
+Alias:   $NAICCodeCS = urn:oid:2.16.840.1.113883.6.300
 
 //Alias:  $NUBCPointOfOriginForAdmissionOrVisitCS = https://www.nubc.org/point-of-origin-for-admission-or-visit
 Alias: $NUBCPatientDischargeCS   = https://www.nubc.org/patient-discharge

@@ -16,9 +16,10 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 //* identifier.type from OrganizationIdentifierType (extensible)
 * identifier contains 
    tax 0..* MS and
-   payerid 0..* MS
-* identifier[CLIA] ^patternIdentifier.type  = C4BBIdentifierType#clia 
-* identifier[CLIA].type 1..1 MS
+   payerid 0..* MS and
+   naiccode 0..* MS 
+//* identifier[CLIA] ^patternIdentifier.type  = C4BBIdentifierType#clia 
+//* identifier[CLIA].type 1..1 MS
 * identifier[NPI] ^patternIdentifier.type  = C4BBIdentifierType#npi 
 * identifier[NPI].type 1..1 MS
 * identifier[tax] ^short = "Tax ID Number"
@@ -28,4 +29,6 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * identifier[payerid] ^short = "Payer ID"
 * identifier[payerid] ^patternIdentifier.type  = C4BBIdentifierType#payerid 
 * identifier[payerid].type 1..1 MS
-//* identifier[payerid].system = <what>
+* identifier[naiccode] ^short = "NAIC Code"
+* identifier[naiccode].type 1..1 MS
+* identifier[naiccode] ^patternIdentifier.system = $NAICCodeCS

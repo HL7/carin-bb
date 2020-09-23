@@ -24,7 +24,7 @@ description: CARIN Consumer Directed Payer Data Exchange
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.0
+  hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
