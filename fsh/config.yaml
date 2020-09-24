@@ -14,13 +14,13 @@ id: hl7.fhir.us.carin-bb
 canonical: http://hl7.org/fhir/us/carin-bb
 version: 0.1.4
 name: CARINConsumerDirectedPayerDataExchange
-title: CARIN Consumer Directed Payer Data Exchange
+title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 status: active
 publisher:
   name: HL7 Financial Management Working Group
   url: http://www.hl7.org/Special/committees/fm/index.cfm
   email: fm@lists.HL7.org
-description: CARIN Consumer Directed Payer Data Exchange
+description: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
