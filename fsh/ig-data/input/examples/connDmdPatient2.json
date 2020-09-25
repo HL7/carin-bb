@@ -1,0 +1,111 @@
+{
+    "resourceType": "Patient",
+    "id": "c618c291-2d6b-4e49-a80a-caef76e79bf0",
+    "extension": [
+        {
+            "extension": [
+                {
+                    "url": "ombCategory",
+                    "valueCoding": {
+                        "system": "urn:oid:2.16.840.1.113883.6.238",
+                        "code": "2054-5",
+                        "display": "Black or African American"
+                    }
+                },
+                {
+                    "url": "text",
+                    "valueString": "Black or African American"
+                }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+        },
+        {
+            "extension": [
+                {
+                    "url": "ombCategory",
+                    "valueCoding": {
+                        "system": "urn:oid:2.16.840.1.113883.6.238",
+                        "code": "2186-5",
+                        "display": "Non Hispanic or Latino"
+                    }
+                },
+                {
+                    "url": "text",
+                    "valueString": "Non Hispanic or Latino"
+                }
+            ],
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+        },
+        {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode": "M"
+        },
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-genderIdentity",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/gender-identity",
+                        "code": "male",
+                        "display": "male"
+                    }
+                ]
+            }
+        }
+    ],
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical record number"
+                    }
+                ],
+                "text": "memberID"
+            },
+            "value": "4b5f0031-4d94-45aa-8fd3-d8f348b3e657"
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "use": "official",
+            "family": "Moen",
+            "given": [
+                "Granville"
+            ]
+        }
+    ],
+    "gender": "male",
+    "birthDate": "1919-09-25",
+    "address": [
+        {
+            "use": "home",
+            "line": [
+                "749 Wolff Extension Suite 72"
+            ],
+            "district": "Baltimore city",
+            "state": "Maryland",
+            "postalCode": "21213",
+            "country": "United States"
+        },
+        {
+            "use": "billing",
+            "type": "physical",
+            "line": [
+                "749 Wolff Extension Suite 72"
+            ],
+            "district": "Baltimore city",
+            "state": "Maryland",
+            "postalCode": "21213",
+            "country": "United States"
+        }
+    ],
+    "meta": {
+        "lastUpdated": "2020-09-17T20:36:18.816+00:00",
+        "versionId": "2"
+    }
+}

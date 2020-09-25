@@ -1,0 +1,59 @@
+{
+    "resourceType": "Organization",
+    "id": "00ce2ecc-dac6-43cd-abad-791c83ed546c",
+    "identifier": [
+        {
+            "use": "official",
+            "system": "https://npiregistry.cms.hhs.gov/",
+            "value": "834348194405"
+        }
+    ],
+    "active": true,
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                    "code": "prov"
+                }
+            ]
+        }
+    ],
+    "name": "HIRAM W DAVIS MEDICAL CENTER",
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "8045247344"
+        }
+    ],
+    "address": [
+        {
+            "use": "work",
+            "type": "both",
+            "text": "P O BOX 4030, PETERSBURG, VA 23803",
+            "line": [
+                "P O BOX 4030"
+            ],
+            "city": "PETERSBURG",
+            "state": "VA",
+            "postalCode": "23803"
+        }
+    ],
+    "contact": [
+        {
+            "name": {
+                "text": "HIRAM W DAVIS MEDICAL CENTER"
+            },
+            "telecom": [
+                {
+                    "system": "phone",
+                    "value": "8045247344"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "lastUpdated": "2020-09-15T05:07:19.531+00:00",
+        "versionId": "10"
+    }
+}

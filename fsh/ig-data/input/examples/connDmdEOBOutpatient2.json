@@ -1,0 +1,509 @@
+{
+    "resourceType": "ExplanationOfBenefit",
+    "id": "64ced8e6-78c0-4cd9-bc63-3ce6e54e9568",
+    "meta": {
+        "tag": [
+            {
+                "code": "Outpatient Facility"
+            }
+        ],
+        "lastUpdated": "2020-09-17T15:26:10.169+00:00",
+        "versionId": "1"
+    },
+    "identifier": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+                        "code": "institutional",
+                        "display": "Institutional"
+                    }
+                ],
+                "text": "Claim unique identifier"
+            },
+            "value": "9cb06a82-aeae-45f1-9998-8398dc7c6651"
+        }
+    ],
+    "status": "active",
+    "type": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/us/carin/CodeSystem/carin-bb-claim-type",
+                "code": "outpatient-facility"
+            }
+        ]
+    },
+    "use": "claim",
+    "patient": {
+        "reference": "Patient/478821bd-91d8-4301-8b71-95c2455dc7ad"
+    },
+    "billablePeriod": {
+        "start": "2017-02-18",
+        "end": "2017-02-18"
+    },
+    "created": "2020-09-17",
+    "insurer": {
+        "display": "Not Found-79979481-959e-4cb3-9256-c5651282623a"
+    },
+    "provider": {
+        "identifier": {
+            "system": "http://hl7.org/fhir/sid/us-npi",
+            "value": "349865128554"
+        },
+        "display": "Not Found-349865128554"
+    },
+    "payee": {
+        "type": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/payeetype",
+                    "code": "practitioner"
+                }
+            ]
+        },
+        "party": {
+            "display": "105506274255"
+        }
+    },
+    "outcome": "complete",
+    "supportingInfo": [
+        {
+            "sequence": 1,
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                        "code": "info"
+                    }
+                ],
+                "text": "billingnetworkcontractingstatus"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "code": "out"
+                    }
+                ]
+            }
+        },
+        {
+            "sequence": 2,
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                        "code": "info"
+                    }
+                ],
+                "text": "clmrecvddate"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "code": "2017-02-18"
+                    }
+                ]
+            }
+        },
+        {
+            "sequence": 3,
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                        "code": "info"
+                    }
+                ],
+                "text": "Type of Facility"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "code": "1"
+                    }
+                ]
+            }
+        },
+        {
+            "sequence": 4,
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                        "code": "info"
+                    }
+                ],
+                "text": "Type of Care"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "code": "1"
+                    }
+                ]
+            }
+        },
+        {
+            "sequence": 5,
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                        "code": "info"
+                    }
+                ],
+                "text": "Frequency Code"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "code": "2"
+                    }
+                ]
+            }
+        },
+        {
+            "sequence": 6,
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                        "code": "info"
+                    }
+                ],
+                "text": "admsrc"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "code": "9"
+                    }
+                ]
+            }
+        },
+        {
+            "sequence": 7,
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                        "code": "info"
+                    }
+                ],
+                "text": "admtype"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "code": "3"
+                    }
+                ]
+            }
+        },
+        {
+            "sequence": 8,
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                        "code": "info"
+                    }
+                ],
+                "text": "discharge-status"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "code": "home"
+                    }
+                ]
+            }
+        },
+        {
+            "sequence": 9,
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+                        "code": "info"
+                    }
+                ],
+                "text": "Place of Service"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "code": "349865128554"
+                    }
+                ]
+            }
+        }
+    ],
+    "procedure": [
+        {
+            "sequence": 1,
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/ex-procedure-type",
+                            "code": "primary"
+                        }
+                    ]
+                }
+            ],
+            "date": "2017-02-18",
+            "procedureCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "76601001",
+                        "display": "Intramuscular injection"
+                    }
+                ]
+            }
+        }
+    ],
+    "insurance": [
+        {
+            "focal": false,
+            "coverage": {
+                "display": "Not Found-b7b281e9-f227-4717-8598-0d58b323ad2d"
+            }
+        }
+    ],
+    "item": [
+        {
+            "sequence": 1,
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/ex-benefitcategory",
+                        "code": "11"
+                    }
+                ]
+            },
+            "productOrService": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "76601001",
+                        "display": "Intramuscular injection"
+                    }
+                ]
+            },
+            "servicedPeriod": {
+                "start": "2017-02-18",
+                "end": "2017-02-18"
+            },
+            "locationCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/ex-serviceplace",
+                        "code": "19",
+                        "display": "Off Campus-Outpatient Hospital"
+                    }
+                ]
+            },
+            "quantity": {
+                "value": 0.0
+            }
+        }
+    ],
+    "total": [
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "submitted"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 1846.3,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "allowed"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 1846.3,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "paidbypatient"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 1846.3,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "paidtoprovider"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 1846.3,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "paidtopatient"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 0.0,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "payment"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 1846.3,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "disallowed"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 1846.3,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "deductible"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 0.0,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "coins"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 0.0,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "copay"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 0.0,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "memberliability"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 0.0,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "priorpayerpaid"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 0.0,
+                "currency": "USD"
+            }
+        },
+        {
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                        "code": "discount"
+                    }
+                ]
+            },
+            "amount": {
+                "value": 0.0,
+                "currency": "USD"
+            }
+        }
+    ],
+    "payment": {
+        "type": {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/paymentstatus",
+                    "code": "complete"
+                }
+            ]
+        },
+        "date": "2017-02-18"
+    }
+}

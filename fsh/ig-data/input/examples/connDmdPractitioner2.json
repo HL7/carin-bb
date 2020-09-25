@@ -1,0 +1,20 @@
+{
+    "resourceType": "Practitioner",
+    "id": "dc7d191d-3cfd-469f-b70d-2722f9f2c7ff",
+    "identifier": [
+        {
+            "use": "official",
+            "system": "https://npiregistry.cms.hhs.gov/",
+            "value": "830255289614"
+        }
+    ],
+    "name": [
+        {
+            "text": "Dr. Lu Marvin"
+        }
+    ],
+    "meta": {
+        "lastUpdated": "2020-09-17T20:48:24.1+00:00",
+        "versionId": "2"
+    }
+}
