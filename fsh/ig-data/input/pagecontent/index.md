@@ -16,7 +16,9 @@
 <li>Post-Connectathon changes -  Version 0.1.4 - September 15+, 2020</li>
 <ol>
 <li>C4BBPayeeType, C4BBRelationshipCodes, and other minor binding changes</li>
-<li>TBD</li>
+<li>Updated C4BB Codesystems, Codesystem STubs, and ValueSets</li>
+<li>Updated EOBComparison charts</li>
+<li>New examples from Onyx and UPMC (not yet validating)</li>
 </ol>
 <li>Interim Version 0.1.3 - September 8, 2020</li>
 <ol>

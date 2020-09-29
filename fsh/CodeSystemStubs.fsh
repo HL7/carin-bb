@@ -94,7 +94,7 @@ Description: "Indicates whether or not the prescription is a compound NCPDP fiel
 //* insert CodeSystemStubBoilerplate
 //* ^copyright = "NDC codes are available for use.  As HL7 is working with the owning authority to finalize the url, this url is subject to change"
 
-ValueSet: FDANDC
+ValueSet: FDANationalDrugCode
 Title: "FDA National Drug Code (NDC)"
 Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7.  "
 * codes from system $FDANationalDrugCode

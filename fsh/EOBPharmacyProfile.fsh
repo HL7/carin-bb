@@ -46,7 +46,7 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[compoundcode] ^short = "NCPDP Compound code"
 * supportingInfo[compoundcode].code from NCPDPCompoundCode (required)
 * item.productOrService from FDANDCOrCompound (required)
-* item.detail.productOrService  from FDANDC  (required)
+* item.detail.productOrService  from FDANationalDrugCode  (required)
 * item.detail MS
 * item.detail.quantity MS 
 * careTeam.role from C4BBClaimPharmacyTeamRole  (required)   // was PayerPharmacyProviderRole
