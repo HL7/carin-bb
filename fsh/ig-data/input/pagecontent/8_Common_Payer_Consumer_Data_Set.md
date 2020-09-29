@@ -8,7 +8,9 @@ A side by side comparison of the abstract EOB profile, and the four concrete pro
 
 <br />&nbsp;<img style="width: 100%; height: auto; float: none; align: middle;" src="SidebySideProfiles.png" /></div>
 <br />&nbsp;
-<div><img style="width: 100%; height: auto; float: none; align: middle;" src="EOBProfileComparison 2020 0904.png" /></div>
+A detailed comparison of the profiles defined in this IG with their base resource or profile is shown int the following two figures and can be downloaded <a href="EOBProfileComparison20200929.xlsx" download="EOBProfileComparison20200929.xlsx">here </a>.
+<div><img style="width: 100%; height: auto; float: none; align: middle;" src="EOBProfileComparison20200929.png" /></div>
+<div><img style="width: 100%; height: auto; float: none; align: middle;" src="OtherProfileComparison20200929.png" /></div>
 <div>&nbsp;</div>
 <div>Additional EOB profiles for Vision and Dental benefits are planned for future versions of this IG.</div>
 <div>&nbsp;</div>
