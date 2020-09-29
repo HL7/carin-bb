@@ -30,7 +30,7 @@ Description: "Describes the various amount fields used when payers receive and a
 // * #copay "copay" "Patient Co-Payment"
 // * #payment "Payment" "payment"
 
-CodeSystem: 
+CodeSystem: C4BBPayeeType
 Title: "C4BB Payee Type"
 Description: "Indicates that a payee type may be a beneficiary."
 * #beneficiary "Beneficiary" "The beneficiary (patient) will be reimbursed."
