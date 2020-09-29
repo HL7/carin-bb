@@ -36,6 +36,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * careTeam.responsible 0..1 MS 
 * careTeam.role 1..1 MS
 * supportingInfo 0..* MS
+* supportingInfo.category from C4BBSupportingInfoType (extensible)
 //* supportingInfo.category 1..1 MS
 //* supportingInfo.category from C4BBSupportingInfoType (required)
 * supportingInfo.code 0..1 MS 
