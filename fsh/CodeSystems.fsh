@@ -47,19 +47,21 @@ Description: "Indicates if the institutional diagnosis is admitting, principal, 
 //* #admitting "Admitting" "Admitting"
 * ^copyright = "This CodeSystem is not copyrighted."
 
-
 CodeSystem: C4BBClaimCareTeamRole
 Title: "C4BB Claim Care Team Role"
 Description: "Describes functional roles of the care team members.  Complements http://terminology.hl7.org/CodeSystem/claimcareteamrole"
 * #attending  "Attending"  "The attending physicianr"
 * #referring "Referring"  "The referring physician"
 * #operating "Operating"  "The operating physician"
+* #otheroperating "Other Operating"  "The other operating physician"
 * #performing "Performing provider"  "The performing or rendering provider"
 * #prescribing "Prescribing provider" "The prescribing provider"
+* #purchasedservice "Purchased Service" "A purchased service occurs when one provider purchases a service from another provider and then provides it to the patient, e.g. a diagnostic exam"
 //* #pcp "pcp" "Primary Care Provider"
 //* #site "site"  "Site Provider"
 //* #supervising "supervising" "Supervising"
 * ^copyright = "This Code System is not copyrighted."
+
 
 CodeSystem: C4BBCompoundLiteral
 Title: "C4BB Compound Literal"
@@ -129,4 +131,11 @@ Description: "Used as the discriminator for the data elements in adjudication an
 * #allowedunits	"allowed units" "defines the adjudication slice to define allowed units"
 * #inoutnetwork "in or Out of Network" "defines the adjudication and item.adjudication slice to indicate whether a claim was adjudicatd in or out of network"
 * #denialreason "Denial Reason" "defines the adjudication slice to identify the denial reason"
+* ^copyright = "This CodeSystem is not copyrighted."
+
+CodeSystem: C4BBClaimProcedureType
+Title: "C4BB Claim Procedure Type"
+Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure"
+* #principal "Principal" "The Principal Procedure is based on the relation of the procedure to the Principal Diagnosis"
+* #other "Other"  "Other procedures performed during the inpatient institutional admission"
 * ^copyright = "This CodeSystem is not copyrighted."

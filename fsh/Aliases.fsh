@@ -19,7 +19,8 @@ Alias:   $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinit
 
 Alias:   $CareTeamRoleCodeCS = http://terminology.hl7.org/CodeSystem/claimcareteamrole
 Alias:   $PresentOnAdmissionV2CS = urn:oid:2.16.840.1.113883.6.301.11
-Alias:   $NAICCodeCS = urn:oid:2.16.840.1.113883.6.300
+Alias:   $NAICCodeCS = urn:oid:2.16.840.1.113883.6.300 
+Alias:   $TAXCodeCS = urn:oid:2.16.840.1.113883.4.4
 
 //Alias:  $NUBCPointOfOriginForAdmissionOrVisitCS = https://www.nubc.org/point-of-origin-for-admission-or-visit
 Alias: $NUBCPatientDischargeCS   = https://www.nubc.org/patient-discharge
@@ -30,7 +31,22 @@ Alias: $AHANUBCRevenueCodeOID = urn:oid:2.16.840.1.113883.13.18
 Alias: $AHANUBCPatientDischargeStatusOID = urn:oid:2.16.840.1.113883.6.301.5
 Alias: $AHANUBCPresentOnAdmissionOID  = urn:oid:2.16.840.1.113883.6.301.11
 
-Alias: $X12CARCCS = https://www.x12.org/carc
-Alias: $CMSRARCCS = https://www.cms.gov/rarc
+Alias: $X12CARCCS = https://x12.org/codes/claim-adjustment-reason-codes
+Alias: $CMSRARCCS = https://x12.org/codes/remittance-advice-remark-codes
 
 
+Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
+Alias:   $ICD9CM = http://terminology.hl7.org/CodeSystem/icd9
+Alias:   $ICD10PCS = http://www.cms.gov/Medicare/Coding/ICD10
+Alias:   $ICD9PCS = http://www.cms.gov/Medicare/Coding/ICD9
+Alias:   $CPT = http://www.ama-assn.org/go/cpt
+Alias:   $HCPCS = http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets
+//Alias:   $AMACPTMODIFIERS = http://www.ama-assn.org/go/cpt-modifiers
+//Alias:   $HCPCSMODIFIERS = http://www.cms.gov/hcpcs-level-II-modifiers
+Alias:   $CMSMSDRG = http://www.cms.gov/Medicare/Coding/ms-drg/MS
+Alias:   $3MAPRDRG = http://www.3M.com/APR 
+Alias:  $CMSPlaceofServiceCodes = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set
+//Alias:   $CPTALLVS = http://hl7.org/fhir/ValueSet/cpt-all
+//Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias:   $FDANationalDrugCode = http://hl7.org/fhir/sid/ndc
+Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy

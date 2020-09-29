@@ -44,7 +44,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.type from C4BBClaimProfessionalAndNonClinicianDiagnosisType  (required)
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
-* diagnosis.diagnosis[x] from ICD10CM (required)
+* diagnosis.diagnosis[x] from CDCICD910CMDiagnosisCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.locationCodeableConcept from CMSPlaceofServiceCodes (required)

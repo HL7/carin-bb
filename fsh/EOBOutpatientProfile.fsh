@@ -13,7 +13,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis 1..*
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
-* diagnosis.diagnosis[x] from ICD10CM (required)
+* diagnosis.diagnosis[x] from CDCICD910CMDiagnosisCodes (required)
 * provider only Reference(C4BBOrganization)
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default

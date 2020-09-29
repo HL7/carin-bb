@@ -25,7 +25,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * identifier[tax] ^short = "Tax ID Number"
 * identifier[tax] ^patternIdentifier.type  = $IdentifierType#TAX
 * identifier[tax].type 1..1 MS
-* identifier[tax] ^patternIdentifier.system = "urn:oid:2.16.840.1.113883.4.4"
+* identifier[tax] ^patternIdentifier.system = $TAXCodeCS 
 * identifier[payerid] ^short = "Payer ID"
 * identifier[payerid] ^patternIdentifier.type  = C4BBIdentifierType#payerid 
 * identifier[payerid].type 1..1 MS

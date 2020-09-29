@@ -1,14 +1,14 @@
 // Contains ValueSets for Codes Defined WITHIN this IG  
 
-
 ValueSet: C4BBClaimInstitutionalCareTeamRole 
 Title: "C4BB Claim Institutional Care Team Role "
 Description: "Describes functional roles of the care team members."
 * $CareTeamRoleCodeCS#primary 
-* $CareTeamRoleCodeCS#supervisor 
 * C4BBClaimCareTeamRole#attending 
 * C4BBClaimCareTeamRole#referring
 * C4BBClaimCareTeamRole#operating 
+* C4BBClaimCareTeamRole#otheroperating 
+* C4BBClaimCareTeamRole#performing 
 // * C4BBClaimCareTeamRoleCS#site 
 // * C4BBClaimCareTeamRoleCS#prescribing 
 * ^copyright = "This Valueset is not copyrighted."
@@ -17,7 +17,9 @@ ValueSet: C4BBClaimProfessionalAndNonClinicianCareTeamRole
 Title: "C4BB Claim Professional And Non Clinician Care Team Role "
 Description: "Describes functional roles of the care team members"
 * $CareTeamRoleCodeCS#primary 
-* C4BBClaimCareTeamRole#performing 
+* $CareTeamRoleCodeCS#supervisor
+* C4BBClaimCareTeamRole#performing
+* C4BBClaimCareTeamRole#purchasedservice 
 * C4BBClaimCareTeamRole#referring 
 * ^copyright = "This Valueset is not copyrighted."
 
@@ -128,4 +130,12 @@ Description: "Patient Identifier Type"
 * C4BBIdentifierType#mb
 * $IdentifierType#MR
 * C4BBIdentifierType#pt
+* ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBClaimProcedureType 
+Title: "C4BB Claim Procedure Type"
+Description: "Indicates if the professional and non-clinician diagnosis is principal or secondary"
+* http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal "principal"
+* C4BBClaimProcedureType#principal
+* C4BBClaimProcedureType#secondary  
 * ^copyright = "This Valueset is not copyrighted."

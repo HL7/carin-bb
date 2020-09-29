@@ -15,12 +15,13 @@ Services."
 * diagnosis.type from C4BBClaimInpatientInstitutionalDiagnosisType  (required)   
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
-* diagnosis.diagnosis[x] from ICD10CM (required)
+* diagnosis.diagnosis[x] from CDCICD910CMDiagnosisCodes (required)
 * diagnosis.onAdmission 0..1 MS
 * diagnosis.onAdmission from AHANUBCPresentOnAdmission (required)
 * procedure.procedure[x] only CodeableConcept 
 * procedure.procedure[x] 1..1 MS
-* procedure.procedure[x] from ICD10PCS (required) 
+* procedure.procedure[x] from CMSICD910PCSProcedureCodes (required) 
+* procedure.type from C4BBClaimProcedureType (required)
 * provider 1..1
 * provider only Reference(C4BBOrganization)
 * supportingInfo ^slicing.rules = #open
@@ -64,7 +65,7 @@ Services."
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[drg].category  = C4BBSupportingInfoType#drg
-* supportingInfo[drg].code from CMSDRG  (required)
+* supportingInfo[drg].code from CMSMS3MAPRDRG  (required)
 * supportingInfo[drg] ^short = "Claim diagnosis related group (DRG)"
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
