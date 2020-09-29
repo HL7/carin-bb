@@ -23,7 +23,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * provider 1..1 MS
 * related 0..* MS
 * related.relationship 1..1 MS
-* related.relationship from C4BBRelatedClaimRelationshipCodes (extensible)
+* related.relationship from C4BBRelatedClaimRelationshipCodes (required)
 * related.reference 1..1 MS 
 * payee 0..1 MS
 * payee.type 1..1 MS
@@ -42,9 +42,6 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * supportingInfo.code 0..1 MS 
 * supportingInfo.timing[x] 0..1 MS 
 * supportingInfo.value[x] 0..1 MS 
-* procedure 0..* MS 
-* procedure.type 0..* MS 
-* procedure.date 0..1 MS 
 * insurance 1..* MS
 * insurance.coverage 1..1 MS
 * insurance.focal 1..1  MS

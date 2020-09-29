@@ -22,6 +22,9 @@ Services."
 * procedure.procedure[x] 1..1 MS
 * procedure.procedure[x] from CMSICD910PCSProcedureCodes (required) 
 * procedure.type from C4BBClaimProcedureType (required)
+* procedure 0..* MS 
+* procedure.type 0..* MS 
+* procedure.date 0..1 MS 
 * provider 1..1
 * provider only Reference(C4BBOrganization)
 * supportingInfo ^slicing.rules = #open
