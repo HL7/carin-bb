@@ -254,7 +254,7 @@ Description: "APR-DRGs (All Patient Refined Diagnosis Related Groups).  APR-DRGs
 * ^copyright = "Use of APR-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
 
 ValueSet: CMSMS3MAPRDRG 
-Title: "MS MS 3M APR DRG"
+Title: "CMS MS 3M APR DRG"
 Description: "This value set defines two sets of DRGs, MS-DRGs (Medicare Severity Diagnosis Related Groups) and APR-DRGs (All Patient Refined Diagnosis Related Groups).  MS-DRGs are owned by CMS; APR-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version.  "
 * codes from system CMSMSDRG
 * codes from system THREEMAPRDRG

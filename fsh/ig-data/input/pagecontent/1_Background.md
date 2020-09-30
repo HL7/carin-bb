@@ -11,7 +11,7 @@
 <li>Plan Coverage and Formularies</li>
 </ul>
 <p>The Consumer Directed Payer Data Exchange Implementation Guide was defined by the CARIN Alliance to meet CMS requirements to provide Claims and Encounter data. <br /><br />Provisioning Clinical Data is defined by the DaVinci Payer Data Exchange (PDex) and US Core Implementation Guides. <br /><br />Provisioning Plan Coverage and Formularies is defined by the DaVinci Payer Data Exchange US Drug Formulary Implementation Guide. <br /><br />The implementation date is January 1, 2021.</p>
-<h3>Patient Protection</h3>
+<h3 id="patient-protection">Patient Protection</h3>
 <h4>Health Care Payers and HIPAA</h4>
 <h4>Patients Sharing Their Health Information With Third Parties</h4>
 <p>The CMS final rule states: &ldquo;An MA organization must provide in an easily accessible location on its public website and through other appropriate mechanisms through which it ordinarily communicates with current and former enrollees seeking to access their health information held by the MA organization, educational resources in non-technical, simple and easy-to-understand language." Therefore, providing member educational materials is outside the scope of this IG and the responsibility of each payer.&nbsp; Although it&rsquo;s outside the scope of the IG, the CARIN Alliance is encouraging payers to have applications self-attest to the CARIN Code of Conduct to ensure there is consistency in how apps are getting informed, proactive consent from members and consistency in how apps use, share, and store a member&rsquo;s health information.</p>
@@ -29,7 +29,7 @@
 </ul>
 <p>The implementation date is January 1, 2021. Patient education is out of scope for this Implementation Guide.</p>
 <h3>CARIN Alliance Code of Conduct</h3>
-<h3>CARIN BB IG Relation to other IGs</h3>
+<h3 id="relation-to-other-IGs">CARIN IG for Blue Button® Relation to other IGs</h3>
 <h4>US Core</h4>
 <p>CARIN BB uses the ExplanationOfBenefit Resource as its primary resource. Reference Resources are Coverage, Patient, Practitioner, PractitionerRole, Organization and Location. Since the ExplanationOfBenefit and Coverage profiles are not included in the US Core, there is no alignment requirement for these profiles. Patient, Practitioner, PractitionerRole, Organization and Location are US Core Profiles. Since these are supporting / reference profiles (rather than a focus profile) in CARIN BB, the alignment with the US Core is on the content of these profiles, but not on the search parameters. The following diagram provides a high-level view of the relationships between resources used in this IG. It does not necessarily reflect all of the relationships/references between resources. <img style="width: 100%; float: none; align: middle;" src="CARINBBResources.png" /></p>
 <h4>SMART Application Launch</h4>

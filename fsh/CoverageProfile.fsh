@@ -32,7 +32,6 @@ Description: "Data that reflect a payer's coverage that was effective as of the 
 * payor ^short = "Issuer of the Policy (2)"
 * payor MS
 * type ^short = "Identifies if the coverage is PPO, HMO, POS, etc.   (3)"
-* type MS
 * relationship ^short = "Relationship of the member to the person insured (subscriber). (72)"
 * relationship MS
 * period ^short = "Date that the contract became effective (74)"
