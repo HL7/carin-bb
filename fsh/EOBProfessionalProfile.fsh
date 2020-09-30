@@ -103,7 +103,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * facility ^short = "The NPI of the facility where the services were rendered. (97)"
 * careTeam.provider ^short = "The NPI of the referring physician. (99)"
 * payment.date ^short = "The date the claim was paid. (107)"
-* item.servicedPeriod ^short = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
+* item.serviced[x]  ^short = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
 * payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber  (120)"
 * payee.party ^short = "Recipient reference (121)"
 * insurance ^short = "Identifies the primary payer.  For use only on secondary claims.   (141)"
@@ -130,7 +130,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * payment.date MS
 * patient MS
 * related MS
-* item.servicedPeriod MS
+* item.serviced[x] MS
 * payee.type MS
 * payee.party MS
 * status MS
