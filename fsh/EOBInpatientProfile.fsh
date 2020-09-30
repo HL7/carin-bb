@@ -8,6 +8,7 @@ Services."
 * type.coding 1..1 MS
 * type = $HL7ClaimTypeCS#institutional
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)  // was  PayerInstitutionalProviderRole 
+* careTeam.role 1..1 MS
 * obeys EOB-inst-careTeam-practitioner
 * obeys EOB-inst-careTeam-organization
 * diagnosis 1..* MS

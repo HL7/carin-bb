@@ -39,6 +39,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[servicefacility].valueReference 1..1 MS 
 * supportingInfo[servicefacility].valueReference only Reference(C4BBOrganization)
 * careTeam.role from C4BBClaimProfessionalAndNonClinicianCareTeamRole   (required)  // was PayerProfessionalAndNonClinicianProviderRole
+* careTeam.role 1..1 MS
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
 * diagnosis.type from C4BBClaimProfessionalAndNonClinicianDiagnosisType  (required)
@@ -47,7 +48,8 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.diagnosis[x] from CDCICD910CMDiagnosisCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
-* item.locationCodeableConcept from CMSPlaceofServiceCodes (required)
+* item.location[x] from CMSPlaceofServiceCodes (required)
+* item.locationCodeableConcept  MS 
 * item.adjudication ^slicing.rules = #closed 
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on value pattern"

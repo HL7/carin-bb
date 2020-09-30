@@ -6,6 +6,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services."
 * type  = $HL7ClaimTypeCS#institutional
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)   // was PayerInstitutionalProviderRole
+* careTeam.role 1..1 MS
 * obeys EOB-inst-careTeam-practitioner
 * obeys EOB-inst-careTeam-organization
 * obeys EOB-careteam-qualification
