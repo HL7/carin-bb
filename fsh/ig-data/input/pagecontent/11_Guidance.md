@@ -8,29 +8,18 @@
 </ul>
 <h3 id="conformance-verbs">Conformance Verbs</h3>
 <ul>
-<ul>The conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined in</ul>
+<ul>
+<ul>The conformance verbs - SHALL, SHOULD, MAY - used in this guide are defined in&nbsp;</ul>
+</ul>
 </ul>
 <p><a href="http://hl7.org/fhir/R4/conformance-rules.html">FHIR Conformance Rules.</a></p>
-<ul>
-<ul>.</ul>
-</ul>
 <h3 id="must-support">Must Support</h3>
 <ul>
 <ul>For profiles defined in other IGs, the meaning of Must Support is established in the defining IG.</ul>
-</ul>
-<p>&nbsp;</p>
-<ul>
 <ul>Note that the Must Support requirements for this IG are modeled after the US Core implementation guide, with the requirements for CARIN Server APIs modeled on those for US Core Responders, and the requirements for CARIN Consumer Apps modeled on those for US Core Requestors.</ul>
-</ul>
-<p>&nbsp;</p>
-<ul>
 <ul>For profiles defined in this IG, Must Support means the following:</ul>
+<ul>The CARIN BB&rsquo;s interpretation of Must Support and Missing Data is aligned with US Core IG must support. When querying and reading CARIN BB Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows:&nbsp;</ul>
 </ul>
-<p>&nbsp;</p>
-<ul>
-<ul>The CARIN BB&rsquo;s interpretation of Must Support and Missing Data is aligned with US Core IG must support. When querying and reading CARIN BB Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows:</ul>
-</ul>
-<p>&nbsp;</p>
 <ul>
 <ul>
 <ul>
@@ -49,12 +38,11 @@
 </ul>
 <h3 id="missing-data">Missing Data</h3>
 <ul>
-<ul>If the source system does not have data for a *Must Support* data element with minimum cardinality = 0, the data element is omitted from the resource. If the source system does not have data for a required data element (in other words, where the minimum cardinality is &gt; 0), follow guidance defined in the core FHIR specification and summarized in the</ul>
+<ul>
+<ul>If the source system does not have data for a *Must Support* data element with minimum cardinality = 0, the data element is omitted from the resource. If the source system does not have data for a required data element (in other words, where the minimum cardinality is &gt; 0), follow guidance defined in the core FHIR specification and summarized in the&nbsp;</ul>
+</ul>
 </ul>
 <p><a href="http://hl7.org/fhir/us/core/general-guidance.html#missing-data">US Core</a></p>
-<ul>
-<ul>.</ul>
-</ul>
 <h3 id="conformance-to-us-core-profiles">Conformance to US Core Profiles</h3>
 <ul>
 <ul>Any actor acting as a Health Plan API actor in this IG **SHALL**:
@@ -71,17 +59,23 @@ Any actor acting a FHIR Client in this IG **SHALL**:
 </ul>
 <h3 id="common-clinical-data-set">U.S. Core Data for Interoperability and 2015 Edition Common Clinical Data Set</h3>
 <ul>
-<ul>The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access - Data Category Request 170.315(g)(8). They were created for each item in the</ul>
+<ul>
+<ul>The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access - Data Category Request 170.315(g)(8). They were created for each item in the&nbsp;</ul>
+</ul>
 </ul>
 <p><a href="https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf">2015 Edition Common Clinical Data Set (CCDS)</a></p>
 <ul>
-<ul>]. The 3.1.0 version of the US Core Profiles IG includes new requirements from the latest proposed ONC</ul>
+<ul>
+<ul>. The 3.1.0 version of the US Core Profiles IG includes new requirements from the latest proposed ONC&nbsp;</ul>
+</ul>
 </ul>
 <p><a href="https://www.healthit.gov/topic/laws-regulation-and-policy/notice-proposed-rulemaking-improve-interoperability-health">U.S. Core Data for Interoperability(USCDI)</a></p>
 <ul>
-<ul>) and includes all the</ul>
+<ul>
+<ul>&nbsp;and includes all the&nbsp;</ul>
+</ul>
 </ul>
 <p><a href="https://www.healthit.gov/isa/api-resource-collection-health-arch">API Resource Collection in Health (ARCH)</a></p>
 <ul>
-<ul>resources.</ul>
+<ul>&nbsp;resources.</ul>
 </ul>
