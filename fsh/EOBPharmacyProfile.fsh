@@ -14,6 +14,7 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on $value pattern"
 * supportingInfo MS 
+* supportingInfo.category MS 
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    brandgenericcode 0..1 MS and
@@ -50,6 +51,7 @@ The claims data is based on submission standards adopted by the Department of He
 * item.detail MS
 * item.detail.quantity MS 
 * careTeam.role from C4BBClaimPharmacyTeamRole  (required)   // was PayerPharmacyProviderRole
+* careTeam.role 1..1 MS
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on $this pattern"

@@ -34,6 +34,7 @@ Services."
 * supportingInfo ^slicing.discriminator.type = #pattern
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo MS 
+* supportingInfo.category MS 
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
     clmrecvddate 0..1 MS and
@@ -60,16 +61,21 @@ Services."
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[typeofbill].category  = C4BBSupportingInfoType#typeofbill
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
+* supportingInfo[typeofbill].code 1..1 MS 
 * supportingInfo[pointoforigin].category  = C4BBSupportingInfoType#pointoforigin
 * supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
+* supportingInfo[pointoforigin].code 1..1 MS
 * supportingInfo[admtype].category  = C4BBSupportingInfoType#admtype
 * supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
+* supportingInfo[admtype].code 1..1 MS 
 * supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit"
 * supportingInfo[discharge-status].category  = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
+* supportingInfo[discharge-status].code 1..1 MS
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[drg].category  = C4BBSupportingInfoType#drg
 * supportingInfo[drg].code from CMSMS3MAPRDRG  (required)
+* supportingInfo[drg].code 1..1 MS
 * supportingInfo[drg] ^short = "Claim diagnosis related group (DRG)"
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)

@@ -22,6 +22,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo ^slicing.discriminator.type = #pattern
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo MS 
+* supportingInfo.category MS 
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
