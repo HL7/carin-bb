@@ -294,7 +294,7 @@ Usage: #example
 * diagnosis[0].diagnosisCodeableConcept.coding[0].system = $ICD10CM
 * diagnosis[0].diagnosisCodeableConcept.coding[0].code = #EX11.1
 * diagnosis[0].diagnosisCodeableConcept.text = "Description for EX11.1"
-* diagnosis[0].type[0].coding[0] = C4BBClaimDiagnosisType#principal
+* diagnosis[0].type[0].coding[0] = http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal
 * diagnosis[0].type[0].text = "principal"
 * procedure[0].type[0].coding[0].system = "http://terminology.hl7.org/CodeSystem/ex-procedure-type"
 * procedure[0].type[0].coding[0].code = #primary
@@ -499,7 +499,7 @@ Usage: #example
 * diagnosis[0].diagnosisCodeableConcept.coding[0].system = $ICD10CM
 * diagnosis[0].diagnosisCodeableConcept.coding[0].code = #X11.111
 * diagnosis[0].diagnosisCodeableConcept.text = "Description for X11.111"
-* diagnosis[0].type[0].coding[0].system = $C4BBClaimDiagnosisTypeCS
+* diagnosis[0].type[0].coding[0].system = http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal
 * diagnosis[0].type[0].coding[0].code = #principal
 * diagnosis[0].type[0].text = "principal"
 * procedure[0].sequence = 1
