@@ -50,3 +50,8 @@ Alias:  $CMSPlaceofServiceCodes = https://www.cms.gov/Medicare/Coding/place-of-s
 //Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   $FDANationalDrugCode = http://hl7.org/fhir/sid/ndc
 Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy
+
+Alias:   $SupportingInfoCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType
+Alias:   $C4BBAdjudicationCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication 
+Alias:   $C4BBIdentifierTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType 
+Alias:   $C4BBClaimDiagnosisTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType 

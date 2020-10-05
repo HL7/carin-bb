@@ -27,25 +27,35 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus (required) 
-* supportingInfo[billingnetworkcontractingstatus].code 1..1
+* supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[brandgenericcode].category = C4BBSupportingInfoType#brandgenericcode   
 * supportingInfo[brandgenericcode] ^short = "Whether the plan adjudicated the claim as a brand or generic drug (144)"
 * supportingInfo[brandgenericcode].code from NCPDPBrandGenericCode (required)
+* supportingInfo[brandgenericcode].code 1..1 MS
 * supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode   
 * supportingInfo[rxoriginCode] ^short = "Whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy (143)"
 * supportingInfo[rxoriginCode].code from NCPDPPrescriptionOriginCode (required)
+* supportingInfo[rxoriginCode].code 1..1 MS 
 * supportingInfo[refillNum].category = C4BBSupportingInfoType#refillnum
 * supportingInfo[refillNum] ^short = "The number fill of the current dispensed supply (0, 1, 2, etc.) (137)"
+* supportingInfo[refillNum].value[x] 1..1 MS
+* supportingInfo[refillNum].value[x] only Quantity 
 * supportingInfo[dawcode].category = C4BBSupportingInfoType#dawcode       
 * supportingInfo[dawcode] ^short = "Dispense As Written product selection code" 
 * supportingInfo[dawcode].code from NCPDPDispensedAsWrittenOrProductSelectionCode (required)
+* supportingInfo[dawcode].code 1..1 MS 
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88)"
+* supportingInfo[clmrecvddate].timing[x] only date 
+* supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[dayssupply].category = C4BBSupportingInfoType#dayssupply
 * supportingInfo[dayssupply] ^short = "Number of days supply of medication dispensed by the pharmacy (77)"
+* supportingInfo[dayssupply].value[x] 1..1 MS
+* supportingInfo[dayssupply].value[x] only Quantity 
 * supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
 * supportingInfo[compoundcode] ^short = "NCPDP Compound code"
 * supportingInfo[compoundcode].code from NCPDPCompoundCode (required)
+* supportingInfo[compoundcode].code 1..1 MS
 * item.productOrService from FDANDCOrCompound (required)
 * item.detail.productOrService  from FDANationalDrugCode  (required)
 * item.detail MS
