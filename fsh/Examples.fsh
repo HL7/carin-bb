@@ -99,7 +99,7 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = $C4BBClaimDiagnosisTypeCS#principal
+* diagnosis[0].type = http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal 
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
@@ -146,7 +146,7 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = $C4BBClaimDiagnosisTypeCS#principal
+* diagnosis[0].type = $C4BBClaimDiagnosisTypeCS#patientreasonforvisit
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
@@ -223,7 +223,7 @@ Usage: #example
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#pharmacy
-* type.text = "Inpatient Institution"
+* type.text = "Pharmacy"
 * use = #claim 
 * created = "2019-07-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
@@ -234,9 +234,6 @@ Usage: #example
 * provider = Reference(OrganizationProvider1)
 * provider.display = "XXX Health Plan"
 * outcome = #partial
-* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = $C4BBClaimDiagnosisTypeCS#principal
-* diagnosis[0].sequence = 1 
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
 * total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
