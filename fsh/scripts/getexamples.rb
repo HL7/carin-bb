@@ -16,7 +16,7 @@ Dir.glob(files) do |cs_filename|
     examples[name] = {:resource => resource, :profile => profile, :profileURL => profileURL, :url => url, :name => name}
 end
 
-examples = examples.sort_by { |key| key }.to_h
+examples = exaples.sort_by { |key| key }.to_h
 binding.pry
 puts "vvvvvvvvvEXAMPLESvvvvvvvvv"
 examples.each{ |title, value|

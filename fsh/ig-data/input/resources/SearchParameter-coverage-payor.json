@@ -1,0 +1,40 @@
+
+{
+
+    "url" : "http://hl7.org/fhir/us/carin-bb/SearchParameter/coverage-payor",
+     "derivedFrom" : "http://hl7.org/fhir/SearchParameter/Coverage-payor",  
+     "resourceType" : "SearchParameter",
+    "id" : "coverage-payor",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode" : "trial-use"
+    }],
+    "version" : "4.0.1",
+    "name" : "Coverage_Payor",
+    "status" : "draft",
+    "experimental" : false,
+    "date" : "2019-11-01T09:29:23+11:00",
+    "publisher" : "Health Level Seven International (Financial Management)",
+    "contact" : [{
+      "telecom" : [{
+        "system" : "url",
+        "value" : "http://hl7.org/fhir"
+      }]
+    },
+    {
+      "telecom" : [{
+        "system" : "url",
+        "value" : "http://www.hl7.org/Special/committees/fm/index.cfm"
+      }]
+    }],
+    "description" : "The identity of the insurer or party paying for services",
+    "code" : "payor",
+    "base" : ["Coverage"],
+    "type" : "reference",
+    "expression" : "Coverage.payor",
+    "xpath" : "f:Coverage/f:payor",
+    "xpathUsage" : "normal",
+    "target" : ["Organization",
+    "Patient",
+    "RelatedPerson"]
+  }

@@ -10,7 +10,7 @@
         "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
         "valueCode": "trial-use"
     }],
-    "url": "http://hl7.org/fhir/us/carin/SearchParameter/explanationofbenefit-service-date",
+    "url": "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-service-date",
     "version": "0.1.0",
     "name": "ExplanationOfBenefit_ServiceDate",
     "status": "active",
@@ -34,8 +34,8 @@
     "code": "service-date",
     "base": ["ExplanationOfBenefit"],
     "type": "date",
-    "expression": "ExplanationOfBenefit.billablePeriod | ExplanationOfBenefit.serviced as Date |  ExplanationOfBenefit.serviced as Period",
-    "xpath": "f:ExplanationOfBenefit/f:billablePeriod | f:ExplanationOfBenefit/f:serviced/f:servicedDate | f:ExplanationOfBenefit/f:serviced/f:servicedPeriod",
+    "expression": "ExplanationOfBenefit.billablePeriod | ExplanationOfBenefit.item.serviced as Date |  ExplanationOfBenefit.item.serviced as Period",
+    "xpath": "f:ExplanationOfBenefit/f:billablePeriod | f:ExplanationOfBenefit/f:item/f:serviced/f:servicedDate | f:ExplanationOfBenefit/f:item/f:serviced/f:servicedPeriod",
     "xpathUsage": "normal",
     "comparator": ["eq", "ne", "gt", "ge", "lt", "le", "sa", "eb", "ap"]
 }
