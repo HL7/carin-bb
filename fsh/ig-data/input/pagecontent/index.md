@@ -13,12 +13,13 @@
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.<br>
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
-<li>Post-Connectathon changes -  Version 0.1.4 - September 15+, 2020</li>
+<li>Post-Connectathon changes -  Version 0.1.4 - October 6, 2020</li>
 <ol>
-<li>C4BBPayeeType, C4BBRelationshipCodes, and other minor binding changes</li>
-<li>Updated C4BB Codesystems, Codesystem STubs, and ValueSets</li>
-<li>Updated EOBComparison charts</li>
-<li>New examples from Onyx and UPMC (not yet validating)</li>
+<li>Please post comments to the CarinBB zulip <a href="https://chat.fhir.org/#narrow/stream/204607-CARIN-IG.20for.20Blue.20Button.C2.AE"> stream</a>. 
+<li>Updated all invariants.</li>
+<li>Updated C4BB Codesystems,  ValueSets and Codesystem Stubs.  Minor changes to content of C4BB (locally defined) codesystems, and changes to the defining URLs of external codesystems.</li>
+<li>Updated Profile Comparison <a href="EOBProfileComparison20201006.xlsx" download="EOBProfileComparison20201006.xlsx">charts </a>.  This is a good place to get an overview comparison of the profiles in this IG.</li>
+<li>Examples for all profiles.  Remaining validation errors are due to HL7 terminology issues, not with the examples.
 </ol>
 <li>Interim Version 0.1.3 - September 8, 2020</li>
 <ol>
