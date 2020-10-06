@@ -86,7 +86,7 @@ Description: "Identifies the type of recipient of the adjudication amount; i.e.,
 ValueSet: C4BBClaimProfessionalAndNonClinicianDiagnosisType 
 Title: "C4BB Claim Professional And Non Clinician Diagnosis Type"
 Description: "Indicates if the professional and non-clinician diagnosis is principal or secondary"
-* http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal "principal"
+* $HL7DiagnosisType#principal "principal"
 * C4BBClaimDiagnosisType#secondary "secondary"
 * ^copyright = "This Valueset is not copyrighted."
 
@@ -145,7 +145,7 @@ Description: "Identifies the type of identifier payers and providers assign to p
 * C4BBIdentifierType#um
 * C4BBIdentifierType#pat
 * $IdentifierType#MB
-* $IdentifierType#MCR
+* $IdentifierType#MCR   // I think this should be #MR, medical record number
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBOrganizationIdentifierType

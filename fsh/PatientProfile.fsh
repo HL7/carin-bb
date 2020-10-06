@@ -16,7 +16,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
    medrecnum 0..* MS and
    uniquememberid 0..* MS and
    patacctnum 0..* MS 
-* identifier[memberid] ^patternIdentifier.type = C4BBIdentifierType#mb
+* identifier[memberid] ^patternIdentifier.type = $IdentifierType#MB
 * identifier[memberid] ^short = "Member ID"
 * identifier[memberid].type.coding 1..* MS
 * identifier[medrecnum] ^patternIdentifier.type = $IdentifierType#MR

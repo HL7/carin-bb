@@ -16,6 +16,8 @@ Alias:   $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
 Alias:   $OrganizationIdentifierType   =  http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $IdentifierType   =  http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
+Alias:   $HL7DiagnosisType = http://terminology.hl7.org/CodeSystem/ex-diagnosistype
+Alias:   $HL7ProcedureType = http://terminology.hl7.org/CodeSystem/ex-procedure-type
 
 Alias:   $CareTeamRoleCodeCS = http://terminology.hl7.org/CodeSystem/claimcareteamrole
 Alias:   $PresentOnAdmissionV2CS = urn:oid:2.16.840.1.113883.6.301.11

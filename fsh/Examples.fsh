@@ -24,7 +24,7 @@ Usage: #example
 * address[0].state = "PA"
 * address[0].postalCode = "12519"
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK
-* identifier[memberid].type = C4BBIdentifierType#mb
+* identifier[memberid].type = $IdentifierType#MB
 * identifier[memberid].value = "1234-234-1243-12345678901"
 * identifier[memberid].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
 * identifier[medrecnum].type = $IdentifierType#MR
@@ -59,19 +59,19 @@ Usage: #example
 * dependent = "01"
 * period.start = "2019-01-01T00:00:00+00:00"
 * period.end = "2019-10-31T00:00:00+00:00"
-* class[group].type = http://terminology.hl7.org/CodeSystem/coverage-class#group 
-* class[group].type.text = "An employee group"
-* class[group].value = "021890"
-* class[group].name = "Acme Corporation"
-* class[plan].type = http://terminology.hl7.org/CodeSystem/coverage-class#plan
-* class[plan].type.text = "Plan"
-* class[plan].value = "XYZ123"
-* class[plan].name = "XYZ123-UPMC CONSUMER ADVA"
-* class[2].type = http://terminology.hl7.org/CodeSystem/coverage-class#subgroup 
-* class[2].type.text = "A subgroup of an employee group"
-* class[2].value = "300"
-* class[2].name = "ACME HSA PPO 1500"
 
+* class[group][0].type = http://terminology.hl7.org/CodeSystem/coverage-class#group 
+* class[group][0].type.text = "An employee group"
+* class[group][0].value = "021890"
+* class[group][0].name = "Acme Corporation"
+* class[plan][0].type = http://terminology.hl7.org/CodeSystem/coverage-class#plan
+* class[plan][0].type.text = "Plan"
+* class[plan][0].value = "XYZ123"
+* class[plan][0].name = "XYZ123-UPMC CONSUMER ADVA"
+* class[0].type = http://terminology.hl7.org/CodeSystem/coverage-class#subgroup 
+* class[0].type.text = "A subgroup of an employee group"
+* class[0].value = "300"
+* class[0].name = "ACME HSA PPO 1500"
 * network = "XYZ123-UPMC CONSUMER ADVA"
 * relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self
 * payor = Reference(OrganizationPayer1)
@@ -134,7 +134,7 @@ Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = C4BBIdentifierType#cn
+* identifier.type = C4BBIdentifierType#uc
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
@@ -181,7 +181,7 @@ Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = $C4BBIdentifierTypeCS#cn
+* identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "AW123412341234123412341234123413"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#professional
@@ -227,7 +227,7 @@ Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = $C4BBIdentifierTypeCS#cn
+* identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#pharmacy
