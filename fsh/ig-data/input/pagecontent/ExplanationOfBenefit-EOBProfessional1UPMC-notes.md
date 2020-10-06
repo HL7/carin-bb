@@ -3,20 +3,32 @@
 "ExplanationOfBenefit"
 </td></tr>
 <tr><td>id</td><td>
-"01234567801-FR123E1230000010000010001"
+"EOBProfessional1UPMC"
 </td></tr>
+<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"</td></tr>
 <tr><td>meta.lastUpdated</td><td>
 "2020-08-25T19:07:14-04:00"
 </td></tr>
 <tr><td>meta.source</td><td>
-"Organization/1"
+"Organization/Organization1UPMC"
 </td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"</td></tr>
+<tr><td>type.coding[0].code</td><td>
+#professional
+</td></tr>
+<tr><td>type.coding[0].system</td><td>
+"http://terminology.hl7.org/CodeSystem/claim-type"
+</td></tr>
+<tr><td>type.text</td><td>
+"Professional"
+</td></tr>
+<tr><td>use</td><td>
+"claim"
+</td></tr>
 <tr><td>identifier[0].type.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/IdentifierTypeCS"
+"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType"
 </td></tr>
 <tr><td>identifier[0].type.coding[0].code</td><td>
-#cn
+#uc
 </td></tr>
 <tr><td>identifier[0].type.text</td><td>
 "Claim Number"
@@ -30,20 +42,8 @@
 <tr><td>status</td><td>
 "active"
 </td></tr>
-<tr><td>type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/claim-type"
-</td></tr>
-<tr><td>type.coding[0].code</td><td>
-#professional
-</td></tr>
-<tr><td>type.text</td><td>
-"Professional"
-</td></tr>
-<tr><td>use</td><td>
-"claim"
-</td></tr>
 <tr><td>patient.reference</td><td>
-"Patient/01234567801"
+"Patient/Patient1UPMC"
 </td></tr>
 <tr><td>billablePeriod.start</td><td>
 "2019-11-22T00:00:00-05:00"
@@ -55,13 +55,13 @@
 "2019-12-06T00:00:00-05:00"
 </td></tr>
 <tr><td>insurer.reference</td><td>
-"Organization/1"
+"Organization/Organization1UPMC"
 </td></tr>
 <tr><td>insurer.display</td><td>
 "UPMC Health Plan"
 </td></tr>
 <tr><td>provider.reference</td><td>
-"Organization/PRV-V00UPP"
+"Practitioner/Practitioner1UPMC"
 </td></tr>
 <tr><td>payee.type.coding[0].system</td><td>
 "http://terminology.hl7.org/CodeSystem/payeetype"
@@ -73,7 +73,7 @@
 "Provider"
 </td></tr>
 <tr><td>payee.party.reference</td><td>
-"Organization/PAT-V-FR123E1230000010000010001-0000000UPP"
+"Organization/Organization3UPMC"
 </td></tr>
 <tr><td>outcome</td><td>
 "complete"
@@ -82,16 +82,16 @@
 1
 </td></tr>
 <tr><td>supportingInfo[0].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/ClaimInformationCategory"
+"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
 </td></tr>
 <tr><td>supportingInfo[0].category.coding[0].code</td><td>
 #billingnetworkcontractingstatus
 </td></tr>
-<tr><td>supportingInfo[0].code.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus"
-</td></tr>
 <tr><td>supportingInfo[0].code.coding[0].code</td><td>
 #contracted
+</td></tr>
+<tr><td>supportingInfo[0].code.coding[0].system</td><td>
+"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus"
 </td></tr>
 <tr><td>supportingInfo[0].code.coding[0].display</td><td>
 "Contracted"
@@ -111,11 +111,11 @@
 <tr><td>diagnosis[0].diagnosisCodeableConcept.text</td><td>
 "Description for EX11.1"
 </td></tr>
-<tr><td>diagnosis[0].type[0].coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType"
-</td></tr>
 <tr><td>diagnosis[0].type[0].coding[0].code</td><td>
 #principal
+</td></tr>
+<tr><td>diagnosis[0].type[0].coding[0].system</td><td>
+"http://terminology.hl7.org/CodeSystem/ex-diagnosistype"
 </td></tr>
 <tr><td>diagnosis[0].type[0].text</td><td>
 "principal"
@@ -133,13 +133,16 @@
 "2019-11-22T00:00:00-05:00"
 </td></tr>
 <tr><td>procedure[0].procedureCodeableConcept.coding[0].system</td><td>
-"http://hl7.org/fhir/sid/ex-icd-10-procedures"
+"http://www.cms.gov/Medicare/Coding/ICD10"
 </td></tr>
 <tr><td>procedure[0].procedureCodeableConcept.coding[0].code</td><td>
 #S1234
 </td></tr>
 <tr><td>procedure[0].procedureCodeableConcept.text</td><td>
 "Description for S1234"
+</td></tr>
+<tr><td>procedure[0].sequence</td><td>
+1
 </td></tr>
 <tr><td>procedure[1].type[0].coding[0].system</td><td>
 "http://terminology.hl7.org/CodeSystem/ex-procedure-type"
@@ -154,7 +157,7 @@
 "2019-11-22T00:00:00-05:00"
 </td></tr>
 <tr><td>procedure[1].procedureCodeableConcept.coding[0].system</td><td>
-"http://hl7.org/fhir/sid/ex-icd-10-procedures"
+"http://www.cms.gov/Medicare/Coding/ICD10"
 </td></tr>
 <tr><td>procedure[1].procedureCodeableConcept.coding[0].code</td><td>
 #99999
@@ -162,11 +165,14 @@
 <tr><td>procedure[1].procedureCodeableConcept.text</td><td>
 "Description for 99999"
 </td></tr>
+<tr><td>procedure[1].sequence</td><td>
+2
+</td></tr>
 <tr><td>insurance[0].focal</td><td>
 "true"
 </td></tr>
 <tr><td>insurance[0].coverage.reference</td><td>
-"Coverage/01234567801-20190801-20191231-SEA17"
+"Coverage/Coverage1UPMC"
 </td></tr>
 <tr><td>item[0].sequence</td><td>
 1
@@ -205,7 +211,7 @@
 "The amount of the member's liability."
 </td></tr>
 <tr><td>item[0].adjudication[0].amount.value</td><td>
-35.0
+35
 </td></tr>
 <tr><td>item[0].adjudication[0].amount.currency</td><td>
 #USD
@@ -223,7 +229,7 @@
 "The total submitted amount for the claim or group or line item."
 </td></tr>
 <tr><td>item[0].adjudication[1].amount.value</td><td>
-40.0
+40
 </td></tr>
 <tr><td>item[0].adjudication[1].amount.currency</td><td>
 #USD
@@ -241,7 +247,7 @@
 "Patient Co-Payment"
 </td></tr>
 <tr><td>item[0].adjudication[2].amount.value</td><td>
-0.0
+0
 </td></tr>
 <tr><td>item[0].adjudication[2].amount.currency</td><td>
 #USD
@@ -259,7 +265,7 @@
 "Amount of the change which is considered for adjudication."
 </td></tr>
 <tr><td>item[0].adjudication[3].amount.value</td><td>
-35.0
+35
 </td></tr>
 <tr><td>item[0].adjudication[3].amount.currency</td><td>
 #USD
@@ -277,7 +283,7 @@
 "Amount deducted from the eligible amount prior to adjudication."
 </td></tr>
 <tr><td>item[0].adjudication[4].amount.value</td><td>
-35.0
+35
 </td></tr>
 <tr><td>item[0].adjudication[4].amount.currency</td><td>
 #USD
@@ -295,16 +301,16 @@
 "Amount payable under the coverage"
 </td></tr>
 <tr><td>item[0].adjudication[5].amount.value</td><td>
-0.0
+0
 </td></tr>
 <tr><td>item[0].adjudication[5].amount.currency</td><td>
 #USD
 </td></tr>
-<tr><td>item[0].adjudication[6].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
-</td></tr>
 <tr><td>item[0].adjudication[6].category.coding[0].code</td><td>
 #noncovered
+</td></tr>
+<tr><td>item[0].adjudication[6].category.coding[0].system</td><td>
+"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
 </td></tr>
 <tr><td>item[0].adjudication[6].category.coding[0].display</td><td>
 "Noncovered"
@@ -313,10 +319,16 @@
 "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 </td></tr>
 <tr><td>item[0].adjudication[6].amount.value</td><td>
-0.0
+0
 </td></tr>
 <tr><td>item[0].adjudication[6].amount.currency</td><td>
 #USD
+</td></tr>
+<tr><td>item[0].adjudication[7].category.coding[0].code</td><td>
+#outofnetwork
+</td></tr>
+<tr><td>item[0].adjudication[7].category.coding[0].system</td><td>
+"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus"
 </td></tr>
 <tr><td>item[1].sequence</td><td>
 2
@@ -342,11 +354,11 @@
 <tr><td>item[1].locationCodeableConcept.text</td><td>
 "URGENT CARE FACILITY"
 </td></tr>
-<tr><td>item[1].adjudication[0].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
-</td></tr>
 <tr><td>item[1].adjudication[0].category.coding[0].code</td><td>
 #memberliability
+</td></tr>
+<tr><td>item[1].adjudication[0].category.coding[0].system</td><td>
+"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
 </td></tr>
 <tr><td>item[1].adjudication[0].category.coding[0].display</td><td>
 "Member liability"
@@ -373,7 +385,7 @@
 "The total submitted amount for the claim or group or line item."
 </td></tr>
 <tr><td>item[1].adjudication[1].amount.value</td><td>
-220.0
+220
 </td></tr>
 <tr><td>item[1].adjudication[1].amount.currency</td><td>
 #USD
@@ -391,7 +403,7 @@
 "Patient Co-Payment"
 </td></tr>
 <tr><td>item[1].adjudication[2].amount.value</td><td>
-0.0
+0
 </td></tr>
 <tr><td>item[1].adjudication[2].amount.currency</td><td>
 #USD
@@ -445,16 +457,16 @@
 "Amount payable under the coverage"
 </td></tr>
 <tr><td>item[1].adjudication[5].amount.value</td><td>
-0.0
+0
 </td></tr>
 <tr><td>item[1].adjudication[5].amount.currency</td><td>
 #USD
 </td></tr>
-<tr><td>item[1].adjudication[6].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
-</td></tr>
 <tr><td>item[1].adjudication[6].category.coding[0].code</td><td>
 #noncovered
+</td></tr>
+<tr><td>item[1].adjudication[6].category.coding[0].system</td><td>
+"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
 </td></tr>
 <tr><td>item[1].adjudication[6].category.coding[0].display</td><td>
 "Noncovered"
@@ -463,10 +475,16 @@
 "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 </td></tr>
 <tr><td>item[1].adjudication[6].amount.value</td><td>
-0.0
+0
 </td></tr>
 <tr><td>item[1].adjudication[6].amount.currency</td><td>
 #USD
+</td></tr>
+<tr><td>item[1].adjudication[7].category.coding[0].code</td><td>
+#innetwork
+</td></tr>
+<tr><td>item[1].adjudication[7].category.coding[0].system</td><td>
+"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus"
 </td></tr>
 <tr><td>total[0].category.coding[0].system</td><td>
 "http://terminology.hl7.org/CodeSystem/adjudication"
@@ -481,7 +499,7 @@
 "The total submitted amount for the claim or group or line item."
 </td></tr>
 <tr><td>total[0].amount.value</td><td>
-260.0
+260
 </td></tr>
 <tr><td>total[0].amount.currency</td><td>
 #USD
@@ -535,16 +553,16 @@
 "Patient Co-Payment"
 </td></tr>
 <tr><td>total[3].amount.value</td><td>
-0.0
+0
 </td></tr>
 <tr><td>total[3].amount.currency</td><td>
 #USD
 </td></tr>
-<tr><td>total[4].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
-</td></tr>
 <tr><td>total[4].category.coding[0].code</td><td>
 #noncovered
+</td></tr>
+<tr><td>total[4].category.coding[0].system</td><td>
+"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
 </td></tr>
 <tr><td>total[4].category.coding[0].display</td><td>
 "Noncovered"
@@ -553,7 +571,7 @@
 "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 </td></tr>
 <tr><td>total[4].amount.value</td><td>
-0.0
+0
 </td></tr>
 <tr><td>total[4].amount.currency</td><td>
 #USD
@@ -571,16 +589,16 @@
 "Amount payable under the coverage"
 </td></tr>
 <tr><td>total[5].amount.value</td><td>
-0.0
+0
 </td></tr>
 <tr><td>total[5].amount.currency</td><td>
 #USD
 </td></tr>
-<tr><td>total[6].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
-</td></tr>
 <tr><td>total[6].category.coding[0].code</td><td>
 #memberliability
+</td></tr>
+<tr><td>total[6].category.coding[0].system</td><td>
+"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
 </td></tr>
 <tr><td>total[6].category.coding[0].display</td><td>
 "Member liability"
