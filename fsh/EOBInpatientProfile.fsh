@@ -74,7 +74,7 @@ Services."
 * supportingInfo[discharge-status].code 1..1 MS
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[drg].category  = C4BBSupportingInfoType#drg
-* supportingInfo[drg].code from CMSMS3MAPRDRG  (required)
+* supportingInfo[drg].code from CMSMS3MAPAPRDRG  (required)
 * supportingInfo[drg].code 1..1 MS
 * supportingInfo[drg] ^short = "Claim diagnosis related group (DRG)"
 * item.revenue from AHANUBCRevenueCodes (required)

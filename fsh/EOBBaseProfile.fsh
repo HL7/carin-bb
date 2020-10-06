@@ -9,6 +9,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * ^abstract = true 
 * identifier 1..* 
 * identifier.type 1..1 MS
+* identifier.type from C4BBClaimIdentifierType (extensible)
 * type 1..1 MS
 * type from $HL7ClaimType (required)
 //   * claim MS   - igor sez we discussed removing MS

@@ -86,7 +86,7 @@ Description: "Indicates whether or not the prescription is a compound NCPDP fiel
 * codes from system NCPDPCompoundCode
 * insert NCPDPCopyrightNotice
 
-// *** @Saul deleted defining this code system as http://hl7.org/fhir/sid/ndc is defined by HL7
+// *** deleted defining this code system as http://hl7.org/fhir/sid/ndc is defined by HL7
 //CodeSystem: FDANationalDrugCode
 //Title: "FDA National Drug Code (NDC)"
 //Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7. "
@@ -208,11 +208,6 @@ ValueSet: AMACPTCMSHCPCSProcedureCodes
 Title: "AMA CPT CMS HCPCS Procedure Codes"
 Description: "The Value Set is a combination of two Code Systems:  CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed.  AMA CPT CMS HCPCS Procedure Codes leverage US Core Procedure Codes composition.  
 CPT codes are available by subscription from the AMA at http://www.ama-assn.org/go/cpt.  HCPCS codes are available at http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets.  The link takes one to a list of files.  The target set for this Code System is the procedure codes from this file.\n\n**PROCEDURE CODES ONLY**"
-
-// @Saul ..  how do I convey that the codes are the procedure codes from system AMACPTCodes and from system CMSHCPCSCodes?  I want to say:
-// "•	Include all procedure codes defined in http://www.ama-assn.org/go/cpt"
-// "•   Include all procedure codes defined in http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets" 
-
 * codes from system AMACPTCodes
 * codes from system CMSHCPCSCodes
 * ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved. HCPCS Level II Alphanumeric Codes are maintained by the US Centers for Medicare and Medicaid Services (CMS) and are available for public use. As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
@@ -221,10 +216,6 @@ ValueSet:  AMACPTCMSHCPCSModifiers
 Title: "AMA CPT CMS HCPCS Modifiers" 
 Description: "The Value Set is a combination of two Code Systems:  CPT (HCPCS I) and HCPCS II procedure code modifiers.  Modifiers help further describe a procedure code without changing its definition.  
 CPT codes are available by subscription from the AMA at http://www.ama-assn.org/go/cpt.  HCPCS codes are available at http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets.  The link takes one to a list of files.  The target set for this Code System is the procedure code modifiers from this file.  \n\n**MODIFIER CODES ONLY**"
-
-// @Saul ..  how do I convey that the codes are the procedure code modifiers from system AMACPTCodes and from system CMSHCPCSCodes?
-// "•	Include all procedure code modifiers defined in http://www.ama-assn.org/go/cpt"
-// "•   Include all procedure codes modifiers defined in http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets" 
 * codes from system AMACPTCodes 
 * codes from system CMSHCPCSCodes
 * ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved. HCPCS Level II Alphanumeric Codes are maintained by the US Centers for Medicare and Medicaid Services (CMS) and are available for public use. As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
@@ -239,24 +230,35 @@ HCPCS codes are available at http://www.cms.gov/Medicare/Coding/HCPCSReleaseCode
 
 //********end: replaced AMA / HCPCS************
 
+// ******** @Saul - added AP DRGs updated url ***************
 CodeSystem: CMSMSDRG
 Title: "CMS MS DRG"
 Description: "MS-DRGs (Medicare Severity Diagnosis Related Groups).  MS-DRGs are owned by CMS.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version."
-* ^url = $CMSMSDRG
+* ^url = "http://www.cms.gov/Medicare/Coding/ms-drg/MS-DRG"
 * insert CodeSystemStubBoilerplate
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain the MS-DRGs used throughout the US health care industry."
+
+
+CodeSystem: THREEMAPDRG
+Title: "3M AP DRG"
+Description: "AP-DRGs (All Patient Diagnosis Related Groups).  AP-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version.  "
+* ^url = "http://www.3M.com/AP-DRG"
+* insert CodeSystemStubBoilerplate
+* ^copyright = "Use of AP-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
 
 CodeSystem: THREEMAPRDRG
 Title: "3M APR DRG"
 Description: "APR-DRGs (All Patient Refined Diagnosis Related Groups).  APR-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version.  "
-* ^url = $3MAPRDRG
+* ^url = "http://www.3M.com/APR-DRG"
 * insert CodeSystemStubBoilerplate
 * ^copyright = "Use of APR-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
 
-ValueSet: CMSMS3MAPRDRG 
-Title: "CMS MS 3M APR DRG"
-Description: "This value set defines two sets of DRGs, MS-DRGs (Medicare Severity Diagnosis Related Groups) and APR-DRGs (All Patient Refined Diagnosis Related Groups).  MS-DRGs are owned by CMS; APR-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version.  "
+// ******** @Saul - updated value set name AP DRGs ***************
+ValueSet: CMSMS3MAPAPRDRG 
+Title: "CMS MS 3M AP APR DRG"
+Description: "This value set defines three sets of DRGs, MS-DRGs (Medicare Severity Diagnosis Related Groups) AP-DRGs (All Patient Diagnosis Related Groups) and APR-DRGs (All Patient Refined Diagnosis Related Groups).  MS-DRGs are owned by CMS; AP-DRGs and APR-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version."
 * codes from system CMSMSDRG
+* codes from system THREEMAPDRG
 * codes from system THREEMAPRDRG
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain the MS-DRGs used throughout the US health care industry.  Use of APR-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
 

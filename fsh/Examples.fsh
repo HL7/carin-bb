@@ -32,7 +32,7 @@ Usage: #example
 * identifier[uniquememberid].type = C4BBIdentifierType#um
 * identifier[uniquememberid].value = "1234-234-1243-12345678901u"
 * identifier[uniquememberid].system = "https://www.xxxhealthplan.com/fhir/iniquememberidentifier"
-* identifier[patacctnum].type = C4BBIdentifierType#pt
+* identifier[patacctnum].type = C4BBIdentifierType#pat
 * identifier[patacctnum].value = "1234-234-1243-12345678901a"
 * identifier[patacctnum].system = "https://www.xxxhealthplan.com/fhir/patacctnum"
 

@@ -69,19 +69,20 @@ Description: "CodeSystem for a Literal 'compound' value"
 * #compound "compound" "Compound"
 * ^copyright = "This CodeSystem is not copyrighted."
 
+// ******** @Saul - updated **********
 CodeSystem: C4BBIdentifierType
 Title: "C4BB Identifier Type"
-Description: "Identifier Type codes that extend those defined in http://terminology.hl7.org/CodeSystem/v2-0203"
+Description: "Identifier Type codes that extend those defined in http://terminology.hl7.org/CodeSystem/v2-0203 to define the type of identifier payers and providers assign to claims and patients"
 // * #tax "Tax ID Number" "Tax ID Number"  - use the TAX code from the base codesystem
 * #npi "National Provider Identifier" "National Provider Identifier"
 //* #clia "CLIA" "CLIA"
 * #payerid "Payer ID" "Payer ID"
 * #naiccode "NAIC Code" "NAIC Code"
-* #mb "Member ID" "Member ID"
+//* #mb "Member ID" "Member ID" - not needed - defined in HL7
 // * #mr "Medical Record Number" "Medical Record Number" - use the MR code from the base codesystem
-* #pt "Patient Account Number" "Patient Account Number"
-* #um "Unique Member ID" "Unique Member ID"
-* #cn "Claim Number" "Claim Number"
+* #pat "Patient Account Number" "Patient Account Number"
+* #um "Unique Member ID" "Indicates that the patient identifier is a unique member identifier assigned by a payer across all lines of business"
+* #uc "Unique Claim ID" "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBPayerAdjudicationStatus
