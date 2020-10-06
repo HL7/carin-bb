@@ -10,7 +10,7 @@ This IG includes value set bindings to code systems that reference industry stan
 <li><a href="https://www.nubc.org">NUBC</a>: The NUBC secretariat is the American Hospital Association..</li>
 <li><a href="http://www.nucc.org/">NUCC</a>: National Uniform Claim Committee (NUCC) is presently maintaining the Taxonomy code set. The codes are free and publically available for download and use. If the use however is &ldquo;For commercial use, including sales or licensing, a license must be obtained&rdquo;. It would be appropriate for an app developer to file the license form just like they would for any other code set; however, there is no fee.</li>
 <li><a href="https://www.ncpdp.org">NCPDP</a>: Retail Pharmacy data standards are defined by the NCPDP .</li>
-<li><a href="https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/">3M APR-DRG</a>: APR-DRGs are owned by 3M.  Use of APR-DRGs require a license.  
+<li><a href="https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/">3M APR-DRG</a>: AP-DRGs and APR-DRGs are owned by 3M.  Use of AP-DRGs and APR-DRGs require a license.  
 </li>
 </ul>
 <h3>Code Systems Not Requiring Licenses</h3>
@@ -21,7 +21,7 @@ This IG includes value set bindings to code systems that are industry standard c
 <li><a href="https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html">DRGs</a>.:All versions of the DRG (MS-DRG, AP-DRG, etc.) are owned by CMS. MS-DRGs are used for the Medicare population.</li>
 <li><a href="https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets/Alpha-Numeric-HCPCS-Items/2020-HCPCS-Record-Layout">HCPCS Level II Procedure and Modifier Codes</a>: Primarily include non-physician products, supplies, and procedures not included in CPT. They are owned by CMS and are available for use.</li>
 <li><a href="http://hl7.org/fhir/sid/ndc.html">NDC (National Drug Codes)</a>: The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code..</li>
-<li><a href="http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes">RARCCodes</a>: The RARC codes are owned by CMS..</li>
+<li><a href="http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes">RARCCodes</a>: The RARC codes are owned by CMS.</li>
 </ul>
 <h3>Value Sets defined as part of this Implementation Guide.</h3>
 See <a href="artifacts.html#5">ValueSets</a>.

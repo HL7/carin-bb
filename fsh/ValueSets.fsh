@@ -112,8 +112,6 @@ ValueSet: C4BBRelatedClaimRelationshipCodes
 Title: "C4BB Related Claim Relationship Codes"
 Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number."
 * $HL7RelatedClaimRelationshipCS#prior 
-* $HL7PayeeType#provider
-* $HL7PayeeType#other 
 * C4BBRelatedClaimRelationshipCodes#replacedby 
 * ^copyright = "This Valueset is not copyrighted."
 
