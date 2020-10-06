@@ -157,9 +157,15 @@ Description: "Identifies the type of identifiers for organizations"
 * codes from system $IdentifierType
 * ^copyright = "This Valueset is not copyrighted."
 
-ValueSet: C4BBClaimProcedureType 
+CodeSystem: C4BBClaimProcedureType
 Title: "C4BB Claim Procedure Type"
-Description: "Indicates if the professional and non-clinician diagnosis is principal or secondary"
-* $HL7DiagnosisType#principal "principal"
-* C4BBClaimProcedureType#secondary  
-* ^copyright = "This Valueset is not copyrighted."
+Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure"
+* #principal "Principal" "The Principal Procedure is based on the relation of the procedure to the Principal Diagnosis"
+* #other "Other"  "Other procedures performed during the inpatient institutional admission"
+* ^copyright = "This Code System is not copyrighted."
+
+ValueSet: C4BBClaimProcedureType
+Title: "C4BB Claim Procedure Type"
+Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure"
+* codes from system C4BBClaimProcedureType
+* ^copyright = "This Value Set is not copyrighted."
