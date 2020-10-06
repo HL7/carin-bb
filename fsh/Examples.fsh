@@ -6,6 +6,7 @@ Usage: #example
 * meta.profile = Canonical(C4BBPatient)
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
+* id = "Patient1"
 * active = true
 * name[0].family = "Example1"
 * name[0].given[0] = "Johnny"
@@ -41,11 +42,12 @@ InstanceOf: C4BBCoverage
 Description: "Coverage Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
+* id = "Coverage1"
 * meta.profile = Canonical(C4BBCoverage)
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
 * status = #active
-* identifier[0].type = C4BBIdentifierType#mb
+* identifier[0].type = $IdentifierType#MB
 * identifier[0].value = "1234-234-1243-12345678901"
 * identifier[0].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP
@@ -78,12 +80,13 @@ Instance: EOBInpatient1
 InstanceOf: C4BBExplanationOfBenefitInpatientInstitutional
 Description: "EOB Inpatient Example1"
 Usage: #example
+* id = "EOBInpatient1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile = Canonical(C4BBExplanationOfBenefitInpatientInstitutional)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = C4BBIdentifierType#cn
+* identifier.type = C4BBIdentifierType#uc
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
@@ -115,9 +118,9 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[inoutnetwork].category = $C4BBAdjudicationCS#innetwork 
-* total[inoutnetwork].amount.value = 0.00
-* total[inoutnetwork].amount.currency = #USD
+* total[inoutnetwork][0].category = C4BBPayerAdjudicationStatus#innetwork 
+* total[inoutnetwork][0].amount.value = 0.00
+* total[inoutnetwork][0].amount.currency = #USD
 //* adjudication[inoutnetwork].category = C4BBAdjudication#innetwork 
 
 
@@ -125,6 +128,7 @@ Instance: EOBOutpatientInstitutional1
 InstanceOf: C4BBExplanationOfBenefitOutpatientInstitutional
 Description: "EOB Outpatient Example1"
 Usage: #example
+* id = "EOBOutpatientInstitutional1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
@@ -162,15 +166,16 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[inoutnetwork].category = $C4BBAdjudicationCS#innetwork
-* total[inoutnetwork].amount.value = 0.00
-* total[inoutnetwork].amount.currency = #USD
+* total[inoutnetwork][0].category = C4BBPayerAdjudicationStatus#innetwork
+* total[inoutnetwork][0].amount.value = 0.00
+* total[inoutnetwork][0].amount.currency = #USD
 //* adjudication[inoutnetwork].category = C4BBAdjudication#other
 
 Instance: EOBProfessional1a
 InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician 
 Description: "EOB Professional  Example1"
 Usage: #example
+* id = "EOBProfessional1a"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
@@ -208,12 +213,15 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-
+// * total[inoutnetwork][0].category = C4BBPayerAdjudicationStatus#innetwork
+// * total[inoutnetwork][0].amount.value = 0.00
+// * total[inoutnetwork][0].amount.currency = #USD
 
 Instance: EOBPharmacy1
 InstanceOf: C4BBExplanationOfBenefitPharmacy
 Description: "EOB PHarmacy Example1"
 Usage: #example
+* id = "EOBPharmacy1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile = Canonical(C4BBExplanationOfBenefitPharmacy)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
@@ -248,7 +256,7 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[inoutnetwork].category = $C4BBAdjudicationCS#innetwork 
+* total[inoutnetwork].category = C4BBPayerAdjudicationStatus#innetwork 
 * total[inoutnetwork].amount.value = 0.00
 * total[inoutnetwork].amount.currency = #USD
 //* adjudication[inoutnetwork].category = C4BBAdjudication#other
@@ -275,6 +283,7 @@ Instance: OrganizationPayer1
 InstanceOf: C4BBOrganization
 Description: "Payer1"
 Usage: #example
+* id = "Payer1"
 * meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US

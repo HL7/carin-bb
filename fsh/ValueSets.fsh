@@ -154,7 +154,7 @@ Description: "Identifies the type of identifiers for organizations"
 * C4BBIdentifierType#npi
 * C4BBIdentifierType#payerid
 * C4BBIdentifierType#naiccode
-* codes from $IdentifierType
+* codes from system $IdentifierType
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimProcedureType 

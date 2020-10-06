@@ -29,8 +29,7 @@ Usage: #example
 * meta.lastUpdated = "2020-09-08T00:00:00+00:00"
 * meta.source = "Organization/Organization1UPMC"
 * language = #en-US
-* identifier[0].type.coding[0].system = $C4BBIdentifierTypeCS
-* identifier[0].type.coding[0].code = #mb
+* identifier[0].type.coding[0] = $IdentifierType#MB
 * identifier[0].system = "https://www.upmchealthplan.com/fhir/memberidentifier"
 * identifier[0].value = "01234567801"
 * identifier[0].assigner.reference = "Organization/Organization1UPMC"
@@ -78,9 +77,8 @@ Usage: #example
 * meta.lastUpdated = "2020-09-08T00:00:00+00:00"
 * meta.source = "Organization/Organization1UPMC"
 * language = #en-US
-* id = "01234567801-20200101-99991231-SEA22"
-* identifier[0].type.coding[0].system = $C4BBIdentifierTypeCS
-* identifier[0].type.coding[0].code = #mb
+* id = "Coverage2UPMC" // "01234567801-20200101-99991231-SEA22"
+* identifier[0].type.coding[0] = $IdentifierType#MB
 * identifier[0].system = "https://www.upmchealthplan.com/fhir/memberidentifier"
 * identifier[0].value = "01234567801"
 * identifier[0].assigner.reference = "Organization/Organization1UPMC"
@@ -263,7 +261,7 @@ Usage: #example
 * meta.lastUpdated = "2020-08-25T19:07:14-04:00"
 * meta.source = "Organization/Organization1UPMC"
 * identifier[0].type.coding[0].system = Canonical(C4BBIdentifierType)
-* identifier[0].type.coding[0].code = #cn
+* identifier[0].type.coding[0].code = #uc
 * identifier[0].type.text = "Claim Number"
 * identifier[0].system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
 * identifier[0].value = "01234567801-FR123E1230000010000010001"
@@ -359,7 +357,7 @@ Usage: #example
 * item[0].adjudication[5].category.text = "Amount payable under the coverage"
 * item[0].adjudication[5].amount.value = 0.0
 * item[0].adjudication[5].amount.currency = #USD
-* item[0].adjudication[6].category.coding[0] = $C4BBAdjudicationCS#noncovered
+* item[0].adjudication[6].category.coding[0] = C4BBAdjudication#noncovered   // $C4BBAdjudicationCS#noncovered  
 * item[0].adjudication[6].category.coding[0].display = "Noncovered"
 * item[0].adjudication[6].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * item[0].adjudication[6].amount.value = 0.0
@@ -438,7 +436,7 @@ Usage: #example
 * total[3].category.text = "Patient Co-Payment"
 * total[3].amount.value = 0.0
 * total[3].amount.currency = #USD
-* total[4].category.coding[0].system = $C4BBAdjudicationCS#noncovered
+* total[4].category.coding[0].system = C4BBAdjudication#noncovered
 * total[4].category.coding[0].display = "Noncovered"
 * total[4].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * total[4].amount.value = 0.0
@@ -449,8 +447,7 @@ Usage: #example
 * total[5].category.text = "Amount payable under the coverage"
 * total[5].amount.value = 0.0
 * total[5].amount.currency = #USD
-* total[6].category.coding[0].system = $C4BBAdjudicationCS
-* total[6].category.coding[0].code = #memberliability
+* total[6].category.coding[0] = C4BBAdjudication#memberliability
 * total[6].category.coding[0].display = "Member liability"
 * total[6].category.text = "The amount of the member's liability."
 * total[6].amount.value = 139.86
@@ -467,7 +464,7 @@ Usage: #example
 * id = "EOBProfessional2UPMC"
 * meta.source = "Organization/Organization1UPMC"
 * identifier[0].type.coding[0].system = $C4BBIdentifierTypeCS
-* identifier[0].type.coding[0].code = #cn
+* identifier[0].type.coding[0].code = #uc
 * identifier[0].type.text = "Claim Number"
 * identifier[0].system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
 * identifier[0].value = "01234567801-GNXYZ1230000010000010001"
