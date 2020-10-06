@@ -78,9 +78,9 @@ ValueSet: C4BBPayeeType
 Title: "C4BB Payee Type"
 Description: "Identifies the type of recipient of the adjudication amount; i.e., provider, subscriber, beneficiary or another recipient."
 * C4BBPayeeType#beneficiary 
-* http://terminology.hl7.org/CodeSystem/payeetype#subscriber 
-* http://terminology.hl7.org/CodeSystem/payeetype#provider
-* http://terminology.hl7.org/CodeSystem/payeetype#other 
+* $HL7PayeeType#subscriber 
+* $HL7PayeeType#provider
+* $HL7PayeeType#other 
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimProfessionalAndNonClinicianDiagnosisType 
@@ -93,16 +93,16 @@ Description: "Indicates if the professional and non-clinician diagnosis is princ
 ValueSet: C4BBClaimInpatientInstitutionalDiagnosisType 
 Title: "C4BB Claim Inpatient Institutional Diagnosis Type"
 Description: "Indicates if the inpatient institutional diagnosis is admitting, principal, other or an external cause of injury."
-* http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal 
+* $HL7DiagnosisType#principal 
 * C4BBClaimDiagnosisType#other  
 * C4BBClaimDiagnosisType#externalcauseofinjury   
-* http://terminology.hl7.org/CodeSystem/ex-diagnosistype#admitting 
+* $HL7DiagnosisType#admitting // http://terminology.hl7.org/CodeSystem/ex-diagnosistype#admitting 
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimOutpatientInstitutionalDiagnosisType 
 Title: "C4BB Claim Outpatient Institutional Diagnosis Type"
 Description: "Indicates if the outpatient institutional diagnosis is principal, other, an external cause of injury or a patient reason for visit."
-* http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal 
+* $HL7DiagnosisType#principal 
 * C4BBClaimDiagnosisType#other  
 * C4BBClaimDiagnosisType#externalcauseofinjury   
 * C4BBClaimDiagnosisType#patientreasonforvisit 
@@ -112,8 +112,8 @@ ValueSet: C4BBRelatedClaimRelationshipCodes
 Title: "C4BB Related Claim Relationship Codes"
 Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number."
 * http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#prior 
-* http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayeeType#provider
-* http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayeeType#other 
+* C4BBPayeeType#provider
+* C4BBPayeeType#other 
 * C4BBRelatedClaimRelationshipCodes#replacedby 
 * ^copyright = "This Valueset is not copyrighted."
 
@@ -145,7 +145,7 @@ Description: "Identifies the type of identifier payers and providers assign to p
 * C4BBIdentifierType#um
 * C4BBIdentifierType#pat
 * $IdentifierType#MB
-* $IdentifierType#MCR   // I think this should be #MR, medical record number
+* $IdentifierType#MR  
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBOrganizationIdentifierType
@@ -160,7 +160,6 @@ Description: "Identifies the type of identifiers for organizations"
 ValueSet: C4BBClaimProcedureType 
 Title: "C4BB Claim Procedure Type"
 Description: "Indicates if the professional and non-clinician diagnosis is principal or secondary"
-* http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal "principal"
-* C4BBClaimProcedureType#principal
+* $HL7DiagnosisType#principal "principal"
 * C4BBClaimProcedureType#secondary  
 * ^copyright = "This Valueset is not copyrighted."

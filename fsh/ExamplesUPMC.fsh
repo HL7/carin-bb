@@ -356,8 +356,7 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][5].category.text = "Amount payable under the coverage"
 * item[0].adjudication[adjudicationamounttype][5].amount.value = 0.0
 * item[0].adjudication[adjudicationamounttype][5].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][6].category.coding[0] = C4BBAdjudication#noncovered   // $C4BBAdjudicationCS#noncovered  
-* item[0].adjudication[adjudicationamounttype][6].category.coding[0].display = "Noncovered"
+* item[0].adjudication[adjudicationamounttype][6].category = C4BBAdjudication#noncovered  "Noncovered" // $C4BBAdjudicationCS#noncovered  
 * item[0].adjudication[adjudicationamounttype][6].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * item[0].adjudication[adjudicationamounttype][6].amount.value = 0.0
 * item[0].adjudication[adjudicationamounttype][6].amount.currency = #USD
@@ -405,8 +404,7 @@ Usage: #example
 * item[1].adjudication[5].category.text = "Amount payable under the coverage"
 * item[1].adjudication[5].amount.value = 0.0
 * item[1].adjudication[5].amount.currency = #USD
-* item[1].adjudication[6].category.coding[0].system = $C4BBAdjudicationCS#noncovered
-* item[1].adjudication[6].category.coding[0].display = "Noncovered"
+* item[1].adjudication[6].category = C4BBAdjudication#noncovered  "Noncovered"
 * item[1].adjudication[6].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * item[1].adjudication[6].amount.value = 0.0
 * item[1].adjudication[6].amount.currency = #USD
@@ -435,8 +433,7 @@ Usage: #example
 * total[3].category.text = "Patient Co-Payment"
 * total[3].amount.value = 0.0
 * total[3].amount.currency = #USD
-* total[4].category.coding[0].system = C4BBAdjudication#noncovered
-* total[4].category.coding[0].display = "Noncovered"
+* total[4].category =  C4BBAdjudication#noncovered "Noncovered"
 * total[4].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * total[4].amount.value = 0.0
 * total[4].amount.currency = #USD
