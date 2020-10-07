@@ -143,7 +143,7 @@ Expression: "(
 Severity: #error
 
 Invariant: EOB-pharm-careTeam-organization
-Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
+Description: "Pharmacy EOB:  Careteam roles refer to an organization"
 Expression: "( 
      careTeam.where(role.where(coding.where(code in ('performing')).exists()).exists()).exists() implies
      careTeam.where(role.where(coding.where(code in ('performing')).exists()).exists()).provider.all(resolve() is Organization)
@@ -167,5 +167,4 @@ Expression:
      careTeam.where(role.where(coding.where(code in ('site')).exists()).exists()).provider.all(resolve() is Organization)
     )"
 Severity: #error
-
 
