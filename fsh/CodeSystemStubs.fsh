@@ -1,6 +1,23 @@
 
 // Code Systems
+<<<<<<< HEAD
 
+=======
+Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
+Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias:   $CPT = http://www.ama-assn.org/go/cpt
+Alias:   $HCPCS = http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets
+//Alias:   $AMACPTMODIFIERS = http://www.ama-assn.org/go/cpt-modifiers
+//Alias:   $HCPCSMODIFIERS = http://www.cms.gov/hcpcs-level-II-modifiers
+Alias:   $CMSDRG = http://www.cms.gov/ms-drg
+Alias:  $CMS_PlaceofServiceCodes = http://www.cms.gov/place-of-service
+Alias:   $CPTALLVS = http://hl7.org/fhir/ValueSet/cpt-all
+Alias:   $ICD10PCS = http://www.nlm.nih.gov/research/umls/icd10pcs
+Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
+//Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
+Alias:   $FDANationalDrugCode = http://hl7.org/fhir/sid/ndc
+Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy
+>>>>>>> master
 
 RuleSet: CodeSystemStubBoilerplate
 * ^publisher = "HL7 International - Financial Management Work Group"
@@ -86,6 +103,7 @@ Description: "Indicates whether or not the prescription is a compound NCPDP fiel
 * codes from system NCPDPCompoundCode
 * insert NCPDPCopyrightNotice
 
+<<<<<<< HEAD
 // *** deleted defining this code system as http://hl7.org/fhir/sid/ndc is defined by HL7
 //CodeSystem: FDANationalDrugCode
 //Title: "FDA National Drug Code (NDC)"
@@ -95,6 +113,16 @@ Description: "Indicates whether or not the prescription is a compound NCPDP fiel
 //* ^copyright = "NDC codes are available for use.  As HL7 is working with the owning authority to finalize the url, this url is subject to change"
 
 ValueSet: FDANationalDrugCode
+=======
+CodeSystem: FDANDC
+Title: "FDA National Drug Code (NDC)"
+Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7. "
+* ^url = $FDANationalDrugCode
+* insert CodeSystemStubBoilerplate
+* ^copyright = "NDC codes are available for use.  As HL7 is working with the owning authority to finalize the url, this url is subject to change"
+
+ValueSet: FDANDC
+>>>>>>> master
 Title: "FDA National Drug Code (NDC)"
 Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7.  "
 * codes from system $FDANationalDrugCode
