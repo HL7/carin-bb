@@ -14,10 +14,7 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on $value pattern"
 * supportingInfo MS 
-<<<<<<< HEAD
 * supportingInfo.category MS 
-=======
->>>>>>> master
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    brandgenericcode 0..1 MS and
