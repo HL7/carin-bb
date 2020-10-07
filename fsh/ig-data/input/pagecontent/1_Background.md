@@ -59,11 +59,3 @@
 <p><img style="width: 100%; float: none; align: middle;" src="PDexVsCARINBB.png" /></p>
 <h4>RTPBC</h4>
 <p>Using the RTPBC (Real Time Pharmacy Benefit Check), a patient can learn the cost and insurance coverage related to medications they&rsquo;ve been prescribed. A person would typically use the RTPBC prior to the dispensing of the prescription and the filing of the claim. CARIN BB provides the capability to access how pharmacy (and medical) benefits have been applied by the payer as a result of a claim filed by the pharmacy.</p>
-<h3 id="guide-overview">Guide Overview</h3>
-<h4>How to Read This Guide</h4>
-<h4>Actors</h4>
-<p>The following actors are part of the CARIN BB IG:</p>
-<ul>
-<li>CARIN BB Requestor: An application that initiates a data access request to retrieve patient data. This can be thought of as the client in a client-server interaction.</li>
-<li>CARIN BB Responder: A product that responds to the data access request providing patient data. This can be thought of as the server in a client-server interaction.</li>
-</ul>
