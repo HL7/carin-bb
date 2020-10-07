@@ -137,16 +137,16 @@ Severity: #error
 Invariant: EOB-pharm-careTeam-practitioner
 Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
 Expression: "( 
-     careTeam.where(role.where(coding.where(code in ( 'primary' or 'prescribing')).exists()).exists()).exists() implies
-     careTeam.where(role.where(coding.where(code in ( 'primary' or 'prescribing')).exists()).exists()).provider.all(resolve().is Practitioner)
+     careTeam.where(role.where(coding.where(code in ('primary' | 'prescribing')).exists()).exists()).exists() implies
+     careTeam.where(role.where(coding.where(code in ('primary' | 'prescribing')).exists()).exists()).provider.all(resolve() is Practitioner)
     )"
 Severity: #error
 
 Invariant: EOB-pharm-careTeam-organization
-Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
+Description: "Pharmacy EOB:  Careteam roles refer to an organization"
 Expression: "( 
-     careTeam.where(role.where(coding.where(code in ( 'performing')).exists()).exists()).exists() implies
-     careTeam.where(role.where(coding.where(code in ( 'performing')).exists()).exists()).provider.all(resolve().is Organization)
+     careTeam.where(role.where(coding.where(code in ('performing')).exists()).exists()).exists() implies
+     careTeam.where(role.where(coding.where(code in ('performing')).exists()).exists()).provider.all(resolve() is Organization)
     )"
 Severity: #error
 
@@ -154,8 +154,8 @@ Invariant: EOB-prof-careTeam-practitioner
 Description: "Professional EOB:  Careteam roles refer to a practitioner"
 Expression: 
    "( 
-     careTeam.where(role.where(coding.where(code in ('performing' or 'primary' or 'referring' or 'supervising')).exists()).exists()).exists() implies
-     careTeam.where(role.where(coding.where(code in ('performing' or 'primary' or 'referring' or 'supervising')).exists()).exists()).provider.all(resolve().is Practitioner)
+     careTeam.where(role.where(coding.where(code in ('performing' | 'primary' | 'referring' | 'supervising')).exists()).exists()).exists() implies
+     careTeam.where(role.where(coding.where(code in ('performing' | 'primary' | 'referring' | 'supervising')).exists()).exists()).provider.all(resolve() is Practitioner)
     )"
 Severity: #error
 
@@ -163,9 +163,8 @@ Invariant: EOB-prof-careTeam-organization
 Description: "Professional EOB:  Careteam roles refer to an organization"
 Expression: 
    "( 
-     careTeam.where(role.where(coding.where(code in ( 'site')).exists()).exists()).exists() implies
-     careTeam.where(role.where(coding.where(code in ( 'site')).exists()).exists()).provider.all(resolve().is Organization)
+     careTeam.where(role.where(coding.where(code in ('site')).exists()).exists()).exists() implies
+     careTeam.where(role.where(coding.where(code in ('site')).exists()).exists()).provider.all(resolve() is Organization)
     )"
 Severity: #error
-
 
