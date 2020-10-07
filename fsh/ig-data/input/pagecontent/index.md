@@ -1,14 +1,14 @@
-<!-- <table style="border-color: red;" border="4">
+ <table style="border-color: red;" border="4">
 <tbody>
 <tr>
-<td style="text-align: center;"><strong>DISCLAIMER</strong></td>
+<td style="text-align: center;"><strong>WARNING</strong></td>
 </tr>
 <tr>
-<td>This build has <strong>NOT</strong> been approved by HL7 and should NOT be widely distributed. It's a draft build the CARIN for Blue Button technology team is using to update BEFORE the changes have been approved by HL7 and made to the CI build. It's meant to be a directional resource only for payers who are currently implementing.</td>
+<td>Development of this IG has moved to the <a href="https://github.com/HL7/carin-bb/branches">https://github.com/HL7/carin-bb/branches</a> as of v0.1.4, and the builds at <a href="https://build.fhir.org/ig/HL7/carin-bb/branches/">https://build.fhir.org/ig/HL7/carin-bb/branches/</a>. <strong>PLEASE</strong> look there for up to date materials.   This version was last updated 10/7/2020.</td>
 </tr>
 </tbody>
 </table>
-<h3>&nbsp;</h3> -->
+<h3>&nbsp;</h3> 
 <h3>Introduction</h3>
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <h3>Log of Continuous Integration Build Changes</h3>
@@ -87,5 +87,5 @@
 </tbody>
 </table>
 <h3>Acknowledgements</h3>
-<p>The CARIN Consumer Directed Payer Data Exchange Implementation Guide is also known as the CARIN IG for Blue Button&reg; Implementation Guide. This IG was developed using [FHIR Shorthand syntax](https://build.fhir.org/ig/HL7/fhir-shorthand/) and the [SUSHI tookit](https://github.com/FHIR/sushi), a free, open source toolchain from the MITRE Corporation. Valuable guidance on FSH and FHIR slicing was provided by Chris Moesel. The capability statements were developed with tools and valuable guidance from Eric Haas.</p>
+<p>The CARIN Consumer Directed Payer Data Exchange Implementation Guide is also known as the CARIN IG for Blue Button&reg; Implementation Guide. This IG was developed using <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand syntax</a> and the <a href="https://github.com/FHIR/sushi">SUSHI</a> tookit, a free, open source toolchain from the MITRE Corporation. Valuable guidance on FSH and FHIR slicing was provided by Chris Moesel. The capability statements were developed with tools and valuable guidance from Eric Haas.</p>
 <div class="footnote"><sup>[<a href="#id1" name="ftn.id1">*</a>]</sup>Blue Button, the slogan, 'Download My Data,' the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services.</div>
