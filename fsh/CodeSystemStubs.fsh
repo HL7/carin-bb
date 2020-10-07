@@ -1,5 +1,8 @@
 
 // Code Systems
+<<<<<<< HEAD
+
+=======
 Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm 
 Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   $CPT = http://www.ama-assn.org/go/cpt
@@ -14,6 +17,7 @@ Alias:   $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 //Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   $FDANationalDrugCode = http://hl7.org/fhir/sid/ndc
 Alias:   $NUCCProviderTaxonomy = http://nucc.org/provider-taxonomy
+>>>>>>> master
 
 RuleSet: CodeSystemStubBoilerplate
 * ^publisher = "HL7 International - Financial Management Work Group"
@@ -99,6 +103,17 @@ Description: "Indicates whether or not the prescription is a compound NCPDP fiel
 * codes from system NCPDPCompoundCode
 * insert NCPDPCopyrightNotice
 
+<<<<<<< HEAD
+// *** deleted defining this code system as http://hl7.org/fhir/sid/ndc is defined by HL7
+//CodeSystem: FDANationalDrugCode
+//Title: "FDA National Drug Code (NDC)"
+//Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7. "
+//* ^url = $FDANationalDrugCode
+//* insert CodeSystemStubBoilerplate
+//* ^copyright = "NDC codes are available for use.  As HL7 is working with the owning authority to finalize the url, this url is subject to change"
+
+ValueSet: FDANationalDrugCode
+=======
 CodeSystem: FDANDC
 Title: "FDA National Drug Code (NDC)"
 Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7. "
@@ -107,6 +122,7 @@ Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA
 * ^copyright = "NDC codes are available for use.  As HL7 is working with the owning authority to finalize the url, this url is subject to change"
 
 ValueSet: FDANDC
+>>>>>>> master
 Title: "FDA National Drug Code (NDC)"
 Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7.  "
 * codes from system $FDANationalDrugCode
@@ -220,11 +236,6 @@ ValueSet: AMACPTCMSHCPCSProcedureCodes
 Title: "AMA CPT CMS HCPCS Procedure Codes"
 Description: "The Value Set is a combination of two Code Systems:  CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed.  AMA CPT CMS HCPCS Procedure Codes leverage US Core Procedure Codes composition.  
 CPT codes are available by subscription from the AMA at http://www.ama-assn.org/go/cpt.  HCPCS codes are available at http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets.  The link takes one to a list of files.  The target set for this Code System is the procedure codes from this file.\n\n**PROCEDURE CODES ONLY**"
-
-// @Saul ..  how do I convey that the codes are the procedure codes from system AMACPTCodes and from system CMSHCPCSCodes?  I want to say:
-// "•	Include all procedure codes defined in http://www.ama-assn.org/go/cpt"
-// "•   Include all procedure codes defined in http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets" 
-
 * codes from system AMACPTCodes
 * codes from system CMSHCPCSCodes
 * ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved. HCPCS Level II Alphanumeric Codes are maintained by the US Centers for Medicare and Medicaid Services (CMS) and are available for public use. As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
@@ -233,10 +244,6 @@ ValueSet:  AMACPTCMSHCPCSModifiers
 Title: "AMA CPT CMS HCPCS Modifiers" 
 Description: "The Value Set is a combination of two Code Systems:  CPT (HCPCS I) and HCPCS II procedure code modifiers.  Modifiers help further describe a procedure code without changing its definition.  
 CPT codes are available by subscription from the AMA at http://www.ama-assn.org/go/cpt.  HCPCS codes are available at http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets.  The link takes one to a list of files.  The target set for this Code System is the procedure code modifiers from this file.  \n\n**MODIFIER CODES ONLY**"
-
-// @Saul ..  how do I convey that the codes are the procedure code modifiers from system AMACPTCodes and from system CMSHCPCSCodes?
-// "•	Include all procedure code modifiers defined in http://www.ama-assn.org/go/cpt"
-// "•   Include all procedure codes modifiers defined in http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets" 
 * codes from system AMACPTCodes 
 * codes from system CMSHCPCSCodes
 * ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved. HCPCS Level II Alphanumeric Codes are maintained by the US Centers for Medicare and Medicaid Services (CMS) and are available for public use. As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
@@ -251,27 +258,42 @@ HCPCS codes are available at http://www.cms.gov/Medicare/Coding/HCPCSReleaseCode
 
 //********end: replaced AMA / HCPCS************
 
-CodeSystem: CMSDRG
-Title: "CMS Diagnosis Related Group (DRG)"
-Description: "Diagnosis Related Group - any of the payment categories that are used to classify patients and especially Medicare patients for the purpose of reimbursing hospitals for each case in a given 
-category with a fixed fee regardless of the actual costs incurred (Other DRGs, such as AP-DRGs, requires defining their specific Value Sets and Code Systems.)"
-* ^url = $CMSDRG
+// ******** @Saul - added AP DRGs updated url ***************
+CodeSystem: CMSMSDRG
+Title: "CMS MS DRG"
+Description: "MS-DRGs (Medicare Severity Diagnosis Related Groups).  MS-DRGs are owned by CMS.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version."
+* ^url = "http://www.cms.gov/Medicare/Coding/ms-drg/MS-DRG"
 * insert CodeSystemStubBoilerplate
-* ^copyright = "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html
- This link takes one to a list of files.   The code set is owned by CMS and is available for use."
+* ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain the MS-DRGs used throughout the US health care industry."
 
-ValueSet: CMSDRG 
-Title: "CMS-DRG"
-Description: "Diagnosis Related Group - any of the payment categories that are used to classify patients and especially Medicare patients for the purpose of reimbursing hospitals for each case in a 
-given category with a fixed fee regardless of the actual costs incurred (Other DRGs, such as AP-DRGs, requires defining their specific Value Sets and Code Systems.) 
-https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software.html This link takes one to a list of files. The code set is owned by CMS and is available for use."
-* codes from system $CMSDRG
-* ^copyright = "The code set is owned by CMS and is available for use."
+
+CodeSystem: THREEMAPDRG
+Title: "3M AP DRG"
+Description: "AP-DRGs (All Patient Diagnosis Related Groups).  AP-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version.  "
+* ^url = "http://www.3M.com/AP-DRG"
+* insert CodeSystemStubBoilerplate
+* ^copyright = "Use of AP-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
+
+CodeSystem: THREEMAPRDRG
+Title: "3M APR DRG"
+Description: "APR-DRGs (All Patient Refined Diagnosis Related Groups).  APR-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version.  "
+* ^url = "http://www.3M.com/APR-DRG"
+* insert CodeSystemStubBoilerplate
+* ^copyright = "Use of APR-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
+
+// ******** @Saul - updated value set name AP DRGs ***************
+ValueSet: CMSMS3MAPAPRDRG 
+Title: "CMS MS 3M AP APR DRG"
+Description: "This value set defines three sets of DRGs, MS-DRGs (Medicare Severity Diagnosis Related Groups) AP-DRGs (All Patient Diagnosis Related Groups) and APR-DRGs (All Patient Refined Diagnosis Related Groups).  MS-DRGs are owned by CMS; AP-DRGs and APR-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version."
+* codes from system CMSMSDRG
+* codes from system THREEMAPDRG
+* codes from system THREEMAPRDRG
+* ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain the MS-DRGs used throughout the US health care industry.  Use of APR-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
 
 CodeSystem: CMSPlaceofServiceCodes
 Title: "CMS Place of Service Codes (POS)"
 Description: "Place of Service Codes are two-digit codes placed on health care professional claims to indicate the setting in which a service was provided."
-* ^url = "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
+* ^url = $CMSPlaceofServiceCodes
 * insert CodeSystemStubBoilerplate
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain Place Of Service (POS) codes used throughout the US health care industry."
 
@@ -285,14 +307,14 @@ CodeSystem: CMSRemittanceAdviceRemarkCodes
 Title: "CMS- Remittance Advice Remark Codes (RARC)"
 Description: "RARC codes provide additional explanation for an adjustment already described by a Claim Adjustment Reason Code (CARC) or convey information about remittance processing.  
 RARC codes are available at http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes."  
-* ^url = "https://x12.org/codes/remittance-advice-remark-codes"
+* ^url = $CMSRARCCS 
 * insert CodeSystemStubBoilerplate
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Remark Codes (RARC) used throughout the US health care industry."
 
 CodeSystem: X12ClaimAdjustmentReasonCodes
 Title: "X12 Claim Adjustment Reason Codes (CARC)"
 Description: "CARC codes describe why a claim or service line was paid differently than it was billed.   Use of X12 CARC codes require a license.  Reference https://x12.org/codes/."
-* ^url = "https://x12.org/codes/claim-adjustment-reason-codes"
+* ^url = $X12CARCCS
 * insert CodeSystemStubBoilerplate
 * ^copyright = "CARC codes are owned, maintained and distributed by X12."
 
@@ -304,35 +326,56 @@ Use of X12 CARC codes require a license.  Reference https://x12.org/codes/.  RAR
 * codes from system CMSRemittanceAdviceRemarkCodes 
 * ^copyright = "CARC codes are owned, maintained and distributed by X12.  The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Remark Codes (RARC) used throughout the US health care industry."
 
+ValueSet: CDCICD910CMDiagnosisCodes 
+Title: "CDC ICD-9-10-CM Diagnosis Codes"
+Description: "The ICD-CM (International Classification of Diseases, Clinical Modification) is a system used by physicians and other healthcare providers to classify and code all diagnoses and symptoms recorded in conjunction with hospital care in the United States."
+* codes from system $ICD10CM
+* codes from system $ICD9CM
+* ^copyright = "ICD-9 and ICD-10 are copyrighted by the World Health Organization (WHO) which owns and publishes the classification. See https://www.who.int/classifications/icd/en. WHO has authorized the development of an adaptation of ICD-9 and ICD-10 to ICD-9-CM to ICD-10-CM for use in the United States for U.S. government purposes.  As HL7 is working with the owning authority to finalize the urls, the urls are subject to change."
 
-CodeSystem: ICD10PCSCS
-Title: "ICD-10-PCS"
-Description: "International Classification of Diseases Surgical Procedures (ICD-10)."
-* ^url = $ICD10PCS
-* insert CodeSystemStubBoilerplate
-* ^copyright = "The code set is owned by CMS and is available for use."
+// CodeSystem: ICD9PCS
+// Title: "ICD-9 Procedure Codes"
+// Description: "ICD Procedure Coding System (ICD 9 PCS)"
+// * ^url = $ICD9PCS
+// * insert CodeSystemStubBoilerplate
+// * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain ICD PCS Procedure Codes used throughout the US health care industry.  As HL7 is working with the owning authority to finalize the urls, the urls are subject to change."
 
-
-ValueSet: ICD10PCS
-Title: "ICD-10-PCS"
-Description: "ICD-10-PCS"
-* codes from system ICD10PCSCS
-* ^copyright = "The code set is owned by CMS and is available for use."
-
-CodeSystem: ICD10CMCS
-Title: "ICD-10-CM"
-Description: "International Classification of Diseases, Tenth Revision, Clinical Modification)"
-* ^url = $ICD10CM
-* insert CodeSystemStubBoilerplate
-* ^copyright = "The ICD-10-CM code set is maintained by the National Center for Health Statistics (NCHS) of the Centers for Disease Control and Prevention (CDC) for use in the United States. 
-It is based on ICD-10, which was developed by the World Health Organization (WHO) and is used internationally as a medical classification. 
-The code set is owned by the NCHS-CDC and is available for use.  "
+ValueSet: CMSICD910PCSProcedureCodes 
+Title: "CMS ICD-9-10-PCS Procedure Codes"
+Description: "This value set defines a set of codes from ICD-PCS that can be used to indicate the procedure performed"
+* codes from system $ICD10PCS
+* codes from system $ICD9PCS
+* ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain ICD PCS Procedure Codes used throughout the US health care industry.  As HL7 is working with the owning authority to finalize the urls, the urls are subject to change."
 
 
-ValueSet: ICD10CM
-Title: "ICD-10-CM Diagnosis Codes"
-Description: "ICD-10-CM Diagnosis Codes."
-* codes from system ICD10CMCS
-* ^copyright = "The ICD-10-CM code set is maintained by the National Center for Health Statistics (NCHS) of the Centers for Disease Control and Prevention (CDC) for use in the United States. 
-It is based on ICD-10, which was developed by the World Health Organization (WHO) and is used internationally as a medical classification. 
-The code set is owned by the NCHS-CDC and is available for use.  "
+
+// CodeSystem: ICD10PCSCS
+// Title: "ICD-10-PCS"
+// Description: "International Classification of Diseases Surgical Procedures (ICD-10)."
+// * ^url = $ICD10PCS
+// * insert CodeSystemStubBoilerplate
+// * ^copyright = "The code set is owned by CMS and is available for use."
+
+// ValueSet: ICD10PCS
+// Title: "ICD-10-PCS"
+// Description: "ICD-10-PCS"
+// * codes from system ICD10PCSCS
+// * ^copyright = "The code set is owned by CMS and is available for use."
+
+// CodeSystem: ICD10CMCS
+// Title: "ICD-10-CM"
+// Description: "International Classification of Diseases, Tenth Revision, Clinical Modification)"
+// * ^url = $ICD10CM
+// * insert CodeSystemStubBoilerplate
+// * ^copyright = "The ICD-10-CM code set is maintained by the National Center for Health Statistics (NCHS) of the Centers for Disease Control and Prevention (CDC) for use in the United States. 
+// It is based on ICD-10, which was developed by the World Health Organization (WHO) and is used internationally as a medical classification. 
+// The code set is owned by the NCHS-CDC and is available for use.  "
+
+
+// ValueSet: ICD10CM
+// Title: "ICD-10-CM Diagnosis Codes"
+// Description: "ICD-10-CM Diagnosis Codes."
+// * codes from system ICD10CMCS
+// * ^copyright = "The ICD-10-CM code set is maintained by the National Center for Health Statistics (NCHS) of the Centers for Disease Control and Prevention (CDC) for use in the United States. 
+// It is based on ICD-10, which was developed by the World Health Organization (WHO) and is used internationally as a medical classification. 
+// The code set is owned by the NCHS-CDC and is available for use.  "

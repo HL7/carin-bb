@@ -1,14 +1,14 @@
 // Contains ValueSets for Codes Defined WITHIN this IG  
 
-
 ValueSet: C4BBClaimInstitutionalCareTeamRole 
 Title: "C4BB Claim Institutional Care Team Role "
 Description: "Describes functional roles of the care team members."
 * $CareTeamRoleCodeCS#primary 
-* $CareTeamRoleCodeCS#supervisor 
 * C4BBClaimCareTeamRole#attending 
 * C4BBClaimCareTeamRole#referring
 * C4BBClaimCareTeamRole#operating 
+* C4BBClaimCareTeamRole#otheroperating 
+* C4BBClaimCareTeamRole#performing 
 // * C4BBClaimCareTeamRoleCS#site 
 // * C4BBClaimCareTeamRoleCS#prescribing 
 * ^copyright = "This Valueset is not copyrighted."
@@ -16,8 +16,10 @@ Description: "Describes functional roles of the care team members."
 ValueSet: C4BBClaimProfessionalAndNonClinicianCareTeamRole   
 Title: "C4BB Claim Professional And Non Clinician Care Team Role "
 Description: "Describes functional roles of the care team members"
-* $CareTeamRoleCodeCS#primary "Primary provider." 
-* C4BBClaimCareTeamRole#performing 
+* $CareTeamRoleCodeCS#primary 
+* $CareTeamRoleCodeCS#supervisor
+* C4BBClaimCareTeamRole#performing
+* C4BBClaimCareTeamRole#purchasedservice 
 * C4BBClaimCareTeamRole#referring 
 * ^copyright = "This Valueset is not copyrighted."
 
@@ -67,44 +69,101 @@ Description: "Indicates the in network or out of network payment status of the c
 ValueSet: C4BBPayerClaimPaymentStatusCode
 Title: "C4BB Payer Claim Payment Status Code"
 Description: "Indicates whether the claim / item was paid or denied."
-* C4BBAdjudication#paid "paid"
-* C4BBAdjudication#denied "denied"
+* C4BBPayerAdjudicationStatus#paid 
+* C4BBPayerAdjudicationStatus#denied 
+* C4BBPayerAdjudicationStatus#partiallypaid 
+* ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBPayeeType
+Title: "C4BB Payee Type"
+Description: "Identifies the type of recipient of the adjudication amount; i.e., provider, subscriber, beneficiary or another recipient."
+* C4BBPayeeType#beneficiary 
+* $HL7PayeeType#subscriber 
+* $HL7PayeeType#provider
+* $HL7PayeeType#other 
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimProfessionalAndNonClinicianDiagnosisType 
 Title: "C4BB Claim Professional And Non Clinician Diagnosis Type"
 Description: "Indicates if the professional and non-clinician diagnosis is principal or secondary"
-* C4BBClaimDiagnosisType#principal "principal"
+* $HL7DiagnosisType#principal "principal"
 * C4BBClaimDiagnosisType#secondary "secondary"
-* C4BBClaimDiagnosisType#first-listed "first-listed"
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimInpatientInstitutionalDiagnosisType 
 Title: "C4BB Claim Inpatient Institutional Diagnosis Type"
-Description: "Indicates if the inpatient institutional diagnosis is admitting, principal, secondary or an external cause of injury."
-* C4BBClaimDiagnosisType#principal 
-* C4BBClaimDiagnosisType#secondary  
-* C4BBClaimDiagnosisType#external-cause-of-injury 
-* C4BBClaimDiagnosisType#first-listed  
-* C4BBClaimDiagnosisType#admitting 
+Description: "Indicates if the inpatient institutional diagnosis is admitting, principal, other or an external cause of injury."
+* $HL7DiagnosisType#principal 
+* C4BBClaimDiagnosisType#other  
+* C4BBClaimDiagnosisType#externalcauseofinjury   
+* $HL7DiagnosisType#admitting // http://terminology.hl7.org/CodeSystem/ex-diagnosistype#admitting 
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimOutpatientInstitutionalDiagnosisType 
 Title: "C4BB Claim Outpatient Institutional Diagnosis Type"
-Description: "Indicates if the outpatient institutional diagnosis is admitting, principal, secondary an external cause of injury or a patient reason for visit"
-* codes from system C4BBClaimDiagnosisType
-
-ValueSet: ClaimInformationCategory
-Title: "Claim Information Category"
-Description: "Claim Information Category - Used as the discriminator for supportingInfo" 
-* codes from system ClaimInformationCategory 
+Description: "Indicates if the outpatient institutional diagnosis is principal, other, an external cause of injury or a patient reason for visit."
+* $HL7DiagnosisType#principal 
+* C4BBClaimDiagnosisType#other  
+* C4BBClaimDiagnosisType#externalcauseofinjury   
+* C4BBClaimDiagnosisType#patientreasonforvisit 
 * ^copyright = "This Valueset is not copyrighted."
 
-ValueSet: PatientIdentifierType
-Title: "Patient Identifier Type"
-Description: "Patient Identifier Type"
-* IdentifierTypeCS#um
-* IdentifierTypeCS#mb
-* $IdentifierTypeCS#MR
-* IdentifierTypeCS#pt
+ValueSet: C4BBRelatedClaimRelationshipCodes
+Title: "C4BB Related Claim Relationship Codes"
+Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number."
+* $HL7RelatedClaimRelationshipCS#prior 
+* C4BBRelatedClaimRelationshipCodes#replacedby 
 * ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBSupportingInfoType
+Title: "C4BB SupportingInfo Type"
+Description: "Used as the discriminator for the types of supporting information for the CARIN IG for Blue Button� Implementation Guide." 
+* codes from system C4BBSupportingInfoType 
+* ^copyright = "This Valueset is not copyrighted."
+
+// ************* @Saul - replaced with C4BB **************
+//ValueSet: PatientIdentifierType
+//Title: "Patient Identifier Type"
+//Description: "Patient Identifier Type"
+//* C4BBIdentifierType#um
+//* C4BBIdentifierType#mb
+//* $IdentifierType#MR
+//* C4BBIdentifierType#pt
+//* ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBClaimIdentifierType
+Title: "C4BB Claim Identifier Type"
+Description: "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
+* C4BBIdentifierType#uc
+* ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBPatientIdentifierType
+Title: "C4BB Patient Identifier Type"
+Description: "Identifies the type of identifier payers and providers assign to patients"
+* C4BBIdentifierType#um
+* C4BBIdentifierType#pat
+* $IdentifierType#MB
+* $IdentifierType#MR  
+* ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBOrganizationIdentifierType
+Title: "C4BB Organization Identifier Type"
+Description: "Identifies the type of identifiers for organizations"
+* C4BBIdentifierType#npi
+* C4BBIdentifierType#payerid
+* C4BBIdentifierType#naiccode
+* codes from system $IdentifierType
+* ^copyright = "This Valueset is not copyrighted."
+
+CodeSystem: C4BBClaimProcedureType
+Title: "C4BB Claim Procedure Type"
+Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure"
+* #principal "Principal" "The Principal Procedure is based on the relation of the procedure to the Principal Diagnosis"
+* #other "Other"  "Other procedures performed during the inpatient institutional admission"
+* ^copyright = "This Code System is not copyrighted."
+
+ValueSet: C4BBClaimProcedureType
+Title: "C4BB Claim Procedure Type"
+Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure"
+* codes from system C4BBClaimProcedureType
+* ^copyright = "This Value Set is not copyrighted."

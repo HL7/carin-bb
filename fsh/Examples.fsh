@@ -6,6 +6,7 @@ Usage: #example
 * meta.profile = Canonical(C4BBPatient)
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
+* id = "Patient1"
 * active = true
 * name[0].family = "Example1"
 * name[0].given[0] = "Johnny"
@@ -23,16 +24,16 @@ Usage: #example
 * address[0].state = "PA"
 * address[0].postalCode = "12519"
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK
-* identifier[memberid].type = IdentifierTypeCS#mb
+* identifier[memberid].type = $IdentifierType#MB
 * identifier[memberid].value = "1234-234-1243-12345678901"
 * identifier[memberid].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
-* identifier[medrecnum].type = $IdentifierTypeCS#MR
+* identifier[medrecnum].type = $IdentifierType#MR
 * identifier[medrecnum].value = "1234-234-1243-12345678901m"
 * identifier[medrecnum].system = "https://www.xxxhealthplan.com/fhir/medicalrecordnumber"
-* identifier[uniquememberid].type = IdentifierTypeCS#um
+* identifier[uniquememberid].type = C4BBIdentifierType#um
 * identifier[uniquememberid].value = "1234-234-1243-12345678901u"
 * identifier[uniquememberid].system = "https://www.xxxhealthplan.com/fhir/iniquememberidentifier"
-* identifier[patacctnum].type = IdentifierTypeCS#pt
+* identifier[patacctnum].type = C4BBIdentifierType#pat
 * identifier[patacctnum].value = "1234-234-1243-12345678901a"
 * identifier[patacctnum].system = "https://www.xxxhealthplan.com/fhir/patacctnum"
 
@@ -41,11 +42,12 @@ InstanceOf: C4BBCoverage
 Description: "Coverage Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
+* id = "Coverage1"
 * meta.profile = Canonical(C4BBCoverage)
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
 * status = #active
-* identifier[0].type = IdentifierTypeCS#mb
+* identifier[0].type = $IdentifierType#MB
 * identifier[0].value = "1234-234-1243-12345678901"
 * identifier[0].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP
@@ -57,19 +59,19 @@ Usage: #example
 * dependent = "01"
 * period.start = "2019-01-01T00:00:00+00:00"
 * period.end = "2019-10-31T00:00:00+00:00"
-* class[group].type = http://terminology.hl7.org/CodeSystem/coverage-class#group 
+
+* class[group].type = $CoverageClassCS#group 
 * class[group].type.text = "An employee group"
 * class[group].value = "021890"
 * class[group].name = "Acme Corporation"
-* class[plan].type = http://terminology.hl7.org/CodeSystem/coverage-class#plan
+* class[plan].type = $CoverageClassCS#plan
 * class[plan].type.text = "Plan"
 * class[plan].value = "XYZ123"
 * class[plan].name = "XYZ123-UPMC CONSUMER ADVA"
-* class[2].type = http://terminology.hl7.org/CodeSystem/coverage-class#subgroup 
-* class[2].type.text = "A subgroup of an employee group"
-* class[2].value = "300"
-* class[2].name = "ACME HSA PPO 1500"
-
+// * class[0].type = $CoverageClassCS#subgroup 
+// * class[0].type.text = "A subgroup of an employee group"
+// * class[0].value = "300"
+// * class[0].name = "ACME HSA PPO 1500"
 * network = "XYZ123-UPMC CONSUMER ADVA"
 * relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self
 * payor = Reference(OrganizationPayer1)
@@ -78,12 +80,13 @@ Instance: EOBInpatient1
 InstanceOf: C4BBExplanationOfBenefitInpatientInstitutional
 Description: "EOB Inpatient Example1"
 Usage: #example
+* id = "EOBInpatient1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile = Canonical(C4BBExplanationOfBenefitInpatientInstitutional)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = IdentifierTypeCS#cn
+* identifier.type = C4BBIdentifierType#uc
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
@@ -99,11 +102,11 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = C4BBClaimDiagnosisType#principal
+* diagnosis[0].type = $HL7DiagnosisType#principal 
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
-* total[adjudicationamounttype][0].category = C4BBAdjudication#paidtoprovider
+* total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
 * total[adjudicationamounttype][0].amount.value = 620.00
 * total[adjudicationamounttype][0].amount.currency = #USD
@@ -111,13 +114,13 @@ Usage: #example
 * total[adjudicationamounttype][1].category.text = "Submitted Amount"
 * total[adjudicationamounttype][1].amount.value = 2650.00
 * total[adjudicationamounttype][1].amount.currency = #USD
-* total[adjudicationamounttype][2].category = C4BBAdjudication#paidbypatient
+* total[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[inoutnetwork].category = C4BBAdjudication#innetwork 
-* total[inoutnetwork].amount.value = 0.00
-* total[inoutnetwork].amount.currency = #USD
+* total[inoutnetwork][0].category = C4BBPayerAdjudicationStatus#innetwork 
+* total[inoutnetwork][0].amount.value = 0.00
+* total[inoutnetwork][0].amount.currency = #USD
 //* adjudication[inoutnetwork].category = C4BBAdjudication#innetwork 
 
 
@@ -125,12 +128,13 @@ Instance: EOBOutpatientInstitutional1
 InstanceOf: C4BBExplanationOfBenefitOutpatientInstitutional
 Description: "EOB Outpatient Example1"
 Usage: #example
+* id = "EOBOutpatientInstitutional1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = IdentifierTypeCS#cn
+* identifier.type = C4BBIdentifierType#uc
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
@@ -146,11 +150,11 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = C4BBClaimDiagnosisType#principal
+* diagnosis[0].type = $C4BBClaimDiagnosisTypeCS#patientreasonforvisit
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
-* total[adjudicationamounttype][0].category = C4BBAdjudication#paidtoprovider
+* total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
 * total[adjudicationamounttype][0].amount.value = 620.00
 * total[adjudicationamounttype][0].amount.currency = #USD
@@ -158,25 +162,26 @@ Usage: #example
 * total[adjudicationamounttype][1].category.text = "Submitted Amount"
 * total[adjudicationamounttype][1].amount.value = 2650.00
 * total[adjudicationamounttype][1].amount.currency = #USD
-* total[adjudicationamounttype][2].category = C4BBAdjudication#paidbypatient
+* total[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[inoutnetwork].category = C4BBAdjudication#innetwork
-* total[inoutnetwork].amount.value = 0.00
-* total[inoutnetwork].amount.currency = #USD
+* total[inoutnetwork][0].category = C4BBPayerAdjudicationStatus#innetwork
+* total[inoutnetwork][0].amount.value = 0.00
+* total[inoutnetwork][0].amount.currency = #USD
 //* adjudication[inoutnetwork].category = C4BBAdjudication#other
 
 Instance: EOBProfessional1a
 InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician 
 Description: "EOB Professional  Example1"
 Usage: #example
+* id = "EOBProfessional1a"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = IdentifierTypeCS#cn
+* identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "AW123412341234123412341234123413"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#professional
@@ -192,11 +197,11 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = C4BBClaimDiagnosisType#principal
+* diagnosis[0].type = $HL7DiagnosisType#principal
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
-* total[adjudicationamounttype][0].category = C4BBAdjudication#paidtoprovider
+* total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
 * total[adjudicationamounttype][0].amount.value = 620.00
 * total[adjudicationamounttype][0].amount.currency = #USD
@@ -204,26 +209,29 @@ Usage: #example
 * total[adjudicationamounttype][1].category.text = "Submitted Amount"
 * total[adjudicationamounttype][1].amount.value = 2650.00
 * total[adjudicationamounttype][1].amount.currency = #USD
-* total[adjudicationamounttype][2].category = C4BBAdjudication#paidbypatient
+* total[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-
+// * total[inoutnetwork][0].category = C4BBPayerAdjudicationStatus#innetwork
+// * total[inoutnetwork][0].amount.value = 0.00
+// * total[inoutnetwork][0].amount.currency = #USD
 
 Instance: EOBPharmacy1
 InstanceOf: C4BBExplanationOfBenefitPharmacy
 Description: "EOB PHarmacy Example1"
 Usage: #example
+* id = "EOBPharmacy1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile = Canonical(C4BBExplanationOfBenefitPharmacy)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = IdentifierTypeCS#cn
+* identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#pharmacy
-* type.text = "Inpatient Institution"
+* type.text = "Pharmacy"
 * use = #claim 
 * created = "2019-07-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
@@ -234,12 +242,9 @@ Usage: #example
 * provider = Reference(OrganizationProvider1)
 * provider.display = "XXX Health Plan"
 * outcome = #partial
-* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
-* diagnosis[0].type = C4BBClaimDiagnosisType#principal
-* diagnosis[0].sequence = 1 
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
-* total[adjudicationamounttype][0].category = C4BBAdjudication#paidtoprovider
+* total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
 * total[adjudicationamounttype][0].amount.value = 620.00
 * total[adjudicationamounttype][0].amount.currency = #USD
@@ -247,11 +252,11 @@ Usage: #example
 * total[adjudicationamounttype][1].category.text = "Submitted Amount"
 * total[adjudicationamounttype][1].amount.value = 2650.00
 * total[adjudicationamounttype][1].amount.currency = #USD
-* total[adjudicationamounttype][2].category = C4BBAdjudication#paidbypatient
+* total[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[inoutnetwork].category = C4BBAdjudication#innetwork 
+* total[inoutnetwork].category = C4BBPayerAdjudicationStatus#innetwork 
 * total[inoutnetwork].amount.value = 0.00
 * total[inoutnetwork].amount.currency = #USD
 //* adjudication[inoutnetwork].category = C4BBAdjudication#other
@@ -263,13 +268,13 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit 
 * item[0].adjudication[adjudicationamounttype][1].amount.value = 20.00
 * item[0].adjudication[adjudicationamounttype][1].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][2].category = C4BBAdjudication#discount
+* item[0].adjudication[adjudicationamounttype][2].category = $C4BBAdjudicationCS#discount
 * item[0].adjudication[adjudicationamounttype][2].amount.value = 900.00
 * item[0].adjudication[adjudicationamounttype][2].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][3].category = C4BBAdjudication#memberliability
+* item[0].adjudication[adjudicationamounttype][3].category = $C4BBAdjudicationCS#memberliability
 * item[0].adjudication[adjudicationamounttype][3].amount.value = 80.00
 * item[0].adjudication[adjudicationamounttype][3].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][4].category = C4BBAdjudication#paidtoprovider
+* item[0].adjudication[adjudicationamounttype][4].category = $C4BBAdjudicationCS#paidtoprovider
 * item[0].adjudication[adjudicationamounttype][4].amount.value = 20.00
 * item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD
 
@@ -278,12 +283,13 @@ Instance: OrganizationPayer1
 InstanceOf: C4BBOrganization
 Description: "Payer1"
 Usage: #example
+* id = "Payer1"
 * meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
-* identifier[NPI].type = IdentifierTypeCS#npi
+* identifier[NPI].type = $C4BBIdentifierTypeCS#npi
 * identifier[NPI].value = "345678"
-* identifier[payerid].type = IdentifierTypeCS#payerid
+* identifier[payerid].type = $C4BBIdentifierTypeCS#payerid
 * identifier[payerid].value = "901234"
 * name = "Payer 1"
 * active = true 
@@ -295,9 +301,9 @@ Usage: #example
 * meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
-* identifier[NPI].type = IdentifierTypeCS#npi
+* identifier[NPI].type = $C4BBIdentifierTypeCS#npi
 * identifier[NPI].value = "345678"
-* identifier[tax].type = $IdentifierTypeCS#TAX
+* identifier[tax].type = $IdentifierType#TAX
 * identifier[tax].value = "123-45-6789"
 * name = "Provider 1"
 * active = true 

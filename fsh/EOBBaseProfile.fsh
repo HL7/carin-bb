@@ -9,6 +9,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * ^abstract = true 
 * identifier 1..* 
 * identifier.type 1..1 MS
+* identifier.type from C4BBClaimIdentifierType (extensible)
 * type 1..1 MS
 * type from $HL7ClaimType (required)
 //   * claim MS   - igor sez we discussed removing MS
@@ -23,39 +24,34 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * provider 1..1 MS
 * related 0..* MS
 * related.relationship 1..1 MS
-//* related.relationship from RelatedClaim (extensible)
+* related.relationship from C4BBRelatedClaimRelationshipCodes (required)
+* related.reference 1..1 MS 
 * payee 0..1 MS
 * payee.type 1..1 MS
-* payee.type from $ClaimPayeeTypeCode (required)
+* payee.type from C4BBPayeeType (required)
 * payee.party 1..1 MS
 * payee.party only Reference(C4BBOrganization or C4BBPatient or C4BBPractitioner)
 * careTeam 0..* MS 
 * careTeam.provider 1..1 MS
 * careTeam.provider only Reference(C4BBOrganization or C4BBPractitioner)
 * careTeam.responsible 0..1 MS 
-* careTeam.role 1..1 MS
 * supportingInfo 0..* MS
+* supportingInfo.category from C4BBSupportingInfoType (extensible)
 //* supportingInfo.category 1..1 MS
-//* supportingInfo.category from ClaimInformationCategory (required)
-* supportingInfo.code 0..1 MS 
-* supportingInfo.timing[x] 0..1 MS 
-* supportingInfo.value[x] 0..1 MS 
-* procedure 0..* MS 
-* procedure.type 0..* MS 
-* procedure.date 0..1 MS 
+//* supportingInfo.category from C4BBSupportingInfoType (required)
 * insurance 1..* MS
 * insurance.coverage 1..1 MS
 * insurance.focal 1..1  MS
 * insurance obeys EOB-insurance-focal 
 * insurance.coverage only Reference(C4BBCoverage)
-//* adjudication.category from ClaimAdjudicationCategory (required)   // per Igor
+//* adjudication.category from C4BBAdjudicationDiscriminator (required)   // per Igor
 * item 0..* MS
 * item.adjudication MS 
 * item.adjudication.category 1..1 MS
-//* item.adjudication.category from ClaimAdjudicationCategory (required)  // Per Igor
+//* item.adjudication.category from C4BBAdjudicationDiscriminator (required)  // Per Igor
 * item.noteNumber MS
 * item.noteNumber ^short = "References number of the associated processNote"
-//* total.category from ClaimAdjudicationCategory (required)
+//* total.category from C4BBAdjudicationDiscriminator (required)
 * payment MS 
 * payment.type from C4BBPayerClaimPaymentStatusCode (required)
 * processNote MS
@@ -114,46 +110,61 @@ Description: "EOB.insurance:  at most one with focal = true"
 Expression: "insurance.select (focal = true).count() < 2"
 Severity:   #error
 
-Invariant: EOB-inst-careTeam-practitioner
+Invariant: EOB-inst-careTeam-practitioner  // rewritten with input from Lee Surprenant  FHIR-28530
 Description: "Institutional EOB:  Careteam roles refer to a practitioner"
-Expression: "( careTeam.role.coding.code in 
-('attending' or 'primary' or 'referring' or 'supervising')) implies 
- careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
+Expression: "(
+     careTeam.where(role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'supervising')).exists()).exists()).exists() implies
+     careTeam.where(role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'supervising')).exists()).exists()).provider.all(resolve() is Practitioner)
+    )"
 Severity: #error
 
-Invariant: EOB-inst-careTeam-organization
+Invariant: EOB-inst-careTeam-organization    // rewritten with input from Lee Surprenant  FHIR-28530
 Description: "Institutional EOB:  Careteam roles refer to an organization"
-Expression: "( careTeam.role.coding.code='performing') implies 
- careTeam.provider.reference.resolve().is(FHIR.Organization)"
-Severity: #error
-
-Invariant: EOB-pharm-careTeam-practitioner
-Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
-Expression: "( careTeam.role.coding.code in 
-( 'primary' or 'prescribing')) implies 
- careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
-Severity: #error
-
-Invariant: EOB-pharm-careTeam-organization
-Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
-Expression: "( careTeam.role.coding.code='performing') implies 
- careTeam.provider.reference.resolve().is(FHIR.Organization)"
-Severity: #error
-
-Invariant: EOB-prof-careTeam-practitioner
-Description: "Professional EOB:  Careteam roles refer to a practitioner"
-Expression: "( careTeam.role.coding.code in 
-('performing' or 'primary' or 'referring' or 'supervising')) implies 
- careTeam.provider.reference.resolve().is(FHIR.Practitioner)"
-Severity: #error
-
-Invariant: EOB-prof-careTeam-organization
-Description: "Professional EOB:  Careteam roles refer to an organization"
-Expression: "( careTeam.role.coding.code='site') implies 
- careTeam.provider.reference.resolve().is(FHIR.Organization)"
+Expression: "( 
+     careTeam.where(role.where(coding.where(code='performing').exists()).exists()).exists() implies
+     careTeam.where(role.where(coding.where(code='performing').exists()).exists()).provider.all(resolve() is Organization)
+    )"
 Severity: #error
 
 Invariant: EOB-careteam-qualification
 Description: "Care Team Performing physician's qualifications are from US-Core-Provider-Specialty Value Set"
-Expression: "ExplanationOfBenefit.careTeam.role.coding.code='performing' implies ExplanationOfBenefit.careTeam.qualification.memberOf('http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty')"
+Expression: "( 
+     careTeam.where(role.where(coding.where(code='performing').exists()).exists()).exists() implies
+     careTeam.where(role.where(coding.where(code='performing').exists()).exists()).qualification.memberOf('http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty')
+    )"
 Severity: #error
+
+Invariant: EOB-pharm-careTeam-practitioner
+Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
+Expression: "( 
+     careTeam.where(role.where(coding.where(code in ('primary' | 'prescribing')).exists()).exists()).exists() implies
+     careTeam.where(role.where(coding.where(code in ('primary' | 'prescribing')).exists()).exists()).provider.all(resolve() is Practitioner)
+    )"
+Severity: #error
+
+Invariant: EOB-pharm-careTeam-organization
+Description: "Pharmacy EOB:  Careteam roles refer to an organization"
+Expression: "( 
+     careTeam.where(role.where(coding.where(code in ('performing')).exists()).exists()).exists() implies
+     careTeam.where(role.where(coding.where(code in ('performing')).exists()).exists()).provider.all(resolve() is Organization)
+    )"
+Severity: #error
+
+Invariant: EOB-prof-careTeam-practitioner
+Description: "Professional EOB:  Careteam roles refer to a practitioner"
+Expression: 
+   "( 
+     careTeam.where(role.where(coding.where(code in ('performing' | 'primary' | 'referring' | 'supervising')).exists()).exists()).exists() implies
+     careTeam.where(role.where(coding.where(code in ('performing' | 'primary' | 'referring' | 'supervising')).exists()).exists()).provider.all(resolve() is Practitioner)
+    )"
+Severity: #error
+
+Invariant: EOB-prof-careTeam-organization
+Description: "Professional EOB:  Careteam roles refer to an organization"
+Expression: 
+   "( 
+     careTeam.where(role.where(coding.where(code in ('site')).exists()).exists()).exists() implies
+     careTeam.where(role.where(coding.where(code in ('site')).exists()).exists()).provider.all(resolve() is Organization)
+    )"
+Severity: #error
+

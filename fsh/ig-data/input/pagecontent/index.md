@@ -10,15 +10,24 @@
 </table>
 <h3>&nbsp;</h3> -->
 <h3>Introduction</h3>
-<p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.<br>
+<p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
+<li>Interim Version 0.1.4 - October 7, 2020</li>
+<ol>
+<li>Please post comments to the CarinBB zulip <a href="https://chat.fhir.org/#narrow/stream/204607-CARIN-IG.20for.20Blue.20Button.C2.AE"> stream</a>.</li>
+<li>Updated all invariants.</li>
+<li>Updated C4BB Codesystems, ValueSets and Codesystem Stubs. Minor changes to content of C4BB (locally defined) codesystems, and changes to the defining URLs of external codesystems.</li>
+<li>Updated Profile Comparison <a href="EOBProfileComparison20201006.xlsx" download="EOBProfileComparison20201006.xlsx">charts </a>. This is a good place to get an overview comparison of the profiles in this IG.</li>
+<li>Examples for all profiles. Remaining validation errors are due to HL7 terminology issues, not with the examples.</li>
+<li>Added description of PDex to <a href="Background.html#relation-to-other-IGs">to the background material</a>.</li>
+</ol>
 <li>Interim Version 0.1.3 - September 8, 2020</li>
 <ol>
 <li>Pat's updates to CodeSystem stubs and Codesystems/Valuesets</li>
 <li>Updates to Graphics</li>
 <li>Changed references to CARIN-BB to C4BB, including profile, codesystem, and valueset names</li>
-<li>Changed naming convention for releases to Release.Ballot.Version. </li>
+<li>Changed naming convention for releases to Release.Ballot.Version.</li>
 </ol>
 <li>Interim Version 0.1.2 - August 28, 2020</li>
 <ol>
@@ -79,5 +88,5 @@
 </tbody>
 </table>
 <h3>Acknowledgements</h3>
-<p>The CARIN Consumer Directed Payer Data Exchange Implementation Guide is also known as the CARIN IG for Blue Button&reg; Implementation Guide. This IG was developed using [FHIR Shorthand syntax](https://build.fhir.org/ig/HL7/fhir-shorthand/) and the [SUSHI tookit](https://github.com/FHIR/sushi), a free, open source toolchain from the MITRE Corporation. Valuable guidance on FSH and FHIR slicing was provided by Chris Moesel. The capability statements were developed with tools and valuable guidance from Eric Haas.</p>
+<p>The CARIN Consumer Directed Payer Data Exchange Implementation Guide is also known as the CARIN IG for Blue Button&reg; Implementation Guide. This IG was developed using <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand syntax</a> and the <a href="https://github.com/FHIR/sushi">SUSHI</a> tookit, a free, open source toolchain from the MITRE Corporation. Valuable guidance on FSH and FHIR slicing was provided by Chris Moesel. The capability statements were developed with tools and valuable guidance from Eric Haas.</p>
 <div class="footnote"><sup>[<a href="#id1" name="ftn.id1">*</a>]</sup>Blue Button, the slogan, 'Download My Data,' the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services.</div>
