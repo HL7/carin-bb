@@ -53,7 +53,6 @@ menu:
   Guidance:
     General Guidance: Guidance.html
     Common Payer Consumer Data Set (CPCDS): Common_Payer_Consumer_Data_Set.html
-    Notes To Developers: Notes_To_Developers.html
   FHIR Artifacts:
     Profiles: artifacts.html#3
     Search Parameters: artifacts.html#2
