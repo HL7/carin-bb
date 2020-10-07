@@ -86,8 +86,8 @@ Flow:
 <li>Health Plan's Identity and Access Authorization server validates the credentials, generates and returns to the Consumer App an OIDC token with Consumer and authorized patient/beneficiary identities encoded.</li>
 <li>Consumer App successfully links the user to the Payer / Health Plan and notifies the Consumer.</li>
 <li>Consumer requests the Consumer App to fetch Explanation Of Benefit records.</li>
-<li>Consumer App generates and sends to the Health Plan's CARIN BB enabled FHIR API a request (which includes Patient ID, and token from the step #5) to fetch the Explanation Of Benefit (EOB) and supporting reference FHIR resources.</li>
-<li>Health Plan's CARIN BB enabled FHIR API responds with a bundle of the requested EOB and supporting reference FHIR resources.</li>
+<li>Consumer App generates and sends to the Health Plan's CARIN IG for Blue Button® enabled FHIR API a request (which includes Patient ID, and token from the step #5) to fetch the Explanation Of Benefit (EOB) and supporting reference FHIR resources.</li>
+<li>Health Plan's CARIN IG for Blue Button® enabled FHIR API responds with a bundle of the requested EOB and supporting reference FHIR resources.</li>
 <li>Consumer App presents the EOB and supporting reference FHIR resources to the Consumer.</li>
 </ol>
 

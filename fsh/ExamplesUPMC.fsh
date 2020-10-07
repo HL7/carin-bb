@@ -73,8 +73,6 @@ Description: "Coverage2 from UPMC"
 Usage: #example
 * meta.profile = Canonical(C4BBCoverage)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
-* id = "Coverage2UPMC"
-* meta.lastUpdated = "2020-09-08T00:00:00+00:00"
 * meta.source = "Organization/Organization1UPMC"
 * language = #en-US
 * id = "Coverage2UPMC" // "01234567801-20200101-99991231-SEA22"
