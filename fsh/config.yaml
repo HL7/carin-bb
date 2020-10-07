@@ -12,11 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.carin-bb
 canonical: http://hl7.org/fhir/us/carin-bb
-<<<<<<< HEAD
 version: 0.1.4
-=======
-version: 0.1.3
->>>>>>> master
 name: CARINConsumerDirectedPayerDataExchange
 title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 status: active
