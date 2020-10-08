@@ -46,7 +46,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[pointoforigin] ^short = "Claim Point of Origin for Admission or Visit"
 * supportingInfo[admtype].category = C4BBSupportingInfoType#admtype
 * supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
-* supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit "
+* supportingInfo[admtype] ^short = "Claim Priority (Type) of Admission or Visit"
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status] ^short = "Discharge Status"
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)

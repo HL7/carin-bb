@@ -19,16 +19,29 @@ Description: "This profile builds upon the US Core Organization profile. It is u
    naiccode 0..* MS 
 //* identifier[CLIA] ^patternIdentifier.type  = C4BBIdentifierType#clia 
 //* identifier[CLIA].type 1..1 MS
-* identifier[NPI] ^patternIdentifier.type  = C4BBIdentifierType#npi 
+// * identifier[NPI] ^patternIdentifier.type  = C4BBIdentifierType#npi 
+// * identifier[NPI].type 1..1 MS
+// * identifier[tax] ^short = "Tax ID Number"
+// * identifier[tax] ^patternIdentifier.type  = $IdentifierType#TAX
+// * identifier[tax].type 1..1 MS
+// * identifier[tax] ^patternIdentifier.system = $TAXCodeCS 
+// * identifier[payerid] ^short = "Payer ID"
+// * identifier[payerid] ^patternIdentifier.type  = C4BBIdentifierType#payerid 
+// * identifier[payerid].type 1..1 MS
+// * identifier[naiccode] ^short = "NAIC Code"
+// * identifier[naiccode].type 1..1 MS
+// * identifier[naiccode] ^patternIdentifier.system = $NAICCodeCS
+// * identifier[naiccode] ^patternIdentifier.type  = C4BBIdentifierType#naiccode  
+* identifier[NPI].type  = C4BBIdentifierType#npi 
 * identifier[NPI].type 1..1 MS
 * identifier[tax] ^short = "Tax ID Number"
-* identifier[tax] ^patternIdentifier.type  = $IdentifierType#TAX
+* identifier[tax].type  = $IdentifierType#TAX
 * identifier[tax].type 1..1 MS
-* identifier[tax] ^patternIdentifier.system = $TAXCodeCS 
+* identifier[tax].system = $TAXCodeCS 
 * identifier[payerid] ^short = "Payer ID"
-* identifier[payerid] ^patternIdentifier.type  = C4BBIdentifierType#payerid 
+* identifier[payerid].type  = C4BBIdentifierType#payerid 
 * identifier[payerid].type 1..1 MS
 * identifier[naiccode] ^short = "NAIC Code"
 * identifier[naiccode].type 1..1 MS
-* identifier[naiccode] ^patternIdentifier.system = $NAICCodeCS
-* identifier[naiccode] ^patternIdentifier.type  = C4BBIdentifierType#naiccode  
+* identifier[naiccode].type  = C4BBIdentifierType#naiccode 
+* identifier[naiccode].system = $NAICCodeCS 
