@@ -39,6 +39,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * deceasedDateTime ^short = "Date of death of the member (124)"
 * deceasedDateTime MS
 * deceasedBoolean MS
+* deceased[x] MS 
 * deceasedBoolean ^short = "Indicates if the patient is deceased (150)"
 * name ^short = "The name of the patient (130)"
 * name MS

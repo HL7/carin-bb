@@ -87,12 +87,13 @@ Services."
 * item.adjudication ^slicing.discriminator.type = #pattern 
 * item.adjudication ^slicing.discriminator.path = "$this"
 * item.adjudication contains
-   adjudicationamounttype 0..* MS and
-   denialreason 0..1 MS and
+   adjudicationamounttype 1..* MS and
+   denialreason 0..* MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "Allowed number of units"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
+* item.adjudication[allowedunits].value MS
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes

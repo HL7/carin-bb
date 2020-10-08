@@ -178,6 +178,19 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
+* adjudication[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
+* adjudication[adjudicationamounttype][0].category.text = "Payment Amount"
+* adjudication[adjudicationamounttype][0].amount.value = 620.00
+* adjudication[adjudicationamounttype][0].amount.currency = #USD
+* adjudication[adjudicationamounttype][1].category = $HL7AdjudicationCS#submitted
+* adjudication[adjudicationamounttype][1].category.text = "Submitted Amount"
+* adjudication[adjudicationamounttype][1].amount.value = 2650.00
+* adjudication[adjudicationamounttype][1].amount.currency = #USD
+* adjudication[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
+* adjudication[adjudicationamounttype][2].category.text = "Patient Pay Amount"
+* adjudication[adjudicationamounttype][2].amount.value = 0.00
+* adjudication[adjudicationamounttype][2].amount.currency = #USD
+
 * total[inoutnetwork][0].category = C4BBPayerAdjudicationStatus#innetwork
 * total[inoutnetwork][0].amount.value = 0.00
 * total[inoutnetwork][0].amount.currency = #USD

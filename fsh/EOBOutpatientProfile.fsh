@@ -11,6 +11,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * obeys EOB-inst-careTeam-organization
 * obeys EOB-careteam-qualification
 * careTeam.qualification from $USCoreProviderSpecialty (required)
+* identifier MS   
 * diagnosis 1..*
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
@@ -63,12 +64,13 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication ^slicing.discriminator.type = #pattern
 * item.adjudication ^slicing.discriminator.path = "category"
 * item.adjudication contains
-   adjudicationamounttype 0..* MS and
-   denialreason 0..1 MS and
+   adjudicationamounttype 1..* MS and
+   denialreason 0..* MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "Allowed number of units"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
+* item.adjudication[allowedunits].value MS
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
@@ -83,8 +85,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication ^slicing.discriminator.path = "category"
 * adjudication.category 1..1 MS
 * adjudication contains
-   adjudicationamounttype 0..* MS and
-   denialreason 0..1 MS 
+   adjudicationamounttype 1..* MS and
+   denialreason 0..* MS 
 * adjudication[denialreason] ^short = "Denial Reason"
 * adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
@@ -102,12 +104,23 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * total  ^slicing.discriminator.path = "category"
 * total.category 1..1 MS 
 * total contains
-   adjudicationamounttype 0..* MS and
+   adjudicationamounttype 1..* MS and
    inoutnetwork 1..1 MS 
 * total[inoutnetwork] ^short = "Benefit Payment Status"
 * total[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
+* total[adjudicationamounttype].amount MS 
 //* total[adjudicationamounttype].amount 1..1
-
+* status MS
+* created MS
+* item.sequence MS
+* item.revenue MS
+* item.productOrService MS
+* item.modifier MS
+* item.serviced[x] MS
+* item.quantity MS
+* payment.type MS
+* payment.date MS
+* processNote.text MS 
 

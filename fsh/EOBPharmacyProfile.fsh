@@ -134,6 +134,7 @@ The claims data is based on submission standards adopted by the Department of He
 * type MS
 * identifier MS
 * item.sequence MS
+* item.detail.productOrService MS
 * item.productOrService MS
 * item.quantity MS
 * item.productOrService MS
@@ -150,4 +151,7 @@ The claims data is based on submission standards adopted by the Department of He
 * status MS
 * insurance MS
 * total.amount MS
+* created MS
+* processNote.text MS
+
 
