@@ -168,3 +168,34 @@ Expression:
     )"
 Severity: #error
 
+// Rulesets
+RuleSet: AdjudicationSlicing
+* adjudication ^slicing.rules = #closed
+* adjudication ^slicing.ordered = false   // can be omitted, since false is the default
+* adjudication ^slicing.description = "Slice based on value pattern"
+* adjudication ^slicing.discriminator.type = #value
+* adjudication.category 1..1 MS 
+
+RuleSet: SupportingInfoSlicing
+* supportingInfo ^slicing.discriminator.type = #pattern 
+* supportingInfo ^slicing.discriminator.path = "category"
+* supportingInfo ^slicing.rules = #open
+* supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
+* supportingInfo ^slicing.description = "Slice based on $this pattern"
+* supportingInfo MS 
+* supportingInfo.category MS 
+
+RuleSet: TotalSlicing
+* total ^slicing.rules = #open
+* total ^slicing.ordered = false   // can be omitted, since false is the default
+* total ^slicing.description = "Slice based on value pattern"
+* total  ^slicing.discriminator.type = #value
+* total  ^slicing.discriminator.path = "category"
+* total.category 1..1 MS 
+
+RuleSet: ItemAdjudicationSlicing
+* item.adjudication ^slicing.rules = #closed
+* item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
+* item.adjudication ^slicing.description = "Slice based on value pattern"
+* item.adjudication ^slicing.discriminator.type = #value 
+* item.adjudication ^slicing.discriminator.path = "category"

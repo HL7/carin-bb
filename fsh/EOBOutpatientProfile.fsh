@@ -17,13 +17,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from CDCICD910CMDiagnosisCodes (required)
 * provider only Reference(C4BBOrganization)
-* supportingInfo ^slicing.rules = #open
-* supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
-* supportingInfo ^slicing.description = "Slice based on value pattern"
-* supportingInfo ^slicing.discriminator.type = #pattern
-* supportingInfo ^slicing.discriminator.path = "category"
-* supportingInfo MS 
-* supportingInfo.category MS 
+
+* insert SupportingInfoSlicing 
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
@@ -58,11 +53,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.productOrService ^comment = "Put the comment here for item.productOrService here"
 * item  ^short = "Put the short definition here for item"
 * item  ^comment = "Put the comment here for item"
-* item.adjudication ^slicing.rules = #closed
-* item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* item.adjudication ^slicing.description = "Slice based on $this pattern"
-* item.adjudication ^slicing.discriminator.type = #pattern
-* item.adjudication ^slicing.discriminator.path = "category"
+* insert ItemAdjudicationSlicing
 * item.adjudication contains
    adjudicationamounttype 1..* MS and
    denialreason 0..* MS and
@@ -78,12 +69,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
-* adjudication ^slicing.rules = #closed
-* adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* adjudication ^slicing.description = "Slice based on $this pattern"
-* adjudication ^slicing.discriminator.type = #pattern
-* adjudication ^slicing.discriminator.path = "category"
-* adjudication.category 1..1 MS
+* insert AdjudicationSlicing 
 * adjudication contains
    adjudicationamounttype 1..* MS and
    denialreason 0..* MS 
@@ -97,12 +83,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis 1..*
 * diagnosis.type 1..1 MS
 * diagnosis.type from C4BBClaimOutpatientInstitutionalDiagnosisType  (required)
-* total ^slicing.rules = #open
-* total ^slicing.ordered = false   // can be omitted, since false is the default
-* total ^slicing.description = "Slice based on value pattern"
-* total  ^slicing.discriminator.type = #value
-* total  ^slicing.discriminator.path = "category"
-* total.category 1..1 MS 
+* insert TotalSlicing
 * total contains
    adjudicationamounttype 1..* MS and
    inoutnetwork 1..1 MS 

@@ -29,13 +29,7 @@ Services."
 * procedure.date 0..1 MS 
 * provider 1..1
 * provider only Reference(C4BBOrganization)
-* supportingInfo ^slicing.rules = #open
-* supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
-* supportingInfo ^slicing.description = "Slice based on value pattern"
-* supportingInfo ^slicing.discriminator.type = #pattern
-* supportingInfo ^slicing.discriminator.path = "category"
-* supportingInfo MS 
-* supportingInfo.category MS 
+* insert SupportingInfoSlicing 
 * supportingInfo contains 
    billingnetworkcontractingstatus 0..1 MS and
     clmrecvddate 0..1 MS and
@@ -81,11 +75,7 @@ Services."
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
-* item.adjudication ^slicing.rules = #closed
-* item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* item.adjudication ^slicing.description = "Slice based on value pattern"
-* item.adjudication ^slicing.discriminator.type = #pattern 
-* item.adjudication ^slicing.discriminator.path = "$this"
+* insert ItemAdjudicationSlicing
 * item.adjudication contains
    adjudicationamounttype 1..* MS and
    denialreason 0..* MS and
@@ -101,11 +91,7 @@ Services."
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount MS
-* adjudication ^slicing.rules = #closed
-* adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* adjudication ^slicing.description = "Slice based on value pattern"
-* adjudication ^slicing.discriminator.type = #value
-* adjudication.category 1..1 MS 
+* insert AdjudicationSlicing 
 * adjudication contains
    adjudicationamounttype 1..* MS and
    denialreason 0..* MS 
@@ -120,12 +106,7 @@ Services."
 * adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
-* total ^slicing.rules = #open
-* total ^slicing.ordered = false   // can be omitted, since false is the default
-* total ^slicing.description = "Slice based on value pattern"
-* total  ^slicing.discriminator.type = #value
-* total  ^slicing.discriminator.path = "category"
-* total.category 1..1 MS 
+* insert TotalSlicing
 * total contains
    adjudicationamounttype 1..* MS and
    inoutnetwork 1..1 MS 
