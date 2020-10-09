@@ -50,7 +50,7 @@ Description: "Indicates if the institutional diagnosis is admitting, principal, 
 CodeSystem: C4BBClaimCareTeamRole
 Title: "C4BB Claim Care Team Role"
 Description: "Describes functional roles of the care team members.  Complements http://terminology.hl7.org/CodeSystem/claimcareteamrole"
-* #attending  "Attending"  "The attending physicianr"
+* #attending  "Attending"  "The attending physician"
 * #referring "Referring"  "The referring physician"
 * #operating "Operating"  "The operating physician"
 * #otheroperating "Other Operating"  "The other operating physician"

@@ -10,16 +10,10 @@ The claims data is based on the professional claim form 1500, submission standar
 //* careTeam.qualification from NUCCHealthcareProviderTaxonomy (required)  // cardinality constraint?
 * type = $HL7ClaimTypeCS#professional
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner) -- set in base class
-* supportingInfo ^slicing.discriminator.type = #pattern 
-* supportingInfo ^slicing.discriminator.path = "category"
-* supportingInfo ^slicing.rules = #open
-* supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
-* supportingInfo ^slicing.description = "Slice based on $this pattern"
-* supportingInfo MS 
-* supportingInfo.category MS 
+* insert SupportingInfoSlicing 
 * supportingInfo contains 
-   billingnetworkcontractingstatus 0..1 MS and
-   performingnetworkcontractingstatus 0..1 MS and
+   billingnetworkcontractingstatus 1..1 MS and
+   performingnetworkcontractingstatus 1..1 MS and
    clmrecvddate 0..1 MS and
    servicefacility 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
@@ -46,11 +40,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.location[x] from CMSPlaceofServiceCodes (required)
 * item.location[x] only CodeableConcept
-* item.adjudication ^slicing.rules = #closed 
-* item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* item.adjudication ^slicing.description = "Slice based on value pattern"
-* item.adjudication ^slicing.discriminator.type = #pattern 
-* item.adjudication ^slicing.discriminator.path = "category"
+* insert ItemAdjudicationSlicing
 * item.adjudication contains
    adjudicationamounttype 0..* and
    denialreason 0..1 and
@@ -68,12 +58,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
-* total ^slicing.rules = #open
-* total ^slicing.ordered = false   // can be omitted, since false is the default
-* total ^slicing.description = "Slice based on value pattern"
-* total  ^slicing.discriminator.type = #value
-* total  ^slicing.discriminator.path = "category"
-* total.category 1..1 MS 
+* insert TotalSlicing
 * total contains
    adjudicationamounttype 0..* MS 
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
@@ -126,7 +111,8 @@ The claims data is based on the professional claim form 1500, submission standar
 * payment.date MS
 * patient MS
 * related MS
-* item.serviced[x] MS
+* item.serviced[x] only date
+* item.servicedDate MS
 * payee.type MS
 * payee.party MS
 * status MS

@@ -57,7 +57,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * processNote MS
 * processNote ^short = "Line member payment denial explanation"
 * priority from http://hl7.org/fhir/ValueSet/process-priority  // Fix a bug in R4 EOB which points to a CodeSystem.   Eliminates an error on output
-
+* total 1..* MS 
 /*
 * identifier ^short = ""
 * identifier.type ^ short = ""
@@ -168,3 +168,34 @@ Expression:
     )"
 Severity: #error
 
+// Rulesets
+RuleSet: AdjudicationSlicing
+* adjudication ^slicing.rules = #closed
+* adjudication ^slicing.ordered = false   // can be omitted, since false is the default
+* adjudication ^slicing.description = "Slice based on value pattern"
+* adjudication ^slicing.discriminator.type = #pattern
+* adjudication.category 1..1 MS 
+
+RuleSet: SupportingInfoSlicing
+* supportingInfo ^slicing.discriminator.type = #pattern 
+* supportingInfo ^slicing.discriminator.path = "category"
+* supportingInfo ^slicing.rules = #open
+* supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
+* supportingInfo ^slicing.description = "Slice based on $this pattern"
+* supportingInfo MS 
+* supportingInfo.category MS 
+
+RuleSet: TotalSlicing
+* total ^slicing.rules = #open
+* total ^slicing.ordered = false   // can be omitted, since false is the default
+* total ^slicing.description = "Slice based on value pattern"
+* total  ^slicing.discriminator.type = #pattern
+* total  ^slicing.discriminator.path = "category"
+* total.category 1..1 MS 
+
+RuleSet: ItemAdjudicationSlicing
+* item.adjudication ^slicing.rules = #closed
+* item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
+* item.adjudication ^slicing.description = "Slice based on value pattern"
+* item.adjudication ^slicing.discriminator.type = #pattern 
+* item.adjudication ^slicing.discriminator.path = "category"

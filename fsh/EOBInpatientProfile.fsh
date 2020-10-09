@@ -8,6 +8,7 @@ Services."
 * type.coding 1..1 MS
 * type = $HL7ClaimTypeCS#institutional
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)  // was  PayerInstitutionalProviderRole 
+* billablePeriod 1..1 MS 
 * careTeam.role 1..1 MS
 * obeys EOB-inst-careTeam-practitioner
 * obeys EOB-inst-careTeam-organization
@@ -24,26 +25,23 @@ Services."
 * procedure.procedure[x] from CMSICD910PCSProcedureCodes (required) 
 * procedure.type from C4BBClaimProcedureType (required)
 * procedure 0..* MS 
-* procedure.type 0..* MS 
+* procedure.type 1..1 MS 
 * procedure.date 0..1 MS 
 * provider 1..1
 * provider only Reference(C4BBOrganization)
-* supportingInfo ^slicing.rules = #open
-* supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
-* supportingInfo ^slicing.description = "Slice based on value pattern"
-* supportingInfo ^slicing.discriminator.type = #pattern
-* supportingInfo ^slicing.discriminator.path = "category"
-* supportingInfo MS 
-* supportingInfo.category MS 
+* insert SupportingInfoSlicing 
 * supportingInfo contains 
-   billingnetworkcontractingstatus 0..1 MS and
-    clmrecvddate 0..1 MS and
-    typeofbill 0..1 MS and 
-   pointoforigin 0..1 MS and 
-   admtype 0..1 MS and 
-   discharge-status 0..1 MS and 
-   drg 0..1 MS and
-   admissionperiod 0..1 MS  // EOBComparisonv13
+      billingnetworkcontractingstatus 1..1 MS and
+      admissionperiod 1..1 MS  and
+     inoutnetwork 1..1 MS and 
+     clmrecvddate 0..1 MS and
+     typeofbill 0..1 MS and 
+     pointoforigin 0..1 MS and 
+     admtype 0..1 MS and 
+     discharge-status 0..1 MS and 
+     drg 0..1 MS 
+ 
+   
 * supportingInfo[pointoforigin] ^short = "Identifies the place where the patient was identified as needing admission to an institution. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13)"
 * supportingInfo[admtype] ^short = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14)"
 * supportingInfo[typeofbill] ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of institution, the second digit classifies the type of care being billed, and the third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (17)"
@@ -51,6 +49,10 @@ Services."
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * supportingInfo[admissionperiod] ^short = "Admission Period"
 * supportingInfo[drg] ^short = "DRG codes assigned (33)"
+* supportingInfo[inoutnetwork] ^short = "Benefit Payment Status"
+* supportingInfo[inoutnetwork].category = C4BBSupportingInfoType#inoutnetwork
+* supportingInfo[inoutnetwork].code from C4BBPayerBenefitPaymentStatus (required) 
+* supportingInfo[inoutnetwork].code 1..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
@@ -80,33 +82,26 @@ Services."
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
-* item.adjudication ^slicing.rules = #closed
-* item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* item.adjudication ^slicing.description = "Slice based on value pattern"
-* item.adjudication ^slicing.discriminator.type = #pattern 
-* item.adjudication ^slicing.discriminator.path = "$this"
+* insert ItemAdjudicationSlicing
 * item.adjudication contains
-   adjudicationamounttype 0..* MS and
-   denialreason 0..1 MS and
+   adjudicationamounttype 1..* MS and
+   denialreason 0..* MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "Allowed number of units"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
+* item.adjudication[allowedunits].value MS
 * item.adjudication[denialreason] ^short = "Denial Reason"
 * item.adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
-* item.adjudication[denialreason].reason 1..1
+* item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount MS
-* adjudication ^slicing.rules = #closed
-* adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* adjudication ^slicing.description = "Slice based on value pattern"
-* adjudication ^slicing.discriminator.type = #value
-* adjudication.category 1..1 MS 
+* insert AdjudicationSlicing 
 * adjudication contains
-   adjudicationamounttype 0..* MS and
-   denialreason 0..1 MS 
+   adjudicationamounttype 1..* MS and
+   denialreason 0..* MS 
 // * adjudication ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType').value"
 //* adjudication[denialreason].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#denialreason
 //* adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#adjudicationamounttype
@@ -114,30 +109,26 @@ Services."
 * adjudication[denialreason] ^short = "Denial Reason"
 * adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
-* adjudication[denialreason].reason 1..1
+* adjudication[denialreason].reason MS
 * adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
 * adjudication[adjudicationamounttype] ^short = "Amounts"
 * adjudication[adjudicationamounttype].amount 1..1
-* total ^slicing.rules = #open
-* total ^slicing.ordered = false   // can be omitted, since false is the default
-* total ^slicing.description = "Slice based on value pattern"
-* total  ^slicing.discriminator.type = #value
-* total  ^slicing.discriminator.path = "category"
-* total.category 1..1 MS 
+* insert TotalSlicing
 * total contains
-   adjudicationamounttype 0..* MS and
-   inoutnetwork 1..1 MS 
+   adjudicationamounttype 1..* MS and
+   inoutnetwork 0..1 MS 
 * total[inoutnetwork] ^short = "Benefit Payment Status"
 * total[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
+* total[adjudicationamounttype].amount MS 
 //* total[adjudicationamounttype].amount 1..1
 * patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided."
 * patient MS
 * insurer ^short = "Code of the payer responsible for the claim"
 * insurer MS
 * insurance ^short = "Code of the payer responsible for the claim"
-* insurance MS
+* insurance 1..1 MS
 * supportingInfo[pointoforigin].code ^short = "Identifies the place where the patient was identified as needing admission to an institution. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15)."
 * supportingInfo[admtype].code ^short = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled."
 * type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.)."
@@ -159,7 +150,7 @@ Services."
 * item.quantity ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider."
 * item.quantity MS
 * item.revenue ^short = "Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed"
-* item.revenue MS
+* item.revenue 1..1 MS
 * supportingInfo[clmrecvddate].timingDate ^short = "The date the claim was received by the payer"
 * payment.type ^short = "Indicates whether the claim was paid or denied."
 * payment.type MS
@@ -182,11 +173,9 @@ Services."
 * related ^short = "If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number."
 * related MS
 * supportingInfo[discharge-status].code ^short = "Patient’s status as of the discharge date for an institutional stay. Information located on UB04 (Form Locator 17)."
-* payee.type ^short = "Identifies the type of recipient of the adjudication amount; i.e., provider or subscriber or another recipient
-"
+* payee.type ^short = "Identifies the type of recipient of the adjudication amount; i.e., provider or subscriber or another recipient"
 * payee.type MS
-* payee.party ^short = "Recipient reference
-"
+* payee.party ^short = "Recipient reference"
 * payee.party MS
 * status ^short = ""
 * status MS
