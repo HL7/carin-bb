@@ -13,9 +13,20 @@
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
-<li>Interim Version 0.1.4 - October 7, 2020</li>
+<li>Interim Version 0.1.5 - October 9, 2020</li>
 <ol>
 <li>Please post comments to the CarinBB zulip <a href="https://chat.fhir.org/#narrow/stream/204607-CARIN-IG.20for.20Blue.20Button.C2.AE"> stream</a>.</li>
+<li>Updates to MS and cardinality of various fields in EOB profiles and Patient profile.  Note that some supportingInfo slices now have cardinality 1..1. </li>
+<li>The inoutnetwork slice of total is now incorporated into supportingInfo, where it is a better fit</li>
+<li>Correction to slicing of Organization.identifier that lead to weird rendering issue in IG Publisher</li>
+<li>Correction to slicing of item.adjudication in EOB profiles.  All slicing definitions are now consistent across these profiles.</li>
+<li>Updated C4BB Codesystems, ValueSets and Codesystem Stubs. Minor changes to content of C4BB (locally defined) codesystems, and changes to the defining URLs of external codesystems.</li>
+<li>Updated Profile Comparison <a href="EOBProfileComparison20201006.xlsx" download="EOBProfileComparison20201006.xlsx">charts </a>. This is a good place to get an overview comparison of the profiles in this IG.</li>
+<li>Examples for all profiles. Remaining validation errors are due to HL7 terminology issues, not with the examples.</li>
+<li>Added description of PDex to <a href="Background.html#relation-to-other-IGs">to the background material</a>.</li>
+</ol>
+<li>Interim Version 0.1.4 - October 7, 2020</li>
+<ol>
 <li>Updated all invariants.</li>
 <li>Updated C4BB Codesystems, ValueSets and Codesystem Stubs. Minor changes to content of C4BB (locally defined) codesystems, and changes to the defining URLs of external codesystems.</li>
 <li>Updated Profile Comparison <a href="EOBProfileComparison20201006.xlsx" download="EOBProfileComparison20201006.xlsx">charts </a>. This is a good place to get an overview comparison of the profiles in this IG.</li>

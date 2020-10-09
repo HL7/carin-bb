@@ -14,8 +14,8 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo contains 
    billingnetworkcontractingstatus 1..1 MS and
    performingnetworkcontractingstatus 1..1 MS and
-   clmrecvddate 1..1 MS and
-   servicefacility 1..1 MS 
+   clmrecvddate 0..1 MS and
+   servicefacility 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS

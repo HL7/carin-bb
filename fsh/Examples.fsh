@@ -156,7 +156,9 @@ Usage: #example
 * supportingInfo[discharge-status].category  = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#11  
 * supportingInfo[discharge-status].sequence = 7
-
+* supportingInfo[inoutnetwork].category = C4BBSupportingInfoType#inoutnetwork
+* supportingInfo[inoutnetwork].code = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[inoutnetwork].sequence = 8
 
 
 Instance: EOBOutpatientInstitutional1
@@ -210,10 +212,6 @@ Usage: #example
 * adjudication[adjudicationamounttype][1].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
 
-* total[inoutnetwork][0].category = C4BBPayerAdjudicationStatus#innetwork
-* total[inoutnetwork][0].amount.value = 0.00
-* total[inoutnetwork][0].amount.currency = #USD
-//* adjudication[inoutnetwork].category = C4BBAdjudication#other
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1
@@ -232,7 +230,9 @@ Usage: #example
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#Dummy 
 * supportingInfo[discharge-status].sequence = 6 
-
+* supportingInfo[inoutnetwork].category = C4BBSupportingInfoType#inoutnetwork
+* supportingInfo[inoutnetwork].code = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[inoutnetwork].sequence = 7
 
 
 
@@ -279,9 +279,6 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-// * total[inoutnetwork][0].category = C4BBPayerAdjudicationStatus#innetwork
-// * total[inoutnetwork][0].amount.value = 0.00
-// * total[inoutnetwork][0].amount.currency = #USD
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1

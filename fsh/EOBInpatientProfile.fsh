@@ -31,14 +31,17 @@ Services."
 * provider only Reference(C4BBOrganization)
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
-   billingnetworkcontractingstatus 1..1 MS and
-    clmrecvddate 1..1 MS and
-    typeofbill 1..1 MS and 
-   pointoforigin 1..1 MS and 
-   admtype 1..1 MS and 
-   discharge-status 1..1 MS and 
-   drg 0..1 MS and
-   admissionperiod 1..1 MS  // EOBComparisonv13
+      billingnetworkcontractingstatus 1..1 MS and
+      admissionperiod 1..1 MS  and
+     inoutnetwork 1..1 MS and 
+     clmrecvddate 0..1 MS and
+     typeofbill 0..1 MS and 
+     pointoforigin 0..1 MS and 
+     admtype 0..1 MS and 
+     discharge-status 0..1 MS and 
+     drg 0..1 MS 
+ 
+   
 * supportingInfo[pointoforigin] ^short = "Identifies the place where the patient was identified as needing admission to an institution. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13)"
 * supportingInfo[admtype] ^short = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14)"
 * supportingInfo[typeofbill] ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of institution, the second digit classifies the type of care being billed, and the third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (17)"
@@ -46,6 +49,10 @@ Services."
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * supportingInfo[admissionperiod] ^short = "Admission Period"
 * supportingInfo[drg] ^short = "DRG codes assigned (33)"
+* supportingInfo[inoutnetwork] ^short = "Benefit Payment Status"
+* supportingInfo[inoutnetwork].category = C4BBSupportingInfoType#inoutnetwork
+* supportingInfo[inoutnetwork].code from C4BBPayerBenefitPaymentStatus (required) 
+* supportingInfo[inoutnetwork].code 1..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
@@ -109,7 +116,7 @@ Services."
 * insert TotalSlicing
 * total contains
    adjudicationamounttype 1..* MS and
-   inoutnetwork 1..1 MS 
+   inoutnetwork 0..1 MS 
 * total[inoutnetwork] ^short = "Benefit Payment Status"
 * total[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
