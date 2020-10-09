@@ -173,7 +173,7 @@ RuleSet: AdjudicationSlicing
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
-* adjudication ^slicing.discriminator.type = #value
+* adjudication ^slicing.discriminator.type = #pattern
 * adjudication.category 1..1 MS 
 
 RuleSet: SupportingInfoSlicing
@@ -189,7 +189,7 @@ RuleSet: TotalSlicing
 * total ^slicing.rules = #open
 * total ^slicing.ordered = false   // can be omitted, since false is the default
 * total ^slicing.description = "Slice based on value pattern"
-* total  ^slicing.discriminator.type = #value
+* total  ^slicing.discriminator.type = #pattern
 * total  ^slicing.discriminator.path = "category"
 * total.category 1..1 MS 
 
@@ -197,5 +197,5 @@ RuleSet: ItemAdjudicationSlicing
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on value pattern"
-* item.adjudication ^slicing.discriminator.type = #value 
+* item.adjudication ^slicing.discriminator.type = #pattern 
 * item.adjudication ^slicing.discriminator.path = "category"

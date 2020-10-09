@@ -20,12 +20,12 @@ The claims data is based on the institutional claim form UB-04, submission stand
 
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
-   billingnetworkcontractingstatus 0..1 MS and
-   clmrecvddate 0..1 MS and
-   typeofbill 0..1 MS and 
-   pointoforigin 0..1 MS and 
-   admtype 0..1 MS and 
-   discharge-status 0..1 MS 
+   billingnetworkcontractingstatus 1..1 MS and
+   clmrecvddate 1..1 MS and
+   typeofbill 1..1 MS and 
+   pointoforigin 1..1 MS and 
+   admtype 1..1 MS and 
+   discharge-status 1..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1
@@ -99,7 +99,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.revenue MS
 * item.productOrService MS
 * item.modifier MS
-* item.serviced[x] MS
+* item.serviced[x] only date 
+* item.servicedDate MS
 * item.quantity MS
 * payment.type MS
 * payment.date MS

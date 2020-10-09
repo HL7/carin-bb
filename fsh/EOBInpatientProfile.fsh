@@ -31,14 +31,14 @@ Services."
 * provider only Reference(C4BBOrganization)
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
-   billingnetworkcontractingstatus 0..1 MS and
-    clmrecvddate 0..1 MS and
-    typeofbill 0..1 MS and 
-   pointoforigin 0..1 MS and 
-   admtype 0..1 MS and 
-   discharge-status 0..1 MS and 
+   billingnetworkcontractingstatus 1..1 MS and
+    clmrecvddate 1..1 MS and
+    typeofbill 1..1 MS and 
+   pointoforigin 1..1 MS and 
+   admtype 1..1 MS and 
+   discharge-status 1..1 MS and 
    drg 0..1 MS and
-   admissionperiod 0..1 MS  // EOBComparisonv13
+   admissionperiod 1..1 MS  // EOBComparisonv13
 * supportingInfo[pointoforigin] ^short = "Identifies the place where the patient was identified as needing admission to an institution. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13)"
 * supportingInfo[admtype] ^short = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14)"
 * supportingInfo[typeofbill] ^short = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of institution, the second digit classifies the type of care being billed, and the third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (17)"

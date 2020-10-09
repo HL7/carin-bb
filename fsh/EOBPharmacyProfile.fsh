@@ -10,14 +10,14 @@ The claims data is based on submission standards adopted by the Department of He
 * careTeam obeys EOB-pharm-careTeam-organization
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
-   billingnetworkcontractingstatus 0..1 MS and
-   brandgenericcode 0..1 MS and
-   rxoriginCode 0..1 MS and
-   refillNum 0..1 MS and
-   dawcode 0..1 MS and
-   clmrecvddate 0..1 MS and
-   dayssupply 0..1 MS and
-   compoundcode 0..1 MS 
+   billingnetworkcontractingstatus 1..1 MS and
+   brandgenericcode 1..1 MS and
+   rxoriginCode 1..1 MS and
+   refillNum 1..1 MS and
+   dawcode 1..1 MS and
+   clmrecvddate 1..1 MS and
+   dayssupply 1..1 MS and
+   compoundcode 1..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus (required) 

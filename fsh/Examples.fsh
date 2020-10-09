@@ -134,6 +134,29 @@ Usage: #example
 * total[inoutnetwork][0].amount.value = 0.00
 * total[inoutnetwork][0].amount.currency = #USD
 //* adjudication[inoutnetwork].category = C4BBAdjudication#innetwork 
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
+* supportingInfo[billingnetworkcontractingstatus].sequence = 1
+* supportingInfo[admissionperiod].category = C4BBSupportingInfoType#admissionperiod  
+* supportingInfo[admissionperiod].timingPeriod.start = 2011-05-23
+* supportingInfo[admissionperiod].timingPeriod.end = 2011-05-25
+* supportingInfo[admissionperiod].sequence = 2
+* supportingInfo[clmrecvddate].category  = C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[clmrecvddate].timingDate = 2011-05-30
+* supportingInfo[clmrecvddate].sequence = 3
+* supportingInfo[typeofbill].category  = C4BBSupportingInfoType#typeofbill
+* supportingInfo[typeofbill].code = AHANUBCTypeOfBill#Dummy
+* supportingInfo[typeofbill].sequence = 4
+* supportingInfo[pointoforigin].category  = C4BBSupportingInfoType#pointoforigin
+* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisit#Dummy
+* supportingInfo[pointoforigin].sequence = 5
+* supportingInfo[admtype].category  = C4BBSupportingInfoType#admtype
+* supportingInfo[admtype].code = AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
+* supportingInfo[admtype].sequence = 6
+* supportingInfo[discharge-status].category  = C4BBSupportingInfoType#discharge-status
+* supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#11  
+* supportingInfo[discharge-status].sequence = 7
+
 
 
 Instance: EOBOutpatientInstitutional1
@@ -189,12 +212,34 @@ Usage: #example
 * adjudication[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
 * adjudication[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * adjudication[adjudicationamounttype][2].amount.value = 0.00
-* adjudication[adjudicationamounttype][2].amount.currency = #USD
+* total[adjudicationamounttype][2].amount.currency = #USD
 
 * total[inoutnetwork][0].category = C4BBPayerAdjudicationStatus#innetwork
 * total[inoutnetwork][0].amount.value = 0.00
 * total[inoutnetwork][0].amount.currency = #USD
 //* adjudication[inoutnetwork].category = C4BBAdjudication#other
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
+* supportingInfo[billingnetworkcontractingstatus].sequence = 1
+* supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[clmrecvddate].timingDate = 2011-05-30
+* supportingInfo[clmrecvddate].sequence = 2
+* supportingInfo[typeofbill].category = C4BBSupportingInfoType#typeofbill
+* supportingInfo[typeofbill].code = AHANUBCTypeOfBill#Dummy
+* supportingInfo[typeofbill].sequence = 3
+* supportingInfo[pointoforigin].category = C4BBSupportingInfoType#pointoforigin
+* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisit#Dummy 
+* supportingInfo[pointoforigin].sequence = 4 
+* supportingInfo[admtype].category = C4BBSupportingInfoType#admtype
+* supportingInfo[admtype].code = AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
+* supportingInfo[admtype].sequence = 5 
+* supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
+* supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#Dummy 
+* supportingInfo[discharge-status].sequence = 6 
+
+
+
+
 
 Instance: EOBProfessional1a
 InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician 
@@ -241,6 +286,19 @@ Usage: #example
 // * total[inoutnetwork][0].category = C4BBPayerAdjudicationStatus#innetwork
 // * total[inoutnetwork][0].amount.value = 0.00
 // * total[inoutnetwork][0].amount.currency = #USD
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
+* supportingInfo[billingnetworkcontractingstatus].sequence = 1
+* supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
+* supportingInfo[performingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
+* supportingInfo[performingnetworkcontractingstatus].sequence = 2
+* supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[clmrecvddate].timingDate = 2011-05-30
+* supportingInfo[clmrecvddate].sequence = 3
+* supportingInfo[servicefacility].category = C4BBSupportingInfoType#servicefacility
+* supportingInfo[servicefacility].sequence = 4
+* supportingInfo[servicefacility].valueReference = Reference(OrganizationProvider1)
+
 
 Instance: EOBPharmacy1
 InstanceOf: C4BBExplanationOfBenefitPharmacy
@@ -302,6 +360,30 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][4].category = $C4BBAdjudicationCS#paidtoprovider
 * item[0].adjudication[adjudicationamounttype][4].amount.value = 20.00
 * item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
+* supportingInfo[billingnetworkcontractingstatus].sequence = 1 
+* supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
+* supportingInfo[brandgenericcode].category = C4BBSupportingInfoType#brandgenericcode   
+* supportingInfo[brandgenericcode].sequence = 2
+* supportingInfo[brandgenericcode].code = NCPDPBrandGenericCode#2
+* supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode   
+* supportingInfo[rxoriginCode].code = NCPDPPrescriptionOriginCode#1
+* supportingInfo[rxoriginCode].sequence = 3
+* supportingInfo[refillNum].category = C4BBSupportingInfoType#refillnum
+* supportingInfo[refillNum].valueQuantity.value = 0.0
+* supportingInfo[refillNum].sequence = 4
+* supportingInfo[dawcode].category = C4BBSupportingInfoType#dawcode       
+* supportingInfo[dawcode].code = NCPDPDispensedAsWrittenOrProductSelectionCode#7
+* supportingInfo[dawcode].sequence = 5
+* supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[clmrecvddate].timingDate = 2011-05-30
+* supportingInfo[clmrecvddate].sequence = 6
+* supportingInfo[dayssupply].category = C4BBSupportingInfoType#dayssupply
+* supportingInfo[dayssupply].sequence = 7
+* supportingInfo[dayssupply].valueQuantity.value =  30.0
+* supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
+* supportingInfo[compoundcode].code = NCPDPCompoundCode#Dummy
+* supportingInfo[compoundcode].sequence = 8
 
 
 Instance: OrganizationPayer1
