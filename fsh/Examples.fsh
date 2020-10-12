@@ -156,9 +156,6 @@ Usage: #example
 * supportingInfo[discharge-status].category  = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#11  
 * supportingInfo[discharge-status].sequence = 7
-* supportingInfo[inoutnetwork].category = C4BBSupportingInfoType#inoutnetwork
-* supportingInfo[inoutnetwork].code = C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[inoutnetwork].sequence = 8
 
 
 Instance: EOBOutpatientInstitutional1
@@ -230,9 +227,6 @@ Usage: #example
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#Dummy 
 * supportingInfo[discharge-status].sequence = 6 
-* supportingInfo[inoutnetwork].category = C4BBSupportingInfoType#inoutnetwork
-* supportingInfo[inoutnetwork].code = C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[inoutnetwork].sequence = 7
 
 
 
