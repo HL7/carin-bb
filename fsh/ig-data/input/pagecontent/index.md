@@ -13,9 +13,16 @@
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
-<li>Interim Version 0.1.5 - October 9, 2020</li>
+<li>Interim Version 0.1.6 - October 12+, 2020</li>
 <ol>
 <li>Please post comments to the CarinBB zulip <a href="https://chat.fhir.org/#narrow/stream/204607-CARIN-IG.20for.20Blue.20Button.C2.AE"> stream</a>.</li>
+<li>Updates to MS and cardinality of various fields in EOB profiles and Patient profile.  Note that some supportingInfo slices now have cardinality 1..1. </li>
+<li>Removed: "The inoutnetwork slice of total is now incorporated into supportingInfo, where it is a better fit."  This was a misunderstanding.</li>
+<li>The graphic comparing EOB profiles has not yet been updated</li>
+<li>Correction to slicing of Patient.identifier that lead to weird rendering issue in IG Publisher</li>
+</ol>
+<li>Interim Version 0.1.5 - October 9, 2020</li>
+<ol>
 <li>Updates to MS and cardinality of various fields in EOB profiles and Patient profile.  Note that some supportingInfo slices now have cardinality 1..1. </li>
 <li>The inoutnetwork slice of total is now incorporated into supportingInfo, where it is a better fit.  This change may not be complete.</li>
 <li>The graphic comparing EOB profiles has not yet been updated to incorporate the changes between v0.1.4 and v0.1.5.</li>
