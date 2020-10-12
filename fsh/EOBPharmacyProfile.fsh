@@ -19,35 +19,27 @@ The claims data is based on submission standards adopted by the Department of He
    clmrecvddate 0..1 MS and
    compoundcode 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
-* supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus (required) 
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[brandgenericcode].category = C4BBSupportingInfoType#brandgenericcode   
-* supportingInfo[brandgenericcode] ^short = "Whether the plan adjudicated the claim as a brand or generic drug (144)"
 * supportingInfo[brandgenericcode].code from NCPDPBrandGenericCode (required)
 * supportingInfo[brandgenericcode].code 1..1 MS
 * supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode   
-* supportingInfo[rxoriginCode] ^short = "Whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy (143)"
 * supportingInfo[rxoriginCode].code from NCPDPPrescriptionOriginCode (required)
 * supportingInfo[rxoriginCode].code 1..1 MS 
 * supportingInfo[refillNum].category = C4BBSupportingInfoType#refillnum
-* supportingInfo[refillNum] ^short = "The number fill of the current dispensed supply (0, 1, 2, etc.) (137)"
 * supportingInfo[refillNum].value[x] 1..1 MS
 * supportingInfo[refillNum].value[x] only Quantity 
 * supportingInfo[dawcode].category = C4BBSupportingInfoType#dawcode       
-* supportingInfo[dawcode] ^short = "Dispense As Written product selection code" 
 * supportingInfo[dawcode].code from NCPDPDispensedAsWrittenOrProductSelectionCode (required)
 * supportingInfo[dawcode].code 1..1 MS 
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
-* supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88)"
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[dayssupply].category = C4BBSupportingInfoType#dayssupply
-* supportingInfo[dayssupply] ^short = "Number of days supply of medication dispensed by the pharmacy (77)"
 * supportingInfo[dayssupply].value[x] 1..1 MS
 * supportingInfo[dayssupply].value[x] only Quantity 
 * supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
-* supportingInfo[compoundcode] ^short = "NCPDP Compound code"
 * supportingInfo[compoundcode].code from NCPDPCompoundCode (required)
 * supportingInfo[compoundcode].code 1..1 MS
 * item.productOrService from FDANDCOrCompound (required)
@@ -61,59 +53,18 @@ The claims data is based on submission standards adopted by the Department of He
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS 
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
-* item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason 
 * item.adjudication[denialreason].reason from NCPDPRejectCode
 * item.adjudication[denialreason].reason 1..1 MS
-* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 * insert TotalSlicing
 * total.category 1..1 MS 
 * total contains
    adjudicationamounttype 0..* MS and 
    inoutnetwork 1..1 MS 
-* total[inoutnetwork] ^short = "Benefit Payment Status"
 * total[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
-* total[adjudicationamounttype] ^short = "Amounts"
-//* total[adjudicationamounttype].amount 1..1
-* patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
-* insurance.coverage ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
-* insurance ^short = "Code of the primary payer responsible for the claim (2)"
-* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).  (16)"
-/*
-* item.adjudication ^short = "Represents the Usual & Customary Charge Amount or the Average Wholesale Price (AWP) for the Quantity Dispensed plus the Dispensing Fee Paid. (20)"
-* item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. Allowed  mount should not include any COB adjustment. That is, the Allowed amount on a claim should be the same when the Plan is primary or secondary. (20)"
-* item.adjudication ^short = "The contracted reimbursable amount for covered medical services or supplies or amount reflecting local methodology for noncontracted providers. (20)"
-* item.adjudication ^short = "Amount to be collected from a patient that is included in the Patient Pay Amount that is due to a per prescription copay or coinsurance. (20)"
-* item.adjudication ^short = "Amount to be collected from a patient that is included in the Patient Pay Amount that is due to a per prescription copay or coinsurance. (20)"
-* item.adjudication ^short = "Non-Covered Amount represents the NCPDP financial response field Amount Exceeding Periodic Benefit Maximum. (20)"
-* item.adjudication ^short = "The reduction in the payment amount to reflect the carrier as a secondary payor. (20)"
-* item.adjudication ^short = "The amount sent to the payee from the health plan. This amount is to include withhold amounts (the portion of the claim that is deducted and withheld by the Plan from the provider's payment) and exclude any member cost sharing.  It should include the total of member and provider payments. (20)"
-* item.adjudication ^short = "Amount that is calculated by the processor and returned to the pharmacy as the total amount to be paid by the patient to the pharmacy; the patient’s total cost share, including copayments, amounts applied to deductible, over maximum amounts, penalties, etc (20)"
-* item.adjudication ^short = "The amount of the discount (20)"
-* item.adjudication ^short = "Price paid for the drug excluding mfr discounts.  It is the sum of the following components:ingredient cost, dispensing fee, sales tax, and vaccine administration fee (20)"
-* item.adjudication ^short = "The amount paid to the provider. (20)"
-* item.adjudication ^short = "The amount paid to the member. (20)"
-* item.adjudication ^short = "The amount of the member's liability. (20)"
-* item.adjudication ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
-* item.adjudication ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-*/
-* identifier ^short = "Assigned by the pharmacy at the time the prescription is filled (35)"
-* item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36)"
-* item.productOrService ^short = "National Drug Code (NDC) (38)"
-* item.quantity ^short = "Quantity dispensed for the drug (39)"
-* item.productOrService ^short = "The code indicating whether or not the prescription is a compound (78)"
-* item.quantity ^short = "The unit of measurement for the drug. (gram, ml, etc.) (151)"
-* payment.type ^short = "Indicates whether the claim was paid or denied. (91)"
-* provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94)"
-* careTeam.provider ^short = "The identifier assigned to the PCP Provider. (95)"
-* payment.date ^short = "The date the claim was paid. (107)"
-* payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber (120)"
-* payee.party ^short = "Recipient reference (121)"
-* careTeam.provider ^short = "The identifier from NCPDP field # 411-DB (Prescriber ID) that identifies the National Provider Identifier (NPI) of the provider who prescribed the pharmaceutical. (122)" 
-* insurance ^short = "Identifies the primary payer.  For use only on secondary claims.   (141)"
-* total.amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
+
 * patient MS
 * insurance.coverage MS
 * insurance MS
@@ -124,7 +75,6 @@ The claims data is based on submission standards adopted by the Department of He
 * item.productOrService MS
 * item.quantity MS
 * item.productOrService MS
-* item.serviced[x] ^short = "Identifies date the prescription was filled or professional service rendered (90)"   // listed as item.serviced in CPCDS spreadsheet
 * item.serviced[x] MS       // listed as item.serviced in CPCDS spreadsheet
 * payment.type MS
 * provider MS
@@ -141,3 +91,35 @@ The claims data is based on submission standards adopted by the Department of He
 * processNote.text MS
 
 
+* supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service. (101)"
+* supportingInfo[brandgenericcode] ^short = "Whether the plan adjudicated the claim as a brand or generic drug (144)"
+* supportingInfo[rxoriginCode] ^short = "Whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy (143)"
+* supportingInfo[refillNum] ^short = "The number fill of the current dispensed supply (0, 1, 2, etc.) (137)"
+* supportingInfo[dawcode] ^short = "Prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication (79)" 
+* supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88)"
+* supportingInfo[dayssupply] ^short = "Number of days supply of medication dispensed by the pharmacy (77)"
+* supportingInfo[compoundcode] ^short = "The code indicating whether or not the prescription is a compound.  NCPDP field # 406-D6 (78)"
+* item.adjudication[adjudicationamounttype] ^short = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
+* total[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
+* total[adjudicationamounttype] ^short = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+* patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
+* insurer ^short = "Code of the payer responsible for the claim. (2, 5)"
+* insurance ^short = "Identity of the payers responsible for the claim. (2, 141)"
+* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.) (16)"
+* identifier ^short = "Assigned by the pharmacy at the time the prescription is filled (35)"
+* item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36)"
+* item.productOrService ^short = "National Drug Code (NDC), or if the prescription is a compound, the value 'Compound' (38)"
+* item.quantity ^short = "Quantity dispensed for the drug (39) / The unit of measurement for the drug. (gram, ml, etc.) (151)"
+* payment.type ^short = "Indicates whether the claim was paid or denied. (91)"
+* provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94)"
+* careTeam.provider ^short = "The identifier assigned to the PCP (96) or the identifier from NCPDP field # 411-DB (Prescriber ID) that identifies the National Provider Identifier (NPI) of the provider who prescribed the pharmaceutical. (122)."
+* payment.date ^short = "The date the claim was paid. (107)"
+* payee.type ^short = "Identifies the type of recipient of the adjudication amount; i.e., provider, subscriber, beneficiary or another recipient. (120)"
+* payee.party ^short = "Recipient reference (121)"
+* status ^short = "Claim processing status code. (140)"
+* meta.lastUpdated ^short = "Defines the date the Resource was created or updated, whichever is later. (163)"
+* meta.profile ^short = "Profile this resource claims to conform to. (189)"
+* careTeam.role ^short = "The functional role of a provider on a claim. (165)"
+* total.amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
+* item.serviced[x] ^short = "Identifies date the prescription was filled or professional service rendered (90)"   // listed as item.serviced in CPCDS spreadsheet

@@ -13,7 +13,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
    billingnetworkcontractingstatus 1..1 MS and
-   performingnetworkcontractingstatus 1..1 MS and
+   performingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
    servicefacility 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
