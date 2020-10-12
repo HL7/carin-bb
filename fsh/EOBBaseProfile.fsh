@@ -132,6 +132,7 @@ Severity: #error
 // Rulesets
 RuleSet: AdjudicationSlicing
 * adjudication ^slicing.rules = #closed
+* adjudication ^slicing.discriminator.path = "category"
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
 * adjudication ^slicing.discriminator.type = #pattern
