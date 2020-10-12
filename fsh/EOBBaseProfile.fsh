@@ -6,6 +6,7 @@ Description: "Abstract parent profile that includes constraints that are common 
 All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
+* meta MS
 * ^abstract = true 
 * identifier 1..* 
 * identifier.type 1..1 MS
@@ -58,50 +59,10 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * processNote ^short = "Line member payment denial explanation"
 * priority from http://hl7.org/fhir/ValueSet/process-priority  // Fix a bug in R4 EOB which points to a CodeSystem.   Eliminates an error on output
 * total 1..* MS 
-/*
-* identifier ^short = ""
-* identifier.type ^ short = ""
-* type ^short = ""
-* use ^short = ""
-* patient ^short = ""
-* adjudication ^short = ""
-* provider ^short = ""
-* patient ^short = ""
-* billablePeriod ^short = ""
-* billablePeriod.start ^short = ""
-* billablePeriod.end ^short = ""
-* insurer ^short = ""
-* related ^short = ""
-* related.relationship ^short = ""
-* related ^short = ""
-* payee ^short = ""
-* payee.type ^short = ""
-* payee.party ^short = ""
-* careTeam ^short = ""
-* careTeam.provider ^short = ""
-* careTeam.responsible ^short = ""
-* careTeam.role ^short = ""
-* careTeam.qualification ^short = ""
-* procedure ^short = ""
-* procedure.type ^short = ""
-* procedure.date ^short = ""
-* insurance ^short = ""
-* insurance.coverage ^short = ""
-* insurance.focal ^short = ""
-* insurance.coverage ^short = ""
-* adjudication.category ^short = ""
-* item ^short = ""
-* item.adjudication ^short = ""
-* item.adjudication.category ^short = ""
-* item.noteNumber ^short = "References number of the associated processNote"
-* total.category ^short = ""
-* total ^short = ""
-* payment ^short = ""
-* payment.type ^short = ""
-* processNote ^short = ""
-*/
 
 
+* meta.lastUpdated ^short = "Defines the date the Resource was created or updated, whichever is later. (163)"
+* meta.profile ^short = "Profile this resource claims to conform to. (189)"
 
 
 
