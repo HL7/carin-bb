@@ -51,3 +51,4 @@ Description: "Data that reflect a payer's coverage that was effective as of the 
 * class[plan].value ^short = "Business concept used by a health plan to describe its benefit offerings (154)"
 * class[plan].name ^short = "Name of the health plan benefit offering assigned to the Plan Identfier (155)"
 * meta.lastUpdated ^short = "Defines the date the coverage that was effective as of the date of service or admission was created or updated, whichever is later (163)"
+
