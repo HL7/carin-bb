@@ -23,7 +23,4 @@ This IG includes value set bindings to code systems that are industry standard c
 <li><a href="http://hl7.org/fhir/sid/ndc.html">NDC (National Drug Codes)</a>: The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code..</li>
 <li><a href="http://www.wpc-edi.com/reference/codelists/healthcare/remittance-advice-remark-codes">RARCCodes</a>: The RARC codes are owned by CMS.</li>
 </ul>
-<h3>Value Sets defined as part of this Implementation Guide.</h3>
-See <a href="artifacts.html#5">ValueSets</a>.
-<h3>Code Systems defined as part of this Implementation Guide.</h3>
-See <a href="artifacts.html#6">CodeSystems</a>.</div>
+</div>

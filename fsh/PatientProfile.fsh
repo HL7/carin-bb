@@ -55,4 +55,4 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * address.district ^short = "The county for the member's primary address (125)" 
 * address.state ^short = "The state for the member's primary address (126)" 
 * address.postalCode ^short = "This represents the member's 5 digit zip code (131)" 
-* address.country ^short = "The country for the member's primary address (127)
+* address.country ^short = "The country for the member's primary address (127)"
