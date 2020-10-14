@@ -103,7 +103,7 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 * total[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * total[adjudicationamounttype] ^short = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
-* patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
+* patient ^short = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
 * insurer ^short = "Code of the payer responsible for the claim. (2, 5)"
 * insurance ^short = "Identity of the payers responsible for the claim. (2, 141)"
 * type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.) (16)"

@@ -88,7 +88,6 @@ Services."
 // * adjudication ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType').value"
 //* adjudication[denialreason].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#denialreason
 //* adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#adjudicationamounttype
-* adjudication ^slicing.discriminator.path = "category"
 * adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * adjudication[denialreason].reason MS
@@ -160,7 +159,7 @@ Services."
 * adjudication[adjudicationamounttype] ^short = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * total[adjudicationamounttype] ^short = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
-* patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
+* patient ^short = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
 * insurer ^short = "Code of the payer responsible for the claim. (2, 5)"
 * insurance ^short = "Identity of the payers responsible for the claim. (2, 141)"
 * type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.) (16)"
