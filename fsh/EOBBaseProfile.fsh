@@ -6,8 +6,9 @@ Description: "Abstract parent profile that includes constraints that are common 
 All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
+* meta MS
 * ^abstract = true 
-* identifier 1..* 
+* identifier 1..* MS 
 * identifier.type 1..1 MS
 * identifier.type from C4BBClaimIdentifierType (extensible)
 * type 1..1 MS
@@ -35,6 +36,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * careTeam.provider 1..1 MS
 * careTeam.provider only Reference(C4BBOrganization or C4BBPractitioner)
 * careTeam.responsible 0..1 MS 
+* careTeam.role MS 
 * supportingInfo 0..* MS
 * supportingInfo.category from C4BBSupportingInfoType (extensible)
 //* supportingInfo.category 1..1 MS
@@ -50,58 +52,37 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * item.adjudication.category 1..1 MS
 //* item.adjudication.category from C4BBAdjudicationDiscriminator (required)  // Per Igor
 * item.noteNumber MS
-* item.noteNumber ^short = "References number of the associated processNote"
+* item.sequence MS 
 //* total.category from C4BBAdjudicationDiscriminator (required)
 * payment MS 
 * payment.type from C4BBPayerClaimPaymentStatusCode (required)
+* payment.type MS 
 * processNote MS
-* processNote ^short = "Line member payment denial explanation"
 * priority from http://hl7.org/fhir/ValueSet/process-priority  // Fix a bug in R4 EOB which points to a CodeSystem.   Eliminates an error on output
 * total 1..* MS 
-/*
-* identifier ^short = ""
-* identifier.type ^ short = ""
-* type ^short = ""
-* use ^short = ""
-* patient ^short = ""
-* adjudication ^short = ""
-* provider ^short = ""
-* patient ^short = ""
-* billablePeriod ^short = ""
-* billablePeriod.start ^short = ""
-* billablePeriod.end ^short = ""
-* insurer ^short = ""
-* related ^short = ""
-* related.relationship ^short = ""
-* related ^short = ""
-* payee ^short = ""
-* payee.type ^short = ""
-* payee.party ^short = ""
-* careTeam ^short = ""
-* careTeam.provider ^short = ""
-* careTeam.responsible ^short = ""
-* careTeam.role ^short = ""
-* careTeam.qualification ^short = ""
-* procedure ^short = ""
-* procedure.type ^short = ""
-* procedure.date ^short = ""
-* insurance ^short = ""
-* insurance.coverage ^short = ""
-* insurance.focal ^short = ""
-* insurance.coverage ^short = ""
-* adjudication.category ^short = ""
-* item ^short = ""
-* item.adjudication ^short = ""
-* item.adjudication.category ^short = ""
-* item.noteNumber ^short = "References number of the associated processNote"
-* total.category ^short = ""
-* total ^short = ""
-* payment ^short = ""
-* payment.type ^short = ""
-* processNote ^short = ""
-*/
 
-
+* meta.lastUpdated ^short = "Defines the date the Resource was created or updated, whichever is later. (163)"
+* meta.profile ^short = "Profile this resource claims to conform to. (189)"
+* identifier ^short = "Identifier assigned by a payer for a claim received from a provider or subscriber. It is not the same identifier as that assigned by a provider. This identifier assigned by the payer becomes the payer's EOB identifier. (35)"
+* identifier.type ^short = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber. (183)"
+* type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.) (16)"
+* patient ^short = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
+* billablePeriod.start ^short = "The first day on the billing statement covering services rendered to the beneficiary (i.e. 'Statement Covers From Date’). (177)"
+* billablePeriod.end ^short = "The last day on the billing statement covering services rendered to the beneficiary (i.e. 'Statement Covers Thru Date’). (178)"
+* insurer ^short = "Code of the payer responsible for the claim. (2, 5)"
+* provider ^short = "The identifier assigned to the Billing Provider. (94)"
+* related ^short = "If the current claim represents a claim that has been adjusted and was given a prior claim number, this field represents the prior claim number. If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number.(111, 112) "
+* payee.type ^short = "Identifies the type of recipient of the adjudication amount; i.e., provider, subscriber, beneficiary or another recipient. (120)"
+* payee.party ^short = "Recipient reference. (121)"
+* supportingInfo ^short = "Defines data elements not available in the base EOB resource"
+* insurance ^short = "Identity of the payers responsible for the claim. (2, 141)"
+* careTeam.provider ^short = "The identifier assigned to the care team. (varies depending on the profile)"
+* careTeam.role ^short = "The functional role of a provider on a claim. (165)"
+* item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36)"
+* processNote.text ^short = "Payment denial explanation to a member, typically goes on the EOB when the payment is denied or disallowed (181)"
+* payment.type ^short = "Indicates whether the claim was paid or denied. (91)"
+* status ^short = "Claim processing status code. (140)"
+* payment.date ^short = "The date the claim was paid. (107)"
 
 
 
@@ -171,6 +152,7 @@ Severity: #error
 // Rulesets
 RuleSet: AdjudicationSlicing
 * adjudication ^slicing.rules = #closed
+* adjudication ^slicing.discriminator.path = "category"
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
 * adjudication ^slicing.discriminator.type = #pattern

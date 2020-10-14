@@ -13,7 +13,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
    billingnetworkcontractingstatus 1..1 MS and
-   performingnetworkcontractingstatus 1..1 MS and
+   performingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
    servicefacility 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
@@ -64,7 +64,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 * total[adjudicationamounttype] ^short = "Amounts"
 //* total[adjudicationamounttype].amount 1..1
-* patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
+* patient ^short = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
 * insurance.coverage ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
 * insurance ^short = "Code of the primary payer responsible for the claim (2)"
 * type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).  (16)"

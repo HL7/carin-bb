@@ -30,4 +30,9 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 // * identifier[naiccode].type 
 * identifier[naiccode] ^patternIdentifier.system = $NAICCodeCS
 * identifier[naiccode] ^patternIdentifier.type  = C4BBIdentifierType#naiccode  
-
+* identifier[tax] ^short = "Tax ID Number"
+* identifier[payerid] ^short = "Code of the payer responsible for the claim (2)"
+* identifier[naiccode] ^short = "NAIC Code of the payer responsible for the claim (2)"
+* identifier[NPI] ^short = "The National Provider Identifier assigned to the Billing Provider, Care Team members and the Service Facility (93, 94, 95, 97, 99, 100, 122, 173)"
+* meta.lastUpdated ^short = "Defines the date the Resource was created or updated, whichever is later. (163)"
+* meta.profile ^short = "Profile this resource claims to conform to. (189)"
