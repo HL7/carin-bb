@@ -24,7 +24,6 @@
 <li>How a consumer can submit complaints to the Office of Civil Rights (OCR) or the Federal Trade Commission (FTC);</li>
 <li>CMS cites the CARIN Alliance Code of Conduct and the ONC Model Privacy Notice as best practices to meet these needs.</li>
 </ul>
-</li>
 <li>Payers may not limit access to information for a patient through an application that fails to voluntarily attest to specific statements or if an enrollee chooses to disregard warnings about data use.</li>
 </ul>
 <p>The&nbsp;effective&nbsp;date&nbsp;of the CMS rule&nbsp;is January 1, 2021. Patient education is out of scope for this Implementation Guide.</p>
