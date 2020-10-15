@@ -1,0 +1,108 @@
+{
+  "resourceType": "Coverage",
+  "id": "88897664101-20170101-GI8",
+  "meta": {
+    "lastUpdated": "2020-10-14T18:54:46.3639894-04:00",
+    "source": "Organization/1",
+    "profile": [
+      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"
+    ]
+  },
+  "language": "en-US",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MB",
+            "display": "Member Number"
+          }
+        ],
+        "text": "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
+      },
+      "system": "https://www.upmchealthplan.com/fhir/memberidentifier",
+      "value": "88897664101",
+      "assigner": {
+        "reference": "Organization/1",
+        "display": "UPMC Health Plan"
+      }
+    }
+  ],
+  "status": "active",
+  "policyHolder": {
+    "reference": "Patient/88897664101"
+  },
+  "subscriber": {
+    "reference": "Patient/88897664101"
+  },
+  "subscriberId": "888976641",
+  "beneficiary": {
+    "reference": "Patient/88897664101"
+  },
+  "dependent": "01",
+  "relationship": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+        "code": "self"
+      }
+    ],
+    "text": "Self"
+  },
+  "period": {
+    "start": "2017-01-01T00:00:00-05:00",
+    "end": "2017-06-30T00:00:00-04:00"
+  },
+  "payor": [
+    {
+      "reference": "Organization/1",
+      "display": "UPMC Health Plan"
+    }
+  ],
+  "class": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+            "code": "group",
+            "display": "Group"
+          }
+        ],
+        "text": "An employee group"
+      },
+      "value": "MCHMO1",
+      "name": "MEDICARE HMO PLAN"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+            "code": "subgroup",
+            "display": "SubGroup"
+          }
+        ],
+        "text": "A sub-group of an employee group"
+      },
+      "value": "519",
+      "name": "HMO DEDUCTIBLE WITH RX STANDAR"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+            "code": "plan",
+            "display": "Plan"
+          }
+        ],
+        "text": "A specific suite of benefits."
+      },
+      "value": "GI8",
+      "name": "GI8-HMO DEDUCTIBLE"
+    }
+  ],
+  "network": "GI8-HMO DEDUCTIBLE"
+}

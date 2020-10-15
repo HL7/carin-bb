@@ -82,7 +82,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * payment.type ^short = "Indicates whether the claim was paid or denied. (91)"
 * status ^short = "Claim processing status code. (140)"
 * payment.date ^short = "The date the claim was paid. (107)"
-
+* created ^short = "Date the claim was adjudicated. (179)"
 
 
 Invariant:  EOB-insurance-focal  

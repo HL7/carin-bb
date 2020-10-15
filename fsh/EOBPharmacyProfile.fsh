@@ -123,3 +123,4 @@ The claims data is based on submission standards adopted by the Department of He
 * careTeam.role ^short = "The functional role of a provider on a claim. (165)"
 * total.amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
 * item.serviced[x] ^short = "Identifies date the prescription was filled or professional service rendered (90)"   // listed as item.serviced in CPCDS spreadsheet
+* created ^short = "Date the claim was adjudicated. (179)"

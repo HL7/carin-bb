@@ -125,3 +125,4 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
 * supportingInfo[performingnetworkcontractingstatus] ^short = "Indicates that the Performing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
 * supportingInfo[servicefacility] ^short = "Service Facility"
+* created ^short = "Date the claim was adjudicated. (179)"
