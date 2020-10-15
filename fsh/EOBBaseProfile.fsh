@@ -35,7 +35,6 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * careTeam 0..* MS 
 * careTeam.provider 1..1 MS
 * careTeam.provider only Reference(C4BBOrganization or C4BBPractitioner)
-* careTeam.responsible 0..1 MS 
 * careTeam.role MS 
 * supportingInfo 0..* MS
 * supportingInfo.category from C4BBSupportingInfoType (extensible)
