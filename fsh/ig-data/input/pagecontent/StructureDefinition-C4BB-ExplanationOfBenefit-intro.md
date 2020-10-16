@@ -12,9 +12,12 @@
 <p class="x_MsoNormal">There are two paths to get to the Patient Resource and the data elements represented inside the Patient Resource:&nbsp;&nbsp;EOB.patient(Patient) and EOB.insurance.coverage(Coverage).beneficiary(Patient)</p>
 <h4 class="x_MsoNormal">Notes on Fields</h4>
 <ul>
+<li class="x_MsoNormal">.status:&nbsp; value = active | cancelled</li>
 <li class="x_MsoNormal">.type&nbsp; Defines the Claims profiles</li>
+<li class="x_MsoNormal">.use:&nbsp; value = claim&nbsp;</li>
 <li class="x_MsoNormal">.patient&nbsp; Additional required path:EOB.insurance.coverage(Coverage).beneficiary(Patient).identifier</li>
 <li class="x_MsoNormal">.insurer&nbsp; Same as insurance.coverage.organization.&nbsp; Party responsible for reimbursing the provider</li>
+<li class="x_MsoNormal">.outcome:&nbsp; value = complete</li>
 <li class="x_MsoNormal">.supportinginfo.sequence rule:&nbsp; client app implementations should look-up supportingInfo elements based on category values instead of sequence values</li>
 <li class="x_MsoNormal">.careTeam.sequence rule:&nbsp; careTeam.sequence values uniquely identify careTeam members.&nbsp; They do not necessarily indiate any order in which the patient was seen by the careTeam or identify any level of significance of the careTeam to the patient, etc.&nbsp; Client app implementations should not assign any significance to the sequence values.&nbsp;&nbsp;&nbsp;</li>
 <li class="x_MsoNormal">.insurance:&nbsp;&nbsp;Define an invariant:&nbsp; Will have multiple occurrences on secondary / tertiary, etc. claims.&nbsp; Up to one occurrence, that of the ExplanationOfBenefit.insurer, will have a boolean value = 'True'.&nbsp;</li>
