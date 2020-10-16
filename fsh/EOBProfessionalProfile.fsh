@@ -62,67 +62,44 @@ The claims data is based on the professional claim form 1500, submission standar
 * total contains
    adjudicationamounttype 0..* MS 
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
-* total[adjudicationamounttype] ^short = "Amounts"
-//* total[adjudicationamounttype].amount 1..1
-* patient ^short = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
-* insurance.coverage ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
-* insurance ^short = "Code of the primary payer responsible for the claim (2)"
+
+* supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88)"
+* supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* supportingInfo[performingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
+* supportingInfo[servicefacility] ^short = " Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Performing Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.  
+If the service facility is not assigned an NPI, this data element will not be populated.  Reference CMS 1500 element 32a (97, 170, 176)"
+* item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
+* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+* item.adjudication[adjudicationamounttype] ^short = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+* item.adjudication[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
+* total[adjudicationamounttype] ^short = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+* patient ^short = "Unique identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1)"
+* insurer ^short = "Code of the payer responsible for the claim. (2, 5)"
+* insurance ^short = "Identity of the payers responsible for the claim. (2, 141)"
 * type ^short = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.).  (16)"
-* diagnosis ^short = "The member's principal condition treated on the claim (837P Data Element HI01 or CMS 1500 Item 21A). Decimals will be included.  (22)"
-* diagnosis.diagnosis[x] ^short = "A plain text representation of the diagnosis (145)"
-* identifier ^short = "Claim identifier for a claim. (35)"
+* diagnosis ^short = "Diagnosis codes describe an individual's disease or medical condition. (22, 23)"
+* diagnosis.type ^short =  "Indicates if the professional and non-clinician diagnosis is principal or secondary (189)"
+* identifier ^short = "Identifier assigned by a payer for a claim received from a provider or subscriber. It is not the same identifier as that assigned by a provider. This identifier assigned by the payer becomes the payer's EOB identifier. (35)"
 * item.sequence ^short = "Line identification number that represents the number assigned in a source system for identification and processing. (36)"
 * item.productOrService ^short = "Medical procedure a patient received from a health care provider. Current coding methods include: CPT-4 and HCFA Common Procedure Coding System Level II - (HCPCSII). (40)"
 * item.modifier ^short = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41)"
-* item.quantity ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (42)"
+* item.quantity ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (42)"
 * item.location[x] ^short = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46)"
-* provider ^short = "This field identifies the specialty of the physician or duly licensed professional practitioner for the claim. For physicians, this usually represents his/her board registered specialty.  (47)"
 * payment.type ^short = "Indicates whether the claim was paid or denied. (91)"
 * provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94)"
-* careTeam.provider ^short = "The National Provider Identifier assigned to the Rendering Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided). (95)"
-* careTeam.provider ^short = "The identifier assigned to the PCP Provider. (96)"
-* facility ^short = "The NPI of the facility where the services were rendered. (97)"
-* careTeam.provider ^short = "The NPI of the referring physician. (99)"
+* careTeam.provider ^short = "he National Provider Identifier assigned to the care team. (95, 96, 99)"
 * payment.date ^short = "The date the claim was paid. (107)"
+* related ^short = "If the current claim represents a claim that has been adjusted and was given a prior claim number, this field represents the prior claim number. If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number.(111, 112) "
 * item.serviced[x]  ^short = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
 * payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber  (120)"
 * payee.party ^short = "Recipient reference (121)"
-* insurance ^short = "Identifies the primary payer.  For use only on secondary claims.   (141)"
-* item.productOrService ^short = "A plain text representation of the CPT / HCPCS procedure (147)"
-* total.amount ^short = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
-* patient MS
-* insurance.coverage MS
-* insurance MS
-* type MS
-* identifier MS
-* item.sequence MS
-* item.productOrService MS
-* item.modifier MS
-* item.quantity MS
-* item.location[x] MS
-* provider MS
-* payment.type MS
-* item.adjudication MS
-* provider MS
-* careTeam.provider MS
-* careTeam.provider MS
-* facility MS
-* careTeam.provider MS
-* payment.date MS
-* patient MS
-* related MS
-* item.serviced[x] only date
-* item.servicedDate MS
-* payee.type MS
-* payee.party MS
-* status MS
-* insurance MS
-* diagnosis.diagnosis[x] MS
-* item.productOrService MS
-* total.amount MS
-
-* supportingInfo[clmrecvddate] ^short = "The date the claim was received by the payer (88)"
-* supportingInfo[billingnetworkcontractingstatus] ^short = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
-* supportingInfo[performingnetworkcontractingstatus] ^short = "Indicates that the Performing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service or admission. (101)"
-* supportingInfo[servicefacility] ^short = "Service Facility"
+* status ^short = "Claim processing status code. (140)"
+* meta.lastUpdated ^short = "Defines the date the Resource was created or updated, whichever is later. (163)"
+* meta.profile ^short = "Profile this resource claims to conform to. (189)"
+* careTeam.role ^short = "The functional role of a provider on a claim. (165)"
+* processNote.text ^short = "Line payment denial explanation to a member, typically goes on the EOB when the payment is denied or disallowed (181)"
+* billablePeriod.start ^short = "The first day on the billing statement covering services rendered to the beneficiary (i.e. 'Statement Covers From Dateí). (177)"
+* billablePeriod.end ^short = "The last day on the billing statement covering services rendered to the beneficiary (i.e. 'Statement Covers Thru Dateí). (178)"
+* identifier.type ^short = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber. (183)"
+* total.amount ^short = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 * created ^short = "Date the claim was adjudicated. (179)"

@@ -2,7 +2,7 @@ Profile: C4BBCoverage
 Parent: Coverage
 Id: C4BB-Coverage
 Title: "C4BB Coverage"
-Description: "Data that reflect a payer's coverage that was effective as of the date of service  or the date of admission of the claim will be added to the Coverage Profile overview."
+Description: "Data that reflect a payer’s coverage that was effective as of the date of service or the date of admission of the claim."
 //* ^jurisdiction.valueCodeableConcept = "US#urn:iso:std:iso:3166"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
