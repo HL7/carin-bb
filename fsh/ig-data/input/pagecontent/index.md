@@ -16,6 +16,9 @@
 <li>Interim Version 0.1.7 - October 15, 2020+</li>
 <ol>
 <li>Please post comments to the CarinBB zulip <a href="https://chat.fhir.org/#narrow/stream/204607-CARIN-IG.20for.20Blue.20Button.C2.AE"> stream</a>.</li>
+<li>Updated examples with pseudo-FSH annotations.  Added easier to read examples page.</li>
+<li>Added implementation notes for all profiles</li>
+<li>Added invariant on Practitioner requiring NPI or Tax ID</li>
 </ol>
 <li>Interim Version 0.1.6 - October 14, 2020</li>
 <ol>

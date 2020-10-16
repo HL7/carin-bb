@@ -1,9 +1,9 @@
 {
   "resourceType": "Patient",
-  "id": "88897664101",
+  "id": "PatientEx1",
   "meta": {
     "lastUpdated": "2020-10-14T18:54:46.5218484-04:00",
-    "source": "Organization/1",
+    "source": "Organization/PayerOrgEx1",
     "profile": [
       "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"
     ]
@@ -24,7 +24,7 @@
       "system": "https://www.upmchealthplan.com/fhir/memberidentifier",
       "value": "88897664101",
       "assigner": {
-        "reference": "Organization/1",
+        "reference": "Organization/PayerOrgEx1",
         "display": "UPMC Health Plan"
       }
     },
@@ -42,7 +42,7 @@
       "system": "https://www.upmchealthplan.com/fhir/memberidentifier",
       "value": "88855447701",
       "assigner": {
-        "reference": "Organization/1",
+        "reference": "Organization/PayerOrgEx1",
         "display": "UPMC Health Plan"
       }
     }
@@ -146,7 +146,7 @@
     }
   ],
   "managingOrganization": {
-    "reference": "Organization/1",
+    "reference": "Organization/PayerOrgEx1",
     "display": "UPMC Health Plan"
   }
 }

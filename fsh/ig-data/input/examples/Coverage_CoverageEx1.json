@@ -1,9 +1,9 @@
 {
   "resourceType": "Coverage",
-  "id": "88897664101-20200101-GR5",
+  "id": "CoverageEx1",
   "meta": {
-    "lastUpdated": "2020-10-14T18:54:46.3629901-04:00",
-    "source": "Organization/1",
+    "lastUpdated": "2020-10-14T18:54:46.3639894-04:00",
+    "source": "Organization/PayerOrgEx1",
     "profile": [
       "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"
     ]
@@ -24,21 +24,21 @@
       "system": "https://www.upmchealthplan.com/fhir/memberidentifier",
       "value": "88897664101",
       "assigner": {
-        "reference": "Organization/1",
+        "reference": "Organization/PayerOrgEx1",
         "display": "UPMC Health Plan"
       }
     }
   ],
   "status": "active",
   "policyHolder": {
-    "reference": "Patient/88897664101"
+    "reference": "Patient/PatientEx1"
   },
   "subscriber": {
-    "reference": "Patient/88897664101"
+    "reference": "Patient/PatientEx1"
   },
   "subscriberId": "888976641",
   "beneficiary": {
-    "reference": "Patient/88897664101"
+    "reference": "Patient/PatientEx1"
   },
   "dependent": "01",
   "relationship": {
@@ -51,11 +51,12 @@
     "text": "Self"
   },
   "period": {
-    "start": "2020-01-01T00:00:00-05:00"
+    "start": "2017-01-01T00:00:00-05:00",
+    "end": "2017-06-30T00:00:00-04:00"
   },
   "payor": [
     {
-      "reference": "Organization/1",
+      "reference": "Organization/PayerOrgEx1",
       "display": "UPMC Health Plan"
     }
   ],
@@ -85,8 +86,8 @@
         ],
         "text": "A sub-group of an employee group"
       },
-      "value": "570",
-      "name": "STANDARD-VBID"
+      "value": "519",
+      "name": "HMO DEDUCTIBLE WITH RX STANDAR"
     },
     {
       "type": {
@@ -99,9 +100,9 @@
         ],
         "text": "A specific suite of benefits."
       },
-      "value": "GR5",
-      "name": "GR5-HMO DEDUCTIBLE"
+      "value": "GI8",
+      "name": "GI8-HMO DEDUCTIBLE"
     }
   ],
-  "network": "GR5-HMO DEDUCTIBLE"
+  "network": "GI8-HMO DEDUCTIBLE"
 }

@@ -1,9 +1,9 @@
 {
   "resourceType": "ExplanationOfBenefit",
-  "id": "88897664101-HNXXXZZZWWW546879",
+  "id": "EOBOutpatientInstitutionalEx1",
   "meta": {
     "lastUpdated": "2020-10-13T11:10:24-04:00",
-    "source": "Organization/1",
+    "source": "Organization/PayerOrgEx1",
     "profile": [
       "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional"
     ]
@@ -21,7 +21,7 @@
         "text": "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
       },
       "system": "https://www.upmchealthplan.com/fhir/EOBIdentifier",
-      "value": "88897664101-HNXXXZZZWWW546879"
+      "value": "QQQWWWZZZXXX7890"
     }
   ],
   "status": "active",
@@ -36,7 +36,7 @@
   },
   "use": "claim",
   "patient": {
-    "reference": "Patient/88897664101"
+    "reference": "Patient/PatientEx1"
   },
   "billablePeriod": {
     "start": "2020-09-29T00:00:00-04:00",
@@ -44,11 +44,11 @@
   },
   "created": "2020-10-10T00:00:00-04:00",
   "insurer": {
-    "reference": "Organization/1",
+    "reference": "Organization/PayerOrgEx1",
     "display": "UPMC Health Plan"
   },
   "provider": {
-    "reference": "Organization/PD-VWWUUYY7654"
+    "reference": "Organization/ProviderOrganizationEx2"
   },
   "payee": {
     "type": {
@@ -62,7 +62,7 @@
       "text": "Any benefit payable will be paid to the provider (Assignment of Benefit)."
     },
     "party": {
-      "reference": "Organization/PAT-V-HNXXXZZZWWW546879-000555888X"
+      "reference": "Organization/ProviderOrganizationEx1"
     }
   },
   "outcome": "complete",
@@ -70,7 +70,7 @@
     {
       "sequence": 1,
       "provider": {
-        "reference": "Practitioner/P-5554447878"
+        "reference": "Practitioner/PractitionerEx3"
       },
       "role": {
         "coding": [
@@ -86,7 +86,7 @@
     {
       "sequence": 2,
       "provider": {
-        "reference": "Practitioner/P-741852963"
+        "reference": "Practitioner/PractitionerEx2"
       },
       "role": {
         "coding": [
@@ -237,7 +237,7 @@
     {
       "focal": true,
       "coverage": {
-        "reference": "Coverage/88897664101-20200101-GR5"
+        "reference": "Coverage/CoverageEx2"
       }
     }
   ],
