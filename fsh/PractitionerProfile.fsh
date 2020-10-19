@@ -24,6 +24,5 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 
 Invariant:  Practitioner-identifier  
 Description: "Practitioner.identifier must include an NPI or a Tax ID"
-Expression: "(identifier.where(type.where(coding.where(code ='npi').exists()).exists()).exists()) |
-             (identifier.where(type.where(coding.where(code ='TAX').exists()).exists()).exists())"
+Expression: "identifier.where(type.where(coding.where(code in ('npi' | 'TAX')).exists()).exists()).exists()"
 Severity:   #error
