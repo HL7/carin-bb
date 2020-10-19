@@ -1,6 +1,44 @@
 <div>The Common Payer Consumer Data Set (CPCDS) is a logical data set (similar to ONC 2015 Edition Common Clinical Data Set) that meets CMS Blue Button 2.0 API content The CPCDS data elements can be stored and queried as profiled FHIR resources. They define key payer financial health data that <strong>SHALL</strong> be accessible and available to through standards-based APIs. Data <strong>SHALL</strong> conform to specified profiles, vocabulary standards and code sets. Download your local copy of the CPCDS Data Dictionary <a href="CPCDS Data Dictionary and Resource Mapping Tables 0903 2020.docx" download="CPCDS Data Dictionary and Resource Mapping Tables 0903 2020.docx"> here </a>.
 <h3>Mapping from CPCDS to FHIR Resources</h3>
 Based on CPCDS, the mappings define the minimum mandatory elements, extensions and terminology requirements that must be present in the FHIR resource. Additional business rules are also specified.
+<div>
+<table style="border-color: black;" border="2" cellspacing="0" cellpadding="1">
+<tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td><strong>Format</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr>
+<td>Profile comparison overview</td>
+<td>&nbsp;<a href="&quot;CARIN\%20for\ Blue\ Button\ Resource\ Overview\ 0820\ 2020\ -\ FHIR-25704.pptx&quot;">ppt</a></td>
+<td>High level profile comparison showing header vs item data elements and value sets requiring licenses.</td>
+</tr>
+<tr>
+<td>&nbsp;Detailed Profile comparison</td>
+<td><a title="http://build.fhir.org/ig/HL7/carin-bb/branches/v0.1.7/EOBProfileComparison20201006.xlsx" href="http://build.fhir.org/ig/HL7/carin-bb/branches/v0.1.7/EOBProfileComparison20201006.xlsx" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable">xls</a></td>
+<td>A detailed comparison of the profiles defined in this IG with their base resource or profile is shown in the figures on this page.</td>
+</tr>
+<tr>
+<td>CPCDS Data Dictionary</td>
+<td><a title="https://build.fhir.org/ig/HL7/carin-bb/branches/v0.1.6/CPCDS%20Data%20Dictionary%20and%20Resource%20Mapping%20Tables%200903%202020.docx" href="https://build.fhir.org/ig/HL7/carin-bb/branches/v0.1.6/CPCDS%20Data%20Dictionary%20and%20Resource%20Mapping%20Tables%200903%202020.docx" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable">doc</a></td>
+<td>Defines key health data that should be accessible and available for exchange.</td>
+</tr>
+<tr>
+<td>CPCDS to FHIR Profiles Mapping</td>
+<td><a title="https://build.fhir.org/ig/HL7/carin-bb/branches/v0.1.6/CARIN%20Mapping%20to%20FHIR%20interim%202020%200818%20v2.xlsx" href="https://build.fhir.org/ig/HL7/carin-bb/branches/v0.1.6/CARIN%20Mapping%20to%20FHIR%20interim%202020%200818%20v2.xlsx" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable">xls</a></td>
+<td>Mapping Worksheet&nbsp; to aid implementers in understanding the data representation requirements of each EOB Profile and the referenced resources used by these profiles.</td>
+</tr>
+<tr>
+<td>Documentation of CPCDS to FHIR Profiles Mapping</td>
+<td><a title="https://build.fhir.org/ig/HL7/carin-bb/branches/v0.1.6/CARIN%20for%20Blue%20Button%20Mapping%20Overview%200820%202020%20.pptx" href="https://build.fhir.org/ig/HL7/carin-bb/branches/v0.1.6/CARIN%20for%20Blue%20Button%20Mapping%20Overview%200820%202020%20.pptx" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable">ppt</a></td>
+<td>Description of the layout of the Mapping Worksheet and how to use it to understand the profiled data mappings to the FHIR resources.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+
 <h3>Explanation of Benefits Resource Profiles Definition</h3>
 <!-- This implementation guide establishes a set of profiles for the  resource and other referenced FHIR resources. As shown here, the data represented in each of the 4 concrete EOB profiles aligns with claim submission standards adopted by the US Department of Health and Human Services for a specific type of benefit. The fifth EOB profile, not shown in this table, is a design artifact that includes data representation constraints common across all types of EOBs, and this profile should not be used for actual data instances.&nbsp; A side by side comparison of the abstract EOB profile, and the four concrete profiles is shown here. -->
 Profiles for Explanation of Benefit (EOB) and other reference resources are defined in this IG. Data elements in each of the EOB profiles aligns with US Department of Health and Human Services claims submission standards. An abstract EOB profile is defined, representing constraints found in all the EOB types. Four profiles define the data constraints for the specific claim type (i.e., inpatient institutional, outpatient institutional, professional and non-clinician and pharmacy).  The profiles use many industry standard codes.  The owners of those codes and an indicator for those requiring licenses is provided.  
