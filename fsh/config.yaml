@@ -52,7 +52,7 @@ menu:
     Terms and Concepts: Use_Case.html#terms-and-concepts
     Use Cases: Use_Case.html#use-cases
   Guidance:
-    General Guidance: Guidance.html
+    General Guidance: General_Guidance.html
     Common Payer Consumer Data Set (CPCDS): Common_Payer_Consumer_Data_Set.html
     Terminology: Terminology.html 
   FHIR Artifacts:
