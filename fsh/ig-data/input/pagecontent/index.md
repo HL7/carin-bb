@@ -13,9 +13,13 @@
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
-<li>Interim Version 0.1.7 - October 19, 2020</li>
+<li>Interim Version 0.1.8 - October 19, 2020+</li>
 <ol>
 <li>Please post comments to the CarinBB zulip <a href="https://chat.fhir.org/#narrow/stream/204607-CARIN-IG.20for.20Blue.20Button.C2.AE"> stream</a>.</li>
+<li>Started branch v0.1.8</li>
+</ol>
+<li>Interim Version 0.1.7 - October 19, 2020</li>
+<ol>
 <li>Updated examples with pseudo-FSH annotations. Added easier to read examples page.</li>
 <li>Added easier to read search parameter page.</li>
 <li>Added implementation notes for all profiles.</li>
