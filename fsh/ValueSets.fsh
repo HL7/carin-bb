@@ -155,6 +155,13 @@ Description: "Identifies the type of identifiers for organizations"
 * codes from system $IdentifierType
 * ^copyright = "This Valueset is not copyrighted."
 
+ValueSet: C4BBPractitionerIdentifierType
+Title: "C4BB Practitioner Identifier Type"
+Description: "Identifies the type of identifiers for practitioners"
+* C4BBIdentifierType#npi
+* codes from system $IdentifierType
+* ^copyright = "This Valueset is not copyrighted."
+
 CodeSystem: C4BBClaimProcedureType
 Title: "C4BB Claim Procedure Type"
 Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure"

@@ -1,24 +1,15 @@
 <h3 id="the-carin-alliance">The CARIN Alliance</h3>
-<<<<<<< HEAD
 <p>The CARIN Alliance is an&nbsp;<a href="http://www.hl7.org/about/fhir-accelerator/index.cfm">HL7 FHIR Accelerator program</a>&nbsp;which brings implementers together to advance the use of HL7 FHIR standards in health care. The <a href="https://www.carinalliance.com/our-work/health-plan/">CARIN Alliance Health Plan Workgroup</a> was organized to develop a FHIR-based API that could be implemented by a consumer-facing application. The CARIN for Blue Button Framework was designed to answer the challenge for health plans to &lsquo;meet or exceed&rsquo; the <a href="https://bluebutton.cms.gov/">CMS Blue Button 2.0</a> capabilities. The CMS Blue Button 2.0 project provides over 53 million Medicare fee-for-service beneficiaries access to their electronic claims information. The goal of the CARIN Alliance Health Plan Workgroup is to develop an agreed upon set of data fields to exchange with consumers and a FHIR-based implementation guide for health plans to use to implement the API. The CARIN health plan workgroup was organized to develop a FHIR‐based API that could be implemented by a consumer‐facing application.</p>
 <h3>Consumer-directed exchange</h3>
 <p>Consumer-directed exchange occurs when a consumer or an individual authorized by a Payer to access another person&rsquo;s information, invokes their <a href="https://www.govregs.com/regulations/title45_chapterA_part164_subpartE_section164.524">HIPAA Individual Right of Access (45 CFR 164.524) </a> and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.</p>
 <h3>CMS Patient Access and Interoperability Rules</h3>
 <p>Data from health plans is not currently available to a consumer through an open API framework and therefore is not accessible by third party applications authorized by the consumer. The Centers for Medicare &amp; Medicaid Services (CMS) finalized on May 1st, 2020,its <a href="https://www.federalregister.gov/documents/2020/05/01/2020-05050/medicare-and-medicaid-programs-patient-protection-and-affordable-care-act-interoperability-and"> Interoperability and Patient Access Final Rule</a> on patient access to health data. Under the final rule, Medicare Advantage (MA) plans, state Medicaid and Children&rsquo;s Health Insurance Program (CHIP) agencies, Medicaid and CHIP managed care plans, and qualified health plan (QHP) issuers in the federally-facilitated exchanges (FFEs) must meet certain requirements regarding patient access to their health care information, including requirements related to application programming interfaces (APIs).&nbsp; CMS provides&nbsp;<a href="https://www.cms.gov/Regulations-and-Guidance/Guidance/Interoperability/index">Implementation Guidance</a>&nbsp;for the following data types that make-up the Patient Access API::</p>
-=======
-<p>The <a href="https://www.carinalliance.com/our-work/health-plan/">CARIN Alliance Health Plan Workgroup</a> was organized to develop a FHIR-based API that could be implemented by a consumer-facing application. The CARIN for Blue Button Framework was designed to answer the challenge for health plans to &lsquo;meet or exceed&rsquo; the <a href="https://bluebutton.cms.gov/">CMS Blue Button 2.0</a> capabilities. The CMS Blue Button 2.0 project provides over 53 million Medicare fee-for-service beneficiaries access to their electronic claims information. The goal of the CARIN Alliance Health Plan Workgroup is to develop an agreed upon set of data fields to exchange with consumers and a FHIR-based implementation guide for health plans to use to implement the API. <strong>Work-in-progress:Add some text about FHIR Accelerators here. </strong> The CARIN health plan workgroup was organized to develop a FHIR‐based API that could be implemented by a consumer‐facing application.</p>
-<h3>Consumer-directed exchange</h3>
-<p>Consumer-directed exchange occurs when a consumer or an individual authorized by a Payer to access another person&rsquo;s information, invokes their <a href="https://www.govregs.com/regulations/title45_chapterA_part164_subpartE_section164.524">HIPAA Individual Right of Access (45 CFR 164.524) </a> and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.</p>
-<h3>CMS Patient Access and Interoperability Rules</h3>
-<p>Data from health plans is not currently available to a consumer through an open API framework and therefore is not accessible by third party applications authorized by the consumer. The Centers for Medicare &amp; Medicaid Services (CMS) finalized on May 1st, 2020,its <a href="https://www.federalregister.gov/documents/2020/05/01/2020-05050/medicare-and-medicaid-programs-patient-protection-and-affordable-care-act-interoperability-and"> Interoperability and Patient Access Final Rule</a> on patient access to health data. Under the final rule, Medicare Advantage (MA) plans, state Medicaid and Children&rsquo;s Health Insurance Program (CHIP) agencies, Medicaid and CHIP managed care plans, and qualified health plan (QHP) issuers in the federally-facilitated exchanges (FFEs) must meet certain requirements regarding patient access to their health care information, including requirements related to application programming interfaces (APIs). CMS provides <a href="https://www.cms.gov/Regulations-and-Guidance/Guidance/Interoperability/index">Implementation Guidance</a> for the following types of information for dissemination:</p>
->>>>>>> master
 <p>Patient Access API:</p>
 <ul>
 <li>Claims &amp; Encounter Data</li>
 <li>Clinical Data</li>
 <li>Plan Coverage and Formularies</li>
 </ul>
-<<<<<<< HEAD
 <p>The Consumer Directed Payer Data Exchange Implementation Guide was defined by the CARIN Alliance to meet CMS requirements to provide Claims and Encounter data. <br /><br />Provisioning Clinical Data is defined by the DaVinci Payer Data Exchange (PDex) and US Core Implementation Guides. <br /><br />Provisioning Plan Coverage and Formularies is defined by the DaVinci Payer Data Exchange US Drug Formulary Implementation Guide. <br /><br />The effective date of the CMS Interoperability and Patient Access rule is January 1, 2021.</p>
 <h3 id="patient-protection">Patient Protection</h3>
 <h4>Members who want to share their health information with third parties&nbsp;and the CARIN Code of Conduct</h4>
@@ -28,23 +19,11 @@
 <ul type="disc">
 <li>Among the patient disclosures, plans are encouraged to provide information on:</li>
 <ul type="circle">
-=======
-<p>The Consumer Directed Payer Data Exchange Implementation Guide was defined by the CARIN Alliance to meet CMS requirements to provide Claims and Encounter data. <br /><br />Provisioning Clinical Data is defined by the DaVinci Payer Data Exchange (PDex) and US Core Implementation Guides. <br /><br />Provisioning Plan Coverage and Formularies is defined by the DaVinci Payer Data Exchange US Drug Formulary Implementation Guide. <br /><br />The implementation date is January 1, 2021.</p>
-<h3>Patient Protection</h3>
-<h4>Health Care Payers and HIPAA</h4>
-<h4>Patients Sharing Their Health Information With Third Parties</h4>
-<p>The CMS final rule states: &ldquo;An MA organization must provide in an easily accessible location on its public website and through other appropriate mechanisms through which it ordinarily communicates with current and former enrollees seeking to access their health information held by the MA organization, educational resources in non-technical, simple and easy-to-understand language." Therefore, providing member educational materials is outside the scope of this IG and the responsibility of each payer.&nbsp; Although it&rsquo;s outside the scope of the IG, the CARIN Alliance is encouraging payers to have applications self-attest to the CARIN Code of Conduct to ensure there is consistency in how apps are getting informed, proactive consent from members and consistency in how apps use, share, and store a member&rsquo;s health information.</p>
-<p>The <a href="https://www.cms.gov/files/document/patient-privacy-and-security-resources.pdf">CMS Patient Privacy and Security</a> resources directs that payers must educate patients about sharing their health information with third parties.</p>
-<ul>
-<li>Among the patient disclosures, plans are encouraged to provide information on:
-<ul>
->>>>>>> master
 <li>How an individual can safeguard their online privacy; and</li>
 <li>Factors to consider when choosing a consumer-facing application.</li>
 <li>How a consumer can submit complaints to the Office of Civil Rights (OCR) or the Federal Trade Commission (FTC);</li>
 <li>CMS cites the CARIN Alliance Code of Conduct and the ONC Model Privacy Notice as best practices to meet these needs.</li>
 </ul>
-</li>
 <li>Payers may not limit access to information for a patient through an application that fails to voluntarily attest to specific statements or if an enrollee chooses to disregard warnings about data use.</li>
 </ul>
 <p>The&nbsp;effective&nbsp;date&nbsp;of the CMS rule&nbsp;is January 1, 2021. Patient education is out of scope for this Implementation Guide.</p>

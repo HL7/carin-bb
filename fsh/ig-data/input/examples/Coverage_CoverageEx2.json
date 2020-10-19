@@ -1,0 +1,107 @@
+{
+  "resourceType": "Coverage",
+  "id": "CoverageEx2",
+  "meta": {
+    "lastUpdated": "2020-10-14T18:54:46.3629901-04:00",
+    "source": "Organization/PayerOrgEx1",
+    "profile": [
+      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"
+    ]
+  },
+  "language": "en-US",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MB",
+            "display": "Member Number"
+          }
+        ],
+        "text": "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
+      },
+      "system": "https://www.upmchealthplan.com/fhir/memberidentifier",
+      "value": "88897664101",
+      "assigner": {
+        "reference": "Organization/PayerOrgEx1",
+        "display": "UPMC Health Plan"
+      }
+    }
+  ],
+  "status": "active",
+  "policyHolder": {
+    "reference": "Patient/PatientEx1"
+  },
+  "subscriber": {
+    "reference": "Patient/PatientEx1"
+  },
+  "subscriberId": "888976641",
+  "beneficiary": {
+    "reference": "Patient/PatientEx1"
+  },
+  "dependent": "01",
+  "relationship": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+        "code": "self"
+      }
+    ],
+    "text": "Self"
+  },
+  "period": {
+    "start": "2020-01-01T00:00:00-05:00"
+  },
+  "payor": [
+    {
+      "reference": "Organization/PayerOrgEx1",
+      "display": "UPMC Health Plan"
+    }
+  ],
+  "class": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+            "code": "group",
+            "display": "Group"
+          }
+        ],
+        "text": "An employee group"
+      },
+      "value": "MCHMO1",
+      "name": "MEDICARE HMO PLAN"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+            "code": "subgroup",
+            "display": "SubGroup"
+          }
+        ],
+        "text": "A sub-group of an employee group"
+      },
+      "value": "570",
+      "name": "STANDARD-VBID"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+            "code": "plan",
+            "display": "Plan"
+          }
+        ],
+        "text": "A specific suite of benefits."
+      },
+      "value": "GR5",
+      "name": "GR5-HMO DEDUCTIBLE"
+    }
+  ],
+  "network": "GR5-HMO DEDUCTIBLE"
+}
