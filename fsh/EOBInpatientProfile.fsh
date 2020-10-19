@@ -190,4 +190,4 @@ Services."
 * billablePeriod.end ^short = "The last day on the billing statement covering services rendered to the beneficiary (i.e. 'Statement Covers Thru Date’). (178)"
 * identifier.type ^short = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber. (183)"
 * created ^short = "Date the claim was adjudicated. (179)"
-
+* meta.lastUpdated ^short = "Defines the date the Resource was created or updated, whichever comes last (163)"

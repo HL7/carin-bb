@@ -17,7 +17,7 @@ Description: "This profile builds upon the US Core Practitioner profile. It is u
 * identifier[NPI] ^patternIdentifier.type = C4BBIdentifierType#npi 
 * identifier[NPI] ^short = "The National Provider Identifier assigned to the Performing Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided) (95)"
 * name ^short = "The National Provider Identifier assigned to the Billing Provider, Care Team members and the Service Facility (93, 94, 95, 97, 99, 100, 122, 173)"
-* meta.lastUpdated ^short = "Defines the date the Resource was created or updated, whichever is later. (163)"
+* meta.lastUpdated ^short = "Defines the date the practitioner's demographics were updated (163)"
 * meta.profile ^short = "Profile this resource claims to conform to. (189)"
 * name ^short = "The name of the Performing Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided) (168)"
 

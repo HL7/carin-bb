@@ -40,8 +40,7 @@
 <ol>
 <li>Updated all invariants.</li>
 <li>Updated C4BB Codesystems, ValueSets and Codesystem Stubs. Minor changes to content of C4BB (locally defined) codesystems, and changes to the defining URLs of external codesystems.</li>
-<li>Updated Profile Comparison <a href="EOBProfileComparison20201006.xlsx" download="EOBProfileComparison20201006.xlsx">charts </a>. This is a good place to get an overview comparison of the profiles in this IG.</li>
-<li>Examples for all profiles. Remaining validation errors are due to HL7 terminology issues, not with the examples.</li>
+<   li>Examples for all profiles. Remaining validation errors are due to HL7 terminology issues, not with the examples.</li>
 <li>Added description of PDex to <a href="Background.html#relation-to-other-IGs">to the background material</a>.</li>
 </ol>
 <li>Interim Version 0.1.3 - September 8, 2020</li>

@@ -60,7 +60,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * priority from http://hl7.org/fhir/ValueSet/process-priority  // Fix a bug in R4 EOB which points to a CodeSystem.   Eliminates an error on output
 * total 1..* MS 
 
-* meta.lastUpdated ^short = "Defines the date the Resource was created or updated, whichever is later. (163)"
+* meta.lastUpdated ^short = "Defines the date the Resource was created or updated, whichever comes last (163)"
 * meta.profile ^short = "Profile this resource claims to conform to. (189)"
 * identifier ^short = "Identifier assigned by a payer for a claim received from a provider or subscriber. It is not the same identifier as that assigned by a provider. This identifier assigned by the payer becomes the payer's EOB identifier. (35)"
 * identifier.type ^short = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber. (183)"

@@ -103,3 +103,4 @@ If the service facility is not assigned an NPI, this data element will not be po
 * identifier.type ^short = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber. (183)"
 * total.amount ^short = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 * created ^short = "Date the claim was adjudicated. (179)"
+* meta.lastUpdated ^short = "Defines the date the Resource was created or updated, whichever comes last (163)"

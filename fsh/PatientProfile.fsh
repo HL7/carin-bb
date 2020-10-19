@@ -48,7 +48,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * deceasedDateTime ^short = "Date of death of the member (124)"
 * deceasedBoolean ^short = "Indicates if the patient is deceased (150)"
 * name ^short = "The name of the patient (130)"
-* meta.lastUpdated ^short = "Defines the date the member demographics were updated (163)"
+* meta.lastUpdated ^short = "Defines the date the member's demographics were updated (163)"
 * meta.profile ^short = "Profile this resource claims to conform to (189)"
 * address.line ^short = "Member's street name, number, direction & P.O. Box etc. (158)" 
 * address.city ^short = "The city for the member's primary address (192)" 
