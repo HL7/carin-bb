@@ -3,5 +3,6 @@
 <li class="x_MsoNormal">Payers may decide to provide either the data that was in effect as of the date of service or the current data<strong>.&nbsp;</strong></li>
 <li class="x_MsoNormal">.identifier[NPI]:&nbsp; Value is conditional depending on the Referring Resource.&nbsp; Populate Service Facility NPI with the value 'NPI has not been assigned' if an NPI has not been assigned to the Service Location Organization</li>
 <li class="x_MsoNormal">.address:&nbsp; Enter address of the location where the services were rendered.&nbsp; If the location is a component of the Billing Provider, do not populate this data element</li>
+<li class="x_MsoNormal">The numbers, e.g. (1), following the data element descriptions correlate to the MapID in the <a href="CPCDSDataDictionary.docx">CPCDS Data Dictionary</a> and the <a href="CPCDStoFHIRProfilesMapping.xlsx">Mapping Worksheet</a>&nbsp;as described&nbsp;<a href="Common_Payer_Consumer_Data_Set.html">here.</a></li>
 </ul>
 <p>&nbsp;</p>

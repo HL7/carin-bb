@@ -7,5 +7,6 @@
 <li>.item.adjudication.amount: &nbsp;Eligible amount = submitted amount - the noncovered amount - discount.&nbsp; The subscriber pays the member liability = deductible + coinsurance + copay + noncovered.&nbsp; (part of the member liability may have already been paid to the provider as paidbypatient). The eligible amount - the member liability is the payment amount to the provider (paidtoprovider) or the subscriber (paidtopatient)</li>
 <li>.total.amount:&nbsp; Eligible amount = submitted amount - the noncovered amount - discount.&nbsp; The subscriber pays the member liability = deductible + coinsurance + copay + noncovered.&nbsp; (part of the member liability may have already been paid to the provider as paidbypatient). The eligible amount - the member liability is the payment amount to the provider (paidtoprovider) or the subscriber (paidtopatient)</li>
 <li>.total[inoutnetwork]:&nbsp; in network or out of network payment status for the claim</li>
+<li class="x_MsoNormal">The numbers, e.g. (1), following the data element descriptions correlate to the MapID in the <a href="CPCDSDataDictionary.docx">CPCDS Data Dictionary</a> and the <a href="CPCDStoFHIRProfilesMapping.xlsx">Mapping Worksheet</a>&nbsp;as described&nbsp;<a href="Common_Payer_Consumer_Data_Set.html">here.</a></li>
 </ul>
 <p>&nbsp;</p>
