@@ -6,7 +6,7 @@ Description: "Abstract parent profile that includes constraints that are common 
 All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
-* meta MS
+* meta 1..1 MS
 * ^abstract = true 
 * identifier 1..* MS 
 * identifier.type 1..1 MS
