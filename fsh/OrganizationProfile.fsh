@@ -5,6 +5,7 @@ Title: "C4BB Organization"
 Description: "This profile builds upon the US Core Organization profile. It is used to convey a payer, provider, payee or service facility organization."
 * meta.lastUpdated 1..1  MS
 * meta.profile 1..* MS
+* meta 1..1 MS
 // Slicing stuff missing?
 // * identifier ^slicing.discriminator.path = "$this"
 // * identifier ^slicing.rules = #open
