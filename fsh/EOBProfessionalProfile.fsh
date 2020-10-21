@@ -89,7 +89,7 @@ If the service facility is not assigned an NPI, this data element will not be po
 * provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94)"
 * careTeam.provider ^short = "he National Provider Identifier assigned to the care team. (95, 96, 99)"
 * payment.date ^short = "The date the claim was paid. (107)"
-* related ^short = "If the current claim represents a claim that has been adjusted and was given a prior claim number, this field represents the prior claim number. If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number.(111, 112) "
+* related ^short = "If the current claim represents a claim that has been adjusted and was given a prior claim number, this field represents the prior claim number. If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number.(111, 112)"
 * item.serviced[x]  ^short = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
 * payee.type ^short = "Identifies recipient of benefits payable; i.e., provider or subscriber  (120)"
 * payee.party ^short = "Recipient reference (121)"
