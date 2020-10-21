@@ -102,7 +102,7 @@ resources:
     name: EOB Inpatient Institutional - Example 1
     description: EOB Inpatient Institutional - Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
-  ExplanationOfBenefit/EOBOupatientInstitutionalEx1:
+  ExplanationOfBenefit/EOBOutpatientInstitutionalEx1:
     name: EOB Outpatient Institutional - Example 1
     description: EOB Outpatient Institutional - Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
