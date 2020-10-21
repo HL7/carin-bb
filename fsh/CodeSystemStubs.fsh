@@ -95,7 +95,7 @@ Description: "Indicates whether or not the prescription is a compound NCPDP fiel
 
 ValueSet: FDANationalDrugCode
 Title: "FDA National Drug Code (NDC)"
-Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7.  "
+Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7."
 * codes from system $FDANationalDrugCode
 * ^copyright = "NDC codes are available for use.  As HL7 is working with the owning authority to finalize the url, this url is subject to change."
 
@@ -240,14 +240,14 @@ Description: "MS-DRGs (Medicare Severity Diagnosis Related Groups).  MS-DRGs are
 
 CodeSystem: THREEMAPDRG
 Title: "3M AP DRG"
-Description: "AP-DRGs (All Patient Diagnosis Related Groups).  AP-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version.  "
+Description: "AP-DRGs (All Patient Diagnosis Related Groups).  AP-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version."
 * ^url = "http://www.3M.com/AP-DRG"
 * insert CodeSystemStubBoilerplate
 * ^copyright = "Use of AP-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
 
 CodeSystem: THREEMAPRDRG
 Title: "3M APR DRG"
-Description: "APR-DRGs (All Patient Refined Diagnosis Related Groups).  APR-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version.  "
+Description: "APR-DRGs (All Patient Refined Diagnosis Related Groups).  APR-DRGs are owned by 3M.  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version."
 * ^url = "http://www.3M.com/APR-DRG"
 * insert CodeSystemStubBoilerplate
 * ^copyright = "Use of APR-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
@@ -340,7 +340,7 @@ Description: "This value set defines a set of codes from ICD-PCS that can be use
 // * insert CodeSystemStubBoilerplate
 // * ^copyright = "The ICD-10-CM code set is maintained by the National Center for Health Statistics (NCHS) of the Centers for Disease Control and Prevention (CDC) for use in the United States. 
 // It is based on ICD-10, which was developed by the World Health Organization (WHO) and is used internationally as a medical classification. 
-// The code set is owned by the NCHS-CDC and is available for use.  "
+// The code set is owned by the NCHS-CDC and is available for use."
 
 
 // ValueSet: ICD10CM
@@ -349,4 +349,4 @@ Description: "This value set defines a set of codes from ICD-PCS that can be use
 // * codes from system ICD10CMCS
 // * ^copyright = "The ICD-10-CM code set is maintained by the National Center for Health Statistics (NCHS) of the Centers for Disease Control and Prevention (CDC) for use in the United States. 
 // It is based on ICD-10, which was developed by the World Health Organization (WHO) and is used internationally as a medical classification. 
-// The code set is owned by the NCHS-CDC and is available for use.  "
+// The code set is owned by the NCHS-CDC and is available for use."
