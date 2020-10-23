@@ -352,7 +352,7 @@ Usage: #example
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[brandgenericcode].category = C4BBSupportingInfoType#brandgenericcode   
 * supportingInfo[brandgenericcode].sequence = 2
-* supportingInfo[brandgenericcode].code = NCPDPBrandGenericCode#2
+* supportingInfo[brandgenericcode].code = NCPDPBrandGenericIndicator#2
 * supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode   
 * supportingInfo[rxoriginCode].code = NCPDPPrescriptionOriginCode#1
 * supportingInfo[rxoriginCode].sequence = 3
