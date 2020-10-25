@@ -453,7 +453,7 @@ Additional IP information can be found here: [https://x12.org/products/ip-use](
 
 **Licensing Information**
 
-Send an email to [ip@x12.org](mailto:ip@x12.org) to request permission to reproduce X12 IP. Include your name, organization, title, address, city, state, zip, email, a detailed description of the Submitted Artifact, including the underlying or cited X12 Product, and a detailed description of the intended audience and planned distribution method for the Artifact.
+Send an email to ip@x12.org to request permission to reproduce X12 IP. Include your name, organization, title, address, city, state, zip, email, a detailed description of the Submitted Artifact, including the underlying or cited X12 Product, and a detailed description of the intended audience and planned distribution method for the Artifact.
 
 Additional information on X12 licensing program can be found here:
 
@@ -461,7 +461,7 @@ Additional information on X12 licensing program can be found here:
 
 **Purchasing Information:**
 
-To purchase code list subscriptions call (425) 562-2245 or email [admin@wpc-edi.com](mailto:admin@wpc-edi.com)."
+To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com."
 
 
 CodeSystem: CMSRemittanceAdviceRemarkCodes
@@ -499,7 +499,7 @@ Additional IP information can be found here: [https://x12.org/products/ip-use](
 
 **Licensing Information**
 
-Send an email to [ip@x12.org](mailto:ip@x12.org) to request permission to reproduce X12 IP. Include your name, organization, title, address, city, state, zip, email, a detailed description of the Submitted Artifact, including the underlying or cited X12 Product, and a detailed description of the intended audience and planned distribution method for the Artifact.
+Send an email to ip@x12.org to request permission to reproduce X12 IP. Include your name, organization, title, address, city, state, zip, email, a detailed description of the Submitted Artifact, including the underlying or cited X12 Product, and a detailed description of the intended audience and planned distribution method for the Artifact.
 
 Additional information on X12 licensing program can be found here:
 
@@ -507,7 +507,7 @@ Additional information on X12 licensing program can be found here:
 
 **Purchasing Information:**
 
-To purchase code list subscriptions call (425) 562-2245 or email [admin@wpc-edi.com](mailto:admin@wpc-edi.com).
+To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com
 
 The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Remark Codes (RARC) used throughout the US health care industry.
 
