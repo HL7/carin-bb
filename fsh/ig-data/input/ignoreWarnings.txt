@@ -12,7 +12,6 @@ Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/Dispe
 Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/BrandGenericIndicator' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/temporary/codeSystem-uri/NCPDP/PrescriptionOriginCode' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/CompoundCode' is unknown so the code cannot be validated
-
 # These are actual warnings to surpress 
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit because the value set or code system is not known to the validator]
@@ -24,12 +23,12 @@ Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/Compo
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericCode because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes because the value set or code system is not known to the validator]
-
 #informational
 INFORMATION: ImplementationGuide/hl7.fhir.us.carin-bb: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
 INFORMATION: Coverage/Coverage1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
 INFORMATION: Coverage/CoverageEx1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
 INFORMATION: Coverage/CoverageEx2: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
 INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[3].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
 INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[6].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated
 INFORMATION: ExplanationOfBenefit/EOBInpatientInstitutionalEx1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
