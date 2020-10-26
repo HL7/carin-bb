@@ -19,7 +19,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * provider only Reference(C4BBOrganization)
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
-   billingnetworkcontractingstatus 1..1 MS and
+   billingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
    typeofbill 0..1 MS and 
    pointoforigin 0..1 MS and 
@@ -41,6 +41,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[admtype].code MS 
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status].code MS 
+* supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)

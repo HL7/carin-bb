@@ -12,7 +12,7 @@ The claims data is based on the professional claim form 1500, submission standar
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner) -- set in base class
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
-   billingnetworkcontractingstatus 1..1 MS and
+   billingnetworkcontractingstatus 0..1 MS and
    performingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
    servicefacility 0..1 MS 

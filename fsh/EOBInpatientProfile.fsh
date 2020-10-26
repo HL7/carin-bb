@@ -31,7 +31,7 @@ Services."
 * provider only Reference(C4BBOrganization)
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
-      billingnetworkcontractingstatus 1..1 MS and
+      billingnetworkcontractingstatus 0..1 MS and
       admissionperiod 1..1 MS  and
      clmrecvddate 0..1 MS and
      typeofbill 0..1 MS and 

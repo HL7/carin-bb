@@ -1,6 +1,9 @@
 <h4 class="x_MsoNormal">Notes on Fields</h4>
 <ul>
-<li>.diagnosis:&nbsp; ICD-10 / ICD-9 diagnosis codes are defined as CodeableConcepts &nbsp;</li>
+<li>CPCDS data elements are mapped to EOB header or EOB.item data elements in alignment with claims submission standards.&nbsp; Line item amounts and amount types are to be provided in EOB.item.&nbsp; If a Payer does not have line item amounts, provide the claim amounts and amount types in the EOB header data elements.&nbsp; Total amounts, amount types and the in network or out of network payment status of the claim are to be provided in EOB.total.</p>
+</li>
+<li>The determination of inpatient vs. outpatient institutional claims is defined by the Type of Bill. The NUBC manual defines which TOBs are inpatient vs outpatient.</p>
+.diagnosis:&nbsp; ICD-10 / ICD-9 diagnosis codes are defined as CodeableConcepts &nbsp;</li>
 <li>.diagnosis.sequence rule:&nbsp; diagnosis.sequence values do not necessarily indiate any order in which the diagnosis was reported or identified.&nbsp; client app implementations should not assign any significance to the sequence values.&nbsp; client app implementations should use the values of diagnosis.type to identify primary, secondary, etc.&nbsp;</li>
 <li>.item.productOrService:&nbsp; CPT / HCPCS procedure codes are defined as CodeableConcepts</li>
 <li>.adjudication.amount (populate only if item.adjudication is not available):&nbsp; Eligible amount = submitted amount - the noncovered amount - discount.&nbsp; The subscriber pays the member liability = deductible + coinsurance + copay + noncovered.&nbsp; (part of the member liability may have already been paid to the provider as paidbypatient). The eligible amount - the member liability is the payment amount to the provider (paidtoprovider) or the subscriber (paidtopatient)</li>
@@ -9,4 +12,3 @@
 <li>.total[inoutnetwork]:&nbsp; in network or out of network payment status for the claim</li>
 <li class="x_MsoNormal">The numbers, e.g. (1), following the data element descriptions correlate to the MapID in the <a href="CPCDSDataDictionary.docx">CPCDS Data Dictionary</a> and the <a href="CPCDStoFHIRProfilesMapping.xlsx">Mapping Worksheet</a>&nbsp;as described&nbsp;<a href="Common_Payer_Consumer_Data_Set.html">here.</a></li>
 </ul>
-<p>&nbsp;</p>

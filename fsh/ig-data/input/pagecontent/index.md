@@ -1,3 +1,4 @@
+<p>&nbsp;</p>
 <!-- <table style="border-color: red;" border="4">
 <tbody>
 <tr>
@@ -68,7 +69,7 @@
 <li>Primary
 <ul>
 <li>Amol Vyas (Cambia Health Solutions) -&nbsp;<a href="mailto:amol.vyas@cambiahealth.com">amol.vyas@cambiahealth.com</a></li>
-<li>Pat Taylor (Blue Cross Blue Shield Association) - p<a href="mailto:at.taylor@bcbsa.com">at.taylor@bcbsa.com</a></li>
+<li>Pat Taylor (Blue Cross Blue Shield Association) - <a href="mailto:pat.taylor@bcbsa.com">pat.taylor@bcbsa.com</a></li>
 <li>HL7 Financial Management Workgroup</li>
 </ul>
 </li>
@@ -77,6 +78,7 @@
 <li>Mark Roberts (Leavitt Partners, LLC) -&nbsp;<a href="mailto:mark.roberts@leavittpartners.com">mark.roberts@leavittpartners.com</a></li>
 <li>Saul A. Kravitz (The MITRE Corporation) -&nbsp;<a href="mailto:saul@mitre.org">saul@mitre.org</a></li>
 <li>Igor Sirkovich (Smile CDR, Inc.) -&nbsp;<a href="mailto:igor@smilecdr.com">igor@smilecdr.com</a></li>
+<li>HL7 Payer/Provider Information Exchange</li>
 </ul>
 </li>
 </ul>
