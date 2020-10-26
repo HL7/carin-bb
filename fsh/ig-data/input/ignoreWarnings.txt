@@ -1,35 +1,26 @@
 == Suppressed Messages ==
-# The following code systems are external and not supported by terminology server
-#Code System URI 'http://www.nubc.org/TypeOfBill' is unknown so the code cannot be validated
-#Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated
-#Code System URI 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated
-#Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
-#Code System URI 'http://www.nubc.org/RevenueCodes' is unknown so the code cannot be validated
-#Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
-#Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
-#Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
-#Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode' is unknown so the code cannot be validated
-#Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/BrandGenericIndicator' is unknown so the code cannot be validated
-#Code System URI 'http://terminology.hl7.org/temporary/codeSystem-uri/NCPDP/PrescriptionOriginCode' is unknown so the code cannot be validated
-#Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/CompoundCode' is unknown so the code cannot be validated
-#[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit
-#[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus because the value set or code system is not known to the validator]
-#[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CDCICD910CMDiagnosisCodes because the value set or code system is not known to the validator]
-#[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
-#[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit because the value set or code system is not known to the validator]
-#[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode because the value set or code system is not known to the validator]
-#[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericCode because the value set or code system is not known to the validator]
-#[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode because the value set or code system is not known to the validator]
-#[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode because the value set or code system is not known to the validator]
-#[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or code system is not known to the validator]
-#[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or code system is not known to the validator]
-# ExplanationOfBenefit/EOBInpatient1
-ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
-ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[3].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or code system is not known to the validator]
-ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[3].code.coding[0]: Code System URI 'http://www.nubc.org/TypeOfBill' is unknown so the code cannot be validated
-ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[4].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit because the value set or code system is not known to the validator]
-ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[4].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated
-ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[5].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit because the value set or code system is not known to the validator]
-ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[5].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated
-ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[6].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus because the value set or code system is not known to the validator]
-ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[6].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated
+# The following code systems are external and not supported by terminology server -- This does not suppress the informational messages, but listed them anyways
+Code System URI 'http://www.nubc.org/TypeOfBill' is unknown so the code cannot be validated
+Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated
+Code System URI 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated
+Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
+Code System URI 'http://www.nubc.org/RevenueCodes' is unknown so the code cannot be validated
+Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/BrandGenericIndicator' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/temporary/codeSystem-uri/NCPDP/PrescriptionOriginCode' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/CompoundCode' is unknown so the code cannot be validated
+
+# These re actual warnings to surpress 
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericCode because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes because the value set or code system is not known to the validator]
