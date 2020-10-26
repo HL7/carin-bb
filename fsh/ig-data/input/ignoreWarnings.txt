@@ -23,6 +23,7 @@ Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/Compo
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericCode because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CDCICD910CMDiagnosisCodes because the value set or code system is not known to the validator]
 #informational
 INFORMATION: ImplementationGuide/hl7.fhir.us.carin-bb: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
 INFORMATION: Coverage/Coverage1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
