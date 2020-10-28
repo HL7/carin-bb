@@ -128,17 +128,52 @@ _**Note: A temporary URL has been defined for this codesystem for use in draft i
 * insert NCPDPCopyrightNotice
 
 //  **************** FDA NDC ******************************
+//  ***** @Saul - new code system *************
+CodeSystem: NDC
+Title: "National Drug Code (NDC)"
+Description: "The Drug Listing Act of 1972 requires registered drug establishments to provide the Food and Drug Administration (FDA) with a current list of all drugs manufactured, prepared, propagated, compounded, or processed by it for commercial distribution.  (See Section 510 of the Federal Food, Drug, and Cosmetic Act (Act) (21 U.S.C. § 360)). Drug products are identified and reported using a unique, three-segment number, called the National Drug Code (NDC), which serves as a universal product identifier for drugs. FDA publishes the listed NDC numbers and the information submitted as part of the listing information in the NDC Directory which is updated daily.
+
+The information submitted as part of the listing process, the NDC number, and the NDC Directory are used in the implementation and enforcement of the Act.
+
+Users should note:
+
+Starting June 1, 2011, only drugs for which electronic listings (SPL) have been submitted to FDA are included in the NDC Directory. Drugs for which listing information was last submitted to FDA on paper forms, prior to June 2009, are included on a separate file and will not be updated after June 2012.
+
+Information regarding the FDA published NDC Directory can be found [here](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory)
+
+Users should note a few important items
+
+*   The NDC Directory is updated daily. 
+*   The new NDC Directory contains ONLY information on final marketed drugs submitted to FDA in SPL electronic listing files by labelers.
+*   The NDC Directory does not contain all listed drugs. The new version includes the final marketed drugs which listing information were submitted electronically. It does not include animal drugs, blood products, or human drugs that are not in final marketed form, such as Active Pharmaceutical Ingredients(APIs), drugs for further processing, drugs manufactured exclusively for a private label distributor, or drugs that are marketed solely as part of a kit or combination product or inner layer of a multi-level packaged product not marketed individually. For more information about how certain kits or multi-level packaged drugs are addressed in the new NDC Directory, see the NDC Directory Package File definitions document. For the FDA Online Label Repository page and additional resources go to: [FDA Online Label Repository](https://labels.fda.gov/)"
+* ^url = "http://hl7.org/fhir/sid/ndc"
+* insert CodeSystemStubBoilerplate
+* ^copyright = "NDC codes have no copyright acknowledgment or license requirements."
+
 ValueSet: FDANationalDrugCode
 Title: "National Drug Code (NDC)"
-Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7."
-* codes from system $FDANationalDrugCode
-* ^copyright = "NDC codes are available for use.  As HL7 is working with the owning authority to finalize the url, this url is subject to change."
+Description: "The Drug Listing Act of 1972 requires registered drug establishments to provide the Food and Drug Administration (FDA) with a current list of all drugs manufactured, prepared, propagated, compounded, or processed by it for commercial distribution.  (See Section 510 of the Federal Food, Drug, and Cosmetic Act (Act) (21 U.S.C. § 360)). Drug products are identified and reported using a unique, three-segment number, called the National Drug Code (NDC), which serves as a universal product identifier for drugs. FDA publishes the listed NDC numbers and the information submitted as part of the listing information in the NDC Directory which is updated daily.
+
+The information submitted as part of the listing process, the NDC number, and the NDC Directory are used in the implementation and enforcement of the Act.
+
+Users should note:
+
+Starting June 1, 2011, only drugs for which electronic listings (SPL) have been submitted to FDA are included in the NDC Directory. Drugs for which listing information was last submitted to FDA on paper forms, prior to June 2009, are included on a separate file and will not be updated after June 2012.
+
+Information regarding the FDA published NDC Directory can be found [here](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory)
+
+Users should note a few important items
+
+*   The NDC Directory is updated daily. 
+*   The new NDC Directory contains ONLY information on final marketed drugs submitted to FDA in SPL electronic listing files by labelers.
+*   The NDC Directory does not contain all listed drugs. The new version includes the final marketed drugs which listing information were submitted electronically. It does not include animal drugs, blood products, or human drugs that are not in final marketed form, such as Active Pharmaceutical Ingredients(APIs), drugs for further processing, drugs manufactured exclusively for a private label distributor, or drugs that are marketed solely as part of a kit or combination product or inner layer of a multi-level packaged product not marketed individually. For more information about how certain kits or multi-level packaged drugs are addressed in the new NDC Directory, see the NDC Directory Package File definitions document. For the FDA Online Label Repository page and additional resources go to: [FDA Online Label Repository](https://labels.fda.gov/)"
+* codes from system NDC
+* ^copyright = "NDC codes have no copyright acknowledgment or license requirements."
 
 ValueSet: FDANDCOrCompound
 Title: "NDC or Compound"
-Description: "National Drug Code (NDC).  The US Federal Drug Administration (FDA) Data Standards Council assigns the first 5 digits of the 11 digit code.  NCPDP field # 407-D7.  
-Values will be the NDC Codes when the Compound Code value is 0 or 1.  When the Compound Code value = 2, the value will be the literal, ‘compound’"
-* codes from system $FDANationalDrugCode
+Description: "Values will be the NDC Codes when the Compound Code value is 0 or 1.  When the Compound Code value = 2, the value will be the literal, ‘compound’"
+* codes from system NDC
 * include C4BBCompoundLiteral#compound 
 
 // ***************************NUBC start ***********
@@ -322,18 +357,52 @@ To obtain the underlying code systems, please see information [here](https://ww
 * codes from system AHANUBCPriorityTypeOfAdmissionOrVisit
 * insert AHANUBCCopyrightNotice
 
-
-//********start: replaced AMA / HCPCS************
+//********start: AMA / HCPCS************
 
 RuleSet: AMACopyrightNotice
-* ^copyright = "Copyright 2014 American Medical Association (AMA). All rights reserved.  As HL7 is working with the owning authority to finalize the url, this url is subject to change."
+* ^copyright = "CPT is copyrighted by the AMA and as such must be licensed to be used in electronic products or other forms.
+
+Any individual or entity using CPT content needs permission or a license (i.e., a written agreement authorizing use of CPT codes) from the AMA or an authorized distributor. 
+
+ Examples where a license and royalty payment are required (not an exhaustive list):
+
+*   Use of CPT content to develop, test, maintain, and service products that use or rely on CPT
+*   Use of CPT content in products that are licensed or distributed by a vendor, company or other third party
+*   Distribution of products that require use of CPT content
+*   Any proposed use of CPT content including the creation of derivative works of CPT content, translations or localized versions of CPT content
+
+For more information see [here](https://www.ama-assn.org/practice-management/cpt/ama-cpt-licensing-overview) 
+
+If you have a question or would like to license CPT content,  please see [here](http://info.commerce.ama-assn.org/ama-data-file-request-2020).
+
+Any HL7 product referencing CPT must include the following verbiage:
+
+CPT © Copyright 2019 American Medical Association. All rights reserved. AMA and CPT are registered trademarks of the American Medical Association.
+
+Note: the year is always based on the publication year of the code set. CPT releases the August prior to the effective year (e.g., CPT 2020 code set = copyright 2019 or CPT 2021 code set = copyright 2020)."
 
 RuleSet: HCPCSCopyrightNotice
 * ^copyright = "See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
 
 CodeSystem: AMACPTCodes
-Title: "AMA CPT Codes"
-Description: "CPT procedure and modifier codes are submitted to payers to convey the specific procedure performed.  CPT codes are available by subscription from the AMA at http://www.ama-assn.org/go/cpt. As HL7 is working with the owning authority to finalize the url, this url is subject to change."
+Title: "Current Procedural Terminology (CPT)"
+Description: "The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice.
+
+Designated by the U.S. Department of Health and Human Services under the Health Insurance Portability and Accountability Act (HIPAA) as a national coding set for physician and other health care professional services and procedures, CPT’s evidence-based codes accurately encompass the full range of health care services.
+
+All CPT codes are five-digits and can be either numeric or alphanumeric, depending on the category. CPT code descriptors are clinically focused and utilize common standards so that a diverse set of users can have common understanding across the clinical health care paradigm.
+
+There are various types of CPT codes:
+
+**Category I:** These codes have descriptors that correspond to a procedure or service. Codes range from 00100–99499 and are generally ordered into sub-categories based on procedure/service type and anatomy.
+
+**Category II:** These alphanumeric tracking codes are supplemental codes used for performance measurement. Using them is optional and not required for correct coding.
+
+**Category III:** These are temporary alphanumeric codes for new and developing technology, procedures and services. They were created for data collection, assessment and in some instances, payment of new services and procedures that currently don’t meet the criteria for a Category I code.
+
+**Proprietary Laboratory Analyses (PLA) codes:** Recently added to the CPT code set, these codes describe proprietary clinical laboratory analyses and can be either provided by a single (solesource) laboratory or licensed or marketed to multiple providing laboratories that are cleared or approved by the Food and Drug Administration (FDA)). This category includes but is not limited to Advanced Diagnostic Laboratory Tests (ADLTs) and Clinical Diagnostic Laboratory Tests (CDLTs), as defined under the Protecting Access to Medicare Act of 2014 (PAMA).
+
+To obtain CPT, please see the license request form [here](http://info.commerce.ama-assn.org/ama-data-file-request-2020)."
 * ^url = $CPT
 * insert CodeSystemStubBoilerplate
 * insert AMACopyrightNotice
@@ -352,27 +421,112 @@ These files contain the Level II alphanumeric HCPCS procedure and modifier codes
 * insert HCPCSCopyrightNotice
 
 ValueSet: AMACPTCMSHCPCSProcedureCodes
-Title: "CPT HCPCS Procedure Codes"
-Description: "The value set is a combination of two code systems:  CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed.  Procedure Codes leverage US Core Procedure Codes composition.  
-The target set for this value set are the procedure codes from the CPT and HCPCS files.\n\n**PROCEDURE CODES ONLY**"
+Title: "Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Procedure Codes"
+Description: "The Value Set is a combination of two code systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. The target set for this value set are the procedure codes from the CPT and HCPCS files. The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice. The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice.
+
+Designated by the U.S. Department of Health and Human Services under the Health Insurance Portability and Accountability Act (HIPAA) as a national coding set for physician and other health care professional services and procedures, CPT’s evidence-based codes accurately encompass the full range of health care services.
+
+All CPT codes are five-digits and can be either numeric or alphanumeric, depending on the category. CPT code descriptors are clinically focused and utilize common standards so that a diverse set of users can have common understanding across the clinical health care paradigm.
+
+There are various types of CPT codes:
+
+**Category I:** These codes have descriptors that correspond to a procedure or service. Codes range from 00100–99499 and are generally ordered into sub-categories based on procedure/service type and anatomy.
+
+**Category II:** These alphanumeric tracking codes are supplemental codes used for performance measurement. Using them is optional and not required for correct coding.
+
+**Category III:** These are temporary alphanumeric codes for new and developing technology, procedures and services. They were created for data collection, assessment and in some instances, payment of new services and procedures that currently don’t meet the criteria for a Category I code.
+
+**Proprietary Laboratory Analyses (PLA) codes:** Recently added to the CPT code set, these codes describe proprietary clinical laboratory analyses and can be either provided by a single (solesource) laboratory or licensed or marketed to multiple providing laboratories that are cleared or approved by the Food and Drug Administration (FDA)). This category includes but is not limited to Advanced Diagnostic Laboratory Tests (ADLTs) and Clinical Diagnostic Laboratory Tests (CDLTs), as defined under the Protecting Access to Medicare Act of 2014 (PAMA).
+
+To obtain CPT, please see the license request form [here](http://info.commerce.ama-assn.org/ama-data-file-request-2020)
+
+The Level II HCPCS codes, which are established by CMS's Alpha-Numeric Editorial Panel, primarily represent items and supplies and non-physician services not covered by the American Medical Association's Current Procedural Terminology-4 (CPT-4) codes; Medicare, Medicaid, and private health insurers use HCPCS procedure and modifier codes for claims processing.  Level II alphanumeric procedure and modifier codes comprise the A to V range.
+
+General information can be found here: [https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo)
+
+Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets](https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets)
+
+These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
 * codes from system AMACPTCodes
 * codes from system CMSHCPCSCodes
-* ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved.
+* ^copyright = "CPT is copyrighted by the AMA and as such must be licensed to be used in electronic products or other forms.
+
+Any individual or entity using CPT content needs permission or a license (i.e., a written agreement authorizing use of CPT codes) from the AMA or an authorized distributor. 
+
+ Examples where a license and royalty payment are required (not an exhaustive list):
+
+*   Use of CPT content to develop, test, maintain, and service products that use or rely on CPT
+*   Use of CPT content in products that are licensed or distributed by a vendor, company or other third party
+*   Distribution of products that require use of CPT content
+*   Any proposed use of CPT content including the creation of derivative works of CPT content, translations or localized versions of CPT content
+
+For more information see [here](https://www.ama-assn.org/practice-management/cpt/ama-cpt-licensing-overview) 
+
+If you have a question or would like to license CPT content,  please see [here](http://info.commerce.ama-assn.org/ama-data-file-request-2020).
+
+Any HL7 product referencing CPT must include the following verbiage:
+
+CPT © Copyright 2019 American Medical Association. All rights reserved. AMA and CPT are registered trademarks of the American Medical Association.
+
+Note: the year is always based on the publication year of the code set. CPT releases the August prior to the effective year (e.g., CPT 2020 code set = copyright 2019 or CPT 2021 code set = copyright 2020).
 
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
 
 
 ValueSet:  AMACPTCMSHCPCSModifiers
-Title: "CPT HCPCS Modifiers" 
-Description: "The Value Set is a combination of two Code Systems:  CPT (HCPCS I) and HCPCS II procedure code modifiers.  Modifiers help further describe a procedure code without changing its definition.  
-The target set for this value set are the procedure code modifiers from the CPT and HCPCS files. \n\n**MODIFIER CODES ONLY**"
+Title: "Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Procedure Modifier Codes" 
+Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure code modifiers. Modifiers help further describe a procedure code without changing its definition.  
+The target set for this value set are the procedure code modifiers from the CPT and HCPCS files.
+
+The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice.
+
+Designated by the U.S. Department of Health and Human Services under the Health Insurance Portability and Accountability Act (HIPAA) as a national coding set for physician and other health care professional services and procedures, CPT’s evidence-based codes accurately encompass the full range of health care services.
+
+All CPT codes are five-digits and can be either numeric or alphanumeric, depending on the category. CPT code descriptors are clinically focused and utilize common standards so that a diverse set of users can have common understanding across the clinical health care paradigm.
+
+There are various types of CPT codes:
+
+**Category I:** These codes have descriptors that correspond to a procedure or service. Codes range from 00100–99499 and are generally ordered into sub-categories based on procedure/service type and anatomy.
+
+**Category II:** These alphanumeric tracking codes are supplemental codes used for performance measurement. Using them is optional and not required for correct coding.
+
+**Category III:** These are temporary alphanumeric codes for new and developing technology, procedures and services. They were created for data collection, assessment and in some instances, payment of new services and procedures that currently don’t meet the criteria for a Category I code.
+
+**Proprietary Laboratory Analyses (PLA) codes:** Recently added to the CPT code set, these codes describe proprietary clinical laboratory analyses and can be either provided by a single (solesource) laboratory or licensed or marketed to multiple providing laboratories that are cleared or approved by the Food and Drug Administration (FDA)). This category includes but is not limited to Advanced Diagnostic Laboratory Tests (ADLTs) and Clinical Diagnostic Laboratory Tests (CDLTs), as defined under the Protecting Access to Medicare Act of 2014 (PAMA).
+
+To obtain CPT, please see the license request form [here](http://info.commerce.ama-assn.org/ama-data-file-request-2020)
+
+The Level II HCPCS codes, which are established by CMS's Alpha-Numeric Editorial Panel, primarily represent items and supplies and non-physician services not covered by the American Medical Association's Current Procedural Terminology-4 (CPT-4) codes; Medicare, Medicaid, and private health insurers use HCPCS procedure and modifier codes for claims processing.  Level II alphanumeric procedure and modifier codes comprise the A to V range.
+
+General information can be found here: [https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo)
+
+Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets](https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets)
+
+These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
 * codes from system AMACPTCodes 
 * codes from system CMSHCPCSCodes
-* ^copyright = "CPT copyright 2014 American Medical Association. All rights reserved.
+* ^copyright = "CPT is copyrighted by the AMA and as such must be licensed to be used in electronic products or other forms.
+
+Any individual or entity using CPT content needs permission or a license (i.e., a written agreement authorizing use of CPT codes) from the AMA or an authorized distributor. 
+
+ Examples where a license and royalty payment are required (not an exhaustive list):
+
+*   Use of CPT content to develop, test, maintain, and service products that use or rely on CPT
+*   Use of CPT content in products that are licensed or distributed by a vendor, company or other third party
+*   Distribution of products that require use of CPT content
+*   Any proposed use of CPT content including the creation of derivative works of CPT content, translations or localized versions of CPT content
+
+For more information see [here](https://www.ama-assn.org/practice-management/cpt/ama-cpt-licensing-overview) 
+
+If you have a question or would like to license CPT content,  please see [here](http://info.commerce.ama-assn.org/ama-data-file-request-2020).
+
+Any HL7 product referencing CPT must include the following verbiage:
+
+CPT © Copyright 2019 American Medical Association. All rights reserved. AMA and CPT are registered trademarks of the American Medical Association.
+
+Note: the year is always based on the publication year of the code set. CPT releases the August prior to the effective year (e.g., CPT 2020 code set = copyright 2019 or CPT 2021 code set = copyright 2020).
 
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
-
-
 // ******** DRGs ***************
 
 CodeSystem: CMSMSDRG
@@ -430,6 +584,7 @@ Current codes can be obtained [here](https://www.cms.gov/Medicare/Coding/place-
 
 // ******** CARCs / RARCs ***************
 
+//  *** @ Saul - No change to CodeSystem CARCs ; RARCs are new
 CodeSystem: X12ClaimAdjustmentReasonCodes
 Title: "X12 Claim Adjustment Reason Codes"
 Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
@@ -463,30 +618,57 @@ Additional information on X12 licensing program can be found here:
 
 To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com."
 
-
 CodeSystem: CMSRemittanceAdviceRemarkCodes
 Title: "X12 Remittance Advice Remark Codes"
-Description: "Remittance Advice Remark Codes (RARC) codes provide additional explanation for an adjustment already described by a Claim Adjustment Reason Code (CARC) or convey information about remittance processing. RARC codes are available at [https://x12.org/codes/remittance-advice-remark-codes](https://x12.org/codes/remittance-advice-remark-codes)"  
+Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
+
+Remittance Advice Remark Codes (RARCs) are used to provide additional explanation for an adjustment already described by a Claim Adjustment Reason Code (CARC) or to convey information about remittance processing.
+
+Each RARC identifies a specific message as shown in the Remittance Advice Remark Code List. There are two types of RARCs, supplemental and informational. The majority of the RARCs are supplemental; these are generally referred to as RARCs without further distinction. Supplemental RARCs provide additional explanation for an adjustment already described by a CARC. The second type of RARC is informational; these RARCs are all prefaced with Alert: and are often referred to as Alerts. Alerts are used to convey information about remittance processing and are never related to a specific adjustment or CARC.
+
+External code lists maintained by X12 and external code lists maintained by others and distributed by WPC on behalf of the maintainer, including the RARC codes. Can be found here:
+
+[https://x12.org/codes](https://x12.org/codes)
+
+Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."  
 * ^url = "https://x12.org/codes/remittance-advice-remark-codes" 
 * insert CodeSystemStubBoilerplate
-* ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Remark Codes (RARC) used throughout the US health care industry."
+* ^copyright = "**Intellectual Property Information**
+
+All X12 products are subject to this IP policy, including published and draft works.
+
+X12 is the only organization authorized to grant permission for use of X12 products. Users of all X12 products should make sure that they understand the permissible uses, as well as the limitations on such usage, as outlined below.
+
+Additional IP information can be found here: [https://x12.org/products/ip-use](https://x12.org/products/ip-use)
+
+**Licensing Information**
+
+Send an email to ip@x12.org to request permission to reproduce X12 IP. Include your name, organization, title, address, city, state, zip, email, a detailed description of the Submitted Artifact, including the underlying or cited X12 Product, and a detailed description of the intended audience and planned distribution method for the Artifact.
+
+Additional information on X12 licensing program can be found here:
+
+[https://x12.org/products/licensing-program](https://x12.org/products/licensing-program)
+
+**Purchasing Information:**
+
+To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com."
 
 
 ValueSet: X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 Title: "X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes"
-Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and
-XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, 
-insurance, transportation, finance, government, supply chain and other industries.
+Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
 
 The X12 Claim Adjustment Reason Codes describe why a claim or service line was paid differently than it was billed. . These codes are listed within an X12 implementation guide (TR3) and maintained by X12.
+
+Remittance Advice Remark Codes (RARCs) are used to provide additional explanation for an adjustment already described by a Claim Adjustment Reason Code (CARC) or to convey information about remittance processing.
+
+Each RARC identifies a specific message as shown in the Remittance Advice Remark Code List. There are two types of RARCs, supplemental and informational. The majority of the RARCs are supplemental; these are generally referred to as RARCs without further distinction. Supplemental RARCs provide additional explanation for an adjustment already described by a CARC. The second type of RARC is informational; these RARCs are all prefaced with Alert: and are often referred to as Alerts. Alerts are used to convey information about remittance processing and are never related to a specific adjustment or CARC.
 
 External code lists maintained by X12 and external code lists maintained by others and distributed by WPC on behalf of the maintainer. Can be found here:
 
 [https://x12.org/codes](https://x12.org/codes)
 
-Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes).
-
-Remittance Advice Remark Codes (RARC) codes provide additional explanation for an adjustment already described by a Claim Adjustment Reason Code (CARC) or convey information about remittance processing. RARC codes are available at [https://x12.org/codes/remittance-advice-remark-codes](https://x12.org/codes/remittance-advice-remark-codes)"
+Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."
 * codes from system X12ClaimAdjustmentReasonCodes 
 * codes from system CMSRemittanceAdviceRemarkCodes 
 * ^copyright = "**Intellectual Property Information**
@@ -509,18 +691,66 @@ Additional information on X12 licensing program can be found here:
 
 To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com
 
-The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Remark Codes (RARC) used throughout the US health care industry.
+The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Remark Codes (RARC) used throughout the US health care industry."
 
-**Remittance Advice Remark Codes:**
-
-Although maintained by CMS, X12 has the codes available for industry use."
 
 //  ********* ICD diagnosis codes / procedure codes
-RuleSet: ICD10CopyrightNotice
+
+RuleSet: ICD9CopyrightNotice
+* ^copyright = "The following requirements must be followed to utilize CDC’s public domain content:
+
+1) Attribution to the agency that developed the material must be provided in your use of the materials. Such attribution should clearly state the materials were developed by CDC ATSDR and/or HHS (e.g., Source: CDC; Materials developed by CDC);
+
+2) You must utilize a disclaimer which clearly indicates that your use of the material, including any links to the materials on the CDC, ATSDR or HHS websites, does not imply endorsement by CDC, ATSDR, HHS or the United States Government of you, your company, product, facility, service or enterprise. All such disclaimers must be prominently and unambiguously displayed (e.g., Reference to specific commercial products, manufacturers, companies, or trademarks does not constitute its endorsement or recommendation by the U.S. Government, Department of Health and Human Services, or Centers for Disease Control and Prevention;
+
+3) You may not change the substantive content of the materials; and
+
+4) You must state that the material is otherwise available on the agency website for no charge.
+
+For information on NCHS agency level use of materials see [here](https://www.cdc.gov/other/agencymaterials.html)."
+
+RuleSet: ICD10CMCopyrightNotice
+* ^copyright = "The ICD-10 is copyrighted by the [World Health Organization (WHO)external icon](http://www.who.int/classifications/icd/en/), which owns and publishes the classification. WHO has authorized the development of an adaptation of ICD-10 for use in the United States for U.S. government purposes. As agreed, all modifications to the ICD-10 must conform to WHO conventions for the ICD. ICD-10-CM was developed following a thorough evaluation by a Technical Advisory Panel and extensive additional consultation with physician groups, clinical coders, and others to assure clinical accuracy and utility.
+
+The following requirements must be followed to utilize CDC’s public domain content:
+
+1) Attribution to the agency that developed the material must be provided in your use of the materials. Such attribution should clearly state the materials were developed by CDC ATSDR and/or HHS (e.g., Source: CDC; Materials developed by CDC);
+
+2) You must utilize a disclaimer which clearly indicates that your use of the material, including any links to the materials on the CDC, ATSDR or HHS websites, does not imply endorsement by CDC, ATSDR, HHS or the United States Government of you, your company, product, facility, service or enterprise. All such disclaimers must be prominently and unambiguously displayed (e.g., Reference to specific commercial products, manufacturers, companies, or trademarks does not constitute its endorsement or recommendation by the U.S. Government, Department of Health and Human Services, or Centers for Disease Control and Prevention;
+
+3) You may not change the substantive content of the materials; and
+
+4) You must state that the material is otherwise available on the agency website for no charge.
+
+For information on NCHS agency level use of materials see [here](https://www.cdc.gov/other/agencymaterials.html)."
+
+RuleSet: ICD10PCSCopyrightNotice
 * ^copyright = "The CMS licenses its published material in order to encourage maximum use and dissemination. See  
 the CMS ([https://www.cms.gov/Medicare/Coding/ICD10](https://www.cms.gov/Medicare/Coding/ICD10)) web site for more information."
 
-//  ******* @Saul  - new Code System definition ********
+
+//  ******* @Saul  - two new Code Systems ********
+CodeSystem: ICD9CM
+Title: "International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM)"
+Description: "The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States.  The ICD-9-CM consists of: a tabular list containing a numerical list of the disease code numbers in tabular form; an alphabetical index to the disease entries; and a classification system for surgical, diagnostic, and therapeutic procedures (alphabetic index and tabular list). The National Center for Health Statistics (NCHS) and the Centers for Medicare and Medicaid Services are the U.S. governmental agencies responsible for overseeing all changes and modifications to the ICD-9-CM. ICD-10-CM is the replacement for ICD-9-CM, volumes 1 and 2, effective October 1, 2015 Current and previous releases of ICD-9-CM are available here: https://www.cdc.gov/nchs/icd/icd9cm.htm Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to nchsicd10cm@cdc.gov."  
+* ^url = "http://hl7.org/fhir/sid/icd-9-cm" 
+* insert CodeSystemStubBoilerplate
+* insert ICD9CopyrightNotice
+
+CodeSystem: ICD10CM
+Title: "International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)"
+Description: "The National Center for Health Statistics (NCHS), the Federal agency responsible for use of the International Statistical Classification of Diseases and Related Health Problems, 10th revision (ICD-10) in the United States, has developed a clinical modification of the classification for morbidity purposes. The ICD-10 is used to code and classify mortality data from death certificates, having replaced ICD-9 for this purpose as of January 1, 1999. ICD-10-CM is the replacement for ICD-9-CM, volumes 1 and 2, effective October 1, 2015.
+
+The clinical modification represents a significant improvement over ICD-9-CM and ICD-10. Specific improvements include: the addition of information relevant to ambulatory and managed care encounters; expanded injury codes; the creation of combination diagnosis/symptom codes to reduce the number of codes needed to fully describe a condition; the addition of sixth and seventh characters; incorporation of common 4th and 5th digit subclassifications; laterality; and greater specificity in code assignment. The new structure will allow further expansion than was possible with ICD-9-CM.
+
+Current and previous releases of ICD-10-CM are available in PDF and XML format here: [https://www.cdc.gov/nchs/icd/icd10cm.htm](https://www.cdc.gov/nchs/icd/icd10cm.htm)
+
+Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to [nchsicd10cm@cdc.gov](mailto:nchsicd10cm@cdc.gov)."  
+* ^url = "http://hl7.org/fhir/sid/icd-10-cm" 
+* insert CodeSystemStubBoilerplate
+* insert ICD10CMCopyrightNotice
+
+//  ******* @Saul  - same Code System definition for icd10 pcs ********
 CodeSystem: ICD10PCS
 Title: "ICD-10 Procedure Coding System"
 Description: "The ICD-10-PCS is a procedure classification published by the United States Centers for Medicare & Medicaid Services (CMS) ([https://www.cms.gov](https://www.cms.gov/)) for classifying procedures  
@@ -533,21 +763,62 @@ Link to information about the code system - including how to obtain the content:
 Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of ICD-10-CM. CMS republishes the ICD-10-CM codes system on their website for convienence only. For authoratative information on ICD-10-CM, users should refer to the National Center for Health Statistics (NCHS) site located [here](https://www.cdc.gov/nchs/icd/icd10cm.htm)."  
 * ^url = "https://www.cms.gov/Medicare/Coding/ICD10" 
 * insert CodeSystemStubBoilerplate
-* insert ICD10CopyrightNotice
+* insert ICD10PCSCopyrightNotice
+
+
 
 ValueSet: CDCICD910CMDiagnosisCodes 
-Title: "ICD-9-10-CM Diagnosis Codes"
-Description: "The ICD-CM (International Classification of Diseases, Clinical Modification) is a system used by physicians and other healthcare providers to classify and code all diagnoses and symptoms recorded in conjunction with hospital care in the United States."
-* codes from system $ICD10CM
-* codes from system $ICD9CM
-* ^copyright = "ICD-9 and ICD-10 are copyrighted by the World Health Organization (WHO) which owns and publishes the classification. See https://www.who.int/classifications/icd/en. WHO has authorized the development of an adaptation of ICD-9 and ICD-10 to ICD-9-CM to ICD-10-CM for use in the United States for U.S. government purposes.  As HL7 is working with the owning authority to finalize the urls, the urls are subject to change."
+Title: "Diagnosis Codes - International Classification of Diseases, Clinical Modification (ICD-9-CM, ICD-10-CM)"
+Description: "The Value Set is a combination of values from volume 1 and volume 2 from the Code System International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) and values in the Code System International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)
+
+The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States. 
+
+The ICD-9-CM consists of:
+
+*   a tabular list containing a numerical list of the disease code numbers in tabular form;
+*   an alphabetical index to the disease entries; and
+*   a classification system for surgical, diagnostic, and therapeutic procedures (alphabetic index and tabular list).
+
+The National Center for Health Statistics (NCHS) and the [Centers for Medicare and Medicaid Services](http://www.cms.hhs.gov/) are the U.S. governmental agencies responsible for overseeing all changes and modifications to the ICD-9-CM.
+
+[ICD-10-CM](https://confluence.hl7.org/pages/viewpage.action?pageId=97453674) is the replacement for ICD-9-CM, volumes 1 and 2, effective October 1, 2015.
+
+The National Center for Health Statistics (NCHS), the Federal agency responsible for use of the International Statistical Classification of Diseases and Related Health Problems, 10th revision (ICD-10) in the United States, has developed a clinical modification of the classification for morbidity purposes. The ICD-10 is used to code and classify mortality data from death certificates, having replaced ICD-9 for this purpose as of January 1, 1999.
+
+The clinical modification represents a significant improvement over ICD-9-CM and ICD-10. Specific improvements include: the addition of information relevant to ambulatory and managed care encounters; expanded injury codes; the creation of combination diagnosis/symptom codes to reduce the number of codes needed to fully describe a condition; the addition of sixth and seventh characters; incorporation of common 4th and 5th digit subclassifications; laterality; and greater specificity in code assignment. The new structure will allow further expansion than was possible with ICD-9-CM.
+
+Current and previous releases of ICD-9-CM are available here: [https://www.cdc.gov/nchs/icd/icd9cm.htm](https://www.cdc.gov/nchs/icd/icd9cm.htm)
+
+Current and previous releases of ICD-10-CM are available in PDF and XML format here: [https://www.cdc.gov/nchs/icd/icd10cm.htm](https://www.cdc.gov/nchs/icd/icd10cm.htm)
+
+Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to [nchsicd10cm@cdc.gov](mailto:nchsicd10cm@cdc.gov)."
+* codes from system ICD10CM
+* codes from system ICD9CM
+* insert ICD10CMCopyrightNotice
 
 
 ValueSet: CMSICD910PCSProcedureCodes 
-Title: "ICD-9 Procedure Codes - ICD-10 Procedure Coding System"
-Description: "This value set defines a set of codes from that can be used to indicate the procedure performed"
+Title: "Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Coding System"
+Description: "The Value Set is a combination of values from volume 3 from the Code System International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) and values in the Code System ICD-10 Procedure Coding System. The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States.  The ICD-9-CM consists of: a tabular list containing a numerical list of the disease code numbers in tabular form; an alphabetical index to the disease entries; and a classification system for surgical, diagnostic, and therapeutic procedures (alphabetic index and tabular list). The National Center for Health Statistics (NCHS) and the Centers for Medicare and Medicaid Services are the U.S. governmental agencies responsible for overseeing all changes and modifications to the ICD-9-CM. ICD-10 Procedure Coding System is the replacement for ICD-9-CM, volume 3, effective October 1, 2015. Current and previous releases of ICD-9-CM are available here: https://www.cdc.gov/nchs/icd/icd9cm.htm Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to nchsicd10cm@cdc.gov. The ICD-10-PCS is a procedure classification published by the United States Centers for Medicare & Medicaid Services (CMS) (https://www.cms.gov) for classifying procedures performed in hospital inpatient health care settings. Link to information about the code system: https://www.cms.gov/Medicare/Coding/ICD10 Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of ICD-10-CM. CMS republishes the ICD-10-CM codes system on their website for convienence only. For authoratative information on ICD-10-CM, users should refer to the National Center for Health Statistics (NCHS) site located here."
 * codes from system ICD10PCS
-* codes from system $ICD9PCS
-* ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain ICD PCS Procedure Codes used throughout the US health care industry.  As HL7 is working with the owning authority to finalize the urls, the urls are subject to change."
+* codes from system ICD9CM
+* ^copyright = "ICD-9 copyright:
+
+The following requirements must be followed to utilize CDC’s public domain content:
+
+1) Attribution to the agency that developed the material must be provided in your use of the materials. Such attribution should clearly state the materials were developed by CDC ATSDR and/or HHS (e.g., Source: CDC; Materials developed by CDC);
+
+2) You must utilize a disclaimer which clearly indicates that your use of the material, including any links to the materials on the CDC, ATSDR or HHS websites, does not imply endorsement by CDC, ATSDR, HHS or the United States Government of you, your company, product, facility, service or enterprise. All such disclaimers must be prominently and unambiguously displayed (e.g., Reference to specific commercial products, manufacturers, companies, or trademarks does not constitute its endorsement or recommendation by the U.S. Government, Department of Health and Human Services, or Centers for Disease Control and Prevention;
+
+3) You may not change the substantive content of the materials; and
+
+4) You must state that the material is otherwise available on the agency website for no charge.
+
+For information on NCHS agency level use of materials see [here](https://www.cdc.gov/other/agencymaterials.html).
+
+ICD-10-PCS copyright:
+
+The CMS licenses its published material in order to encourage maximum use and dissemination. See  
+the CMS ([https://www.cms.gov/Medicare/Coding/ICD10](https://www.cms.gov/Medicare/Coding/ICD10)) web site for more information."
 
 
