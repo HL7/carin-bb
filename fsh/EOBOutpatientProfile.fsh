@@ -19,7 +19,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * provider only Reference(C4BBOrganization)
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
-   billingnetworkcontractingstatus 1..1 MS and
+   billingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
    typeofbill 0..1 MS and 
    pointoforigin 0..1 MS and 
@@ -41,6 +41,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[admtype].code MS 
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status].code MS 
+* supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
@@ -123,7 +124,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * careTeam.provider ^short = "The National Provider Identifier assigned to the care team for the admission. (93, 96, 98, 99, 173)"
 * provider ^short = "The National Provider Identifier assigned to the Billing Provider. (94)"
 * payment.date ^short = "The date the claim was paid. (107)"
-* related ^short = "If the current claim represents a claim that has been adjusted and was given a prior claim number, this field represents the prior claim number. If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number.(111, 112) "
+* related ^short = "If the current claim represents a claim that has been adjusted and was given a prior claim number, this field represents the prior claim number. If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number.(111, 112)"
 * payee.type ^short = "Identifies the type of recipient of the adjudication amount; i.e., provider, subscriber, beneficiary or another recipient. (120)"
 * payee.party ^short = "Recipient reference. (121)"
 * status ^short = "Claim processing status code. (140)"
