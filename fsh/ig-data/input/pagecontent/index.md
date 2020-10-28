@@ -20,6 +20,7 @@
 <li>Improved notes on all profiles</li>
 <li>Cleaned up many QA issues</li>
 <li>Bound discharge status value set in EOB Outpatient</li>
+<li>Refreshed all CPCDS attachments</li>
 </ol>
 <li>Interim Version 0.1.7 - October 19, 2020</li>
 <ol>
