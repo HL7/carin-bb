@@ -88,6 +88,3 @@
 <li>Health Plan's CARIN IG for Blue Button&reg; enabled FHIR API responds with a bundle of the requested EOB and supporting reference FHIR resources.</li>
 <li>Consumer App presents the EOB and supporting reference FHIR resources to the Consumer.</li>
 </ol>
-<h3>Personas and Patient Stories</h3>
-<p><strong>TBD</strong></p>
-<p>&nbsp;</p>
