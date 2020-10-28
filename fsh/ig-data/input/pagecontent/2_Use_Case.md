@@ -1,4 +1,3 @@
-
 <h3 id="terms-and-concepts">Terms and Concepts</h3>
 <table class="codes" border="1">
 <thead>
@@ -72,13 +71,13 @@
 <p><img style="width: 100%; float: none; align: middle;" src="CARINSequence.png" /> Actors:</p>
 <ul>
 <li>Consumer (aka Subscriber, Beneficiary, Patient, or Personal Representative)</li>
-<li>Consumer App- A digital third-party application selected by and primarily for the Consumer with a consumer-facing user interface</li>
+<li>Consumer App (aka digital third-party application selected by and primarily for the Consumer with a consumer-facing user interface)</li>
 <li>Health Plan API (aka Payer, Covered Entity)</li>
 <li>Health Plan&rsquo;s Identity and Access Authorization server</li>
 </ul>
 <p>Flow:</p>
 <ol>
-<li>Consumer App presents a list of potential Payers / Health Plans to access to the Consumer.</li>
+<li>Consumer App presents a list of potential Payers / Health Plans that can be accessed by the Consumer.</li>
 <li>Consumer selects the Payer / Health Plan.</li>
 <li>Consumer App opens the link to the Health Plan's Identity and Access Authorization server.</li>
 <li>Consumer enters the credentials.</li>
@@ -89,7 +88,3 @@
 <li>Health Plan's CARIN IG for Blue Button&reg; enabled FHIR API responds with a bundle of the requested EOB and supporting reference FHIR resources.</li>
 <li>Consumer App presents the EOB and supporting reference FHIR resources to the Consumer.</li>
 </ol>
-<h3>Personas and Patient Stories</h3>
-<p><strong>TBD</strong></p>
-<p>&nbsp;</p>
-

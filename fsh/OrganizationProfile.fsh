@@ -5,6 +5,7 @@ Title: "C4BB Organization"
 Description: "This profile builds upon the US Core Organization profile. It is used to convey a payer, provider, payee or service facility organization."
 * meta.lastUpdated 1..1  MS
 * meta.profile 1..* MS
+* meta 1..1 MS
 // Slicing stuff missing?
 // * identifier ^slicing.discriminator.path = "$this"
 // * identifier ^slicing.rules = #open
@@ -34,5 +35,5 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * identifier[payerid] ^short = "Code of the payer responsible for the claim (2)"
 * identifier[naiccode] ^short = "NAIC Code of the payer responsible for the claim (2)"
 * identifier[NPI] ^short = "The National Provider Identifier assigned to the Billing Provider, Care Team members and the Service Facility (93, 94, 95, 97, 99, 100, 122, 173)"
-* meta.lastUpdated ^short = " Defines the date the organization's demographics were updated (163)"
+* meta.lastUpdated ^short = "Defines the date the organization's demographics were updated (163)"
 * meta.profile ^short = "Profile this resource claims to conform to. (189)"

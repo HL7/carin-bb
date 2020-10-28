@@ -80,20 +80,6 @@
         "coding": [
           {
             "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
-            "code": "subgroup",
-            "display": "SubGroup"
-          }
-        ],
-        "text": "A sub-group of an employee group"
-      },
-      "value": "519",
-      "name": "HMO DEDUCTIBLE WITH RX STANDAR"
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
             "code": "plan",
             "display": "Plan"
           }

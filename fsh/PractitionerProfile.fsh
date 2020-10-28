@@ -7,6 +7,7 @@ Description: "This profile builds upon the US Core Practitioner profile. It is u
 * obeys Practitioner-identifier
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
+* meta 1..1 MS
 * identifier 1..* MS
 * identifier[NPI] 0..1 MS 
 * identifier contains 

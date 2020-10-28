@@ -330,7 +330,7 @@ Usage: #example
 * total[inoutnetwork].amount.value = 0.00
 * total[inoutnetwork].amount.currency = #USD
 //* adjudication[inoutnetwork].category = C4BBAdjudication#other
-* item[0].productOrService = $FDANationalDrugCode#0777-3105-02 "100-count bottle of Prozac 20 mg"
+* item[0].productOrService = $FDANationalDrugCode#0777-3105-02 "100 CAPSULE in 1 BOTTLE (0777-3105-02)"
 * item[0].sequence = 1 
 * item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00
@@ -352,7 +352,7 @@ Usage: #example
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[brandgenericcode].category = C4BBSupportingInfoType#brandgenericcode   
 * supportingInfo[brandgenericcode].sequence = 2
-* supportingInfo[brandgenericcode].code = NCPDPBrandGenericCode#2
+* supportingInfo[brandgenericcode].code = NCPDPBrandGenericIndicator#2
 * supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode   
 * supportingInfo[rxoriginCode].code = NCPDPPrescriptionOriginCode#1
 * supportingInfo[rxoriginCode].sequence = 3
