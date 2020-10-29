@@ -74,6 +74,7 @@ history:
   introduction: This implementation guide describes the CARIN Blue Button®
     Framework and Common Payer Consumer Data Set (CPCDS), providing a set of
     resources that payers can display to consumers via a FHIR API.
+  category: Financial
   current:
     version: current
     desc: CARIN Blue Button Implementation Guide CI Build
