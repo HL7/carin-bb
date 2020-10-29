@@ -58,7 +58,7 @@
 #Dummy
 </td></tr>
 <tr><td>supportingInfo[2].code.coding[0].system</td><td>
-"http://www.nubc.org/TypeOfBill"
+"https://www.nubc.org/CodeSystem/TypeOfBill"
 </td></tr>
 <tr><td>supportingInfo[2].sequence</td><td>
 3
@@ -73,7 +73,7 @@
 #Dummy
 </td></tr>
 <tr><td>supportingInfo[3].code.coding[0].system</td><td>
-"http://www.nubc.org/PointOfOriginForAdmissionOrVisit"
+"https://www.nubc.org/CodeSystem/PointOfOrigin"
 </td></tr>
 <tr><td>supportingInfo[3].sequence</td><td>
 4
@@ -88,7 +88,7 @@
 #Dummy
 </td></tr>
 <tr><td>supportingInfo[4].code.coding[0].system</td><td>
-"http://www.nubc.org/PriorityTypeOfAdmissionOrVisit"
+"https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit"
 </td></tr>
 <tr><td>supportingInfo[4].sequence</td><td>
 5
@@ -103,7 +103,7 @@
 #Dummy
 </td></tr>
 <tr><td>supportingInfo[5].code.coding[0].system</td><td>
-"http://www.nubc.org/PatientDischargeStatus"
+"https://www.nubc.org/CodeSystem/PatDischargeStatus"
 </td></tr>
 <tr><td>supportingInfo[5].sequence</td><td>
 6

@@ -1,11 +1,11 @@
 {
   "resourceType": "ExplanationOfBenefit",
-  "id": "EOBProfessionalEx1",
+  "id": "ExampleOutpatientInstitutionalEOB1",
   "meta": {
-    "lastUpdated": "2020-10-14T12:38:12-04:00",
-    "source": "Organization/PayerOrgEx1",
+    "lastUpdated": "2020-10-13T11:10:24-04:00",
+    "source": "Organization/1",
     "profile": [
-      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"
+      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional"
     ]
   },
   "identifier": [
@@ -21,7 +21,7 @@
         "text": "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
       },
       "system": "https://www.upmchealthplan.com/fhir/EOBIdentifier",
-      "value": "XXXYYYZZZ123456"
+      "value": "ExampleOutpatientInstitutionalEOB1"
     }
   ],
   "status": "active",
@@ -29,26 +29,26 @@
     "coding": [
       {
         "system": "http://terminology.hl7.org/CodeSystem/claim-type",
-        "code": "professional"
+        "code": "institutional"
       }
     ],
-    "text": "Professional"
+    "text": "Institutional"
   },
   "use": "claim",
   "patient": {
-    "reference": "Patient/PatientEx1"
+    "reference": "Patient/ExamplePatient1"
   },
   "billablePeriod": {
-    "start": "2020-10-07T00:00:00-04:00",
-    "end": "2020-10-07T00:00:00-04:00"
+    "start": "2020-09-29T00:00:00-04:00",
+    "end": "2020-09-29T00:00:00-04:00"
   },
-  "created": "2020-10-13T00:00:00-04:00",
+  "created": "2020-10-10T00:00:00-04:00",
   "insurer": {
-    "reference": "Organization/PayerOrgEx1",
+    "reference": "Organization/1",
     "display": "UPMC Health Plan"
   },
   "provider": {
-    "reference": "Organization/ProviderOrganizationEx6"
+    "reference": "Organization/ProviderOrganization5"
   },
   "payee": {
     "type": {
@@ -62,7 +62,7 @@
       "text": "Any benefit payable will be paid to the provider (Assignment of Benefit)."
     },
     "party": {
-      "reference": "Organization/ProviderOrganizationEx5"
+      "reference": "Organization/ProviderOrganization6"
     }
   },
   "outcome": "complete",
@@ -70,23 +70,23 @@
     {
       "sequence": 1,
       "provider": {
-        "reference": "Organization/ProviderOrganizationEx6"
+        "reference": "Practitioner/Practitioner1"
       },
       "role": {
         "coding": [
           {
-            "system": "http://terminology.hl7.org/CodeSystem/claimcareteamrole",
-            "code": "primary",
-            "display": "Primary provider"
+            "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimCareTeamRole",
+            "code": "attending",
+            "display": "Attending"
           }
         ],
-        "text": "The primary care provider."
+        "text": "The attending physician"
       }
     },
     {
       "sequence": 2,
       "provider": {
-        "reference": "Practitioner/PractitionerEx3"
+        "reference": "Practitioner/Practitioner3"
       },
       "role": {
         "coding": [
@@ -136,7 +136,7 @@
         ],
         "text": "Date the claim was received by the payer."
       },
-      "timingDate": "2020-10-13"
+      "timingDate": "2020-10-10"
     }
   ],
   "diagnosis": [
@@ -146,7 +146,7 @@
         "coding": [
           {
             "system": "http://hl7.org/fhir/sid/icd-10-cm",
-            "code": "L60.3"
+            "code": "I95.1"
           }
         ]
       },
@@ -169,7 +169,7 @@
         "coding": [
           {
             "system": "http://hl7.org/fhir/sid/icd-10-cm",
-            "code": "I73.9"
+            "code": "I95.1"
           }
         ]
       },
@@ -178,11 +178,11 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType",
-              "code": "secondary",
-              "display": "secondary"
+              "code": "other",
+              "display": "Other"
             }
           ],
-          "text": "Required when necessary to report additional diagnoses on professional and non-clinician claims"
+          "text": "Required when other conditions coexist or develop subsequently during the treatment"
         }
       ]
     },
@@ -192,7 +192,7 @@
         "coding": [
           {
             "system": "http://hl7.org/fhir/sid/icd-10-cm",
-            "code": "I96"
+            "code": "L97.529"
           }
         ]
       },
@@ -201,11 +201,11 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType",
-              "code": "secondary",
-              "display": "secondary"
+              "code": "other",
+              "display": "Other"
             }
           ],
-          "text": "Required when necessary to report additional diagnoses on professional and non-clinician claims"
+          "text": "Required when other conditions coexist or develop subsequently during the treatment"
         }
       ]
     },
@@ -215,7 +215,7 @@
         "coding": [
           {
             "system": "http://hl7.org/fhir/sid/icd-10-cm",
-            "code": "R23.4"
+            "code": "I73.9"
           }
         ]
       },
@@ -224,11 +224,11 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType",
-              "code": "secondary",
-              "display": "secondary"
+              "code": "other",
+              "display": "Other"
             }
           ],
-          "text": "Required when necessary to report additional diagnoses on professional and non-clinician claims"
+          "text": "Required when other conditions coexist or develop subsequently during the treatment"
         }
       ]
     }
@@ -237,30 +237,30 @@
     {
       "focal": true,
       "coverage": {
-        "reference": "Coverage/CoverageEx2"
+        "reference": "Coverage/ExampleCoverage2"
       }
     }
   ],
   "item": [
     {
       "sequence": 1,
-      "productOrService": {
+      "revenue": {
         "coding": [
           {
-            "system": "http://www.ama-assn.org/go/cpt",
-            "code": "11730"
+            "system": "http://www.nubc.org/RevenueCodes",
+            "code": "0551"
           }
         ]
       },
-      "servicedDate": "2020-10-07",
+      "servicedDate": "2020-09-29",
       "locationCodeableConcept": {
         "coding": [
           {
             "system": "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set",
-            "code": "11"
+            "code": "12"
           }
         ],
-        "text": "OFFICE"
+        "text": "HOME"
       },
       "adjudication": [
         {
@@ -275,7 +275,7 @@
             "text": "The total submitted amount for the claim or group or line item."
           },
           "amount": {
-            "value": 96.4,
+            "value": 84.4,
             "currency": "USD"
           }
         },
@@ -291,7 +291,7 @@
             "text": "Patient Co-Payment"
           },
           "amount": {
-            "value": 14.0,
+            "value": 0.0,
             "currency": "USD"
           }
         },
@@ -307,7 +307,7 @@
             "text": "Amount of the change which is considered for adjudication."
           },
           "amount": {
-            "value": 43.46,
+            "value": 56.52,
             "currency": "USD"
           }
         },
@@ -339,7 +339,7 @@
             "text": "Amount payable under the coverage"
           },
           "amount": {
-            "value": 29.46,
+            "value": 56.52,
             "currency": "USD"
           }
         },
@@ -358,17 +358,124 @@
             "value": 0.0,
             "currency": "USD"
           }
+        }
+      ]
+    },
+    {
+      "sequence": 2,
+      "revenue": {
+        "coding": [
+          {
+            "system": "http://www.nubc.org/RevenueCodes",
+            "code": "0023"
+          }
+        ]
+      },
+      "servicedDate": "2020-09-29",
+      "locationCodeableConcept": {
+        "coding": [
+          {
+            "system": "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set",
+            "code": "12"
+          }
+        ],
+        "text": "HOME"
+      },
+      "adjudication": [
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                "code": "submitted",
+                "display": "Submitted Amount"
+              }
+            ],
+            "text": "The total submitted amount for the claim or group or line item."
+          },
+          "amount": {
+            "value": 0.0,
+            "currency": "USD"
+          }
         },
         {
           "category": {
             "coding": [
               {
-                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
-                "code": "innetwork",
-                "display": "In Network"
+                "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                "code": "copay",
+                "display": "CoPay"
               }
             ],
-            "text": "Indicates the claim or claim line was paid in network. This does not indicate the contracting status of the provider"
+            "text": "Patient Co-Payment"
+          },
+          "amount": {
+            "value": 0.0,
+            "currency": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                "code": "eligible",
+                "display": "Eligible Amount"
+              }
+            ],
+            "text": "Amount of the change which is considered for adjudication."
+          },
+          "amount": {
+            "value": 0.0,
+            "currency": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                "code": "deductible",
+                "display": "Deductible"
+              }
+            ],
+            "text": "Amount deducted from the eligible amount prior to adjudication."
+          },
+          "amount": {
+            "value": 0.0,
+            "currency": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+                "code": "benefit",
+                "display": "Benefit Amount"
+              }
+            ],
+            "text": "Amount payable under the coverage"
+          },
+          "amount": {
+            "value": 0.0,
+            "currency": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
+                "code": "noncovered",
+                "display": "Noncovered"
+              }
+            ],
+            "text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+          },
+          "amount": {
+            "value": 0.0,
+            "currency": "USD"
           }
         }
       ]
@@ -387,7 +494,7 @@
         "text": "The total submitted amount for the claim or group or line item."
       },
       "amount": {
-        "value": 96.4,
+        "value": 84.4,
         "currency": "USD"
       }
     },
@@ -403,7 +510,7 @@
         "text": "Amount of the change which is considered for adjudication."
       },
       "amount": {
-        "value": 43.46,
+        "value": 56.52,
         "currency": "USD"
       }
     },
@@ -435,7 +542,7 @@
         "text": "Patient Co-Payment"
       },
       "amount": {
-        "value": 14.0,
+        "value": 0.0,
         "currency": "USD"
       }
     },
@@ -467,7 +574,7 @@
         "text": "Amount payable under the coverage"
       },
       "amount": {
-        "value": 29.46,
+        "value": 56.52,
         "currency": "USD"
       }
     },

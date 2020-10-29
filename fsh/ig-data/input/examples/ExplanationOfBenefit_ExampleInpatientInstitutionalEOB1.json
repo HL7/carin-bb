@@ -1,9 +1,9 @@
 {
   "resourceType": "ExplanationOfBenefit",
-  "id": "EOBInpatientInstitutionalEx1",
+  "id": "ExampleInpatientInstitutionalEOB1",
   "meta": {
     "lastUpdated": "2020-04-28T15:39:36-04:00",
-    "source": "Organization/PayerOrgEx1",
+    "source": "Organization/1",
     "profile": [
       "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional"
     ]
@@ -21,7 +21,7 @@
         "text": "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
       },
       "system": "https://www.upmchealthplan.com/fhir/EOBIdentifier",
-      "value": "YYYUUUIIIOOO4567"
+      "value": "ExampleInpatientInstitutionalEOB1"
     }
   ],
   "status": "active",
@@ -36,7 +36,7 @@
   },
   "use": "claim",
   "patient": {
-    "reference": "Patient/PatientEx1"
+    "reference": "Patient/ExamplePatient1"
   },
   "billablePeriod": {
     "start": "2017-05-23T00:00:00-04:00",
@@ -44,11 +44,11 @@
   },
   "created": "2017-06-01T00:00:00-04:00",
   "insurer": {
-    "reference": "Organization/PayerOrgEx1",
+    "reference": "Organization/1",
     "display": "UPMC Health Plan"
   },
   "provider": {
-    "reference": "Organization/ProviderOrganizationEx4"
+    "reference": "Organization/ProviderOrganization3"
   },
   "payee": {
     "type": {
@@ -62,7 +62,7 @@
       "text": "Any benefit payable will be paid to the provider (Assignment of Benefit)."
     },
     "party": {
-      "reference": "Organization/ProviderOrganizationEx3"
+      "reference": "Organization/ProviderOrganization4"
     }
   },
   "outcome": "complete",
@@ -70,7 +70,7 @@
     {
       "sequence": 1,
       "provider": {
-        "reference": "Practitioner/PractitionerEx1"
+        "reference": "Practitioner/Practitioner2"
       },
       "role": {
         "coding": [
@@ -86,7 +86,7 @@
     {
       "sequence": 2,
       "provider": {
-        "reference": "Practitioner/PractitionerEx1"
+        "reference": "Practitioner/Practitioner2"
       },
       "role": {
         "coding": [
@@ -269,7 +269,7 @@
         "coding": [
           {
             "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0301"
+            "code": "4A023N7"
           }
         ]
       }
@@ -293,7 +293,7 @@
         "coding": [
           {
             "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0260"
+            "code": "B211YZZ"
           }
         ]
       }
@@ -317,247 +317,7 @@
         "coding": [
           {
             "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0305"
-          }
-        ]
-      }
-    },
-    {
-      "sequence": 4,
-      "type": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType",
-              "code": "other",
-              "display": "Other"
-            }
-          ],
-          "text": "Other procedures performed during the inpatient institutional admission"
-        }
-      ],
-      "date": "2017-05-23T00:00:00-04:00",
-      "procedureCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0324"
-          }
-        ]
-      }
-    },
-    {
-      "sequence": 5,
-      "type": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType",
-              "code": "other",
-              "display": "Other"
-            }
-          ],
-          "text": "Other procedures performed during the inpatient institutional admission"
-        }
-      ],
-      "date": "2017-05-23T00:00:00-04:00",
-      "procedureCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0259"
-          }
-        ]
-      }
-    },
-    {
-      "sequence": 6,
-      "type": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType",
-              "code": "other",
-              "display": "Other"
-            }
-          ],
-          "text": "Other procedures performed during the inpatient institutional admission"
-        }
-      ],
-      "date": "2017-05-23T00:00:00-04:00",
-      "procedureCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0250"
-          }
-        ]
-      }
-    },
-    {
-      "sequence": 7,
-      "type": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType",
-              "code": "other",
-              "display": "Other"
-            }
-          ],
-          "text": "Other procedures performed during the inpatient institutional admission"
-        }
-      ],
-      "date": "2017-05-23T00:00:00-04:00",
-      "procedureCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0710"
-          }
-        ]
-      }
-    },
-    {
-      "sequence": 8,
-      "type": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType",
-              "code": "other",
-              "display": "Other"
-            }
-          ],
-          "text": "Other procedures performed during the inpatient institutional admission"
-        }
-      ],
-      "date": "2017-05-23T00:00:00-04:00",
-      "procedureCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0210"
-          }
-        ]
-      }
-    },
-    {
-      "sequence": 9,
-      "type": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType",
-              "code": "other",
-              "display": "Other"
-            }
-          ],
-          "text": "Other procedures performed during the inpatient institutional admission"
-        }
-      ],
-      "date": "2017-05-23T00:00:00-04:00",
-      "procedureCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0272"
-          }
-        ]
-      }
-    },
-    {
-      "sequence": 10,
-      "type": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType",
-              "code": "other",
-              "display": "Other"
-            }
-          ],
-          "text": "Other procedures performed during the inpatient institutional admission"
-        }
-      ],
-      "date": "2017-05-23T00:00:00-04:00",
-      "procedureCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0370"
-          }
-        ]
-      }
-    },
-    {
-      "sequence": 11,
-      "type": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType",
-              "code": "other",
-              "display": "Other"
-            }
-          ],
-          "text": "Other procedures performed during the inpatient institutional admission"
-        }
-      ],
-      "date": "2017-05-23T00:00:00-04:00",
-      "procedureCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0730"
-          }
-        ]
-      }
-    },
-    {
-      "sequence": 12,
-      "type": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType",
-              "code": "other",
-              "display": "Other"
-            }
-          ],
-          "text": "Other procedures performed during the inpatient institutional admission"
-        }
-      ],
-      "date": "2017-05-23T00:00:00-04:00",
-      "procedureCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0450"
-          }
-        ]
-      }
-    },
-    {
-      "sequence": 13,
-      "type": [
-        {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType",
-              "code": "other",
-              "display": "Other"
-            }
-          ],
-          "text": "Other procedures performed during the inpatient institutional admission"
-        }
-      ],
-      "date": "2017-05-23T00:00:00-04:00",
-      "procedureCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.cms.gov/Medicare/Coding/ICD10",
-            "code": "0481"
+            "code": "B215YZZ"
           }
         ]
       }
@@ -567,7 +327,7 @@
     {
       "focal": true,
       "coverage": {
-        "reference": "Coverage/CoverageEx1"
+        "reference": "Coverage/ExampleCoverage1"
       }
     }
   ],
@@ -578,14 +338,6 @@
         "coding": [
           {
             "system": "http://www.nubc.org/RevenueCodes",
-            "code": "0301"
-          }
-        ]
-      },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
             "code": "0301"
           }
         ]
@@ -711,14 +463,6 @@
           }
         ]
       },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
-            "code": "0260"
-          }
-        ]
-      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -836,14 +580,6 @@
         "coding": [
           {
             "system": "http://www.nubc.org/RevenueCodes",
-            "code": "0305"
-          }
-        ]
-      },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
             "code": "0305"
           }
         ]
@@ -969,14 +705,6 @@
           }
         ]
       },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
-            "code": "0324"
-          }
-        ]
-      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -1094,14 +822,6 @@
         "coding": [
           {
             "system": "http://www.nubc.org/RevenueCodes",
-            "code": "0259"
-          }
-        ]
-      },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
             "code": "0259"
           }
         ]
@@ -1227,14 +947,6 @@
           }
         ]
       },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
-            "code": "0250"
-          }
-        ]
-      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -1352,14 +1064,6 @@
         "coding": [
           {
             "system": "http://www.nubc.org/RevenueCodes",
-            "code": "0710"
-          }
-        ]
-      },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
             "code": "0710"
           }
         ]
@@ -1485,14 +1189,6 @@
           }
         ]
       },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
-            "code": "0210"
-          }
-        ]
-      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -1610,14 +1306,6 @@
         "coding": [
           {
             "system": "http://www.nubc.org/RevenueCodes",
-            "code": "0272"
-          }
-        ]
-      },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
             "code": "0272"
           }
         ]
@@ -1743,14 +1431,6 @@
           }
         ]
       },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
-            "code": "0370"
-          }
-        ]
-      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -1868,14 +1548,6 @@
         "coding": [
           {
             "system": "http://www.nubc.org/RevenueCodes",
-            "code": "0730"
-          }
-        ]
-      },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
             "code": "0730"
           }
         ]
@@ -2001,14 +1673,6 @@
           }
         ]
       },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
-            "code": "0450"
-          }
-        ]
-      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -2130,14 +1794,6 @@
           }
         ]
       },
-      "productOrService": {
-        "coding": [
-          {
-            "system": "http://www.ama-assn.org/go/cpt",
-            "code": "0481"
-          }
-        ]
-      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -2248,53 +1904,6 @@
           }
         }
       ]
-    }
-  ],
-  "adjudication": [
-    {
-      "category": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-            "code": "paidtoprovider"
-          }
-        ],
-        "text": "Payment Amount"
-      },
-      "amount": {
-        "value": 620,
-        "currency": "USD"
-      }
-    },
-    {
-      "category": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/adjudication",
-            "code": "submitted"
-          }
-        ],
-        "text": "Submitted Amount"
-      },
-      "amount": {
-        "value": 2650,
-        "currency": "USD"
-      }
-    },
-    {
-      "category": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-            "code": "paidbypatient"
-          }
-        ],
-        "text": "Patient Pay Amount"
-      },
-      "amount": {
-        "value": 0,
-        "currency": "USD"
-      }
     }
   ],
   "total": [

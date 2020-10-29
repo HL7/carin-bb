@@ -97,36 +97,18 @@ MCHMO1
 "http://terminology.hl7.org/CodeSystem/coverage-class"
 </td></tr>
 <tr><td>class[1].type.coding[0].code</td><td>
-#subgroup
-</td></tr>
-<tr><td>class[1].type.coding[0].display</td><td>
-"SubGroup"
-</td></tr>
-<tr><td>class[1].type.text</td><td>
-"A sub-group of an employee group"
-</td></tr>
-<tr><td>class[1].value</td><td>
-570
-</td></tr>
-<tr><td>class[1].name</td><td>
-"STANDARD-VBID"
-</td></tr>
-<tr><td>class[2].type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/coverage-class"
-</td></tr>
-<tr><td>class[2].type.coding[0].code</td><td>
 #plan
 </td></tr>
-<tr><td>class[2].type.coding[0].display</td><td>
+<tr><td>class[1].type.coding[0].display</td><td>
 "Plan"
 </td></tr>
-<tr><td>class[2].type.text</td><td>
+<tr><td>class[1].type.text</td><td>
 "A specific suite of benefits."
 </td></tr>
-<tr><td>class[2].value</td><td>
+<tr><td>class[1].value</td><td>
 GR5
 </td></tr>
-<tr><td>class[2].name</td><td>
+<tr><td>class[1].name</td><td>
 "GR5-HMO DEDUCTIBLE"
 </td></tr>
 <tr><td>network</td><td>
