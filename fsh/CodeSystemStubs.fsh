@@ -745,7 +745,7 @@ The clinical modification represents a significant improvement over ICD-9-CM and
 
 Current and previous releases of ICD-10-CM are available in PDF and XML format here: [https://www.cdc.gov/nchs/icd/icd10cm.htm](https://www.cdc.gov/nchs/icd/icd10cm.htm)
 
-Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to [nchsicd10cm@cdc.gov](mailto:nchsicd10cm@cdc.gov)."  
+Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to nchsicd10cm@cdc.gov."  
 * ^url = "http://hl7.org/fhir/sid/icd-10-cm" 
 * insert CodeSystemStubBoilerplate
 * insert ICD10CMCopyrightNotice
@@ -791,7 +791,7 @@ Current and previous releases of ICD-9-CM are available here: [https://www.cdc.
 
 Current and previous releases of ICD-10-CM are available in PDF and XML format here: [https://www.cdc.gov/nchs/icd/icd10cm.htm](https://www.cdc.gov/nchs/icd/icd10cm.htm)
 
-Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to [nchsicd10cm@cdc.gov](mailto:nchsicd10cm@cdc.gov)."
+Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to nchsicd10cm@cdc.gov."
 * codes from system ICD10CM
 * codes from system ICD9CM
 * insert ICD10CMCopyrightNotice
