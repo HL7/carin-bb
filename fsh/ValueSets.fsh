@@ -1,7 +1,7 @@
 // Contains ValueSets for Codes Defined WITHIN this IG  
 
 ValueSet: C4BBClaimInstitutionalCareTeamRole 
-Title: "C4BB Claim Institutional Care Team Role "
+Title: "C4BB Claim Institutional Care Team Role"
 Description: "Describes functional roles of the care team members."
 * $CareTeamRoleCodeCS#primary 
 * C4BBClaimCareTeamRole#attending 
@@ -14,7 +14,7 @@ Description: "Describes functional roles of the care team members."
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimProfessionalAndNonClinicianCareTeamRole   
-Title: "C4BB Claim Professional And Non Clinician Care Team Role "
+Title: "C4BB Claim Professional And Non Clinician Care Team Role"
 Description: "Describes functional roles of the care team members"
 * $CareTeamRoleCodeCS#primary 
 * $CareTeamRoleCodeCS#supervisor

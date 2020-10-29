@@ -6,7 +6,7 @@ Description: "Abstract parent profile that includes constraints that are common 
 All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
-* meta MS
+* meta 1..1 MS
 * ^abstract = true 
 * identifier 1..* MS 
 * identifier.type 1..1 MS
@@ -70,7 +70,7 @@ All EOB instances should be from one of the four non-abstract EOB profiles defin
 * billablePeriod.end ^short = "The last day on the billing statement covering services rendered to the beneficiary (i.e. 'Statement Covers Thru Date’). (178)"
 * insurer ^short = "Code of the payer responsible for the claim. (2, 5)"
 * provider ^short = "The identifier assigned to the Billing Provider. (94)"
-* related ^short = "If the current claim represents a claim that has been adjusted and was given a prior claim number, this field represents the prior claim number. If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number.(111, 112) "
+* related ^short = "If the current claim represents a claim that has been adjusted and was given a prior claim number, this field represents the prior claim number. If the current claim has been adjusted; i.e., replaced by or merged to another claim number, this data element represents that new number.(111, 112)"
 * payee.type ^short = "Identifies the type of recipient of the adjudication amount; i.e., provider, subscriber, beneficiary or another recipient. (120)"
 * payee.party ^short = "Recipient reference. (121)"
 * supportingInfo ^short = "Defines data elements not available in the base EOB resource"

@@ -1,5 +1,8 @@
 <h4 class="x_MsoNormal">Notes on Fields</h4>
 <ul>
+<li class="x_MsoNormal">CPCDS data elements are mapped to EOB header or EOB.item data elements in alignment with claims submission standards.&nbsp; Line item amounts and amount types are to be provided in EOB.item.&nbsp; If a Payer does not have line item amounts, provide the claim amounts and amount types in the EOB header data elements.&nbsp; Total amounts, amount types and the in network or out of network payment status of the claim are to be provided in EOB.total.</li>
+<li class="x_MsoNormal">The determination of inpatient vs. outpatient institutional claims is defined by the Type of Bill. The NUBC manual defines which TOBs are inpatient vs outpatient.</li>
+<li class="x_MsoNormal">A CPT / HCPCS code may not be available on an inpatient institutional claim. The cardinality of the HL7 base EOB Resource for item.productOrService is 1..1 if .item is provided.&nbsp; Since .item.revenue is required it means that item.productOrService must be populated.&nbsp; Since the profile is not able to relax the cardinality of the resource, it is recommended payers provide a data absent when a CPT / HCPCS code is not available.</li>
 <li class="x_MsoNormal">.diagnosis:&nbsp; ICD-10 / ICD-9 diagnosis codes are defined as CodeableConcepts</li>
 <li class="x_MsoNormal">.diagnosis.sequence rule:&nbsp; diagnosis.sequence values do not necessarily indiate any order in which the diagnosis was reported or identified.&nbsp; client app implementations should not assign any significance to the sequence values.&nbsp; client app implementations should use the values of diagnosis.type to identify primary, secondary, etc.&nbsp;</li>
 <li class="x_MsoNormal">.procedure:&nbsp; ICD-10 / ICD-9 procedure codes are defined as CodeableConcepts</li>
@@ -12,3 +15,10 @@
 <li class="x_MsoNormal">The numbers, e.g. (1), following the data element descriptions correlate to the MapID in the <a href="CPCDSDataDictionary.docx">CPCDS Data Dictionary</a> and the <a href="CPCDStoFHIRProfilesMapping.xlsx">Mapping Worksheet</a>&nbsp;as described&nbsp;<a href="Common_Payer_Consumer_Data_Set.html">here.</a></li>
 </ul>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="x_xxmsonormal">CPCDS data elements are mapped to EOB header or EOB.item data elements in alignment with claims submission standards.&nbsp; Line item amounts and amount types are to be provided in EOB.item.&nbsp; If a Payer does not have line item amounts, provide the claim amounts and amount types in the EOB header data elements.&nbsp; Total amounts, amount types and the in network or out of network payment status of the claim are to be provided in&nbsp;<a href="https://urldefense.proofpoint.com/v2/url?u=http-3A__EOB.total&amp;d=DwQF-g&amp;c=aIUDzRSH0GV4AQi9KEcOBQ&amp;r=yWXMVZr0SziUyEVZ56vTdlmXBCJDn2JEHB1y1-Ra3ig&amp;m=Wi6miEQi47zxoDQPCMzzTG_deD39pSg3hAw7Bs_qB8Y&amp;s=AeiePRE0avEC2KQZc1pSxFp3fWAVjGCVmKu5QjTert4&amp;e=" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable">EOB.total</a>.</p>
+<p class="x_xxmsonormal">&nbsp;</p>
+<p class="x_xxmsonormal">The determination of inpatient vs. outpatient institutional claims is defined by the Type of Bill. The NUBC manual defines which TOBs are inpatient vs outpatient.</p>
+<p class="x_xxmsonormal">&nbsp;</p>
+<p class="x_xxmsonormal">A CPT / HCPCS code may not be available on an inpatient institutional claim. The cardinality of the HL7 base EOB Resource for item.productOrService is 1..1 if .item is provided.&nbsp; Since .item.revenue is required it means that item.productOrService must be populated.&nbsp; Since the profile is not able to relax the cardinality of the resource, it is recommended payers provide a data absent when a CPT / HCPCS code is not available.</p>
