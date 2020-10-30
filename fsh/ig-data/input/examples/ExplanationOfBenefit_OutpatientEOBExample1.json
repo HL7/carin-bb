@@ -1,9 +1,9 @@
 {
   "resourceType": "ExplanationOfBenefit",
-  "id": "ExampleOutpatientInstitutionalEOB1",
+  "id": "OutpatientEOBExample1",
   "meta": {
     "lastUpdated": "2020-10-13T11:10:24-04:00",
-    "source": "Organization/1",
+    "source": "Organization/PayerOrganizationExample1",
     "profile": [
       "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional"
     ]
@@ -21,7 +21,7 @@
         "text": "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
       },
       "system": "https://www.upmchealthplan.com/fhir/EOBIdentifier",
-      "value": "ExampleOutpatientInstitutionalEOB1"
+      "value": "OutpatientEOBExample1"
     }
   ],
   "status": "active",
@@ -44,7 +44,7 @@
   },
   "created": "2020-10-10T00:00:00-04:00",
   "insurer": {
-    "reference": "Organization/1",
+    "reference": "Organization/PayerOrganizationExample1",
     "display": "UPMC Health Plan"
   },
   "provider": {
@@ -237,7 +237,7 @@
     {
       "focal": true,
       "coverage": {
-        "reference": "Coverage/ExampleCoverage2"
+        "reference": "Coverage/CoverageEx1"
       }
     }
   ],
@@ -249,6 +249,14 @@
           {
             "system": "http://www.nubc.org/RevenueCodes",
             "code": "0551"
+          }
+        ]
+      },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
           }
         ]
       },
@@ -371,6 +379,14 @@
           }
         ]
       },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
+          }
+        ]
+      },
       "servicedDate": "2020-09-29",
       "locationCodeableConcept": {
         "coding": [
@@ -479,6 +495,24 @@
           }
         }
       ]
+    }
+  ],
+  "adjudication": [
+    {
+      "category": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
+            "code": "noncovered",
+            "display": "Noncovered"
+          }
+        ],
+        "text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+      },
+      "amount": {
+        "value": 0.0,
+        "currency": "USD"
+      }
     }
   ],
   "total": [

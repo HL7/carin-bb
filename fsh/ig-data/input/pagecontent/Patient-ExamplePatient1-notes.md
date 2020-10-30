@@ -6,10 +6,10 @@
 "ExamplePatient1"
 </td></tr>
 <tr><td>meta.lastUpdated</td><td>
-"2020-10-28T17:17:07.2278491-04:00"
+"2020-10-30T09:48:01.8512764-04:00"
 </td></tr>
 <tr><td>meta.source</td><td>
-"Organization/1"
+"Organization/PayerOrganizationExample1"
 </td></tr>
 <tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"</td></tr>
 <tr><td>language</td><td>
@@ -31,10 +31,10 @@
 "https://www.upmchealthplan.com/fhir/memberidentifier"
 </td></tr>
 <tr><td>identifier[0].value</td><td>
-ExamplePatient1
+88800933501
 </td></tr>
 <tr><td>identifier[0].assigner.reference</td><td>
-"Organization/1"
+"Organization/PayerOrganizationExample1"
 </td></tr>
 <tr><td>identifier[0].assigner.display</td><td>
 "UPMC Health Plan"
@@ -178,7 +178,7 @@ GXXX@XXXX.com
 "true"
 </td></tr>
 <tr><td>managingOrganization.reference</td><td>
-"Organization/1"
+"Organization/PayerOrganizationExample1"
 </td></tr>
 <tr><td>managingOrganization.display</td><td>
 "UPMC Health Plan"

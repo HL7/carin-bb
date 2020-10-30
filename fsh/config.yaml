@@ -69,49 +69,29 @@ menu:
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To control the package-list.json using this config, uncomment and set the "history" property. │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-history:
-  title: CARIN Blue Button Implementation Guide
-  introduction: This implementation guide describes the CARIN Blue Button®
-    Framework and Common Payer Consumer Data Set (CPCDS), providing a set of
-    resources that payers can display to consumers via a FHIR API.
-  category: Financial
-  current:
-    version: current
-    desc: CARIN Blue Button Implementation Guide CI Build
-    path: http://build.fhir.org/ig/HL7/carin-bb
-    status: ci-build
-    current: true
-  0.1.0:
-    desc: CARIN Blue Button FHIR IG STU1 ballot
-    date: 2019-12-22
-    sequence: STU1
-    path: http://hl7.org/fhir/us/carin-bb/2020Feb
-    status: ballot
-    fhirversion: 4.0.1
-    current: false
 
 resources:
-  Coverage/ExampleCoverage1:
+  Coverage/CoverageEx1:
     name: Coverage Example 1
     description: Coverage Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-  Coverage/ExampleCoverage2:
+  Coverage/CoverageEx2:
     name: Coverage Example 2
     description: Coverage Example 2
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-  ExplanationOfBenefit/ExampleInpatientInstitutionalEOB1:
+  ExplanationOfBenefit/InpatientEOBExample1:
     name: EOB Inpatient Institutional - Example 1
     description: EOB Inpatient Institutional - Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
-  ExplanationOfBenefit/ExampleOutpatientInstitutionalEOB1:              
+  ExplanationOfBenefit/OutpatientEOBExample1:              
     name: EOB Outpatient Institutional - Example 1
     description: EOB Outpatient Institutional - Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
-  ExplanationOfBenefit/ExampleProfessionalEOB1:
+  ExplanationOfBenefit/ProfessionalEOBExample1:
     name: EOB Professional - Example 1
     description: EOB Professional - Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
-  Organization/1:
+  Organization/PayerOrganizationExample1:
     name: Payer Organization Example 1
     description: Payer Organization Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization

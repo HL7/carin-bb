@@ -1,9 +1,9 @@
 {
   "resourceType": "Organization",
-  "id": "1",
+  "id": "PayerOrganizationExample1",
   "meta": {
     "lastUpdated": "2020-09-08T00:00:00+00:00",
-    "source": "Organization/1",
+    "source": "Organization/PayerOrganizationExample1",
     "profile": [
       "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization"
     ]

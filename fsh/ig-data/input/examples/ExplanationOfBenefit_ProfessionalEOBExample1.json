@@ -1,9 +1,9 @@
 {
   "resourceType": "ExplanationOfBenefit",
-  "id": "ExampleProfessionalEOB1",
+  "id": "ProfessionalEOBExample1",
   "meta": {
     "lastUpdated": "2020-10-20T14:46:05-04:00",
-    "source": "Organization/1",
+    "source": "Organization/PayerOrganizationExample1",
     "profile": [
       "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician"
     ]
@@ -21,7 +21,7 @@
         "text": "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
       },
       "system": "https://www.upmchealthplan.com/fhir/EOBIdentifier",
-      "value": "ExampleProfessionalEOB1"
+      "value": "ProfessionalEOBExample1"
     }
   ],
   "status": "active",
@@ -44,7 +44,7 @@
   },
   "created": "2020-08-24T00:00:00-04:00",
   "insurer": {
-    "reference": "Organization/1",
+    "reference": "Organization/PayerOrganizationExample1",
     "display": "UPMC Health Plan"
   },
   "provider": {
@@ -191,7 +191,7 @@
     {
       "focal": true,
       "coverage": {
-        "reference": "Coverage/ExampleCoverage2"
+        "reference": "Coverage/CoverageEx1"
       }
     }
   ],

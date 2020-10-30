@@ -1,9 +1,9 @@
 {
   "resourceType": "ExplanationOfBenefit",
-  "id": "ExampleInpatientInstitutionalEOB1",
+  "id": "InpatientEOBExample1",
   "meta": {
     "lastUpdated": "2020-04-28T15:39:36-04:00",
-    "source": "Organization/1",
+    "source": "Organization/PayerOrganizationExample1",
     "profile": [
       "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional"
     ]
@@ -21,7 +21,7 @@
         "text": "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
       },
       "system": "https://www.upmchealthplan.com/fhir/EOBIdentifier",
-      "value": "ExampleInpatientInstitutionalEOB1"
+      "value": "InpatientEOBExample1"
     }
   ],
   "status": "active",
@@ -44,7 +44,7 @@
   },
   "created": "2017-06-01T00:00:00-04:00",
   "insurer": {
-    "reference": "Organization/1",
+    "reference": "Organization/PayerOrganizationExample1",
     "display": "UPMC Health Plan"
   },
   "provider": {
@@ -327,7 +327,7 @@
     {
       "focal": true,
       "coverage": {
-        "reference": "Coverage/ExampleCoverage1"
+        "reference": "Coverage/CoverageEx2"
       }
     }
   ],
@@ -339,6 +339,14 @@
           {
             "system": "http://www.nubc.org/RevenueCodes",
             "code": "0301"
+          }
+        ]
+      },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
           }
         ]
       },
@@ -463,6 +471,14 @@
           }
         ]
       },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
+          }
+        ]
+      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -581,6 +597,14 @@
           {
             "system": "http://www.nubc.org/RevenueCodes",
             "code": "0305"
+          }
+        ]
+      },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
           }
         ]
       },
@@ -705,6 +729,14 @@
           }
         ]
       },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
+          }
+        ]
+      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -823,6 +855,14 @@
           {
             "system": "http://www.nubc.org/RevenueCodes",
             "code": "0259"
+          }
+        ]
+      },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
           }
         ]
       },
@@ -947,6 +987,14 @@
           }
         ]
       },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
+          }
+        ]
+      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -1065,6 +1113,14 @@
           {
             "system": "http://www.nubc.org/RevenueCodes",
             "code": "0710"
+          }
+        ]
+      },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
           }
         ]
       },
@@ -1189,6 +1245,14 @@
           }
         ]
       },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
+          }
+        ]
+      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -1307,6 +1371,14 @@
           {
             "system": "http://www.nubc.org/RevenueCodes",
             "code": "0272"
+          }
+        ]
+      },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
           }
         ]
       },
@@ -1431,6 +1503,14 @@
           }
         ]
       },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
+          }
+        ]
+      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -1549,6 +1629,14 @@
           {
             "system": "http://www.nubc.org/RevenueCodes",
             "code": "0730"
+          }
+        ]
+      },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
           }
         ]
       },
@@ -1673,6 +1761,14 @@
           }
         ]
       },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
+          }
+        ]
+      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -1794,6 +1890,14 @@
           }
         ]
       },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://www.ama-assn.org/go/cpt",
+            "code": "99231"
+          }
+        ]
+      },
       "servicedPeriod": {
         "start": "2017-05-23T00:00:00-04:00"
       },
@@ -1904,6 +2008,24 @@
           }
         }
       ]
+    }
+  ],
+  "adjudication": [
+    {
+      "category": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
+            "code": "noncovered",
+            "display": "Noncovered"
+          }
+        ],
+        "text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+      },
+      "amount": {
+        "value": 0.0,
+        "currency": "USD"
+      }
     }
   ],
   "total": [
