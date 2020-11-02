@@ -12,11 +12,10 @@
 <p class="x_MsoNormal">There are two paths to get to the Patient Resource and the data elements represented inside the Patient Resource:&nbsp;&nbsp;EOB.patient(Patient) and EOB.insurance.coverage(Coverage).beneficiary(Patient)</p>
 <h4 class="x_MsoNormal">Notes on Fields</h4>
 <ul>
-
-<li class="x_MsoNormal">.meta.lastUpdated:&nbsp;Payers SHALL provide the last time the data was updated or the date of creation in the payer’s system of record, whichever comes last. </li>
-<li class="x_MsoNormal">.status:&nbsp; value = active | cancelled</li>
-<li class="x_MsoNormal">.type&nbsp; Defines the Claims profiles</li>
-<li class="x_MsoNormal">.use:&nbsp; value = claim&nbsp;</li>
+<li class="x_MsoNormal">.meta.lastUpdated:&nbsp;Payers SHALL provide the last time the data was updated or the date of creation in the payer&rsquo;s system of record, whichever comes last.</li>
+<li class="x_MsoNormal">.status:&nbsp; value =Expected values are active or cancelled. To comply with the CMS rule, draft EOBs are not required.&nbsp;</li>
+<li class="x_MsoNormal">.type&nbsp;Defines the Claims profiles. Values from Claim Type Codes are required; data absent reason is not allowed</li>
+<li class="x_MsoNormal">.use:&nbsp;The CMS rule applies to adjudicated claims; it does not require preauthorizations or predeterminations.</li>
 <li class="x_MsoNormal">.patient&nbsp; Additional required path:EOB.insurance.coverage(Coverage).beneficiary(Patient).identifier</li>
 <li class="x_MsoNormal">.insurer&nbsp; Same as insurance.coverage.organization.&nbsp; Party responsible for reimbursing the provider</li>
 <li class="x_MsoNormal">.outcome:&nbsp; value = complete</li>

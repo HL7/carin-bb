@@ -43,7 +43,7 @@
 #7
 </td></tr>
 <tr><td>supportingInfo[1].code.coding[0].system</td><td>
-"http://www.ncpdp.org/DispensedAsWrittenOrProductSelectionCode"
+"http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode"
 </td></tr>
 <tr><td>supportingInfo[1].sequence</td><td>
 5
@@ -88,7 +88,7 @@
 #2
 </td></tr>
 <tr><td>supportingInfo[4].code.coding[0].system</td><td>
-"http://www.ncpdp.org/BrandGenericCode"
+"http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/BrandGenericIndicator"
 </td></tr>
 <tr><td>supportingInfo[5].category.coding[0].code</td><td>
 #rxorigincode
@@ -100,7 +100,7 @@
 #1
 </td></tr>
 <tr><td>supportingInfo[5].code.coding[0].system</td><td>
-"http://www.ncpdp.org/PrescriptionOriginCode"
+"http://terminology.hl7.org/temporary/codeSystem-uri/NCPDP/PrescriptionOriginCode"
 </td></tr>
 <tr><td>supportingInfo[5].sequence</td><td>
 3
@@ -127,7 +127,7 @@
 #Dummy
 </td></tr>
 <tr><td>supportingInfo[7].code.coding[0].system</td><td>
-"http://www.ncpdp.org/CompoundCode"
+"http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/CompoundCode"
 </td></tr>
 <tr><td>supportingInfo[7].sequence</td><td>
 8
@@ -247,7 +247,7 @@ AW123412341234123412341234123412
 "http://hl7.org/fhir/sid/ndc"
 </td></tr>
 <tr><td>item[0].productOrService.coding[0].display</td><td>
-"100-count bottle of Prozac 20 mg"
+"100 CAPSULE in 1 BOTTLE (0777-3105-02)"
 </td></tr>
 <tr><td>item[0].sequence</td><td>
 1

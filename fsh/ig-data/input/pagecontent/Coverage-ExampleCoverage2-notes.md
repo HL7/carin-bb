@@ -3,13 +3,13 @@
 "Coverage"
 </td></tr>
 <tr><td>id</td><td>
-"CoverageEx1"
+"ExampleCoverage2"
 </td></tr>
 <tr><td>meta.lastUpdated</td><td>
-"2020-10-30T09:48:01.8462752-04:00"
+"2020-10-28T17:17:07.223852-04:00"
 </td></tr>
 <tr><td>meta.source</td><td>
-"Organization/PayerOrganizationExample1"
+"Organization/1"
 </td></tr>
 <tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"</td></tr>
 <tr><td>language</td><td>
@@ -31,10 +31,10 @@
 "https://www.upmchealthplan.com/fhir/memberidentifier"
 </td></tr>
 <tr><td>identifier[0].value</td><td>
-88800933501
+ExamplePatient1
 </td></tr>
 <tr><td>identifier[0].assigner.reference</td><td>
-"Organization/PayerOrganizationExample1"
+"Organization/1"
 </td></tr>
 <tr><td>identifier[0].assigner.display</td><td>
 "UPMC Health Plan"
@@ -49,7 +49,7 @@
 "Patient/ExamplePatient1"
 </td></tr>
 <tr><td>subscriberId</td><td>
-"888009335"
+"000918085"
 </td></tr>
 <tr><td>beneficiary.reference</td><td>
 "Patient/ExamplePatient1"
@@ -70,7 +70,7 @@
 "2020-01-01T00:00:00-05:00"
 </td></tr>
 <tr><td>payor[0].reference</td><td>
-"Organization/PayerOrganizationExample1"
+"Organization/1"
 </td></tr>
 <tr><td>payor[0].display</td><td>
 "UPMC Health Plan"
@@ -97,36 +97,18 @@ MCHMO1
 "http://terminology.hl7.org/CodeSystem/coverage-class"
 </td></tr>
 <tr><td>class[1].type.coding[0].code</td><td>
-#subgroup
-</td></tr>
-<tr><td>class[1].type.coding[0].display</td><td>
-"SubGroup"
-</td></tr>
-<tr><td>class[1].type.text</td><td>
-"A sub-group of an employee group"
-</td></tr>
-<tr><td>class[1].value</td><td>
-570
-</td></tr>
-<tr><td>class[1].name</td><td>
-"STANDARD-VBID"
-</td></tr>
-<tr><td>class[2].type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/coverage-class"
-</td></tr>
-<tr><td>class[2].type.coding[0].code</td><td>
 #plan
 </td></tr>
-<tr><td>class[2].type.coding[0].display</td><td>
+<tr><td>class[1].type.coding[0].display</td><td>
 "Plan"
 </td></tr>
-<tr><td>class[2].type.text</td><td>
+<tr><td>class[1].type.text</td><td>
 "A specific suite of benefits."
 </td></tr>
-<tr><td>class[2].value</td><td>
+<tr><td>class[1].value</td><td>
 GR5
 </td></tr>
-<tr><td>class[2].name</td><td>
+<tr><td>class[1].name</td><td>
 "GR5-HMO DEDUCTIBLE"
 </td></tr>
 <tr><td>network</td><td>

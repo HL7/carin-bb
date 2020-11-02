@@ -1,5 +1,5 @@
 == Suppressed Messages ==
-# The following code systems are external and not supported by terminology server -- This does not suppress the informational messages, but listed them anyways
+# The following code systems are external and not supported by terminology server 
 Code System URI 'http://www.nubc.org/TypeOfBill' is unknown so the code cannot be validated
 Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated
 Code System URI 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated
@@ -24,36 +24,27 @@ Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/Compo
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CDCICD910CMDiagnosisCodes because the value set or code system is not known to the validator]
-#informational
-INFORMATION: ImplementationGuide/hl7.fhir.us.carin-bb: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+#informational -- these examples are in the IG because they are examples of the referenced profiles. 
+INFORMATION: Coverage/ExampleCoverage1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+INFORMATION: Coverage/ExampleCoverage1: Coverage.class[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+INFORMATION: Coverage/ExampleCoverage2: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+INFORMATION: Coverage/ExampleCoverage2: Coverage.class[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+INFORMATION: ExplanationOfBenefit/ExampleInpatientInstitutionalEOB1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
+INFORMATION: ExplanationOfBenefit/ExampleOutpatientInstitutionalEOB1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
+INFORMATION: ExplanationOfBenefit/ExampleProfessionalEOB1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
+INFORMATION: Organization/1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+INFORMATION: Organization/ProviderOrganization1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+INFORMATION: Organization/ProviderOrganization3: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+INFORMATION: Organization/ProviderOrganization4: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+INFORMATION: Organization/ProviderOrganization5: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+INFORMATION: Organization/ProviderOrganization6: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+INFORMATION: Patient/ExamplePatient1: Patient: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
+INFORMATION: Practitioner/Practitioner1: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
+INFORMATION: Practitioner/Practitioner2: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
+INFORMATION: Practitioner/Practitioner3: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
 INFORMATION: Coverage/Coverage1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-INFORMATION: Coverage/CoverageEx1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-INFORMATION: Coverage/CoverageEx2: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
-INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
-INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[3].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
-INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[6].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated
-INFORMATION: ExplanationOfBenefit/EOBInpatientInstitutionalEx1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
-INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[2].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
-INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[5].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated
-INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutionalEx1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
-INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy
-INFORMATION: ExplanationOfBenefit/EOBProfessional1a: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
-INFORMATION: ExplanationOfBenefit/EOBProfessionalEx1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
-INFORMATION: Organization/OrganizationProvider1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/Payer1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/PayerOrgEx1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/ProviderOrganizationEx1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/ProviderOrganizationEx2: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/ProviderOrganizationEx3: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/ProviderOrganizationEx4: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/ProviderOrganizationEx5: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/ProviderOrganizationEx6: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Patient/Patient1: Patient: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
-INFORMATION: Patient/PatientEx1: Patient: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
-INFORMATION: Practitioner/PractitionerEx1: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
-INFORMATION: Practitioner/PractitionerEx2: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
-INFORMATION: Practitioner/PractitionerEx3: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
+# Standard FHIR resources obviously need to be validated against the associated FHIR resource.   
+INFORMATION: ImplementationGuide/hl7.fhir.us.carin-bb: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
 INFORMATION: StructureDefinition/C4BB-Coverage: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
@@ -98,6 +89,9 @@ INFORMATION: CodeSystem/CMSMSDRG: CodeSystem: Validate resource against profile 
 INFORMATION: CodeSystem/CMSPlaceofServiceCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/CMSRemittanceAdviceRemarkCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/ICD10PCS: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/ICD10CM: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/ICD9CM: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/NDC: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/NCPDPBrandGenericIndicator: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/NCPDPCompoundCode: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem

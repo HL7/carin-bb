@@ -6,10 +6,10 @@
 "CoverageEx2"
 </td></tr>
 <tr><td>meta.lastUpdated</td><td>
-"2020-10-14T18:54:46.3629901-04:00"
+"2020-10-30T09:48:01.8462752-04:00"
 </td></tr>
 <tr><td>meta.source</td><td>
-"Organization/PayerOrgEx1"
+"Organization/PayerOrganizationExample1"
 </td></tr>
 <tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"</td></tr>
 <tr><td>language</td><td>
@@ -31,10 +31,10 @@
 "https://www.upmchealthplan.com/fhir/memberidentifier"
 </td></tr>
 <tr><td>identifier[0].value</td><td>
-88897664101
+88800933501
 </td></tr>
 <tr><td>identifier[0].assigner.reference</td><td>
-"Organization/PayerOrgEx1"
+"Organization/PayerOrganizationExample1"
 </td></tr>
 <tr><td>identifier[0].assigner.display</td><td>
 "UPMC Health Plan"
@@ -43,16 +43,16 @@
 "active"
 </td></tr>
 <tr><td>policyHolder.reference</td><td>
-"Patient/PatientEx1"
+"Patient/ExamplePatient1"
 </td></tr>
 <tr><td>subscriber.reference</td><td>
-"Patient/PatientEx1"
+"Patient/ExamplePatient1"
 </td></tr>
 <tr><td>subscriberId</td><td>
-"888976641"
+"888009335"
 </td></tr>
 <tr><td>beneficiary.reference</td><td>
-"Patient/PatientEx1"
+"Patient/ExamplePatient1"
 </td></tr>
 <tr><td>dependent</td><td>
 "01"
@@ -67,10 +67,13 @@
 "Self"
 </td></tr>
 <tr><td>period.start</td><td>
-"2020-01-01T00:00:00-05:00"
+"2017-01-01T00:00:00-05:00"
+</td></tr>
+<tr><td>period.end</td><td>
+"2017-06-30T00:00:00-04:00"
 </td></tr>
 <tr><td>payor[0].reference</td><td>
-"Organization/PayerOrgEx1"
+"Organization/PayerOrganizationExample1"
 </td></tr>
 <tr><td>payor[0].display</td><td>
 "UPMC Health Plan"
@@ -106,10 +109,10 @@ MCHMO1
 "A sub-group of an employee group"
 </td></tr>
 <tr><td>class[1].value</td><td>
-570
+519
 </td></tr>
 <tr><td>class[1].name</td><td>
-"STANDARD-VBID"
+"HMO DEDUCTIBLE WITH RX STANDAR"
 </td></tr>
 <tr><td>class[2].type.coding[0].system</td><td>
 "http://terminology.hl7.org/CodeSystem/coverage-class"
@@ -124,12 +127,12 @@ MCHMO1
 "A specific suite of benefits."
 </td></tr>
 <tr><td>class[2].value</td><td>
-GR5
+GI8
 </td></tr>
 <tr><td>class[2].name</td><td>
-"GR5-HMO DEDUCTIBLE"
+"GI8-HMO DEDUCTIBLE"
 </td></tr>
 <tr><td>network</td><td>
-"GR5-HMO DEDUCTIBLE"
+"GI8-HMO DEDUCTIBLE"
 </td></tr>
 </table>
