@@ -14,16 +14,19 @@
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
-<li>Interim Version 0.1.9 - October 29+, 2020</li>
+<li>Interim Version 0.1.9 - November 2, 2020</li>
 <ol>
 <li>Please post comments to the CarinBB zulip <a href="https://chat.fhir.org/#narrow/stream/204607-CARIN-IG.20for.20Blue.20Button.C2.AE"> stream</a>.</li>
+<li>Improved notes on all profiles</li>
+<li>Updated examples</li>
+<li>Updated JiraSpec xml and package-list.json</li>
 </ol>
-<li>Interim Version 0.1.8 - October 28, 2020</li>
+<li>Interim Version 0.1.8 - October 26, 2020</li>
 <ol>
 <li>Improved notes on all profiles</li>
 <li>Cleaned up many QA issues</li>
 <li>Bound discharge status value set in EOB Outpatient</li>
-<li>Updated CPCDS attachments</li>
+<li>Refreshed all CPCDS attachments</li>
 </ol>
 <li>Interim Version 0.1.7 - October 19, 2020</li>
 <ol>
