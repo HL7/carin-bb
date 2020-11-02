@@ -41,8 +41,9 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 * class[plan].name MS
 
 
-* meta.lastUpdated ^short = "Defines the date the coverage that was effective as of the date of service or admission was created or updated, whichever is later (163)"
-* meta.lastUpdated ^definition = "Defines the date the coverage that was effective as of the date of service or admission was created or updated, whichever is later (163)"
+* meta.lastUpdated ^short = "Defines the date the coverage that was effective as of the date of service or admission (163)"
+* meta.lastUpdated ^definition = "Defines the date the coverage that was effective as of the date of service or admission (163)"
+* meta.lastUpdated ^comment = "The Coverage Reference Resource SHALL be returned with data that was effective as of the date of service or admission of the claim"
 * meta.profile ^short = "Profile this resource claims to conform to (190)"
 * meta.profile ^definition = "Profile this resource claims to conform to (190)"
 * status ^short = "Identfies the status of the coverage information (default: active) (133)"
@@ -53,7 +54,7 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 * subscriberId  ^definition = "The identifier assigned by the Payer on the subscriber's ID card (132)"
 * beneficiary ^short = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided (1)"
 * beneficiary ^definition = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided (1)"
-* beneficiary ^definition = "This is the party who receives treatment for which the costs are reimbursed under the coverage. alternate path:  EOB.patient(Patient).identifier"
+* beneficiary ^comment = "This is the party who receives treatment for which the costs are reimbursed under the coverage. alternate path:  EOB.patient(Patient).identifier"
 * relationship ^short = "Relationship of the member to the person insured (subscriber). (72)"
 * relationship ^definition = "Relationship of the member to the person insured (subscriber). (72)"
 * period ^short = "Date that the contract became effective (74) and Date that the contract was terminated or coverage changed (75)"
