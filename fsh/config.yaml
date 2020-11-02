@@ -34,7 +34,7 @@ releaseLabel: STU1
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
-# │  x To control the ig.ini using this config, uncomment and set the "template" property.           │
+# │   To control the ig.ini using this config, uncomment and set the "template" property.          │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 template: hl7.fhir.template#current
 # template: hl7.davinci.template#current
