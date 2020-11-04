@@ -16,7 +16,7 @@
 <ul>
 <li>Interim Version 0.1.10 - November 4+, 2020</li>
 <ol>
-<li>Please post comments to the CarinBB zulip <a href="https://chat.fhir.org/#narrow/stream/204607-CARIN-IG.20for.20Blue.20Button.C2.AE"> stream</a>.</li>
+<li>None yet</li>
 </ol>
 <li>Interim Version 0.1.9 - November 2, 2020</li>
 <ol>
