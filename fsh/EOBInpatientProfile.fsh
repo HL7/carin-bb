@@ -10,7 +10,7 @@ Services."
 * use MS
 * outcome MS
 
-* type.coding 1..1 MS
+//* type.coding 1..1 MS
 * type = $HL7ClaimTypeCS#institutional
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)  // was  PayerInstitutionalProviderRole 
 * billablePeriod 1..1 MS 
