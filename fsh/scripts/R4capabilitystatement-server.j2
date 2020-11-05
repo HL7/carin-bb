@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Enter your title here</title>
+	</head>
+	<body>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+		<h2 id="title">{{cs.title}}</h2>
+
+			<ul>
+				<li>Implementation Guide Version: {{cs.version}}</li>
+				<li>FHIR Version: {{cs.fhirVersion}}</li>
+				<li>Supported formats: {{ cs.format | join(', ') }}</li>
+				<li>Published: {{cs.date.as_json()}}</li>
+				<li>Published by: {{cs.publisher}}</li>
+			</ul>
+
+			{{cs.description | markdown | safe }}
+
+			{% if cs.implementationGuide|length > 1 %}
+	    <h3 class="no_toc" id="igs">SHALL Support the Following Implementation Guides:</h3>
+
+			{% for ig in cs.implementationGuide[1:] %}
+			<ul>
+				<li><a href="{{ ig | urlencode }}">{{ig}}</a></li>
+			</ul>
+			{% endfor %}
+			{% endif %}
+
+			<h3 id="behavior">FHIR RESTful Capabilities</h3>
+
+			{{ cs.rest[0].documentation | markdown | safe }}
+            {% if cs.rest[0].security.description %}
+			<p id="security"><strong>Security:</strong></p>
+			{{cs.rest[0].security.description | markdown | safe }}
+            {% endif %}
+
+			{% if cs.rest[0].interaction  %}
+	<p><strong>Summary of System Wide Interactions</strong></p>
+			{% for r in cs.rest[0].interaction %}
+				<li><strong>{% if r.extension %}{{r.extension[0].valueCode }}{% else %}undefined{% endif %}</strong> support the	<code>{{r.code}}</code> interaction.</li>
+			{% endfor %}
+	  	{% endif %}
+
+			{% if cs.rest[0].operation %}
+	<p><strong>Summary of System Wide Operations</strong></p>
+			{% for r in cs.rest[0].operation %}
+				<li><strong>{{r.extension[0].valueCode}}</strong> support the	<a href="{% if path_map[r.definition.reference]%}{{path_map[r.definition.reference]}}{% else %}{{r.definition}}{% endif %}"><code>${{r.name}}</code></a> operation.</li>
+			{% endfor %}
+			{% endif %}
+{% if cs.rest[0].resource %}
+			<h3 class="no_toc" id="resource--details">RESTful Capabilities by Resource/Profile:</h3>
+
+			<p><strong>Summary of Search Criteria</strong></p>
+			<table class="grid">
+				<thead>
+					<tr>
+						<th>Resource Type</th>
+						<th>Supported Profiles</th>
+						<th>Supported Searches</th>
+						<th>Supported <code>_includes</code></th>
+                        <th>Supported <code>_revincludes</code></th>
+						<th>Supported Operations</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for r in cs.rest[0].resource %}
+					<tr>
+						<td>
+							<a href="#{{r.type | lower }}">{{r.type}}</a>
+						</td>
+						<td>
+{% if r.supportedProfile %}{% for i in r.supportedProfile %}
+						<a href="{% if path_map[i] %}{{path_map[i]}}{% else %}{{i}}{% endif %}">{{pname_map[i]}}</a>{%- if not loop.last %}, {% endif %}
+{%  endfor %}{% endif %}
+						</td>
+
+						<td>
+							{% if r.searchParam %}
+							{{ r.searchParam|join(', ', attribute='name') }}
+							{% if r.extension %}
+							{%- for s in r.extension if s.url == "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" %}
+								{%- for combo in s.extension if combo.url == 'required' or combo.url == 'optional'-%}
+								{{combo.valueString}}
+								{%- if not loop.last %}+{% endif %}
+								{%- endfor %}
+							{%- if not loop.last %}, {% endif %}
+							{%- endfor %}
+							{% endif %}
+							{% endif %}
+						</td>
+						<td>
+							{% if r.searchInclude%}{{r.searchInclude | join(', ') }}{% endif %}
+						</td>
+            <td>
+              {% if r.searchRevInclude%}{{r.searchRevInclude | join(', ') }}{% endif %}
+            </td>
+						<td>
+							{% if r.operation %}{{r.operation | join(', ',attribute='name') }}{% endif %}
+						</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			<br />
+{% endif %}
+
+			{% for r in cs.rest[0].resource %}
+			<h4 class="no_toc" id="{{r.type | lower }}">{{r.type}}</h4>
+
+			<p>Conformance Expectation:	<strong>{% if r.extension[0] %}{{r.extension[0].valueCode}}{% else %}undefined{% endif %}</strong></p>
+
+
+			{% if r.supportedProfile %}<p>Supported Profiles:
+				{% for i in r.supportedProfile %}
+											<a href="{% if path_map[i] %}{{path_map[i]}}{% else %}{{i}}{% endif %}">{{pname_map[i]}}</a>{%- if not loop.last %}, {% endif %}
+				{%  endfor %}
+				</p>{% endif %}
+
+			{% if r.documentation %}<p>Resource Specific Documentation:</p>
+
+			<blockquote>{{ r.documentation | markdown | safe }}</blockquote>{% endif %}
+
+			{% if r.referencePolicy %}<p>Reference Policy: {% for rf in r.referencePolicy %}<code>{{rf}}</code>
+			{%- if not loop.last %}, {% endif %}{%- endfor %}</p>{% endif %}
+			{% if r.versioning %}<p>Versioning Policy: <code>{{r.versioning}}</code></p>{% endif %}
+			{% if r.readHistory %}<p>Server returns past versions as part of the vRead operation.</p>{% endif %}
+			{% if r.updateCreate %}<p>Server allows the client to create new identities on the server</p>{% endif %}
+
+			{% if r.interaction %}<p>Profile Interaction Summary:</p>
+				{% set ns = namespace(shall=false,should=false,may=false) %}
+				{%for i in r.interaction if i.extension %}
+    		{% if i.extension[0].valueCode == 'SHALL' %}
+				{% set ns.shall = true %}
+				{% elif i.extension[0].valueCode == 'SHOULD' %}
+        {% set ns.should = true %}
+				{% elif i.extension[0].valueCode == 'MAY' %}
+        {% set ns.may = true %}
+    		{% endif %}{% endfor %}
+
+				<ul>
+					{% if ns.shall %}<li><strong>SHALL</strong> support {%for i in r.interaction if i.extension[0].valueCode == 'SHALL' %}
+																							<code>{{i.code}}</code>
+                                                                                            {%- if i.documentation %}<sup>&#8224;</sup>{% endif %}
+																							{%- if not loop.last %}, {% endif %}
+																							{%- endfor %}.</li>
+					{%- endif %}
+					{% if ns.should %}<li><strong>SHOULD</strong> support {%for i in r.interaction if i.extension[0].valueCode == 'SHOULD' %}
+																							<code>{{i.code}}</code>
+                                                                                             {%- if i.documentation %}<sup>&#8224;</sup>{% endif %}
+																							{%- if not loop.last %}, {% endif %}
+																							{%- endfor %}.</li>
+					{%- endif %}
+					{% if ns.may %}<li><strong>MAY</strong> support {%for i in r.interaction if i.extension[0].valueCode == 'MAY' %}
+																							<code>{{i.code}}</code>
+                                                                                             {%- if i.documentation %}<sup>&#8224;</sup>{% endif %}
+																							{%- if not loop.last %}, {% endif %}
+																							{%- endfor %}.</li>
+					{%- endif %}
+
+
+
+				</ul>
+                {% for i in r.interaction if i.documentation %}<blockquote>{{i.code}}<sup>&#8224;</sup>{{i.documentation | markdown | safe }}</blockquote>{% endfor %}
+				{% endif %}
+				{% if r.operation %}
+				<p>Operation  Summary:</p>
+					{% set ns = namespace(shall=false,should=false,may=false) %}
+					{%for i in r.operation if i.extension %}
+	    		{% if i.extension[0].valueCode == 'SHALL' %}
+					{% set ns.shall = true %}
+					{% elif i.extension[0].valueCode == 'SHOULD' %}
+	        {% set ns.should = true %}
+					{% elif i.extension[0].valueCode == 'MAY' %}
+	        {% set ns.may = true %}
+	    		{% endif %}{% endfor %}
+
+					<ul>
+						{% if ns.shall %}<li><strong>SHALL</strong> support the {%for i in r.operation if i.extension[0].valueCode == 'SHALL' %}
+																								<a href="{% if path_map[i.definition] %}{{path_map[i.definition]}}{% else %}{{i.definition}}{% endif %}">${{i.name}}</a> operation
+																								{% if i.documentation %}<p>{{i.documentation| markdown | safe }}</p>{% endif %}
+																								{%- if not loop.last %}, {% endif %}
+																								{%- endfor %}</li>
+
+						{% elif ns.should %}<li><strong>SHOULD</strong> support the {%for i in r.operation if i.extension[0].valueCode == 'SHOULD' %}
+																									<a href="{% if path_map[i.definition] %}{{path_map[i.definition]}}{% else %}{{i.definition}}{% endif %}">${{i.name}}</a> operation
+																									{% if i.documentation%}<p>{{i.documentation| markdown | safe }}</p>{% endif %}
+																								{%- if not loop.last %}, {% endif %}
+																								{%- endfor %}</li>
+
+						{% elif ns.may %}<li><strong>MAY</strong> support the {%for i in r.operation if i.extension[0].valueCode == 'MAY' %}
+																									<a href="{% if path_map[i.definition] %}{{path_map[i.definition]}}{% else %}{{i.definition}}{% endif %}">${{i.name}}</a> operation
+																									{% if i.documentation%}<p>{{i.documentation| markdown | safe }}</p>{% endif %}
+																								{%- if not loop.last %}, {% endif %}
+																								{%- endfor %}</li>
+
+						{% else %}<li><strong>undefined</strong> support the {%for i in r.operation if not i.extension %}
+																									<a href="{% if path_map[i.definition] %}{{path_map[i.definition]}}{% else %}{{i.definition}}{% endif %}">${{i.name}}</a> operation
+																									{% if i.documentation%}<p>{{i.documentation| markdown | safe }}</p>{% endif %}
+																								{%- if not loop.last %}, {% endif %}
+																								{%- endfor %}</li>
+						{%- endif %}
+
+
+
+					</ul>
+				{% endif %}
+
+
+			{% if r.searchParam or r.interaction or r.searchInclude or r.searchRevInclude %}<p>Fetch and Search Criteria:</p>
+			<ul>
+				{%for i in r.interaction if i.code == "read" %}
+				<li>
+					A {{ cs.rest[0].mode | capitalize }} <strong>{% if i.extension %}{{ i.extension[0].valueCode }}{% else %}undefined{% endif %}</strong> be capable of {% if cs.rest[0].mode == 'server' %}returning{% else %}fetching{% endif %} a {{r.type}} resource using:
+					<br />
+						<code class="highlighter-rouge">GET [base]/{{r.type}}/[id]</code>
+				</li><br />
+				{%endfor %}
+				{%for i in r.interaction if i.code == "vread" %}
+				<li>
+					A {{ cs.rest[0].mode | capitalize }} <strong>{% if i.extension %}{{ i.extension[0].valueCode }}{% else %}undefined{% endif %}</strong> be capable of {% if cs.rest[0].mode == 'server' %}returning{% else %}fetching{% endif %} a {{r.type}} resource using:
+					<br />
+						<code class="highlighter-rouge">GET [base]/{{r.type}}/[id]/_history/vid</code>
+				</li><br />
+				{%endfor %}
+				<!-- Only SHALL for include for now the capability statement does not create the primitive
+				     extensios for this yet.  -->
+				{%if r.searchInclude %}
+				<li>
+					A {{ cs.rest[0].mode | capitalize }} <strong>SHALL</strong> be capable of supporting the following _includes:
+					<br />
+					{% for include in r.searchInclude %}
+						{{include}} - <code class="highlighter-rouge">GET [base]/{{r.type}}?[parameter=value]&amp;_include={{include}}</code><br />
+					{% endfor %}
+				</li><br />
+				{% endif %}
+				<!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet -->
+        {%if r.searchRevInclude %}
+				<li>
+					A {{ cs.rest[0].mode | capitalize }} <strong>{% if cs.rest[0].mode == "server" %}SHALL{% else %}SHOULD{% endif %}</strong> be capable of supporting the following _revincludes:
+					<br />
+					{% for revinclude in r.searchRevInclude %}
+						{{revinclude}} - <code class="highlighter-rouge">GET [base]/{{r.type}}?[parameter=value]&amp;_revinclude={{revinclude}}</code><br />
+					{% endfor %}
+				</li><br />
+				{% endif %}
+
+			</ul>
+
+			{% if r.searchParam %}
+			<p>Search Parameter Summary:</p>
+			<table class="grid">
+				<thead>
+					<tr>
+						<th>Conformance</th>
+						<th>Parameter</th>
+						<th>Type</th>
+						<th>Example</th>
+					</tr>
+				</thead>
+				<tbody>
+					{%- for s in r.searchParam -%}
+					<tr>
+						<td>
+							<strong>{% if s.extension %}{{ s.extension[0].valueCode }}{% else %}undefined{% endif %}</strong>
+						</td>
+						<td>
+							<a href="{% if path_map[s.definition] %}{{path_map[s.definition]}}{% else %}http://hl7.org/fhir/R4/search.html{% endif %}">{{s.name}}</a>
+						</td>
+						<td>
+							{{s.type}}
+						</td>
+						<td>
+							<code class="highlighter-rouge">GET [base]/{{r.type}}?{{s.name}}{%- if s.name == '_id' %}=[id]
+																																						 {%- elif s.name == 'status' %}=[status]
+																																						 {%- elif s.type == 'composite' %}=[code]&amp;[value]
+																																						 {%- elif s.type == 'uri' %}=[uri]
+																																						 {%- elif s.type == 'string' %}=[{{s.name}}]
+																																						 {%- elif s.type == 'token' %}=[system]|[code]
+																																						 {%- elif s.name in ['us-core-includeprovenance'] %}
+																																						 {%- else %}=[{{s.name}}]
+																																						 {%- endif %}</code>
+						 </td>
+					</tr>
+					{%- endfor %}
+				</tbody>
+			</table>
+
+			{% set ns = namespace(combos=false) %}
+			{% if r.extension %}
+			{%- for combos in r.extension if combos.url == "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" %}
+			{% set ns.combos = true %}
+			{% endfor %}
+			{% endif %}
+			{% if ns.combos %}
+			<p>Search Parameter Combination Summary:</p>
+			<table class="grid">
+				<thead>
+					<tr>
+						<th>Conformance</th>
+						<th>Parameter Combination</th>
+						<th>Types</th>
+						<th>Example</th>
+					</tr>
+				</thead>
+				<tbody>
+					{%- for combos in r.extension if combos.url == "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" %}
+					<tr>
+						<td>
+							{%- for combo in combos.extension if combo.url == 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation'-%}
+							<strong>{{ combo.valueCode }}</strong>
+							{%- endfor %}
+						</td>
+						<td>
+							{%- for combo in combos.extension if combo.url == 'required' or combo.url == 'optional'-%}
+							{{combo.valueString}}
+							{%- if not loop.last %}+{% endif %}
+							{%- endfor %}
+						</td>
+						<td>
+							{%- for combo in combos.extension if combo.url == 'required' or combo.url == 'optional'-%}
+							{{sp_map[combo.valueString]}}
+							{%- if not loop.last %}+{% endif %}
+							{%- endfor %}
+						</td>
+						<td>
+							<code class="highlighter-rouge">GET [base]/{{r.type}}?
+								{%- for combo in combos.extension if combo.url == 'required' or combo.url == 'optional'-%}
+								{%- set p = combo.valueString -%}{%- set t = sp_map[combo.valueString] -%}
+																																							{{p}}{%- if p == '_id' %}=[id]
+																																							{%- elif p == 'status' %}=[status]
+																																							{%- elif t == 'composite' %}=[code]&amp;[value]
+																																							{%- elif t == 'uri' %}=[uri]
+																																							{%- elif t == 'string' %}=[{{p}}]
+																																							{%- elif t== 'token' %}=[system]|[code]
+																																						 	{%- elif p in ['us-core-includeprovenance'] %}
+																																							{%- else %}=[{{p}}]
+																																							{%- endif %}
+
+								{%- if not loop.last %}&amp;{%- endif %}
+								{%- endfor -%}
+							</code>
+						 </td>
+					</tr>
+					{%- endfor %}
+				</tbody>
+			</table>
+			{% endif %}
+
+
+			{% endif %}
+		{% endif %}
+<hr/>
+
+			{% endfor %}
+			<br />
+		</div>
+	</body>
+</html>
