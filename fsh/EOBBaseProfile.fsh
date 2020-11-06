@@ -3,7 +3,7 @@ Parent: ExplanationOfBenefit
 Id: C4BB-ExplanationOfBenefit
 Title: "C4BB Explanation Of Benefit"
 Description: "Abstract parent profile that includes constraints that are common to the four specific ExplanationOfBenefit (EOB) profiles defined in this Implementation Guide.
-All EOB instances should be from one of the four non-abstract EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
+All EOB instances should be from one of the four concrete EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * meta 1..1 MS

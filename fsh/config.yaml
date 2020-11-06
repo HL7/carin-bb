@@ -54,7 +54,7 @@ menu:
   Guidance:
     General Guidance: General_Guidance.html
     Common Payer Consumer Data Set (CPCDS): Common_Payer_Consumer_Data_Set.html
-    Terminology: Terminology.html 
+    Terminology Licensure: Terminology_Licensure.html 
   FHIR Artifacts:
     Profiles: artifacts.html#3
     Search Parameters: searchparameters.html

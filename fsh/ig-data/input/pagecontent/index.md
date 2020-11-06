@@ -89,7 +89,8 @@
 <ul>
 <li>Mark Roberts (Leavitt Partners, LLC) -&nbsp;<a href="mailto:mark.roberts@leavittpartners.com">mark.roberts@leavittpartners.com</a></li>
 <li>Saul A. Kravitz (The MITRE Corporation) -&nbsp;<a href="mailto:saul@mitre.org">saul@mitre.org</a></li>
-<li>Igor Sirkovich (Smile CDR, Inc.) -&nbsp;<a href="mailto:igor@smilecdr.com">igor@smilecdr.com</a></li>
+<li>Igor Sirkovich (Smile CDR, Inc.) -&nbsp;<a href="mailto:igor@smilecdr.com">igor@smilecdr.com</a></li>   
+<li>Josh Lamb (UPMC) -&nbsp;<a href="mailto:igor@smilecdr.com">lambj4@upmc.edu</a></li> 
 <li>HL7 Payer/Provider Information Exchange</li>
 </ul>
 </li>

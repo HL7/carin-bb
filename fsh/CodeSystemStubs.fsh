@@ -621,7 +621,7 @@ Description: "X12, chartered by the American National Standards Institute for mo
 
 The X12 Claim Adjustment Reason Codes describe why a claim or service line was paid differently than it was billed. . These codes are listed within an X12 implementation guide (TR3) and maintained by X12.
 
-External code lists maintained by X12 and external code lists maintained by others and distributed by WPC on behalf of the maintainer. Can be found here:
+External code lists maintained by X12 and external code lists maintained by others and distributed by WPC on behalf of the maintainer can be found here:
 
 [https://x12.org/codes](https://x12.org/codes)
 
@@ -694,7 +694,7 @@ Remittance Advice Remark Codes (RARCs) are used to provide additional explanatio
 
 Each RARC identifies a specific message as shown in the Remittance Advice Remark Code List. There are two types of RARCs, supplemental and informational. The majority of the RARCs are supplemental; these are generally referred to as RARCs without further distinction. Supplemental RARCs provide additional explanation for an adjustment already described by a CARC. The second type of RARC is informational; these RARCs are all prefaced with Alert: and are often referred to as Alerts. Alerts are used to convey information about remittance processing and are never related to a specific adjustment or CARC.
 
-External code lists maintained by X12 and external code lists maintained by others and distributed by WPC on behalf of the maintainer. Can be found here:
+External code lists maintained by X12 and external code lists maintained by others and distributed by WPC on behalf of the maintainer can be found here:
 
 [https://x12.org/codes](https://x12.org/codes)
 

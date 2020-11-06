@@ -2,7 +2,7 @@ Profile: C4BBPatient
 Parent: $USCorePatient
 Id: C4BB-Patient
 Title: "C4BB Patient"
-Description: "This profile builds upon the US Core Organization profile. It is used to convey information about the patient who received the services described on the claim."
+Description: "This profile builds upon the US Core Patient profile. It is used to convey information about the patient who received the services described on the claim."
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
 * meta 1..1 MS
