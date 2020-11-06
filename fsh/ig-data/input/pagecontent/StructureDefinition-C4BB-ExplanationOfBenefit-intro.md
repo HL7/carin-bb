@@ -20,6 +20,7 @@
 <li class="x_MsoNormal">.patient&nbsp; Additional required path:EOB.insurance.coverage(Coverage).beneficiary(Patient).identifier</li>
 <li class="x_MsoNormal">.insurer&nbsp; Same as insurance.coverage.organization.&nbsp; Party responsible for reimbursing the provider</li>
 <li class="x_MsoNormal">.outcome:&nbsp; value = complete</li>
+<li class="x_MsoNormal">.related:&nbsp; If the current claim represents a claim that has been adjusted multiple times, the prior claim number should represent the most recent claim number, not the first claim number.</li>
 <li class="x_MsoNormal">.supportinginfo.sequence rule:&nbsp; client app implementations should look-up supportingInfo elements based on category values instead of sequence values</li>
 <li class="x_MsoNormal">.careTeam.sequence rule:&nbsp; careTeam.sequence values uniquely identify careTeam members.&nbsp; They do not necessarily indiate any order in which the patient was seen by the careTeam or identify any level of significance of the careTeam to the patient, etc.&nbsp; Client app implementations should not assign any significance to the sequence values.&nbsp;&nbsp;&nbsp;</li>
 <li class="x_MsoNormal">.insurance:&nbsp;&nbsp;Define an invariant:&nbsp; Will have multiple occurrences on secondary / tertiary, etc. claims.&nbsp; Up to one occurrence, that of the ExplanationOfBenefit.insurer, will have a boolean value = 'True'.&nbsp;</li>
