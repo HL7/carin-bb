@@ -1,4 +1,5 @@
 <div>The Common Payer Consumer Data Set (CPCDS) is a logical data set (similar to ONC 2015 Edition Common Clinical Data Set) that meets CMS Blue Button 2.0 API content The CPCDS data elements can be stored and queried as profiled FHIR resources. They define key payer financial health data that <strong>SHALL</strong> be accessible and available to through standards-based APIs. Data <strong>SHALL</strong> conform to specified profiles, vocabulary standards and code sets.
+<p>&nbsp;</p>
 <h3>Mapping from CPCDS to FHIR Resources</h3>
 Based on CPCDS, the mappings define the minimum mandatory elements, extensions and terminology requirements that must be present in the FHIR resource. Additional business rules are also specified.
 <div>
@@ -47,8 +48,8 @@ A side by side comparison of the abstract EOB profile, and the four concrete pro
 <br />&nbsp;<img style="width: 100%; height: auto; float: none; align: middle;" src="SidebySideProfiles.png" /></div>
 <br />&nbsp;
 A detailed comparison of the profiles defined in this IG with their base resource or profile is shown in the following two figures. 
-<div><img style="width: 100%; height: auto; float: none; align: middle;" src="EOBProfileComparison20201006.png" /></div>
-<div><img style="width: 100%; height: auto; float: none; align: middle;" src="OtherProfileComparison20200929.png" /></div>
+<div><img style="width: 100%; height: auto; float: none; align: middle;" src="EOBProfileComparison" /></div>
+<div><img style="width: 100%; height: auto; float: none; align: middle;" src="OtherProfileComparison.png" /></div>
 <div>&nbsp;</div>
 <div>Additional EOB profiles for Vision and Dental benefits are planned for future versions of this IG.</div>
 <div>&nbsp;</div>
