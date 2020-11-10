@@ -23,7 +23,7 @@
             "value": "https://www.carinalliance.com/about-us/contact-us"
         }]
     }],
-    "description": "Date of the service for the EOB",
+    "description": "Date of the service for the EOB. The service-date search parameter simplifies search, since a client doesn't need to know that for inpatient and outpatient institutional EOB dates they need to search by billablePeriod.period.start, for a pharmacy EOB by item.servicedDate, and for a professional and non-clinician EOB - by item.servicedPeriod.period.start.",
     "jurisdiction": [{
         "coding": [{
             "system": "urn:iso:std:iso:3166",
