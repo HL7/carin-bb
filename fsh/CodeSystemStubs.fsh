@@ -1,4 +1,3 @@
-
 // Code Systems
 
 RuleSet: CodeSystemStubBoilerplate
@@ -25,10 +24,9 @@ CodeSystem: NCPDPRejectCode
 Title: "NCPDP Reject Code"
 Description: "Code indicating the error encountered. Contains exception definitions for use when transaction processing cannot be completed. (NCPDP ECL 511-FB).
 
-Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)
+Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-_**Note: A temporary URL has been defined for this codesystem for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
-* ^url = "http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/RejectCode"
+* ^url = "http://terminology.hl7.org/CodeSystem/NCPDP/RejectCode"
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -36,9 +34,8 @@ ValueSet: NCPDPRejectCode
 Title: "NCPDP Reject Code"
 Description: "Code indicating the error encountered. Contains exception definitions for use when transaction processing cannot be completed. (NCPDP ECL 511-FB).
 
-Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)
+Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-_**Note: A temporary URL has been defined for this value set for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
 * codes from system NCPDPRejectCode 
 * insert NCPDPCopyrightNotice
 
@@ -47,10 +44,9 @@ CodeSystem: NCPDPDispensedAsWrittenOrProductSelectionCode
 Title: "NCPDP Dispense As Written (DAW)/Product Selection Code"
 Description: "Code indicating whether or not the prescriber's instructions regarding generic substitution were followed. (NCPDP ECL 408-D8)
 
-Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)
+Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-_**Note: A temporary URL has been defined for this codesystem for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
-* ^url = "http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode"
+* ^url = "http://terminology.hl7.org/CodeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode"
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -58,9 +54,8 @@ ValueSet: NCPDPDispensedAsWrittenOrProductSelectionCode
 Title: "NCPDP Dispense As Written (DAW)/Product Selection Code"
 Description: "Code indicating whether or not the prescriber's instructions regarding generic substitution were followed. (NCPDP ECL 408-D8)
 
-Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)
+Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-_**Note: A temporary URL has been defined for this value set for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
 * codes from system NCPDPDispensedAsWrittenOrProductSelectionCode
 * insert NCPDPCopyrightNotice
 
@@ -68,10 +63,9 @@ CodeSystem: NCPDPBrandGenericIndicator
 Title: "NCPDP Brand Generic Indicator"
 Description: "Denotes brand or generic drug dispensed. (NCPDP ECL 686)
 
-Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)
+Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-_**Note: A temporary URL has been defined for this codesystem for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
-* ^url = "http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/BrandGenericIndicator"
+* ^url = "http://terminology.hl7.org/CodeSystem/NCPDP/BrandGenericIndicator"
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -79,9 +73,8 @@ ValueSet: NCPDPBrandGenericCode
 Title: "NCPDP Brand Generic Indicator"
 Description: "Denotes brand or generic drug dispensed. (NCPDP ECL 686)
 
-Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)
+Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-_**Note: A temporary URL has been defined for this value set for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
 * codes from system NCPDPBrandGenericIndicator 
 * insert NCPDPCopyrightNotice
 
@@ -89,10 +82,9 @@ CodeSystem: NCPDPPrescriptionOriginCode
 Title: "NCPDP Prescription Origin Code"
 Description: "Code indicating the origin of the prescription. Indicates whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy. (NCPDP ECL 419-DJ)
 
-Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)
+Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-_**Note: A temporary URL has been defined for this codesystem for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
-* ^url = "http://terminology.hl7.org/temporary/codeSystem-uri/NCPDP/PrescriptionOriginCode"
+* ^url = "http://terminology.hl7.org/CodeSystem/NCPDP/PrescriptionOriginCode"
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -100,9 +92,8 @@ ValueSet: NCPDPPrescriptionOriginCode
 Title: "NCPDP Prescription Origin Code"
 Description: "Code indicating the origin of the prescription. Indicates whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy. (NCPDP ECL 419-DJ)
 
-Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)
+Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-_**Note: A temporary URL has been defined for this value set for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
 * codes from system NCPDPPrescriptionOriginCode
 * insert NCPDPCopyrightNotice
 
@@ -110,10 +101,9 @@ CodeSystem: NCPDPCompoundCode
 Title: "NCPDP Compound Code"
 Description: "Code indicating whether or not the prescription is a compound. (NCPDP ECL 406-D6)
 
-Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)
+Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-_**Note: A temporary URL has been defined for this codesystem for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
-* ^url = "http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/CompoundCode"
+* ^url = "http://terminology.hl7.org/CodeSystem/NCPDP/CompoundCode"
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -121,34 +111,13 @@ ValueSet: NCPDPCompoundCode
 Title: "NCPDP Compound Code"
 Description: "Code indicating whether or not the prescription is a compound. (NCPDP ECL 406-D6)
 
-Link to information about the value set - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)
+Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-_**Note: A temporary URL has been defined for this codesystem for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
 * codes from system NCPDPCompoundCode
 * insert NCPDPCopyrightNotice
 
 //  **************** FDA NDC ******************************
 
-CodeSystem: NDC
-Title: "National Drug Code (NDC)"
-Description: "The Drug Listing Act of 1972 requires registered drug establishments to provide the Food and Drug Administration (FDA) with a current list of all drugs manufactured, prepared, propagated, compounded, or processed by it for commercial distribution.  (See Section 510 of the Federal Food, Drug, and Cosmetic Act (Act) (21 U.S.C. § 360)). Drug products are identified and reported using a unique, three-segment number, called the National Drug Code (NDC), which serves as a universal product identifier for drugs. FDA publishes the listed NDC numbers and the information submitted as part of the listing information in the NDC Directory which is updated daily.
-
-The information submitted as part of the listing process, the NDC number, and the NDC Directory are used in the implementation and enforcement of the Act.
-
-Users should note:
-
-Starting June 1, 2011, only drugs for which electronic listings (SPL) have been submitted to FDA are included in the NDC Directory. Drugs for which listing information was last submitted to FDA on paper forms, prior to June 2009, are included on a separate file and will not be updated after June 2012.
-
-Information regarding the FDA published NDC Directory can be found [here](https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory)
-
-Users should note a few important items
-
-*   The NDC Directory is updated daily. 
-*   The new NDC Directory contains ONLY information on final marketed drugs submitted to FDA in SPL electronic listing files by labelers.
-*   The NDC Directory does not contain all listed drugs. The new version includes the final marketed drugs which listing information were submitted electronically. It does not include animal drugs, blood products, or human drugs that are not in final marketed form, such as Active Pharmaceutical Ingredients(APIs), drugs for further processing, drugs manufactured exclusively for a private label distributor, or drugs that are marketed solely as part of a kit or combination product or inner layer of a multi-level packaged product not marketed individually. For more information about how certain kits or multi-level packaged drugs are addressed in the new NDC Directory, see the NDC Directory Package File definitions document. For the FDA Online Label Repository page and additional resources go to: [FDA Online Label Repository](https://labels.fda.gov/)"
-* ^url = "http://hl7.org/fhir/sid/ndc"
-* insert CodeSystemStubBoilerplate
-* ^copyright = "NDC codes have no copyright acknowledgment or license requirements."
 
 ValueSet: FDANationalDrugCode
 Title: "National Drug Code (NDC)"
@@ -167,13 +136,13 @@ Users should note a few important items
 *   The NDC Directory is updated daily. 
 *   The new NDC Directory contains ONLY information on final marketed drugs submitted to FDA in SPL electronic listing files by labelers.
 *   The NDC Directory does not contain all listed drugs. The new version includes the final marketed drugs which listing information were submitted electronically. It does not include animal drugs, blood products, or human drugs that are not in final marketed form, such as Active Pharmaceutical Ingredients(APIs), drugs for further processing, drugs manufactured exclusively for a private label distributor, or drugs that are marketed solely as part of a kit or combination product or inner layer of a multi-level packaged product not marketed individually. For more information about how certain kits or multi-level packaged drugs are addressed in the new NDC Directory, see the NDC Directory Package File definitions document. For the FDA Online Label Repository page and additional resources go to: [FDA Online Label Repository](https://labels.fda.gov/)"
-* codes from system NDC
+* codes from system $FDANationalDrugCode
 * ^copyright = "NDC codes have no copyright acknowledgment or license requirements."
 
 ValueSet: FDANDCOrCompound
 Title: "NDC or Compound"
 Description: "Values will be the NDC Codes when the Compound Code value is 0 or 1.  When the Compound Code value = 2, the value will be the literal, ‘compound’"
-* codes from system NDC
+* codes from system $FDANationalDrugCode
 * include C4BBCompoundLiteral#compound 
 
 // ***************************NUBC start ***********
@@ -389,28 +358,7 @@ Note: the year is always based on the publication year of the code set. CPT rele
 RuleSet: HCPCSCopyrightNotice
 * ^copyright = "See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
 
-CodeSystem: AMACPTCodes
-Title: "Current Procedural Terminology (CPT)"
-Description: "The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice.
 
-Designated by the U.S. Department of Health and Human Services under the Health Insurance Portability and Accountability Act (HIPAA) as a national coding set for physician and other health care professional services and procedures, CPT’s evidence-based codes accurately encompass the full range of health care services.
-
-All CPT codes are five-digits and can be either numeric or alphanumeric, depending on the category. CPT code descriptors are clinically focused and utilize common standards so that a diverse set of users can have common understanding across the clinical health care paradigm.
-
-There are various types of CPT codes:
-
-**Category I:** These codes have descriptors that correspond to a procedure or service. Codes range from 00100–99499 and are generally ordered into sub-categories based on procedure/service type and anatomy.
-
-**Category II:** These alphanumeric tracking codes are supplemental codes used for performance measurement. Using them is optional and not required for correct coding.
-
-**Category III:** These are temporary alphanumeric codes for new and developing technology, procedures and services. They were created for data collection, assessment and in some instances, payment of new services and procedures that currently don’t meet the criteria for a Category I code.
-
-**Proprietary Laboratory Analyses (PLA) codes:** Recently added to the CPT code set, these codes describe proprietary clinical laboratory analyses and can be either provided by a single (solesource) laboratory or licensed or marketed to multiple providing laboratories that are cleared or approved by the Food and Drug Administration (FDA)). This category includes but is not limited to Advanced Diagnostic Laboratory Tests (ADLTs) and Clinical Diagnostic Laboratory Tests (CDLTs), as defined under the Protecting Access to Medicare Act of 2014 (PAMA).
-
-To obtain CPT, please see the license request form [here](http://info.commerce.ama-assn.org/ama-data-file-request-2020)."
-* ^url = $CPT
-* insert CodeSystemStubBoilerplate
-* insert AMACopyrightNotice
 
 CodeSystem: CMSHCPCSCodes
 Title: "Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes"
@@ -452,7 +400,7 @@ General information can be found here: [https://www.cms.gov/Medicare/Coding/MedH
 Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets](https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets)
 
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
-* codes from system AMACPTCodes
+* codes from system $CPT
 * codes from system CMSHCPCSCodes
 * ^copyright = "CPT is copyrighted by the AMA and as such must be licensed to be used in electronic products or other forms.
 
@@ -508,7 +456,7 @@ General information can be found here: [https://www.cms.gov/Medicare/Coding/MedH
 Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets](https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets)
 
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
-* codes from system AMACPTCodes 
+* codes from system $CPT
 * codes from system CMSHCPCSCodes
 * ^copyright = "CPT is copyrighted by the AMA and as such must be licensed to be used in electronic products or other forms.
 
@@ -550,25 +498,43 @@ Content can be obtained on the CMS hosted page located [here](https://www.cms.go
 
 
 CodeSystem: THREEMAPDRG
-Title: "AP DRG"
-Description: "AP-DRGs (All Patient Diagnosis Related Groups).  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version."
-* ^url = "http://www.3M.com/AP-DRG"
+Title: "All Patient Diagnosis Related Groups (APR-DRGs)"
+Description: "In 1987, the state of New York passed legislation instituting a DRG-based prospective payment system for all non-Medicare patients. The legislation included a requirement that the New York State Department of Health (NYDH) evaluate the applicability of the DRGs to a non-Medicare population. In particular, the legislation required that the DRGs be evaluated with respect to neonates and patients with Human Immunodeficiency Virus (HIV) infections. NYDH entered into an agreement with 3M HIS to assist with the evaluation of the need for DRG modifications as well as to make the necessary changes in the DRG definitions and software. The DRG definitions developed by NYDH and 3M HIS are referred to as the All Patient DRGs (AP-DRGs).
+
+As the AP-DRG code system is no longer in use and little authoratative information is available, the following resources have been used to compile the documented information
+
+[https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf](https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf)
+
+_**Note: A temporary URL has been defined for this codesystem for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
+* ^url = "http://terminology.hl7.org/temporary-uri/codeSystem/APDRG"
 * insert CodeSystemStubBoilerplate
 * ^copyright = "Use of AP-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
 
 CodeSystem: THREEMAPRDRG
-Title: "APR DRG"
-Description: "APR-DRGs (All Patient Refined Diagnosis Related Groups).  Assignment of a DRG is defined by a particular set of patient attributes, which include principal diagnosis, specific secondary diagnoses, procedures, sex and discharge status.  Identifying a DRG code requires a version."
-* ^url = "http://www.3M.com/APR-DRG"
+Title: "All Patient Refined Diagnosis Related Groups (APR-DRGs)"
+Description: "3M APR DRGs have become the standard across the U.S. for classifying hospital inpatients in non-Medicare populations. As of January 2019, 27 state Medicaid programs use 3M APR DRGs to pay hospitals, as do approximately a dozen commercial payers and Medicaid managed care organizations. Over 2,400 hospitals have licensed 3M APR DRGs to verify payment and analyze their internal operations.
+
+The 3M APR DRG methodology classifies hospital inpatients according to their reason for admission, severity of illness and risk of mortality.
+
+Each year 3M calculates and releases a set of statistics for each 3M APR DRG based on our analysis of large national data sets. These statistics include a relative weight for each 3M APR DRG. The relative weight reflects the average hospital resource use for a patient in that 3M APR DRG relative to the average hospital resource use of all inpatients. Please note that payers and other users of the 3M APR DRG methodology are responsible for ensuring that they use relative weights that are appropriate for their particular populations. The 3M APR DRG statistics also include data for each 3M APR DRG on relative frequency, average length of stay, average charges and incidence of mortality.
+
+3M APR DRGs can be rolled up into broader categories. The 326 base DRGs roll up into 25 major diagnostic categories (MDCs) plus a pre-MDC category. An example is MDC 04, Diseases and Disorders of the Respiratory System. As well, each 3M APR DRG is assigned to a service line that is consistent with the outpatient service lines that are defined by the 3M™ Enhanced Ambulatory Patient Groups (EAPGs).
+
+A link to information about the code system - including how to obtain the content from 3M is provided [here.](https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/). Identifying a DRG code requires a version.
+
+_**Note: A temporary URL has been defined for this codesystem for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
+* ^url = "http://terminology.hl7.org/temporary-uri/codeSystem/3M/APRDRG"
 * insert CodeSystemStubBoilerplate
-* ^copyright = "Use of APR-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
+* ^copyright = "The clinical logic is maintained by a team of 3M clinicians, data analysts, nosologists, programmers and economists. The logic is proprietary to 3M but is available for licensees to view in an online definitions manual.
+
+To license APR-DRGs from 3M, see request form [here](https://engage.3m.com/PPS_Groupers_Contact)"
 
 
 ValueSet: CMSMS3MAPAPRDRG 
 Title: "MS-DRGs - AP-DRGs - APR-DRGs"
 Description: "This value set defines three sets of DRGs, MS-DRGs (Medicare Severity Diagnosis Related Groups), APR-DRGs (All Patient Refined Diagnosis Related Groups) and AP-DRGs (All Patient Diagnosis Related Groups). 
 
-MS-DRGs:
+**MS-DRGs**
 
 Section 1886(d) of the Act specifies that the Secretary shall establish a classification system (referred to as DRGs) for inpatient discharges and adjust payments under the IPPS based on appropriate weighting factors assigned to each DRG.  Therefore, under the IPPS, we pay for inpatient hospital services on a rate per discharge basis that varies according to the DRG to which a beneficiary's stay is assigned. The formula used to calculate payment for a specific case multiplies an individual hospital's payment rate per case by the weight of the DRG to which the case is assigned.  Each DRG weight represents the average resources required to care for cases in that particular DRG, relative to the average resources used to treat cases in all DRGs.
 
@@ -578,17 +544,36 @@ Currently, cases are classified into Medicare Severity Diagnosis Related Groups 
 
 Content can be obtained on the CMS hosted page located [here](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software)
 
-APR-DRGs:
+**APR-DRGs**
 
-placeholder
+3M APR DRGs have become the standard across the U.S. for classifying hospital inpatients in non-Medicare populations. As of January 2019, 27 state Medicaid programs use 3M APR DRGs to pay hospitals, as do approximately a dozen commercial payers and Medicaid managed care organizations. Over 2,400 hospitals have licensed 3M APR DRGs to verify payment and analyze their internal operations.
 
-AP-DRGs:
+The 3M APR DRG methodology classifies hospital inpatients according to their reason for admission, severity of illness and risk of mortality.
 
-placeholder"
+Each year 3M calculates and releases a set of statistics for each 3M APR DRG based on our analysis of large national data sets. These statistics include a relative weight for each 3M APR DRG. The relative weight reflects the average hospital resource use for a patient in that 3M APR DRG relative to the average hospital resource use of all inpatients. Please note that payers and other users of the 3M APR DRG methodology are responsible for ensuring that they use relative weights that are appropriate for their particular populations. The 3M APR DRG statistics also include data for each 3M APR DRG on relative frequency, average length of stay, average charges and incidence of mortality.
+
+3M APR DRGs can be rolled up into broader categories. The 326 base DRGs roll up into 25 major diagnostic categories (MDCs) plus a pre-MDC category. An example is MDC 04, Diseases and Disorders of the Respiratory System. As well, each 3M APR DRG is assigned to a service line that is consistent with the outpatient service lines that are defined by the 3M™ Enhanced Ambulatory Patient Groups (EAPGs).
+
+A link to information about the code system - including how to obtain the content from 3M is provided [here.](https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/)
+
+**AP-DRGs**
+
+In 1987, the state of New York passed legislation instituting a DRG-based prospective payment system for all non-Medicare patients. The legislation included a requirement that the New York State Department of Health (NYDH) evaluate the applicability of the DRGs to a non-Medicare population. In particular, the legislation required that the DRGs be evaluated with respect to neonates and patients with Human Immunodeficiency Virus (HIV) infections. NYDH entered into an agreement with 3M HIS to assist with the evaluation of the need for DRG modifications as well as to make the necessary changes in the DRG definitions and software. The DRG definitions developed by NYDH and 3M HIS are referred to as the All Patient DRGs (AP-DRGs).
+
+As the AP-DRG code system is no longer in use and little authoratative information is available, the following resources have been used to compile the documented information
+
+[https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf](https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf)
+
+_**Note: Temporary URLs have been defined for the APR-DRGs and AP-DRGs for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
+
 * codes from system CMSMSDRG
 * codes from system THREEMAPDRG
 * codes from system THREEMAPRDRG
-* ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain MS-DRGs used throughout the US health care industry. The CMS MS-DRGs are free to use without restriction.  Use of APR-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
+* ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain MS-DRGs used throughout the US health care industry. The CMS MS-DRGs are free to use without restriction.
+
+The APR-DRG clinical logic is maintained by a team of 3M clinicians, data analysts, nosologists, programmers and economists. The logic is proprietary to 3M but is available for licensees to view in an online definitions manual.
+
+To license APR-DRGs from 3M, see request form [here](https://engage.3m.com/PPS_Groupers_Contact)."
 
 // ******** Place of Service ***************
 CodeSystem: CMSPlaceofServiceCodes
@@ -754,61 +739,8 @@ The following requirements must be followed to utilize CDC’s public domain con
 
 For information on NCHS agency level use of materials see [here](https://www.cdc.gov/other/agencymaterials.html)."
 
-RuleSet: ICD10PCSCopyrightNotice
-* ^copyright = "The CMS licenses its published material in order to encourage maximum use and dissemination. See  
-the CMS ([https://www.cms.gov/Medicare/Coding/ICD10](https://www.cms.gov/Medicare/Coding/ICD10)) web site for more information."
 
-
-//  ******* @Saul  - two new Code Systems ********
-CodeSystem: ICD9CM
-Title: "International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM)"
-Description: "The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States. 
-
-The ICD-9-CM consists of:
-
-*   a tabular list containing a numerical list of the disease code numbers in tabular form;
-*   an alphabetical index to the disease entries; and
-*   a classification system for surgical, diagnostic, and therapeutic procedures (alphabetic index and tabular list).
-
-The National Center for Health Statistics (NCHS) and the [Centers for Medicare and Medicaid Services](http://www.cms.hhs.gov/) are the U.S. governmental agencies responsible for overseeing all changes and modifications to the ICD-9-CM.
-
-[ICD-10-CM](https://confluence.hl7.org/pages/viewpage.action?pageId=97453674) is the replacement for ICD-9-CM, volumes 1 and 2, effective October 1, 2015.
-
-Current and previous releases of ICD-9-CM are available here: [https://www.cdc.gov/nchs/icd/icd9cm.htm](https://www.cdc.gov/nchs/icd/icd9cm.htm)
-
-Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to [nchsicd10cm@cdc.gov](mailto:nchsicd10cm@cdc.gov)."  
-* ^url = "http://hl7.org/fhir/sid/icd-9-cm" 
-* insert CodeSystemStubBoilerplate
-* insert ICD9CopyrightNotice
-
-CodeSystem: ICD10CM
-Title: "International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)"
-Description: "The National Center for Health Statistics (NCHS), the Federal agency responsible for use of the International Statistical Classification of Diseases and Related Health Problems, 10th revision (ICD-10) in the United States, has developed a clinical modification of the classification for morbidity purposes. The ICD-10 is used to code and classify mortality data from death certificates, having replaced ICD-9 for this purpose as of January 1, 1999. ICD-10-CM is the replacement for ICD-9-CM, volumes 1 and 2, effective October 1, 2015.
-
-The clinical modification represents a significant improvement over ICD-9-CM and ICD-10. Specific improvements include: the addition of information relevant to ambulatory and managed care encounters; expanded injury codes; the creation of combination diagnosis/symptom codes to reduce the number of codes needed to fully describe a condition; the addition of sixth and seventh characters; incorporation of common 4th and 5th digit subclassifications; laterality; and greater specificity in code assignment. The new structure will allow further expansion than was possible with ICD-9-CM.
-
-Current and previous releases of ICD-10-CM are available in PDF and XML format here: [https://www.cdc.gov/nchs/icd/icd10cm.htm](https://www.cdc.gov/nchs/icd/icd10cm.htm)
-
-Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to nchsicd10cm@cdc.gov."  
-* ^url = "http://hl7.org/fhir/sid/icd-10-cm" 
-* insert CodeSystemStubBoilerplate
-* insert ICD10CMCopyrightNotice
-
-//  ******* @Saul  - same Code System definition for icd10 pcs ********
-CodeSystem: ICD10PCS
-Title: "ICD-10 Procedure Coding System"
-Description: "The ICD-10-PCS is a procedure classification published by the United States Centers for Medicare & Medicaid Services (CMS) ([https://www.cms.gov](https://www.cms.gov/)) for classifying procedures  
-performed in hospital inpatient health care settings.
-
-Link to information about the code system - including how to obtain the content: 
-
-[https://www.cms.gov/Medicare/Coding/ICD10](https://www.cms.gov/Medicare/Coding/ICD10)
-
-Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of ICD-10-CM. CMS republishes the ICD-10-CM codes system on their website for convienence only. For authoratative information on ICD-10-CM, users should refer to the National Center for Health Statistics (NCHS) site located [here](https://www.cdc.gov/nchs/icd/icd10cm.htm)."  
-* ^url = "https://www.cms.gov/Medicare/Coding/ICD10" 
-* insert CodeSystemStubBoilerplate
-* insert ICD10PCSCopyrightNotice
-
+//  ******* ICD ********
 
 
 ValueSet: CDCICD910CMDiagnosisCodes 
@@ -836,16 +768,16 @@ Current and previous releases of ICD-9-CM are available here: [https://www.cdc.g
 Current and previous releases of ICD-10-CM are available in PDF and XML format here: [https://www.cdc.gov/nchs/icd/icd10cm.htm](https://www.cdc.gov/nchs/icd/icd10cm.htm)
 
 Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to nchsicd10cm@cdc.gov."
-* codes from system ICD10CM
-* codes from system ICD9CM
+* codes from system $ICD10CM
+* codes from system $ICD9CM
 * insert ICD10CMCopyrightNotice
 
 
 ValueSet: CMSICD910PCSProcedureCodes 
 Title: "Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Coding System"
 Description: "The Value Set is a combination of values from volume 3 from the Code System International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) and values in the Code System ICD-10 Procedure Coding System. The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States.  The ICD-9-CM consists of: a tabular list containing a numerical list of the disease code numbers in tabular form; an alphabetical index to the disease entries; and a classification system for surgical, diagnostic, and therapeutic procedures (alphabetic index and tabular list). The National Center for Health Statistics (NCHS) and the Centers for Medicare and Medicaid Services are the U.S. governmental agencies responsible for overseeing all changes and modifications to the ICD-9-CM. ICD-10 Procedure Coding System is the replacement for ICD-9-CM, volume 3, effective October 1, 2015. Current and previous releases of ICD-9-CM are available here: https://www.cdc.gov/nchs/icd/icd9cm.htm Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to nchsicd10cm@cdc.gov. The ICD-10-PCS is a procedure classification published by the United States Centers for Medicare & Medicaid Services (CMS) (https://www.cms.gov) for classifying procedures performed in hospital inpatient health care settings. Link to information about the code system: https://www.cms.gov/Medicare/Coding/ICD10 Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of ICD-10-CM. CMS republishes the ICD-10-CM codes system on their website for convienence only. For authoratative information on ICD-10-CM, users should refer to the National Center for Health Statistics (NCHS) site located here."
-* codes from system ICD10PCS
-* codes from system ICD9CM
+* codes from system $ICD10PCS
+* codes from system $ICD9PCS
 * ^copyright = "ICD-9 copyright:
 
 The following requirements must be followed to utilize CDC’s public domain content:

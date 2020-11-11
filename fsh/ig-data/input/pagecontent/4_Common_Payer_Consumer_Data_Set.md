@@ -17,7 +17,7 @@ Based on CPCDS, the mappings define the minimum mandatory elements, extensions a
 </tr>
 <tr>
 <td>&nbsp;Detailed Profile comparison</td>
-<td><a  href="CARINProfileComparison.xlsx">xls</a></td>
+<td><a  href="CARINforBlueButtonProfileComparison.xlsx">xls</a></td>
 <td>A detailed comparison of the profiles defined in this IG with their base resource or profile is shown in the figures on this page.</td>
 </tr>
 <tr>
@@ -48,7 +48,7 @@ A side by side comparison of the abstract EOB profile, and the four concrete pro
 <br />&nbsp;<img style="width: 100%; height: auto; float: none; align: middle;" src="SidebySideProfiles.png" /></div>
 <br />&nbsp;
 A detailed comparison of the profiles defined in this IG with their base resource or profile is shown in the following two figures. 
-<div><img style="width: 100%; height: auto; float: none; align: middle;" src="EOBProfileComparison" /></div>
+<div><img style="width: 100%; height: auto; float: none; align: middle;" src="EOBProfileComparison.png" /></div>
 <div><img style="width: 100%; height: auto; float: none; align: middle;" src="OtherProfileComparison.png" /></div>
 <div>&nbsp;</div>
 <div>Additional EOB profiles for Vision and Dental benefits are planned for future versions of this IG.</div>
