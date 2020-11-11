@@ -503,15 +503,21 @@ Content can be obtained on the CMS hosted page located [here](https://www.cms.go
 
 
 CodeSystem: THREEMAPDRG
-Title: "All Patient Diagnosis Related Groups (APR-DRGs)"
-Description: "In 1987, the state of New York passed legislation instituting a DRG-based prospective payment system for all non-Medicare patients. The legislation included a requirement that the New York State Department of Health (NYDH) evaluate the applicability of the DRGs to a non-Medicare population. In particular, the legislation required that the DRGs be evaluated with respect to neonates and patients with Human Immunodeficiency Virus (HIV) infections. NYDH entered into an agreement with 3M HIS to assist with the evaluation of the need for DRG modifications as well as to make the necessary changes in the DRG definitions and software. The DRG definitions developed by NYDH and 3M HIS are referred to as the All Patient DRGs (AP-DRGs).
+Title: "All Patient Diagnosis Related Groups (AP-DRGs)"
+Description: """In 1987, the state of New York passed legislation instituting a DRG-based prospective payment system for all non-Medicare patients. The legislation included a requirement that the New York State Department of Health (NYDH) evaluate the applicability of the DRGs to a non-Medicare population. In particular, the legislation required that the DRGs be evaluated with respect to neonates and patients with Human Immunodeficiency Virus (HIV) infections. NYDH entered into an agreement with 3M HIS to assist with the evaluation of the need for DRG modifications as well as to make the necessary changes in the DRG definitions and software. The DRG definitions developed by NYDH and 3M HIS are referred to as the All Patient DRGs (AP DRGs).
 
-As the AP-DRG code system is no longer in use and little authoratative information is available, the following resources have been used to compile the documented information
+The AP DRG code system is no longer updated as DRG classification system evolved to APR DRG. Evolution of DRG is summarized in the APR DRG methodology overview as well as in various articles.
 
-[https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf](https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf)"
+  
+Goldfield N. The evolution of diagnosis-related groups (DRGs): from its beginnings in case-mix and resource use theory, to its implementation for payment and now for its current utilization for quality within and outside the hospital. Qual Manage Health Care. 2010;19(1)3-16.
+
+  
+Averill RF, Goldfield NI, Muldoon J, Steinbeck BA, Grant TM. A closer look at All-Patient Refined DRGs. J AHIMA. 2002;73(1):46-49.
+
+[https://apps.3mhis.com/docs/Groupers/All\_Patient\_Refined\_DRG/Methodology\_overview\_GRP041/grp041\_aprdrg\_meth\_overview.pdf](https://apps.3mhis.com/docs/Groupers/All_Patient_Refined_DRG/Methodology_overview_GRP041/grp041_aprdrg_meth_overview.pdf)"""
 * ^url = "http://uri.hddaccess.com/cs/apdrg"
 * insert CodeSystemStubBoilerplate
-* ^copyright = "Use of AP-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
+* ^copyright = ""
 
 CodeSystem: THREEMAPRDRG
 Title: "All Patient Refined Diagnosis Related Groups (APR-DRGs)"
@@ -523,17 +529,17 @@ Each year 3M calculates and releases a set of statistics for each 3M APR DRG bas
 
 3M APR DRGs can be rolled up into broader categories. The 326 base DRGs roll up into 25 major diagnostic categories (MDCs) plus a pre-MDC category. An example is MDC 04, Diseases and Disorders of the Respiratory System. As well, each 3M APR DRG is assigned to a service line that is consistent with the outpatient service lines that are defined by the 3M™ Enhanced Ambulatory Patient Groups (EAPGs).
 
-A link to information about the code system - including how to obtain the content from 3M is provided [here.](https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/)."
+Link to information about the code system - including how to obtain the content from 3M - is available [here.](https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/)"
 * ^url = "http://uri.hddaccess.com/cs/aprdrg"
 * insert CodeSystemStubBoilerplate
 * ^copyright = "The clinical logic is maintained by a team of 3M clinicians, data analysts, nosologists, programmers and economists. The logic is proprietary to 3M but is available for licensees to view in an online definitions manual.
 
-To license APR-DRGs from 3M, see request form [here](https://engage.3m.com/PPS_Groupers_Contact)"
+To license APR DRG from 3M, see request form [here](https://engage.3m.com/PPS_Groupers_Contact)"
 
 
 ValueSet: CMSMS3MAPAPRDRG 
 Title: "MS-DRGs - AP-DRGs - APR-DRGs"
-Description: """This value set defines three sets of DRGs, MS-DRGs (Medicare Severity Diagnosis Related Groups), APR-DRGs (All Patient Refined Diagnosis Related Groups) and AP-DRGs (All Patient Diagnosis Related Groups). Identifying a DRG code requires a version."
+Description: """This value set defines three sets of DRGs, MS-DRGs (Medicare Severity Diagnosis Related Groups), APR-DRGs (All Patient Refined Diagnosis Related Groups) and AP-DRGs (All Patient Diagnosis Related Groups). Identifying a DRG code requires a version.
 
 **MS-DRGs**
 
@@ -555,26 +561,30 @@ Each year 3M calculates and releases a set of statistics for each 3M APR DRG bas
 
 3M APR DRGs can be rolled up into broader categories. The 326 base DRGs roll up into 25 major diagnostic categories (MDCs) plus a pre-MDC category. An example is MDC 04, Diseases and Disorders of the Respiratory System. As well, each 3M APR DRG is assigned to a service line that is consistent with the outpatient service lines that are defined by the 3M™ Enhanced Ambulatory Patient Groups (EAPGs).
 
-A link to information about the code system - including how to obtain the content from 3M is provided [here.](https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/)
+Link to information about the code system - including how to obtain the content from 3M - is available [here.](https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/).
 
 **AP-DRGs**
 
-In 1987, the state of New York passed legislation instituting a DRG-based prospective payment system for all non-Medicare patients. The legislation included a requirement that the New York State Department of Health (NYDH) evaluate the applicability of the DRGs to a non-Medicare population. In particular, the legislation required that the DRGs be evaluated with respect to neonates and patients with Human Immunodeficiency Virus (HIV) infections. NYDH entered into an agreement with 3M HIS to assist with the evaluation of the need for DRG modifications as well as to make the necessary changes in the DRG definitions and software. The DRG definitions developed by NYDH and 3M HIS are referred to as the All Patient DRGs (AP-DRGs).
+In 1987, the state of New York passed legislation instituting a DRG-based prospective payment system for all non-Medicare patients. The legislation included a requirement that the New York State Department of Health (NYDH) evaluate the applicability of the DRGs to a non-Medicare population. In particular, the legislation required that the DRGs be evaluated with respect to neonates and patients with Human Immunodeficiency Virus (HIV) infections. NYDH entered into an agreement with 3M HIS to assist with the evaluation of the need for DRG modifications as well as to make the necessary changes in the DRG definitions and software. The DRG definitions developed by NYDH and 3M HIS are referred to as the All Patient DRGs (AP DRGs).
 
-As the AP-DRG code system is no longer in use and little authoratative information is available, the following resources have been used to compile the documented information
+The AP DRG code system is no longer updated as DRG classification system evolved to APR DRG. Evolution of DRG is summarized in the APR DRG methodology overview as well as in various articles.
 
-[https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf](https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf)
+  
+Goldfield N. The evolution of diagnosis-related groups (DRGs): from its beginnings in case-mix and resource use theory, to its implementation for payment and now for its current utilization for quality within and outside the hospital. Qual Manage Health Care. 2010;19(1)3-16.
 
-_**Note: Temporary URLs have been defined for the APR-DRGs and AP-DRGs for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"""
+  
+Averill RF, Goldfield NI, Muldoon J, Steinbeck BA, Grant TM. A closer look at All-Patient Refined DRGs. J AHIMA. 2002;73(1):46-49.
+
+[https://apps.3mhis.com/docs/Groupers/All\_Patient\_Refined\_DRG/Methodology\_overview\_GRP041/grp041\_aprdrg\_meth\_overview.pdf](https://apps.3mhis.com/docs/Groupers/All_Patient_Refined_DRG/Methodology_overview_GRP041/grp041_aprdrg_meth_overview.pdf)"""
 
 * codes from system CMSMSDRG
 * codes from system THREEMAPDRG
 * codes from system THREEMAPRDRG
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain MS-DRGs used throughout the US health care industry. The CMS MS-DRGs are free to use without restriction.
 
-The APR-DRG clinical logic is maintained by a team of 3M clinicians, data analysts, nosologists, programmers and economists. The logic is proprietary to 3M but is available for licensees to view in an online definitions manual.
+The clinical logic is maintained by a team of 3M clinicians, data analysts, nosologists, programmers and economists. The logic is proprietary to 3M but is available for licensees to view in an online definitions manual.
 
-To license APR-DRGs from 3M, see request form [here](https://engage.3m.com/PPS_Groupers_Contact)."
+To license APR DRG from 3M, see request form [here](https://engage.3m.com/PPS_Groupers_Contact)"
 
 // ******** Place of Service ***************
 CodeSystem: CMSPlaceofServiceCodes

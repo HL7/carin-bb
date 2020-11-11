@@ -14,9 +14,11 @@
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
-<li>Interim Version 0.1.10 - November 4+, 2020</li>
+<li>Interim Version 0.1.10 - November 11, 2020</li>
 <ol>
-<li>None yet</li>
+<li>updates based on Financial Management feedback</li>
+<li>cleaned up and clarified verbiage</li>
+<li>replaced CARIN defined code systems with terminology.HL7.org code systems where available</li>
 </ol>
 <li>Interim Version 0.1.9 - November 2, 2020</li>
 <ol>
