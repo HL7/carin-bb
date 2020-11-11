@@ -375,7 +375,11 @@ These files contain the Level II alphanumeric HCPCS procedure and modifier codes
 
 ValueSet: AMACPTCMSHCPCSProcedureCodes
 Title: "Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Procedure Codes"
-Description: "The Value Set is a combination of two code systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. The target set for this value set are the procedure codes from the CPT and HCPCS files. The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice. The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice.
+Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. 
+
+The target set for this value set are the procedure codes from the CPT and HCPCS files.
+
+The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice.
 
 Designated by the U.S. Department of Health and Human Services under the Health Insurance Portability and Accountability Act (HIPAA) as a national coding set for physician and other health care professional services and procedures, CPT’s evidence-based codes accurately encompass the full range of health care services.
 
@@ -429,6 +433,7 @@ See information on the use of HCPCS Level I (proprietary and owned by American M
 ValueSet:  AMACPTCMSHCPCSModifiers
 Title: "Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Procedure Modifier Codes" 
 Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure code modifiers. Modifiers help further describe a procedure code without changing its definition.  
+
 The target set for this value set are the procedure code modifiers from the CPT and HCPCS files.
 
 The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice.
@@ -503,10 +508,8 @@ Description: "In 1987, the state of New York passed legislation instituting a DR
 
 As the AP-DRG code system is no longer in use and little authoratative information is available, the following resources have been used to compile the documented information
 
-[https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf](https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf)
-
-_**Note: A temporary URL has been defined for this codesystem for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
-* ^url = "http://terminology.hl7.org/temporary-uri/codeSystem/APDRG"
+[https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf](https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf)"
+* ^url = "http://uri.hddaccess.com/cs/apdrg"
 * insert CodeSystemStubBoilerplate
 * ^copyright = "Use of AP-DRGs require a license.  Reference https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/.   As HL7 is working with the owning authorities to finalize the urls, the urls are subject to change."
 
@@ -520,10 +523,8 @@ Each year 3M calculates and releases a set of statistics for each 3M APR DRG bas
 
 3M APR DRGs can be rolled up into broader categories. The 326 base DRGs roll up into 25 major diagnostic categories (MDCs) plus a pre-MDC category. An example is MDC 04, Diseases and Disorders of the Respiratory System. As well, each 3M APR DRG is assigned to a service line that is consistent with the outpatient service lines that are defined by the 3M™ Enhanced Ambulatory Patient Groups (EAPGs).
 
-A link to information about the code system - including how to obtain the content from 3M is provided [here.](https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/). Identifying a DRG code requires a version.
-
-_**Note: A temporary URL has been defined for this codesystem for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
-* ^url = "http://terminology.hl7.org/temporary-uri/codeSystem/3M/APRDRG"
+A link to information about the code system - including how to obtain the content from 3M is provided [here.](https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/)."
+* ^url = "http://uri.hddaccess.com/cs/aprdrg"
 * insert CodeSystemStubBoilerplate
 * ^copyright = "The clinical logic is maintained by a team of 3M clinicians, data analysts, nosologists, programmers and economists. The logic is proprietary to 3M but is available for licensees to view in an online definitions manual.
 
@@ -532,7 +533,7 @@ To license APR-DRGs from 3M, see request form [here](https://engage.3m.com/PPS_G
 
 ValueSet: CMSMS3MAPAPRDRG 
 Title: "MS-DRGs - AP-DRGs - APR-DRGs"
-Description: "This value set defines three sets of DRGs, MS-DRGs (Medicare Severity Diagnosis Related Groups), APR-DRGs (All Patient Refined Diagnosis Related Groups) and AP-DRGs (All Patient Diagnosis Related Groups). 
+Description: """This value set defines three sets of DRGs, MS-DRGs (Medicare Severity Diagnosis Related Groups), APR-DRGs (All Patient Refined Diagnosis Related Groups) and AP-DRGs (All Patient Diagnosis Related Groups). Identifying a DRG code requires a version."
 
 **MS-DRGs**
 
@@ -564,7 +565,7 @@ As the AP-DRG code system is no longer in use and little authoratative informati
 
 [https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf](https://www.hcup-us.ahrq.gov/db/nation/nis/APR-DRGsV20MethodologyOverviewandBibliography.pdf)
 
-_**Note: Temporary URLs have been defined for the APR-DRGs and AP-DRGs for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"
+_**Note: Temporary URLs have been defined for the APR-DRGs and AP-DRGs for use in draft implementation guides. It should be noted that the authoritative canonical URL will be different.**_"""
 
 * codes from system CMSMSDRG
 * codes from system THREEMAPDRG
@@ -604,7 +605,7 @@ CodeSystem: X12ClaimAdjustmentReasonCodes
 Title: "X12 Claim Adjustment Reason Codes"
 Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
 
-The X12 Claim Adjustment Reason Codes describe why a claim or service line was paid differently than it was billed. . These codes are listed within an X12 implementation guide (TR3) and maintained by X12.
+The X12 Claim Adjustment Reason Codes describe why a claim or service line was paid differently than it was billed. These codes are listed within an X12 implementation guide (TR3) and maintained by X12.
 
 External code lists maintained by X12 and external code lists maintained by others and distributed by WPC on behalf of the maintainer can be found here:
 
@@ -673,7 +674,7 @@ ValueSet: X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 Title: "X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes"
 Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
 
-The X12 Claim Adjustment Reason Codes describe why a claim or service line was paid differently than it was billed. . These codes are listed within an X12 implementation guide (TR3) and maintained by X12.
+The X12 Claim Adjustment Reason Codes describe why a claim or service line was paid differently than it was billed. These codes are listed within an X12 implementation guide (TR3) and maintained by X12.
 
 Remittance Advice Remark Codes (RARCs) are used to provide additional explanation for an adjustment already described by a Claim Adjustment Reason Code (CARC) or to convey information about remittance processing.
 
@@ -775,7 +776,30 @@ Most files are provided in compressed zip format for ease in downloading. These 
 
 ValueSet: CMSICD910PCSProcedureCodes 
 Title: "Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Coding System"
-Description: "The Value Set is a combination of values from volume 3 from the Code System International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) and values in the Code System ICD-10 Procedure Coding System. The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States.  The ICD-9-CM consists of: a tabular list containing a numerical list of the disease code numbers in tabular form; an alphabetical index to the disease entries; and a classification system for surgical, diagnostic, and therapeutic procedures (alphabetic index and tabular list). The National Center for Health Statistics (NCHS) and the Centers for Medicare and Medicaid Services are the U.S. governmental agencies responsible for overseeing all changes and modifications to the ICD-9-CM. ICD-10 Procedure Coding System is the replacement for ICD-9-CM, volume 3, effective October 1, 2015. Current and previous releases of ICD-9-CM are available here: https://www.cdc.gov/nchs/icd/icd9cm.htm Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to nchsicd10cm@cdc.gov. The ICD-10-PCS is a procedure classification published by the United States Centers for Medicare & Medicaid Services (CMS) (https://www.cms.gov) for classifying procedures performed in hospital inpatient health care settings. Link to information about the code system: https://www.cms.gov/Medicare/Coding/ICD10 Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of ICD-10-CM. CMS republishes the ICD-10-CM codes system on their website for convienence only. For authoratative information on ICD-10-CM, users should refer to the National Center for Health Statistics (NCHS) site located here."
+Description: "The Value Set is a combination of values from volume 3 from the Code System International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) and values in the Code System ICD-10 Procedure Coding System. 
+
+The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States. 
+
+The ICD-9-CM consists of:
+
+*   a tabular list containing a numerical list of the disease code numbers in tabular form;
+*   an alphabetical index to the disease entries; and
+*   a classification system for surgical, diagnostic, and therapeutic procedures (alphabetic index and tabular list).
+
+The National Center for Health Statistics (NCHS) and the [Centers for Medicare and Medicaid Services](http://www.cms.hhs.gov/) are the U.S. governmental agencies responsible for overseeing all changes and modifications to the ICD-9-CM.
+
+The ICD-10-PCS is the replacement for ICD-9-CM, volume 3, effective October 1, 2015.
+
+The ICD-10-PCS is a procedure classification published by the United States Centers for Medicare & Medicaid Services (CMS) ([https://www.cms.gov](https://www.cms.gov/)) for classifying procedures  
+performed in hospital inpatient health care settings.
+
+Current and previous releases of ICD-9-CM are available here: [https://www.cdc.gov/nchs/icd/icd9cm.htm](https://www.cdc.gov/nchs/icd/icd9cm.htm)
+
+Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to [nchsicd10cm@cdc.gov](mailto:nchsicd10cm@cdc.gov).
+
+A link to information about the ICD-10-PCS code system - including how to obtain the content - is available at [https://www.cms.gov/Medicare/Coding/ICD10.](https://www.cms.gov/Medicare/Coding/ICD10)
+
+Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of ICD-10-CM. CMS republishes the ICD-10-CM codes system on their website for convienence only. For authoratative information on ICD-10-CM, users should refer to the National Center for Health Statistics (NCHS) site located [here](https://www.cdc.gov/nchs/icd/icd10cm.htm)."
 * codes from system $ICD10PCS
 * codes from system $ICD9PCS
 * ^copyright = "ICD-9 copyright:
