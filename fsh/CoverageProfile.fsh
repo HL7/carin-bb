@@ -24,8 +24,8 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 * class ^slicing.ordered = false   // can be omitted, since false is the default
 * class ^slicing.description = "Slice based on value pattern"
 * class contains 
-   group 1..1  MS and
-   plan 1..1 MS
+   group 0..1  MS and
+   plan 0..1 MS
 * class[group].type = $CoverageClassCS#group
 * class[plan].type = $CoverageClassCS#plan
 
