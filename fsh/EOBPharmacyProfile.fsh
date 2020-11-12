@@ -19,35 +19,35 @@ The claims data is based on submission standards adopted by the Department of He
    clmrecvddate 0..1 MS and
    compoundcode 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
-* supportingInfo[billingnetworkcontractingstatus].category 1..1 MS
+* supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus (required) 
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[brandgenericcode].category = C4BBSupportingInfoType#brandgenericcode 
-* supportingInfo[brandgenericcode].category 1..1 MS  
+* supportingInfo[brandgenericcode].category MS  
 * supportingInfo[brandgenericcode].code from NCPDPBrandGenericCode (required)
 * supportingInfo[brandgenericcode].code 1..1 MS
 * supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode 
-* supportingInfo[rxoriginCode].category 1..1 MS  
+* supportingInfo[rxoriginCode].category MS  
 * supportingInfo[rxoriginCode].code from NCPDPPrescriptionOriginCode (required)
 * supportingInfo[rxoriginCode].code 1..1 MS 
 * supportingInfo[refillNum].category = C4BBSupportingInfoType#refillnum
-* supportingInfo[refillNum].category 1..1 MS
+* supportingInfo[refillNum].category MS
 * supportingInfo[refillNum].value[x] 1..1 MS
 * supportingInfo[refillNum].value[x] only Quantity 
 * supportingInfo[dawcode].category = C4BBSupportingInfoType#dawcode  
-* supportingInfo[dawcode].category 1..1 MS     
+* supportingInfo[dawcode].category MS     
 * supportingInfo[dawcode].code from NCPDPDispensedAsWrittenOrProductSelectionCode (required)
 * supportingInfo[dawcode].code 1..1 MS 
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
-* supportingInfo[clmrecvddate].category 1..1 MS
+* supportingInfo[clmrecvddate].category MS
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[dayssupply].category = C4BBSupportingInfoType#dayssupply
-* supportingInfo[dayssupply].category = 1..1 MS
+* supportingInfo[dayssupply].category  MS
 * supportingInfo[dayssupply].value[x] 1..1 MS
 * supportingInfo[dayssupply].value[x] only Quantity 
 * supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
-* supportingInfo[compoundcode].category 1..1 MS
+* supportingInfo[compoundcode].category MS
 * supportingInfo[compoundcode].code from NCPDPCompoundCode (required)
 * supportingInfo[compoundcode].code 1..1 MS
 * item.productOrService from FDANDCOrCompound (required)

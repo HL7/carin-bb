@@ -17,19 +17,19 @@ The claims data is based on the professional claim form 1500, submission standar
    clmrecvddate 0..1 MS and
    servicefacility 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
-* supportingInfo[billingnetworkcontractingstatus].category 1..1 MS
+* supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
 * supportingInfo[performingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
-* supportingInfo[performingnetworkcontractingstatus].category 1..1 MS
+* supportingInfo[performingnetworkcontractingstatus].category MS
 * supportingInfo[performingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
-* supportingInfo[clmrecvddate].category 1..1 MS
+* supportingInfo[clmrecvddate].category MS
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[servicefacility].category = C4BBSupportingInfoType#servicefacility
-* supportingInfo[servicefacility].category 1..1 MS
+* supportingInfo[servicefacility].category MS
 * supportingInfo[servicefacility].valueReference 1..1 MS 
 * supportingInfo[servicefacility].valueReference only Reference(C4BBOrganization)
 * careTeam.role from C4BBClaimProfessionalAndNonClinicianCareTeamRole   (required)  // was PayerProfessionalAndNonClinicianProviderRole

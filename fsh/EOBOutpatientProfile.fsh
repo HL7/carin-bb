@@ -26,28 +26,28 @@ The claims data is based on the institutional claim form UB-04, submission stand
    admtype 0..1 MS and 
    discharge-status 0..1 MS 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
-* supportingInfo[billingnetworkcontractingstatus].category 1..1 MS
+* supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
-* supportingInfo[clmrecvddate].category 1..1 MS
+* supportingInfo[clmrecvddate].category MS
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[typeofbill].category = C4BBSupportingInfoType#typeofbill
-* supportingInfo[typeofbill].category 1.1 MS 
+* supportingInfo[typeofbill].category MS 
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
-* supportingInfo[typeofbill].code 1.1 MS 
+* supportingInfo[typeofbill].code 1..1 MS 
 * supportingInfo[pointoforigin].category = C4BBSupportingInfoType#pointoforigin
-* supportingInfo[pointoforigin].category 1..1 MS 
+* supportingInfo[pointoforigin].category MS 
 * supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
 * supportingInfo[pointoforigin].code MS 
 * supportingInfo[admtype].category = C4BBSupportingInfoType#admtype
-* supportingInfo[admtype].category 1..1 MS 
+* supportingInfo[admtype].category MS 
 * supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
 * supportingInfo[admtype].code 1..1 MS 
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
-* supportingInfo[discharge-status].category MS 1..1 MS
-* supportingInfo[discharge-status].code MS 1..1 MS
+* supportingInfo[discharge-status].category MS 
+* supportingInfo[discharge-status].code  1..1 MS
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
