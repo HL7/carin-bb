@@ -24,8 +24,8 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 * class ^slicing.ordered = false   // can be omitted, since false is the default
 * class ^slicing.description = "Slice based on value pattern"
 * class contains 
-   group 1..1  MS and
-   plan 1..1 MS
+   group 0..1  MS and
+   plan 0..1 MS
 * class[group].type = $CoverageClassCS#group
 * class[plan].type = $CoverageClassCS#plan
 
@@ -41,31 +41,16 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 * class[plan].name MS
 
 
-* meta.lastUpdated ^short = "Defines the date the coverage that was effective as of the date of service or admission (163)"
-* meta.lastUpdated ^definition = "Defines the date the coverage that was effective as of the date of service or admission (163)"
-* meta.lastUpdated ^comment = "The Coverage Reference Resource SHALL be returned with data that was effective as of the date of service or admission of the claim"
-* meta.profile ^short = "Profile this resource claims to conform to (190)"
-* meta.profile ^definition = "Profile this resource claims to conform to (190)"
-* status ^short = "Identfies the status of the coverage information (default: active) (133)"
-* status ^definition = "Identfies the status of the coverage information (default: active) (133)"
-* type ^short = "Identifies if the coverage is PPO, HMO, POS, etc. (3)"
-* type ^definition = "Identifies if the coverage is PPO, HMO, POS, etc. (3)"
-* subscriberId  ^short = "The identifier assigned by the Payer on the subscriber's ID card (132)"
-* subscriberId  ^definition = "The identifier assigned by the Payer on the subscriber's ID card (132)"
-* beneficiary ^short = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided (1)"
-* beneficiary ^definition = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided (1)"
-* beneficiary ^comment = "This is the party who receives treatment for which the costs are reimbursed under the coverage. alternate path:  EOB.patient(Patient).identifier"
-* relationship ^short = "Relationship of the member to the person insured (subscriber). (72)"
-* relationship ^definition = "Relationship of the member to the person insured (subscriber). (72)"
-* period ^short = "Date that the contract became effective (74) and Date that the contract was terminated or coverage changed (75)"
-* period ^definition = "Date that the contract became effective (74) and Date that the contract was terminated or coverage changed (75)"
-* payor ^short = "Issuer of the Policy (2)"
-* payor ^definition = "Issuer of the Policy (2)"
-* class[group].value ^short = "Employer account identifier (134)"
-* class[group].value ^definition = "Employer account identifier (134)"
-* class[group].name ^short = "Name of the Employer Account (135)"
-* class[group].name ^definition = "Name of the Employer Account (135)"
-* class[plan].value ^short = "Business concept used by a health plan to describe its benefit offerings (154)"
-* class[plan].value ^definition = "Business concept used by a health plan to describe its benefit offerings (154)"
-* class[plan].name ^short = "Name of the health plan benefit offering assigned to the Plan Identfier (155)"
-* class[plan].name ^definition = "Name of the health plan benefit offering assigned to the Plan Identfier (155)"
+* meta.lastUpdated ^comment = "Defines the date the coverage that was effective as of the date of service or admission (163). The Coverage Reference Resource SHALL be returned with data that was effective as of the date of service or admission of the claim"
+* meta.profile ^comment = "CPCDS data element (190)"
+* status ^comment = "Identfies the status of the coverage information (default: active) (133)"
+* type ^comment = "Identifies if the coverage is PPO, HMO, POS, etc. (3)"
+* subscriberId  ^comment = "The identifier assigned by the Payer on the subscriber's ID card (132)"
+* beneficiary ^comment = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided (1).  This is the party who receives treatment for which the costs are reimbursed under the coverage. alternate path:  EOB.patient(Patient).identifier"
+* relationship ^comment = "Relationship of the member to the person insured (subscriber). (72)"
+* period ^comment = "Date that the contract became effective (74) and Date that the contract was terminated or coverage changed (75)"
+* payor ^comment = "Issuer of the Policy (2)"
+* class[group].value ^comment = "Employer account identifier (134)"
+* class[group].name ^comment = "Name of the Employer Account (135)"
+* class[plan].value ^comment = "Business concept used by a health plan to describe its benefit offerings (154)"
+* class[plan].name ^comment = "Name of the health plan benefit offering assigned to the Plan Identfier (155)"

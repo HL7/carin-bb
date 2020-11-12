@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.carin-bb
 canonical: http://hl7.org/fhir/us/carin-bb
-version: 0.1.9
+version: 0.1.10
 name: CARINConsumerDirectedPayerDataExchange
 title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 status: active
@@ -54,7 +54,7 @@ menu:
   Guidance:
     General Guidance: General_Guidance.html
     Common Payer Consumer Data Set (CPCDS): Common_Payer_Consumer_Data_Set.html
-    Terminology: Terminology.html 
+    Terminology Licensure: Terminology_Licensure.html 
   FHIR Artifacts:
     Profiles: artifacts.html#3
     Search Parameters: searchparameters.html
