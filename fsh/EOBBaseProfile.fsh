@@ -151,7 +151,7 @@ RuleSet: SupportingInfoSlicing
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on $this pattern"
 * supportingInfo MS 
-* supportingInfo.category MS 
+#* supportingInfo.category MS  -- we will flag in each slice 
 
 RuleSet: TotalSlicing
 * total ^slicing.rules = #open

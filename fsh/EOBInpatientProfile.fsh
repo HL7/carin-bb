@@ -48,26 +48,35 @@ Services."
    
 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].category 1..1 MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
-* supportingInfo[admissionperiod].category = C4BBSupportingInfoType#admissionperiod  
+* supportingInfo[admissionperiod].category = C4BBSupportingInfoType#admissionperiod 
+* supportingInfo[admissionperiod].category = 1..1 MS   
 * supportingInfo[admissionperiod].timingPeriod 1..1 MS
 * supportingInfo[clmrecvddate].category  = C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[clmrecvddate].category  = 1..1 MS
 * supportingInfo[clmrecvddate].timing[x] only date 
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[typeofbill].category  = C4BBSupportingInfoType#typeofbill
+* supportingInfo[typeofbill].category 1..1 MS 
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
 * supportingInfo[typeofbill].code 1..1 MS 
 * supportingInfo[pointoforigin].category  = C4BBSupportingInfoType#pointoforigin
+* supportingInfo[pointoforigin].category 1..1 MS
+* supportingInfo[pointoforigin].category 1..1 MS
 * supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
 * supportingInfo[pointoforigin].code 1..1 MS
 * supportingInfo[admtype].category  = C4BBSupportingInfoType#admtype
+* supportingInfo[admtype].category 1..1 MS 
 * supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
 * supportingInfo[admtype].code 1..1 MS 
 * supportingInfo[discharge-status].category  = C4BBSupportingInfoType#discharge-status
+* supportingInfo[discharge-status].category 1..1 MS
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 * supportingInfo[discharge-status].code 1..1 MS
 * supportingInfo[drg].category  = C4BBSupportingInfoType#drg
+* supportingInfo[drg].category 1..1 MS
 * supportingInfo[drg].code from CMSMS3MAPAPRDRG  (required)
 * supportingInfo[drg].code 1..1 MS
 * item.revenue from AHANUBCRevenueCodes (required)
