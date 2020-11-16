@@ -16,7 +16,8 @@
 <ul>
 <li>Interim Version 0.1.11 - November 12+, 2020 </li>
 <ol>
-<li>Rebuild with IG Publisher 1.1.41</li>
+<li>Minor edits to capability statement narrative. (not a functional change)</li>
+<li>Move a figure in the usecase section.</li>
 </ol>
 <li>Interim Version 0.1.10 - November 11, 2020</li>
 <ol>
