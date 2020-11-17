@@ -12,7 +12,7 @@ Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/Dispe
 Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/BrandGenericIndicator' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/temporary/codeSystem-uri/NCPDP/PrescriptionOriginCode' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/CompoundCode' is unknown so the code cannot be validated
-# These are actual warnings to surpress 
+# These are actual warnings to surpress, all relating to validation of values from terminologies
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit because the value set or code system is not known to the validator]
@@ -50,7 +50,107 @@ INFORMATION: Organization/OrganizationProvider1: Organization: Validate resource
 INFORMATION: Organization/Payer1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
 INFORMATION: Organization/PayerOrganizationExample1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
 INFORMATION: Patient/Patient1: Patient: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
-# Errors to Suppress
+# Suppress warnings about validation of build-in FHIR resources
+INFORMATION: ImplementationGuide/hl7.fhir.us.carin-bb: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+INFORMATION: Coverage/Coverage1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+INFORMATION: Organization/ProviderOrganization1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+INFORMATION: Organization/ProviderOrganization3: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+INFORMATION: Organization/ProviderOrganization4: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+INFORMATION: Organization/ProviderOrganization5: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+INFORMATION: Organization/ProviderOrganization6: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+INFORMATION: Patient/ExamplePatient1: Patient: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
+INFORMATION: Practitioner/Practitioner1: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
+INFORMATION: Practitioner/Practitioner2: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
+INFORMATION: Practitioner/Practitioner3: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
+INFORMATION: StructureDefinition/C4BB-Coverage: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/C4BB-Patient: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/C4BB-Practitioner: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: CapabilityStatement/c4bb: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+INFORMATION: SearchParameter/coverage-payor: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+INFORMATION: SearchParameter/explanationofbenefit-care-team: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+INFORMATION: SearchParameter/explanationofbenefit-coverage: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+INFORMATION: SearchParameter/explanationofbenefit-identifier: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+INFORMATION: SearchParameter/explanationofbenefit-insurer: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+INFORMATION: SearchParameter/explanationofbenefit-patient: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+INFORMATION: SearchParameter/explanationofbenefit-provider: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+INFORMATION: SearchParameter/explanationofbenefit-service-date: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+INFORMATION: SearchParameter/explanationofbenefit-type: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+INFORMATION: SearchParameter/practitionerrole-organization: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+INFORMATION: SearchParameter/practitionerrole-practitioner: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+INFORMATION: CodeSystem/AHANUBCPatientDischargeStatus: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisit: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCPresentOnAdmission: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCPriorityTypeOfAdmissionOrVisit: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCRevenueCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCTypeOfBill: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBAdjudication: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBAdjudicationDiscriminator: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBClaimCareTeamRole: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBClaimDiagnosisType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBClaimProcedureType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBCompoundLiteral: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBIdentifierType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBPayeeType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBPayerAdjudicationStatus: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBRelatedClaimRelationshipCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBSupportingInfoType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/CMSHCPCSCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/CMSMSDRG: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/CMSPlaceofServiceCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/CMSRemittanceAdviceRemarkCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/NCPDPBrandGenericIndicator: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/NCPDPCompoundCode: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/NCPDPPrescriptionOriginCode: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/NCPDPRejectCode: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/THREEMAPDRG: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/THREEMAPRDRG: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/X12ClaimAdjustmentReasonCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: ValueSet/AHANUBCPatientDischargeStatus: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/AHANUBCPresentOnAdmission: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/AHANUBCRevenueCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/AHANUBCTypeOfBill: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/AMACPTCMSHCPCSModifiers: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/AMACPTCMSHCPCSProcedureCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBAdjudication: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBClaimIdentifierType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBClaimInpatientInstitutionalDiagnosisType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBClaimInstitutionalCareTeamRole: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBClaimOutpatientInstitutionalDiagnosisType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBClaimPharmacyTeamRole: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBClaimProcedureType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBClaimProfessionalAndNonClinicianCareTeamRole: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBClaimProfessionalAndNonClinicianDiagnosisType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBOrganizationIdentifierType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBPatientIdentifierType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBPayeeType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBPayerBenefitPaymentStatus: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBPayerClaimPaymentStatusCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBPayerProviderContractingStatus: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBPractitionerIdentifierType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBRelatedClaimRelationshipCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/C4BBSupportingInfoType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/CDCICD910CMDiagnosisCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/CMSICD910PCSProcedureCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/CMSMS3MAPAPRDRG: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/CMSPlaceofServiceCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/FDANDCOrCompound: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/FDANationalDrugCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/NCPDPBrandGenericCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/NCPDPCompoundCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/NCPDPPrescriptionOriginCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/NCPDPRejectCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+# Errors to Suppress.   All ICD10 values have been validated manually.  All Revenue codes have been validated manually.
 ERROR: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.diagnosis[0].diagnosis.ofType(CodeableConcept): Code "S06.0x1A" not found; The code "S06.0x1A" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A) is not valid in the value set 'CDCICD910CMDiagnosisCodes' (from http://tx.fhir.org/r4)
 ERROR: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.diagnosis[0].diagnosis.ofType(CodeableConcept).coding[0]: Code "S06.0x1A" not found; The code "S06.0x1A" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A'
 ERROR: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.diagnosis[0].diagnosis.ofType(CodeableConcept): Code "S06.0x1A" not found; The code "S06.0x1A" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A) is not valid in the value set 'CDCICD910CMDiagnosisCodes' (from http://tx.fhir.org/r4)
