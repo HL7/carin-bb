@@ -44,6 +44,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.location[x] from CMSPlaceofServiceCodes (required)
 * item.location[x] only CodeableConcept
+* adjudication 0..1
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
    adjudicationamounttype 0..* and

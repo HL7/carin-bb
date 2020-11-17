@@ -56,7 +56,9 @@ The claims data is based on submission standards adopted by the Department of He
 * item.detail.quantity MS 
 * careTeam.role from C4BBClaimPharmacyTeamRole  (required)   // was PayerPharmacyProviderRole
 * careTeam.role 1..1 MS
+* adjudication 0..1
 * insert ItemAdjudicationSlicing
+* item.adjudication MS 
 * item.adjudication contains
    adjudicationamounttype 0..* MS and
    denialreason 0..1 MS 
