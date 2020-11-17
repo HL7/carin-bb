@@ -67,10 +67,10 @@
 "Self"
 </td></tr>
 <tr><td>period.start</td><td>
-"2017-01-01T00:00:00-05:00"
+"2017-01-01"
 </td></tr>
 <tr><td>period.end</td><td>
-"2017-06-30T00:00:00-04:00"
+"2017-06-30"
 </td></tr>
 <tr><td>payor[0].reference</td><td>
 "Organization/PayerOrganizationExample1"

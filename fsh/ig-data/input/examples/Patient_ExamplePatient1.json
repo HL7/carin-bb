@@ -97,11 +97,11 @@
     {
       "type": "physical",
       "line": [
-        "123 Main Street"
+        "456 Murray Avenue"
       ],
       "city": "PITTSBURGH",
       "state": "PA",
-      "postalCode": "15239"
+      "postalCode": "15217"
     }
   ],
   "maritalStatus": {

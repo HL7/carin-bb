@@ -82,10 +82,10 @@ XYZ123
 "01"
 </td></tr>
 <tr><td>period.start</td><td>
-"2019-01-01T00:00:00+00:00"
+"2019-01-01"
 </td></tr>
 <tr><td>period.end</td><td>
-"2019-10-31T00:00:00+00:00"
+"2019-10-31"
 </td></tr>
 <tr><td>network</td><td>
 "XYZ123-UPMC CONSUMER ADVA"

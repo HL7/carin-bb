@@ -57,8 +57,8 @@ Usage: #example
 * beneficiary = Reference(Patient1)
 * subscriberId = "12345678901"  
 * dependent = "01"
-* period.start = "2019-01-01T00:00:00+00:00"
-* period.end = "2019-10-31T00:00:00+00:00"
+* period.start = "2019-01-01"
+* period.end = "2019-10-31"
 
 * class[group].type = $CoverageClassCS#group 
 * class[group].type.text = "An employee group"

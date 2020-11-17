@@ -146,7 +146,7 @@ GXXX@XXXX.com
 <tr><td>address[1].type</td><td>
 "physical"
 </td></tr>
-<tr><td>address[1].line[0]</td><td>"123 Main Street"</td></tr>
+<tr><td>address[1].line[0]</td><td>"456 Murray Avenue"</td></tr>
 <tr><td>address[1].city</td><td>
 "PITTSBURGH"
 </td></tr>
@@ -154,7 +154,7 @@ GXXX@XXXX.com
 "PA"
 </td></tr>
 <tr><td>address[1].postalCode</td><td>
-"15239"
+"15217"
 </td></tr>
 <tr><td>maritalStatus.coding[0].system</td><td>
 "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
