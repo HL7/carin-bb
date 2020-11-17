@@ -49,10 +49,10 @@ ProfessionalEOBExample1
 "Patient/ExamplePatient1"
 </td></tr>
 <tr><td>billablePeriod.start</td><td>
-"2020-08-04T00:00:00-04:00"
+"2020-08-04"
 </td></tr>
 <tr><td>billablePeriod.end</td><td>
-"2020-08-04T00:00:00-04:00"
+"2020-08-04"
 </td></tr>
 <tr><td>created</td><td>
 "2020-08-24T00:00:00-04:00"

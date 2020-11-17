@@ -49,10 +49,10 @@ InpatientEOBExample1
 "Patient/ExamplePatient1"
 </td></tr>
 <tr><td>billablePeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>billablePeriod.end</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>created</td><td>
 "2017-06-01T00:00:00-04:00"

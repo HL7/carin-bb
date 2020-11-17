@@ -43,7 +43,7 @@
 #7
 </td></tr>
 <tr><td>supportingInfo[1].code.coding[0].system</td><td>
-"http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode"
+"http://terminology.hl7.org/CodeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode"
 </td></tr>
 <tr><td>supportingInfo[1].sequence</td><td>
 5
@@ -88,7 +88,7 @@
 #2
 </td></tr>
 <tr><td>supportingInfo[4].code.coding[0].system</td><td>
-"http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/BrandGenericIndicator"
+"http://terminology.hl7.org/CodeSystem/NCPDP/BrandGenericIndicator"
 </td></tr>
 <tr><td>supportingInfo[5].category.coding[0].code</td><td>
 #rxorigincode
@@ -100,7 +100,7 @@
 #1
 </td></tr>
 <tr><td>supportingInfo[5].code.coding[0].system</td><td>
-"http://terminology.hl7.org/temporary/codeSystem-uri/NCPDP/PrescriptionOriginCode"
+"http://terminology.hl7.org/CodeSystem/NCPDP/PrescriptionOriginCode"
 </td></tr>
 <tr><td>supportingInfo[5].sequence</td><td>
 3
@@ -112,7 +112,7 @@
 "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
 </td></tr>
 <tr><td>supportingInfo[6].timingDate</td><td>
-"2011-05-30"
+"2019-10-31"
 </td></tr>
 <tr><td>supportingInfo[6].sequence</td><td>
 6
@@ -127,7 +127,7 @@
 #Dummy
 </td></tr>
 <tr><td>supportingInfo[7].code.coding[0].system</td><td>
-"http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/CompoundCode"
+"http://terminology.hl7.org/CodeSystem/NCPDP/CompoundCode"
 </td></tr>
 <tr><td>supportingInfo[7].sequence</td><td>
 8
@@ -163,10 +163,10 @@ AW123412341234123412341234123412
 "Patient/Patient1"
 </td></tr>
 <tr><td>billablePeriod.start</td><td>
-"2019-01-01T00:00:00+00:00"
+"2019-10-30"
 </td></tr>
 <tr><td>billablePeriod.end</td><td>
-"2019-10-31T00:00:00+00:00"
+"2019-10-31"
 </td></tr>
 <tr><td>provider.reference</td><td>
 "Organization/OrganizationProvider1"
