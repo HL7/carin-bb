@@ -141,6 +141,7 @@ RuleSet: AdjudicationSlicing
 * adjudication ^slicing.description = "Slice based on value pattern"
 * adjudication ^slicing.discriminator.type = #pattern
 * adjudication.category 1..1 MS 
+* adjudication.category from C4BBAdjudicationCategoryDiscriminator (required)
 
 RuleSet: SupportingInfoSlicing
 * supportingInfo ^slicing.discriminator.type = #pattern 
@@ -158,6 +159,7 @@ RuleSet: TotalSlicing
 * total  ^slicing.discriminator.type = #pattern
 * total  ^slicing.discriminator.path = "category"
 * total.category 1..1 MS 
+* total.category from C4BBTotalCategoryDiscriminator (extensible)
 
 RuleSet: ItemAdjudicationSlicing
 * item.adjudication ^slicing.rules = #closed
@@ -165,6 +167,7 @@ RuleSet: ItemAdjudicationSlicing
 * item.adjudication ^slicing.description = "Slice based on value pattern"
 * item.adjudication ^slicing.discriminator.type = #pattern 
 * item.adjudication ^slicing.discriminator.path = "category"
+* item.adjudication.category from C4BBAdjudicationCategoryDiscriminator (required)
 
 RuleSet: EOBBaseProfileComments
 * meta.lastUpdated ^comment = "Defines the date the Resource was created or updated, whichever comes last (163). Payers SHALL provide the last time the data was updated or the date of creation in the payer’s system of record, whichever comes last"
