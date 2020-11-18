@@ -1,4 +1,19 @@
 // Contains ValueSets for Codes Defined WITHIN this IG  
+ValueSet: C4BBAdjudicationCategoryDiscriminator   
+Title: "C4BB Adjudication Category Discriminator"
+Description: "Used as the discriminator for adjudication.category and item.adjudication.category for the CARIN IG for Blue Button®"
+// *******  Saul, C4BBAdjudication is a value set; how do I call out its inclusion (the discriminator is a CS)?
+* codes from valueset C4BBAdjudication
+* codes from system C4BBAdjudicationDiscriminator
+* ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBTotalCategoryDiscriminator   
+Title: "C4BB Total Category Discriminator"
+Description: "Used as the discriminator for total.category for the CARIN IG for Blue Button®"
+// *******  Saul, both of these are value sets; how do I call out their inclusion?
+* codes from valueset C4BBAdjudication
+* codes from valueset C4BBPayerBenefitPaymentStatus
+* ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimInstitutionalCareTeamRole 
 Title: "C4BB Claim Institutional Care Team Role"
