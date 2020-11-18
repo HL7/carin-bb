@@ -43,7 +43,7 @@
 "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
 </td></tr>
 <tr><td>supportingInfo[1].timingDate</td><td>
-"2011-05-30"
+"2019-11-30"
 </td></tr>
 <tr><td>supportingInfo[1].sequence</td><td>
 2
@@ -127,7 +127,7 @@ AW123412341234123412341234123412
 "https://www.xxxplan.com/fhir/EOBIdentifier"
 </td></tr>
 <tr><td>created</td><td>
-"2019-07-02T00:00:00+00:00"
+"2019-11-02T00:00:00+00:00"
 </td></tr>
 <tr><td>insurer.reference</td><td>
 "Organization/Payer1"
@@ -139,10 +139,10 @@ AW123412341234123412341234123412
 "Patient/Patient1"
 </td></tr>
 <tr><td>billablePeriod.start</td><td>
-"2019-01-01T00:00:00+00:00"
+"2019-01-01"
 </td></tr>
 <tr><td>billablePeriod.end</td><td>
-"2019-10-31T00:00:00+00:00"
+"2019-10-31"
 </td></tr>
 <tr><td>provider.reference</td><td>
 "Organization/OrganizationProvider1"

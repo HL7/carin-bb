@@ -49,10 +49,10 @@ OutpatientEOBExample1
 "Patient/ExamplePatient1"
 </td></tr>
 <tr><td>billablePeriod.start</td><td>
-"2020-09-29T00:00:00-04:00"
+"2020-09-29"
 </td></tr>
 <tr><td>billablePeriod.end</td><td>
-"2020-09-29T00:00:00-04:00"
+"2020-09-29"
 </td></tr>
 <tr><td>created</td><td>
 "2020-10-10T00:00:00-04:00"

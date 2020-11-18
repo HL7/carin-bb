@@ -67,6 +67,7 @@
 <h3 id="use-cases">Use Case - Consumer Access to their Claims Data</h3>
 <h4>Background</h4>
 <p>Consumer-directed exchange occurs when a consumer or an authorized caregiver invokes their HIPAA Individual Right of Access (45 CFR 164.524) and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.&nbsp;</p>
+<p><img style="width: 85%; float: none; align: middle;" src="UseCaseDiagram.jpg"/></p>
 <h4>Technical Workflow</h4>
 <p><img style="width: 100%; float: none; align: middle;" src="CARINSequence.png" /> Actors:</p>
 <ul>
@@ -88,4 +89,3 @@
 <li>Health Plan's CARIN IG for Blue Button&reg; enabled FHIR API responds with a bundle of the requested EOB and supporting reference FHIR resources.</li>
 <li>Consumer App presents the EOB and supporting reference FHIR resources to the Consumer.</li>
 </ol>
-<p><img style="width: 85%; float: none; align: middle;" src="UseCaseDiagram.jpg"/></p>

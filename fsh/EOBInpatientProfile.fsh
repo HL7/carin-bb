@@ -95,6 +95,8 @@ Services."
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount MS
 * insert AdjudicationSlicing 
+* adjudication MS 
+* item.adjudication  MS 
 * adjudication contains
    adjudicationamounttype 1..* MS and
    denialreason 0..* MS 
