@@ -14,6 +14,10 @@
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <h3>Log of Continuous Integration Build Changes</h3>
 <ul>
+<li>Interim Version 0.1.12 - November 18+, 2020 </li>
+<ol>
+<li>Bound item.adjucation.category, adjudication.category, and total.category to valuesets to suppress the example binging</li>
+</ol>
 <li>Interim Version 0.1.11 - November 18, 2020 </li>
 <ol>
 <li>Minor edits to capability statement narrative. (not a functional change)</li>
