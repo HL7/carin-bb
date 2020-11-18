@@ -181,7 +181,7 @@ InpatientEOBExample1
 "Dates corresponding with the admission and discharge of the beneficiary to a facility"
 </td></tr>
 <tr><td>supportingInfo[2].timingPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>diagnosis[0].sequence</td><td>
 1
@@ -283,7 +283,7 @@ InpatientEOBExample1
 "The Principal Procedure is based on the relation of the procedure to the Principal Diagnosis"
 </td></tr>
 <tr><td>procedure[0].date</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>procedure[0].procedureCodeableConcept.coding[0].system</td><td>
 "http://www.cms.gov/Medicare/Coding/ICD10"
@@ -307,7 +307,7 @@ InpatientEOBExample1
 "Other procedures performed during the inpatient institutional admission"
 </td></tr>
 <tr><td>procedure[1].date</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>procedure[1].procedureCodeableConcept.coding[0].system</td><td>
 "http://www.cms.gov/Medicare/Coding/ICD10"
@@ -331,7 +331,7 @@ InpatientEOBExample1
 "Other procedures performed during the inpatient institutional admission"
 </td></tr>
 <tr><td>procedure[2].date</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>procedure[2].procedureCodeableConcept.coding[0].system</td><td>
 "http://www.cms.gov/Medicare/Coding/ICD10"
@@ -361,7 +361,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[0].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[0].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -496,7 +496,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[1].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[1].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -631,7 +631,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[2].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[2].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -766,7 +766,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[3].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[3].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -901,7 +901,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[4].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[4].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -1036,7 +1036,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[5].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[5].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -1171,7 +1171,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[6].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[6].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -1306,7 +1306,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[7].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[7].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -1441,7 +1441,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[8].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[8].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -1576,7 +1576,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[9].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[9].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -1711,7 +1711,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[10].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[10].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -1846,7 +1846,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[11].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[11].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
@@ -1981,7 +1981,7 @@ InpatientEOBExample1
 #99231
 </td></tr>
 <tr><td>item[12].servicedPeriod.start</td><td>
-"2017-05-23T00:00:00-04:00"
+"2017-05-23"
 </td></tr>
 <tr><td>item[12].locationCodeableConcept.coding[0].system</td><td>
 "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"

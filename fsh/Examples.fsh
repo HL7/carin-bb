@@ -251,8 +251,8 @@ Usage: #example
 * insurer = Reference(OrganizationPayer1)
 * insurer.display = "XXX Health Plan"
 * patient = Reference(Patient1)
-* billablePeriod.start = "2019-01-01T00:00:00+00:00"
-* billablePeriod.end = "2019-10-31T00:00:00+00:00"
+* billablePeriod.start = "2019-01-01"
+* billablePeriod.end = "2019-10-31"
 * provider = Reference(OrganizationProvider1)
 * provider.display = "XXX Health Plan"
 * outcome = #partial
