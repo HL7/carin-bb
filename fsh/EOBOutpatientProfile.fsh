@@ -54,7 +54,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.productOrService ^comment = "Put the comment here for item.productOrService here"
 * item  ^comment = "Put the comment here for item"
-* insert AdjudicationInvariants
+* insert EOBHeaderItemAdjudicationInvariant
+* insert ItemAdjudicationInvariant
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
    adjudicationamounttype 0..* MS and  /* restricted to 1..* by invariant */
@@ -68,6 +69,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
+* insert AdjudicationInvariant
 * insert AdjudicationSlicing 
 * adjudication  MS 
 * item.adjudication  MS 
@@ -83,6 +85,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * diagnosis.type 1..1 MS
 * diagnosis.type from C4BBClaimOutpatientInstitutionalDiagnosisType  (required)
 * insert TotalSlicing
+* total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total contains
    adjudicationamounttype 1..* MS and
    inoutnetwork 0..1 MS 

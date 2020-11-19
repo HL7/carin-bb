@@ -346,7 +346,7 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][3].amount.currency = #USD
 * item[0].adjudication[adjudicationamounttype][4].category = $C4BBAdjudicationCS#paidtoprovider
 * item[0].adjudication[adjudicationamounttype][4].amount.value = 20.00
-* item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1 
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted

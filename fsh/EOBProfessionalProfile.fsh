@@ -45,6 +45,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.location[x] from CMSPlaceofServiceCodes (required)
 * item.location[x] only CodeableConcept
 * adjudication 0..1
+* insert ItemAdjudicationInvariant
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
    adjudicationamounttype 0..* and
@@ -64,7 +65,8 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
 * insert TotalSlicing
-* total contains
+* total.category from C4BBAdjudication  (extensible)
+* total contains 
    adjudicationamounttype 0..* MS 
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 

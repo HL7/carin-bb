@@ -81,7 +81,8 @@ Services."
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
-* insert AdjudicationInvariants
+* insert EOBHeaderItemAdjudicationInvariant
+* insert ItemAdjudicationInvariant
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
    adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
@@ -95,6 +96,7 @@ Services."
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount MS
+* insert AdjudicationInvariant
 * insert AdjudicationSlicing 
 * adjudication MS 
 * item.adjudication  MS 
@@ -107,6 +109,7 @@ Services."
 * adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
 * adjudication[adjudicationamounttype].amount 1..1
 * insert TotalSlicing
+* total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total contains
    adjudicationamounttype 1..* MS and
    inoutnetwork 0..1 MS 

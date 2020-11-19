@@ -154,9 +154,13 @@ Severity: #error
 */
 
 // Rulesets
-RuleSet: AdjudicationInvariants
+RuleSet: ItemAdjudicationInvariant
 * item.adjudication obeys EOB-institutional-adjudication-has-amount-type-slice
+
+RuleSet: AdjudicationInvariant
 * adjudication obeys EOB-institutional-adjudication-has-amount-type-slice
+
+RuleSet: EOBHeaderItemAdjudicationInvariant
 * obeys EOB-institutional-item-or-header-adjudication
 
 RuleSet: AdjudicationSlicing
@@ -184,7 +188,7 @@ RuleSet: TotalSlicing
 * total  ^slicing.discriminator.type = #pattern
 * total  ^slicing.discriminator.path = "category"
 * total.category 1..1 MS 
-* total.category from C4BBTotalCategoryDiscriminator (extensible)
+
 
 RuleSet: ItemAdjudicationSlicing
 * item.adjudication ^slicing.rules = #closed
