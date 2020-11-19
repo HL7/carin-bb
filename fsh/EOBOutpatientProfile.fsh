@@ -54,6 +54,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * item.productOrService ^comment = "Put the comment here for item.productOrService here"
 * item  ^comment = "Put the comment here for item"
+* insert AdjudicationInvariants
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
    adjudicationamounttype 0..* MS and  /* restricted to 1..* by invariant */
@@ -68,7 +69,6 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
 * insert AdjudicationSlicing 
-* insert AdjudicationInvariants
 * adjudication  MS 
 * item.adjudication  MS 
 * adjudication contains
