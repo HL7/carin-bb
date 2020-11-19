@@ -135,12 +135,12 @@ Severity: #error
 
 Invariant: EOB-institutional-item-or-header-adjudication
 Description: "Institutional EOB:  Should have either adjudication at the item or header level, but not both"
-Expression: "(adjudication.exists() != item.adjudication.exists()}"
+Expression: "(adjudication.exists() != item.adjudication.exists())"
 Severity: #error
 
 Invariant: EOB-institutional-adjudication-has-amount-type-slice
 Description: "If Adjudication is present, it must have at least one adjudicationamounttype slice"
-Expression: "(exists() implies where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists()"
+Expression: "(exists() implies where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists())"
 Severity: #error
 
 /*
