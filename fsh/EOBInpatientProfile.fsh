@@ -83,9 +83,10 @@ Services."
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
-   adjudicationamounttype 1..* MS and
+   adjudicationamounttype 0..* MS and
    denialreason 0..* MS and
    allowedunits 0..1 MS
+
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
 * item.adjudication[allowedunits].value MS
@@ -97,8 +98,9 @@ Services."
 * insert AdjudicationSlicing 
 * adjudication MS 
 * item.adjudication  MS 
+* insert AdjudicationInvariants
 * adjudication contains
-   adjudicationamounttype 1..* MS and
+   adjudicationamounttype 0..* MS and
    denialreason 0..* MS 
 // * adjudication ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType').value"
 //* adjudication[denialreason].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#denialreason

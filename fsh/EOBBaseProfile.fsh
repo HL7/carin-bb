@@ -133,7 +133,30 @@ role.where(coding.where(code in ('site' )).exists()).exists().provider.all(resol
 )" 
 Severity: #error
 
+Invariant: EOB-institutional-item-or-header-adjudication
+Description: "Institutional EOB:  Should have either adjudication at the item or header level, but not both"
+Expression: "(adjudication.exists() != item.adjudication.exists()}"
+Severity: #error
+
+Invariant: EOB-institutional-adjudication-has-amount-type-slice
+Description: "If Adjudication is present, it must have at least one adjudicationamounttype slice"
+Expression: "(exists() implies where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists()"
+Severity: #error
+
+/*
+1) adjudication.exists() implies adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists()
+
+2) item.adjudication.exists() implies item.adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists()
+
+3) adjudication.exists() != item.adjudication.exists()
+*/
+
 // Rulesets
+RuleSet: AdjudicationInvariants
+* item.adjudication obeys EOB-institutional-adjudication-has-amount-type-slice
+* adjudication obeys EOB-institutional-adjudication-has-amount-type-slice
+* obeys EOB-institutional-item-or-header-adjudication
+
 RuleSet: AdjudicationSlicing
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.discriminator.path = "category"
