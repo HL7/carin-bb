@@ -83,10 +83,9 @@ Services."
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
-   adjudicationamounttype 1..* MS and
+   adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
    denialreason 0..* MS and
    allowedunits 0..1 MS
-
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
 * item.adjudication[allowedunits].value MS
@@ -96,14 +95,12 @@ Services."
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount MS
 * insert AdjudicationSlicing 
+* insert AdjudicationInvariants
 * adjudication MS 
 * item.adjudication  MS 
 * adjudication contains
-   adjudicationamounttype 1..* MS and
+   adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
    denialreason 0..* MS 
-// * adjudication ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType').value"
-//* adjudication[denialreason].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#denialreason
-//* adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#adjudicationamounttype
 * adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * adjudication[denialreason].reason MS
