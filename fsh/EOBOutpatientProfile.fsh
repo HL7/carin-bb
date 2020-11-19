@@ -56,7 +56,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item  ^comment = "Put the comment here for item"
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
-   adjudicationamounttype 0..* MS and
+   adjudicationamounttype 1..* MS and
    denialreason 0..* MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
@@ -68,11 +68,10 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
 * insert AdjudicationSlicing 
-* insert AdjudicationInvariants
 * adjudication  MS 
 * item.adjudication  MS 
 * adjudication contains
-   adjudicationamounttype 0..* MS and
+   adjudicationamounttype 1..* MS and
    denialreason 0..* MS 
 * adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes

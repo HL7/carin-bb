@@ -16,7 +16,7 @@
 <ul>
 <li>Interim Version 0.1.12 - November 18+, 2020 </li>
 <ol>
-<li>Bound item.adjucation.category, adjudication.category, and total.category to valuesets to suppress the example binging</li>
+<li>Bound item.adjucation.category, adjudication.category, and total.category to valuesets to suppress the example binding</li>
 </ol>
 <li>Interim Version 0.1.11 - November 18, 2020 </li>
 <ol>
