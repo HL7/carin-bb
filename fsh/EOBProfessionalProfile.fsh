@@ -48,9 +48,9 @@ The claims data is based on the professional claim form 1500, submission standar
 * insert ItemAdjudicationInvariant
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
-   adjudicationamounttype 0..* and
-   denialreason 0..1 and
-   inoutnetwork 1..1 and
+   adjudicationamounttype 0..* MS and
+   denialreason 0..1 MS and
+   inoutnetwork 1..1 MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
