@@ -57,11 +57,10 @@ The claims data is based on submission standards adopted by the Department of He
 * careTeam.role from C4BBClaimPharmacyTeamRole  (required)   // was PayerPharmacyProviderRole
 * careTeam.role 1..1 MS
 * adjudication 0..1
-* insert ItemAdjudicationInvariant
 * insert ItemAdjudicationSlicing
 * item.adjudication MS 
 * item.adjudication contains
-   adjudicationamounttype 0..* MS and
+   adjudicationamounttype 1..* MS and
    denialreason 0..1 MS 
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
@@ -72,7 +71,7 @@ The claims data is based on submission standards adopted by the Department of He
 * total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total.category 1..1 MS 
 * total contains
-   adjudicationamounttype 0..* MS and 
+   adjudicationamounttype 1..* MS and 
    inoutnetwork 1..1 MS 
 * total[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)

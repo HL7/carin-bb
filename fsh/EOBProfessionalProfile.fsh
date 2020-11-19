@@ -45,10 +45,10 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.location[x] from CMSPlaceofServiceCodes (required)
 * item.location[x] only CodeableConcept
 * adjudication 0..1
-* insert ItemAdjudicationInvariant
 * insert ItemAdjudicationSlicing
+* item.adjudication MS 
 * item.adjudication contains
-   adjudicationamounttype 0..* MS and
+   adjudicationamounttype 1..* MS and
    denialreason 0..1 MS and
    inoutnetwork 1..1 MS and
    allowedunits 0..1 MS
@@ -67,7 +67,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * insert TotalSlicing
 * total.category from C4BBAdjudication  (extensible)
 * total contains 
-   adjudicationamounttype 0..* MS 
+   adjudicationamounttype 1..* MS 
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
