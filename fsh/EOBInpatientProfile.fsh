@@ -81,9 +81,11 @@ Services."
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
+* insert EOBHeaderItemAdjudicationInvariant
+* insert ItemAdjudicationInvariant
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
-   adjudicationamounttype 1..* MS and
+   adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
    denialreason 0..* MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
@@ -94,21 +96,20 @@ Services."
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount MS
+* insert AdjudicationInvariant
 * insert AdjudicationSlicing 
 * adjudication MS 
 * item.adjudication  MS 
 * adjudication contains
-   adjudicationamounttype 1..* MS and
+   adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
    denialreason 0..* MS 
-// * adjudication ^slicing.discriminator.path = "extension('http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType').value"
-//* adjudication[denialreason].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#denialreason
-//* adjudication[adjudicationamounttype].extension[adjudication-type].valueCodeableConcept  = $AdjudicationSliceCodesCS#adjudicationamounttype
 * adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * adjudication[denialreason].reason MS
 * adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
 * adjudication[adjudicationamounttype].amount 1..1
 * insert TotalSlicing
+* total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total contains
    adjudicationamounttype 1..* MS and
    inoutnetwork 0..1 MS 

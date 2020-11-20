@@ -46,10 +46,11 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.location[x] only CodeableConcept
 * adjudication 0..1
 * insert ItemAdjudicationSlicing
+* item.adjudication MS 
 * item.adjudication contains
-   adjudicationamounttype 0..* and
-   denialreason 0..1 and
-   inoutnetwork 1..1 and
+   adjudicationamounttype 1..* MS and
+   denialreason 0..1 MS and
+   inoutnetwork 1..1 MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
@@ -64,8 +65,9 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
 * insert TotalSlicing
-* total contains
-   adjudicationamounttype 0..* MS 
+* total.category from C4BBAdjudication  (extensible)
+* total contains 
+   adjudicationamounttype 1..* MS 
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"

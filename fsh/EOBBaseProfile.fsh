@@ -133,7 +133,36 @@ role.where(coding.where(code in ('site' )).exists()).exists().provider.all(resol
 )" 
 Severity: #error
 
+Invariant: EOB-institutional-item-or-header-adjudication
+Description: "Institutional EOB:  Should have adjudication at the item or header level, but not both"
+Expression: "(adjudication.exists() != item.adjudication.exists())"
+Severity: #error
+
+Invariant: adjudication-has-amount-type-slice
+Description: "If Adjudication is present, it must have at least one adjudicationamounttype slice"
+Expression: "(exists() implies where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists())"
+Severity: #error
+
+/*
+
+1) adjudication.exists() implies adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists()
+
+2) item.adjudication.exists() implies item.adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists()
+
+3) adjudication.exists() != item.adjudication.exists()
+
+*/
+
 // Rulesets
+RuleSet: ItemAdjudicationInvariant
+* item.adjudication obeys adjudication-has-amount-type-slice
+
+RuleSet: AdjudicationInvariant
+* adjudication obeys adjudication-has-amount-type-slice
+
+RuleSet: EOBHeaderItemAdjudicationInvariant
+* obeys EOB-institutional-item-or-header-adjudication
+
 RuleSet: AdjudicationSlicing
 * adjudication ^slicing.rules = #closed
 * adjudication ^slicing.discriminator.path = "category"
@@ -141,6 +170,7 @@ RuleSet: AdjudicationSlicing
 * adjudication ^slicing.description = "Slice based on value pattern"
 * adjudication ^slicing.discriminator.type = #pattern
 * adjudication.category 1..1 MS 
+* adjudication.category from C4BBAdjudicationCategoryDiscriminator (required)
 
 RuleSet: SupportingInfoSlicing
 * supportingInfo ^slicing.discriminator.type = #pattern 
@@ -159,12 +189,14 @@ RuleSet: TotalSlicing
 * total  ^slicing.discriminator.path = "category"
 * total.category 1..1 MS 
 
+
 RuleSet: ItemAdjudicationSlicing
 * item.adjudication ^slicing.rules = #closed
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on value pattern"
 * item.adjudication ^slicing.discriminator.type = #pattern 
 * item.adjudication ^slicing.discriminator.path = "category"
+* item.adjudication.category from C4BBAdjudicationCategoryDiscriminator (required)
 
 RuleSet: EOBBaseProfileComments
 * meta.lastUpdated ^comment = "Defines the date the Resource was created or updated, whichever comes last (163). Payers SHALL provide the last time the data was updated or the date of creation in the payer’s system of record, whichever comes last"
