@@ -134,7 +134,7 @@ role.where(coding.where(code in ('site' )).exists()).exists().provider.all(resol
 Severity: #error
 
 Invariant: EOB-institutional-item-or-header-adjudication
-Description: "Institutional EOB:  Should have either adjudication at the item or header level, but not both"
+Description: "Institutional EOB:  Should have adjudication at the item or header level, but not both"
 Expression: "(adjudication.exists() != item.adjudication.exists())"
 Severity: #error
 
