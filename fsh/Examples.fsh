@@ -245,7 +245,7 @@ Usage: #example
 * identifier.value = "AW123412341234123412341234123413"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#professional
-* type.text = "Professional"
+* type.text = "Professional" 
 * use = #claim 
 * created = "2019-07-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
