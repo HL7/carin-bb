@@ -16,7 +16,7 @@
 "http://terminology.hl7.org/CodeSystem/claim-type"
 </td></tr>
 <tr><td>type.text</td><td>
-"Outpatient Institution"
+"Professional"
 </td></tr>
 <tr><td>use</td><td>
 "claim"
