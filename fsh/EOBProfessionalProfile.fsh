@@ -4,6 +4,7 @@ Id: C4BB-ExplanationOfBenefit-Professional-NonClinician
 Title: "C4BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional services. These services may be rendered in inpatient or outpatient, including office locations. 
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
+* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician)
 * careTeam obeys EOB-prof-careTeam-practitioner
 * careTeam obeys EOB-prof-careTeam-organization
 * careTeam.qualification MS 

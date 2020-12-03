@@ -4,6 +4,7 @@ Id: C4BB-ExplanationOfBenefit-Outpatient-Institutional
 Title: "C4BB ExplanationOfBenefit Outpatient Institutional"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at an institution that are not part of an overnight stay. 
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services."
+* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional)
 * type  = $HL7ClaimTypeCS#institutional
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)   // was PayerInstitutionalProviderRole
 * careTeam.role 1..1 MS

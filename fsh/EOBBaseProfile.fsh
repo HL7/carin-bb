@@ -6,6 +6,7 @@ Description: "Abstract parent profile that includes constraints that are common 
 All EOB instances should be from one of the four concrete EOB profiles defined in this Implementation Guide:  Inpatient, Outpatient, Pharmacy, and Professional/NonClinician"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
+* insert Metaprofile-supportedProfile-slice
 * meta 1..1 MS
 * ^abstract = true 
 * identifier 1..* MS 
@@ -229,3 +230,11 @@ RuleSet: EOBBaseProfileComments
 * payment.type ^comment = "Indicates whether the claim was paid or denied. (91)"
 * payment.date ^comment = "The date the claim was paid. (107)"
 * processNote.text ^comment = "Payment denial explanation to a member, typically goes on the EOB when the payment is denied or disallowed (181)"
+
+RuleSet: Metaprofile-supportedProfile-slice
+* meta.profile ^slicing.discriminator.type = #pattern
+* meta.profile ^slicing.discriminator.path = "$this"
+* meta.profile ^slicing.rules = #open
+* meta.profile ^slicing.ordered = false
+* meta.profile ^slicing.description = "Slice based on value"
+* meta.profile contains supportedProfile 1..1 MS
