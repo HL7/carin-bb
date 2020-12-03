@@ -6,6 +6,8 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * meta.lastUpdated 1..1  MS
 * meta.profile 1..* MS
 * meta 1..1 MS
+* insert Metaprofile-supportedProfile-slice
+* meta.profile[supportedProfile] = Canonical(C4BBOrganization)
 // Slicing stuff missing?
 // * identifier ^slicing.discriminator.path = "$this"
 // * identifier ^slicing.rules = #open

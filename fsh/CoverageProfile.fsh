@@ -6,6 +6,8 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 //* ^jurisdiction.valueCodeableConcept = "US#urn:iso:std:iso:3166"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
+* insert Metaprofile-supportedProfile-slice
+* meta.profile[supportedProfile] = Canonical(C4BBCoverage)
 * meta 1..1 MS
 * identifier MS 
 * subscriber 0..1 
