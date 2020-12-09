@@ -28,5 +28,5 @@
 <li class="x_MsoNormal">.insurance.coverage:&nbsp; When focal = true, Coverage.payer--&gt; Organization.identifier.&nbsp; When focal = false, EOB.insurance.coverage.display = [name of other carrier]&nbsp;&nbsp;</li>
 <li class="x_MsoNormal">.insurance.coverage:&nbsp; Same as insurance.coverage.organization.&nbsp; Party responsible for reimbursing the provider.</li>
 <li class="x_MsoNormal">.item.noteNumber:&nbsp; References number of the associated processNote entered</li>
-<li class="x_MsoNormal">The CPCDS data elements are defined in the data element comments.&nbsp; The numbers, e.g. (1), following the data element descriptions in the comments correlate to the MapID in the&nbsp;<a href="CPCDSDataDictionary.docx" >CPCDS Data Dictionary</a>&nbsp;and the&nbsp;<a href="CPCDStoFHIRProfilesMapping.xlsx">Mapping Worksheet</a>&nbsp;as described&nbsp;<a href="Common_Payer_Consumer_Data_Set.html">here.</a></li>
+<li class="x_MsoNormal">The CPCDS data elements are defined in the data element comments.&nbsp; The numbers, e.g. (1), following the data element descriptions in the comments correlate to the MapID in the&nbsp;<a href="CPCDSDataDictionary.docx" >CPCDS Data Dictionary</a>&nbsp;and the&nbsp;<a href="CPCDStoFHIRProfilesMapping.xlsx">Mapping Worksheet</a>&nbsp;as described&nbsp;<a href="4_Common_Payer_Consumer_Data_Set.html">here.</a></li>
 </ul>
