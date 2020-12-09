@@ -13,7 +13,7 @@ The goal of the CARIN Alliance Health Plan Workgroup is to develop an agreed upo
 <li>Plan Coverage and Formularies</li>
 </ul>
 <p>The Consumer Directed Payer Data Exchange Implementation Guide was defined by the CARIN Alliance to meet CMS requirements to provide Claims and Encounter data. <br>
-Provisioning Clinical Data is defined by the DaVinci Payer Data Exchange (PDex) (see <a href="Background.html#davinci-carin">here</a>) and US Core Implementation Guides . 
+Provisioning Clinical Data is defined by the DaVinci Payer Data Exchange (PDex) (see <a href="1_Background.html#davinci-carin">here</a>) and US Core Implementation Guides . 
 <br>Provisioning Plan Coverage and Formularies is defined by the DaVinci Payer Data Exchange US Drug Formulary Implementation Guide.
 <br>The effective date of the CMS Interoperability and Patient Access rule is January 1, 2021.</p>
 <h3 id="patient-protection">Patient Protection</h3>
