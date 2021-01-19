@@ -65,6 +65,7 @@ The claims data is based on submission standards adopted by the Department of He
    denialreason 0..1 MS 
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
+* item.adjudication[adjudicationamounttype].amount 1..1
 * item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason 
 * item.adjudication[denialreason].reason from NCPDPRejectCode
 * item.adjudication[denialreason].reason 1..1 MS

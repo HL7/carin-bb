@@ -1,6 +1,12 @@
 <p>&nbsp;</p>
 <h3>Introduction</h3>
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
+<h3>Changes Since V1.0.0</h3>
+<ul>
+<li>Transitioned project structure for Sushi 1.0.0</li>
+<li>Added slicing to meta.profile on all profiles to enforce intended requirement that each instance declare its conformance to the appropriate Carin-BB profile </li>
+<li>Changed cardinality of item.adjudication[adjudicationAmounttype].amount to 1..1 to line up with adjudciation[adjudicationAmountType].amount cardinality.</li>
+</ul>
 <h3>Authors</h3>
 <ul>
 <li>Primary

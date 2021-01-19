@@ -63,6 +63,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication 
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
+* item.adjudication[adjudicationamounttype].amount 1..1
 * item.adjudication[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
 * insert TotalSlicing
