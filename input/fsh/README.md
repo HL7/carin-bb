@@ -1,2 +1,2 @@
-# pdex-plan-net-fsh
-Davinci PDEX Plan-Net using FHIR Shorthand
+# carin-bb-fsh
+CARIN Blue Button using FHIR Shorthand
