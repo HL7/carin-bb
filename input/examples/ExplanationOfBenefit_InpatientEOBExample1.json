@@ -2010,24 +2010,6 @@
       ]
     }
   ],
-  "adjudication": [
-    {
-      "category": {
-        "coding": [
-          {
-            "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication",
-            "code": "noncovered",
-            "display": "Noncovered"
-          }
-        ],
-        "text": "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-      },
-      "amount": {
-        "value": 0.0,
-        "currency": "USD"
-      }
-    }
-  ],
   "total": [
     {
       "category": {
