@@ -77,7 +77,8 @@ Services."
 * supportingInfo[discharge-status].code 1..1 MS
 * supportingInfo[drg].category  = C4BBSupportingInfoType#drg
 * supportingInfo[drg].category MS
-* supportingInfo[drg].code from CMSMS3MAPAPRDRG  (required)
+// CAS 20210118: https://jira.hl7.org/browse/FHIR-30380  Allow state assigned DRGs in the DRG Value Set
+* supportingInfo[drg].code from CMSMS3MAPAPRDRG  (extensible)
 * supportingInfo[drg].code 1..1 MS
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
