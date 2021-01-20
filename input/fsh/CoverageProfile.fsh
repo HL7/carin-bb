@@ -9,7 +9,8 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 * insert Metaprofile-supportedProfile-slice
 * meta.profile[supportedProfile] = Canonical(C4BBCoverage)
 * meta 1..1 MS
-* identifier MS 
+// CAS 20210118: identifier Must Support removed per https://jira.hl7.org/browse/FHIR-30323
+//* identifier MS 
 * subscriber 0..1 
 * subscriber only Reference(C4BBPatient)
 * subscriberId 1..1 MS
