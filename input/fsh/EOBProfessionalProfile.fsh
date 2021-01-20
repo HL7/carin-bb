@@ -42,7 +42,12 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from CDCICD910CMDiagnosisCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
+// CAS 20210118: https://jira.hl7.org/browse/FHIR-30358 Add MS to Professional and NonClinican item.productOrService and item.modifier
+// TODO verify these MS
+* item.modifier MS
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
+// CAS 20210118: https://jira.hl7.org/browse/FHIR-30358 Add MS to Professional and NonClinican item.productOrService and item.modifier
+* item.productOrService MS
 * item.location[x] from CMSPlaceofServiceCodes (required)
 * item.location[x] only CodeableConcept
 * adjudication 0..1
