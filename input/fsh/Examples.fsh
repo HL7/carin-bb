@@ -101,7 +101,7 @@ Usage: #example
 * provider = Reference(OrganizationProvider1)
 * provider.display = "XXX Health Plan"
 * outcome = #partial
-* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
+* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0X1A
 * diagnosis[0].type = $HL7DiagnosisType#principal 
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
@@ -183,7 +183,7 @@ Usage: #example
 * provider = Reference(OrganizationProvider1)
 * provider.display = "XXX Health Plan"
 * outcome = #partial
-* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
+* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0X1A
 * diagnosis[0].type = $C4BBClaimDiagnosisTypeCS#patientreasonforvisit
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
@@ -256,7 +256,7 @@ Usage: #example
 * provider = Reference(OrganizationProvider1)
 * provider.display = "XXX Health Plan"
 * outcome = #partial
-* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0x1A
+* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0X1A
 * diagnosis[0].type = $HL7DiagnosisType#principal
 * diagnosis[0].sequence = 1 
 * insurance[0].focal = true
