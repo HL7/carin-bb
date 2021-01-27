@@ -169,7 +169,7 @@ AW123412341234123412341234123412
 "partial"
 </td></tr>
 <tr><td>diagnosis[0].diagnosisCodeableConcept.coding[0].code</td><td>
-#S06.0x1A
+#S06.0X1A
 </td></tr>
 <tr><td>diagnosis[0].diagnosisCodeableConcept.coding[0].system</td><td>
 "http://hl7.org/fhir/sid/icd-10-cm"
