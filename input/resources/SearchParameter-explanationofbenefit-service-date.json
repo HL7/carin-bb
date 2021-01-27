@@ -34,7 +34,7 @@
     "code": "service-date",
     "base": ["ExplanationOfBenefit"],
     "type": "date",
-    "expression": "ExplanationOfBenefit.billablePeriod | ExplanationOfBenefit.item.serviced as Date |  ExplanationOfBenefit.item.serviced as Period",
+    "expression": "ExplanationOfBenefit.billablePeriod | ExplanationOfBenefit.item.serviced",
     "xpath": "f:ExplanationOfBenefit/f:billablePeriod | f:ExplanationOfBenefit/f:item/f:serviced/f:servicedDate | f:ExplanationOfBenefit/f:item/f:serviced/f:servicedPeriod",
     "xpathUsage": "normal",
     "comparator": ["eq", "ne", "gt", "ge", "lt", "le", "sa", "eb", "ap"]
