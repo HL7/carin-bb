@@ -28,6 +28,23 @@ WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedu
 WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[1].procedure.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
 WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[2].procedure.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
 WARNING: ValueSet.where(id = 'CMSICD910PCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/ICD9
+WARNING: ValueSet.where(id = 'CMSICD910PCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/ICD10
+WARNING: ValueSet.where(id = 'CMSMS3MAPAPRDRG'): Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software
+WARNING: ValueSet.where(id = 'CMSPlaceofServiceCodes'): Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set
+WARNING: ValueSet.where(id = 'AHANUBCPatientDischargeStatus'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PatDischargeStatus
+WARNING: ValueSet.where(id = 'AHANUBCPointOfOriginForAdmissionOrVisit'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PointOfOrigin
+WARNING: ValueSet.where(id = 'AHANUBCPresentOnAdmission'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
+WARNING: ValueSet.where(id = 'AHANUBCPriorityTypeOfAdmissionOrVisit'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit
+WARNING: ValueSet.where(id = 'AHANUBCRevenueCodes'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/RevenueCodes
+WARNING: ValueSet.where(id = 'AHANUBCTypeOfBill'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/TypeOfBill
+WARNING: ValueSet.where(id = 'AMACPTCMSHCPCSModifiers'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+WARNING: ValueSet.where(id = 'AMACPTCMSHCPCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+WARNING: ValueSet.where(id = 'NCPDPBrandGenericCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDP/BrandGenericIndicator
+WARNING: ValueSet.where(id = 'NCPDPCompoundCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDP/CompoundCode
+WARNING: ValueSet.where(id = 'NCPDPDispensedAsWrittenOrProductSelectionCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode
+WARNING: ValueSet.where(id = 'NCPDPPrescriptionOriginCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDP/PrescriptionOriginCode
+WARNING: ValueSet.where(id = 'NCPDPRejectCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDP/RejectCode
+WARNING: ValueSet.where(id = 'X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes'): Error from server: Unable to provide support for code system https://x12.org/codes/claim-adjustment-reason-codes
 #informational -- these examples are in the IG because they are examples of the referenced profiles. 
 INFORMATION: Coverage/CoverageEx1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
 INFORMATION: Coverage/CoverageEx2: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
