@@ -16,7 +16,7 @@ Based on CPCDS, the mappings define the minimum mandatory elements, extensions a
 <td>High level profile comparison showing header vs item data elements and value sets requiring licenses.</td>
 </tr>
 <tr>
-<td>&nbsp;Detailed Profile comparison</td>
+<td>Detailed Profile comparison</td>
 <td><a  href="CARINforBlueButtonProfileComparison.xlsx">xls</a></td>
 <td>A detailed comparison of the profiles defined in this IG with their base resource or profile is shown in the figures on this page.</td>
 </tr>
