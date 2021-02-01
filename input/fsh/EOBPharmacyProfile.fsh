@@ -74,8 +74,8 @@ The claims data is based on submission standards adopted by the Department of He
 * total.category 1..1 MS 
 * total contains
    adjudicationamounttype 1..* MS and 
-   inoutnetwork 1..1 MS 
-* total[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
+   benefitpaymentstatus 1..1 MS 
+* total[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 
 * patient MS
@@ -114,7 +114,7 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[compoundcode] ^comment = "The code indicating whether or not the prescription is a compound.  NCPDP field # 406-D6 (78)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount (92)"
-* total[inoutnetwork] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+* total[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * identifier ^comment = "Assigned by the pharmacy at the time the prescription is filled (35)"
 * item.productOrService ^comment = "Values are NDC Codes (38) when Compound Code (78) = 0 or 1.  When the Compound Code = 2, productOrService = 'compound' and map the ingredient to ExplanationOfBenefit.item.detail.productOrService"
