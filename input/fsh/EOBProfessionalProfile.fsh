@@ -55,7 +55,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication contains
    adjudicationamounttype 1..* MS and
    denialreason 0..1 MS and
-   inoutnetwork 1..1 MS and
+   benefitpaymentstatus 1..1 MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
@@ -68,8 +68,8 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
-* item.adjudication[inoutnetwork] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* item.adjudication[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
+* item.adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
+* item.adjudication[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
 * insert TotalSlicing
 * total.category from C4BBAdjudication  (extensible)
 * total contains 
@@ -84,7 +84,7 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
-* item.adjudication[inoutnetwork] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+* item.adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * diagnosis ^comment = "Diagnosis codes describe an individual's disease or medical condition. (6, 7, 8, 21, 22, 23, 30)"
 * diagnosis.type ^comment = "Indicates if the professional and non-clinician diagnosis is principal or secondary (21, 22, 23)"
