@@ -90,8 +90,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total contains
    adjudicationamounttype 1..* MS and
-   inoutnetwork 0..1 MS 
-* total[inoutnetwork].category from C4BBPayerBenefitPaymentStatus (required)
+   benefitpaymentstatus 1..1 MS 
+* total[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 * total[adjudicationamounttype].amount MS 
 //* total[adjudicationamounttype].amount 1..1
@@ -119,7 +119,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
-* total[inoutnetwork] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+* total[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
 * diagnosis ^comment = "Diagnosis codes describe an individual's disease or medical condition. (6, 7, 8, 21, 22, 23, 30)"
