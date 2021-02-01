@@ -200,6 +200,9 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
+* total[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork 
+* total[benefitpaymentstatus].amount.value = 0.00
+* total[benefitpaymentstatus].amount.currency = #USD
 * adjudication[adjudicationamounttype][0].category = C4BBAdjudication#paidtoprovider
 * adjudication[adjudicationamounttype][0].category.text = "Payment Amount"
 * adjudication[adjudicationamounttype][0].amount.value = 620.00
