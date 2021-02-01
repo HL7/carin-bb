@@ -130,7 +130,8 @@ CodeSystem: C4BBAdjudicationDiscriminator
 Title: "C4BB Adjudication Discriminator"
 Description: "Used as the discriminator for the data elements in adjudication and item.adjudication"
 * #allowedunits	"allowed units" "defines the adjudication slice to define allowed units"
-* #inoutnetwork "in or Out of Network" "defines the adjudication and item.adjudication slice to indicate whether a claim was adjudicatd in or out of network"
+// 20210201 CAS: Removed as not used as a discriminator (the CodeSystem C4BBPayerBenefitPaymentStatus is used for this slice), Change ipart of FHIR-30635 - Update Benefit Payment Status slice name ,cardinality and must support
+//* #inoutnetwork "in or Out of Network" "defines the adjudication and item.adjudication slice to indicate whether a claim was adjudicatd in or out of network"
 * #denialreason "Denial Reason" "defines the adjudication slice to identify the denial reason"
 * ^copyright = "This CodeSystem is not copyrighted."
 
