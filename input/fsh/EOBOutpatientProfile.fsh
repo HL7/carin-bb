@@ -53,6 +53,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
+// 20210201 CAS: FHIR-30357 - item.productOrService is required when item.revenue is provided
+* item.productOrService obeys EOB-out-inst-item-productorservice
 * item.productOrService ^comment = "Put the comment here for item.productOrService here"
 * item  ^comment = "Put the comment here for item"
 * insert EOBHeaderItemAdjudicationInvariant
