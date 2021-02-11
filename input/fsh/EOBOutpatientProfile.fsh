@@ -5,6 +5,10 @@ Title: "C4BB ExplanationOfBenefit Outpatient Institutional"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at an institution that are not part of an overnight stay. 
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services."
 * meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional)
+
+// 20210203 CAS: https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
+* obeys EOB-inst-pointoforigin
+
 * type  = $HL7ClaimTypeCS#institutional
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)   // was PayerInstitutionalProviderRole
 * careTeam.role 1..1 MS
@@ -38,21 +42,22 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[typeofbill].category MS 
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
 * supportingInfo[typeofbill].code 1..1 MS 
-* supportingInfo[pointoforigin].category = C4BBSupportingInfoType#pointoforigin
-* supportingInfo[pointoforigin].category MS 
-* supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
-* supportingInfo[pointoforigin].code MS 
 * supportingInfo[admtype].category = C4BBSupportingInfoType#admtype
 * supportingInfo[admtype].category MS 
 * supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
 * supportingInfo[admtype].code 1..1 MS 
+* supportingInfo[pointoforigin].category = C4BBSupportingInfoType#pointoforigin
+* supportingInfo[pointoforigin].category MS 
+* supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
+// FHIR-30807 - Change cardinality in EOB Inpatient and Outpatient Institutional Profiles
+* supportingInfo[pointoforigin].code 1..1 MS 
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status].category MS 
 * supportingInfo[discharge-status].code  1..1 MS
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
-* item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
+* item.productOrService from C4BBEOBInstitutionalProcedureCodes (required)
 // 20210201 CAS: FHIR-30357 - item.productOrService is required when item.revenue is provided
 * item.productOrService obeys EOB-out-inst-item-productorservice
 * item.productOrService ^comment = "Put the comment here for item.productOrService here"
@@ -66,7 +71,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
    allowedunits 0..1 MS
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
-* item.adjudication[allowedunits].value MS
+* item.adjudication[allowedunits].value 1..1 MS
 * item.adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1 MS

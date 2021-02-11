@@ -2122,6 +2122,20 @@
         "value": 0.0,
         "currency": "USD"
       }
+    },
+    {
+      "category" : {
+        "coding" : [
+          {
+            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
+            "code" : "innetwork"
+          }
+        ]
+      },
+      "amount" : {
+        "value" : 0.0,
+        "currency" : "USD"
+      }
     }
   ]
 }

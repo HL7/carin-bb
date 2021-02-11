@@ -276,6 +276,19 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
+
+/*Testing for DAR*/
+//* item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
+* item[0].productOrService = $CPT#97110 "Physical Therapy"
+
+* item[0].sequence = 1 
+* item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00
+* item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
+
+* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#other 
+
+
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1

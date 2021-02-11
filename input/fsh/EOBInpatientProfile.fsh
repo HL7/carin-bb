@@ -11,6 +11,10 @@ Services."
 * use MS
 * outcome MS
 
+// 20210203 CAS: https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
+* obeys EOB-inst-pointoforigin
+
+
 //* type.coding 1..1 MS   // commenting this line leads to a failure
 * type = $HL7ClaimTypeCS#institutional
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)  // was  PayerInstitutionalProviderRole 
@@ -63,14 +67,14 @@ Services."
 * supportingInfo[typeofbill].category MS 
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
 * supportingInfo[typeofbill].code 1..1 MS 
-* supportingInfo[pointoforigin].category  = C4BBSupportingInfoType#pointoforigin
-* supportingInfo[pointoforigin].category MS
-* supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
-* supportingInfo[pointoforigin].code 1..1 MS
 * supportingInfo[admtype].category  = C4BBSupportingInfoType#admtype
 * supportingInfo[admtype].category MS 
 * supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
 * supportingInfo[admtype].code 1..1 MS 
+* supportingInfo[pointoforigin].category  = C4BBSupportingInfoType#pointoforigin
+* supportingInfo[pointoforigin].category MS
+* supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
+* supportingInfo[pointoforigin].code 1..1 MS
 * supportingInfo[discharge-status].category  = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status].category MS
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
@@ -82,7 +86,7 @@ Services."
 * supportingInfo[drg].code 1..1 MS
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
-* item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
+* item.productOrService from C4BBEOBInstitutionalProcedureCodes (required)
 * insert EOBHeaderItemAdjudicationInvariant
 * insert ItemAdjudicationInvariant
 * insert ItemAdjudicationSlicing
@@ -92,7 +96,8 @@ Services."
    allowedunits 0..1 MS
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
-* item.adjudication[allowedunits].value MS
+// FHIR-30807 - Change cardinality in EOB Inpatient and Outpatient Institutional Profiles
+* item.adjudication[allowedunits].value 1..1 MS
 * item.adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1 MS

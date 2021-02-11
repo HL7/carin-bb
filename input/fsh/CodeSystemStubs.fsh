@@ -288,6 +288,34 @@ To obtain the underlying code systems, please see information [here](https://www
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
 
+
+
+
+
+
+// 20210201 CAS: Placeholder fix for https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
+// Will need further narrative definition off this codesystem and the standard code system (explaining it is not for newborn admissions)
+CodeSystem: AHANUBCPointOfOriginForAdmissionOrVisitNewborn
+Title: "NUBC Point Of Origin - Newborn"
+Description: "The UB-04 Data File contains the complete set of NUBC codes when the type of admission is for a newborn. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
+
+This code system consists of the following:
+
+*   FL 15 - Point of Origin for Admission or Visit 
+
+These codes are used to convey the patient point of origin for an admission or visit and are the property of the American Hospital Association
+
+To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
+* ^url = "https://www.nubc.org/CodeSystem/PointOfOrigin-newborn"
+* insert CodeSystemStubBoilerplate
+* insert AHANUBCCopyrightNotice
+
+
+
+
+
+
+
 ValueSet: AHANUBCPointOfOriginForAdmissionOrVisit
 Title: "NUBC Point Of Origin"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
@@ -300,6 +328,8 @@ These codes are used to convey the patient point of origin for an admission or v
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * codes from system AHANUBCPointOfOriginForAdmissionOrVisit
+// 20210201 CAS: Placeholder fix for https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
+* codes from system AHANUBCPointOfOriginForAdmissionOrVisitNewborn
 * insert AHANUBCCopyrightNotice
 
 CodeSystem: AHANUBCPriorityTypeOfAdmissionOrVisit
@@ -386,7 +416,7 @@ These files contain the Level II alphanumeric HCPCS procedure and modifier codes
 // 20210201 CAS: Placeholder fix for https://jira.hl7.org/browse/FHIR-30413 - Add HIPPS to Institutional item.productOrService Value Set
 // Approach adding a special valueset for inpatient
 CodeSystem: CMSHIPPSCodes
-Title: "Health Insurance Prospective Payment System Codes codes"
+Title: "Health Insurance Prospective Payment System Codes"
 Description: "Health Insurance Prospective Payment System (HIPPS) rate codes represent specific sets
 of patient characteristics (or case-mix groups) health insurers use to make payment
 determinations under several prospective payment systems. Case-mix groups are
@@ -403,7 +433,7 @@ institutional claims transaction, using an HP qualifier, or in Form Locator (FL)
 (\"HCPCS/rate\") on a paper UB-04 claims form. The associated revenue code is placed in
 data element SV201 or in FL 42. In certain circumstances, multiple HIPPS codes may
 appear on separate lines of a single claim."
-* ^url =  "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
+* ^url =  "http://www.cms.gov/Medicare/Coding/HIPPSReleaseCodeSets"
 * insert CodeSystemStubBoilerplate
 * insert HIPPSCopyrightNotice
 
@@ -441,7 +471,6 @@ Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCod
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
 * codes from system $CPT
 * codes from system CMSHCPCSCodes
-* include $HL7DataAbsentReason#not-applicable "Not Applicable"
 * ^copyright = "CPT is copyrighted by the AMA and as such must be licensed to be used in electronic products or other forms.
 
 Any individual or entity using CPT content needs permission or a license (i.e., a written agreement authorizing use of CPT codes) from the AMA or an authorized distributor. 
@@ -476,8 +505,8 @@ See information on the use of HCPCS Level I (proprietary and owned by American M
 
 // 20210201 CAS: Placeholder fix for https://jira.hl7.org/browse/FHIR-30413 - Add HIPPS to Institutional item.productOrService Value Set
 // Approach adding a special valueset for inpatient
-ValueSet: C4BBEOBInpatientProcedureCodes
-Title: "Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Procedure Codes"
+ValueSet: C4BBEOBInstitutionalProcedureCodes
+Title: "Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Health Insurance Prospective Payment System (HIPPS) Codes - Procedure Codes"
 Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. 
 
 The target set for this value set are the procedure codes from the CPT and HCPCS files.
@@ -526,7 +555,6 @@ institutional claims transaction, using an HP qualifier, or in Form Locator (FL)
 (\"HCPCS/rate\") on a paper UB-04 claims form. The associated revenue code is placed in
 data element SV201 or in FL 42. In certain circumstances, multiple HIPPS codes may
 appear on separate lines of a single claim."
-
 
 * codes from system $CPT
 * codes from system CMSHCPCSCodes

@@ -45,6 +45,8 @@ The claims data is based on the professional claim form 1500, submission standar
 // CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358
 * item.modifier MS
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
+// 20210201 CAS: FHIR-30357 - item.productOrService is required when item.revenue is provided
+//* item.productOrService obeys EOB-prof-item-productorservice
 // CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358
 * item.productOrService MS
 * item.location[x] from CMSPlaceofServiceCodes (required)

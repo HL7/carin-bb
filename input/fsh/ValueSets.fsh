@@ -3,6 +3,8 @@ ValueSet: C4BBAdjudicationCategoryDiscriminator
 Title: "C4BB Adjudication Category Discriminator"
 Description: "Used as the discriminator for adjudication.category and item.adjudication.category for the CARIN IG for Blue Button®"
 * codes from valueset C4BBAdjudication
+// 20210127 CAS: Added to resolve the issue where this "all slices" discriminator (category) required ValueSet did not include a valueset reuuired for the required benefitpaymentstatus slice discriminator
+* codes from valueset C4BBPayerBenefitPaymentStatus
 * codes from system C4BBAdjudicationDiscriminator
 * ^copyright = "This Valueset is not copyrighted."
 

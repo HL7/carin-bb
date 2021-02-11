@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="1.0.1" defaultWorkgroup="" gitUrl="https://github.com/HL7/carin-bb" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/carin-bb"><version code="current" url="http://build.fhir.org/ig/HL7/carin-bb"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="1.0.1" defaultWorkgroup="" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
+<version code="current" url="http://build.fhir.org/ig/HL7/carin-bb"/>
 <version code="1.0.1" url="http://hl7.org/fhir/us/carin-bb/STU1.0.1"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/carin-bb/STU1"/>
 <version code="0.1.0" url="http://hl7.org/fhir/us/carin-bb/2020Feb"/>
@@ -57,6 +58,7 @@
 <artifact id="Coverage/CoverageEx2" key="Coverage-CoverageEx2" name="Coverage Example 2"/>
 <artifact id="Coverage/Coverage1" key="Coverage-Coverage1" name="Coverage1"/>
 <artifact id="SearchParameter/coverage-payor" key="SearchParameter-coverage-payor" name="Coverage_Payor"/>
+<artifact id="ValueSet/C4BBEOBInstitutionalProcedureCodes" key="ValueSet-C4BBEOBInstitutionalProcedureCodes" name="Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Health Insurance Prospective Payment System (HIPPS) Codes - Procedure Codes"/>
 <artifact id="ValueSet/AMACPTCMSHCPCSProcedureCodes" key="ValueSet-AMACPTCMSHCPCSProcedureCodes" name="Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Procedure Codes"/>
 <artifact id="ValueSet/AMACPTCMSHCPCSModifiers" key="ValueSet-AMACPTCMSHCPCSModifiers" name="Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Procedure Modifier Codes"/>
 <artifact id="ValueSet/CDCICD910CMDiagnosisCodes" key="ValueSet-CDCICD910CMDiagnosisCodes" name="Diagnosis Codes - International Classification of Diseases, Clinical Modification (ICD-9-CM, ICD-10-CM)"/>
@@ -77,6 +79,7 @@
 <artifact id="SearchParameter/explanationofbenefit-provider" key="SearchParameter-explanationofbenefit-provider" name="ExplanationOfBenefit_Provider"/>
 <artifact id="SearchParameter/explanationofbenefit-service-date" key="SearchParameter-explanationofbenefit-service-date" name="ExplanationOfBenefit_ServiceDate"/>
 <artifact id="SearchParameter/explanationofbenefit-type" key="SearchParameter-explanationofbenefit-type" name="ExplanationOfBenefit_Type"/>
+<artifact id="CodeSystem/CMSHIPPSCodes" key="CodeSystem-CMSHIPPSCodes" name="Health Insurance Prospective Payment System Codes"/>
 <artifact id="CodeSystem/CMSHCPCSCodes" key="CodeSystem-CMSHCPCSCodes" name="Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes"/>
 <artifact deprecated="true" id="CodeSystem/ICD10PCS" key="CodeSystem-ICD10PCS" name="ICD-10 Procedure Coding System"/>
 <artifact id="ValueSet/CMSMS3MAPAPRDRG" key="ValueSet-CMSMS3MAPAPRDRG" name="MS-DRGs - AP-DRGs - APR-DRGs"/>
@@ -96,6 +99,7 @@
 <artifact id="CodeSystem/AHANUBCPatientDischargeStatus" key="ValueSet-AHANUBCPatientDischargeStatus" name="NUBC Patient Discharge Status Codes"/>
 <artifact id="ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit" key="ValueSet-AHANUBCPointOfOriginForAdmissionOrVisit" name="NUBC Point Of Origin"/>
 <artifact id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisit" key="ValueSet-AHANUBCPointOfOriginForAdmissionOrVisit" name="NUBC Point Of Origin"/>
+<artifact id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNewborn" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNewborn" name="NUBC Point Of Origin - Newborn"/>
 <artifact id="ValueSet/AHANUBCPresentOnAdmission" key="ValueSet-AHANUBCPresentOnAdmission" name="NUBC Present On Admission Indicator Codes"/>
 <artifact id="CodeSystem/AHANUBCPresentOnAdmission" key="ValueSet-AHANUBCPresentOnAdmission" name="NUBC Present On Admission Indicator Codes"/>
 <artifact id="ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit" key="ValueSet-AHANUBCPriorityTypeOfAdmissionOrVisit" name="NUBC Priority (Type) of Admission or Visit"/>

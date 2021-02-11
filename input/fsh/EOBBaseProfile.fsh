@@ -70,9 +70,6 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 
 
 
-
-
-
 Invariant:  EOB-insurance-focal  
 Description: "EOB.insurance:  at most one with focal = true"
 Expression: "insurance.select (focal = true).count() < 2"
@@ -139,20 +136,23 @@ Description: "Institutional EOB:  Should have adjudication at the item or header
 Expression: "(adjudication.exists() != item.adjudication.exists())"
 Severity: #error
 
+
 Invariant: adjudication-has-amount-type-slice
 Description: "If Adjudication is present, it must have at least one adjudicationamounttype slice"
 Expression: "(exists() implies where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists())"
 Severity: #error
 
-/*
+// 20210203 CAS: https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
+Invariant: EOB-out-inst-item-productorservice
+Description: "Outpatient Institutional EOB:  Item productOrService required. Data absent reason of Not Applicable is not allowed."
+Expression: "coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()" 
+Severity: #error
 
-1) adjudication.exists() implies adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists()
-
-2) item.adjudication.exists() implies item.adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists()
-
-3) adjudication.exists() != item.adjudication.exists()
-
-*/
+// 20210203 CAS: https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
+Invariant: EOB-inst-pointoforigin
+Description: "Where Admission Type and Point of Origin slices exist, if Type of Admission code is Newborn, Point of Origin must be from Point of Origin - Newborn CodeSystem  or Type of Admission is not Newborn and Point of Origin must be from Point of Origin CodeSystem."
+Expression: "(supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code = '4').exists() and supportingInfo.where(code.coding.system='https://www.nubc.org/CodeSystem/PointOfOrigin').exists()).not() and (supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code != '4').exists() and supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PointOfOrigin-newborn').exists() ).not()"
+Severity: #error
 
 // Rulesets
 RuleSet: ItemAdjudicationInvariant
