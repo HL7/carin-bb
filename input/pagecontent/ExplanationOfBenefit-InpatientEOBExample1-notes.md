@@ -349,7 +349,7 @@ InpatientEOBExample1
 1
 </td></tr>
 <tr><td>item[0].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[0].revenue.coding[0].code</td><td>
 #0301
@@ -484,7 +484,7 @@ InpatientEOBExample1
 2
 </td></tr>
 <tr><td>item[1].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[1].revenue.coding[0].code</td><td>
 #0260
@@ -619,7 +619,7 @@ InpatientEOBExample1
 3
 </td></tr>
 <tr><td>item[2].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[2].revenue.coding[0].code</td><td>
 #0305
@@ -754,7 +754,7 @@ InpatientEOBExample1
 4
 </td></tr>
 <tr><td>item[3].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[3].revenue.coding[0].code</td><td>
 #0324
@@ -889,7 +889,7 @@ InpatientEOBExample1
 5
 </td></tr>
 <tr><td>item[4].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[4].revenue.coding[0].code</td><td>
 #0259
@@ -1024,7 +1024,7 @@ InpatientEOBExample1
 6
 </td></tr>
 <tr><td>item[5].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[5].revenue.coding[0].code</td><td>
 #0250
@@ -1159,7 +1159,7 @@ InpatientEOBExample1
 7
 </td></tr>
 <tr><td>item[6].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[6].revenue.coding[0].code</td><td>
 #0710
@@ -1294,7 +1294,7 @@ InpatientEOBExample1
 8
 </td></tr>
 <tr><td>item[7].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[7].revenue.coding[0].code</td><td>
 #0210
@@ -1429,7 +1429,7 @@ InpatientEOBExample1
 9
 </td></tr>
 <tr><td>item[8].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[8].revenue.coding[0].code</td><td>
 #0272
@@ -1564,7 +1564,7 @@ InpatientEOBExample1
 10
 </td></tr>
 <tr><td>item[9].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[9].revenue.coding[0].code</td><td>
 #0370
@@ -1699,7 +1699,7 @@ InpatientEOBExample1
 11
 </td></tr>
 <tr><td>item[10].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[10].revenue.coding[0].code</td><td>
 #0730
@@ -1834,7 +1834,7 @@ InpatientEOBExample1
 12
 </td></tr>
 <tr><td>item[11].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[11].revenue.coding[0].code</td><td>
 #0450
@@ -1969,7 +1969,7 @@ InpatientEOBExample1
 13
 </td></tr>
 <tr><td>item[12].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[12].revenue.coding[0].code</td><td>
 #0481
