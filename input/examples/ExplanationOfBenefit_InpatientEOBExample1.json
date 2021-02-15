@@ -337,7 +337,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0301"
           }
         ]
@@ -466,7 +466,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0260"
           }
         ]
@@ -595,7 +595,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0305"
           }
         ]
@@ -724,7 +724,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0324"
           }
         ]
@@ -853,7 +853,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0259"
           }
         ]
@@ -982,7 +982,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0250"
           }
         ]
@@ -1111,7 +1111,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0710"
           }
         ]
@@ -1240,7 +1240,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0210"
           }
         ]
@@ -1369,7 +1369,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0272"
           }
         ]
@@ -1498,7 +1498,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0370"
           }
         ]
@@ -1627,7 +1627,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0730"
           }
         ]
@@ -1756,7 +1756,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0450"
           }
         ]
@@ -1885,7 +1885,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0481"
           }
         ]
