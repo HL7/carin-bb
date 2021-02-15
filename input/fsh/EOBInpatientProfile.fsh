@@ -113,7 +113,7 @@ Services."
    denialreason 0..* MS 
 * adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
-* adjudication[denialreason].reason MS
+* adjudication[denialreason].reason 1..1 MS
 * adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
 * adjudication[adjudicationamounttype].amount 1..1
 * insert TotalSlicing
