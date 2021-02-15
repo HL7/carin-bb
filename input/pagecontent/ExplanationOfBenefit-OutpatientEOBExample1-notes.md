@@ -259,7 +259,7 @@ OutpatientEOBExample1
 1
 </td></tr>
 <tr><td>item[0].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[0].revenue.coding[0].code</td><td>
 #0551
@@ -394,7 +394,7 @@ OutpatientEOBExample1
 2
 </td></tr>
 <tr><td>item[1].revenue.coding[0].system</td><td>
-"http://www.nubc.org/RevenueCodes"
+"https://www.nubc.org/CodeSystem/RevenueCodes"
 </td></tr>
 <tr><td>item[1].revenue.coding[0].code</td><td>
 #0023
