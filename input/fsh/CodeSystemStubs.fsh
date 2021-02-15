@@ -439,7 +439,8 @@ appear on separate lines of a single claim."
 
 
 ValueSet: AMACPTCMSHCPCSProcedureCodes
-Title: "Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Procedure Codes"
+// 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
+Title: "Procedure Codes - AMA CPT - CMS HCPCS"
 Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. 
 
 The target set for this value set are the procedure codes from the CPT and HCPCS files.
@@ -506,7 +507,8 @@ See information on the use of HCPCS Level I (proprietary and owned by American M
 // 20210201 CAS: Placeholder fix for https://jira.hl7.org/browse/FHIR-30413 - Add HIPPS to Institutional item.productOrService Value Set
 // Approach adding a special valueset for inpatient
 ValueSet: C4BBEOBInstitutionalProcedureCodes
-Title: "Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Health Insurance Prospective Payment System (HIPPS) Codes - Procedure Codes"
+// 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
+Title: "Procedure Codes - AMA CPT - CMS HCPCS - CMS HIPPS"
 Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. 
 
 The target set for this value set are the procedure codes from the CPT and HCPCS files.
@@ -602,7 +604,8 @@ See information on the use of HCPCS Level I (proprietary and owned by American M
 
 
 ValueSet:  AMACPTCMSHCPCSModifiers
-Title: "Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Procedure Modifier Codes" 
+// 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
+Title: "Procedure Modifier Codes - AMA CPT - CMS HCPCS" 
 Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure code modifiers. Modifiers help further describe a procedure code without changing its definition.  
 
 The target set for this value set are the procedure code modifiers from the CPT and HCPCS files.
