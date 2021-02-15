@@ -39,7 +39,7 @@ Based on CPCDS, the mappings define the minimum mandatory elements, extensions a
 </table>
 </div>
 <p>&nbsp;</p>
-
+<a name="profiles-definition"> </a>
 <h3>Explanation of Benefits Resource Profiles Definition</h3>
 <!-- This implementation guide establishes a set of profiles for the  resource and other referenced FHIR resources. As shown here, the data represented in each of the 4 concrete EOB profiles aligns with claim submission standards adopted by the US Department of Health and Human Services for a specific type of benefit. The fifth EOB profile, not shown in this table, is a design artifact that includes data representation constraints common across all types of EOBs, and this profile should not be used for actual data instances.&nbsp; A side by side comparison of the abstract EOB profile, and the four concrete profiles is shown here. -->
 Profiles for Explanation of Benefit (EOB) and other reference resources are defined in this IG. Data elements in each of the EOB profiles aligns with US Department of Health and Human Services claims submission standards. An abstract EOB profile is defined, representing constraints found in all the EOB types. Four profiles define the data constraints for the specific claim type (i.e., inpatient institutional, outpatient institutional, professional and non-clinician and pharmacy).  The profiles use many industry standard codes.  The owners of those codes and an indicator for those requiring licenses is provided.  
