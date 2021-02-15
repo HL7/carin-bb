@@ -247,7 +247,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0551"
           }
         ]
@@ -374,7 +374,7 @@
       "revenue": {
         "coding": [
           {
-            "system": "http://www.nubc.org/RevenueCodes",
+            "system": "https://www.nubc.org/CodeSystem/RevenueCodes",
             "code": "0023"
           }
         ]
