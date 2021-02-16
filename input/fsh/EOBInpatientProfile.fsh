@@ -5,8 +5,8 @@ Title: "C4BB ExplanationOfBenefit Inpatient Institutional"
 Description: "The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at an institution as part of an overnight stay. 
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human 
 Services."
-
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional)
+// 20210216 CAS: FHIR-30575 Pulled from block vote1a
+//* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional)
 //@Saul -- added MS
 * use MS
 * outcome MS

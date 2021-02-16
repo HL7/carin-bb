@@ -6,8 +6,9 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 //* ^jurisdiction.valueCodeableConcept = "US#urn:iso:std:iso:3166"
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..* MS
-* insert Metaprofile-supportedProfile-slice
-* meta.profile[supportedProfile] = Canonical(C4BBCoverage)
+// 20210216 CAS: FHIR-30575 Pulled from block vote1a
+//* insert Metaprofile-supportedProfile-slice
+//* meta.profile[supportedProfile] = Canonical(C4BBCoverage)
 * meta 1..1 MS
 // CAS 20210118: identifier Must Support removed per https://jira.hl7.org/browse/FHIR-30323
 //* identifier MS 
