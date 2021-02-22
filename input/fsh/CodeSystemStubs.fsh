@@ -567,8 +567,7 @@ with certain positions of the code indicating the case mix group itself, and oth
 providing additional information. The additional information varies among HIPPS codes
 pertaining to different payment systems, but often provides information about the clinical
 assessment used to arrive at the code. Which positions of the code carry the case mix
-group information may also vary by payment systems.
-"
+group information may also vary by payment systems."
 * codes from system $CPT
 * codes from system CMSHCPCSCodes
 * codes from system CMSHIPPSCodes
@@ -597,22 +596,6 @@ Note: the year is always based on the publication year of the code set. CPT rele
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)
 
 CMS maintains HIPPS. There are no known constraints on the use of HIPPS. See more information about HIPPS codes [here](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/HIPPSCodes)"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ValueSet:  AMACPTCMSHCPCSModifiers
 // 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
