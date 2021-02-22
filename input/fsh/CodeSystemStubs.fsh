@@ -391,10 +391,9 @@ RuleSet: HCPCSCopyrightNotice
 
 
 
-// 20210201 CAS: Placeholder fix for https://jira.hl7.org/browse/FHIR-30413 - Add HIPPS to Institutional item.productOrService Value Set
-// Approach adding a special valueset for inpatient
+// 20210201 CAS:  https://jira.hl7.org/browse/FHIR-30413 - Add HIPPS to Institutional item.productOrService Value Set
 RuleSet: HIPPSCopyrightNotice
-* ^copyright = "See information on the use of HIPPS (proprietary???) [here](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/HIPPSCodes)"
+* ^copyright = "CMS maintains HIPPS. There are no known constraints on the use of HIPPS. See more information about HIPPS codes [here](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/HIPPSCodes)"
 
 
 
@@ -416,7 +415,7 @@ These files contain the Level II alphanumeric HCPCS procedure and modifier codes
 // 20210201 CAS: Placeholder fix for https://jira.hl7.org/browse/FHIR-30413 - Add HIPPS to Institutional item.productOrService Value Set
 // Approach adding a special valueset for inpatient
 CodeSystem: CMSHIPPSCodes
-Title: "Health Insurance Prospective Payment System Codes"
+Title: "Health Insurance Prospective Payment System (HIPPS)"
 Description: "Health Insurance Prospective Payment System (HIPPS) rate codes represent specific sets
 of patient characteristics (or case-mix groups) health insurers use to make payment
 determinations under several prospective payment systems. Case-mix groups are
@@ -432,8 +431,15 @@ HIPPS codes. HIPPS codes are placed in data element SV202 on the electronic 837
 institutional claims transaction, using an HP qualifier, or in Form Locator (FL) 44
 (\"HCPCS/rate\") on a paper UB-04 claims form. The associated revenue code is placed in
 data element SV201 or in FL 42. In certain circumstances, multiple HIPPS codes may
-appear on separate lines of a single claim."
-* ^url =  "http://www.cms.gov/Medicare/Coding/HIPPSReleaseCodeSets"
+appear on separate lines of a single claim.
+
+HIPPS codes are alpha-numeric codes of five digits. Each code contains intelligence,
+with certain positions of the code indicating the case mix group itself, and other positions
+providing additional information. The additional information varies among HIPPS codes
+pertaining to different payment systems, but often provides information about the clinical
+assessment used to arrive at the code. Which positions of the code carry the case mix
+group information may also vary by payment systems."
+* ^url =  "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/HIPPSCodes"
 * insert CodeSystemStubBoilerplate
 * insert HIPPSCopyrightNotice
 
@@ -504,12 +510,12 @@ See information on the use of HCPCS Level I (proprietary and owned by American M
 
 
 
-// 20210201 CAS: Placeholder fix for https://jira.hl7.org/browse/FHIR-30413 - Add HIPPS to Institutional item.productOrService Value Set
+// 20210201 CAS: https://jira.hl7.org/browse/FHIR-30413 - Add HIPPS to Institutional item.productOrService Value Set
 // Approach adding a special valueset for inpatient
 ValueSet: C4BBEOBInstitutionalProcedureCodes
 // 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
 Title: "Procedure Codes - AMA CPT - CMS HCPCS - CMS HIPPS"
-Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. 
+Description: "The Value Set is a combination of three Code Systems: CPT (HCPCS I), HCPCS II procedure codes, and HIPPS rate codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. 
 
 The target set for this value set are the procedure codes from the CPT and HCPCS files.
 
@@ -539,9 +545,7 @@ Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCod
 
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data.
 
-**Placeholder for HIPPS Description
-
-Health Insurance Prospective Payment System (HIPPS) rate codes represent specific sets
+The Health Insurance Prospective Payment System (HIPPS) rate codes represent specific sets
 of patient characteristics (or case-mix groups) health insurers use to make payment
 determinations under several prospective payment systems. Case-mix groups are
 developed based on research into utilization patterns among various provider types. For
@@ -556,8 +560,15 @@ HIPPS codes. HIPPS codes are placed in data element SV202 on the electronic 837
 institutional claims transaction, using an HP qualifier, or in Form Locator (FL) 44
 (\"HCPCS/rate\") on a paper UB-04 claims form. The associated revenue code is placed in
 data element SV201 or in FL 42. In certain circumstances, multiple HIPPS codes may
-appear on separate lines of a single claim."
+appear on separate lines of a single claim. 
 
+HIPPS codes are alpha-numeric codes of five digits. Each code contains intelligence,
+with certain positions of the code indicating the case mix group itself, and other positions
+providing additional information. The additional information varies among HIPPS codes
+pertaining to different payment systems, but often provides information about the clinical
+assessment used to arrive at the code. Which positions of the code carry the case mix
+group information may also vary by payment systems.
+"
 * codes from system $CPT
 * codes from system CMSHCPCSCodes
 * codes from system CMSHIPPSCodes
@@ -585,7 +596,7 @@ Note: the year is always based on the publication year of the code set. CPT rele
 
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)
 
-*See information on the use of HIPPS (proprietary???) [here](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/HIPPSCodes)"
+CMS maintains HIPPS. There are no known constraints on the use of HIPPS. See more information about HIPPS codes [here](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/HIPPSCodes)"
 
 
 
