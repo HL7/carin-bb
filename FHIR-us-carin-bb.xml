@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="1.0.1" defaultWorkgroup="" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="1.2.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
 <version code="current" url="http://build.fhir.org/ig/HL7/carin-bb"/>
+<version code="1.2.0" url="http://hl7.org/fhir/us/carin-bb/STU1.2.0"/>
 <version code="1.0.1" url="http://hl7.org/fhir/us/carin-bb/STU1.0.1"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/carin-bb/STU1"/>
 <version code="0.1.0" url="http://hl7.org/fhir/us/carin-bb/2020Feb"/>
@@ -31,6 +32,7 @@
 <artifact id="StructureDefinition/C4BB-Coverage" key="StructureDefinition-C4BB-Coverage" name="C4BB Coverage"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit" key="StructureDefinition-C4BB-ExplanationOfBenefit" name="C4BB Explanation Of Benefit"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional" key="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional" name="C4BB ExplanationOfBenefit Inpatient Institutional"/>
+<artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Oral" key="StructureDefinition-C4BB-ExplanationOfBenefit-Oral" name="C4BB ExplanationOfBenefit Oral"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional" key="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional" name="C4BB ExplanationOfBenefit Outpatient Institutional"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy" key="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy" name="C4BB ExplanationOfBenefit Pharmacy"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician" key="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician" name="C4BB ExplanationOfBenefit Professional NonClinician"/>
@@ -58,9 +60,6 @@
 <artifact id="Coverage/CoverageEx2" key="Coverage-CoverageEx2" name="Coverage Example 2"/>
 <artifact id="Coverage/Coverage1" key="Coverage-Coverage1" name="Coverage1"/>
 <artifact id="SearchParameter/coverage-payor" key="SearchParameter-coverage-payor" name="Coverage_Payor"/>
-<artifact id="ValueSet/C4BBEOBInstitutionalProcedureCodes" key="ValueSet-C4BBEOBInstitutionalProcedureCodes" name="Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Health Insurance Prospective Payment System (HIPPS) Codes - Procedure Codes"/>
-<artifact id="ValueSet/AMACPTCMSHCPCSProcedureCodes" key="ValueSet-AMACPTCMSHCPCSProcedureCodes" name="Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Procedure Codes"/>
-<artifact id="ValueSet/AMACPTCMSHCPCSModifiers" key="ValueSet-AMACPTCMSHCPCSModifiers" name="Current Procedural Terminology (CPT) -  Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes - Procedure Modifier Codes"/>
 <artifact id="ValueSet/CDCICD910CMDiagnosisCodes" key="ValueSet-CDCICD910CMDiagnosisCodes" name="Diagnosis Codes - International Classification of Diseases, Clinical Modification (ICD-9-CM, ICD-10-CM)"/>
 <artifact id="ExplanationOfBenefit/InpatientEOBExample1" key="ExplanationOfBenefit-EOBInpatientInstitutionalEx1" name="EOB Inpatient Institutional - Example 1"/>
 <artifact id="ExplanationOfBenefit/OutpatientEOBExample1" key="ExplanationOfBenefit-EOBOutpatientInstitutionalEx1" name="EOB Outpatient Institutional - Example 1"/>
@@ -79,7 +78,7 @@
 <artifact id="SearchParameter/explanationofbenefit-provider" key="SearchParameter-explanationofbenefit-provider" name="ExplanationOfBenefit_Provider"/>
 <artifact id="SearchParameter/explanationofbenefit-service-date" key="SearchParameter-explanationofbenefit-service-date" name="ExplanationOfBenefit_ServiceDate"/>
 <artifact id="SearchParameter/explanationofbenefit-type" key="SearchParameter-explanationofbenefit-type" name="ExplanationOfBenefit_Type"/>
-<artifact id="CodeSystem/CMSHIPPSCodes" key="CodeSystem-CMSHIPPSCodes" name="Health Insurance Prospective Payment System Codes"/>
+<artifact id="CodeSystem/CMSHIPPSCodes" key="CodeSystem-CMSHIPPSCodes" name="Health Insurance Prospective Payment System (HIPPS)"/>
 <artifact id="CodeSystem/CMSHCPCSCodes" key="CodeSystem-CMSHCPCSCodes" name="Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes"/>
 <artifact deprecated="true" id="CodeSystem/ICD10PCS" key="CodeSystem-ICD10PCS" name="ICD-10 Procedure Coding System"/>
 <artifact id="ValueSet/CMSMS3MAPAPRDRG" key="ValueSet-CMSMS3MAPAPRDRG" name="MS-DRGs - AP-DRGs - APR-DRGs"/>
@@ -117,7 +116,10 @@
 <artifact id="Practitioner/Practitioner1" key="Practitioner-PractitionerEx1" name="Practitioner Example 1"/>
 <artifact id="Practitioner/Practitioner2" key="Practitioner-PractitionerEx2" name="Practitioner Example 2"/>
 <artifact id="Practitioner/Practitioner3" key="Practitioner-PractitionerEx3" name="Practitioner Example 3"/>
+<artifact id="ValueSet/AMACPTCMSHCPCSProcedureCodes" key="ValueSet-AMACPTCMSHCPCSProcedureCodes" name="Procedure Codes - AMA CPT - CMS HCPCS"/>
+<artifact id="ValueSet/C4BBEOBInstitutionalProcedureCodes" key="ValueSet-C4BBEOBInstitutionalProcedureCodes" name="Procedure Codes - AMA CPT - CMS HCPCS - CMS HIPPS"/>
 <artifact id="ValueSet/CMSICD910PCSProcedureCodes" key="ValueSet-CMSICD910PCSProcedureCodes" name="Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Coding System"/>
+<artifact id="ValueSet/AMACPTCMSHCPCSModifiers" key="ValueSet-AMACPTCMSHCPCSModifiers" name="Procedure Modifier Codes - AMA CPT - CMS HCPCS"/>
 <artifact id="Organization/ProviderOrganization1" key="Organization-ProviderOrganizationEx1" name="Provider Organizaiton Example 1"/>
 <artifact deprecated="true" id="Organization/ProviderOrganizationEx2" key="Organization-ProviderOrganizationEx2" name="Provider Organizaiton Example 2"/>
 <artifact id="Organization/ProviderOrganization3" key="Organization-ProviderOrganizationEx3" name="Provider Organizaiton Example 3"/>
