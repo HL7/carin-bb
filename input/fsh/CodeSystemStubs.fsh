@@ -437,7 +437,7 @@ ValueSet: AMACPTCMSHCPCSProcedureCodes
 Title: "Procedure Codes - AMA CPT - CMS HCPCS"
 Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. 
 
-The target set for this value set are the procedure codes from the CPT and HCPCS files.
+The target set for this value set are the procedure codes from the CPT and HCPCS files and the rate codes from the HIPPS files.
 
 The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice.
 
@@ -505,7 +505,7 @@ ValueSet: C4BBEOBInstitutionalProcedureCodes
 Title: "Procedure Codes - AMA CPT - CMS HCPCS - CMS HIPPS"
 Description: "The Value Set is a combination of three Code Systems: CPT (HCPCS I), HCPCS II procedure codes, and HIPPS rate codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. 
 
-The target set for this value set are the procedure codes from the CPT and HCPCS files.
+The target set for this value set are the procedure codes from the CPT and HCPCS files and the rate codes from the HIPPS files.
 
 The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice.
 
