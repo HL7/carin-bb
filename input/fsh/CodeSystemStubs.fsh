@@ -273,14 +273,14 @@ To obtain the underlying code systems, please see information [here](https://www
 * codes from system AHANUBCTypeOfBill
 * insert AHANUBCCopyrightNotice
 
-CodeSystem: AHANUBCPointOfOriginForAdmissionOrVisit
-Title: "NUBC Point Of Origin"
+// 2021028 CAS: FHIR-31384 - NUBC Point Of Origin - newborns
+CodeSystem: AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn
+Title: "NUBC Point Of Origin for Non-newborn"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
 
 This code system consists of the following:
 
-*   FL 15 - Point of Origin for Admission or Visit 
-
+FL 15 - Point of Origin for Admission or Visit for Non-newborn
 These codes are used to convey the patient point of origin for an admission or visit and are the property of the American Hospital Association
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
@@ -288,33 +288,20 @@ To obtain the underlying code systems, please see information [here](https://www
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
 
-
-
-
-
-
-// 20210201 CAS: Placeholder fix for https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
-// Will need further narrative definition off this codesystem and the standard code system (explaining it is not for newborn admissions)
+// 20210201 CAS: https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
 CodeSystem: AHANUBCPointOfOriginForAdmissionOrVisitNewborn
-Title: "NUBC Point Of Origin - Newborn"
-Description: "The UB-04 Data File contains the complete set of NUBC codes when the type of admission is for a newborn. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
+Title: "NUBC Point Of Origin for Newborn"
+Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
 
 This code system consists of the following:
 
-*   FL 15 - Point of Origin for Admission or Visit 
-
+FL 15 - Point of Origin for Admission or Visit for Newborn
 These codes are used to convey the patient point of origin for an admission or visit and are the property of the American Hospital Association
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
-* ^url = "https://www.nubc.org/CodeSystem/PointOfOrigin-newborn"
+* ^url = "https://www.nubc.org/CodeSystem/PointOfOriginNewborn"
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
-
-
-
-
-
-
 
 ValueSet: AHANUBCPointOfOriginForAdmissionOrVisit
 Title: "NUBC Point Of Origin"
@@ -327,8 +314,9 @@ This code system consists of the following:
 These codes are used to convey the patient point of origin for an admission or visit and are the property of the American Hospital Association
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
-* codes from system AHANUBCPointOfOriginForAdmissionOrVisit
-// 20210201 CAS: Placeholder fix for https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
+// 20210226 CAS: https://jira.hl7.org/browse/FHIR-31384 
+* codes from system AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn
+// 20210201 CAS:  https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
 * codes from system AHANUBCPointOfOriginForAdmissionOrVisitNewborn
 * insert AHANUBCCopyrightNotice
 

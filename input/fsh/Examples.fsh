@@ -148,7 +148,7 @@ Usage: #example
 * supportingInfo[typeofbill].code = AHANUBCTypeOfBill#Dummy
 * supportingInfo[typeofbill].sequence = 4
 * supportingInfo[pointoforigin].category  = C4BBSupportingInfoType#pointoforigin
-* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisit#Dummy
+* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn#Dummy
 * supportingInfo[pointoforigin].sequence = 5
 * supportingInfo[admtype].category  = C4BBSupportingInfoType#admtype
 * supportingInfo[admtype].code = AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
@@ -222,7 +222,7 @@ Usage: #example
 * supportingInfo[typeofbill].code = AHANUBCTypeOfBill#Dummy
 * supportingInfo[typeofbill].sequence = 3
 * supportingInfo[pointoforigin].category = C4BBSupportingInfoType#pointoforigin
-* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisit#Dummy 
+* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn#Dummy 
 * supportingInfo[pointoforigin].sequence = 4 
 * supportingInfo[admtype].category = C4BBSupportingInfoType#admtype
 * supportingInfo[admtype].code = AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy

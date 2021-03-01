@@ -95,8 +95,9 @@
 <artifact id="ValueSet/AHANUBCPatientDischargeStatus" key="ValueSet-AHANUBCPatientDischargeStatus" name="NUBC Patient Discharge Status Codes"/>
 <artifact id="CodeSystem/AHANUBCPatientDischargeStatus" key="ValueSet-AHANUBCPatientDischargeStatus" name="NUBC Patient Discharge Status Codes"/>
 <artifact id="ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit" key="ValueSet-AHANUBCPointOfOriginForAdmissionOrVisit" name="NUBC Point Of Origin"/>
-<artifact id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisit" key="ValueSet-AHANUBCPointOfOriginForAdmissionOrVisit" name="NUBC Point Of Origin"/>
-<artifact id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNewborn" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNewborn" name="NUBC Point Of Origin - Newborn"/>
+<artifact deprecated="true" id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisit" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisit" name="NUBC Point Of Origin CS"/>
+<artifact id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNewborn" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNewborn" name="NUBC Point Of Origin for Newborn"/>
+<artifact id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn" name="NUBC Point Of Origin for Non-newborn"/>
 <artifact id="ValueSet/AHANUBCPresentOnAdmission" key="ValueSet-AHANUBCPresentOnAdmission" name="NUBC Present On Admission Indicator Codes"/>
 <artifact id="CodeSystem/AHANUBCPresentOnAdmission" key="ValueSet-AHANUBCPresentOnAdmission" name="NUBC Present On Admission Indicator Codes"/>
 <artifact id="ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit" key="ValueSet-AHANUBCPriorityTypeOfAdmissionOrVisit" name="NUBC Priority (Type) of Admission or Visit"/>
