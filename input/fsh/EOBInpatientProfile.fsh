@@ -127,7 +127,8 @@ Services."
 //* total[adjudicationamounttype].amount 1..1
 * patient MS
 * insurer MS
-* insurance 1..1 MS
+// 20210309 CAS: FHIR-31477 - Change cardinality of inpatient profile's insurance to 1..* to allow for coordination of benefits, consistent with the rest of the CARIN EOB profiles
+//* insurance 1..1 MS
 * type MS
 * diagnosis.onAdmission MS
 * identifier MS
