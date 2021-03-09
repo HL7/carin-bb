@@ -1,4 +1,5 @@
-<h3 id="terms-and-concepts">Terms and Concepts</h3>
+<a name="terms-and-concepts"></a>
+### Terms and Concepts
 <table class="codes" border="1">
 <thead>
 <tr>
@@ -64,7 +65,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="use-cases">Use Case - Consumer Access to their Claims Data</h3>
+<a name="use-cases"></a>
+### Use Case - Consumer Access to their Claims Data
 <h4>Background</h4>
 <p>Consumer-directed exchange occurs when a consumer or an authorized caregiver invokes their HIPAA Individual Right of Access (45 CFR 164.524) and requests their digital health information from a HIPAA covered entity (CE) via an application or other third-party data steward.&nbsp;</p>
 <p><img style="width: 85%; float: none; align: middle;" src="UseCaseDiagram.jpg"/></p>

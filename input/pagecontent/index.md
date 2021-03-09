@@ -1,7 +1,7 @@
-<h3>Introduction</h3>
+### Introduction
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <div>
-<h3>Changes for V1.0.1 (since V1.0.0 - STU1)</h3>
+### Changes for V1.0.1 (since V1.0.0 - STU1)
 <p>This update addresses several technical corrections and errata and clarifications listed below. They have been reviewed
 and voted on by the members of the <a href="http://www.hl7.org/Special/committees/fm/index.cfm">HL7 Financial Management WorkGroup</a> which is sponsoring this errata release and reconciliation of the comments. <strong>To make a comment against a particular errata:</strong></p>
 
@@ -55,7 +55,7 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 </ul>
 </div>
 <a name="authors"> </a>
-<h3>Authors</h3>
+### Authors
 <ul>
 <li>Primary
 <ul>
@@ -79,6 +79,6 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 </ul>
 </li>
 </ul>
-<h3>Acknowledgements</h3>
+### Acknowledgements
 <p>The CARIN Consumer Directed Payer Data Exchange Implementation Guide is also known as the CARIN IG for Blue Button&reg; Implementation Guide. This IG was developed using <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand syntax</a> and the <a href="https://github.com/FHIR/sushi">SUSHI</a> tookit, a free, open source toolchain from the MITRE Corporation. Valuable guidance on FSH and FHIR slicing was provided by Chris Moesel. The capability statements were developed with tools and valuable guidance from Eric Haas.</p>
 <div class="footnote"><sup>[<a href="#id1" name="ftn.id1">*</a>]</sup>Blue Button, the slogan, 'Download My Data,' the Blue Button Logo, and the Blue Button combined logo are registered service marks owned by the U.S. Department of Health and Human Services.</div>
