@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="1.0.1" defaultWorkgroup="" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="1.1.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
 <version code="current" url="http://build.fhir.org/ig/HL7/carin-bb"/>
-<version code="1.0.1" url="http://hl7.org/fhir/us/carin-bb/STU1.0.1"/>
+<version code="1.1.0" url="http://hl7.org/fhir/us/carin-bb/STU1.1.0"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/carin-bb/STU1"/>
 <version code="0.1.0" url="http://hl7.org/fhir/us/carin-bb/2020Feb"/>
 <version code="0.1" deprecated="true"/>
@@ -81,7 +81,8 @@
 <artifact deprecated="true" id="CodeSystem/ICD10PCS" key="CodeSystem-ICD10PCS" name="ICD-10 Procedure Coding System"/>
 <artifact id="ValueSet/CMSMS3MAPAPRDRG" key="ValueSet-CMSMS3MAPAPRDRG" name="MS-DRGs - AP-DRGs - APR-DRGs"/>
 <artifact id="CodeSystem/CMSMSDRG" key="CodeSystem-CMSMSDRG" name="Medicare Severity Diagnosis Related Groups (MS-DRGs)"/>
-<artifact id="ValueSet/NCPDPBrandGenericCode" key="CodeSystem-NCPDPBrandGenericIndicator" name="NCPDP Brand Generic Indicator"/>
+<artifact deprecated="true" id="ValueSet/NCPDPBrandGenericCode" key="ValueSet-NCPDPBrandGenericCode" name="NCPDP Brand Generic Code"/>
+<artifact id="ValueSet/NCPDPBrandGenericIndicator" key="CodeSystem-NCPDPBrandGenericIndicator" name="NCPDP Brand Generic Indicator"/>
 <artifact id="CodeSystem/NCPDPBrandGenericIndicator" key="CodeSystem-NCPDPBrandGenericIndicator" name="NCPDP Brand Generic Indicator"/>
 <artifact id="ValueSet/NCPDPCompoundCode" key="CodeSystem-NCPDPCompoundCode" name="NCPDP Compound Code"/>
 <artifact id="CodeSystem/NCPDPCompoundCode" key="CodeSystem-NCPDPCompoundCode" name="NCPDP Compound Code"/>

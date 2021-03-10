@@ -10,7 +10,7 @@
         "valueCode": "trial-use"
     }],
     "url": "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-identifier",
-    "version": "0.1.0",
+    "version": "1.1.0",
     "name": "ExplanationOfBenefit_Identifier",
     "derivedFrom": "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-identifier",
     "status": "draft",
