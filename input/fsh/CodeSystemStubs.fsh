@@ -69,7 +69,7 @@ Link to information about the code system - including how to obtain the content:
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
-ValueSet: NCPDPBrandGenericCode
+ValueSet: NCPDPBrandGenericIndicator
 Title: "NCPDP Brand Generic Indicator"
 Description: "Denotes brand or generic drug dispensed. (NCPDP ECL 686)
 
