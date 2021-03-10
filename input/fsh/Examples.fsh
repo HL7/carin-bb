@@ -366,9 +366,9 @@ Usage: #example
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1 
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
-* supportingInfo[brandgenericcode].category = C4BBSupportingInfoType#brandgenericcode   
-* supportingInfo[brandgenericcode].sequence = 2
-* supportingInfo[brandgenericcode].code = NCPDPBrandGenericIndicator#2
+* supportingInfo[brandgenericindicator].category = C4BBSupportingInfoType#brandgenericindicator   
+* supportingInfo[brandgenericindicator].sequence = 2
+* supportingInfo[brandgenericindicator].code = NCPDPBrandGenericIndicator#2
 * supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode   
 * supportingInfo[rxoriginCode].code = NCPDPPrescriptionOriginCode#1
 * supportingInfo[rxoriginCode].sequence = 3
