@@ -7,10 +7,10 @@ Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the cod
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
 Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
 Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
-Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode' is unknown so the code cannot be validated
-Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/BrandGenericIndicator' is unknown so the code cannot be validated
-Code System URI 'http://terminology.hl7.org/temporary/codeSystem-uri/NCPDP/PrescriptionOriginCode' is unknown so the code cannot be validated
-Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDP/CompoundCode' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDPBrandGenericIndicator' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/temporary/codeSystem-uri/NCPDPPrescriptionOriginCode' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/temporary-uri/codeSystem/NCPDPCompoundCode' is unknown so the code cannot be validated
 Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
 # These are actual warnings to surpress, all relating to validation of values from terminologies
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or code system is not known to the validator]
@@ -41,11 +41,11 @@ WARNING: ValueSet.where(id = 'AHANUBCRevenueCodes'): Error from server: Unable t
 WARNING: ValueSet.where(id = 'AHANUBCTypeOfBill'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/TypeOfBill
 WARNING: ValueSet.where(id = 'AMACPTCMSHCPCSModifiers'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 WARNING: ValueSet.where(id = 'AMACPTCMSHCPCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
-WARNING: ValueSet.where(id = 'NCPDPBrandGenericCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDP/BrandGenericIndicator
-WARNING: ValueSet.where(id = 'NCPDPCompoundCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDP/CompoundCode
-WARNING: ValueSet.where(id = 'NCPDPDispensedAsWrittenOrProductSelectionCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode
-WARNING: ValueSet.where(id = 'NCPDPPrescriptionOriginCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDP/PrescriptionOriginCode
-WARNING: ValueSet.where(id = 'NCPDPRejectCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDP/RejectCode
+WARNING: ValueSet.where(id = 'NCPDPBrandGenericCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator
+WARNING: ValueSet.where(id = 'NCPDPCompoundCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode
+WARNING: ValueSet.where(id = 'NCPDPDispensedAsWrittenOrProductSelectionCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode
+WARNING: ValueSet.where(id = 'NCPDPPrescriptionOriginCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode
+WARNING: ValueSet.where(id = 'NCPDPRejectCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPRejectCode
 WARNING: ValueSet.where(id = 'X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes'): Error from server: Unable to provide support for code system https://x12.org/codes/claim-adjustment-reason-codes
 #informational -- these examples are in the IG because they are examples of the referenced profiles. 
 INFORMATION: Coverage/CoverageEx1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
@@ -57,10 +57,10 @@ INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBene
 INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[2].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
 INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[5].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated
 INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy
-INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[1].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode' is unknown so the code cannot be validated
-INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[4].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDP/BrandGenericIndicator' is unknown so the code cannot be validated
-INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[5].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDP/PrescriptionOriginCode' is unknown so the code cannot be validated
-INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[7].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDP/CompoundCode' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[1].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[4].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[5].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[7].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' is unknown so the code cannot be validated
 INFORMATION: ExplanationOfBenefit/EOBProfessional1a: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
 INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
 INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional

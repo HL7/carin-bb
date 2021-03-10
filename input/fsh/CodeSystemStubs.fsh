@@ -26,7 +26,7 @@ Description: "Code indicating the error encountered. Contains exception definiti
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* ^url = "http://terminology.hl7.org/CodeSystem/NCPDP/RejectCode"
+* ^url = "http://terminology.hl7.org/CodeSystem/NCPDPRejectCode"
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -46,7 +46,7 @@ Description: "Code indicating whether or not the prescriber's instructions regar
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* ^url = "http://terminology.hl7.org/CodeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode"
+* ^url = "http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode"
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -65,7 +65,7 @@ Description: "Denotes brand or generic drug dispensed. (NCPDP ECL 686)
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* ^url = "http://terminology.hl7.org/CodeSystem/NCPDP/BrandGenericIndicator"
+* ^url = "http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator"
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -84,7 +84,7 @@ Description: "Code indicating the origin of the prescription. Indicates whether 
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* ^url = "http://terminology.hl7.org/CodeSystem/NCPDP/PrescriptionOriginCode"
+* ^url = "http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode"
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -103,7 +103,7 @@ Description: "Code indicating whether or not the prescription is a compound. (NC
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* ^url = "http://terminology.hl7.org/CodeSystem/NCPDP/CompoundCode"
+* ^url = "http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode"
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 

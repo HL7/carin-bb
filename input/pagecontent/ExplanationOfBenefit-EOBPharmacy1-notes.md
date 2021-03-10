@@ -43,7 +43,7 @@
 #7
 </td></tr>
 <tr><td>supportingInfo[1].code.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/NCPDP/DispensedAsWrittenOrProductSelectionCode"
+"http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode"
 </td></tr>
 <tr><td>supportingInfo[1].sequence</td><td>
 5
@@ -88,7 +88,7 @@
 #2
 </td></tr>
 <tr><td>supportingInfo[4].code.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/NCPDP/BrandGenericIndicator"
+"http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator"
 </td></tr>
 <tr><td>supportingInfo[5].category.coding[0].code</td><td>
 #rxorigincode
@@ -100,7 +100,7 @@
 #1
 </td></tr>
 <tr><td>supportingInfo[5].code.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/NCPDP/PrescriptionOriginCode"
+"http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode"
 </td></tr>
 <tr><td>supportingInfo[5].sequence</td><td>
 3
@@ -127,7 +127,7 @@
 #Dummy
 </td></tr>
 <tr><td>supportingInfo[7].code.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/NCPDP/CompoundCode"
+"http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode"
 </td></tr>
 <tr><td>supportingInfo[7].sequence</td><td>
 8
