@@ -20,7 +20,7 @@ Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericCode because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericIndicator because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CDCICD910CMDiagnosisCodes because the value set or code system is not known to the validator]
@@ -41,7 +41,7 @@ WARNING: ValueSet.where(id = 'AHANUBCRevenueCodes'): Error from server: Unable t
 WARNING: ValueSet.where(id = 'AHANUBCTypeOfBill'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/TypeOfBill
 WARNING: ValueSet.where(id = 'AMACPTCMSHCPCSModifiers'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 WARNING: ValueSet.where(id = 'AMACPTCMSHCPCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
-WARNING: ValueSet.where(id = 'NCPDPBrandGenericCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator
+WARNING: ValueSet.where(id = 'NCPDPBrandGenericIndicator'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator
 WARNING: ValueSet.where(id = 'NCPDPCompoundCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode
 WARNING: ValueSet.where(id = 'NCPDPDispensedAsWrittenOrProductSelectionCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode
 WARNING: ValueSet.where(id = 'NCPDPPrescriptionOriginCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode
@@ -163,7 +163,7 @@ INFORMATION: ValueSet/CMSMS3MAPAPRDRG: ValueSet: Validate resource against profi
 INFORMATION: ValueSet/CMSPlaceofServiceCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/FDANDCOrCompound: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/FDANationalDrugCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/NCPDPBrandGenericCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/NCPDPBrandGenericIndicator: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/NCPDPCompoundCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/NCPDPPrescriptionOriginCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
