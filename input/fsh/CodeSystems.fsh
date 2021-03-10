@@ -111,7 +111,7 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #pointoforigin  "Point Of Origin"  "UB-04 Source of Admission (FL-15) identifies the place where the patient was identified as needing admission to a facility."  	
 * #admtype	"Admission Type"  "UB-04 Priority of the admission (FL-14) indicates, for example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled."	
 * #billingnetworkcontractingstatus	"Billing Network Contracting Status"       "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."	
-* #brandgenericcode	"Brand Generic Code" "NCPDP code indicating whether the plan adjudicated the claim as a brand or generic drug."
+* #brandgenericindicator	"Brand Generic Indicator" "NCPDP code indicating whether the plan adjudicated the claim as a brand or generic drug."
 * #clmrecvddate	"Claim Received Date" "Date the claim was received by the payer."	
 * #compoundcode "Compound Code" "NCPDP code indicating whether or not the prescription is a compound."	
 * #dawcode "DAW (Dispense As Written) Code" "NCPDP code indicating the prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication."	
