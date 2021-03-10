@@ -76,7 +76,7 @@
 "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus"
 </td></tr>
 <tr><td>supportingInfo[4].category.coding[0].code</td><td>
-#brandgenericcode
+#brandgenericindicator
 </td></tr>
 <tr><td>supportingInfo[4].category.coding[0].system</td><td>
 "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
