@@ -1,7 +1,7 @@
 ### Introduction
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <div>
-### Changes for V1.0.1 (since V1.0.0 - STU1)
+### Changes for V1.1.0 (since V1.0.0 - STU1)
 <p>This update addresses several technical corrections and errata and clarifications listed below. They have been reviewed
 and voted on by the members of the <a href="http://www.hl7.org/Special/committees/fm/index.cfm">HL7 Financial Management WorkGroup</a> which is sponsoring this errata release and reconciliation of the comments. <strong>To make a comment against a particular errata:</strong></p>
 
@@ -50,6 +50,8 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
         </ul>
     </li>
     <li>Shortened the titles of Inpatient Institutional, Outpatient Institutional, and Professional and NonClinicain EOB <a href="artifacts.html#5">Procedure Code and Procedure Code Modifier ValueSets</a> (<a href="https://jira.hl7.org/browse/FHIR-31074">FHIR-31074</a>)</li>
+    <li>Changed <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html">Inpatient EOB</a> insurance cardinality for 1..1 to 1..* by removing constraint in profile (<a href="https://jira.hl7.org/browse/FHIR-31477">FHIR-31477</a>)</li>
+    <li>Changed <a href="artifacts.html#5">NCPDP CodeSystem URLs</a> (<a href="https://jira.hl7.org/browse/FHIR-31492">FHIR-31492</a>)</li>
     <li>Transitioned project structure for Sushi 1.0.0 (For Implementation Guide generation)</li>
     <li>Added <a href="index.html#authors">additional contributors</a> (<a href="https://jira.hl7.org/browse/FHIR-30084">FHIR-30084</a>)</li>
 </ul>
