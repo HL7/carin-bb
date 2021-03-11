@@ -4,6 +4,7 @@
 <version code="1.1.0" url="http://hl7.org/fhir/us/carin-bb/STU1.1.0"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/carin-bb/STU1"/>
 <version code="0.1.0" url="http://hl7.org/fhir/us/carin-bb/2020Feb"/>
+<version code="1.0.1" deprecated="true"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
