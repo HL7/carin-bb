@@ -11,8 +11,9 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 //* meta.profile[supportedProfile] = Canonical(C4BBCoverage)
 * meta 1..1 MS
 * identifier MS 
-* subscriber 0..1 
-* subscriber only Reference(C4BBPatient)
+// 20210312 CAS: Remove per https://jira.hl7.org/browse/FHIR-31535 - Revert Coverage.Subscriber Type to that defined by the base Resource
+//* subscriber 0..1 
+//* subscriber only Reference(C4BBPatient)
 * subscriberId 1..1 MS
 * beneficiary 1..1 MS
 * beneficiary only Reference(C4BBPatient) 
