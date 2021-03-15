@@ -46,16 +46,6 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * supportingInfo 0..* MS
 * supportingInfo.category from C4BBSupportingInfoType (extensible)
 
-// 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
-* insert SupportingInfoSlicing 
-* supportingInfo contains
-    medicalrecordnumber 0..1 MS and
-    patientaccountnumber 0..1 MS
-* supportingInfo[medicalrecordnumber].category = C4BBSupportingInfoType#medicalrecordnumber
-* supportingInfo[medicalrecordnumber].valueString 0..1 MS
-* supportingInfo[patientaccountnumber].category = C4BBSupportingInfoType#patientaccountnumber
-* supportingInfo[patientaccountnumber].valueString 0..1 MS
-
 //* supportingInfo.category 1..1 MS
 //* supportingInfo.category from C4BBSupportingInfoType (required)
 * insurance 1..* MS

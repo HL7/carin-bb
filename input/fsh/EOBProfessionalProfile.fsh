@@ -17,7 +17,10 @@ The claims data is based on the professional claim form 1500, submission standar
    billingnetworkcontractingstatus 0..1 MS and
    performingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
-   servicefacility 0..1 MS 
+   servicefacility 0..1 MS and
+   // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
+   medicalrecordnumber 0..1 MS and
+   patientaccountnumber 0..1 MS
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
@@ -34,6 +37,11 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[servicefacility].category MS
 * supportingInfo[servicefacility].valueReference 1..1 MS 
 * supportingInfo[servicefacility].valueReference only Reference(C4BBOrganization)
+// 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
+* supportingInfo[medicalrecordnumber].category = C4BBSupportingInfoType#medicalrecordnumber
+* supportingInfo[medicalrecordnumber].valueString 0..1 MS
+* supportingInfo[patientaccountnumber].category = C4BBSupportingInfoType#patientaccountnumber
+* supportingInfo[patientaccountnumber].valueString 0..1 MS
 * careTeam.role from C4BBClaimProfessionalAndNonClinicianCareTeamRole   (required)  // was PayerProfessionalAndNonClinicianProviderRole
 * careTeam.role 1..1 MS
 * diagnosis 1..* MS

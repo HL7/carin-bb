@@ -30,7 +30,10 @@ The claims data is based on the institutional claim form UB-04, submission stand
    typeofbill 0..1 MS and 
    pointoforigin 0..1 MS and 
    admtype 0..1 MS and 
-   discharge-status 0..1 MS 
+   discharge-status 0..1 MS and 
+        // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
+   medicalrecordnumber 0..1 MS and
+   patientaccountnumber 0..1 MS
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
@@ -56,6 +59,11 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[discharge-status].category MS 
 * supportingInfo[discharge-status].code  1..1 MS
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
+// 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
+* supportingInfo[medicalrecordnumber].category = C4BBSupportingInfoType#medicalrecordnumber
+* supportingInfo[medicalrecordnumber].valueString 0..1 MS
+* supportingInfo[patientaccountnumber].category = C4BBSupportingInfoType#patientaccountnumber
+* supportingInfo[patientaccountnumber].valueString 0..1 MS
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from C4BBEOBInstitutionalProcedureCodes (required)

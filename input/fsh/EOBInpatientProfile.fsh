@@ -41,17 +41,18 @@ Services."
 * provider only Reference(C4BBOrganization)
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
-      billingnetworkcontractingstatus 0..1 MS and
-      admissionperiod 1..1 MS  and
+     billingnetworkcontractingstatus 0..1 MS and
+     admissionperiod 1..1 MS  and
      clmrecvddate 0..1 MS and
      typeofbill 0..1 MS and 
      pointoforigin 0..1 MS and 
      admtype 0..1 MS and 
      discharge-status 0..1 MS and 
-     drg 0..1 MS 
- 
+     drg 0..1 MS and
+     // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
+     medicalrecordnumber 0..1 MS and
+     patientaccountnumber 0..1 MS
    
-
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
@@ -84,6 +85,12 @@ Services."
 // CAS 20210118: https://jira.hl7.org/browse/FHIR-30380  Allow state assigned DRGs in the DRG Value Set
 * supportingInfo[drg].code from CMSMS3MAPAPRDRG  (extensible)
 * supportingInfo[drg].code 1..1 MS
+// 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
+* supportingInfo[medicalrecordnumber].category = C4BBSupportingInfoType#medicalrecordnumber
+* supportingInfo[medicalrecordnumber].valueString 0..1 MS
+* supportingInfo[patientaccountnumber].category = C4BBSupportingInfoType#patientaccountnumber
+* supportingInfo[patientaccountnumber].valueString 0..1 MS
+
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from C4BBEOBInstitutionalProcedureCodes (required)
