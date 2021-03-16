@@ -171,7 +171,9 @@ INFORMATION: ValueSet/NCPDPRejectCode: ValueSet: Validate resource against profi
 INFORMATION: ValueSet/X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/C4BBEOBInstitutionalProcedureCodes: ValueSet:	Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNewborn: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/CMSHIPPSCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: ValueSet/C4BBAdjudicationCategoryDiscriminator: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/C4BBEOBInstitutionalProcedureCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/C4BBTotalCategoryDiscriminator: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: CodeSystem/C4BBClaimSubType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
