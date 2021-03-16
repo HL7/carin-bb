@@ -143,3 +143,10 @@ Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is th
 * #principal "Principal" "The Principal Procedure is based on the relation of the procedure to the Principal Diagnosis"
 * #other "Other"  "Other procedures performed during the inpatient institutional admission"
 * ^copyright = "This CodeSystem is not copyrighted."
+
+CodeSystem: C4BBClaimSubType
+Title: "C4BB Claim Procedure Subtype"
+Description: "Indicates if institutional ExplanationOfBenefit is inpatient or putpatient."
+* #inpatient "Inpatient" "Claims submitted by providers for institutional admissions for which there is an overnight stay."
+* #outpatient "Outpatient"  "Claims submitted by providers for institutional admissions for which there is not an overnight stay."
+* ^copyright = "This CodeSystem is not copyrighted."

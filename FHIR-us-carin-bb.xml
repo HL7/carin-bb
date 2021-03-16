@@ -24,6 +24,8 @@
 <artifact id="ValueSet/C4BBClaimInstitutionalCareTeamRole" key="ValueSet-C4BBClaimInstitutionalCareTeamRole" name="C4BB Claim Institutional Care Team Role"/>
 <artifact id="ValueSet/C4BBClaimOutpatientInstitutionalDiagnosisType" key="ValueSet-C4BBClaimOutpatientInstitutionalDiagnosisType" name="C4BB Claim Outpatient Institutional Diagnosis Type"/>
 <artifact id="ValueSet/C4BBClaimPharmacyTeamRole" key="ValueSet-C4BBClaimPharmacyTeamRole" name="C4BB Claim Pharmacy CareTeam Roles"/>
+<artifact id="ValueSet/C4BBClaimSubType" key="ValueSet-C4BBClaimSubType" name="C4BB Claim Procedure Subtype"/>
+<artifact id="CodeSystem/C4BBClaimSubType" key="CodeSystem-C4BBClaimSubType" name="C4BB Claim Procedure Subtype"/>
 <artifact id="ValueSet/C4BBClaimProcedureType" key="ValueSet-C4BBClaimProcedureType" name="C4BB Claim Procedure Type"/>
 <artifact id="CodeSystem/C4BBClaimProcedureType" key="CodeSystem-C4BBClaimProcedureType" name="C4BB Claim Procedure Type"/>
 <artifact id="ValueSet/C4BBClaimProfessionalAndNonClinicianCareTeamRole" key="ValueSet-C4BBClaimProfessionalAndNonClinicianCareTeamRole" name="C4BB Claim Professional And Non Clinician Care Team Role"/>

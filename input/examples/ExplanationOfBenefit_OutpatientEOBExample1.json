@@ -34,6 +34,15 @@
     ],
     "text": "Institutional"
   },
+  "subType": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimSubType",
+        "code": "outpatient"
+      }
+    ],
+    "text": "Outpatient"
+  },
   "use": "claim",
   "patient": {
     "reference": "Patient/ExamplePatient1"

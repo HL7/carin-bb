@@ -8,6 +8,7 @@ Description: "This profile builds upon the US Core Patient profile. It is used t
 //* insert Metaprofile-supportedProfile-slice
 // 20210216 CAS: FHIR-30575 Pulled from block vote1a
 //* meta.profile[supportedProfile] = Canonical(C4BBPatient)
+// 20210216 CAS: FHIR 
 * meta 1..1 MS
 * identifier.type from C4BBPatientIdentifierType (extensible)
 //* identifier ^slicing.discriminator.path = "$this"
@@ -18,14 +19,14 @@ Description: "This profile builds upon the US Core Patient profile. It is used t
 * identifier ^slicing.description = "Slice based on $this pattern"
 * identifier contains 
    memberid 1..* MS and
-   medrecnum 0..* MS and
-   uniquememberid 0..* MS and
-   patacctnum 0..* MS 
+//   medrecnum 0..* MS and
+   uniquememberid 0..* MS
+//   patacctnum 0..* MS 
 * identifier[memberid].type = $IdentifierType#MB
 //* identifier[memberid].type.coding 1..* MS
-* identifier[medrecnum].type = $IdentifierType#MR
+//* identifier[medrecnum].type = $IdentifierType#MR
 //* identifier[medrecnum].type.coding 1..* MS
-* identifier[patacctnum].type = C4BBIdentifierType#pat
+//* identifier[patacctnum].type = C4BBIdentifierType#pat
 //* identifier[patacctnum].type.coding 1..* MS
 //* identifier[uniquememberid].type.coding 1..* MS
 * identifier[uniquememberid].type = C4BBIdentifierType#um
@@ -42,8 +43,8 @@ Description: "This profile builds upon the US Core Patient profile. It is used t
 
 * identifier[memberid] ^comment = "Identifier for a member assigned by the Payer for a contract; it may be different for various lines of business; ie. QHP vs MA. If members receive ID cards, that is the identifier that should be provided. (1)."
 * identifier[uniquememberid] ^comment = "Mastered person identifier that is a unique identifier for a member assigned by the Payer across all lines of business (191)"
-* identifier[medrecnum] ^comment = "Provider submitted medical record number that can be included on the claim. (109)"
-* identifier[patacctnum] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
+//* identifier[medrecnum] ^comment = "Provider submitted medical record number that can be included on the claim. (109)"
+//* identifier[patacctnum] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
 * birthDate ^comment = "Date of birth of the member (70)"
 * gender ^comment = "Gender of the member (71)"
 * name ^comment = "The name of the patient (130)"

@@ -27,15 +27,15 @@ Usage: #example
 * identifier[memberid].type = $IdentifierType#MB
 * identifier[memberid].value = "1234-234-1243-12345678901"
 * identifier[memberid].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
-* identifier[medrecnum].type = $IdentifierType#MR
-* identifier[medrecnum].value = "1234-234-1243-12345678901m"
-* identifier[medrecnum].system = "https://www.xxxhealthplan.com/fhir/medicalrecordnumber"
+//* identifier[medrecnum].type = $IdentifierType#MR
+//* identifier[medrecnum].value = "1234-234-1243-12345678901m"
+//* identifier[medrecnum].system = "https://www.xxxhealthplan.com/fhir/medicalrecordnumber"
 * identifier[uniquememberid].type = C4BBIdentifierType#um
 * identifier[uniquememberid].value = "1234-234-1243-12345678901u"
 * identifier[uniquememberid].system = "https://www.xxxhealthplan.com/fhir/iniquememberidentifier"
-* identifier[patacctnum].type = C4BBIdentifierType#pat
-* identifier[patacctnum].value = "1234-234-1243-12345678901a"
-* identifier[patacctnum].system = "https://www.xxxhealthplan.com/fhir/patacctnum"
+//* identifier[patacctnum].type = C4BBIdentifierType#pat
+//* identifier[patacctnum].value = "1234-234-1243-12345678901a"
+//* identifier[patacctnum].system = "https://www.xxxhealthplan.com/fhir/patacctnum"
 
 Instance: Coverage1
 InstanceOf: C4BBCoverage
@@ -90,7 +90,9 @@ Usage: #example
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
-* type.text = "Inpatient Institution"
+* type.text = "Institutional"
+* subType = C4BBClaimSubType#inpatient
+* subType.text = "Inpatient"
 * use = #claim 
 * created = "2019-11-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
@@ -157,6 +159,13 @@ Usage: #example
 * supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#11  
 * supportingInfo[discharge-status].sequence = 7
 
+* supportingInfo[medicalrecordnumber].category  = C4BBSupportingInfoType#medicalrecordnumber
+* supportingInfo[medicalrecordnumber].valueString = "1234-234-1243-12345678901m"
+* supportingInfo[medicalrecordnumber].sequence = 8
+* supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
+* supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
+* supportingInfo[patientaccountnumber].sequence = 9
+
 
 Instance: EOBOutpatientInstitutional1
 InstanceOf: C4BBExplanationOfBenefitOutpatientInstitutional
@@ -172,7 +181,9 @@ Usage: #example
 * identifier.value = "AW123412341234123412341234123412"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
-* type.text = "Outpatient Institution"
+* type.text = "Institutional"
+* subType = C4BBClaimSubType#outpatient
+* subType.text = "Outpatient"
 * use = #claim 
 * created = "2019-11-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
@@ -231,6 +242,12 @@ Usage: #example
 * supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#Dummy 
 * supportingInfo[discharge-status].sequence = 6 
 
+* supportingInfo[medicalrecordnumber].category  = C4BBSupportingInfoType#medicalrecordnumber
+* supportingInfo[medicalrecordnumber].valueString = "1234-234-1243-12345678901m"
+* supportingInfo[medicalrecordnumber].sequence = 7
+* supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
+* supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
+* supportingInfo[patientaccountnumber].sequence = 8
 
 
 
@@ -301,6 +318,13 @@ Usage: #example
 * supportingInfo[servicefacility].category = C4BBSupportingInfoType#servicefacility
 * supportingInfo[servicefacility].sequence = 4
 * supportingInfo[servicefacility].valueReference = Reference(OrganizationProvider1)
+
+* supportingInfo[medicalrecordnumber].category  = C4BBSupportingInfoType#medicalrecordnumber
+* supportingInfo[medicalrecordnumber].valueString = "1234-234-1243-12345678901m"
+* supportingInfo[medicalrecordnumber].sequence = 5
+* supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
+* supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
+* supportingInfo[patientaccountnumber].sequence = 6
 
 
 Instance: EOBPharmacy1

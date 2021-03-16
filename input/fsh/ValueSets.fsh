@@ -176,16 +176,22 @@ Description: "Identifies the type of identifiers for practitioners"
 * C4BBIdentifierType#npi
 * codes from system $IdentifierType
 * ^copyright = "This Valueset is not copyrighted."
-
+/*
 CodeSystem: C4BBClaimProcedureType
 Title: "C4BB Claim Procedure Type"
 Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure"
 * #principal "Principal" "The Principal Procedure is based on the relation of the procedure to the Principal Diagnosis"
 * #other "Other"  "Other procedures performed during the inpatient institutional admission"
 * ^copyright = "This Code System is not copyrighted."
-
+*/
 ValueSet: C4BBClaimProcedureType
 Title: "C4BB Claim Procedure Type"
 Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure"
 * codes from system C4BBClaimProcedureType
 * ^copyright = "This Value Set is not copyrighted."
+
+ValueSet: C4BBClaimSubType
+Title: "C4BB Claim Procedure Subtype"
+Description: "Indicates if institutional ExplanationOfBenefit is inpatient or putpatient."
+* codes from system C4BBClaimSubType
+* ^copyright = "This CodeSystem is not copyrighted."
