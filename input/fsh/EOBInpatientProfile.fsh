@@ -17,8 +17,8 @@ Services."
 
 //* type.coding 1..1 MS   // commenting this line leads to a failure
 * type = $HL7ClaimTypeCS#institutional
-* subType 1..1
-* subType from C4BBClaimSubType (required)
+* subType 0..1 MS
+* subType = C4BBClaimSubType#inpatient
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)  // was  PayerInstitutionalProviderRole 
 * careTeam.role 1..1 MS
 * careTeam obeys EOB-inst-careTeam-practitioner
@@ -89,9 +89,9 @@ Services."
 * supportingInfo[drg].code 1..1 MS
 // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
 * supportingInfo[medicalrecordnumber].category = C4BBSupportingInfoType#medicalrecordnumber
-* supportingInfo[medicalrecordnumber].valueString 0..1 MS
+* supportingInfo[medicalrecordnumber].valueString 1..1 MS
 * supportingInfo[patientaccountnumber].category = C4BBSupportingInfoType#patientaccountnumber
-* supportingInfo[patientaccountnumber].valueString 0..1 MS
+* supportingInfo[patientaccountnumber].valueString 1..1 MS
 
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)

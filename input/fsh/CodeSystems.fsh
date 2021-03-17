@@ -146,7 +146,7 @@ Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is th
 
 CodeSystem: C4BBClaimSubType
 Title: "C4BB Claim Procedure Subtype"
-Description: "Indicates if institutional ExplanationOfBenefit is inpatient or putpatient."
+Description: "Indicates if institutional ExplanationOfBenefit is inpatient or outpatient."
 * #inpatient "Inpatient" "Claims submitted by providers for institutional admissions for which there is an overnight stay."
 * #outpatient "Outpatient"  "Claims submitted by providers for institutional admissions for which there is not an overnight stay."
 * ^copyright = "This CodeSystem is not copyrighted."

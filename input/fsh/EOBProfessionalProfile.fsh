@@ -39,9 +39,9 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[servicefacility].valueReference only Reference(C4BBOrganization)
 // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
 * supportingInfo[medicalrecordnumber].category = C4BBSupportingInfoType#medicalrecordnumber
-* supportingInfo[medicalrecordnumber].valueString 0..1 MS
+* supportingInfo[medicalrecordnumber].valueString 1..1 MS
 * supportingInfo[patientaccountnumber].category = C4BBSupportingInfoType#patientaccountnumber
-* supportingInfo[patientaccountnumber].valueString 0..1 MS
+* supportingInfo[patientaccountnumber].valueString 1..1 MS
 * careTeam.role from C4BBClaimProfessionalAndNonClinicianCareTeamRole   (required)  // was PayerProfessionalAndNonClinicianProviderRole
 * careTeam.role 1..1 MS
 * diagnosis 1..* MS
