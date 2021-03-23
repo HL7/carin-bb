@@ -3,13 +3,12 @@ Parent: $USCorePatient
 Id: C4BB-Patient
 Title: "C4BB Patient"
 Description: "This profile builds upon the US Core Patient profile. It is used to convey information about the patient who received the services described on the claim."
-* meta.lastUpdated 1..1 MS
-* meta.profile 1..* MS
-//* insert Metaprofile-supportedProfile-slice
-// 20210216 CAS: FHIR-30575 Pulled from block vote1a
-//* meta.profile[supportedProfile] = Canonical(C4BBPatient)
-// 20210216 CAS: FHIR 
 * meta 1..1 MS
+* meta.lastUpdated 1..1 MS
+* meta.profile 1..*
+* insert Metaprofile-supportedProfile-slice
+// 20210216 CAS: FHIR-30575 Pulled from block vote1a
+* meta.profile[supportedProfile] = Canonical(C4BBPatient)
 * identifier.type from C4BBPatientIdentifierType (extensible)
 //* identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.discriminator.path = "type"

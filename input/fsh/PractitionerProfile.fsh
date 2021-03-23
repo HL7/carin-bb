@@ -5,12 +5,12 @@ Id: C4BB-Practitioner
 Title: "C4BB Practitioner"
 Description: "This profile builds upon the US Core Practitioner profile. It is used to convey information about the practitioner who provided to the patient services described on the claim."
 * obeys Practitioner-identifier
-* meta.lastUpdated 1..1 MS
-* meta.profile 1..* MS
-//* insert Metaprofile-supportedProfile-slice
-// 20210216 CAS: FHIR-30575 Pulled from block vote1a
-//* meta.profile[supportedProfile] = Canonical(C4BBPractitioner)
 * meta 1..1 MS
+* meta.lastUpdated 1..1 MS
+* meta.profile 1..*
+* insert Metaprofile-supportedProfile-slice
+// 20210322 CAS: FHIR-30575
+* meta.profile[supportedProfile] = Canonical(C4BBPractitioner)
 * identifier 1..* MS
 * identifier[NPI] 0..1 MS 
 * identifier contains 

@@ -4,12 +4,12 @@ Id: C4BB-Coverage
 Title: "C4BB Coverage"
 Description: "Data that reflect a payer’s coverage that was effective as of the date of service or the date of admission of the claim."
 //* ^jurisdiction.valueCodeableConcept = "US#urn:iso:std:iso:3166"
-* meta.lastUpdated 1..1 MS
-* meta.profile 1..* MS
-// 20210216 CAS: FHIR-30575 Pulled from block vote1a
-//* insert Metaprofile-supportedProfile-slice
-//* meta.profile[supportedProfile] = Canonical(C4BBCoverage)
 * meta 1..1 MS
+* meta.lastUpdated 1..1 MS
+* meta.profile 1..*
+// 20210216 CAS: FHIR-30575 Pulled from block vote1a
+* insert Metaprofile-supportedProfile-slice
+* meta.profile[supportedProfile] = Canonical(C4BBCoverage)
 * identifier MS 
 // 20210312 CAS: Remove per https://jira.hl7.org/browse/FHIR-31535 - Revert Coverage.Subscriber Type to that defined by the base Resource
 //* subscriber 0..1 

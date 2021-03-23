@@ -4,8 +4,8 @@ Id: C4BB-ExplanationOfBenefit-Pharmacy
 Title: "C4BB ExplanationOfBenefit Pharmacy"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies. 
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
-// 20210216 CAS: FHIR-30575 Pulled from block vote1a
-//* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitPharmacy)
+// 20210322 CAS: FHIR-30575
+* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitPharmacy)
 * type = $HL7ClaimTypeCS#pharmacy 
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner)   Set in Abstract Class.  No need to set here.
 * careTeam obeys EOB-pharm-careTeam-practitioner
