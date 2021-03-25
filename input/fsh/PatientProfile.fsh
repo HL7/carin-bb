@@ -50,7 +50,7 @@ Description: "This profile builds upon the US Core Patient profile. It is used t
 * deceasedDateTime ^comment = "Date of death of the member (124)"
 * deceasedBoolean ^comment = "Indicates if the patient is deceased (150)"
 * meta.lastUpdated ^comment = "Defines the date the Resource was created or updated, whichever comes last (163).  Payers SHALL provide the last time the data was updated or the date of creation in the payer’s system of record, whichever comes last. Apps will use the meta.lastUpdated value to determine if the Reference resources are as of the current date or date of service."
-* meta.profile ^comment = "CPCDS data element (190)"
+* meta.profile ^comment = "meta.profile is required as a matter of convenience of receiving systems. The meta.profile should be used by the Server to hint/assert/declare that this instance conforms to one (or more) stated profiles (with business versions). meta.profile does not capture any business logic, processing directives, or semantics (for example, inpatient or outpatient). Clients should not assume that the Server will exhaustively indicate all profiles with all versions that this instance conforms to. Clients can (and should) perform their own validation of conformance to the indicated profile(s) and to any other profiles of interest. CPCDS data element (190)"
 * address.line ^comment = "Member's street name, number, direction & P.O. Box etc. (158)"
 * address.city ^comment = "The city for the member's primary address (192)" 
 * address.district ^comment = "The county for the member's primary address (125)" 
