@@ -85,7 +85,7 @@
 <artifact id="ValueSet/CMSMS3MAPAPRDRG" key="ValueSet-CMSMS3MAPAPRDRG" name="MS-DRGs - AP-DRGs - APR-DRGs"/>
 <artifact id="CodeSystem/CMSMSDRG" key="CodeSystem-CMSMSDRG" name="Medicare Severity Diagnosis Related Groups (MS-DRGs)"/>
 <artifact deprecated="true" id="ValueSet/NCPDPBrandGenericCode" key="ValueSet-NCPDPBrandGenericCode" name="NCPDP Brand Generic Code"/>
-<artifact id="ValueSet/NCPDPBrandGenericIndicator" key="CodeSystem-NCPDPBrandGenericIndicator" name="NCPDP Brand Generic Indicator"/>
+<artifact id="ValueSet/NCPDPBrandGenericIndicator" key="ValueSet-NCPDPBrandGenericIndicator" name="NCPDP Brand Generic Indicator"/>
 <artifact id="CodeSystem/NCPDPBrandGenericIndicator" key="CodeSystem-NCPDPBrandGenericIndicator" name="NCPDP Brand Generic Indicator"/>
 <artifact id="ValueSet/NCPDPCompoundCode" key="CodeSystem-NCPDPCompoundCode" name="NCPDP Compound Code"/>
 <artifact id="CodeSystem/NCPDPCompoundCode" key="CodeSystem-NCPDPCompoundCode" name="NCPDP Compound Code"/>
