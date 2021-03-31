@@ -3,7 +3,7 @@ InstanceOf: C4BBPatient
 Description: "Patient Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901"
-* meta.profile = Canonical(C4BBPatient)
+//* meta.profile = Canonical(C4BBPatient)
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
 * id = "Patient1"
@@ -43,7 +43,7 @@ Description: "Coverage Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * id = "Coverage1"
-* meta.profile = Canonical(C4BBCoverage)
+//* meta.profile = Canonical(C4BBCoverage)
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
 * status = #active
@@ -82,7 +82,7 @@ Description: "EOB Inpatient Example1"
 Usage: #example
 * id = "EOBInpatient1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = Canonical(C4BBExplanationOfBenefitInpatientInstitutional)
+//* meta.profile = Canonical(C4BBExplanationOfBenefitInpatientInstitutional)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -173,7 +173,7 @@ Description: "EOB Outpatient Example1"
 Usage: #example
 * id = "EOBOutpatientInstitutional1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional)
+//* meta.profile = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -257,7 +257,7 @@ Description: "EOB Professional  Example1"
 Usage: #example
 * id = "EOBProfessional1a"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician)
+//* meta.profile = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -333,7 +333,7 @@ Description: "EOB PHarmacy Example1"
 Usage: #example
 * id = "EOBPharmacy1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile = Canonical(C4BBExplanationOfBenefitPharmacy)
+//* meta.profile = Canonical(C4BBExplanationOfBenefitPharmacy)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -418,7 +418,7 @@ InstanceOf: C4BBOrganization
 Description: "Payer1"
 Usage: #example
 * id = "Payer1"
-* meta.profile = Canonical(C4BBOrganization)
+//* meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * identifier[NPI].type = $C4BBIdentifierTypeCS#npi
@@ -432,7 +432,7 @@ Instance: OrganizationProvider1
 InstanceOf: C4BBOrganization
 Description: "Provider 1"
 Usage: #example
-* meta.profile = Canonical(C4BBOrganization)
+//* meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * identifier[NPI].type = $C4BBIdentifierTypeCS#npi
