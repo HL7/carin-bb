@@ -5,7 +5,7 @@ Title: "C4BB ExplanationOfBenefit Oral"
 // TODO: Update description
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene. 
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
-// 20210216 CAS: FHIR-30575 Pulled from block vote1a
+// 20210216 CAS: FHIR-30575
 * meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.0.0)
 // TODO need updated careTeam Invariants and specialties
 * careTeam obeys EOB-prof-careTeam-practitioner
