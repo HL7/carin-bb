@@ -125,6 +125,8 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #typeofbill "Type of Bill"  "UB-04 Type of Bill (FL-04) provides specific information for payer purposes."
 * #medicalrecordnumber "Medical Record Number" "Patient Medical Record Number associated with the specific claim."
 * #patientaccountnumber "Patient Account Number" "Patient Account Number associated with the specific claim."
+* #orthodontics "Orthodontics" "[TODO] Need a definition"
+* #prosthesis "Prosthesis" "[TODO] Need a definition"
 * ^copyright = "This CodeSystem is not copyrighted."
 
 

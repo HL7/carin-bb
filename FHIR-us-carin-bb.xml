@@ -34,6 +34,7 @@
 <artifact id="StructureDefinition/C4BB-Coverage" key="StructureDefinition-C4BB-Coverage" name="C4BB Coverage"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit" key="StructureDefinition-C4BB-ExplanationOfBenefit" name="C4BB Explanation Of Benefit"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional" key="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional" name="C4BB ExplanationOfBenefit Inpatient Institutional"/>
+<artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Oral" key="StructureDefinition-C4BB-ExplanationOfBenefit-Oral" name="C4BB ExplanationOfBenefit Oral"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional" key="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional" name="C4BB ExplanationOfBenefit Outpatient Institutional"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy" key="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy" name="C4BB ExplanationOfBenefit Pharmacy"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician" key="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician" name="C4BB ExplanationOfBenefit Professional NonClinician"/>
