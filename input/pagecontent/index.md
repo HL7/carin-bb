@@ -19,7 +19,7 @@ https://jira.hl7.org/browse/FHIR-31535?jql=cf%5B11402%5D%20%3D%20STU-1.1.0-Updat
 <h3> Changes for V1.1.0 (since V1.0.0 - STU1)</h3>
 <p>This proposed STU Update addresses several fixes, technical corrections, errata, and clarifications listed below. They have been reviewed
 and voted on by the members of the <a href="http://www.hl7.org/Special/committees/fm/index.cfm">HL7 Financial Management WorkGroup</a> which is sponsoring this errata release and reconciliation of the comments.</P>
-
+<p>
 <strong>The Peer Review scope for this STU Update only includes the changes listed below. Interested parties are free to comment on any part of the IG, but those not regarding the issues below will be considered for future versions. To make a comment on the STU Update:</strong></p>
 
   <ol>
@@ -58,7 +58,7 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
             <li>Added guidance on the use of meta.profile as notes to all profiles.</li>
         </ul>
     </li>
-    <li>Updated NCPSP CodeSystem URLs (<a href="https://jira.hl7.org/browse/FHIR-31492">FHIR-31492</a>) including: 
+    <li>Updated NCPDP CodeSystem URLs (<a href="https://jira.hl7.org/browse/FHIR-31492">FHIR-31492</a>) including: 
         <ul>
             <li><a href="CodeSystem-NCPDPBrandGenericIndicator.html">NCPDP Brand Generic Indicator</a></li>
             <li><a href="CodeSystem-NCPDPCompoundCode.html">NCPDP Compound Code</a></li>
