@@ -13,6 +13,10 @@
 https://jira.hl7.org/browse/FHIR-31535?jql=cf%5B11402%5D%20%3D%20STU-1.1.0-Update
 
 -->
+<div class="stu-note">
+NOTE: This is an early eddition of the STU2 release of the CARIN Blue Button IG. It is listed as version 1.1.0 to facilitate Connectathon testing in the short term. The difference between this version and v1.1.0 include a new Oral EOB Profile and the ability to include a vision type for the Professional and NonClinician EOB.
+</div>
+
 <p>This implementation guide describes the CARIN for Blue Button&reg; <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <div>
 <h3>Changes for V2.0.0 (since V1.0.1)</h3>
