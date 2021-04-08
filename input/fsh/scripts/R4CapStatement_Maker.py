@@ -6,15 +6,24 @@ Dependecies:
     fhirclient
     pandas
     xlrd
+    openpyxl
     stringcase
+    jinja2
+    commonmark
+    lxml
 
 To install all dependencies: pip3 install -r requirements.txt
+to run on windows: python -m pip ...
 
-NOTE: this requires the r4models to be installed in the fhirclient pip site-package
+NOTE: this requires the r4models to be installed in the fhirclient pip site-package, to be installed in [installdir]/lib/python/site-packages/fhirclient
+Email Eric Haas for these models
 
 Modified from: https://github.com/Healthedata1/MyNotebooks/blob/master/CapStatement/R4CapStatement_Maker.ipynb
 '''
 import sys
+import os
+import os.path
+from os import path
 import fhirclient.r4models.capabilitystatement as CS
 import fhirclient.r4models.codeableconcept as CC
 import fhirclient.r4models.fhirdate as D
@@ -430,10 +439,16 @@ def get_si(path):
         return(loads(r))
 
 def get_si2(path):
+    # Get the full path in case a relative path is provided.
+    fullpath = os.path.abspath(path)
+
     with open(f'{path}', 'r', encoding='utf-8-sig') as f:
         r = f.read()
-        return(loads(r, encoding = 'utf-8'))
-
+        # encoding for loads was deprecated in 3.9  https://bugs.python.org/issue39377
+        if sys.version_info >= (3, 9):
+            return(loads(r))
+        else:
+            return(loads(r, encoding = 'utf-8'))
 
 
 main()
