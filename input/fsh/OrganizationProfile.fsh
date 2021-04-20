@@ -8,7 +8,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * meta.profile 1..*
 // 20210322 CAS: FHIR-30575
 * insert Metaprofile-supportedProfile-slice
-* meta.profile[supportedProfile] = Canonical(C4BBOrganization|1.1.0)
+* meta.profile[supportedProfile] = Canonical(C4BBOrganization|1.0.9)
 // Slicing stuff missing?
 // * identifier ^slicing.discriminator.path = "$this"
 // * identifier ^slicing.rules = #open

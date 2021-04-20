@@ -10,7 +10,7 @@
     "valueCode": "trial-use"
   }],
   "url": "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-type",
-  "version": "1.1.0",
+  "version": "1.0.9",
   "name": "ExplanationOfBenefit_Type",
   "status": "active",
   "experimental": false,

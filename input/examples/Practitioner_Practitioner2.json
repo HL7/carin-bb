@@ -4,7 +4,7 @@
   "meta": {
     "lastUpdated": "2020-05-04T03:02:01-04:00",
     "profile": [
-      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|1.1.0"
+      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|1.0.9"
     ]
   },
   "identifier": [
