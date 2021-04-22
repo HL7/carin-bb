@@ -144,8 +144,8 @@ Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is th
 * #other "Other"  "Other procedures performed during the inpatient institutional admission"
 * ^copyright = "This CodeSystem is not copyrighted."
 
-CodeSystem: C4BBClaimSubType
-Title: "C4BB Claim Procedure Subtype"
+CodeSystem: C4BBInstitutionalClaimSubType
+Title: "C4BB Institutional Claim SubType"
 Description: "Indicates if institutional ExplanationOfBenefit is inpatient or outpatient."
 * #inpatient "Inpatient" "Claims for inpatient institutional admissions."
 * #outpatient "Outpatient"  "Claims for outpatient institutional admissions."

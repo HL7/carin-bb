@@ -22,7 +22,7 @@
 #inpatient
 </td></tr>
 <tr><td>subType.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimSubType"
+"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBInstitutionalClaimSubType"
 </td></tr>
 <tr><td>subType.text</td><td>
 "Inpatient"

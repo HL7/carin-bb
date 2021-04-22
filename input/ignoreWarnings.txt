@@ -176,4 +176,4 @@ INFORMATION: CodeSystem/CMSHIPPSCodes: CodeSystem: Validate resource against pro
 INFORMATION: ValueSet/C4BBAdjudicationCategoryDiscriminator: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/C4BBEOBInstitutionalProcedureCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/C4BBTotalCategoryDiscriminator: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: CodeSystem/C4BBClaimSubType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBInstitutionalClaimSubType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem

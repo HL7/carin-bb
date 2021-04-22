@@ -91,7 +91,7 @@ Usage: #example
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
 * type.text = "Institutional"
-* subType = C4BBClaimSubType#inpatient
+* subType = C4BBInstitutionalClaimSubType#inpatient
 * subType.text = "Inpatient"
 * use = #claim 
 * created = "2019-11-02T00:00:00+00:00"
@@ -182,7 +182,7 @@ Usage: #example
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
 * type.text = "Institutional"
-* subType = C4BBClaimSubType#outpatient
+* subType = C4BBInstitutionalClaimSubType#outpatient
 * subType.text = "Outpatient"
 * use = #claim 
 * created = "2019-11-02T00:00:00+00:00"

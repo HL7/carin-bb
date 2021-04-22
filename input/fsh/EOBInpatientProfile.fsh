@@ -18,7 +18,8 @@ Services."
 //* type.coding 1..1 MS   // commenting this line leads to a failure
 * type = $HL7ClaimTypeCS#institutional
 * subType 1..1 MS
-* subType = C4BBClaimSubType#inpatient
+* subType from C4BBInstitutionalClaimSubType (required)
+* subType = C4BBInstitutionalClaimSubType#inpatient
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)  // was  PayerInstitutionalProviderRole 
 * careTeam.role 1..1 MS
 * careTeam obeys EOB-inst-careTeam-practitioner

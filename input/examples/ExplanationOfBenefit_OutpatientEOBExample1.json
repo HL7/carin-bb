@@ -37,7 +37,7 @@
   "subType": {
     "coding": [
       {
-        "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimSubType",
+        "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBInstitutionalClaimSubType",
         "code": "outpatient"
       }
     ],
