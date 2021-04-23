@@ -12,7 +12,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 
 * type  = $HL7ClaimTypeCS#institutional
 * subType 1..1 MS
-* subType = C4BBClaimSubType#outpatient
+* subType from C4BBInstitutionalClaimSubType (required)
+* subType = C4BBInstitutionalClaimSubType#outpatient
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)   // was PayerInstitutionalProviderRole
 * careTeam.role 1..1 MS
 * careTeam obeys EOB-inst-careTeam-practitioner

@@ -1,14 +1,6 @@
 ### Introduction
 
 <!-- 
-    TODO 
-    - change log add 31384 and new ones from Pat Taylor 
-    Add commentary that the peer review is limited to only the items/changes noted in the change log
-    FHIR-30375 Incorrect/inadequate specification of the need for instances of each profile to declare conformance to an appropriate profile
-- FHIR-31492 Update NCPDP URLs
-- FHIR-31534
-- FHIR-31535 
-
 
 https://jira.hl7.org/browse/FHIR-31535?jql=cf%5B11402%5D%20%3D%20STU-1.1.0-Update
 
@@ -20,7 +12,7 @@ https://jira.hl7.org/browse/FHIR-31535?jql=cf%5B11402%5D%20%3D%20STU-1.1.0-Updat
 <p>This proposed STU Update addresses several fixes, technical corrections, errata, and clarifications listed below. They have been reviewed
 and voted on by the members of the <a href="http://www.hl7.org/Special/committees/fm/index.cfm">HL7 Financial Management WorkGroup</a> which is sponsoring this errata release and reconciliation of the comments.</P>
 <p>
-<strong>The Peer Review scope for this STU Update only includes the changes listed below. Interested parties are free to comment on any part of the IG, but those not regarding the issues below will be considered for future versions. To make a comment on the STU Update:</strong></p>
+<strong>The Peer Review scope for this STU Update only includes the changes listed below. Interested parties are free to comment on any part of the IG, but those not regarding the issues below will be considered for future versions. Once peer reviewed and comments are processed, the version will be incremented to an STU Update version 1.1.0. To make a comment on the STU Update:</strong></p>
 
   <ol>
     <li>Create a new Jira tracker (New trackers can be made by clicking on the link in the page footer entitled “Propose a change” and clicking the "Create" button on top)</li>
@@ -41,7 +33,7 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
     <li>Added Data Absent Reason "not-applicable" code to <a href="ValueSet-C4BBEOBInstitutionalProcedureCodes.html#definition">Institutional Procedure Codes ValueSet</a> for use with Inpatient Institutional EOB item.productOrService and an <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional-definitions.html#ExplanationOfBenefit.item.productOrService">Invariant disallowing the use of this code in Outpatient Institutional EOB</a> (<a href="https://jira.hl7.org/browse/FHIR-30357">FHIR-30357</a>)</li>
     <li>Added 'Must Support' to Professional and NonClinician EOB <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician-definitions.html#ExplanationOfBenefit.item.productOrService">item.productOrService</a> and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician-definitions.html#ExplanationOfBenefit.item.modifier">item.modifier</a> (<a href="https://jira.hl7.org/browse/FHIR-30358">FHIR-30358</a>)</li>
     <li>Fixed Explanations of Benefits Profile Definition <a href="4_Common_Payer_Consumer_Data_Set.html#profiles-definition">diagram</a> and <a href="CARINforBlueButtonProfileComparisonOverview.pptx">source presentation file (pptx)</a> legend and added DRG owner (<a href="https://jira.hl7.org/browse/FHIR-30360">FHIR-30360</a>)</li>
-    <li>Added <a href="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNewborn.html">NUBC Point of Origin for Newborn CodeSystem</a> and renamed NUBC Point of Origin CodeSystem to <a href="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn.html">NUBC Point of Origin for Non-newborn CodeSystem</a>for Inpatient and Outpatient Institutional EOB supportingInfo <a href="ValueSet-AHANUBCPointOfOriginForAdmissionOrVisit.html">Point of Origin ValueSet</a> for use when Type of Admission is newborn, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html#inv">Inpatient Institutional EOB Invariant</a>, and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html#inv">Outpatient Institutional EOB Invariant</a> (<a href="https://jira.hl7.org/browse/FHIR-30370">FHIR-30370</a> and <a href="https://jira.hl7.org/browse/FHIR-31384">FHIR-31384</a>)</li>
+    <li>Added <a href="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNewborn.html">NUBC Point of Origin for Newborn CodeSystem</a> and renamed NUBC Point of Origin CodeSystem to <a href="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn.html"> NUBC Point of Origin for Non-newborn CodeSystem</a> for Inpatient and Outpatient Institutional EOB supportingInfo <a href="ValueSet-AHANUBCPointOfOriginForAdmissionOrVisit.html">Point of Origin ValueSet</a> for use when Type of Admission is newborn, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html#inv">Inpatient Institutional EOB Invariant</a>, and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html#inv">Outpatient Institutional EOB Invariant</a> (<a href="https://jira.hl7.org/browse/FHIR-30370">FHIR-30370</a> and <a href="https://jira.hl7.org/browse/FHIR-31384">FHIR-31384</a>)</li>
     <li>Changed <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional-definitions.html#ExplanationOfBenefit.supportingInfo:drg.code">Inpatient Institutional EOB supportingInfo DRG code terminology binding</a> strength from required to extensible to allow for state Medicaid assigned DRGs (<a href="https://jira.hl7.org/browse/FHIR-30380">FHIR-30380</a>)</li>
     <li>Added HIPPS codes to <a href="ValueSet-C4BBEOBInstitutionalProcedureCodes.html">Institutional EOB Procedure Codes ValueSet</a> (<a href="https://jira.hl7.org/browse/FHIR-30413">FHIR-30413</a>)</li>
     <li> Added C4BB Payer Benefit Payment Status to <a href="ValueSet-C4BBAdjudicationCategoryDiscriminator.html#definition">C4BB Adjudication Category Discriminator ValueSet</a> for use in the Professional and NonClinician EOB item.adjudication and removed inoutnetwork code from <a  href="CodeSystem-C4BBAdjudicationDiscriminator.html">Adjudication Discriminator CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-30806">FHIR-30806</a>)</li>
@@ -49,7 +41,7 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
     <li>Changes on differentiating ExplanationOfBenefit profiles (<a href="https://jira.hl7.org/browse/FHIR-31594">FHIR-31594</a>)
         <ul>
             <li>Added ExplanationofBenefit.subType requirements to the <a href = "StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional-definitions.html#ExplanationOfBenefit.subType">Inpatient</a> and <a href = "StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional-definitions.html#ExplanationOfBenefit.subType">Outpatient</a> Institutional ExplanationOfBenefit profiles.</li>
-            <li>Added <a href="ValueSet-C4BBClaimSubType.html">Claim Procedure Subtype ValueSet</a> and <a href="CodeSystem-C4BBClaimSubType.html">Claim Procedure Subtype CodeSystem</a></li>
+            <li>Added <a href="ValueSet-C4BBInstitutionalClaimSubType.html">Institutional Claim Subtype ValueSet</a> and <a href="CodeSystem-C4BBInstitutionalClaimSubType.html">Institutional Claim Subtype CodeSystem</a></li>
         </ul>
     </li>    
     <li>Changes of requirements and guidance on all profiles meta.profile (<a href="https://jira.hl7.org/browse/FHIR-30375">FHIR-30375</a>)
@@ -96,7 +88,6 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
     <li>Shortened the titles of Inpatient Institutional, Outpatient Institutional, and Professional and NonClinicain EOB <a href="artifacts.html#5">Procedure Code and Procedure Code Modifier ValueSets</a> (<a href="https://jira.hl7.org/browse/FHIR-31074">FHIR-31074</a>)</li>
     <li>Changed <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html">Inpatient EOB</a> insurance cardinality for 1..1 to 1..* by removing constraint in profile (<a href="https://jira.hl7.org/browse/FHIR-31477">FHIR-31477</a>)</li>
     <li>Added language regarding security and privacy to the <a href="7_Authorization_Authentication_and_Registration.html#fhir-security-and-privacy-guidance">Authorization, Authentication, and Registration page</a> with a link to the <a href="http://hl7.org/fhir/secpriv-module.html">HL7 FHIR Security and Privacy Module</a> (<a href="https://jira.hl7.org/browse/FHIR-31692">FHIR-31692</a>)</li>
-    <li>Changed <a href="artifacts.html#5">NCPDP CodeSystem URLs</a> (<a href="https://jira.hl7.org/browse/FHIR-31492">FHIR-31492</a>)</li>
     <li>Transitioned project structure for Sushi 1.0.0 (For Implementation Guide generation)</li>
     <li>Added <a href="index.html#authors">additional contributors</a> (<a href="https://jira.hl7.org/browse/FHIR-30084">FHIR-30084</a>)</li>
 </ul>

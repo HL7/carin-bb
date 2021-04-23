@@ -29,6 +29,11 @@ Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the
 WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[0].procedure.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
 WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[1].procedure.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
 WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[2].procedure.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
+
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[0].procedure.ofType(CodeableConcept) (l278/c20):	[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[1].procedure.ofType(CodeableConcept) (l302/c20):	[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[2].procedure.ofType(CodeableConcept) (l326/c20):	[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
+
 WARNING: ValueSet.where(id = 'CMSICD910PCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/ICD9
 WARNING: ValueSet.where(id = 'CMSICD910PCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/ICD10
 WARNING: ValueSet.where(id = 'CMSMS3MAPAPRDRG'): Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software
@@ -103,17 +108,28 @@ INFORMATION: SearchParameter/explanationofbenefit-type: SearchParameter: Validat
 INFORMATION: SearchParameter/practitionerrole-organization: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
 INFORMATION: SearchParameter/practitionerrole-practitioner: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
 INFORMATION: CodeSystem/AHANUBCPatientDischargeStatus: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCPatientDischargeStatus: CodeSystem/AHANUBCPatientDischargeStatus: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisit: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/AHANUBCPresentOnAdmission: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCPresentOnAdmission: CodeSystem/AHANUBCPresentOnAdmission: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/AHANUBCPriorityTypeOfAdmissionOrVisit: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCPriorityTypeOfAdmissionOrVisit: CodeSystem/AHANUBCPriorityTypeOfAdmissionOrVisit: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/AHANUBCRevenueCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCRevenueCodes: CodeSystem/AHANUBCRevenueCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/AHANUBCTypeOfBill: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCTypeOfBill: CodeSystem/AHANUBCTypeOfBill: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/C4BBAdjudication: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBAdjudication: CodeSystem/C4BBAdjudication: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/C4BBAdjudicationDiscriminator: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBAdjudicationDiscriminator: CodeSystem/C4BBAdjudicationDiscriminator: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/C4BBClaimCareTeamRole: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBClaimCareTeamRole: CodeSystem/C4BBClaimCareTeamRole: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/C4BBClaimDiagnosisType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBClaimDiagnosisType: CodeSystem/C4BBClaimDiagnosisType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/C4BBClaimProcedureType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBClaimProcedureType: CodeSystem/C4BBClaimProcedureType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/C4BBCompoundLiteral: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBCompoundLiteral: CodeSystem/C4BBCompoundLiteral: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/C4BBIdentifierType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/C4BBPayeeType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/C4BBPayerAdjudicationStatus: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
@@ -171,9 +187,11 @@ INFORMATION: ValueSet/NCPDPRejectCode: ValueSet: Validate resource against profi
 INFORMATION: ValueSet/X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/C4BBEOBInstitutionalProcedureCodes: ValueSet:	Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNewborn: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNewborn: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNewborn: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: CodeSystem/CMSHIPPSCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: ValueSet/C4BBAdjudicationCategoryDiscriminator: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/C4BBEOBInstitutionalProcedureCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/C4BBTotalCategoryDiscriminator: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: CodeSystem/C4BBClaimSubType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: CodeSystem/C4BBInstitutionalClaimSubType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem

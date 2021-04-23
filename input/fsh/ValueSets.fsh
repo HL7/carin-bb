@@ -190,8 +190,8 @@ Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is th
 * codes from system C4BBClaimProcedureType
 * ^copyright = "This Value Set is not copyrighted."
 
-ValueSet: C4BBClaimSubType
-Title: "C4BB Claim Procedure Subtype"
+ValueSet: C4BBInstitutionalClaimSubType
+Title: "C4BB Institutional Claim SubType"
 Description: "Indicates if institutional ExplanationOfBenefit is inpatient or putpatient."
-* codes from system C4BBClaimSubType
+* codes from system C4BBInstitutionalClaimSubType
 * ^copyright = "This CodeSystem is not copyrighted."
