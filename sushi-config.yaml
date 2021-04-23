@@ -1,0 +1,127 @@
+# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
+# │                                                                                                │
+# │  This file was generated from your existing project files and will be used for SUSHI           │
+# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# ╭─────────────────────────ImplementationGuide-hl7.fhir.us.carin-bb.json──────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.us.carin-bb
+canonical: http://hl7.org/fhir/us/carin-bb
+version: 1.0.0
+name: CARINConsumerDirectedPayerDataExchange
+title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
+status: active
+publisher:
+  name: HL7 Financial Management Working Group
+  url: http://www.hl7.org/Special/committees/fm/index.cfm
+  email: fm@lists.HL7.org
+description: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
+license: CC0-1.0
+fhirVersion: 4.0.1
+dependencies:
+  hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
+parameters:
+  show-inherited-invariants: false
+  apply-jurisdiction: true
+  apply-publisher: true
+copyrightYear: 2020+
+releaseLabel: CI - STU1 Update - Peer Review
+jurisdiction: urn:iso:std:iso:3166#US
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Background:
+    The CARIN Alliance: 1_Background.html#the-carin-alliance
+    Patient Protection: 1_Background.html#patient-protection
+    Relation to Other IGs: 1_Background.html#relation-to-other-IGs
+  Use Cases:
+    Terms and Concepts: 2_Use_Case.html#terms-and-concepts
+    Use Cases: 2_Use_Case.html#use-cases
+  Guidance:
+    General Guidance: 3_General_Guidance.html
+    Common Payer Consumer Data Set (CPCDS): 4_Common_Payer_Consumer_Data_Set.html
+    Terminology Licensure: 5_Terminology_Licensure.html 
+  FHIR Artifacts:
+    Profiles: artifacts.html#3
+    Search Parameters: 6_searchparameters.html
+    Terminology: artifacts.html#5
+    Capability Statement: CapabilityStatement-c4bb.html
+  Security:
+    SMART on FHIR Application Launch: 7_Authorization_Authentication_and_Registration.html#smart-on-fhir-application-launch
+    Authorization and Authentication: 7_Authorization_Authentication_and_Registration.html#authorization-and-authentication
+  Examples:  artifacts.html#7
+  Downloads: 8_downloads.html
+
+# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
+# │  To control the package-list.json using this config, uncomment and set the "history" property. │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+resources:
+  Coverage/CoverageEx1:
+    name: Coverage Example 1
+    description: Coverage Example 1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+  Coverage/CoverageEx2:
+    name: Coverage Example 2
+    description: Coverage Example 2
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+  ExplanationOfBenefit/InpatientEOBExample1:
+    name: EOB Inpatient Institutional - Example 1
+    description: EOB Inpatient Institutional - Example 1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
+  ExplanationOfBenefit/OutpatientEOBExample1:              
+    name: EOB Outpatient Institutional - Example 1
+    description: EOB Outpatient Institutional - Example 1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
+  ExplanationOfBenefit/ProfessionalEOBExample1:
+    name: EOB Professional - Example 1
+    description: EOB Professional - Example 1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
+  Organization/PayerOrganizationExample1:
+    name: Payer Organization Example 1
+    description: Payer Organization Example 1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+  Organization/ProviderOrganization1:
+    name: Provider Organizaiton Example 1
+    description: Provider Organizaiton Example 1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+  Organization/ProviderOrganization3:
+    name: Provider Organizaiton Example 3
+    description: Provider Organizaiton Example 3
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+  Organization/ProviderOrganization4:
+    name: Provider Organizaiton Example 4
+    description: Provider Organizaiton Example 4
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+  Organization/ProviderOrganization5:
+    name: Provider Organizaiton Example 5
+    description: Provider Organizaiton Example 5
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+  Organization/ProviderOrganization6:
+    name: Provider Organizaiton Example 6
+    description: Provider Organizaiton Example 6
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+  Patient/ExamplePatient1: 
+    name: Patient Example 1
+    description: Patient Example 1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
+  Practitioner/Practitioner1:
+    name: Practitioner Example 1
+    description: Practitioner Example 1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
+  Practitioner/Practitioner2:
+    name: Practitioner Example 2
+    description: Practitioner Example 2
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
+  Practitioner/Practitioner3:
+    name: Practitioner Example 3
+    description: Practitioner Example 3
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
