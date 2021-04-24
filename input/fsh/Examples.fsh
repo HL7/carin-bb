@@ -76,6 +76,43 @@ Usage: #example
 * relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self
 * payor = Reference(OrganizationPayer1)
 
+
+Instance: CoverageDental1
+InstanceOf: C4BBCoverage
+Description: "Dental Coverage Example1"
+Usage: #example
+//* id = "1234-234-1243-12345678901-20190101-20191031"
+* id = "CoverageDental1"
+* meta.lastUpdated = "2021-01-01T14:22:01.0314215+00:00"
+* language = #en-US
+* status = #active
+* identifier[0].type = $IdentifierType#MB
+* identifier[0].value = "210300002"
+* identifier[0].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
+* type = http://terminology.hl7.org/CodeSystem/v3-ActCode#DENTAL
+* type.text = "dental care policy"
+* policyHolder = Reference(Patient1)
+* subscriber = Reference(Patient1)
+* beneficiary = Reference(Patient1)
+* subscriberId = "10300007"  
+* dependent = "01"
+* period.start = "2021-01-01"
+* period.end = "2021-12-31"
+
+* class[group].type = $CoverageClassCS#group 
+* class[group].type.text = "An employee group"
+* class[group].value = "10300007"
+* class[group].name = "Transcorp - dental"
+* class[plan].type = $CoverageClassCS#plan
+* class[plan].type.text = "Plan"
+* class[plan].value = "66783JJT"
+* class[plan].name = "INSURANCE COMPANY XYZ - PRIME"
+
+* network = "INSURANCE COMPANY XYZ - PRIME"
+* relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self
+* payor = Reference(OrganizationDentalPayer1)
+
+
 Instance: EOBInpatient1
 InstanceOf: C4BBExplanationOfBenefitInpatientInstitutional
 Description: "EOB Inpatient Example1"
@@ -327,6 +364,100 @@ Usage: #example
 * supportingInfo[patientaccountnumber].sequence = 6
 
 
+
+Instance: EOBOral1a
+InstanceOf: C4BBExplanationOfBenefitOral
+Description: "EOB Oral Example1"
+Usage: #example
+* id = "EOBOral1a"
+//* id = "1234-234-1243-12345678901-20190101-20191031"
+//* meta.profile = Canonical(C4BBExplanationOfBenefitOral)
+* meta.lastUpdated = "2021-03-18T10:23:00-05:00"
+* language = #en-US
+* status = #active
+* identifier.type = $C4BBIdentifierTypeCS#uc
+* identifier.value = "210300002"
+* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* type = $HL7ClaimTypeCS#oral
+* type.text = "Oral" 
+* use = #claim 
+* created = "2021-03-18T10:23:00-05:00"
+* insurer = Reference(OrganizationDentalPayer1)
+* insurer.display = "XXX Health Plan"
+* patient = Reference(Patient1)
+* billablePeriod.start = "2021-03-01"
+* billablePeriod.end = "2021-03-31"
+* provider = Reference(OrganizationDentalProvider1)
+* provider.display = "XXX Dental Plan"
+* outcome = #complete
+* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#Z01.21 "Encounter for dental examination and cleaning with abnormal findings"
+* diagnosis[0].type = $HL7DiagnosisType#principal
+* diagnosis[0].sequence = 1 
+* insurance[0].focal = true
+* insurance[0].coverage[0] = Reference(CoverageDental1)
+* total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#submitted
+* total[adjudicationamounttype][0].category.text = "Submitted Amount"
+* total[adjudicationamounttype][0].amount.value = 410.00
+* total[adjudicationamounttype][0].amount.currency = #USD
+* total[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit
+* total[adjudicationamounttype][1].category.text = "Benefit Amount"
+* total[adjudicationamounttype][1].amount.value = 350.00
+* total[adjudicationamounttype][1].amount.currency = #USD
+* total[adjudicationamounttype][2].category = $HL7AdjudicationCS#discount
+* total[adjudicationamounttype][2].category.text = "Discount Amount"
+* total[adjudicationamounttype][2].amount.value = 60.00
+* total[adjudicationamounttype][2].amount.currency = #USD
+* total[adjudicationamounttype][3].category = $HL7AdjudicationCS#paidtoprovider
+* total[adjudicationamounttype][3].category.text = "Amount Paid to Provider"
+* total[adjudicationamounttype][3].amount.value = 350.00
+* total[adjudicationamounttype][3].amount.currency = #USD
+* total[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
+* total[benefitpaymentstatus][0].amount.value = 350.00
+* total[benefitpaymentstatus][0].amount.currency = #USD
+
+
+
+* item[0].productOrService = ADADentalProcedureCode#D1110 "Prophylaxis - Adult"
+
+* item[0].sequence = 1 
+* item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* item[0].adjudication[adjudicationamounttype][0].amount.value = 190.00
+* item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
+
+* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork 
+
+
+* item[1].productOrService = ADADentalProcedureCode#D0120 "Periodic oral evaluation"
+
+* item[1].sequence = 2
+* item[1].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* item[1].adjudication[adjudicationamounttype][0].amount.value = 220.00
+* item[1].adjudication[adjudicationamounttype][0].amount.currency = #USD
+
+* item[1].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork 
+
+
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
+* supportingInfo[billingnetworkcontractingstatus].sequence = 1
+* supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
+* supportingInfo[performingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
+* supportingInfo[performingnetworkcontractingstatus].sequence = 2
+* supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[clmrecvddate].timingDate = 2021-03-18
+* supportingInfo[clmrecvddate].sequence = 3
+* supportingInfo[servicefacility].category = C4BBSupportingInfoType#servicefacility
+* supportingInfo[servicefacility].sequence = 4
+* supportingInfo[servicefacility].valueReference = Reference(OrganizationProvider1)
+
+
+* supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
+* supportingInfo[patientaccountnumber].valueString = "PATIENTACCTNO3"
+* supportingInfo[patientaccountnumber].sequence = 5
+
+
+
+
 Instance: EOBPharmacy1
 InstanceOf: C4BBExplanationOfBenefitPharmacy
 Description: "EOB PHarmacy Example1"
@@ -428,6 +559,23 @@ Usage: #example
 * name = "Payer 1"
 * active = true 
 
+
+Instance: OrganizationDentalPayer1
+InstanceOf: C4BBOrganization
+Description: "Dental Payer1"
+Usage: #example
+* id = "OrganizationDentalPayer1"
+//* meta.profile = Canonical(C4BBOrganization)
+* meta.lastUpdated = "2021-01-01T10:23:11+00:00"
+* language = #en-US
+* identifier[NPI].type = $C4BBIdentifierTypeCS#npi
+* identifier[NPI].value = "467678"
+* identifier[payerid].type = $C4BBIdentifierTypeCS#payerid
+* identifier[payerid].value = "66783JJT"
+* name = "INSURANCE COMPANY XYZ"
+* active = true 
+
+
 Instance: OrganizationProvider1
 InstanceOf: C4BBOrganization
 Description: "Provider 1"
@@ -440,5 +588,18 @@ Usage: #example
 * identifier[tax].type = $IdentifierType#TAX
 * identifier[tax].value = "123-45-6789"
 * name = "Provider 1"
+* active = true 
+
+
+Instance: OrganizationDentalProvider1
+InstanceOf: C4BBOrganization
+Description: "Dental Provider 1"
+Usage: #example
+//* meta.profile = Canonical(C4BBOrganization)
+* meta.lastUpdated = "2021-01-01T10:23:11+00:00"
+* language = #en-US
+* identifier[NPI].type = $C4BBIdentifierTypeCS#npi
+* identifier[NPI].value = "0025501002"
+* name = "Dental Provider 1"
 * active = true 
 

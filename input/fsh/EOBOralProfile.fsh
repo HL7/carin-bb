@@ -21,7 +21,7 @@ The claims data is based on the professional claim form 1500, submission standar
    clmrecvddate 0..1 MS and
    servicefacility 0..1 MS and
    orthodontics 0..1 MS and
-   prosthesis 0..1 MS
+   prosthesis 0..1 MS and
    /*
    Need to add discriminator to CodeSystem-C4BBSupportingInfoType
 
@@ -37,6 +37,8 @@ The claims data is based on the professional claim form 1500, submission standar
    totalorthodontiamonths 1..1 MS and
    priorprosthesisplacedate 1..1 MS
    */
+     medicalrecordnumber 0..1 MS and
+     patientaccountnumber 0..1 MS
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
 * supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
@@ -62,7 +64,10 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[prosthesis].category = C4BBSupportingInfoType#prosthesis
 * supportingInfo[prosthesis].category MS
 
-
+* supportingInfo[medicalrecordnumber].category = C4BBSupportingInfoType#medicalrecordnumber
+* supportingInfo[medicalrecordnumber].valueString 1..1 MS
+* supportingInfo[patientaccountnumber].category = C4BBSupportingInfoType#patientaccountnumber
+* supportingInfo[patientaccountnumber].valueString 1..1 MS
 
 * careTeam.role from C4BBClaimProfessionalAndNonClinicianCareTeamRole   (required)  // was PayerProfessionalAndNonClinicianProviderRole
 * careTeam.role 1..1 MS
@@ -73,12 +78,10 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from CDCICD910CMDiagnosisCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
-// CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358
+
 * item.modifier MS
-* item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
-// 20210201 CAS: FHIR-30357 - item.productOrService is required when item.revenue is provided
-//* item.productOrService obeys EOB-prof-item-productorservice
-// CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358
+* item.productOrService from ADADentalProcedureCode (required)
+
 * item.productOrService MS
 * item.location[x] from CMSPlaceofServiceCodes (required)
 * item.location[x] only CodeableConcept
@@ -104,7 +107,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
 * insert TotalSlicing
-* total.category from C4BBAdjudication  (extensible)
+//* total.category from C4BBAdjudication  (extensible)
 * total contains 
    adjudicationamounttype 1..* MS and
    benefitpaymentstatus 1..* MS 

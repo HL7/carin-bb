@@ -9,6 +9,8 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="ValueSet/ADADentalProcedureCode" key="ValueSet-ADADentalProcedureCode" name="ADA Code on Dental Procedures and Nomenclature"/>
+<artifact id="CodeSystem/ADADentalProcedureCode" key="CodeSystem-ADADentalProcedureCode" name="ADA Code on Dental Procedures and Nomenclature"/>
 <artifact deprecated="true" id="CodeSystem/AMACPTCodes" key="CodeSystem-AMACPTCodes" name="AMA CPT Codes"/>
 <artifact id="CodeSystem/THREEMAPDRG" key="CodeSystem-THREEMAPDRG" name="All Patient Diagnosis Related Groups (AP-DRGs)"/>
 <artifact id="CodeSystem/THREEMAPRDRG" key="CodeSystem-THREEMAPRDRG" name="All Patient Refined Diagnosis Related Groups (APR-DRGs)"/>
@@ -61,12 +63,14 @@
 <artifact id="Coverage/CoverageEx1" key="Coverage-CoverageEx1" name="Coverage Example 1"/>
 <artifact id="Coverage/CoverageEx2" key="Coverage-CoverageEx2" name="Coverage Example 2"/>
 <artifact id="Coverage/Coverage1" key="Coverage-Coverage1" name="Coverage1"/>
+<artifact id="Coverage/CoverageDental1" key="Coverage-CoverageDental1" name="CoverageDental1"/>
 <artifact id="SearchParameter/coverage-payor" key="SearchParameter-coverage-payor" name="Coverage_Payor"/>
 <artifact id="ValueSet/CDCICD910CMDiagnosisCodes" key="ValueSet-CDCICD910CMDiagnosisCodes" name="Diagnosis Codes - International Classification of Diseases, Clinical Modification (ICD-9-CM, ICD-10-CM)"/>
 <artifact id="ExplanationOfBenefit/InpatientEOBExample1" key="ExplanationOfBenefit-EOBInpatientInstitutionalEx1" name="EOB Inpatient Institutional - Example 1"/>
 <artifact id="ExplanationOfBenefit/OutpatientEOBExample1" key="ExplanationOfBenefit-EOBOutpatientInstitutionalEx1" name="EOB Outpatient Institutional - Example 1"/>
 <artifact id="ExplanationOfBenefit/ProfessionalEOBExample1" key="ExplanationOfBenefit-EOBProfessionalEx1" name="EOB Professional - Example 1"/>
 <artifact id="ExplanationOfBenefit/EOBInpatient1" key="ExplanationOfBenefit-EOBInpatient1" name="EOBInpatient1"/>
+<artifact id="ExplanationOfBenefit/EOBOral1a" key="ExplanationOfBenefit-EOBOral1a" name="EOBOral1a"/>
 <artifact id="ExplanationOfBenefit/EOBOutpatientInstitutional1" key="ExplanationOfBenefit-EOBOutpatientInstitutional1" name="EOBOutpatientInstitutional1"/>
 <artifact id="ExplanationOfBenefit/EOBPharmacy1" key="ExplanationOfBenefit-EOBPharmacy1" name="EOBPharmacy1"/>
 <artifact id="ExplanationOfBenefit/EOBProfessional1a" key="ExplanationOfBenefit-EOBProfessional1a" name="EOBProfessional1a"/>
@@ -112,6 +116,8 @@
 <artifact id="CodeSystem/AHANUBCTypeOfBill" key="CodeSystem-AHANUBCTypeOfBill" name="NUBC Type Of Bill Codes"/>
 <artifact id="ValueSet/AHANUBCTypeOfBill" key="ValueSet-AHANUBCTypeOfBill" name="NUBC Type of Bill Codes"/>
 <artifact id="ValueSet/FDANationalDrugCode" key="ValueSet-FDANationalDrugCode" name="National Drug Code (NDC)"/>
+<artifact id="Organization/OrganizationDentalPayer1" key="Organization-OrganizationDentalPayer1" name="OrganizationDentalPayer1"/>
+<artifact id="Organization/OrganizationDentalProvider1" key="Organization-OrganizationDentalProvider1" name="OrganizationDentalProvider1"/>
 <artifact id="Organization/Payer1" key="Organization-Payer1" name="OrganizationPayer1"/>
 <artifact id="Organization/OrganizationProvider1" key="Organization-OrganizationProvider1" name="OrganizationProvider1"/>
 <artifact id="Patient/ExamplePatient1" key="Patient-PatientEx1" name="Patient Example 1"/>

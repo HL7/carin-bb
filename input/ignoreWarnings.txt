@@ -26,6 +26,10 @@ Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CDCICD910CMDiagnosisCodes because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or code system is not known to the validator]
+
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode because the value set or code system is not known to the validator]
+Error from server: Unable to provide support for code system https://www.ada.org/en/publications/cdt
+
 WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[0].procedure.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
 WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[1].procedure.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
 WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[2].procedure.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
@@ -50,6 +54,31 @@ WARNING: ValueSet.where(id = 'X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRe
 #informational -- these examples are in the IG because they are examples of the referenced profiles. 
 INFORMATION: Coverage/CoverageEx1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
 INFORMATION: Coverage/CoverageEx2: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+INFORMATION: Coverage/Coverage1: Coverage (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage - listed in meta
+INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional - listed in meta
+INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional - listed in meta
+INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy - listed in meta
+INFORMATION: ExplanationOfBenefit/EOBProfessional1a: ExplanationOfBenefit (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician - listed in meta
+INFORMATION: Organization/OrganizationProvider1: Organization (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
+INFORMATION: Organization/Payer1: Organization (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
+INFORMATION: Patient/Patient1: Patient (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient - listed in meta
+
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional - listed in meta
+INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional - listed in meta
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician - listed in meta
+INFORMATION: Organization/PayerOrganizationExample1: Organization (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
+INFORMATION: Organization/ProviderOrganization1: Organization (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
+INFORMATION: Organization/ProviderOrganization3: Organization (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
+INFORMATION: Organization/ProviderOrganization4: Organization (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
+INFORMATION: Organization/ProviderOrganization5: Organization (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
+INFORMATION: Organization/ProviderOrganization6: Organization (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
+INFORMATION: Patient/ExamplePatient1: Patient (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient - listed in meta
+INFORMATION: Practitioner/Practitioner1: Practitioner (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner - listed in meta
+INFORMATION: Practitioner/Practitioner2: Practitioner (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner - listed in meta
+INFORMATION: Practitioner/Practitioner3: Practitioner (l1/c2): Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner - listed in meta
+
+
+
 INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
 INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[3].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
 INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[6].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated
