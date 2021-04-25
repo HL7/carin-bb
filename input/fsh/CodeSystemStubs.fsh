@@ -443,7 +443,7 @@ ValueSet: AMACPTCMSHCPCSProcedureCodes
 Title: "Procedure Codes - AMA CPT - CMS HCPCS"
 Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. 
 
-The target set for this value set are the procedure codes from the CPT and HCPCS files and the rate codes from the HIPPS files.
+The target set for this value set are the procedure codes from the CPT and HCPCS files.
 
 The Current Procedural Terminology (CPT) code set, created and maintained by the American Medical Association, is the language of medicine today and the code to its future. This system of terminology is the most widely accepted medical nomenclature used to report medical procedures and services under public and private health insurance programs. CPT coding is also used for administrative management purposes such as claims processing and developing guidelines for medical care review. Each year, via a rigorous, evidence-based and transparent process, the independent CPT Editorial Panel revises, creates or deletes hundreds of codes in order to reflect current medical practice.
 
@@ -472,26 +472,7 @@ Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCod
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
 * codes from system $CPT
 * codes from system CMSHCPCSCodes
-* ^copyright = "CPT is copyrighted by the AMA and as such must be licensed to be used in electronic products or other forms.
-
-Any individual or entity using CPT content needs permission or a license (i.e., a written agreement authorizing use of CPT codes) from the AMA or an authorized distributor. 
-
- Examples where a license and royalty payment are required (not an exhaustive list):
-
-*   Use of CPT content to develop, test, maintain, and service products that use or rely on CPT
-*   Use of CPT content in products that are licensed or distributed by a vendor, company or other third party
-*   Distribution of products that require use of CPT content
-*   Any proposed use of CPT content including the creation of derivative works of CPT content, translations or localized versions of CPT content
-
-For more information see [here](https://www.ama-assn.org/practice-management/cpt/ama-cpt-licensing-overview) 
-
-If you have a question or would like to license CPT content,  please see [here](http://info.commerce.ama-assn.org/ama-data-file-request-2020).
-
-Any HL7 product referencing CPT must include the following verbiage:
-
-CPT © Copyright 2019 American Medical Association. All rights reserved. AMA and CPT are registered trademarks of the American Medical Association.
-
-Note: the year is always based on the publication year of the code set. CPT releases the August prior to the effective year (e.g., CPT 2020 code set = copyright 2019 or CPT 2021 code set = copyright 2020).
+* ^copyright = "Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
 
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
 
@@ -566,26 +547,7 @@ group information may also vary by payment systems."
 * codes from system CMSHCPCSCodes
 * codes from system CMSHIPPSCodes
 * include $HL7DataAbsentReason#not-applicable "Not Applicable"
-* ^copyright = "CPT is copyrighted by the AMA and as such must be licensed to be used in electronic products or other forms.
-
-Any individual or entity using CPT content needs permission or a license (i.e., a written agreement authorizing use of CPT codes) from the AMA or an authorized distributor. 
-
- Examples where a license and royalty payment are required (not an exhaustive list):
-
-*   Use of CPT content to develop, test, maintain, and service products that use or rely on CPT
-*   Use of CPT content in products that are licensed or distributed by a vendor, company or other third party
-*   Distribution of products that require use of CPT content
-*   Any proposed use of CPT content including the creation of derivative works of CPT content, translations or localized versions of CPT content
-
-For more information see [here](https://www.ama-assn.org/practice-management/cpt/ama-cpt-licensing-overview) 
-
-If you have a question or would like to license CPT content,  please see [here](http://info.commerce.ama-assn.org/ama-data-file-request-2020).
-
-Any HL7 product referencing CPT must include the following verbiage:
-
-CPT © Copyright 2019 American Medical Association. All rights reserved. AMA and CPT are registered trademarks of the American Medical Association.
-
-Note: the year is always based on the publication year of the code set. CPT releases the August prior to the effective year (e.g., CPT 2020 code set = copyright 2019 or CPT 2021 code set = copyright 2020).
+* ^copyright = "Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
 
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)
 
@@ -626,29 +588,9 @@ Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCod
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
 * codes from system $CPT
 * codes from system CMSHCPCSCodes
-* ^copyright = "CPT is copyrighted by the AMA and as such must be licensed to be used in electronic products or other forms.
-
-Any individual or entity using CPT content needs permission or a license (i.e., a written agreement authorizing use of CPT codes) from the AMA or an authorized distributor. 
-
- Examples where a license and royalty payment are required (not an exhaustive list):
-
-*   Use of CPT content to develop, test, maintain, and service products that use or rely on CPT
-*   Use of CPT content in products that are licensed or distributed by a vendor, company or other third party
-*   Distribution of products that require use of CPT content
-*   Any proposed use of CPT content including the creation of derivative works of CPT content, translations or localized versions of CPT content
-
-For more information see [here](https://www.ama-assn.org/practice-management/cpt/ama-cpt-licensing-overview) 
-
-If you have a question or would like to license CPT content,  please see [here](http://info.commerce.ama-assn.org/ama-data-file-request-2020).
-
-Any HL7 product referencing CPT must include the following verbiage:
-
-CPT © Copyright 2019 American Medical Association. All rights reserved. AMA and CPT are registered trademarks of the American Medical Association.
-
-Note: the year is always based on the publication year of the code set. CPT releases the August prior to the effective year (e.g., CPT 2020 code set = copyright 2019 or CPT 2021 code set = copyright 2020).
+* ^copyright = "Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
 
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
-
 
 
 // ******** American Dental Association CDT ********
@@ -686,6 +628,7 @@ Please see Code Maintenance Committee (CMC) page for information about the CMC's
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * codes from system ADADentalProcedureCode
 * insert ADACopyrightNotice
+
 
 
 // ******** DRGs ***************
@@ -923,7 +866,7 @@ The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Re
 
 
 //  ********* ICD diagnosis codes / procedure codes
-
+/*
 RuleSet: ICD9CopyrightNotice
 * ^copyright = "The following requirements must be followed to utilize CDC’s public domain content:
 
@@ -936,21 +879,9 @@ RuleSet: ICD9CopyrightNotice
 4) You must state that the material is otherwise available on the agency website for no charge.
 
 For information on NCHS agency level use of materials see [here](https://www.cdc.gov/other/agencymaterials.html)."
-
-RuleSet: ICD10CMCopyrightNotice
-* ^copyright = "The ICD-10 is copyrighted by the [World Health Organization (WHO)external icon](http://www.who.int/classifications/icd/en/), which owns and publishes the classification. WHO has authorized the development of an adaptation of ICD-10 for use in the United States for U.S. government purposes. As agreed, all modifications to the ICD-10 must conform to WHO conventions for the ICD. ICD-10-CM was developed following a thorough evaluation by a Technical Advisory Panel and extensive additional consultation with physician groups, clinical coders, and others to assure clinical accuracy and utility.
-
-The following requirements must be followed to utilize CDC’s public domain content:
-
-1) Attribution to the agency that developed the material must be provided in your use of the materials. Such attribution should clearly state the materials were developed by CDC ATSDR and/or HHS (e.g., Source: CDC; Materials developed by CDC);
-
-2) You must utilize a disclaimer which clearly indicates that your use of the material, including any links to the materials on the CDC, ATSDR or HHS websites, does not imply endorsement by CDC, ATSDR, HHS or the United States Government of you, your company, product, facility, service or enterprise. All such disclaimers must be prominently and unambiguously displayed (e.g., Reference to specific commercial products, manufacturers, companies, or trademarks does not constitute its endorsement or recommendation by the U.S. Government, Department of Health and Human Services, or Centers for Disease Control and Prevention;
-
-3) You may not change the substantive content of the materials; and
-
-4) You must state that the material is otherwise available on the agency website for no charge.
-
-For information on NCHS agency level use of materials see [here](https://www.cdc.gov/other/agencymaterials.html)."
+*/
+RuleSet: ICD910CMCopyrightNotice
+* ^copyright = "ICD-9 and ICD-10 are copyrighted by the World Health Organization (WHO) which owns and publishes the classification. See https://www.who.int/classifications/icd/en. WHO has authorized the development of an adaptation of ICD-9 and ICD-10 to ICD-9-CM to ICD-10-CM for use in the United States for U.S. government purposes."
 
 
 //  ******* ICD ********
@@ -983,7 +914,7 @@ Current and previous releases of ICD-10-CM are available in PDF and XML format h
 Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to nchsicd10cm@cdc.gov."
 * codes from system $ICD10CM
 * codes from system $ICD9CM
-* insert ICD10CMCopyrightNotice
+* insert ICD910CMCopyrightNotice
 
 
 ValueSet: CMSICD910PCSProcedureCodes 
@@ -1014,21 +945,76 @@ A link to information about the ICD-10-PCS code system - including how to obtain
 Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of ICD-10-CM. CMS republishes the ICD-10-CM codes system on their website for convienence only. For authoratative information on ICD-10-CM, users should refer to the National Center for Health Statistics (NCHS) site located [here](https://www.cdc.gov/nchs/icd/icd10cm.htm)."
 * codes from system $ICD10PCS
 * codes from system $ICD9PCS
-* ^copyright = "ICD-9 copyright:
+* ^copyright = "The International Classification of Diseases, Tenth Revision, Procedure Coding System (ICD-10-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS) available for public use. CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-10-PCS.
+The International Classification of Diseases, Ninth Revision, Procedure Coding System (ICD-9-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS) available for public use. CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-9-PCS."
 
-The following requirements must be followed to utilize CDC’s public domain content:
 
-1) Attribution to the agency that developed the material must be provided in your use of the materials. Such attribution should clearly state the materials were developed by CDC ATSDR and/or HHS (e.g., Source: CDC; Materials developed by CDC);
 
-2) You must utilize a disclaimer which clearly indicates that your use of the material, including any links to the materials on the CDC, ATSDR or HHS websites, does not imply endorsement by CDC, ATSDR, HHS or the United States Government of you, your company, product, facility, service or enterprise. All such disclaimers must be prominently and unambiguously displayed (e.g., Reference to specific commercial products, manufacturers, companies, or trademarks does not constitute its endorsement or recommendation by the U.S. Government, Department of Health and Human Services, or Centers for Disease Control and Prevention;
+CodeSystem: ADAUniversalNumberingSystem
+Title: "[TODO] American Dental Association Universal Numbering System"
+Description: "[TODO] 
+The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
 
-3) You may not change the substantive content of the materials; and
+Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
+* #1	"Permanent teeth right maxillary third molar (wisdom tooth)"	
+* #2	"Permanent teeth right second molar (12-year molar)"
+* #3	"Permanent teeth right first molar (6-year molar)"
+* #4	"Permanent teeth right second premolar (bicuspid)"
+* #5	"Permanent teeth right first premolar (bicuspid)"
+* #6	"Permanent teeth right canine (cuspid)"
+* #7	"Permanent teeth right lateral incisor"
+* #8	"Permanent teeth right central incisor"
+* #9	"Permanent teeth left maxillary central incisor"
+* #10	"Permanent teeth left maxillary lateral incisor"
+* #11	"Permanent teeth left maxillary canine (cuspid)"
+* #12	"Permanent teeth left maxillary first premolar (bicuspid)"
+* #13	"Permanent teeth left maxillary second premolar (bicuspid)"
+* #14	"Permanent teeth left maxillary first molar (6-year molar)"
+* #15	"Permanent teeth left maxillary second molar (12-year molar)"
+* #16	"Permanent teeth left maxillary third molar (wisdom tooth)"
+* #17	"Permanent teeth left mandibular third molar (wisdom tooth)"
+* #18	"Permanent teeth left mandibular second molar (12-year molar)"
+* #19	"Permanent teeth left mandibular first molar (6-year molar)"
+* #20	"Permanent teeth left mandibular second premolar (bicuspid)"
+* #21	"Permanent teeth left mandibular first premolar (bicuspid)"
+* #22	"Permanent teeth left mandibular canine (cuspid)"
+* #23	"Permanent teeth left mandibular lateral incisor"
+* #24	"Permanent teeth left mandibular central incisor"
+* #25	"Permanent teeth right mandibular central incisor"
+* #26	"Permanent teeth right mandibular lateral incisor"
+* #27	"Permanent teeth right mandibular canine (cuspid)"
+* #28	"Permanent teeth right mandibular first premolar (bicuspid)"
+* #29	"Permanent teeth right mandibular second premolar (bicuspid)"
+* #30	"Permanent teeth right mandibular first molar (6-year molar)"
+* #31	"Permanent teeth right mandibular second molar (12-year molar)"
+* #32	"Permanent teeth right mandibular third molar (wisdom tooth)"
+* #A	"Primary teeth right maxillarysecond molar"
+* #B	"Primary teeth right maxillaryfirst molar"
+* #C	"Primary teeth right maxillarycanine"
+* #D	"Primary teeth right maxillarylateral incisor"
+* #E	"Primary teeth right maxillarycentral incisor"
+* #F	"Primary teeth left maxillarycentral incisor"
+* #G	"Primary teeth left maxillarylateral incisor"
+* #H	"Primary teeth left maxillarycanine"
+* #I	"Primary teeth left maxillaryfirst molar"
+* #J	"Primary teeth left maxillarysecond molar"
+* #K	"Primary teeth left mandibularsecond molar"
+* #L	"Primary teeth left mandibularfirst molar"
+* #M	"Primary teeth left mandibularcanine"
+* #N	"Primary teeth left mandibularlateral incisor"
+* #O	"Primary teeth left mandibularcentral incisor"
+* #P	"Primary teethright mandibularcentral incisor"
+* #Q	"Primary teethright mandibularlateral incisor"
+* #R	"Primary teethright mandibularcanine"
+* #S	"Primary teethright mandibularfirst molar"
+* #T	"Primary teethright mandibularsecond molar"
+* insert ADACopyrightNotice
 
-4) You must state that the material is otherwise available on the agency website for no charge.
+ValueSet: ADAUniversalNumberingSystem
+Title: "[TODO] American Dental Association Universal Numbering System"
+Description: "[TODO] 
+The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
 
-For information on NCHS agency level use of materials see [here](https://www.cdc.gov/other/agencymaterials.html).
-
-ICD-10-PCS copyright:
-
-The CMS licenses its published material in order to encourage maximum use and dissemination. See  
-the CMS ([https://www.cms.gov/Medicare/Coding/ICD10](https://www.cms.gov/Medicare/Coding/ICD10)) web site for more information."
+Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
+* codes from system ADAUniversalNumberingSystem
+* insert ADACopyrightNotice

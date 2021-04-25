@@ -127,6 +127,8 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #patientaccountnumber "Patient Account Number" "Patient Account Number associated with the specific claim."
 * #orthodontics "Orthodontics" "[TODO] Need a definition"
 * #prosthesis "Prosthesis" "[TODO] Need a definition"
+* #toothnumber "Tooth Number" "[TODO] Need a definition"
+* #missingtoothnumber "Missing Tooth Number" "[TODO] Need a definition"
 * ^copyright = "This CodeSystem is not copyrighted."
 
 
@@ -134,7 +136,7 @@ CodeSystem: C4BBAdjudicationDiscriminator
 Title: "C4BB Adjudication Discriminator"
 Description: "Used as the discriminator for the data elements in adjudication and item.adjudication"
 * #allowedunits	"allowed units" "defines the adjudication slice to define allowed units"
-// 20210201 CAS: Removed as not used as a discriminator (the CodeSystem C4BBPayerBenefitPaymentStatus is used for this slice), Change as part of FHIR-30635 - Update Benefit Payment Status slice name ,cardinality and must support
+// 20210201 CAS: Removed as not used as a discriminator (the CodeSystem C4BBPayerBenefitPaymentStatus is used for this slice), Change ipart of FHIR-30635 - Update Benefit Payment Status slice name ,cardinality and must support
 //* #inoutnetwork "in or Out of Network" "defines the adjudication and item.adjudication slice to indicate whether a claim was adjudicatd in or out of network"
 * #denialreason "Denial Reason" "defines the adjudication slice to identify the denial reason"
 * ^copyright = "This CodeSystem is not copyrighted."
@@ -146,8 +148,8 @@ Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is th
 * #other "Other"  "Other procedures performed during the inpatient institutional admission"
 * ^copyright = "This CodeSystem is not copyrighted."
 
-CodeSystem: C4BBClaimSubType
-Title: "C4BB Claim Procedure Subtype"
+CodeSystem: C4BBInstitutionalClaimSubType
+Title: "C4BB Institutional Claim SubType"
 Description: "Indicates if institutional ExplanationOfBenefit is inpatient or outpatient."
 * #inpatient "Inpatient" "Claims for inpatient institutional admissions."
 * #outpatient "Outpatient"  "Claims for outpatient institutional admissions."

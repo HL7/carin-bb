@@ -6,14 +6,14 @@ Title: "C4BB ExplanationOfBenefit Oral"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene. 
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 // 20210216 CAS: FHIR-30575
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.1.0)
+* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.0.0)
 // TODO need updated careTeam Invariants and specialties
 * careTeam obeys EOB-prof-careTeam-practitioner
 * careTeam obeys EOB-prof-careTeam-organization
 * careTeam.qualification MS 
 * careTeam.qualification from $USCoreProviderSpecialty (required)  // cardinality constraint?
 * type = $HL7ClaimTypeCS#oral
-// * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner) -- set in base class
+* provider only Reference(C4BBPractitioner)
 * insert SupportingInfoSlicing 
 * supportingInfo contains 
    billingnetworkcontractingstatus 1..1 MS and
@@ -22,6 +22,8 @@ The claims data is based on the professional claim form 1500, submission standar
    servicefacility 0..1 MS and
    orthodontics 0..1 MS and
    prosthesis 0..1 MS and
+   toothnumber 0..* MS and
+   missingtoothnumber 0..* MS and
    /*
    Need to add discriminator to CodeSystem-C4BBSupportingInfoType
 
@@ -60,9 +62,24 @@ The claims data is based on the professional claim form 1500, submission standar
 
 * supportingInfo[orthodontics].category = C4BBSupportingInfoType#orthodontics
 * supportingInfo[orthodontics].category MS
+* supportingInfo[orthodontics].value[x] only Quantity
+* supportingInfo[orthodontics].value[x] 1..1 MS
 
 * supportingInfo[prosthesis].category = C4BBSupportingInfoType#prosthesis
 * supportingInfo[prosthesis].category MS
+* supportingInfo[prosthesis].value[x] only boolean
+* supportingInfo[prosthesis].value[x] 1..1 MS
+
+* supportingInfo[toothnumber].category = C4BBSupportingInfoType#toothnumber
+* supportingInfo[toothnumber].category MS
+* supportingInfo[toothnumber].code 1..1 MS
+* supportingInfo[toothnumber].code from ADAUniversalNumberingSystem (required) // may change to $ToothNumber
+
+
+* supportingInfo[missingtoothnumber].category = C4BBSupportingInfoType#missingtoothnumber
+* supportingInfo[missingtoothnumber].category MS
+* supportingInfo[missingtoothnumber].code 1..1 MS
+* supportingInfo[missingtoothnumber].code from ADAUniversalNumberingSystem (required) // may change to $ToothNumber
 
 * supportingInfo[medicalrecordnumber].category = C4BBSupportingInfoType#medicalrecordnumber
 * supportingInfo[medicalrecordnumber].valueString 1..1 MS
@@ -85,6 +102,8 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.productOrService MS
 * item.location[x] from CMSPlaceofServiceCodes (required)
 * item.location[x] only CodeableConcept
+* item.bodySite from ADAUniversalNumberingSystem (required) // may change to $ToothNumber
+* item.subSite from $ToothSurface (required)
 * adjudication 0..1
 * insert ItemAdjudicationSlicing
 * item.adjudication MS 
@@ -120,13 +139,25 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Performing Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.  
 If the service facility is not assigned an NPI, this data element will not be populated.  Reference CMS 1500 element 32a (97, 170, 176)"
 
+* supportingInfo[orthodontics] ^comment = "Orthodontics Treatment Indicator (199)"
 * supportingInfo[orthodontics].code ^comment = "Indicates if the treatment is for orthodontics (199)"
 * supportingInfo[orthodontics].timingDate ^comment = "Orthodontics Appliance Application Date (200)"
 * supportingInfo[orthodontics].valueQuantity ^comment = "Total Number of Months for Orthodontia (201)"
 
-* supportingInfo[prosthesis].valueQuantity ^comment = "Prosthesis Replacement Indicator (202)"
+* supportingInfo[prosthesis] ^comment = "Prosthesis Replacement Indicator (202)"
+* supportingInfo[prosthesis].valueBoolean ^comment = "Prosthesis Replacement Indicator (202)"
 * supportingInfo[prosthesis].timingDate ^comment = "Date of Prior Prosthesis Placement  (203)"
 
+
+* supportingInfo[toothnumber] ^comment = "Tooth Number - After First Occurrence (204)"
+* supportingInfo[toothnumber].code ^comment = "Tooth Number - After First Occurrence (204)"
+
+* supportingInfo[missingtoothnumber] ^comment = "Missing Tooth Number - After First Occurrence (204)"
+* supportingInfo[missingtoothnumber].code ^comment = "Missing Tooth Number - After First Occurrence (204)"
+
+
+* item.bodySite ^comment = "Tooth Number - First Occurrence (196)"
+* item.subSite ^comment = "Tooth Surface (197)"
 
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"

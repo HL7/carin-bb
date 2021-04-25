@@ -5,7 +5,7 @@
     "lastUpdated": "2020-10-20T14:46:05-04:00",
     "source": "Organization/PayerOrganizationExample1",
     "profile": [
-      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|1.1.0"
+      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|1.0.0"
     ]
   },
   "identifier": [

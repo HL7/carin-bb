@@ -13,9 +13,9 @@ Usage: #example
 * telecom[0].system = http://hl7.org/fhir/contact-point-system#phone
 * telecom[0].value = "(301)555-1212"
 * telecom[0].rank = 1
-* telecom[1].system = 	http://hl7.org/fhir/contact-point-system#phone
-* telecom[1].value = "(301)666-1212"
-* telecom[1].rank = 2
+* telecom[0].system = 	http://hl7.org/fhir/contact-point-system#phone
+* telecom[0].value = "(301)666-1212"
+* telecom[0].rank = 2
 * gender = http://hl7.org/fhir/administrative-gender#male
 * birthDate = "1986-01-01"
 * address[0].type = http://hl7.org/fhir/address-type#physical
@@ -76,7 +76,6 @@ Usage: #example
 * relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self
 * payor = Reference(OrganizationPayer1)
 
-
 Instance: CoverageDental1
 InstanceOf: C4BBCoverage
 Description: "Dental Coverage Example1"
@@ -112,7 +111,6 @@ Usage: #example
 * relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self
 * payor = Reference(OrganizationDentalPayer1)
 
-
 Instance: EOBInpatient1
 InstanceOf: C4BBExplanationOfBenefitInpatientInstitutional
 Description: "EOB Inpatient Example1"
@@ -128,7 +126,7 @@ Usage: #example
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
 * type.text = "Institutional"
-* subType = C4BBClaimSubType#inpatient
+* subType = C4BBInstitutionalClaimSubType#inpatient
 * subType.text = "Inpatient"
 * use = #claim 
 * created = "2019-11-02T00:00:00+00:00"
@@ -219,7 +217,7 @@ Usage: #example
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
 * type.text = "Institutional"
-* subType = C4BBClaimSubType#outpatient
+* subType = C4BBInstitutionalClaimSubType#outpatient
 * subType.text = "Outpatient"
 * use = #claim 
 * created = "2019-11-02T00:00:00+00:00"
@@ -364,7 +362,6 @@ Usage: #example
 * supportingInfo[patientaccountnumber].sequence = 6
 
 
-
 Instance: EOBOral1a
 InstanceOf: C4BBExplanationOfBenefitOral
 Description: "EOB Oral Example1"
@@ -387,7 +384,7 @@ Usage: #example
 * patient = Reference(Patient1)
 * billablePeriod.start = "2021-03-01"
 * billablePeriod.end = "2021-03-31"
-* provider = Reference(OrganizationDentalProvider1)
+* provider = Reference(PractitionerDentalProvider1)
 * provider.display = "XXX Dental Plan"
 * outcome = #complete
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#Z01.21 "Encounter for dental examination and cleaning with abnormal findings"
@@ -559,7 +556,6 @@ Usage: #example
 * name = "Payer 1"
 * active = true 
 
-
 Instance: OrganizationDentalPayer1
 InstanceOf: C4BBOrganization
 Description: "Dental Payer1"
@@ -574,7 +570,6 @@ Usage: #example
 * identifier[payerid].value = "66783JJT"
 * name = "INSURANCE COMPANY XYZ"
 * active = true 
-
 
 Instance: OrganizationProvider1
 InstanceOf: C4BBOrganization
@@ -591,8 +586,8 @@ Usage: #example
 * active = true 
 
 
-Instance: OrganizationDentalProvider1
-InstanceOf: C4BBOrganization
+Instance: PractitionerDentalProvider1
+InstanceOf: C4BBPractitioner
 Description: "Dental Provider 1"
 Usage: #example
 //* meta.profile = Canonical(C4BBOrganization)
@@ -600,6 +595,7 @@ Usage: #example
 * language = #en-US
 * identifier[NPI].type = $C4BBIdentifierTypeCS#npi
 * identifier[NPI].value = "0025501002"
-* name = "Dental Provider 1"
+* name[0].family = "Schmidt"
+* name[0].given[0] = "Stewart"
+* name[0].suffix = "DDS"
 * active = true 
-
