@@ -10,13 +10,13 @@ Usage: #example
 * active = true
 * name[0].family = "Example1"
 * name[0].given[0] = "Johnny"
-* telecom[0].system = http://hl7.org/fhir/ValueSet/contact-point-system#phone
+* telecom[0].system = http://hl7.org/fhir/contact-point-system#phone
 * telecom[0].value = "(301)555-1212"
 * telecom[0].rank = 1
-* telecom[0].system = 	http://hl7.org/fhir/ValueSet/contact-point-system#phone
+* telecom[0].system = 	http://hl7.org/fhir/contact-point-system#phone
 * telecom[0].value = "(301)666-1212"
 * telecom[0].rank = 2
-* gender = http://hl7.org/fhir/ValueSet/administrative-gender#male
+* gender = http://hl7.org/fhir/administrative-gender#male
 * birthDate = "1986-01-01"
 * address[0].type = http://hl7.org/fhir/address-type#physical
 * address[0].line[0] = "123 Main Street"

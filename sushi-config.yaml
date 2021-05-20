@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.carin-bb
 canonical: http://hl7.org/fhir/us/carin-bb
-version: 1.0.0
+version: 1.1.0
 name: CARINConsumerDirectedPayerDataExchange
 title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 status: active
@@ -30,7 +30,7 @@ parameters:
   apply-jurisdiction: true
   apply-publisher: true
 copyrightYear: 2020+
-releaseLabel: CI - STU1 Update - Peer Review
+releaseLabel: STU1 Update
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -59,6 +59,7 @@ menu:
     Authorization and Authentication: 7_Authorization_Authentication_and_Registration.html#authorization-and-authentication
   Examples:  artifacts.html#7
   Downloads: 8_downloads.html
+  Change Notes: 9_change_notes.html
 
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To control the package-list.json using this config, uncomment and set the "history" property. │

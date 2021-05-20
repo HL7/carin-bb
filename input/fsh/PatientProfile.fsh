@@ -8,7 +8,7 @@ Description: "This profile builds upon the US Core Patient profile. It is used t
 * meta.profile 1..*
 * insert Metaprofile-supportedProfile-slice
 // 20210216 CAS: FHIR-30575 Pulled from block vote1a
-* meta.profile[supportedProfile] = Canonical(C4BBPatient|1.0.0)
+* meta.profile[supportedProfile] = Canonical(C4BBPatient|1.1.0)
 * identifier.type from C4BBPatientIdentifierType (extensible)
 //* identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.discriminator.path = "type"

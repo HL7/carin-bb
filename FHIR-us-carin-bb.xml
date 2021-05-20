@@ -24,8 +24,6 @@
 <artifact id="ValueSet/C4BBClaimInstitutionalCareTeamRole" key="ValueSet-C4BBClaimInstitutionalCareTeamRole" name="C4BB Claim Institutional Care Team Role"/>
 <artifact id="ValueSet/C4BBClaimOutpatientInstitutionalDiagnosisType" key="ValueSet-C4BBClaimOutpatientInstitutionalDiagnosisType" name="C4BB Claim Outpatient Institutional Diagnosis Type"/>
 <artifact id="ValueSet/C4BBClaimPharmacyTeamRole" key="ValueSet-C4BBClaimPharmacyTeamRole" name="C4BB Claim Pharmacy CareTeam Roles"/>
-<artifact deprecated="true" id="CodeSystem/C4BBClaimSubType" key="CodeSystem-C4BBClaimSubType" name="C4BB Claim Procedure Subtype CS"/>
-<artifact deprecated="true" id="ValueSet/C4BBClaimSubType" key="ValueSet-C4BBClaimSubType" name="C4BB Claim Procedure Subtype VS"/>
 <artifact id="ValueSet/C4BBClaimProcedureType" key="ValueSet-C4BBClaimProcedureType" name="C4BB Claim Procedure Type"/>
 <artifact id="CodeSystem/C4BBClaimProcedureType" key="CodeSystem-C4BBClaimProcedureType" name="C4BB Claim Procedure Type"/>
 <artifact id="ValueSet/C4BBClaimProfessionalAndNonClinicianCareTeamRole" key="ValueSet-C4BBClaimProfessionalAndNonClinicianCareTeamRole" name="C4BB Claim Professional And Non Clinician Care Team Role"/>
@@ -40,6 +38,8 @@
 <artifact id="CodeSystem/C4BBIdentifierType" key="CodeSystem-C4BBIdentifierType" name="C4BB Identifier Type"/>
 <artifact id="ValueSet/C4BBInstitutionalClaimSubType" key="ValueSet-C4BBInstitutionalClaimSubType" name="C4BB Institutional Claim SubType"/>
 <artifact id="CodeSystem/C4BBInstitutionalClaimSubType" key="CodeSystem-C4BBInstitutionalClaimSubType" name="C4BB Institutional Claim SubType"/>
+<artifact deprecated="true" id="CodeSystem/C4BBInstitutionalClaimSubType" key="CodeSystem-C4BBClaimSubType" name="C4BB Institutional Claim SubType CS"/>
+<artifact deprecated="true" id="ValueSet/C4BBInstitutionalClaimSubType" key="ValueSet-C4BBClaimSubType" name="C4BB Institutional Claim SubType VS"/>
 <artifact id="StructureDefinition/C4BB-Organization" key="StructureDefinition-C4BB-Organization" name="C4BB Organization"/>
 <artifact id="ValueSet/C4BBOrganizationIdentifierType" key="ValueSet-C4BBOrganizationIdentifierType" name="C4BB Organization Identifier Type"/>
 <artifact id="StructureDefinition/C4BB-Patient" key="StructureDefinition-C4BB-Patient" name="C4BB Patient"/>
@@ -140,6 +140,7 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="Authorization_Authentication_and_Registration" name="Authorization Authentication and Registration"/>
 <page key="Background" name="Background"/>
+<page key="9_change_notes" name="Change Notes"/>
 <page key="Common_Payer_Consumer_Data_Set" name="Common Payer Consumer Data Set"/>
 <page key="downloads" name="Downloads"/>
 <page deprecated="true" key="Examples" name="Examples"/>
