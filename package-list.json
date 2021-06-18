@@ -15,8 +15,8 @@
         "version": "1.1.0",
         "desc": "CARIN Blue Button Implementation Guide Release 1 - US Realm STU",
         "changes": "9_change_notes.html#changes-and-updates-for-version-1-1-0",
-        "path": "http://hl7.org/fhir/us/carin-bb/STU1.1.0",
-        "date": "2021-06-02",
+        "path": "http://hl7.org/fhir/us/carin-bb/STU1.1",
+        "date": "2021-06-16",
         "status": "trial-use",
         "sequence": "STU 1",
         "fhirversion": "4.0.1",
@@ -30,7 +30,7 @@
         "status": "trial-use",
         "sequence": "STU 1",
         "fhirversion": "4.0.1",
-        "current": true
+        "current": false
       },
       {
         "version": "0.1.0",
