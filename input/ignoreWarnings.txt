@@ -47,8 +47,12 @@ WARNING: ValueSet.where(id = 'NCPDPRejectCode'): Error from server: Unable to pr
 WARNING: ValueSet.where(id = 'NCPDPBrandGenericIndicator'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator
 WARNING: ValueSet.where(id = 'X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes'): Error from server: Unable to provide support for code system https://x12.org/codes/claim-adjustment-reason-codes
 
+WARNING: ValueSet.where(id = 'FDANationalDrugCode'): Error from server: Unable to provide support for code system http://hl7.org/fhir/sid/ndc
+
 
 # Suppress warnings about examples validation of proprietary closed external codeSystems
+
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/simple-language because the value set or code system is not known to the validator]
 
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit because the value set or code system is not known to the validator]
@@ -66,6 +70,7 @@ WARNING: ValueSet.where(id = 'X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRe
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes because the value set or code system is not known to the validator]
 
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/FDANDCOrCompound because the value set or code system is not known to the validator]
 
 
 
