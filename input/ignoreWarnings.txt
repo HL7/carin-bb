@@ -44,6 +44,7 @@ WARNING: ValueSet.where(id = 'NCPDPCompoundCode'): Error from server: Unable to 
 WARNING: ValueSet.where(id = 'NCPDPDispensedAsWrittenOrProductSelectionCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode
 WARNING: ValueSet.where(id = 'NCPDPPrescriptionOriginCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode
 WARNING: ValueSet.where(id = 'NCPDPRejectCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPRejectCode
+WARNING: ValueSet.where(id = 'NCPDPBrandGenericIndicator'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator
 WARNING: ValueSet.where(id = 'X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes'): Error from server: Unable to provide support for code system https://x12.org/codes/claim-adjustment-reason-codes
 
 
