@@ -141,8 +141,11 @@ Severity: #error
 
 Invariant: adjudication-has-amount-type-slice
 Description: "If Adjudication is present, it must have at least one adjudicationamounttype slice"
-Expression: "(exists() implies where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists())"
+//Expression: "(exists() implies where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists())"
+Expression: "(adjudication.exists().not() or adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists())"
 Severity: #error
+////Expression: "(adjudication.exists().not() or adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists())"
+//Expression: "adjudication.exists()"
 
 // 20210203 CAS: https://jira.hl7.org/browse/FHIR-30357
 Invariant: EOB-out-inst-item-productorservice
@@ -158,10 +161,10 @@ Severity: #error
 
 // Rulesets
 RuleSet: ItemAdjudicationInvariant
-* item.adjudication obeys adjudication-has-amount-type-slice
+* item obeys adjudication-has-amount-type-slice
 
 RuleSet: AdjudicationInvariant
-* adjudication obeys adjudication-has-amount-type-slice
+* obeys adjudication-has-amount-type-slice
 
 RuleSet: EOBHeaderItemAdjudicationInvariant
 * obeys EOB-institutional-item-or-header-adjudication
