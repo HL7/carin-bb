@@ -14,6 +14,7 @@
 <artifact deprecated="true" id="CodeSystem/AMACPTCodes" key="CodeSystem-AMACPTCodes" name="AMA CPT Codes"/>
 <artifact id="CodeSystem/THREEMAPDRG" key="CodeSystem-THREEMAPDRG" name="All Patient Diagnosis Related Groups (AP-DRGs)"/>
 <artifact id="CodeSystem/THREEMAPRDRG" key="CodeSystem-THREEMAPRDRG" name="All Patient Refined Diagnosis Related Groups (APR-DRGs)"/>
+<artifact id="CodeSystem/ADAUniversalNumberingSystem" key="CodeSystem-ADAUniversalNumberingSystem" name="American Dental Association Universal Numbering System"/>
 <artifact id="ValueSet/C4BBAdjudication" key="ValueSet-C4BBAdjudication" name="C4BB Adjudication"/>
 <artifact id="CodeSystem/C4BBAdjudication" key="CodeSystem-C4BBAdjudication" name="C4BB Adjudication"/>
 <artifact id="ValueSet/C4BBAdjudicationCategoryDiscriminator" key="ValueSet-C4BBAdjudicationCategoryDiscriminator" name="C4BB Adjudication Category Discriminator"/>
@@ -143,13 +144,13 @@
 <artifact id="ValueSet/X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" key="ValueSet-X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" name="X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes"/>
 <artifact id="CodeSystem/CMSRemittanceAdviceRemarkCodes" key="CodeSystem-CMSRemittanceAdviceRemarkCodes" name="X12 Remittance Advice Remark Codes"/>
 <artifact id="ValueSet/ADAUniversalNumberingSystem" key="ValueSet-ADAUniversalNumberingSystem" name="[TODO] American Dental Association Universal Numbering System"/>
-<artifact id="CodeSystem/ADAUniversalNumberingSystem" key="CodeSystem-ADAUniversalNumberingSystem" name="[TODO] American Dental Association Universal Numbering System"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="Authorization_Authentication_and_Registration" name="Authorization Authentication and Registration"/>
 <page key="Background" name="Background"/>
+<page deprecated="true" key="9_change_notes" name="Change Notes"/>
 <page key="Common_Payer_Consumer_Data_Set" name="Common Payer Consumer Data Set"/>
 <page key="downloads" name="Downloads"/>
 <page deprecated="true" key="Examples" name="Examples"/>

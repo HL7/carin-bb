@@ -951,9 +951,8 @@ The International Classification of Diseases, Ninth Revision, Procedure Coding S
 
 
 CodeSystem: ADAUniversalNumberingSystem
-Title: "[TODO] American Dental Association Universal Numbering System"
-Description: "[TODO] 
-The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
+Title: "American Dental Association Universal Numbering System"
+Description: "The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
 
 Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
 * #1	"Permanent teeth right maxillary third molar (wisdom tooth)"	
