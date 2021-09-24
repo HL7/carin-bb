@@ -61,6 +61,30 @@ menu:
   Downloads: 8_downloads.html
   Change Notes: change_notes.html
 
+
+pages:
+  index.md:
+    title: Home
+  1_Background.md: 
+    title: Background
+  2_Use_Case.md:
+    title: Use Case
+  3_General_Guidance.md:
+    title: General Guidance
+  4_Common_Payer_Consumer_Data_Set.md:
+    title: Common Payer Consumer Data Set (CPCDS)
+  5_Terminology_Licensure.md:
+    title: Terminology Licensure
+  artifacts.html:
+    title: Artifacts Summary
+  6_searchparameters.md:
+    title: Search Parameters
+  7_Authorization_Authentication_and_Registration.md:
+    title: Authentication and Authorization
+  8_downloads.md:
+    title: Downloads
+  change_notes.md:
+    title: Change Notes
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To control the package-list.json using this config, uncomment and set the "history" property. │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

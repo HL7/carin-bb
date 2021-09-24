@@ -148,15 +148,18 @@
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
-<page key="Authorization_Authentication_and_Registration" name="Authorization Authentication and Registration"/>
+<page key="7_Authorization_Authentication_and_Registration" name="Authentication and Authorization"/>
+<page deprecated="true" key="Authorization_Authentication_and_Registration" name="Authorization Authentication and Registration"/>
 <page key="Background" name="Background"/>
 <page key="9_change_notes" name="Change Notes"/>
-<page key="Common_Payer_Consumer_Data_Set" name="Common Payer Consumer Data Set"/>
+<page deprecated="true" key="Common_Payer_Consumer_Data_Set" name="Common Payer Consumer Data Set"/>
+<page key="4_Common_Payer_Consumer_Data_Set" name="Common Payer Consumer Data Set (CPCDS)"/>
 <page key="downloads" name="Downloads"/>
 <page deprecated="true" key="Examples" name="Examples"/>
 <page key="General_Guidance" name="General Guidance"/>
 <page key="index" name="Home"/>
-<page key="searchparameters" name="Searchparameters"/>
+<page key="6_searchparameters" name="Search Parameters"/>
+<page deprecated="true" key="searchparameters" name="Searchparameters"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="Terminology" name="Terminology"/>
 <page key="5_Terminology_Licensure" name="Terminology Licensure"/>
