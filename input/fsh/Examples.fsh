@@ -498,7 +498,7 @@ Usage: #example
 * total[benefitpaymentstatus].amount.value = 0.00
 * total[benefitpaymentstatus].amount.currency = #USD
 //* adjudication[benefitpaymentstatus].category = C4BBAdjudication#other
-* item[0].productOrService = $FDANationalDrugCode#0777-3105-02 "100 CAPSULE in 1 BOTTLE (0777-3105-02)"
+* item[0].productOrService = $FDANationalDrugCode#0777-3105-02 "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)"
 * item[0].sequence = 1 
 * item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00

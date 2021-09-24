@@ -18,19 +18,19 @@ title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 status: active
 publisher:
   name: HL7 Financial Management Working Group
-  url: http://www.hl7.org/Special/committees/fm/index.cfm
+  url: http://www.hl7.org/Special/committees/fm
   email: fm@lists.HL7.org
 description: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
+  hl7.fhir.us.core: 4.0.0   # updated from 3.1.1 on 9/23/21
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
 copyrightYear: 2020+
-releaseLabel: CI - STU1 Update - Peer Review
+releaseLabel: CI - STU2 Draft
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -59,6 +59,7 @@ menu:
     Authorization and Authentication: 7_Authorization_Authentication_and_Registration.html#authorization-and-authentication
   Examples:  artifacts.html#7
   Downloads: 8_downloads.html
+  Change Notes: change_notes.html
 
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To control the package-list.json using this config, uncomment and set the "history" property. │

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="1.1.0" defaultWorkgroup="" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2020Feb" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="1.1.0" defaultWorkgroup="fm" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
 <version code="current" url="http://build.fhir.org/ig/HL7/carin-bb"/>
-<version code="1.1.0" url="http://hl7.org/fhir/us/carin-bb/STU1.1.0"/>
+<version code="1.1.0" url="http://hl7.org/fhir/us/carin-bb/STU1.1"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/carin-bb/STU1"/>
 <version code="0.1.0" url="http://hl7.org/fhir/us/carin-bb/2020Feb"/>
 <version code="1.0.1" deprecated="true"/>
@@ -150,7 +150,7 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="Authorization_Authentication_and_Registration" name="Authorization Authentication and Registration"/>
 <page key="Background" name="Background"/>
-<page deprecated="true" key="9_change_notes" name="Change Notes"/>
+<page key="9_change_notes" name="Change Notes"/>
 <page key="Common_Payer_Consumer_Data_Set" name="Common Payer Consumer Data Set"/>
 <page key="downloads" name="Downloads"/>
 <page deprecated="true" key="Examples" name="Examples"/>

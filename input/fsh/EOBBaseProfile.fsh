@@ -94,10 +94,10 @@ role.where(coding.where(code in ('performing' )).exists()).exists().provider.all
 Severity: #error
 
 Invariant: EOB-careteam-qualification
-Description: "Care Team Performing physician's qualifications are from US-Core-Provider-Specialty Value Set"
+Description: "Care Team Performing physician's qualifications are from Healthcare Provider Taxonomy Value Set"
 Expression: "(
 role.where(coding.where(code in ('performing' )).exists()).exists() implies
-role.where(coding.where(code in ('performing' )).exists()).exists().qualification.memberOf('http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty')
+role.where(coding.where(code in ('performing' )).exists()).exists().qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')
 )"
 Severity: #error
 

@@ -5,7 +5,7 @@ Alias:   $USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/u
 Alias:   $USCorePractitionerRole = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
 Alias:   $USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 Alias:   $USCoreProviderRole = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role
-Alias:   $USCoreProviderSpecialty = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty
+Alias:   $USCoreProviderSpecialty = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066
 
 Alias:   $HL7RelatedClaimRelationshipCS = http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship
 Alias:   $SubscriberRelationiship = http://hl7.org/fhir/ValueSet/subscriber-relationship
@@ -19,7 +19,6 @@ Alias:   $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinit
 Alias:   $HL7DiagnosisType = http://terminology.hl7.org/CodeSystem/ex-diagnosistype
 Alias:   $HL7ProcedureType = http://terminology.hl7.org/CodeSystem/ex-procedure-type
 Alias:   $HL7PayeeType = http://terminology.hl7.org/CodeSystem/payeetype
-Alias:   $USCoreProviderSpecialty = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty
 
 Alias:   $HL7DataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 
