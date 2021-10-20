@@ -86,4 +86,3 @@ The current official published version of CARIN BB for FHIR R4 (STU Update of ST
     <li>Transitioned project structure for Sushi 1.0.0+ (For Implementation Guide generation)</li>
 </ul>
 <p> </p>
-</div>
