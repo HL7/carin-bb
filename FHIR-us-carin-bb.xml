@@ -14,7 +14,9 @@
 <artifact deprecated="true" id="CodeSystem/AMACPTCodes" key="CodeSystem-AMACPTCodes" name="AMA CPT Codes"/>
 <artifact id="CodeSystem/THREEMAPDRG" key="CodeSystem-THREEMAPDRG" name="All Patient Diagnosis Related Groups (AP-DRGs)"/>
 <artifact id="CodeSystem/THREEMAPRDRG" key="CodeSystem-THREEMAPRDRG" name="All Patient Refined Diagnosis Related Groups (APR-DRGs)"/>
+<artifact id="CodeSystem/ADAAreaOfOralCavitySystem" key="CodeSystem-ADAAreaOfOralCavitySystem" name="American Dental Association Area of Oral Cavity System"/>
 <artifact id="CodeSystem/ADAUniversalNumberingSystem" key="CodeSystem-ADAUniversalNumberingSystem" name="American Dental Association Universal Numbering System"/>
+<artifact id="ValueSet/ADAUniversalNumberingSystem" key="ValueSet-ADAUniversalNumberingSystem" name="American Dental Association Universal Numbering Value Set"/>
 <artifact id="ValueSet/C4BBAdjudication" key="ValueSet-C4BBAdjudication" name="C4BB Adjudication"/>
 <artifact id="CodeSystem/C4BBAdjudication" key="CodeSystem-C4BBAdjudication" name="C4BB Adjudication"/>
 <artifact id="ValueSet/C4BBAdjudicationCategoryDiscriminator" key="ValueSet-C4BBAdjudicationCategoryDiscriminator" name="C4BB Adjudication Category Discriminator"/>
@@ -75,6 +77,7 @@
 <artifact id="ExplanationOfBenefit/ProfessionalEOBExample1" key="ExplanationOfBenefit-EOBProfessionalEx1" name="EOB Professional - Example 1"/>
 <artifact id="ExplanationOfBenefit/EOBInpatient1" key="ExplanationOfBenefit-EOBInpatient1" name="EOBInpatient1"/>
 <artifact id="ExplanationOfBenefit/EOBOral1a" key="ExplanationOfBenefit-EOBOral1a" name="EOBOral1a"/>
+<artifact id="ExplanationOfBenefit/EOBOral2" key="ExplanationOfBenefit-EOBOral2" name="EOBOral2"/>
 <artifact id="ExplanationOfBenefit/EOBOutpatientInstitutional1" key="ExplanationOfBenefit-EOBOutpatientInstitutional1" name="EOBOutpatientInstitutional1"/>
 <artifact id="ExplanationOfBenefit/EOBPharmacy1" key="ExplanationOfBenefit-EOBPharmacy1" name="EOBPharmacy1"/>
 <artifact id="ExplanationOfBenefit/EOBProfessional1a" key="ExplanationOfBenefit-EOBProfessional1a" name="EOBProfessional1a"/>
@@ -120,6 +123,7 @@
 <artifact id="CodeSystem/AHANUBCTypeOfBill" key="CodeSystem-AHANUBCTypeOfBill" name="NUBC Type Of Bill Codes"/>
 <artifact id="ValueSet/AHANUBCTypeOfBill" key="ValueSet-AHANUBCTypeOfBill" name="NUBC Type of Bill Codes"/>
 <artifact id="ValueSet/FDANationalDrugCode" key="ValueSet-FDANationalDrugCode" name="National Drug Code (NDC)"/>
+<artifact id="ValueSet/OralBodySite" key="ValueSet-OralBodySite" name="Oral Body Site Value Set"/>
 <artifact id="Organization/OrganizationDentalPayer1" key="Organization-OrganizationDentalPayer1" name="OrganizationDentalPayer1"/>
 <artifact id="Organization/Payer1" key="Organization-Payer1" name="OrganizationPayer1"/>
 <artifact id="Organization/OrganizationProvider1" key="Organization-OrganizationProvider1" name="OrganizationProvider1"/>
@@ -140,10 +144,11 @@
 <artifact id="Organization/ProviderOrganization4" key="Organization-ProviderOrganizationEx4" name="Provider Organizaiton Example 4"/>
 <artifact id="Organization/ProviderOrganization5" key="Organization-ProviderOrganizationEx5" name="Provider Organizaiton Example 5"/>
 <artifact id="Organization/ProviderOrganization6" key="Organization-ProviderOrganizationEx6" name="Provider Organizaiton Example 6"/>
+<artifact id="ValueSet/C4BBSurfaceCodes" key="ValueSet-C4BBSurfaceCodes" name="US Surface Codes"/>
+<artifact id="CodeSystem/C4BBSurfaceCodes" key="CodeSystem-C4BBSurfaceCodes" name="US Surface Codes"/>
 <artifact id="CodeSystem/X12ClaimAdjustmentReasonCodes" key="CodeSystem-X12ClaimAdjustmentReasonCodes" name="X12 Claim Adjustment Reason Codes"/>
 <artifact id="ValueSet/X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" key="ValueSet-X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" name="X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes"/>
 <artifact id="CodeSystem/CMSRemittanceAdviceRemarkCodes" key="CodeSystem-CMSRemittanceAdviceRemarkCodes" name="X12 Remittance Advice Remark Codes"/>
-<artifact id="ValueSet/ADAUniversalNumberingSystem" key="ValueSet-ADAUniversalNumberingSystem" name="[TODO] American Dental Association Universal Numbering System"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>

@@ -127,7 +127,7 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #patientaccountnumber "Patient Account Number" "Patient Account Number associated with the specific claim."
 * #orthodontics "Orthodontics" "[TODO] Need a definition"
 * #prosthesis "Prosthesis" "[TODO] Need a definition"
-* #toothnumber "Tooth Number" "[TODO] Need a definition"
+* #additionalbodysite "Additional Body Site" "Additional tooth number or oral cavity. Additional body sites are specific to line item and have to be linked by ExplanationOfBenefit.item.informationSequence."
 * #missingtoothnumber "Missing Tooth Number" "[TODO] Need a definition"
 * ^copyright = "This CodeSystem is not copyrighted."
 
@@ -153,4 +153,22 @@ Title: "C4BB Institutional Claim SubType"
 Description: "Indicates if institutional ExplanationOfBenefit is inpatient or outpatient."
 * #inpatient "Inpatient" "Claims for inpatient institutional admissions."
 * #outpatient "Outpatient"  "Claims for outpatient institutional admissions."
+* ^copyright = "This CodeSystem is not copyrighted."
+
+
+CodeSystem: C4BBSurfaceCodes
+Title: "US Surface Codes"
+Description: "This value set includes FDI tooth surface codes localized for the US Realm."
+* #M "Mesial" "The surface of a tooth that is closest to the midline (middle) of the face."
+* #O "Occlusal" "The chewing surface of posterior teeth."
+* #I "Incisal" "The biting edge of anterior teeth."
+* #D "Distal" "The surface of a tooth that faces away from the midline of the face."
+* #B "Buccal" "The surface of a posterior tooth facing the cheeks."
+* #F "Facial" "The surface of a tooth facing the lips."
+//V	Ventral	The surface of a tooth facing the lips.
+* #L "Lingual" "The surface of a tooth facing the tongue."
+* #MO "Mesioclusal" "The Mesioclusal surfaces of a tooth."
+* #DO "Distoclusal" "The Distoclusal surfaces of a tooth."
+* #DI "Distoincisal" "The Distoincisal surfaces of a tooth."
+* #MOD "Mesioclusodistal" "The Mesioclusodistal surfaces of a tooth."
 * ^copyright = "This CodeSystem is not copyrighted."

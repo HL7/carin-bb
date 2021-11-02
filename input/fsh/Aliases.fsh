@@ -22,7 +22,8 @@ Alias:   $HL7PayeeType = http://terminology.hl7.org/CodeSystem/payeetype
 
 Alias:   $HL7DataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 
-Alias: $ToothSurface = http://hl7.org/fhir/ValueSet/surface
+//Alias: $ToothSurfaceVS = http://hl7.org/fhir/ValueSet/surface
+//Alias: $ToothSurfaceCS = http://terminology.hl7.org/CodeSystem/FDI-surface
 Alias: $ToothNumber = http://hl7.org/fhir/ValueSet/tooth
 
 Alias:   $CareTeamRoleCodeCS = http://terminology.hl7.org/CodeSystem/claimcareteamrole
