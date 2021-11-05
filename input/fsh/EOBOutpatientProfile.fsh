@@ -120,6 +120,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.revenue MS
 * item.productOrService MS
 * item.modifier MS
+* item.serviced[x] 1..1
 * item.serviced[x] only date 
 * item.servicedDate MS
 * item.quantity MS

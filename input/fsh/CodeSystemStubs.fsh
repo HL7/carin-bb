@@ -470,6 +470,7 @@ General information can be found here: [https://www.cms.gov/Medicare/Coding/MedH
 Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets](https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets)
 
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
+* include $HL7DataAbsentReason#not-applicable "Not Applicable"
 * codes from system $CPT
 * codes from system CMSHCPCSCodes
 * ^copyright = "Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved

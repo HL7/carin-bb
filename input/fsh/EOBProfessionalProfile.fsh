@@ -58,9 +58,10 @@ The claims data is based on the professional claim form 1500, submission standar
 // 20210201 CAS: FHIR-30357 - item.productOrService is required when item.revenue is provided
 //* item.productOrService obeys EOB-prof-item-productorservice
 // CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358
-* item.productOrService MS
-* item.location[x] from CMSPlaceofServiceCodes (required)
+   * item.productOrService MS
+* item.location 1..1 MS
 * item.location[x] only CodeableConcept
+* item.locationCodeableConcept from CMSPlaceofServiceCodes (required)
 * adjudication 0..1
 * insert ItemAdjudicationSlicing
 * item.adjudication MS 
@@ -108,6 +109,7 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code or CPT procedure code, submitted by the provider. (42)"
 * item.location[x] ^comment = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46)"
 * careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, performing, purhcased service and referring care team. (95, 96, 99)"
+* item.serviced[x] 1..1
 * item.serviced[x]  ^comment = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 

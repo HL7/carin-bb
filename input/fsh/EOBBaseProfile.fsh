@@ -26,7 +26,7 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * patient 1..1 MS
 * provider only Reference(C4BBOrganization or C4BBPractitioner)   // based on BV2a comments 7/27
 * patient only Reference (C4BBPatient)
-* billablePeriod 0..1 MS 
+* billablePeriod 1..1 MS 
 * insurer 1..1 MS
 * insurer only Reference(C4BBOrganization)
 * provider 1..1 MS
@@ -37,7 +37,7 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * payee 0..1 MS
 * payee.type 1..1 MS
 * payee.type from C4BBPayeeType (required)
-* payee.party 1..1 MS
+* payee.party 0..1 MS
 * payee.party only Reference(C4BBOrganization or C4BBPatient or C4BBPractitioner)
 * careTeam 0..* MS 
 * careTeam.provider 1..1 MS
@@ -54,7 +54,7 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * insurance obeys EOB-insurance-focal 
 * insurance.coverage only Reference(C4BBCoverage)
 //* adjudication.category from C4BBAdjudicationDiscriminator (required)   // per Igor
-* item 0..* MS
+* item 1..* MS
 * item.adjudication.category 1..1 MS
 //* item.adjudication.category from C4BBAdjudicationDiscriminator (required)  // Per Igor
 * item.noteNumber MS
@@ -155,6 +155,8 @@ Invariant: EOB-inst-pointoforigin
 Description: "Where Admission Type and Point of Origin slices exist, if Type of Admission code is Newborn, Point of Origin must be from Point of Origin - Newborn CodeSystem  or Type of Admission is not Newborn and Point of Origin must be from Point of Origin Nonnewborn CodeSystem."
 Expression: "(supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code = '4').exists() and supportingInfo.where(code.coding.system='AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn').exists()).not() and (supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code != '4').exists() and supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PointOfOriginNewborn').exists() ).not()"
 Severity: #error
+
+
 
 // Rulesets
 RuleSet: ItemAdjudicationInvariant

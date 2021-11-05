@@ -84,5 +84,35 @@ The current official published version of CARIN BB for FHIR R4 (STU Update of ST
     </li>
     <li>Added <a href="index.html#authors">additional contributors</a> (<a href="https://jira.hl7.org/browse/FHIR-30084">FHIR-30084</a>)</li>
     <li>Transitioned project structure for Sushi 1.0.0+ (For Implementation Guide generation)</li>
+    <li>Corrected link to 3M licensing information <a>https://jira.hl7.org/browse/FHIR-31066</a></li>
+    <li>Updated the Server CapabilityStatement
+	 Persuasive with Mod, Add _id to Coverage Search parameters in CapabilityStatement <a>https://jira.hl7.org/browse/FHIR-30009</a>
+    <li>Added Tighter guidance requiring WHEN provenance in the EOB profiles<a>https://jira.hl7.org/browse/FHIR-31639</a>
+    <li>Removed the invariant referring to careTeam role "site" from the IG<a>https://jira.hl7.org/browse/FHIR-31658</a></li>
+    <li>Increased binding strength for place of service codes<a>https://jira.hl7.org/browse/FHIR-31502</a></li>
+    <li>Added more granular date searching with additional search parameters<a>https://jira.hl7.org/browse/FHIR-33165</a></li>
+    <li>Removed Invariant disallowing not-applicable from Outpatient Institutional EoB item.productOrService<a>https://jira.hl7.org/browse/FHIR-32850</a></li>
+    <li>Change item.location[x] to only locationCodeableConcept<a>https://jira.hl7.org/browse/FHIR-32067</a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+    <li><a></a></li>
+
 </ul>
 <p> </p>

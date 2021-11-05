@@ -89,6 +89,7 @@ The claims data is based on submission standards adopted by the Department of He
 * item.productOrService MS
 * item.quantity MS
 * item.productOrService MS
+* item.serviced[x] 1..1
 * item.serviced[x] MS       // listed as item.serviced in CPCDS spreadsheet
 * payment.type MS
 * provider MS
