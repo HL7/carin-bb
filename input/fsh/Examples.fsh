@@ -55,12 +55,12 @@ Usage: #example
 * policyHolder = Reference(Patient1)
 * subscriber = Reference(Patient1)
 * beneficiary = Reference(Patient1)
-* subscriberId = "12345678901"  
+* subscriberId = "12345678901"
 * dependent = "01"
 * period.start = "2019-01-01"
 * period.end = "2019-10-31"
 
-* class[group].type = $CoverageClassCS#group 
+* class[group].type = $CoverageClassCS#group
 * class[group].type.text = "An employee group"
 * class[group].value = "021890"
 * class[group].name = "Acme Corporation"
@@ -68,7 +68,7 @@ Usage: #example
 * class[plan].type.text = "Plan"
 * class[plan].value = "XYZ123"
 * class[plan].name = "XYZ123-UPMC CONSUMER ADVA"
-// * class[0].type = $CoverageClassCS#subgroup 
+// * class[0].type = $CoverageClassCS#subgroup
 // * class[0].type.text = "A subgroup of an employee group"
 // * class[0].value = "300"
 // * class[0].name = "ACME HSA PPO 1500"
@@ -93,12 +93,12 @@ Usage: #example
 * policyHolder = Reference(Patient1)
 * subscriber = Reference(Patient1)
 * beneficiary = Reference(Patient1)
-* subscriberId = "10300007"  
+* subscriberId = "10300007"
 * dependent = "01"
 * period.start = "2021-01-01"
 * period.end = "2021-12-31"
 
-* class[group].type = $CoverageClassCS#group 
+* class[group].type = $CoverageClassCS#group
 * class[group].type.text = "An employee group"
 * class[group].value = "10300007"
 * class[group].name = "Transcorp - dental"
@@ -128,7 +128,7 @@ Usage: #example
 * type.text = "Institutional"
 * subType = C4BBInstitutionalClaimSubType#inpatient
 * subType.text = "Inpatient"
-* use = #claim 
+* use = #claim
 * created = "2019-11-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
 * insurer.display = "XXX Health Plan"
@@ -139,8 +139,8 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0X1A
-* diagnosis[0].type = $HL7DiagnosisType#principal 
-* diagnosis[0].sequence = 1 
+* diagnosis[0].type = $HL7DiagnosisType#principal
+* diagnosis[0].sequence = 1
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
 * adjudication[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
@@ -167,14 +167,12 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork 
-* total[benefitpaymentstatus][0].amount.value = 0.00
-* total[benefitpaymentstatus][0].amount.currency = #USD
-//* adjudication[benefitpaymentstatus].category = C4BBAdjudication#innetwork 
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+//* adjudication[benefitpaymentstatus].category = C4BBAdjudication#innetwork
+
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1
-* supportingInfo[admissionperiod].category = C4BBSupportingInfoType#admissionperiod  
+* supportingInfo[admissionperiod].category = C4BBSupportingInfoType#admissionperiod
 * supportingInfo[admissionperiod].timingPeriod.start = 2011-05-23
 * supportingInfo[admissionperiod].timingPeriod.end = 2011-05-25
 * supportingInfo[admissionperiod].sequence = 2
@@ -191,7 +189,7 @@ Usage: #example
 * supportingInfo[admtype].code = AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
 * supportingInfo[admtype].sequence = 6
 * supportingInfo[discharge-status].category  = C4BBSupportingInfoType#discharge-status
-* supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#11  
+* supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#11
 * supportingInfo[discharge-status].sequence = 7
 
 * supportingInfo[medicalrecordnumber].category  = C4BBSupportingInfoType#medicalrecordnumber
@@ -200,6 +198,8 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
 * supportingInfo[patientaccountnumber].sequence = 9
+* supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].sequence = 10
 
 
 Instance: EOBOutpatientInstitutional1
@@ -219,7 +219,7 @@ Usage: #example
 * type.text = "Institutional"
 * subType = C4BBInstitutionalClaimSubType#outpatient
 * subType.text = "Outpatient"
-* use = #claim 
+* use = #claim
 * created = "2019-11-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
 * insurer.display = "XXX Health Plan"
@@ -231,7 +231,7 @@ Usage: #example
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0X1A
 * diagnosis[0].type = $C4BBClaimDiagnosisTypeCS#patientreasonforvisit
-* diagnosis[0].sequence = 1 
+* diagnosis[0].sequence = 1
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
 * total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
@@ -246,9 +246,6 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork 
-* total[benefitpaymentstatus].amount.value = 0.00
-* total[benefitpaymentstatus].amount.currency = #USD
 * adjudication[adjudicationamounttype][0].category = C4BBAdjudication#paidtoprovider
 * adjudication[adjudicationamounttype][0].category.text = "Payment Amount"
 * adjudication[adjudicationamounttype][0].amount.value = 620.00
@@ -258,7 +255,7 @@ Usage: #example
 * adjudication[adjudicationamounttype][1].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
 
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
@@ -268,14 +265,14 @@ Usage: #example
 * supportingInfo[typeofbill].code = AHANUBCTypeOfBill#Dummy
 * supportingInfo[typeofbill].sequence = 3
 * supportingInfo[pointoforigin].category = C4BBSupportingInfoType#pointoforigin
-* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn#Dummy 
-* supportingInfo[pointoforigin].sequence = 4 
+* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn#Dummy
+* supportingInfo[pointoforigin].sequence = 4
 * supportingInfo[admtype].category = C4BBSupportingInfoType#admtype
 * supportingInfo[admtype].code = AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
-* supportingInfo[admtype].sequence = 5 
+* supportingInfo[admtype].sequence = 5
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
-* supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#Dummy 
-* supportingInfo[discharge-status].sequence = 6 
+* supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#Dummy
+* supportingInfo[discharge-status].sequence = 6
 
 * supportingInfo[medicalrecordnumber].category  = C4BBSupportingInfoType#medicalrecordnumber
 * supportingInfo[medicalrecordnumber].valueString = "1234-234-1243-12345678901m"
@@ -283,11 +280,12 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
 * supportingInfo[patientaccountnumber].sequence = 8
-
+* supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].sequence = 9
 
 
 Instance: EOBProfessional1a
-InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician 
+InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician
 Description: "EOB Professional  Example1"
 Usage: #example
 * id = "EOBProfessional1a"
@@ -300,8 +298,8 @@ Usage: #example
 * identifier.value = "AW123412341234123412341234123413"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#professional
-* type.text = "Professional" 
-* use = #claim 
+* type.text = "Professional"
+* use = #claim
 * created = "2019-07-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
 * insurer.display = "XXX Health Plan"
@@ -313,7 +311,7 @@ Usage: #example
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0X1A
 * diagnosis[0].type = $HL7DiagnosisType#principal
-* diagnosis[0].sequence = 1 
+* diagnosis[0].sequence = 1
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
 * total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
@@ -333,15 +331,15 @@ Usage: #example
 //* item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
 * item[0].productOrService = $CPT#97110 "Physical Therapy"
 
-* item[0].sequence = 1 
+* item[0].sequence = 1
 * item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00
 * item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
 
-* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#other 
+* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#other
 
 
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1
 * supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
@@ -376,8 +374,8 @@ Usage: #example
 * identifier.value = "210300002"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#oral
-* type.text = "Oral" 
-* use = #claim 
+* type.text = "Oral"
+* use = #claim
 * created = "2021-03-18T10:23:00-05:00"
 * insurer = Reference(OrganizationDentalPayer1)
 * insurer.display = "XXX Health Plan"
@@ -389,7 +387,7 @@ Usage: #example
 * outcome = #complete
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#Z01.21 "Encounter for dental examination and cleaning with abnormal findings"
 * diagnosis[0].type = $HL7DiagnosisType#principal
-* diagnosis[0].sequence = 1 
+* diagnosis[0].sequence = 1
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(CoverageDental1)
 * total[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
@@ -408,20 +406,15 @@ Usage: #example
 * total[adjudicationamounttype][3].category.text = "Amount Paid to Provider"
 * total[adjudicationamounttype][3].amount.value = 350.00
 * total[adjudicationamounttype][3].amount.currency = #USD
-* total[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
-* total[benefitpaymentstatus][0].amount.value = 350.00
-* total[benefitpaymentstatus][0].amount.currency = #USD
-
-
 
 * item[0].productOrService = ADADentalProcedureCode#D1110 "Prophylaxis - Adult"
 
-* item[0].sequence = 1 
+* item[0].sequence = 1
 * item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 190.00
 * item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
 
-* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork 
+* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
 
 
 * item[1].productOrService = ADADentalProcedureCode#D0120 "Periodic oral evaluation"
@@ -431,10 +424,9 @@ Usage: #example
 * item[1].adjudication[adjudicationamounttype][0].amount.value = 220.00
 * item[1].adjudication[adjudicationamounttype][0].amount.currency = #USD
 
-* item[1].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork 
+* item[1].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
 
-
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1
 * supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
@@ -451,7 +443,8 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "PATIENTACCTNO3"
 * supportingInfo[patientaccountnumber].sequence = 5
-
+* supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].sequence = 6
 
 
 
@@ -473,8 +466,8 @@ Usage: #example
 * identifier.value = "210300012"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#oral
-* type.text = "Oral" 
-* use = #claim 
+* type.text = "Oral"
+* use = #claim
 * created = "2021-10-28T10:23:00-05:00"
 * insurer = Reference(OrganizationDentalPayer1)
 * insurer.display = "XXX Health Plan"
@@ -502,11 +495,8 @@ Usage: #example
 * total[adjudicationamounttype][=].category.text = "Amount Paid to Provider"
 * total[adjudicationamounttype][=].amount.value = 100.00
 * total[adjudicationamounttype][=].amount.currency = #USD
-* total[benefitpaymentstatus][+].category = C4BBPayerAdjudicationStatus#innetwork
-* total[benefitpaymentstatus][=].amount.value = 100.00
-* total[benefitpaymentstatus][=].amount.currency = #USD
 
-* item[0].sequence = 1 
+* item[0].sequence = 1
 
 * item[0].informationSequence[0] = 6
 * item[0].informationSequence[1] = 7
@@ -520,12 +510,11 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][=].amount.value = 150.00
 * item[0].adjudication[adjudicationamounttype][=].amount.currency = #USD
 
-* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork 
+* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
 
 
 
-
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1
 * supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
@@ -551,16 +540,17 @@ Usage: #example
 * supportingInfo[patientaccountnumber].valueString = "PATIENTACCTNO3"
 * supportingInfo[patientaccountnumber].sequence = 5
 
-* supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite 
+* supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite
 * supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#1
 * supportingInfo[additionalbodysite][=].sequence = 6
 
 
-* supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite 
+* supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite
 * supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#2
 * supportingInfo[additionalbodysite][=].sequence = 7
 
-
+* supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].sequence = 8
 
 Instance: EOBPharmacy1
 InstanceOf: C4BBExplanationOfBenefitPharmacy
@@ -577,7 +567,7 @@ Usage: #example
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#pharmacy
 * type.text = "Pharmacy"
-* use = #claim 
+* use = #claim
 * created = "2019-07-02T00:00:00+00:00"
 * insurer = Reference(OrganizationPayer1)
 * insurer.display = "XXX Health Plan"
@@ -601,16 +591,13 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* total[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork 
-* total[benefitpaymentstatus].amount.value = 0.00
-* total[benefitpaymentstatus].amount.currency = #USD
 //* adjudication[benefitpaymentstatus].category = C4BBAdjudication#other
 * item[0].productOrService = $FDANationalDrugCode#0777-3105-02 "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)"
-* item[0].sequence = 1 
+* item[0].sequence = 1
 * item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00
 * item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit 
+* item[0].adjudication[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit
 * item[0].adjudication[adjudicationamounttype][1].amount.value = 20.00
 * item[0].adjudication[adjudicationamounttype][1].amount.currency = #USD
 * item[0].adjudication[adjudicationamounttype][2].category = $C4BBAdjudicationCS#discount
@@ -621,20 +608,21 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][3].amount.currency = #USD
 * item[0].adjudication[adjudicationamounttype][4].category = $C4BBAdjudicationCS#paidtoprovider
 * item[0].adjudication[adjudicationamounttype][4].amount.value = 20.00
-* item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD 
+* item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD
+
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
-* supportingInfo[billingnetworkcontractingstatus].sequence = 1 
+* supportingInfo[billingnetworkcontractingstatus].sequence = 1
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
-* supportingInfo[brandgenericindicator].category = C4BBSupportingInfoType#brandgenericindicator   
+* supportingInfo[brandgenericindicator].category = C4BBSupportingInfoType#brandgenericindicator
 * supportingInfo[brandgenericindicator].sequence = 2
 * supportingInfo[brandgenericindicator].code = NCPDPBrandGenericIndicator#2
-* supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode   
+* supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode
 * supportingInfo[rxoriginCode].code = NCPDPPrescriptionOriginCode#1
 * supportingInfo[rxoriginCode].sequence = 3
 * supportingInfo[refillNum].category = C4BBSupportingInfoType#refillnum
 * supportingInfo[refillNum].valueQuantity.value = 0.0
 * supportingInfo[refillNum].sequence = 4
-* supportingInfo[dawcode].category = C4BBSupportingInfoType#dawcode       
+* supportingInfo[dawcode].category = C4BBSupportingInfoType#dawcode
 * supportingInfo[dawcode].code = NCPDPDispensedAsWrittenOrProductSelectionCode#7
 * supportingInfo[dawcode].sequence = 5
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
@@ -646,6 +634,8 @@ Usage: #example
 * supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
 * supportingInfo[compoundcode].code = NCPDPCompoundCode#Dummy
 * supportingInfo[compoundcode].sequence = 8
+* supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].sequence = 9
 
 
 Instance: OrganizationPayer1
@@ -661,7 +651,7 @@ Usage: #example
 * identifier[payerid].type = $C4BBIdentifierTypeCS#payerid
 * identifier[payerid].value = "901234"
 * name = "Payer 1"
-* active = true 
+* active = true
 
 Instance: OrganizationDentalPayer1
 InstanceOf: C4BBOrganization
@@ -676,7 +666,7 @@ Usage: #example
 * identifier[payerid].type = $C4BBIdentifierTypeCS#payerid
 * identifier[payerid].value = "66783JJT"
 * name = "INSURANCE COMPANY XYZ"
-* active = true 
+* active = true
 
 Instance: OrganizationProvider1
 InstanceOf: C4BBOrganization
@@ -690,7 +680,7 @@ Usage: #example
 * identifier[tax].type = $IdentifierType#TAX
 * identifier[tax].value = "123-45-6789"
 * name = "Provider 1"
-* active = true 
+* active = true
 
 
 Instance: PractitionerDentalProvider1
@@ -705,4 +695,4 @@ Usage: #example
 * name[0].family = "Schmidt"
 * name[0].given[0] = "Stewart"
 * name[0].suffix = "DDS"
-* active = true 
+* active = true
