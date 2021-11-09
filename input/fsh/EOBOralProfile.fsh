@@ -3,26 +3,30 @@ Parent: C4BB-ExplanationOfBenefit
 Id: C4BB-ExplanationOfBenefit-Oral
 Title: "C4BB ExplanationOfBenefit Oral"
 // TODO: Update description
-Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene. 
+Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene.
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 // 20210216 CAS: FHIR-30575
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.0.0)
+* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.1.0)
+
+* obeys Oral-EOB-supportinginfo-bodysite-requires-line-item
+* obeys Oral-EOB-surface-subsite-requires-tooth-number
+
 // TODO need updated careTeam Invariants and specialties
 * careTeam obeys EOB-prof-careTeam-practitioner
 * careTeam obeys EOB-prof-careTeam-organization
-* careTeam.qualification MS 
+* careTeam.qualification MS
 * careTeam.qualification from $USCoreProviderSpecialty (required)  // cardinality constraint?
 * type = $HL7ClaimTypeCS#oral
 * provider only Reference(C4BBPractitioner)
-* insert SupportingInfoSlicing 
-* supportingInfo contains 
+* insert SupportingInfoSlicing
+* supportingInfo contains
    billingnetworkcontractingstatus 1..1 MS and
    performingnetworkcontractingstatus 1..1 MS and
    clmrecvddate 0..1 MS and
    servicefacility 0..1 MS and
    orthodontics 0..1 MS and
    prosthesis 0..1 MS and
-   toothnumber 0..* MS and
+   additionalbodysite 0..* MS and
    missingtoothnumber 0..* MS and
    /*
    Need to add discriminator to CodeSystem-C4BBSupportingInfoType
@@ -40,8 +44,11 @@ The claims data is based on the professional claim form 1500, submission standar
    priorprosthesisplacedate 1..1 MS
    */
      medicalrecordnumber 0..1 MS and
-     patientaccountnumber 0..1 MS
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+     patientaccountnumber 0..1 MS and
+     //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
+     benefitpaymentstatus 1..* MS
+* supportingInfo[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
@@ -51,11 +58,11 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[performingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].category MS
-* supportingInfo[clmrecvddate].timing[x] only date 
+* supportingInfo[clmrecvddate].timing[x] only date
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[servicefacility].category = C4BBSupportingInfoType#servicefacility
 * supportingInfo[servicefacility].category MS
-* supportingInfo[servicefacility].valueReference 1..1 MS 
+* supportingInfo[servicefacility].valueReference 1..1 MS
 * supportingInfo[servicefacility].valueReference only Reference(C4BBOrganization)
 
 
@@ -70,16 +77,16 @@ The claims data is based on the professional claim form 1500, submission standar
 * supportingInfo[prosthesis].value[x] only boolean
 * supportingInfo[prosthesis].value[x] 1..1 MS
 
-* supportingInfo[toothnumber].category = C4BBSupportingInfoType#toothnumber
-* supportingInfo[toothnumber].category MS
-* supportingInfo[toothnumber].code 1..1 MS
-* supportingInfo[toothnumber].code from ADAUniversalNumberingSystem (required) // may change to $ToothNumber
+* supportingInfo[additionalbodysite].category = C4BBSupportingInfoType#additionalbodysite
+* supportingInfo[additionalbodysite].category MS
+* supportingInfo[additionalbodysite].code 1..1 MS
+* supportingInfo[additionalbodysite].code from OralBodySite (required)
 
 
 * supportingInfo[missingtoothnumber].category = C4BBSupportingInfoType#missingtoothnumber
 * supportingInfo[missingtoothnumber].category MS
 * supportingInfo[missingtoothnumber].code 1..1 MS
-* supportingInfo[missingtoothnumber].code from ADAUniversalNumberingSystem (required) // may change to $ToothNumber
+* supportingInfo[missingtoothnumber].code from ADAUniversalNumberingSystem (required)
 
 * supportingInfo[medicalrecordnumber].category = C4BBSupportingInfoType#medicalrecordnumber
 * supportingInfo[medicalrecordnumber].valueString 1..1 MS
@@ -88,7 +95,7 @@ The claims data is based on the professional claim form 1500, submission standar
 
 * careTeam.role from C4BBClaimProfessionalAndNonClinicianCareTeamRole   (required)  // was PayerProfessionalAndNonClinicianProviderRole
 * careTeam.role 1..1 MS
-* diagnosis 1..* MS
+* diagnosis 0..* MS
 * diagnosis.type 1..1 MS
 * diagnosis.type from C4BBClaimProfessionalAndNonClinicianDiagnosisType  (required)
 * diagnosis.diagnosis[x] 1..1 MS
@@ -96,6 +103,7 @@ The claims data is based on the professional claim form 1500, submission standar
 * diagnosis.diagnosis[x] from CDCICD910CMDiagnosisCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 
+* item.informationSequence MS
 * item.modifier MS
 * item.productOrService from ADADentalProcedureCode (required)
 
@@ -104,11 +112,12 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.location[x] only CodeableConcept
 * item.locationCodeableConcept from CMSPlaceofServiceCodes (required)
 
-* item.bodySite from ADAUniversalNumberingSystem (required) // may change to $ToothNumber
-* item.subSite from $ToothSurface (required)
+* item.bodySite from OralBodySite (required) // may change to $ToothNumber
+* item.subSite from C4BBSurfaceCodes (required)
+
 * adjudication 0..1
 * insert ItemAdjudicationSlicing
-* item.adjudication MS 
+* item.adjudication MS
 * item.adjudication contains
    adjudicationamounttype 1..* MS and
    denialreason 0..1 MS and
@@ -117,11 +126,11 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
-* item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason 
+* item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
-* item.adjudication[adjudicationamounttype].category from C4BBAdjudication 
+* item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
@@ -129,16 +138,145 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
 * insert TotalSlicing
 //* total.category from C4BBAdjudication  (extensible)
-* total contains 
-   adjudicationamounttype 1..* MS and
-   benefitpaymentstatus 1..* MS 
+* total contains
+   adjudicationamounttype 1..* MS
 * total[adjudicationamounttype].category from C4BBAdjudication (required)
-* total[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+
+
+
+/*
+Invariant:  Oral-EOB-subsite-requires-tooth
+Description: "If item.subsite exists then tooth number is required in bodySite or supportingInfo"
+Expression: "ExplanationOfBenefit.item.subSite.exists() implies ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists()"
+Severity:   #error
+//In variant
+// ExplanationOfBenefit.item.subSite.exists() implies ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists()
+
+
+// ExplanationOfBenefit.item.subSite.exists() implies ExplanationOfBenefit or ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists()
+/*
+subsite exists implies // ExplanationOfBenefit.item.subSite.exists() implies
+   (
+      item.bodysite is tooth // ExplanationOfBenefit.item.bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists()
+   or
+
+   )
+
+   All item with subsite informationSequence(s)
+      ExplanationOfBenefit.repeat(item.where(subSite.exists()).informationSequence)
+   .intersect(
+      supportingInfo where tooth sequence
+      ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').sequence
+
+
+Gather all of the item informationSequence that have a surface and the bodySite is not a toothnumber)
+   ExplanationOfBenefit.repeat(item.where(subSite.exists() and bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()).informationSequence)
+intersect with the supportingInfo where there is a tooth number
+
+
+
+
+*****************
+EVERY ITEM WITH A SURFACE HAS AT LEAST ONE TOOTH ASSOCIATED WITH IT
+*****************
+*
+****** ExplanationOfBenefit.repeat(item.where(subSite.exists() and bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()))
+.count() = 0 or ExplanationOfBenefit.repeat(item.where(subSite.exists() and bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()).informationSequence).combine(ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').sequence).isDistinct().not()
+
+
+Set where we need a tooth nuber in supportingInfo
+   item.where(subSite.exists() and bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not())
+
+The matching supportingInfo Sequence numbers
+   %context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence
+
+
+Match for each line
+   where(informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())
+
+where(informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct().not())
+
+getting close
+ExplanationOfBenefit.repeat(item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() or where(informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())))).count() = 0
+
+   ExplanationOfBenefit.repeat(item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()
+         (issue here) or where(informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())))).count() = 0
+
+
+
+
+
+
+item.informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct().not()
+
+item.informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct().not()
+
+
+where we find in supporting info
+
+   informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct().not()
+
+
+mucked
+   item.where(bodySite.where(subSite.exists().not() or (coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct()))
+
+
+
+
+
+
+
+subSite.exists().not()
+or
+   bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()
+   or
+
+
+
+single item success
+   item.subSite.exists().not() or item.bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists() or item.where(informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct()).count() = 0
+
+
+closer
+   item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() or informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct()))
+
+
+FINAL???!!!???!
+   item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0
+   item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0
+
+*****************
+EVERY TOOTH HAS A LINE ITEM
+*****************
+
+****** ExplanationOfBenefit.repeat(supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite')).sequence.subsetOf(ExplanationOfBenefit.item.informationSequence)
+
+
+
+ExplanationOfBenefit.repeat(item.where(subSite.exists() and bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()).informationSequence).combine(ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').sequence).isDistinct().not()
+
+ExplanationOfBenefit.repeat(supportingInfor.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists())
+
+ExplanationOfBenefit.repeat(supportingInfor.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists())
+
+
+ExplanationOfBenefit.repeat(supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite'))
+
+
+
+ExplanationOfBenefit.repeat(supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite'))
+
+ExplanationOfBenefit.repeat(supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite')).subsetOf(ExplanationOfBenefit.item.informationSequence)
+
+*/
+// This does not work if there is more than one line.
+
+
 
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
 * supportingInfo[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * supportingInfo[performingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
-* supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Performing Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.  
+* supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Performing Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.
 If the service facility is not assigned an NPI, this data element will not be populated.  Reference CMS 1500 element 32a (97, 170, 176)"
 
 * supportingInfo[orthodontics] ^comment = "Orthodontics Treatment Indicator (199)"
@@ -151,12 +289,13 @@ If the service facility is not assigned an NPI, this data element will not be po
 * supportingInfo[prosthesis].timingDate ^comment = "Date of Prior Prosthesis Placement  (203)"
 
 
-* supportingInfo[toothnumber] ^comment = "Tooth Number - After First Occurrence (204)"
-* supportingInfo[toothnumber].code ^comment = "Tooth Number - After First Occurrence (204)"
+* supportingInfo[additionalbodysite] ^comment = "Additional Body Site - After First Occurrence (204)"
+* supportingInfo[additionalbodysite].code ^comment = "Additional Body Site - After First Occurrence (204)"
 
 * supportingInfo[missingtoothnumber] ^comment = "Missing Tooth Number - After First Occurrence (204)"
 * supportingInfo[missingtoothnumber].code ^comment = "Missing Tooth Number - After First Occurrence (204)"
 
+* supportingInfo[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 
 * item.bodySite ^comment = "Tooth Number - First Occurrence (196)"
 * item.subSite ^comment = "Tooth Surface (197)"
@@ -179,3 +318,16 @@ If the service facility is not assigned an NPI, this data element will not be po
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 
 * insert EOBBaseProfileComments
+
+
+
+Invariant:  Oral-EOB-surface-subsite-requires-tooth-number
+Description: "If item.subsite (tooth surface) exists then tooth number is required in bodySite or supportingInfo[additionalBodySite]"
+Expression: "item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0"
+Severity:   #error
+
+
+Invariant:  Oral-EOB-supportinginfo-bodysite-requires-line-item
+Description: "supportingInfo repititions with additional body site must be referred to by one or more repititions of item.informationSequence"
+Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(ExplanationOfBenefit.item.informationSequence)"
+Severity:   #error

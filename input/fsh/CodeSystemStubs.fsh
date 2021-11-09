@@ -1010,11 +1010,34 @@ Teeth are numbered from the viewpoint of the dental practitioner looking into th
 * #T	"Primary teethright mandibularsecond molar"
 * insert ADACopyrightNotice
 
+CodeSystem: ADAAreaOfOralCavitySystem
+Title: "American Dental Association Area of Oral Cavity System"
+Description: "The American Dental Association Area of Oral Cavity System is a notation system indicatinf a quadrant, arch, or the entire mouth."
+* #00	"Entire oral cavity"	
+* #01	"Maxillary arch"
+* #02	"Mandibular arch"
+* #10	"Upper right quadrant"
+* #20	"Upper left quadrant"
+* #30	"Lower left quadrant"
+* #40	"Lower right quadrant"
+* insert ADACopyrightNotice
+
+ValueSet: OralBodySite
+Title: "Oral Body Site Value Set"
+Description: "Oral Body Site indicating tooth numbers and area of oral cavity."
+
+* codes from system ADAUniversalNumberingSystem
+* codes from system ADAAreaOfOralCavitySystem
+* insert ADACopyrightNotice
+
+
 ValueSet: ADAUniversalNumberingSystem
-Title: "[TODO] American Dental Association Universal Numbering System"
-Description: "[TODO] 
-The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
+Title: "American Dental Association Universal Numbering Value Set"
+Description: "The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
 
 Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
 * codes from system ADAUniversalNumberingSystem
 * insert ADACopyrightNotice
+
+
+
