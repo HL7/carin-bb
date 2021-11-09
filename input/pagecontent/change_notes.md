@@ -93,26 +93,5 @@ The current official published version of CARIN BB for FHIR R4 (STU Update of ST
     <li>Added more granular date searching with additional search parameters<a>https://jira.hl7.org/browse/FHIR-33165</a></li>
     <li>Removed Invariant disallowing not-applicable from Outpatient Institutional EoB item.productOrService<a>https://jira.hl7.org/browse/FHIR-32850</a></li>
     <li>Change item.location[x] to only locationCodeableConcept<a>https://jira.hl7.org/browse/FHIR-32067</a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-    <li><a></a></li>
-
 </ul>
 <p> </p>
