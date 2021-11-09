@@ -65,7 +65,6 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.location[x] only CodeableConcept
 * item.locationCodeableConcept from CMSPlaceofServiceCodes (required)
 
-* item.locationCodeableConcept from CMSPlaceofServiceCodes (required)
 * adjudication 0..1
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
