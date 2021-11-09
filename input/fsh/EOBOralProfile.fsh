@@ -108,10 +108,13 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.productOrService from ADADentalProcedureCode (required)
 
 * item.productOrService MS
-* item.location[x] from CMSPlaceofServiceCodes (required)
+* item.location[x] 1..1 MS
 * item.location[x] only CodeableConcept
+* item.locationCodeableConcept from CMSPlaceofServiceCodes (required)
+
 * item.bodySite from OralBodySite (required) // may change to $ToothNumber
 * item.subSite from C4BBSurfaceCodes (required)
+
 * adjudication 0..1
 * insert ItemAdjudicationSlicing
 * item.adjudication MS

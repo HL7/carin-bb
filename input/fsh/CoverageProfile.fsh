@@ -10,7 +10,7 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 // 20210216 CAS: FHIR-30575 Pulled from block vote1a
 * insert Metaprofile-supportedProfile-slice
 * meta.profile[supportedProfile] = Canonical(C4BBCoverage|1.1.0)
-* identifier MS 
+* identifier  
 // 20210312 CAS: Remove per https://jira.hl7.org/browse/FHIR-31535 - Revert Coverage.Subscriber Type to that defined by the base Resource
 //* subscriber 0..1 
 //* subscriber only Reference(C4BBPatient)
