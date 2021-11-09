@@ -332,6 +332,8 @@ Usage: #example
 * item[0].productOrService = $CPT#97110 "Physical Therapy"
 
 * item[0].sequence = 1
+* item[0].servicedDate = "2019-07-02"
+* item[0].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"
 * item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00
 * item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
@@ -410,6 +412,8 @@ Usage: #example
 * item[0].productOrService = ADADentalProcedureCode#D1110 "Prophylaxis - Adult"
 
 * item[0].sequence = 1
+* item[0].servicedDate = "2021-03-18"
+* item[0].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"
 * item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 190.00
 * item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
@@ -420,6 +424,8 @@ Usage: #example
 * item[1].productOrService = ADADentalProcedureCode#D0120 "Periodic oral evaluation"
 
 * item[1].sequence = 2
+* item[1].servicedDate = "2021-03-18"
+* item[1].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"
 * item[1].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * item[1].adjudication[adjudicationamounttype][0].amount.value = 220.00
 * item[1].adjudication[adjudicationamounttype][0].amount.currency = #USD
@@ -506,6 +512,8 @@ Usage: #example
 * item[0].bodySite = ADAAreaOfOralCavitySystem#10 "Upper right quadrant"
 * item[0].subSite[+] = C4BBSurfaceCodes#O
 * item[0].subSite[+] = C4BBSurfaceCodes#I
+* item[0].servicedDate = "2021-10-28"
+* item[0].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"
 * item[0].adjudication[adjudicationamounttype][+].category = $HL7AdjudicationCS#submitted
 * item[0].adjudication[adjudicationamounttype][=].amount.value = 150.00
 * item[0].adjudication[adjudicationamounttype][=].amount.currency = #USD
@@ -594,6 +602,7 @@ Usage: #example
 //* adjudication[benefitpaymentstatus].category = C4BBAdjudication#other
 * item[0].productOrService = $FDANationalDrugCode#0777-3105-02 "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)"
 * item[0].sequence = 1
+* item[0].servicedDate = "2019-07-02"
 * item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00
 * item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
