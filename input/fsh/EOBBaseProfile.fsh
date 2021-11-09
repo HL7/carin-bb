@@ -26,7 +26,7 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * patient 1..1 MS
 * provider only Reference(C4BBOrganization or C4BBPractitioner)   // based on BV2a comments 7/27
 * patient only Reference (C4BBPatient)
-* billablePeriod 1..1 MS 
+* billablePeriod 0..1 MS 
 * insurer 1..1 MS
 * insurer only Reference(C4BBOrganization)
 * provider 1..1 MS
@@ -54,7 +54,7 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * insurance obeys EOB-insurance-focal 
 * insurance.coverage only Reference(C4BBCoverage)
 //* adjudication.category from C4BBAdjudicationDiscriminator (required)   // per Igor
-* item 1..* MS
+* item 0..* MS
 * item.adjudication.category 1..1 MS
 //* item.adjudication.category from C4BBAdjudicationDiscriminator (required)  // Per Igor
 * item.noteNumber MS
