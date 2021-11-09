@@ -10,6 +10,8 @@ The claims data is based on the professional claim form 1500, submission standar
 * careTeam obeys EOB-prof-careTeam-organization
 * careTeam.qualification MS
 * careTeam.qualification from $USCoreProviderSpecialty (required)  // cardinality constraint?
+
+* billablePeriod 1..1
 //* type = $HL7ClaimTypeCS#professional
 * type from C4BBProfessionalAndNonClinicianClaimType (required)
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner) -- set in base class
@@ -59,7 +61,7 @@ The claims data is based on the professional claim form 1500, submission standar
 //* item.productOrService obeys EOB-prof-item-productorservice
 // CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358
 * item.productOrService MS
-
+* item.serviced[x] 1..1
 // FHIR-34148 - Make Professional NonClinician EoB item.location required Persuasive, change cardinality to 1..1 and maske Must Support
 * item.location[x] 1..1 MS
 * item.location[x] only CodeableConcept
@@ -112,7 +114,6 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code or CPT procedure code, submitted by the provider. (42)"
 * item.location[x] ^comment = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46)"
 * careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, performing, purhcased service and referring care team. (95, 96, 99)"
-* item.serviced[x] 1..1
 * item.serviced[x]  ^comment = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 
