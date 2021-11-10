@@ -7,13 +7,14 @@ The claims data is based on the professional claim form 1500, submission standar
 // 20210322 CAS: FHIR-30575
 * meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.1.0)
 * careTeam obeys EOB-prof-careTeam-practitioner
-* careTeam obeys EOB-prof-careTeam-organization
 * careTeam.qualification MS
 * careTeam.qualification from $USCoreProviderSpecialty (required)  // cardinality constraint?
 
 * billablePeriod 1..1
 //* type = $HL7ClaimTypeCS#professional
 * type from C4BBProfessionalAndNonClinicianClaimType (required)
+* subType from C4BBProfessionalAndNonClinicianClaimSubType (required)
+
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner) -- set in base class
 * insert SupportingInfoSlicing
 * supportingInfo contains
@@ -57,6 +58,7 @@ The claims data is based on the professional claim form 1500, submission standar
 // CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358
 * item.modifier MS
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
+* item.productOrService obeys EOB-vision-item-productorservice
 // 20210201 CAS: FHIR-30357 - item.productOrService is required when item.revenue is provided
 //* item.productOrService obeys EOB-prof-item-productorservice
 // CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358

@@ -35,6 +35,7 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * related.relationship from C4BBRelatedClaimRelationshipCodes (required)
 * related.reference 1..1 MS 
 * payee 0..1 MS
+* payee obeys EOB-payee-other-type-requires-party
 * payee.type 1..1 MS
 * payee.type from C4BBPayeeType (required)
 * payee.party 0..1 MS
@@ -54,7 +55,7 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * insurance obeys EOB-insurance-focal 
 * insurance.coverage only Reference(C4BBCoverage)
 //* adjudication.category from C4BBAdjudicationDiscriminator (required)   // per Igor
-* item 0..* MS
+* item 1..* MS // Make all EoB profiles require EoB.item FHIR-34114
 * item.adjudication.category 1..1 MS
 //* item.adjudication.category from C4BBAdjudicationDiscriminator (required)  // Per Igor
 * item.noteNumber MS
@@ -125,13 +126,6 @@ role.where(coding.where(code in ('performing' | 'primary' | 'referring' | 'super
 )" 
 Severity: #error
 
-Invariant: EOB-prof-careTeam-organization
-Description: "Professional EOB:  Careteam roles refer to an organization"
-Expression: "(
-role.where(coding.where(code in ('site')).exists()).exists() implies
-role.where(coding.where(code in ('site' )).exists()).exists().provider.all(resolve() is Organization)
-)" 
-Severity: #error
 
 Invariant: EOB-institutional-item-or-header-adjudication
 Description: "Institutional EOB:  Should have adjudication at the item or header level, but not both"
@@ -150,12 +144,25 @@ Description: "Outpatient Institutional EOB:  Item productOrService required. Dat
 Expression: "coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()" 
 Severity: #error
 
+
+// 20210203 CAS: https://jira.hl7.org/browse/FHIR-33024
+Invariant: EOB-vision-item-productorservice
+Description: "Vision EOB: Item productOrService not required in item.productOrService if and only if subType is vision."
+Expression: "ExplanationOfBenefit.subType.coding.where(code = 'vision' and system='http://terminology.hl7.org/CodeSystem/claim-type').exists() or ExplanationOfBenefit.item.productOrService.coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()" 
+Severity: #error
+
+
 // 20210203 CAS: https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
 Invariant: EOB-inst-pointoforigin
 Description: "Where Admission Type and Point of Origin slices exist, if Type of Admission code is Newborn, Point of Origin must be from Point of Origin - Newborn CodeSystem  or Type of Admission is not Newborn and Point of Origin must be from Point of Origin Nonnewborn CodeSystem."
 Expression: "(supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code = '4').exists() and supportingInfo.where(code.coding.system='AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn').exists()).not() and (supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code != '4').exists() and supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PointOfOriginNewborn').exists() ).not()"
 Severity: #error
 
+
+Invariant: EOB-payee-other-type-requires-party
+Description: "Base EOB: if payee type is other, payee party is required"
+Expression: "type.coding.where(code = 'other' and system = 'http://terminology.hl7.org/CodeSystem/payeetype').exists() implies party.exists()"
+Severity: #error
 
 
 // Rulesets
@@ -169,7 +176,7 @@ RuleSet: EOBHeaderItemAdjudicationInvariant
 * obeys EOB-institutional-item-or-header-adjudication
 
 RuleSet: AdjudicationSlicing
-* adjudication ^slicing.rules = #closed
+* adjudication ^slicing.rules = #open
 * adjudication ^slicing.discriminator.path = "category"
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
@@ -196,7 +203,7 @@ RuleSet: TotalSlicing
 
 
 RuleSet: ItemAdjudicationSlicing
-* item.adjudication ^slicing.rules = #closed
+* item.adjudication ^slicing.rules = #open
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on value pattern"
 * item.adjudication ^slicing.discriminator.type = #pattern 
@@ -209,9 +216,9 @@ RuleSet: EOBBaseProfileComments
 * identifier ^comment = "Identifier assigned by a payer for a claim received from a provider or subscriber. It is not the same identifier as that assigned by a provider. (35)"
 * identifier.type ^comment = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber. (183)"
 * status ^comment = "Claim processing status code (140).  Expected values are active or cancelled.  To comply with the CMS rule, draft EOBs are not required"
-* type ^comment = "Specifies the type of claim. (e.g., inpatient insitutional, outpatient institutional, physician, etc.) (16).  Defines the Claims profiles.  Values from Claim Type Codes are required; a data absent reason is not allowed"
+* type ^comment = "Specifies the type of claim. (e.g., inpatient institutional, outpatient institutional, physician, etc.) (16).  Defines the Claims profiles.  Values from Claim Type Codes are required; a data absent reason is not allowed"
 * use ^comment = "Expected value is claim. The CMS rule applies to adjudicated claims; it does not require preauthorizations or predeterminations"
-* patient ^comment = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1). The patient must be supplied to the insurer so that confirmation of coverage and service history may be considered as part of the authorization and/or adjudiction. Additional required path:EOB.insurance.coverage(Coverage).beneficiary(Patient).identifier"
+* patient ^comment = "Identifier for a member assigned by the Payer.  If members receive ID cards, that is the identifier that should be provided. (1). The patient must be supplied to the insurer so that confirmation of coverage and service history may be considered as part of the authorization and/or adjudication. Additional required path:EOB.insurance.coverage(Coverage).beneficiary(Patient).identifier"
 * billablePeriod.start ^comment = "The first day on the billing statement covering services rendered to the beneficiary (i.e. 'Statement Covers From Date’). (177)"
 * billablePeriod.end ^comment = "The last day on the billing statement covering services rendered to the beneficiary (i.e. 'Statement Covers Thru Date’). (178)"
 * created ^comment = "Date the claim was adjudicated (179)"
@@ -224,7 +231,7 @@ RuleSet: EOBBaseProfileComments
 * item.noteNumber ^comment = "References number of the associated processNote entered"
 * careTeam.provider ^comment = "The identifier assigned to the care team. (varies depending on the profile)"
 * careTeam.role ^comment = "The functional role of a provider on a claim. (165)"
-* careTeam.sequence ^comment = "careTeam.sequence values uniquely identify careTeam members.  They do not necessarily indiate any order in which the patient was seen by the careTeam or identify any level of significance of the careTeam to the patient, etc.  Client app implementations should not assign any significance to the sequence values"
+* careTeam.sequence ^comment = "careTeam.sequence values uniquely identify careTeam members.  They do not necessarily indicate any order in which the patient was seen by the careTeam or identify any level of significance of the careTeam to the patient, etc.  Client app implementations should not assign any significance to the sequence values"
 * supportingInfo ^comment = "Defines data elements not available in the base EOB resource"
 * supportingInfo.sequence ^comment = "Client app implementations should look-up supportingInfo elements based on category values instead of sequence values"
 * insurance ^comment = "Identity of the payers responsible for the claim. (2, 141).  All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. An invariant is defined to enforce the following rule:  Will have multiple occurrences on secondary / tertiary, etc. claims.  Up to one occurrence, that of the ExplanationOfBenefit.insurer, will have a boolean value = 'True'"

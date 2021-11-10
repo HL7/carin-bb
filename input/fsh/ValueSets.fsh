@@ -200,6 +200,11 @@ ValueSet: C4BBProfessionalAndNonClinicianClaimType
 Title: "C4BB Professional And Non Clinician Claim Type"
 Description: "This value set includes Professional and Non Clinician Claim Type codes."
 * $HL7ClaimTypeCS#professional
+* ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBProfessionalAndNonClinicianClaimSubType
+Title: "C4BB Professional And Non Clinician Claim SubType"
+Description: "This value set includes Professional and Non Clinician Claim SubType codes."
 * $HL7ClaimTypeCS#vision
 * ^copyright = "This Valueset is not copyrighted."
 

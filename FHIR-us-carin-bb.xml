@@ -56,6 +56,7 @@
 <artifact id="ValueSet/C4BBPayerProviderContractingStatus" key="ValueSet-C4BBPayerProviderContractingStatus" name="C4BB Payer Provider Contracting Status"/>
 <artifact id="StructureDefinition/C4BB-Practitioner" key="StructureDefinition-C4BB-Practitioner" name="C4BB Practitioner"/>
 <artifact id="ValueSet/C4BBPractitionerIdentifierType" key="ValueSet-C4BBPractitionerIdentifierType" name="C4BB Practitioner Identifier Type"/>
+<artifact id="ValueSet/C4BBProfessionalAndNonClinicianClaimSubType" key="ValueSet-C4BBProfessionalAndNonClinicianClaimSubType" name="C4BB Professional And Non Clinician Claim SubType"/>
 <artifact id="ValueSet/C4BBProfessionalAndNonClinicianClaimType" key="ValueSet-C4BBProfessionalAndNonClinicianClaimType" name="C4BB Professional And Non Clinician Claim Type"/>
 <artifact id="ValueSet/C4BBRelatedClaimRelationshipCodes" key="ValueSet-C4BBRelatedClaimRelationshipCodes" name="C4BB Related Claim Relationship Codes"/>
 <artifact id="CodeSystem/C4BBRelatedClaimRelationshipCodes" key="CodeSystem-C4BBRelatedClaimRelationshipCodes" name="C4BB Related Claim Relationship Codes"/>

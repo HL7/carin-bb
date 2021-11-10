@@ -15,6 +15,7 @@ The claims data is based on submission standards adopted by the Department of He
    dayssupply 1..1 MS and
    dawcode 1..1 MS and
    refillNum 1..1 MS and
+   refillsAuthorized 1..1 and
    billingnetworkcontractingstatus 0..1 MS and
    brandgenericindicator 0..1 MS and
    rxoriginCode 0..1 MS and
@@ -39,6 +40,10 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[refillNum].category MS
 * supportingInfo[refillNum].value[x] 1..1 MS
 * supportingInfo[refillNum].value[x] only Quantity
+* supportingInfo[refillsAuthorized].category = C4BBSupportingInfoType#refillsauthorized
+* supportingInfo[refillsAuthorized].category MS
+* supportingInfo[refillsAuthorized].value[x] 1..1 MS
+* supportingInfo[refillsAuthorized].value[x] only Quantity
 * supportingInfo[dawcode].category = C4BBSupportingInfoType#dawcode
 * supportingInfo[dawcode].category MS
 * supportingInfo[dawcode].code from NCPDPDispensedAsWrittenOrProductSelectionCode (required)

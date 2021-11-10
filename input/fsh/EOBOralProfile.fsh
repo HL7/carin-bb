@@ -13,7 +13,6 @@ The claims data is based on the professional claim form 1500, submission standar
 
 // TODO need updated careTeam Invariants and specialties
 * careTeam obeys EOB-prof-careTeam-practitioner
-* careTeam obeys EOB-prof-careTeam-organization
 * careTeam.qualification MS
 * careTeam.qualification from $USCoreProviderSpecialty (required)  // cardinality constraint?
 * type = $HL7ClaimTypeCS#oral

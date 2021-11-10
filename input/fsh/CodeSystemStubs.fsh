@@ -628,6 +628,7 @@ Please see Code Maintenance Committee (CMC) page for information about the CMC's
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * codes from system ADADentalProcedureCode
+* include $HL7DataAbsentReason#not-applicable "Not Applicable"
 * insert ADACopyrightNotice
 
 

@@ -143,6 +143,11 @@ Usage: #example
 * diagnosis[0].sequence = 1
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
+
+* item[0].sequence = 1
+* item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
+* item[0].revenue = AHANUBCRevenueCodes#Dummy
+* item[0].servicedDate = "2019-11-02"
 * adjudication[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
 * adjudication[adjudicationamounttype][0].category.text = "Payment Amount"
 * adjudication[adjudicationamounttype][0].amount.value = 620.00
@@ -234,6 +239,19 @@ Usage: #example
 * diagnosis[0].sequence = 1
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
+
+* item[0].sequence = 1
+* item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
+* item[0].revenue = AHANUBCRevenueCodes#Dummy
+* item[0].servicedDate = "2019-11-02"
+* adjudication[adjudicationamounttype][0].category = C4BBAdjudication#paidtoprovider
+* adjudication[adjudicationamounttype][0].category.text = "Payment Amount"
+* adjudication[adjudicationamounttype][0].amount.value = 620.00
+* adjudication[adjudicationamounttype][0].amount.currency = #USD
+* adjudication[adjudicationamounttype][1].category = C4BBAdjudication#paidbypatient
+* adjudication[adjudicationamounttype][1].category.text = "Patient Pay Amount"
+* adjudication[adjudicationamounttype][1].amount.value = 0.00
+* total[adjudicationamounttype][2].amount.currency = #USD
 * total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
 * total[adjudicationamounttype][0].amount.value = 620.00
@@ -246,15 +264,6 @@ Usage: #example
 * total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * total[adjudicationamounttype][2].amount.value = 0.00
 * total[adjudicationamounttype][2].amount.currency = #USD
-* adjudication[adjudicationamounttype][0].category = C4BBAdjudication#paidtoprovider
-* adjudication[adjudicationamounttype][0].category.text = "Payment Amount"
-* adjudication[adjudicationamounttype][0].amount.value = 620.00
-* adjudication[adjudicationamounttype][0].amount.currency = #USD
-* adjudication[adjudicationamounttype][1].category = C4BBAdjudication#paidbypatient
-* adjudication[adjudicationamounttype][1].category.text = "Patient Pay Amount"
-* adjudication[adjudicationamounttype][1].amount.value = 0.00
-* total[adjudicationamounttype][2].amount.currency = #USD
-
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1
@@ -372,6 +381,8 @@ Usage: #example
 * meta.lastUpdated = "2021-03-18T10:23:00-05:00"
 * language = #en-US
 * status = #active
+
+
 * identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "210300002"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
@@ -468,6 +479,7 @@ Usage: #example
 * meta.lastUpdated = "2021-10-28T10:23:00-05:00"
 * language = #en-US
 * status = #active
+
 * identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "210300012"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
@@ -631,20 +643,25 @@ Usage: #example
 * supportingInfo[refillNum].category = C4BBSupportingInfoType#refillnum
 * supportingInfo[refillNum].valueQuantity.value = 0.0
 * supportingInfo[refillNum].sequence = 4
+
+* supportingInfo[refillsAuthorized].category = C4BBSupportingInfoType#refillsauthorized
+* supportingInfo[refillsAuthorized].valueQuantity.value = 0.0
+* supportingInfo[refillsAuthorized].sequence = 5
+
 * supportingInfo[dawcode].category = C4BBSupportingInfoType#dawcode
 * supportingInfo[dawcode].code = NCPDPDispensedAsWrittenOrProductSelectionCode#7
-* supportingInfo[dawcode].sequence = 5
+* supportingInfo[dawcode].sequence = 6
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].timingDate = 2019-10-31
-* supportingInfo[clmrecvddate].sequence = 6
+* supportingInfo[clmrecvddate].sequence = 7
 * supportingInfo[dayssupply].category = C4BBSupportingInfoType#dayssupply
-* supportingInfo[dayssupply].sequence = 7
+* supportingInfo[dayssupply].sequence = 8
 * supportingInfo[dayssupply].valueQuantity.value =  30.0
 * supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
 * supportingInfo[compoundcode].code = NCPDPCompoundCode#Dummy
-* supportingInfo[compoundcode].sequence = 8
+* supportingInfo[compoundcode].sequence = 9
 * supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[benefitpaymentstatus].sequence = 9
+* supportingInfo[benefitpaymentstatus].sequence = 10
 
 
 Instance: OrganizationPayer1
