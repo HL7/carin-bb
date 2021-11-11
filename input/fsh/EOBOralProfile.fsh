@@ -254,9 +254,9 @@ EVERY TOOTH HAS A LINE ITEM
 
 ExplanationOfBenefit.repeat(item.where(subSite.exists() and bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()).informationSequence).combine(ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').sequence).isDistinct().not()
 
-ExplanationOfBenefit.repeat(supportingInfor.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists())
+ExplanationOfBenefit.repeat(supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists())
 
-ExplanationOfBenefit.repeat(supportingInfor.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists())
+ExplanationOfBenefit.repeat(supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists())
 
 
 ExplanationOfBenefit.repeat(supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite'))
@@ -306,12 +306,12 @@ If the service facility is not assigned an NPI, this data element will not be po
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * diagnosis ^comment = "Diagnosis codes describe an individual's disease or medical condition. (6, 7, 8, 21, 22, 23, 30)"
 * diagnosis.type ^comment = "Indicates if the professional and non-clinician diagnosis is principal or secondary (21, 22, 23)"
-* diagnosis.sequence ^comment =  "Diagnosis.sequence values do not necessarily indiate any order in which the diagnosis was reported or identified.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of diagnosis.type to identify primary, secondary, etc."
+* diagnosis.sequence ^comment =  "Diagnosis.sequence values do not necessarily indicate any order in which the diagnosis was reported or identified.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of diagnosis.type to identify primary, secondary, etc."
 * item.productOrService ^comment = "Medical procedure a patient received from a health care provider. Current coding methods include: CPT-4 and HCFA Common Procedure Coding System Level II - (HCPCSII). (40)"
 * item.modifier ^comment = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41)"
 * item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code or CPT procedure code, submitted by the provider. (42)"
 * item.location[x] ^comment = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46)"
-* careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, performing, purhcased service and referring care team. (95, 96, 99)"
+* careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, performing, purchased service and referring care team. (95, 96, 99)"
 * item.serviced[x]  ^comment = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 
@@ -326,6 +326,7 @@ Severity:   #error
 
 
 Invariant:  Oral-EOB-supportinginfo-bodysite-requires-line-item
-Description: "supportingInfo repititions with additional body site must be referred to by one or more repititions of item.informationSequence"
-Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(ExplanationOfBenefit.item.informationSequence)"
+Description: "supportingInfo repetitions with additional body site must be referred to by one or more repetitions of item.informationSequence"
+Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(item.informationSequence.distinct())"
+//Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence = ExplanationOfBenefit.item.informationSequence"
 Severity:   #error

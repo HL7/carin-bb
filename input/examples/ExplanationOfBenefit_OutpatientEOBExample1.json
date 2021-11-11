@@ -146,6 +146,17 @@
         "text": "Date the claim was received by the payer."
       },
       "timingDate": "2020-10-10"
+    },
+    {
+      "sequence": 3,
+      "category" : {
+        "coding" : [
+          {
+            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
+            "code" : "outofnetwork"
+          }
+        ]
+      }
     }
   ],
   "diagnosis": [

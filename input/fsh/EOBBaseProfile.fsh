@@ -138,12 +138,13 @@ Description: "If Adjudication is present, it must have at least one adjudication
 Expression: "(adjudication.exists().not() or adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists())"
 Severity: #error
 
-// 20210203 CAS: https://jira.hl7.org/browse/FHIR-30357
+// 20211110 CAS: https://jira.hl7.org/browse/FHIR-32850
+/*
 Invariant: EOB-out-inst-item-productorservice
 Description: "Outpatient Institutional EOB:  Item productOrService required. Data absent reason of Not Applicable is not allowed."
 Expression: "coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()" 
 Severity: #error
-
+*/
 
 // 20210203 CAS: https://jira.hl7.org/browse/FHIR-33024
 Invariant: EOB-vision-item-productorservice

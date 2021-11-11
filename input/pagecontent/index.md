@@ -19,7 +19,7 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 <p><b>The following issues are addressed in this ballot:</b></p>
 
 <ul>
-  <li>Added <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral ExplanationOfBenefit Profile</a> and vision subtType to <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit Profile</a> (<a href="https://jira.hl7.org/browse/FHIR-FHIR-34009">FHIR-34009</a> and <a href="https://jira.hl7.org/browse/FHIR-FHIR-27025">FHIR-27025</a>)
+  <li>Added <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral ExplanationOfBenefit profile</a> and vision subtType to <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit profile</a> (<a href="https://jira.hl7.org/browse/FHIR-FHIR-34009">FHIR-34009</a> and <a href="https://jira.hl7.org/browse/FHIR-FHIR-27025">FHIR-27025</a>)
     <ul>
       <li>Added orthodontics and prosthesis to <a href="ValueSet-C4BBSupportingInfoType.html">Supporting Info Type ValueSet</a> used as a discriminator for the EOB Oral profile supportingInfo slice discriminator (<a href="https://jira.hl7.org/browse/FHIR-34010">FHIR-34010</a>)</li>
       <li>Added <a href="ValueSet-C4BBSurfaceCodes.html">US Surface Codes</a> for Oral ExplanationOfBenefit.item.subSite (<a href="https://jira.hl7.org/browse/FHIR-34089">FHIR-34089</a>)</li>
@@ -28,16 +28,16 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 
   <li>Updated from US Core 3.1.0 to 4.0.0 affecting the inherited requirements of the <a href="StructureDefinition-C4BB-Patient.html">Patient</a>, <a href="StructureDefinition-C4BB-Practitioner.html">Practitioner</a>, and <a href="StructureDefinition-C4BB-Organization.html">Organization</a> profiles. (<a href="https://jira.hl7.org/browse/FHIR-33177">FHIR-33177</a>)</li>
 
-  <li>Changed cardinality of ExplanationOfBenefit.item from 0..* to 1..* in <a href="StructureDefinition-C4BB-ExplanationOfBenefit.html">Base ExplanationOfBenefit Profile</a> requiring ExplanationOfBenefit for all <a href="artifacts.html#structures-resource-profiles">all Resource ExplanationOfBenefit profiles</a> (<a href="https://jira.hl7.org/browse/FHIR-34241">FHIR-34241</a>)</li>
+  <li>Changed cardinality of ExplanationOfBenefit.item from 0..* to 1..* in <a href="StructureDefinition-C4BB-ExplanationOfBenefit.html">Base ExplanationOfBenefit profile</a> requiring ExplanationOfBenefit for all <a href="artifacts.html#structures-resource-profiles">all Resource ExplanationOfBenefit profiles</a> (<a href="https://jira.hl7.org/browse/FHIR-34241">FHIR-34241</a>)</li>
 
-  <li>Require item.location[x] to be only CodeableConcept in <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional</a> and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral</a> (ExplanationOfBenefit Profiles (<a href="https://jira.hl7.org/browse/FHIR-32067">FHIR-32067</a>)</li>
+  <li>Require item.location[x] to be only CodeableConcept in <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional</a> and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral</a> (ExplanationOfBenefit profiles (<a href="https://jira.hl7.org/browse/FHIR-32067">FHIR-32067</a>)</li>
   <li>Changed <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit</a> item.location[x] from cardinality of 0..1 to 1..1 and added Must Support (<a href="https://jira.hl7.org/browse/FHIR-34148">FHIR-34148</a>)</li>
 
   <li>Changed item.serviced[x] and billablePeriod cardinality (<a href="https://jira.hl7.org/browse/FHIR-31639">FHIR-31639</a>)
     <ul>
-      <li>ExplanationOfBenefit.item.serviced[x] from 0..1 to 1..1 for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional ExplanationOfBenefit Profile</a></li>
-      <li>ExplanationOfBenefit.item.serviced[x] and ExplanationOfBenefit.billablePeriod from 0..1 to 1..1 for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit Profile</a></li>
-      <li>ExplanationOfBenefit.item.serviced[x] from 0..1 to 1..1 for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy ExplanationOfBenefit Profile</a></li>
+      <li>ExplanationOfBenefit.item.serviced[x] from 0..1 to 1..1 for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional ExplanationOfBenefit profile</a></li>
+      <li>ExplanationOfBenefit.item.serviced[x] and ExplanationOfBenefit.billablePeriod from 0..1 to 1..1 for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit profile</a></li>
+      <li>ExplanationOfBenefit.item.serviced[x] from 0..1 to 1..1 for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy ExplanationOfBenefit profile</a></li>
     </ul>
   </li>
   <li>Moved ExplanationOfBenefit.total[benefitpaymentstatus] slice to ExplanationOfBenefit.supportingInfo[benefitpaymentstatus] (therefore not requiring an amount property) for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html">Inpatient Institutional</a>, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional</a>, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy</a>, and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral</a> ExplanationOfBenefit profiles (<a href="https://jira.hl7.org/browse/FHIR-33082">FHIR-33082</a>)</li>
@@ -46,13 +46,15 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 
   <li>Add not-applicable code to <a href="ValueSet-AMACPTCMSHCPCSProcedureCodes.html">Professional Procedure Codes ValueSet</a> and <a href="ValueSet-ADADentalProcedureCode.html">Oral Procedure Code ValueSet</a> for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional</a> (with Invariant allowing only if subType = vision) and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral</a> (ExplanationOfBenefit.item.productOrService (<a href="https://jira.hl7.org/browse/FHIR-33024">FHIR-33024</a>)</li>
 
-  <li>Added refillsAuthorized slice to ExplanationOfBenefit.supportingInfo of <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy ExplanationOfBenefit</a> Profile (<a href="https://jira.hl7.org/browse/FHIR-33487">FHIR-33487</a>)</li>
+  <li>Removed Invariant that not allowing not-applicable code for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional ExplanationOfBenefit profile</a> item.productOrService (<a href="https://jira.hl7.org/browse/FHIR-32850">FHIR-32850</a>)</li>
+
+  <li>Added refillsAuthorized slice to ExplanationOfBenefit.supportingInfo of <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy ExplanationOfBenefit</a> profile (<a href="https://jira.hl7.org/browse/FHIR-33487">FHIR-33487</a>)</li>
 
   <li>Added <a href="SearchParameter-explanationofbenefit-service-start-date.html">service-start-date search parameter</a> (<a href="https://jira.hl7.org/browse/FHIR-33165">FHIR-33165</a>)</li>
 
   <li>Added Coverage _id search parameter to <a href="CapabilityStatement-c4bb.html">Capability Statement</a> with associated guidance (<a href="https://jira.hl7.org/browse/FHIR-30009">FHIR-30009</a>)</li>
 
-  <li>Removed invalid invariant from <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit Profile</a> that required ExplanationOfBenefit.careTeam.provider to be an Organization reference when careTeam.role was 'site' ('site' not a code in the role ValueSet) (<a href="https://jira.hl7.org/browse/FHIR-31658">FHIR-31658</a>)</li>
+  <li>Removed invalid invariant from <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit profile</a> that required ExplanationOfBenefit.careTeam.provider to be an Organization reference when careTeam.role was 'site' ('site' not a code in the role ValueSet) (<a href="https://jira.hl7.org/browse/FHIR-31658">FHIR-31658</a>)</li>
 
   <li>Added guidance for the use of the 11-digit NDC code for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy ExplanationOfBenefit</a> profile item.productOrService and item.detail.productOrService (<a href="https://jira.hl7.org/browse/FHIR-32660">FHIR-32660</a>)</li>
   <li>Corrected XPath expression for the <a href="SearchParameter-explanationofbenefit-service-date.html">service-date SearchParameter</a> (<a href="https://jira.hl7.org/browse/FHIR-32843">FHIR-32843</a>)</li>

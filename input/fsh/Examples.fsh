@@ -516,8 +516,11 @@ Usage: #example
 
 * item[0].sequence = 1
 
-* item[0].informationSequence[0] = 6
-* item[0].informationSequence[1] = 7
+* item[0].informationSequence[+] = 6
+* item[0].informationSequence[+] = 7
+* item[0].informationSequence[+] = 9
+* item[0].informationSequence[+] = 10
+* item[0].informationSequence[+] = 11
 * item[0].productOrService = ADADentalProcedureCode#D0220 "Intraoral - periapical first radiographic image"
 
 
@@ -550,27 +553,27 @@ Usage: #example
 
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "PATIENTACCTNO3"
-* supportingInfo[patientaccountnumber].sequence = 5
+* supportingInfo[patientaccountnumber].sequence = 6
 
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "PATIENTACCTNO3"
-* supportingInfo[patientaccountnumber].sequence = 5
+* supportingInfo[patientaccountnumber].sequence = 7
 
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "PATIENTACCTNO3"
-* supportingInfo[patientaccountnumber].sequence = 5
+* supportingInfo[patientaccountnumber].sequence = 8
 
 * supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite
 * supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#1
-* supportingInfo[additionalbodysite][=].sequence = 6
+* supportingInfo[additionalbodysite][=].sequence = 9
 
 
 * supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite
 * supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#2
-* supportingInfo[additionalbodysite][=].sequence = 7
+* supportingInfo[additionalbodysite][=].sequence = 10
 
 * supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[benefitpaymentstatus].sequence = 8
+* supportingInfo[benefitpaymentstatus].sequence = 11
 
 Instance: EOBPharmacy1
 InstanceOf: C4BBExplanationOfBenefitPharmacy

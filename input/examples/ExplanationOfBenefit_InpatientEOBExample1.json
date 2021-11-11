@@ -162,6 +162,17 @@
       "timingPeriod": {
         "start": "2017-05-23"
       }
+    },
+    {
+      "sequence": 4,
+      "category" : {
+        "coding" : [
+          {
+            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
+            "code" : "innetwork"
+          }
+        ]
+      }
     }
   ],
   "diagnosis": [
@@ -874,20 +885,6 @@
       "amount": {
         "value": 0.0,
         "currency": "USD"
-      }
-    },
-    {
-      "category" : {
-        "coding" : [
-          {
-            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
-            "code" : "innetwork"
-          }
-        ]
-      },
-      "amount" : {
-        "value" : 0.0,
-        "currency" : "USD"
       }
     }
   ]
