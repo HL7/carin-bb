@@ -5,7 +5,7 @@
     "lastUpdated": "2020-04-28T15:39:36-04:00",
     "source": "Organization/PayerOrganizationExample1",
     "profile": [
-      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.1.0"
+      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.2.0"
     ]
   },
   "identifier": [
@@ -161,6 +161,17 @@
       },
       "timingPeriod": {
         "start": "2017-05-23"
+      }
+    },
+    {
+      "sequence": 4,
+      "category" : {
+        "coding" : [
+          {
+            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
+            "code" : "innetwork"
+          }
+        ]
       }
     }
   ],
@@ -874,20 +885,6 @@
       "amount": {
         "value": 0.0,
         "currency": "USD"
-      }
-    },
-    {
-      "category" : {
-        "coding" : [
-          {
-            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
-            "code" : "innetwork"
-          }
-        ]
-      },
-      "amount" : {
-        "value" : 0.0,
-        "currency" : "USD"
       }
     }
   ]

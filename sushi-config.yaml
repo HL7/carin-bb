@@ -18,19 +18,19 @@ title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 status: active
 publisher:
   name: HL7 Financial Management Working Group
-  url: http://www.hl7.org/Special/committees/fm/index.cfm
+  url: http://www.hl7.org/Special/committees/fm
   email: fm@lists.HL7.org
 description: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.1   # updated from 3.1.0 on 9/23/20
+  hl7.fhir.us.core: 4.0.0   # updated from 3.1.1 on 9/23/21
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
 copyrightYear: 2020+
-releaseLabel: STU1 Update
+releaseLabel: CI - STU2 Draft
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -59,8 +59,33 @@ menu:
     Authorization and Authentication: 7_Authorization_Authentication_and_Registration.html#authorization-and-authentication
   Examples:  artifacts.html#7
   Downloads: 8_downloads.html
-  Change Notes: 9_change_notes.html
+  Change Notes: change_notes.html
 
+
+
+pages:
+  index.md:
+    title: Home
+  1_Background.md: 
+    title: Background
+  2_Use_Case.md:
+    title: Use Case
+  3_General_Guidance.md:
+    title: General Guidance
+  4_Common_Payer_Consumer_Data_Set.md:
+    title: Common Payer Consumer Data Set (CPCDS)
+  5_Terminology_Licensure.md:
+    title: Terminology Licensure
+  artifacts.html:
+    title: Artifacts Summary
+  6_searchparameters.md:
+    title: Search Parameters
+  7_Authorization_Authentication_and_Registration.md:
+    title: Authentication and Authorization
+  8_downloads.md:
+    title: Downloads
+  change_notes.md:
+    title: Change Notes
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To control the package-list.json using this config, uncomment and set the "history" property. │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

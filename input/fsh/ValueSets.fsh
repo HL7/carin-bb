@@ -95,7 +95,7 @@ Description: "Identifies the type of recipient of the adjudication amount; i.e.,
 * C4BBPayeeType#beneficiary 
 * $HL7PayeeType#subscriber 
 * $HL7PayeeType#provider
-* $HL7PayeeType#other 
+* $HL7PayeeType#other "Other" 
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBClaimProfessionalAndNonClinicianDiagnosisType 
@@ -194,4 +194,24 @@ ValueSet: C4BBInstitutionalClaimSubType
 Title: "C4BB Institutional Claim SubType"
 Description: "Indicates if institutional ExplanationOfBenefit is inpatient or putpatient."
 * codes from system C4BBInstitutionalClaimSubType
-* ^copyright = "This CodeSystem is not copyrighted."
+* ^copyright = "This ValueSet is not copyrighted."
+
+ValueSet: C4BBProfessionalAndNonClinicianClaimType
+Title: "C4BB Professional And Non Clinician Claim Type"
+Description: "This value set includes Professional and Non Clinician Claim Type codes."
+* $HL7ClaimTypeCS#professional
+* ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBProfessionalAndNonClinicianClaimSubType
+Title: "C4BB Professional And Non Clinician Claim SubType"
+Description: "This value set includes Professional and Non Clinician Claim SubType codes."
+* $HL7ClaimTypeCS#vision
+* ^copyright = "This Valueset is not copyrighted."
+
+
+ValueSet: C4BBSurfaceCodes
+Title: "US Surface Codes"
+Description: "This value set includes FDI tooth surface codes localized for the US Realm."
+* codes from system C4BBSurfaceCodes
+* ^copyright = "This ValueSet is not copyrighted."
+

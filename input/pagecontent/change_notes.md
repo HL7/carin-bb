@@ -41,7 +41,7 @@ The current official published version of CARIN BB for FHIR R4 (STU Update of ST
             <li>Added guidance on the use of meta.profile as notes to all profiles.</li>
         </ul>
     </li>
-    <li>Updated NCPDP CodeSystem URLs (<a href="https://jira.hl7.org/browse/FHIR-31492">FHIR-31492</a>) including: 
+    <li>Updated NCPDP CodeSystem URLs (<a href="https://jira.hl7.org/browse/FHIR-31492">FHIR-31492</a>) including:
         <ul>
             <li><a href="CodeSystem-NCPDPBrandGenericIndicator.html">NCPDP Brand Generic Indicator</a></li>
             <li><a href="CodeSystem-NCPDPCompoundCode.html">NCPDP Compound Code</a></li>
@@ -50,11 +50,11 @@ The current official published version of CARIN BB for FHIR R4 (STU Update of ST
             <li><a href="CodeSystem-NCPDPRejectCode.html">NCPDP Reject Code</a></li>
         </ul>
     </li>
-    <li>Changed inoutnetwork slice names and cardinalities (<a href="https://jira.hl7.org/browse/FHIR-30635">FHIR-30635</a>)
+    <li>Changed inoutnetwork slice names and cardinalities (<a href="https://jira.hl7.org/browse/FHIR-30635">FHIR-30635</a>),&nbsp;Move total [benefitpaymentstatus] slice to supportingInfo (<a href="https://jira.hl7.org/browse/FHIR-33082">FHIR-33082</a>)
         <ul>
-            <li>Changed <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional-definitions.html#ExplanationOfBenefit.total:benefitpaymentstatus">Inpatient Institutional</a>, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional-definitions.html#ExplanationOfBenefit.total:benefitpaymentstatus">Outpatient Institutional</a>, and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy-definitions.html#ExplanationOfBenefit.total:benefitpaymentstatus">Pharmacy</a> EOBs total[inoutnetwork] slice name to benefitpaymentstatus</li>
+            <li>Changed <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional-definitions.html#ExplanationOfBenefit.supportingInfo:benefitpaymentstatus">Inpatient Institutional</a>, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional-definitions.html#ExplanationOfBenefit.supportingInfo:benefitpaymentstatus">Outpatient Institutional</a>, and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy-definitions.html#ExplanationOfBenefit.supportingInfo:benefitpaymentstatus">Pharmacy</a> EOBs total[inoutnetwork] slice name to benefitpaymentstatus</li>
             <li>Changed <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician-definitions.html#ExplanationOfBenefit.item.adjudication:benefitpaymentstatus">Professional and NonClinician EOB item.adjudication[inoutnetwork]</a> slice name to benefitpayementstatus</li>
-            <li>Changed cardinality of <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional-definitions.html#ExplanationOfBenefit.total:benefitpaymentstatus">Inpatient</a> and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional-definitions.html#ExplanationOfBenefit.total:benefitpaymentstatus">Outpatient</a> Institutional EOB total[benefitpaymentstatus] from (0..1) to (1..1)</li>
+            <li>Changed cardinality of <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional-definitions.html#ExplanationOfBenefit.supportingInfo:benefitpaymentstatus">Inpatient</a> and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional-definitions.html#ExplanationOfBenefit.supportingInfo:benefitpaymentstatus">Outpatient</a> Institutional EOB supportingInfo[benefitpaymentstatus] from (0..1) to (1..1)</li>
             <li>Removed notes in <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html#root">Professional and NonClinician EOB</a> referencing total[inoutnetwork] slice name</li>
             <li>Updated notes for all profiles that referenced inoutnetwork slice name to benefitpaymentstatus</li>
             <li>Updated the Detailed Profile Comparison <a href="4_Common_Payer_Consumer_Data_Set.html#profiles-definition">image</a> and <a href="CARINforBlueButtonProfileComparison.xlsx">source file (xslx)</a> in section 5</li>
@@ -84,6 +84,14 @@ The current official published version of CARIN BB for FHIR R4 (STU Update of ST
     </li>
     <li>Added <a href="index.html#authors">additional contributors</a> (<a href="https://jira.hl7.org/browse/FHIR-30084">FHIR-30084</a>)</li>
     <li>Transitioned project structure for Sushi 1.0.0+ (For Implementation Guide generation)</li>
+    <li>Corrected link to 3M licensing information <a>https://jira.hl7.org/browse/FHIR-31066</a></li>
+    <li>Updated the Server CapabilityStatement
+	 Persuasive with Mod, Add _id to Coverage Search parameters in CapabilityStatement <a>https://jira.hl7.org/browse/FHIR-30009</a>
+    <li>Added Tighter guidance requiring WHEN provenance in the EOB profiles<a>https://jira.hl7.org/browse/FHIR-31639</a>
+    <li>Removed the invariant referring to careTeam role "site" from the IG<a>https://jira.hl7.org/browse/FHIR-31658</a></li>
+    <li>Increased binding strength for place of service codes<a>https://jira.hl7.org/browse/FHIR-31502</a></li>
+    <li>Added more granular date searching with additional search parameters<a>https://jira.hl7.org/browse/FHIR-33165</a></li>
+    <li>Removed Invariant disallowing not-applicable from Outpatient Institutional EoB item.productOrService<a>https://jira.hl7.org/browse/FHIR-32850</a></li>
+    <li>Change item.location[x] to only locationCodeableConcept<a>https://jira.hl7.org/browse/FHIR-32067</a></li>
 </ul>
 <p> </p>
-</div>

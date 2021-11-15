@@ -1,271 +1,188 @@
 == Suppressed Messages ==
-# The following code systems are external and not supported by terminology server 
 
-# These are actual warnings to surpress, all relating to validation of values from terminologies
+# The following code systems are external and not supported by terminology server, and cannot be validated in examples
+INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[3].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[2].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
 
-# informational -- these examples are in the IG because they are examples of the referenced profiles. 
+INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[4].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[3].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated
 
-# Suppress warning about Jira specification not being updated. This IG has CodeSystem and ValueSet names that are the same, which requires manually modifying the Jira Artifact names to avoid a conflict.
+INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[5].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[4].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated
 
-WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
+INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[6].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[5].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated
 
-# Suppress warning of lack of example code validation due to unknown external code system uri, CodeSystem not in terminology server
+INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.item[0].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.item[0].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[0].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[1].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[2].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[3].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[4].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[5].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[6].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[7].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[8].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[9].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[10].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[11].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[12].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[0].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[1].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
 
-Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
-Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated
-Code System URI 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated
-Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated
-Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' is unknown so the code cannot be validated
-Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' is unknown so the code cannot be validated
-Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' is unknown so the code cannot be validated
-Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' is unknown so the code cannot be validated
-Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
-Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
-Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
-Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[0].productOrService.coding[0]: Code System URI 'https://www.ada.org/en/publications/cdt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[1].productOrService.coding[0]: Code System URI 'https://www.ada.org/en/publications/cdt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOral2: ExplanationOfBenefit.item[0].productOrService.coding[0]: Code System URI 'https://www.ada.org/en/publications/cdt' is unknown so the code cannot be validated
 
+INFORMATION: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[0].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[1].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOral2: ExplanationOfBenefit.item[0].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBProfessional1a: ExplanationOfBenefit.item[0].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
 
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[0].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[1].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[2].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[3].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[4].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[5].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[6].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[7].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[8].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[9].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[10].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[11].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[12].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[0].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[1].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[0].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[1].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[2].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[3].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[4].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[5].location.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
 
-# Suppress warnings for inability to support proprietary closed external codeSystems
+INFORMATION: ExplanationOfBenefit/EOBProfessional1a: ExplanationOfBenefit.item[0].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[0].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[1].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[2].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[3].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[4].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[5].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[6].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[7].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[8].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[9].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[10].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[11].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[12].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[0].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[1].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[0].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[1].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[2].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[3].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[4].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[5].productOrService.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
 
-WARNING: ValueSet.where(id = 'AHANUBCPatientDischargeStatus'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PatDischargeStatus
-WARNING: ValueSet.where(id = 'AHANUBCPointOfOriginForAdmissionOrVisit'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PointOfOrigin
-WARNING: ValueSet.where(id = 'AHANUBCPresentOnAdmission'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
-WARNING: ValueSet.where(id = 'AHANUBCPriorityTypeOfAdmissionOrVisit'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit
-WARNING: ValueSet.where(id = 'AHANUBCRevenueCodes'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/RevenueCodes
-WARNING: ValueSet.where(id = 'AHANUBCTypeOfBill'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/TypeOfBill
-WARNING: ValueSet.where(id = 'AMACPTCMSHCPCSModifiers'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
-WARNING: ValueSet.where(id = 'AMACPTCMSHCPCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
-WARNING: ValueSet.where(id = 'CMSICD910PCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/ICD10
-WARNING: ValueSet.where(id = 'CMSMS3MAPAPRDRG'): Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software
-
-WARNING: ValueSet.where(id = 'CMSPlaceofServiceCodes'): Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set
-WARNING: ValueSet.where(id = 'NCPDPCompoundCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode
-WARNING: ValueSet.where(id = 'NCPDPDispensedAsWrittenOrProductSelectionCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode
-WARNING: ValueSet.where(id = 'NCPDPPrescriptionOriginCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode
-WARNING: ValueSet.where(id = 'NCPDPRejectCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPRejectCode
-WARNING: ValueSet.where(id = 'NCPDPBrandGenericIndicator'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator
-WARNING: ValueSet.where(id = 'X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes'): Error from server: Unable to provide support for code system https://x12.org/codes/claim-adjustment-reason-codes
-
-WARNING: ValueSet.where(id = 'FDANationalDrugCode'): Error from server: Unable to provide support for code system http://hl7.org/fhir/sid/ndc
-
-
-# Suppress warnings about examples validation of proprietary closed external codeSystems
-
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/simple-language because the value set or code system is not known to the validator]
-
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus because the value set or code system is not known to the validator]
-
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericIndicator because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or code system is not known to the validator]
-
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes because the value set or code system is not known to the validator]
-
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/FDANDCOrCompound because the value set or code system is not known to the validator]
-
-
-
-# Suppress Slicing Information for extra meta.profile in Example added by SUSHI
-
-INFORMATION: Coverage/Coverage1: Coverage.meta.profile[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.meta.profile[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
-INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.meta.profile[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
-INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.meta.profile[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy
-INFORMATION: ExplanationOfBenefit/EOBProfessional1a: ExplanationOfBenefit.meta.profile[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
-INFORMATION: Organization/OrganizationProvider1: Organization.meta.profile[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/Payer1: Organization.meta.profile[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Patient/Patient1: Patient.meta.profile[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
-
-
-# Suppress Process Info to validate ImplementationGuide against profile StructureDefintion/ImplementationGuide
-
-INFORMATION: ImplementationGuide/hl7.fhir.us.carin-bb: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
-
-
-# Suppress Process Info to validate CapabilityStatement against profile StructureDefintion/CapabilityStatement
-
-INFORMATION: CapabilityStatement/c4bb: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[0].procedure.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[1].procedure.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[2].procedure.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
 
 
-# Suppress Process Info to validate StructureDefinitions against profile StructureDefintion/StructureDefintion
+INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[5].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' is unknown so the code cannot be validated
 
-INFORMATION: StructureDefinition/C4BB-Coverage: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/C4BB-Patient: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/C4BB-Practitioner: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[6].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' is unknown so the code cannot be validated
+
+INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[8].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' is unknown so the code cannot be validated
+
+INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[1].code.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' is unknown so the code cannot be validated
 
 
-# Suppress Process Info to validate CodeSystem against profile StructureDefintion/CodeSystem
-
-INFORMATION: CodeSystem/AHANUBCPatientDischargeStatus: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNewborn: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/AHANUBCPresentOnAdmission: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/AHANUBCPriorityTypeOfAdmissionOrVisit: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/AHANUBCRevenueCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/AHANUBCTypeOfBill: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/C4BBAdjudication: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/C4BBAdjudicationDiscriminator: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/C4BBClaimCareTeamRole: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-
-INFORMATION: CodeSystem/C4BBClaimDiagnosisType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/C4BBClaimProcedureType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/C4BBCompoundLiteral: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/C4BBIdentifierType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/C4BBInstitutionalClaimSubType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/C4BBPayeeType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/C4BBPayerAdjudicationStatus: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/C4BBRelatedClaimRelationshipCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/C4BBSupportingInfoType: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/CMSHCPCSCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-
-INFORMATION: CodeSystem/CMSHIPPSCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/CMSMSDRG: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/CMSPlaceofServiceCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/CMSRemittanceAdviceRemarkCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/NCPDPBrandGenericIndicator: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/NCPDPCompoundCode: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/NCPDPPrescriptionOriginCode: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/NCPDPRejectCode: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/THREEMAPDRG: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-
-INFORMATION: CodeSystem/THREEMAPRDRG: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-INFORMATION: CodeSystem/X12ClaimAdjustmentReasonCodes: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 
 
-# Suppress Process Info to validate ValueSet against profile StructureDefintion/ValueSet
+WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[5].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericIndicator because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[6].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[8].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' is unknown so the code cannot be validated]
 
-INFORMATION: ValueSet/AHANUBCPatientDischargeStatus: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/AHANUBCPresentOnAdmission: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/AHANUBCRevenueCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/AHANUBCTypeOfBill: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/AMACPTCMSHCPCSModifiers: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/AMACPTCMSHCPCSProcedureCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBAdjudication: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBAdjudicationCategoryDiscriminator: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+WARNING: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[3].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[2].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated]
 
-INFORMATION: ValueSet/C4BBClaimIdentifierType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBClaimInpatientInstitutionalDiagnosisType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBClaimInstitutionalCareTeamRole: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBClaimOutpatientInstitutionalDiagnosisType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBClaimPharmacyTeamRole: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBClaimProcedureType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBClaimProfessionalAndNonClinicianCareTeamRole: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBClaimProfessionalAndNonClinicianDiagnosisType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBEOBInstitutionalProcedureCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBInstitutionalClaimSubType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+WARNING: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[4].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[3].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated]
 
-INFORMATION: ValueSet/C4BBOrganizationIdentifierType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBPatientIdentifierType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBPayeeType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBPayerBenefitPaymentStatus: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBPayerClaimPaymentStatusCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBPayerProviderContractingStatus: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBPractitionerIdentifierType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBRelatedClaimRelationshipCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBSupportingInfoType: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/C4BBTotalCategoryDiscriminator: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+WARNING: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[5].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[4].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated]
 
-INFORMATION: ValueSet/CDCICD910CMDiagnosisCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/CMSICD910PCSProcedureCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/CMSMS3MAPAPRDRG: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/CMSPlaceofServiceCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/FDANDCOrCompound: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/FDANationalDrugCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/NCPDPBrandGenericIndicator: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/NCPDPCompoundCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/NCPDPPrescriptionOriginCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+WARNING: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[6].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[5].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated]
 
-INFORMATION: ValueSet/NCPDPRejectCode: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+WARNING: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.item[0].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[0].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[1].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[2].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[3].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[4].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[5].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[6].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[7].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[8].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[9].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[10].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[11].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[12].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[0].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[1].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+
+WARNING: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[0].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[1].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[2].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[3].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[4].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit.item[5].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[0].procedure.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[1].procedure.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.procedure[2].procedure.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated]
 
 
-# Suppress Process Info to validate SearchParameter against profile StructureDefintion/SearchParameter
-
-INFORMATION: SearchParameter/coverage-payor: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/explanationofbenefit-care-team: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/explanationofbenefit-coverage: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/explanationofbenefit-identifier: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/explanationofbenefit-insurer: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/explanationofbenefit-patient: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/explanationofbenefit-provider: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/explanationofbenefit-service-date: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/explanationofbenefit-type: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/practitionerrole-organization: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: SearchParameter/practitionerrole-practitioner: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+WARNING: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.item[0].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.item[0].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
 
 
-# Suppress Process Info to validate example against IG defined profile
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[0].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[1].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[2].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[3].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[4].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[5].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[6].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[7].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[8].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[9].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[10].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[11].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[12].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
 
-INFORMATION: Coverage/Coverage1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
-INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
-INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy
-INFORMATION: ExplanationOfBenefit/EOBProfessional1a: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
-INFORMATION: Organization/OrganizationProvider1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/Payer1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Patient/Patient1: Patient: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
-INFORMATION: Coverage/CoverageEx1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-INFORMATION: Coverage/CoverageEx2: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+WARNING: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[0].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[1].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/EOBProfessional1a: ExplanationOfBenefit.item[0].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
 
-INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
-INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
-INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
-INFORMATION: Organization/PayerOrganizationExample1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/ProviderOrganization1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/ProviderOrganization3: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/ProviderOrganization4: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/ProviderOrganization5: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Organization/ProviderOrganization6: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-INFORMATION: Patient/ExamplePatient1: Patient: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
+WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[5].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericIndicator because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' is unknown so the code cannot be validated]
 
-INFORMATION: Practitioner/Practitioner1: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
-INFORMATION: Practitioner/Practitioner2: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
-INFORMATION: Practitioner/Practitioner3: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
+WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[6].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' is unknown so the code cannot be validated]
+
+WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[8].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' is unknown so the code cannot be validated]
+
+WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.supportingInfo[1].code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' is unknown so the code cannot be validated]
+
+WARNING: ValueSet.where(id = 'CMSICD910PCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/ICD9
 
 
-# Suppress Process Info to validate example against IG defined profile listed in metadata
+# Invalid NDC display warnings (extra spaces in display)
+WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.item[0].productOrService.coding[0]: The display "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)" is not a valid display for the code {http://hl7.org/fhir/sid/ndc}0777-3105-02 - should be one of ['Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02)  (package)'] (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/ndc#0777-3105-02'
+WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.item[0].productOrService: The display "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)" is not a valid display for the code {http://hl7.org/fhir/sid/ndc}0777-3105-02 - should be one of ['Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02)  (package)'] (from http://tx.fhir.org/r4)
 
-INFORMATION: Coverage/Coverage1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage - listed in meta
-INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional - listed in meta
-INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional - listed in meta
-INFORMATION: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy - listed in meta
-INFORMATION: ExplanationOfBenefit/EOBProfessional1a: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician - listed in meta
-INFORMATION: Organization/OrganizationProvider1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
-INFORMATION: Organization/Payer1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
-INFORMATION: Patient/Patient1: Patient: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient - listed in meta
-INFORMATION: Coverage/CoverageEx1: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage - listed in meta
-INFORMATION: Coverage/CoverageEx2: Coverage: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage - listed in meta
-
-INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional - listed in meta
-INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional - listed in meta
-INFORMATION: ExplanationOfBenefit/ProfessionalEOBExample1: ExplanationOfBenefit: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician - listed in meta
-INFORMATION: Organization/PayerOrganizationExample1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
-INFORMATION: Organization/ProviderOrganization1: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
-INFORMATION: Organization/ProviderOrganization3: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
-INFORMATION: Organization/ProviderOrganization4: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
-INFORMATION: Organization/ProviderOrganization5: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
-INFORMATION: Organization/ProviderOrganization6: Organization: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization - listed in meta
-INFORMATION: Patient/ExamplePatient1: Patient: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient - listed in meta
-
-INFORMATION: Practitioner/Practitioner1: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner - listed in meta
-INFORMATION: Practitioner/Practitioner2: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner - listed in meta
-INFORMATION: Practitioner/Practitioner3: Practitioner: Validate resource against profile http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner - listed in meta
+# IG Has explicitly stated examples for profiles
+INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Oral'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy'): The Implementation Guide contains no explicitly linked examples for this profile

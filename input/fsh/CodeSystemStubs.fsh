@@ -377,6 +377,12 @@ RuleSet: HCPCSCopyrightNotice
 * ^copyright = "See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
 
 
+RuleSet: ADACopyrightNotice
+* ^copyright = "American Dental Association (ADA) developed Current Dental Terminology (CDT®) as a standardized language to help dentists and other members of the healthcare industry communicate effectively. CDT is revised and updated every year.
+
+The ADA is the exclusive copyright owner of CDT, the Code on Dental Procedures and Nomenclature (the Code), and the ADA Dental Claim Form. Except as permitted by law, all use, copying or distribution of CDT, or any portion thereof (including the Code on Dental Procedures and Nomenclature) in any product or services (including works prepared for clients by consultants and other professionals), whether in printed, electronic or other format, requires a valid commercial user license from the ADA.
+
+For more information : https://www.ada.org/en/publications/ada-catalog/cdt-products/licensing-for-commercial-users"
 
 
 // 20210201 CAS:  https://jira.hl7.org/browse/FHIR-30413 - Add HIPPS to Institutional item.productOrService Value Set
@@ -464,6 +470,7 @@ General information can be found here: [https://www.cms.gov/Medicare/Coding/MedH
 Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets](https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets)
 
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
+* include $HL7DataAbsentReason#not-applicable "Not Applicable"
 * codes from system $CPT
 * codes from system CMSHCPCSCodes
 * ^copyright = "Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
@@ -585,6 +592,45 @@ These files contain the Level II alphanumeric HCPCS procedure and modifier codes
 * ^copyright = "Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
 
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
+
+
+// ******** American Dental Association CDT ********
+CodeSystem: ADADentalProcedureCode
+Title: "ADA Code on Dental Procedures and Nomenclature"
+Description: "The purpose of the CDT Code is to achieve uniformity, consistency and specificity in accurately documenting dental treatment. One use of the CDT Code is to provide for the efficient processing of dental claims, and another is to populate an Electronic Health Record.
+
+On August 17, 2000 the CDT Code was named as a HIPAA standard code set. Any claim submitted on a HIPAA standard electronic dental claim must use dental procedure codes from the version of the CDT Code in effect on the date of service. The CDT Code is also used on paper dental claims, and the ADA's paper claim form data content reflects the HIPAA electronic standard.
+
+CDT is published Annually. Versions should refect the YYYY of the release.
+
+The Council on Dental Benefit Programs (CDBP) has ADA Bylaws responsibility for CDT Code maintenance. To fulfill this obligation CDBP established its Code Maintenance Committee (CMC), a body that includes representatives from various sectors of the dental community (e.g., ADA; dental specialty organizations; third-party payers). CMC members, by their votes, determine which of the requested actions are incorporated into the CDT Code.
+
+Please see Code Maintenance Committee (CMC) page for information about the CMC's members and activities.
+
+To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
+* ^url = "https://www.ada.org/en/publications/cdt"
+* insert CodeSystemStubBoilerplate
+* insert ADACopyrightNotice
+
+
+
+ValueSet: ADADentalProcedureCode
+Title: "ADA Code on Dental Procedures and Nomenclature"
+Description: "The purpose of the CDT Code is to achieve uniformity, consistency and specificity in accurately documenting dental treatment. One use of the CDT Code is to provide for the efficient processing of dental claims, and another is to populate an Electronic Health Record.
+
+On August 17, 2000 the CDT Code was named as a HIPAA standard code set. Any claim submitted on a HIPAA standard electronic dental claim must use dental procedure codes from the version of the CDT Code in effect on the date of service. The CDT Code is also used on paper dental claims, and the ADA's paper claim form data content reflects the HIPAA electronic standard.
+
+CDT is published Annually. Versions should refect the YYYY of the release.
+
+The Council on Dental Benefit Programs (CDBP) has ADA Bylaws responsibility for CDT Code maintenance. To fulfill this obligation CDBP established its Code Maintenance Committee (CMC), a body that includes representatives from various sectors of the dental community (e.g., ADA; dental specialty organizations; third-party payers). CMC members, by their votes, determine which of the requested actions are incorporated into the CDT Code.
+
+Please see Code Maintenance Committee (CMC) page for information about the CMC's members and activities.
+
+To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
+* codes from system ADADentalProcedureCode
+* include $HL7DataAbsentReason#not-applicable "Not Applicable"
+* insert ADACopyrightNotice
+
 
 // ******** DRGs ***************
 
@@ -901,4 +947,95 @@ Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of IC
 * codes from system $ICD10PCS
 * codes from system $ICD9PCS
 * ^copyright = "The International Classification of Diseases, Tenth Revision, Procedure Coding System (ICD-10-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS) available for public use. CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-10-PCS.
+
 The International Classification of Diseases, Ninth Revision, Procedure Coding System (ICD-9-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS) available for public use. CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-9-PCS."
+
+
+
+CodeSystem: ADAUniversalNumberingSystem
+Title: "American Dental Association Universal Numbering System"
+Description: "The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
+
+Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
+* #1	"Permanent teeth right maxillary third molar (wisdom tooth)"	
+* #2	"Permanent teeth right second molar (12-year molar)"
+* #3	"Permanent teeth right first molar (6-year molar)"
+* #4	"Permanent teeth right second premolar (bicuspid)"
+* #5	"Permanent teeth right first premolar (bicuspid)"
+* #6	"Permanent teeth right canine (cuspid)"
+* #7	"Permanent teeth right lateral incisor"
+* #8	"Permanent teeth right central incisor"
+* #9	"Permanent teeth left maxillary central incisor"
+* #10	"Permanent teeth left maxillary lateral incisor"
+* #11	"Permanent teeth left maxillary canine (cuspid)"
+* #12	"Permanent teeth left maxillary first premolar (bicuspid)"
+* #13	"Permanent teeth left maxillary second premolar (bicuspid)"
+* #14	"Permanent teeth left maxillary first molar (6-year molar)"
+* #15	"Permanent teeth left maxillary second molar (12-year molar)"
+* #16	"Permanent teeth left maxillary third molar (wisdom tooth)"
+* #17	"Permanent teeth left mandibular third molar (wisdom tooth)"
+* #18	"Permanent teeth left mandibular second molar (12-year molar)"
+* #19	"Permanent teeth left mandibular first molar (6-year molar)"
+* #20	"Permanent teeth left mandibular second premolar (bicuspid)"
+* #21	"Permanent teeth left mandibular first premolar (bicuspid)"
+* #22	"Permanent teeth left mandibular canine (cuspid)"
+* #23	"Permanent teeth left mandibular lateral incisor"
+* #24	"Permanent teeth left mandibular central incisor"
+* #25	"Permanent teeth right mandibular central incisor"
+* #26	"Permanent teeth right mandibular lateral incisor"
+* #27	"Permanent teeth right mandibular canine (cuspid)"
+* #28	"Permanent teeth right mandibular first premolar (bicuspid)"
+* #29	"Permanent teeth right mandibular second premolar (bicuspid)"
+* #30	"Permanent teeth right mandibular first molar (6-year molar)"
+* #31	"Permanent teeth right mandibular second molar (12-year molar)"
+* #32	"Permanent teeth right mandibular third molar (wisdom tooth)"
+* #A	"Primary teeth right maxillarysecond molar"
+* #B	"Primary teeth right maxillaryfirst molar"
+* #C	"Primary teeth right maxillarycanine"
+* #D	"Primary teeth right maxillarylateral incisor"
+* #E	"Primary teeth right maxillarycentral incisor"
+* #F	"Primary teeth left maxillarycentral incisor"
+* #G	"Primary teeth left maxillarylateral incisor"
+* #H	"Primary teeth left maxillarycanine"
+* #I	"Primary teeth left maxillaryfirst molar"
+* #J	"Primary teeth left maxillarysecond molar"
+* #K	"Primary teeth left mandibularsecond molar"
+* #L	"Primary teeth left mandibularfirst molar"
+* #M	"Primary teeth left mandibularcanine"
+* #N	"Primary teeth left mandibularlateral incisor"
+* #O	"Primary teeth left mandibularcentral incisor"
+* #P	"Primary teethright mandibularcentral incisor"
+* #Q	"Primary teethright mandibularlateral incisor"
+* #R	"Primary teethright mandibularcanine"
+* #S	"Primary teethright mandibularfirst molar"
+* #T	"Primary teethright mandibularsecond molar"
+* insert ADACopyrightNotice
+
+CodeSystem: ADAAreaOfOralCavitySystem
+Title: "American Dental Association Area of Oral Cavity System"
+Description: "The American Dental Association Area of Oral Cavity System is a notation system indicatinf a quadrant, arch, or the entire mouth."
+* #00	"Entire oral cavity"	
+* #01	"Maxillary arch"
+* #02	"Mandibular arch"
+* #10	"Upper right quadrant"
+* #20	"Upper left quadrant"
+* #30	"Lower left quadrant"
+* #40	"Lower right quadrant"
+* insert ADACopyrightNotice
+
+ValueSet: OralBodySite
+Title: "Oral Body Site Value Set"
+Description: "Oral Body Site indicating tooth numbers and area of oral cavity."
+
+* codes from system ADAUniversalNumberingSystem
+* codes from system ADAAreaOfOralCavitySystem
+* insert ADACopyrightNotice
+
+
+ValueSet: ADAUniversalNumberingSystem
+Title: "American Dental Association Universal Numbering Value Set"
+Description: "The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
+
+Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
+* codes from system ADAUniversalNumberingSystem
+* insert ADACopyrightNotice

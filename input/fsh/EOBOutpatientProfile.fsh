@@ -2,7 +2,7 @@ Profile: C4BBExplanationOfBenefitOutpatientInstitutional
 Parent: C4BB-ExplanationOfBenefit
 Id: C4BB-ExplanationOfBenefit-Outpatient-Institutional
 Title: "C4BB ExplanationOfBenefit Outpatient Institutional"
-Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at an institution that are not part of an overnight stay. 
+Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at an institution that are not part of an overnight stay.
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services."
 // 20210322 CAS: FHIR-30575
 * meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|1.1.0)
@@ -20,46 +20,49 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * careTeam obeys EOB-inst-careTeam-organization
 * careTeam obeys EOB-careteam-qualification
 * careTeam.qualification from $USCoreProviderSpecialty (required)
-* identifier MS   
+* identifier MS
 * diagnosis 1..*
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from CDCICD910CMDiagnosisCodes (required)
 * provider only Reference(C4BBOrganization)
-* insert SupportingInfoSlicing 
-* supportingInfo contains 
+* insert SupportingInfoSlicing
+* supportingInfo contains
    billingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
-   typeofbill 0..1 MS and 
-   pointoforigin 0..1 MS and 
-   admtype 0..1 MS and 
-   discharge-status 0..1 MS and 
+   typeofbill 0..1 MS and
+   pointoforigin 0..1 MS and
+   admtype 0..1 MS and
+   discharge-status 0..1 MS and
         // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
    medicalrecordnumber 0..1 MS and
-   patientaccountnumber 0..1 MS
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus 
+   patientaccountnumber 0..1 MS and
+   //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
+   benefitpaymentstatus 1..1 MS
+* supportingInfo[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].category MS
-* supportingInfo[clmrecvddate].timing[x] only date 
+* supportingInfo[clmrecvddate].timing[x] only date
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
 * supportingInfo[typeofbill].category = C4BBSupportingInfoType#typeofbill
-* supportingInfo[typeofbill].category MS 
+* supportingInfo[typeofbill].category MS
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
-* supportingInfo[typeofbill].code 1..1 MS 
+* supportingInfo[typeofbill].code 1..1 MS
 * supportingInfo[admtype].category = C4BBSupportingInfoType#admtype
-* supportingInfo[admtype].category MS 
+* supportingInfo[admtype].category MS
 * supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
-* supportingInfo[admtype].code 1..1 MS 
+* supportingInfo[admtype].code 1..1 MS
 * supportingInfo[pointoforigin].category = C4BBSupportingInfoType#pointoforigin
-* supportingInfo[pointoforigin].category MS 
+* supportingInfo[pointoforigin].category MS
 * supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
 // FHIR-30807 - Change cardinality in EOB Inpatient and Outpatient Institutional Profiles
-* supportingInfo[pointoforigin].code 1..1 MS 
+* supportingInfo[pointoforigin].code 1..1 MS
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
-* supportingInfo[discharge-status].category MS 
+* supportingInfo[discharge-status].category MS
 * supportingInfo[discharge-status].code  1..1 MS
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
@@ -70,10 +73,11 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from C4BBEOBInstitutionalProcedureCodes (required)
-// 20210201 CAS: FHIR-30357 - item.productOrService is required when item.revenue is provided
+/* 20211110 CAS: https://jira.hl7.org/browse/FHIR-32850
 * item.productOrService obeys EOB-out-inst-item-productorservice
-* item.productOrService ^comment = "Put the comment here for item.productOrService here"
-* item  ^comment = "Put the comment here for item"
+*/
+//* item.productOrService ^comment = "Put the comment here for item.productOrService here"
+//* item  ^comment = "Put the comment here for item"
 * insert EOBHeaderItemAdjudicationInvariant
 * insert ItemAdjudicationInvariant
 * insert ItemAdjudicationSlicing
@@ -84,20 +88,20 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
 * item.adjudication[allowedunits].value 1..1 MS
-* item.adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
+* item.adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
 * insert AdjudicationInvariant
-* insert AdjudicationSlicing 
-* adjudication  MS 
-* item.adjudication  MS 
+* insert AdjudicationSlicing
+* adjudication  MS
+* item.adjudication  MS
 * adjudication contains
    adjudicationamounttype 0..* MS and  /* restricted to 1..* by invariant */
-   denialreason 0..* MS 
-* adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason 
+   denialreason 0..* MS
+* adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * adjudication[denialreason].reason 1..1 MS
 * adjudication[adjudicationamounttype].category from C4BBAdjudication (required)
@@ -108,11 +112,9 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * insert TotalSlicing
 * total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total contains
-   adjudicationamounttype 1..* MS and
-   benefitpaymentstatus 1..1 MS 
-* total[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+   adjudicationamounttype 1..* MS
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
-* total[adjudicationamounttype].amount MS 
+* total[adjudicationamounttype].amount MS
 //* total[adjudicationamounttype].amount 1..1
 * status MS
 * created MS
@@ -120,12 +122,15 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.revenue MS
 * item.productOrService MS
 * item.modifier MS
+
+* item.serviced[x] 1..1
 * item.serviced[x] only date 
 * item.servicedDate MS
+
 * item.quantity MS
 * payment.type MS
 * payment.date MS
-* processNote.text MS 
+* processNote.text MS
 
 * supportingInfo[pointoforigin] ^comment = "Identifies the place where the patient was identified as needing admission to an institution. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13)"
 * supportingInfo[admtype] ^comment = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14)"
@@ -135,12 +140,12 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * supportingInfo[discharge-status] ^comment = "Patient’s status as of the discharge date for a facility stay. Information located on UB04. (Form Locator 17). (117)"
 * supportingInfo[medicalrecordnumber] ^comment = "Provider submitted medical record number that can be included on the claim. (109)"
 * supportingInfo[patientaccountnumber] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
+* supportingInfo[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
-* total[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
 * diagnosis ^comment = "Diagnosis codes describe an individual's disease or medical condition. (6, 7, 8, 21, 22, 23, 30)"

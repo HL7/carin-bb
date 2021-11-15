@@ -5,7 +5,7 @@
     "lastUpdated": "2020-10-30T09:48:01.8462752-04:00",
     "source": "Organization/PayerOrganizationExample1",
     "profile": [
-      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|1.1.0"
+      "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|1.2.0"
     ]
   },
   "language": "en-US",
