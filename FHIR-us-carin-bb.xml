@@ -154,7 +154,6 @@
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
-<page key="7_Authorization_Authentication_and_Registration" name="Authentication and Authorization"/>
 <page deprecated="true" key="Authorization_Authentication_and_Registration" name="Authorization Authentication and Registration"/>
 <page key="Background" name="Background"/>
 <page key="9_change_notes" name="Change Notes"/>
@@ -166,6 +165,7 @@
 <page key="index" name="Home"/>
 <page key="6_searchparameters" name="Search Parameters"/>
 <page deprecated="true" key="searchparameters" name="Searchparameters"/>
+<page key="Security_And_Privacy_Considerations" name="Security and Privacy Considerations"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="Terminology" name="Terminology"/>
 <page key="5_Terminology_Licensure" name="Terminology Licensure"/>

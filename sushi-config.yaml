@@ -55,8 +55,8 @@ menu:
     Terminology: artifacts.html#5
     Capability Statement: CapabilityStatement-c4bb.html
   Security:
-    General Considerations: 7_Authorization_Authentication_and_Registration.html#general-considerations
-    Security Requirements: 7_Authorization_Authentication_and_Registration.html#security-requirements
+    General Considerations: Security_And_Privacy_Considerations.html#general-considerations
+    Security Requirements: Security_And_Privacy_Considerations.html#security-requirements
   Examples:  artifacts.html#7
   Downloads: 8_downloads.html
   Change Notes: change_notes.html
@@ -79,8 +79,8 @@ pages:
     title: Artifacts Summary
   6_searchparameters.md:
     title: Search Parameters
-  7_Authorization_Authentication_and_Registration.md:
-    title: Authentication and Authorization
+  Security_And_Privacy_Considerations.md:
+    title: Security and Privacy Considerations
   8_downloads.md:
     title: Downloads
   change_notes.md:

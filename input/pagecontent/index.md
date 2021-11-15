@@ -65,6 +65,8 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 
   <li>Added paidbypatientcash and paidbypatientlinkedaccount codes to <a href="ValueSet-C4BBAdjudication.html">Adjudication ValueSet</a> and <a href="CodeSystem-C4BBAdjudication.html">Adjudication CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-33996">FHIR-33996</a>)</li>
 
+  <li>Modified security guidance in <a href="Security_And_Privacy_Considerations.html">Security and Privacy Considerations</a> page (<a href="https://jira.hl7.org/browse/FHIR-31693">FHIR-31693</a>)</li>
+
   <li>Changed display of code other from default value of "Provider to "Other" in <a href="ValueSet-C4BBPayeeType.html">Payee Type ValueSet</a> (<a href="https://jira.hl7.org/browse/FHIR-34020">FHIR-34020</a>)</li>
 
   <li>Added guidance for the use of the 11-digit NDC code for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy ExplanationOfBenefit</a> profile item.productOrService and item.detail.productOrService (<a href="https://jira.hl7.org/browse/FHIR-32660">FHIR-32660</a>)</li>
