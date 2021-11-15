@@ -128,10 +128,10 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #typeofbill "Type of Bill"  "UB-04 Type of Bill (FL-04) provides specific information for payer purposes."
 * #medicalrecordnumber "Medical Record Number" "Patient Medical Record Number associated with the specific claim."
 * #patientaccountnumber "Patient Account Number" "Patient Account Number associated with the specific claim."
-* #orthodontics "Orthodontics" "[TODO] Need a definition"
-* #prosthesis "Prosthesis" "[TODO] Need a definition"
+* #orthodontics "Orthodontics" "Orthodontics treatment indicator."
+* #prosthesis "Prosthesis" "Prosthesis replacement indicator"
 * #additionalbodysite "Additional Body Site" "Additional tooth number or oral cavity. Additional body sites are specific to line item and have to be linked by ExplanationOfBenefit.item.informationSequence."
-* #missingtoothnumber "Missing Tooth Number" "[TODO] Need a definition"
+* #missingtoothnumber "Missing Tooth Number" "Missing tooth number"
 * ^copyright = "This CodeSystem is not copyrighted."
 
 

@@ -2,9 +2,7 @@ Profile: C4BBExplanationOfBenefitOral
 Parent: C4BB-ExplanationOfBenefit
 Id: C4BB-ExplanationOfBenefit-Oral
 Title: "C4BB ExplanationOfBenefit Oral"
-// TODO: Update description
-Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene.
-The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
+Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene. The ADA Dental Claim Form provides a common format for reporting dental services to a patient's dental benefit plan."
 // 20210216 CAS: FHIR-30575
 * meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
 
@@ -12,7 +10,6 @@ The claims data is based on the professional claim form 1500, submission standar
 //* obeys Oral-EOB-supportinginfo-bodysite-requires-line-item
 * obeys Oral-EOB-surface-subsite-requires-tooth-number
 
-// TODO need updated careTeam Invariants and specialties
 * careTeam obeys EOB-prof-careTeam-practitioner
 * careTeam.qualification MS
 * careTeam.qualification from $USCoreProviderSpecialty (required)  // cardinality constraint?
