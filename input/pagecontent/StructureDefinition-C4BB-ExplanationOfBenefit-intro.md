@@ -20,7 +20,10 @@
 <li>.patient&nbsp; Additional required path:EOB.insurance.coverage(Coverage).beneficiary(Patient).identifier</li>
 <li>.insurer&nbsp; Same as insurance.coverage.organization.&nbsp; Party responsible for reimbursing the provider</li>
 <li>.outcome:&nbsp; value = complete</li>
-<li>.related:&nbsp; If the current claim represents a claim that has been adjusted multiple times, the prior claim number should represent the most recent claim number, not the first claim number.</li>
+<li>.related:&nbsp; .related:  Adjustment requests are used to change an original ExplanationOfBenefit information. The original payment can be increased or decreased, billed units can be changed, or other changes may occur. ExplanationOfBenefit.related captures the identifier of the prior / new ExplanationOfBenefit. 
+If the current adjusts a prior ExplanationOfBenefit, .related.reference = the prior ExplanationOfBenefit identifier and related.relationship value = 'prior'. 
+If the current ExplanationOfBenefit has been adjusted; related.reference = the ExplanationOfBenefit.identifier of the adjusting ExplanationOfBenefit and related.relationship value = 'replacedby'.   
+The .related.reference contains the identifier of the immediately preceding or following ExplanationOfBenefit, not the first or last.</li>
 <li>.supportinginfo.sequence rule:&nbsp; client app implementations should look-up supportingInfo elements based on category values instead of sequence values</li>
 <li>.careTeam.sequence rule:&nbsp; careTeam.sequence values uniquely identify careTeam members.&nbsp; They do not necessarily indiate any order in which the patient was seen by the careTeam or identify any level of significance of the careTeam to the patient, etc.&nbsp; Client app implementations should not assign any significance to the sequence values.&nbsp;&nbsp;&nbsp;</li>
 <li>.insurance:&nbsp;&nbsp;Define an invariant:&nbsp; Will have multiple occurrences on secondary / tertiary, etc. claims.&nbsp; Up to one occurrence, that of the ExplanationOfBenefit.insurer, will have a boolean value = 'True'.&nbsp;</li>

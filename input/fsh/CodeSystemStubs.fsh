@@ -632,6 +632,7 @@ To obtain the underlying code systems, please see information [here](https://www
 * insert ADACopyrightNotice
 
 
+
 // ******** DRGs ***************
 
 CodeSystem: CMSMSDRG
@@ -943,11 +944,10 @@ Most files are provided in compressed zip format for ease in downloading. These 
 
 A link to information about the ICD-10-PCS code system - including how to obtain the content - is available at [https://www.cms.gov/Medicare/Coding/ICD10.](https://www.cms.gov/Medicare/Coding/ICD10)
 
-Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of ICD-10-CM. CMS republishes the ICD-10-CM codes system on their website for convienence only. For authoratative information on ICD-10-CM, users should refer to the National Center for Health Statistics (NCHS) site located [here](https://www.cdc.gov/nchs/icd/icd10cm.htm)."
+Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of ICD-10-CM. CMS republishes the ICD-10-CM codes system on their website for convenience only. For authoritative information on ICD-10-CM, users should refer to the National Center for Health Statistics (NCHS) site located [here](https://www.cdc.gov/nchs/icd/icd10cm.htm)."
 * codes from system $ICD10PCS
 * codes from system $ICD9PCS
 * ^copyright = "The International Classification of Diseases, Tenth Revision, Procedure Coding System (ICD-10-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS) available for public use. CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-10-PCS.
-
 The International Classification of Diseases, Ninth Revision, Procedure Coding System (ICD-9-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS) available for public use. CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-9-PCS."
 
 
@@ -1039,3 +1039,6 @@ Description: "The American Dental Association Universal Numbering System is a to
 Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
 * codes from system ADAUniversalNumberingSystem
 * insert ADACopyrightNotice
+
+
+

@@ -10,11 +10,15 @@ Description: "This profile builds upon the US Core Practitioner profile. It is u
 * meta.profile 1..*
 * insert Metaprofile-supportedProfile-slice
 // 20210322 CAS: FHIR-30575
-* meta.profile[supportedProfile] = Canonical(C4BBPractitioner|1.1.0)
+* meta.profile[supportedProfile] = Canonical(C4BBPractitioner|1.2.0)
 * identifier 1..* MS
 * identifier[NPI] 0..1 MS 
 * identifier contains 
    tax 0..* MS 
+   
+
+* identifier[NPI] ^short = "National Provider Identifier"
+* identifier[tax] ^short = "Tax ID Number"
 
 
 * identifier[tax] ^comment = "Tax ID Number.  Either the Tax Id or an NPI must be provided" 

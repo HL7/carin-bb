@@ -137,8 +137,6 @@ Invariant: adjudication-has-amount-type-slice
 Description: "If Adjudication is present, it must have at least one adjudicationamounttype slice"
 Expression: "(adjudication.exists().not() or adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists())"
 Severity: #error
-////Expression: "(adjudication.exists().not() or adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists())"
-//Expression: "adjudication.exists()"
 
 // 20211110 CAS: https://jira.hl7.org/browse/FHIR-32850
 /*

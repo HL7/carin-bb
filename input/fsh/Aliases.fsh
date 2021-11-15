@@ -8,7 +8,7 @@ Alias:   $USCoreProviderRole = http://hl7.org/fhir/us/core/ValueSet/us-core-prov
 Alias:   $USCoreProviderSpecialty = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066
 
 Alias:   $HL7RelatedClaimRelationshipCS = http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship
-Alias:   $SubscriberRelationiship = http://hl7.org/fhir/ValueSet/subscriber-relationship
+Alias:   $SubscriberRelationship = http://hl7.org/fhir/ValueSet/subscriber-relationship
 Alias:   $HL7AdjudicationCS = 	http://terminology.hl7.org/CodeSystem/adjudication
 Alias:   $HL7ClaimType = http://hl7.org/fhir/ValueSet/claim-type
 Alias:   $HL7ClaimTypeCS = http://terminology.hl7.org/CodeSystem/claim-type   

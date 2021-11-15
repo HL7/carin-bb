@@ -5,7 +5,7 @@ Title: "C4BB ExplanationOfBenefit Pharmacy"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies.
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
 // 20210322 CAS: FHIR-30575
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitPharmacy|1.1.0)
+* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitPharmacy|1.2.0)
 * type = $HL7ClaimTypeCS#pharmacy
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner)   Set in Abstract Class.  No need to set here.
 * careTeam obeys EOB-pharm-careTeam-practitioner
@@ -23,7 +23,11 @@ The claims data is based on submission standards adopted by the Department of He
    compoundcode 0..1 MS and
    //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
    benefitpaymentstatus 1..1 MS
+
+* supportingInfo[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * supportingInfo[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+
+* supportingInfo[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus (required)
@@ -48,6 +52,8 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[dawcode].category MS
 * supportingInfo[dawcode].code from NCPDPDispensedAsWrittenOrProductSelectionCode (required)
 * supportingInfo[dawcode].code 1..1 MS
+
+* supportingInfo[clmrecvddate] ^short = "Claim received date"
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].category MS
 * supportingInfo[clmrecvddate].timing[x] only date
@@ -72,9 +78,13 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication contains
    adjudicationamounttype 1..* MS and
    denialreason 0..1 MS
+
+* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+
+* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 * item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason
 * item.adjudication[denialreason].reason from NCPDPRejectCode
 * item.adjudication[denialreason].reason 1..1 MS
@@ -83,6 +93,8 @@ The claims data is based on submission standards adopted by the Department of He
 * total.category 1..1 MS
 * total contains
    adjudicationamounttype 1..* MS
+
+* total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 
 * patient MS

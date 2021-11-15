@@ -5,7 +5,7 @@ Title: "C4BB ExplanationOfBenefit Outpatient Institutional"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at an institution that are not part of an overnight stay.
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services."
 // 20210322 CAS: FHIR-30575
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|1.1.0)
+* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|1.2.0)
 
 // 20210203 CAS: https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
 * obeys EOB-inst-pointoforigin
@@ -39,35 +39,53 @@ The claims data is based on the institutional claim form UB-04, submission stand
    patientaccountnumber 0..1 MS and
    //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
    benefitpaymentstatus 1..1 MS
+
+* supportingInfo[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * supportingInfo[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+
+* supportingInfo[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
+
+* supportingInfo[clmrecvddate] ^short = "Claim received date"
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].category MS
 * supportingInfo[clmrecvddate].timing[x] only date
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
+
+* supportingInfo[typeofbill] ^short = "Type of bill"
 * supportingInfo[typeofbill].category = C4BBSupportingInfoType#typeofbill
 * supportingInfo[typeofbill].category MS
 * supportingInfo[typeofbill].code from AHANUBCTypeOfBill (required)
 * supportingInfo[typeofbill].code 1..1 MS
+
+* supportingInfo[admtype] ^short = "Admission type"
 * supportingInfo[admtype].category = C4BBSupportingInfoType#admtype
 * supportingInfo[admtype].category MS
 * supportingInfo[admtype].code from AHANUBCPriorityTypeOfAdmissionOrVisit  (required)
 * supportingInfo[admtype].code 1..1 MS
+
+* supportingInfo[pointoforigin] ^short = "Point of origin for admission or visit"
 * supportingInfo[pointoforigin].category = C4BBSupportingInfoType#pointoforigin
 * supportingInfo[pointoforigin].category MS
 * supportingInfo[pointoforigin].code from AHANUBCPointOfOriginForAdmissionOrVisit (required)
 // FHIR-30807 - Change cardinality in EOB Inpatient and Outpatient Institutional Profiles
 * supportingInfo[pointoforigin].code 1..1 MS
+
+* supportingInfo[discharge-status] ^short = "Discharge status"
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
 * supportingInfo[discharge-status].category MS
 * supportingInfo[discharge-status].code  1..1 MS
 * supportingInfo[discharge-status].code from AHANUBCPatientDischargeStatus   (required)
 // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
+
+* supportingInfo[medicalrecordnumber] ^short = "Medical record number"
 * supportingInfo[medicalrecordnumber].category = C4BBSupportingInfoType#medicalrecordnumber
 * supportingInfo[medicalrecordnumber].valueString 1..1 MS
+
+* supportingInfo[patientaccountnumber] ^short = "Patient account number"
 * supportingInfo[patientaccountnumber].category = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString 1..1 MS
 * item.revenue from AHANUBCRevenueCodes (required)
@@ -85,12 +103,18 @@ The claims data is based on the institutional claim form UB-04, submission stand
    adjudicationamounttype 0..* MS and  /* restricted to 1..* by invariant */
    denialreason 0..* MS and
    allowedunits 0..1 MS
+
+* item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
 * item.adjudication[allowedunits].value 1..1 MS
+
+* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 * item.adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1 MS
+
+* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
@@ -101,9 +125,13 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication contains
    adjudicationamounttype 0..* MS and  /* restricted to 1..* by invariant */
    denialreason 0..* MS
+
+* adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 * adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason
 * adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * adjudication[denialreason].reason 1..1 MS
+
+* adjudication[adjudicationamounttype] ^short = "Claim level adjudication type and amount"
 * adjudication[adjudicationamounttype].category from C4BBAdjudication (required)
 * adjudication[adjudicationamounttype].amount 1..1 MS
 * diagnosis 1..*
@@ -113,6 +141,8 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total contains
    adjudicationamounttype 1..* MS
+
+* total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 * total[adjudicationamounttype].amount MS
 //* total[adjudicationamounttype].amount 1..1
@@ -150,7 +180,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * total.amount ^comment = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
 * diagnosis ^comment = "Diagnosis codes describe an individual's disease or medical condition. (6, 7, 8, 21, 22, 23, 30)"
 * diagnosis.type ^comment =  "Indicates if the outpatient institutional diagnosis is principal, other, an external cause of injury or a patient reason for visit. (21, 22, 23)"
-* diagnosis.sequence ^comment =  "Diagnosis.sequence values do not necessarily indiate any order in which the diagnosis was reported or identified.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of diagnosis.type to identify primary, secondary, etc."
+* diagnosis.sequence ^comment =  "Diagnosis.sequence values do not necessarily indicate any order in which the diagnosis was reported or identified.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of diagnosis.type to identify primary, secondary, etc."
 * item.productOrService ^comment = "Medical procedure a patient received from a health care provider. Current coding methods include: CPT-4 and HCFA Common Procedure Coding System Level II - (HCPCSII). (40)"
 * item.modifier ^comment = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41)"
 * item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (42)"

@@ -8,7 +8,7 @@ Description: "This profile builds upon the US Core Patient profile. It is used t
 * meta.profile 1..*
 * insert Metaprofile-supportedProfile-slice
 // 20210216 CAS: FHIR-30575 Pulled from block vote1a
-* meta.profile[supportedProfile] = Canonical(C4BBPatient|1.1.0)
+* meta.profile[supportedProfile] = Canonical(C4BBPatient|1.2.0)
 * identifier.type from C4BBPatientIdentifierType (extensible)
 //* identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.discriminator.path = "type"
@@ -21,6 +21,7 @@ Description: "This profile builds upon the US Core Patient profile. It is used t
 //   medrecnum 0..* MS and
    uniquememberid 0..* MS
 //   patacctnum 0..* MS 
+* identifier[memberid] ^short = "Member ID"
 * identifier[memberid].type = $IdentifierType#MB
 //* identifier[memberid].type.coding 1..* MS
 //* identifier[medrecnum].type = $IdentifierType#MR
@@ -29,6 +30,7 @@ Description: "This profile builds upon the US Core Patient profile. It is used t
 //* identifier[patacctnum].type.coding 1..* MS
 //* identifier[uniquememberid].type.coding 1..* MS
 * identifier[uniquememberid].type = C4BBIdentifierType#um
+* identifier[uniquememberid] ^short = "Unique Member ID"
 
 * birthDate MS
 * gender MS

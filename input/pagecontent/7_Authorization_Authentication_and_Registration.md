@@ -1,18 +1,61 @@
+[//]: #  ## Security, Privacy, and Consent 
 
-### FHIR Security and Privacy Guidance
-Security and privacy are critical aspects to consider with any interface where data, like that described in this Implementation Guide, is shared or otherwise made accessible. Implementers need to make sure their APIs are secure and should consider the guidance found in the <a href="http://hl7.org/fhir/secpriv-module.html">FHIR Security and Privacy Module</a>.
+### General Considerations
 
-<a name="smart-on-fhir-application-launch"></a>
-### SMART on FHIR Application Launch
-<p>Client applications and Payers SHALL support the standalone launch sequence (launch/Patient) of the SMART App Launch framework for user authorization and client authentication. Payers SHALL publish their authorization and token endpoints for discovery in accordance with the SMART App Launch framework. If the app needs to authenticate the identity of the end-user, it MAY include two OpenID Connect scopes: openid and fhirUser. When these scopes are requested, and the request is granted, the app MAY receive an id token along with the access token.</p>
-<p>&nbsp;</p>
-<a name="authorization-and-authentication"></a>
-### Authorization and Authentication
-<p>Client applications and systems of record MAY support UDAP Dynamic Client Registration for the registration of a client application with a system of record. If supported, systems of records MUST include their registration endpoint URI in their discoverable OAuth metadata. If supported, client applications that have not previously obtained a client_id from a system of record SHOULD attempt registration with the system of record using this profile.</p>
-<div>&nbsp;</div>
-<p>If supported, client applications that can protect private cryptographic keys and all systems of record SHOULD support (UDAP JWT-Based Client Authentication) for the authentication of client applications using asymmetric cryptography. If supported, client applications SHALL specify a token_endpoint_auth_method of "private_key_jwt" or "client_secret_basic" in their submitted software statement. The "private_key_jwt" value is used for clients intending to authenticate using asymmetric cryptography as per the UDAP JWT-Basic Client Authentication profile. If supported, client applications that cannot protect private cryptographic keys MUST use the "client_secret_basic" value.</p>
-<div>&nbsp;</div>
-<p>Conforming client applications and systems of record MAY support the <a href="https://www.udap.org/udap-user-auth.html">UDAP Tiered OAuth for User Authentication </a>profile to enable reusable user credentials for end users.</p>
-<div>&nbsp;</div>
-<p>Additional constraints on the SMART and UDAP profiles listed above for the CARIN Blue Button IG use case can be found <a href="https://docs.google.com/document/d/1HgOlUWMEsZHBChuP4DACRka4ap2S8UwSTkAz4oY6bCo/edit">here</a>.</p>
+The CARIN Consumer-Directed Payer Data Exchange involves a patient’s claim and encounter information communicated through a member directed exchange. This data includes the Protected Health Information (PHI), Personally Identifiable Information (PII), and personal financial data. Members need to be able to direct the communication of this information through authenticated, authorized, and secure channels.
+
+Exchange of this information needs to be protected with proper security and privacy protections to avoid malicious or unintentional exposure of such information. All consumer-directed payer data exchanges must be appropriately secured in transit and access limited only to authorized individuals.
+
+#### Legal and Regulatory Requirements
+
+Implementers must ensure that APIs fully and successfully implement privacy and security features such as, but not limited to, those required to comply with HIPAA privacy and security requirements and other applicable law protecting the privacy and security of protected health information.
+
+
+#### Security Considerations and Guidance
+All implementers of the CARIN Consumer-Directed Payer Data Exchange Implementation Guide (IG) should follow the FHIR Security guidance, Security and Privacy Module, and the FHIR Implementer’s Safety Checklist guidance as defined in the FHIR standard where applicable and not otherwise superseded by this section of the IG.
+
+
+1.	The FHIR Security specification provides guidance related to communication security, authentication, authorization/access control, audit, digital signatures, attachments, labels, narrative, and input validation. The FHIR security specification is available [here](http://hl7.org/fhir/R4/security.html).
+2.	The FHIR Security and Privacy Module describes access control and authorization considerations to protect a FHIR server, how to document permissions granted, and hot to keep records of performed events. The FHIR Security and privacy module can be found [here](http://hl7.org/fhir/R4/secpriv-module.html).
+3.	The FHIR Implementer’s Safety Checklist helps implementers be sure that they have considered all the parts of FHIR that impact their system design regarding safety. The FHIR safety check list is available [here](http://hl7.org/fhir/R4/safety.html).
+
+### Security Requirements
+For the purposes of information exchange defined by this IG, additional security conformance requirements are as follows:
+
+
+
+#### Exchange Security
+1.	The exchange of  information **SHOULD** use the current version and **SHALL** use either current or the immediately prior release of Transport Level Security (TLS) as specified by the current release of NIST guidelines (SP 800-52).
+2.	Implementers of this Implementation Guide **SHOULD** support SMART on FHIR Authorization best practices [Transport Security section] (https://docs.smarthealthit.org/authorization/best-practices/#11--transport-security).
+
+### Authentication and Authorization Requirements
+1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements](https://www.hl7.org/fhir/us/core/security.html).
+2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](https://hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) JSON file with scopes defined in the `scopes_supported` property.
+3.	Implementations **SHOULD** consider the SMART on FHIR Best Practices in Authorization found [here](https://docs.smarthealthit.org/authorization/best-practices/).
+4.	Server implementation **SHALL** support the following [“SMART Core Capabilities”]( http://hl7.org/fhir/smart-app-launch/conformance/index.html#core-capabilities) and **MAY** support additional capabilities:
+    a.	`launch-standalone`: support for SMART’s Standalone Launch mode
+    b.	`client-public`: support for SMART’s public client profile (no client authentication)
+    c.	`client-confidential-symmetric`: support for SMART’s confidential client profile 
+    d.	`sso-openid-connect`: support for SMART’s OpenID Connect profile
+    e.	`context-standalone-patient`: support for patient-level launch context (requested by launch/patient scope, conveyed via patient token parameter)
+    f.	`permission-offline`: support for refresh tokens (requested by offline_access scope)
+    g.	`permission-patient`: support for patient-level scopes (e.g. patient Observation.read)
+    h.	`permission-user`: support for user-level scopes (e.g. user/Appointment.read)
+5.	Server implementations of this Implementation Guide **SHALL** support, at a minimum, the following requested authorization scopes:
+    a.	openid
+    b.	fhirUser
+    c.	launch/patient
+    d.  patient/ExplanationOfBenefit.read
+    e.	patient/Coverage.read
+    f.	user/ExplanationOfBenefit.read
+    g.	user/Coverage.read
+
+6.	MAY support http://hl7.org/fhir/us/udap-security/2021Sep/ (0.1.0) or later for registration of client applications and (authentication and authorization of client applications or users)
+    a.  If UDAP is supported, then all server systems and client applications that can protect private cryptographic keys and all systems of record **SHOULD** support (UDAP JWT-Based Client Authentication) for the authentication of client applications using asymmetric cryptography.
+
+
+
+### Audit Logging and Provenance
+1.	Server implementations **SHOULD** record IG related data access using the [AuditEvent](http://hl7.org/fhir/R4/auditevent.html) resource.
+2.	Server implementations **SHOULD** support the ability to directly record and/or enable clients to assert (store) provenance associated with advance directive information using the [Provenance](http://hl7.org/fhir/R4/provenance.html) resource.
 

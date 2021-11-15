@@ -214,9 +214,12 @@ def main():
     pname_map = {p.Profile: p.Name for p in df_profiles.itertuples(index=True)}
     print(pname_map)
 
-    rendered = template.render(cs=cs, path_map=path_map,
-                            pname_map=pname_map, sp_map=sp_map)
+    #rendered = template.render(cs=cs, path_map=path_map,
+    #                        pname_map=pname_map, sp_map=sp_map)
 
+
+    rendered = template.render(cs=cs, path_map='', pname_map=pname_map, purl_map='', sp_map='', 
+                            csname_map='', csurl_map='', sp_url_map='', igname_map='', igurl_map='')
     # print(HTML(rendered))
 
 
