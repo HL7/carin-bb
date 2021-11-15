@@ -6,9 +6,10 @@ Title: "C4BB ExplanationOfBenefit Oral"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene.
 The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 // 20210216 CAS: FHIR-30575
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.1.0)
+* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
 
-* obeys Oral-EOB-supportinginfo-bodysite-requires-line-item
+// TODO Invariant removed until validation issue resolved
+//* obeys Oral-EOB-supportinginfo-bodysite-requires-line-item
 * obeys Oral-EOB-surface-subsite-requires-tooth-number
 
 // TODO need updated careTeam Invariants and specialties
@@ -46,49 +47,68 @@ The claims data is based on the professional claim form 1500, submission standar
      patientaccountnumber 0..1 MS and
      //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
      benefitpaymentstatus 1..* MS
+
+* supportingInfo[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * supportingInfo[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+
+* supportingInfo[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
+
+* supportingInfo[performingnetworkcontractingstatus] ^short = "Performing provider contracting status"
 * supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
 * supportingInfo[performingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[performingnetworkcontractingstatus].category MS
 * supportingInfo[performingnetworkcontractingstatus].code 1..1 MS
+
+* supportingInfo[clmrecvddate] ^short = "Claim received date"
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].category MS
 * supportingInfo[clmrecvddate].timing[x] only date
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
+
+* supportingInfo[servicefacility] ^short = "Service facility"
 * supportingInfo[servicefacility].category = C4BBSupportingInfoType#servicefacility
 * supportingInfo[servicefacility].category MS
 * supportingInfo[servicefacility].valueReference 1..1 MS
 * supportingInfo[servicefacility].valueReference only Reference(C4BBOrganization)
 
 
-
+* supportingInfo[orthodontics] ^short = "Orthodontics treatment indicator"
 * supportingInfo[orthodontics].category = C4BBSupportingInfoType#orthodontics
 * supportingInfo[orthodontics].category MS
+* supportingInfo[orthodontics].timingDate ^short = "Orthodontics appliance application date (200)"
 * supportingInfo[orthodontics].value[x] only Quantity
 * supportingInfo[orthodontics].value[x] 1..1 MS
+* supportingInfo[orthodontics].valueQuantity ^short = "Total number of months for orthodontia"
 
+* supportingInfo[prosthesis] ^short = "Prosthesis"
 * supportingInfo[prosthesis].category = C4BBSupportingInfoType#prosthesis
 * supportingInfo[prosthesis].category MS
 * supportingInfo[prosthesis].value[x] only boolean
 * supportingInfo[prosthesis].value[x] 1..1 MS
+* supportingInfo[prosthesis].valueBoolean ^short = "Prosthesis replacement indicator (202"
+* supportingInfo[prosthesis].timingDate ^short = "Date of prior prosthesis replacement  (203)"
 
+* supportingInfo[additionalbodysite] ^short = "Additional tooth number or oral cavity code"
 * supportingInfo[additionalbodysite].category = C4BBSupportingInfoType#additionalbodysite
 * supportingInfo[additionalbodysite].category MS
 * supportingInfo[additionalbodysite].code 1..1 MS
 * supportingInfo[additionalbodysite].code from OralBodySite (required)
 
-
+* supportingInfo[missingtoothnumber] ^short = "Missing tooth number"
 * supportingInfo[missingtoothnumber].category = C4BBSupportingInfoType#missingtoothnumber
 * supportingInfo[missingtoothnumber].category MS
 * supportingInfo[missingtoothnumber].code 1..1 MS
 * supportingInfo[missingtoothnumber].code from ADAUniversalNumberingSystem (required)
 
+* supportingInfo[medicalrecordnumber] ^short = "Medical record number"
 * supportingInfo[medicalrecordnumber].category = C4BBSupportingInfoType#medicalrecordnumber
 * supportingInfo[medicalrecordnumber].valueString 1..1 MS
+
+* supportingInfo[patientaccountnumber] ^short = "Patient account number"
 * supportingInfo[patientaccountnumber].category = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString 1..1 MS
 
@@ -111,7 +131,9 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.location[x] only CodeableConcept
 * item.locationCodeableConcept from CMSPlaceofServiceCodes (required)
 
+* item.bodySite ^short = "First tooth number or oral cavity code"
 * item.bodySite from OralBodySite (required) // may change to $ToothNumber
+* item.subSite ^short = "Tooth surface for all teeth on line"
 * item.subSite from C4BBSurfaceCodes (required)
 
 * adjudication 0..1
@@ -125,10 +147,13 @@ The claims data is based on the professional claim form 1500, submission standar
 * item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
+
 * item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason
 * item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[denialreason].reason 1..1 MS
 * item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
+
+* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
@@ -139,6 +164,8 @@ The claims data is based on the professional claim form 1500, submission standar
 //* total.category from C4BBAdjudication  (extensible)
 * total contains
    adjudicationamounttype 1..* MS
+
+* total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
 * total[adjudicationamounttype].category from C4BBAdjudication (required)
 
 
@@ -288,7 +315,7 @@ If the service facility is not assigned an NPI, this data element will not be po
 * supportingInfo[prosthesis].timingDate ^comment = "Date of Prior Prosthesis Placement  (203)"
 
 
-* supportingInfo[additionalbodysite] ^comment = "Additional Body Site - After First Occurrence (204)"
+* supportingInfo[additionalbodysite] ^comment = "Additional Body Site - After First Occurrence (204). First tooth number or oral cavity code is indicated in bodySite. All additionalbodysite slices must be referenced by at least one item.informationSequence."
 * supportingInfo[additionalbodysite].code ^comment = "Additional Body Site - After First Occurrence (204)"
 
 * supportingInfo[missingtoothnumber] ^comment = "Missing Tooth Number - After First Occurrence (204)"
@@ -324,7 +351,7 @@ Description: "If item.subsite (tooth surface) exists then tooth number is requir
 Expression: "item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0"
 Severity:   #error
 
-
+// Invaraint causes invalid error
 Invariant:  Oral-EOB-supportinginfo-bodysite-requires-line-item
 Description: "supportingInfo repetitions with additional body site must be referred to by one or more repetitions of item.informationSequence"
 Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(item.informationSequence.distinct())"
