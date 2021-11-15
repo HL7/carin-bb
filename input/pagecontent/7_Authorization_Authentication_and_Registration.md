@@ -26,31 +26,38 @@ For the purposes of information exchange defined by this IG, additional security
 
 #### Exchange Security
 1.	The exchange of  information **SHOULD** use the current version and **SHALL** use either current or the immediately prior release of Transport Level Security (TLS) as specified by the current release of NIST guidelines (SP 800-52).
-2.	Implementers of this Implementation Guide **SHOULD** support SMART on FHIR Authorization best practices [Transport Security section] (https://docs.smarthealthit.org/authorization/best-practices/#11--transport-security).
+2.	Implementers of this Implementation Guide **SHOULD** support SMART on FHIR Authorization best practices [Transport Security section](https://docs.smarthealthit.org/authorization/best-practices/#11--transport-security).
 
 ### Authentication and Authorization Requirements
 1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements](https://www.hl7.org/fhir/us/core/security.html).
 2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](https://hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) JSON file with scopes defined in the `scopes_supported` property.
 3.	Implementations **SHOULD** consider the SMART on FHIR Best Practices in Authorization found [here](https://docs.smarthealthit.org/authorization/best-practices/).
-4.	Server implementation **SHALL** support the following [“SMART Core Capabilities”]( http://hl7.org/fhir/smart-app-launch/conformance/index.html#core-capabilities) and **MAY** support additional capabilities:
-    a.	`launch-standalone`: support for SMART’s Standalone Launch mode
-    b.	`client-public`: support for SMART’s public client profile (no client authentication)
-    c.	`client-confidential-symmetric`: support for SMART’s confidential client profile 
-    d.	`sso-openid-connect`: support for SMART’s OpenID Connect profile
-    e.	`context-standalone-patient`: support for patient-level launch context (requested by launch/patient scope, conveyed via patient token parameter)
-    f.	`permission-offline`: support for refresh tokens (requested by offline_access scope)
-    g.	`permission-patient`: support for patient-level scopes (e.g. patient Observation.read)
-    h.	`permission-user`: support for user-level scopes (e.g. user/Appointment.read)
+4.	Server implementation **SHALL** support the following [“SMART Core Capabilities”](http://hl7.org/fhir/smart-app-launch/conformance/index.html#core-capabilities) and **MAY** support additional capabilities:
+    1.	`launch-standalone`: support for SMART’s Standalone Launch mode
+    2.	`client-public`: support for SMART’s public client profile (no client authentication)
+    3.	`client-confidential-symmetric`: support for SMART’s confidential client profile 
+    4.	`sso-openid-connect`: support for SMART’s OpenID Connect profile
+    5.	`context-standalone-patient`: support for patient-level launch context (requested by launch/patient scope, conveyed via patient token parameter)
+    6.	`permission-offline`: support for refresh tokens (requested by offline_access scope)
+    7.	`permission-patient`: support for patient-level scopes (e.g. patient Observation.read)
+    8.	`permission-user`: support for user-level scopes (e.g. user/Appointment.read)
 5.	Server implementations of this Implementation Guide **SHALL** support, at a minimum, the following requested authorization scopes:
-    a.	openid
-    b.	fhirUser
-    c.	launch/patient
-    d.  patient/ExplanationOfBenefit.read
-    e.	patient/Coverage.read
-    f.	user/ExplanationOfBenefit.read
-    g.	user/Coverage.read
+    1.	openid
+    2.	fhirUser
+    3.	launch/patient
+    4.  patient/ExplanationOfBenefit.read
+    5.	patient/Coverage.read
+    6.	patient/Patient.read
+    7.	patient/Organization.read
+    8.	patient/Practitioner.read
+    9.	patient/Coverage.read
+    10.	user/ExplanationOfBenefit.read
+    11.	user/Coverage.read
+    12.	user/Patient.read
+    13.	user/Organization.read
+    14.	user/Practitioner.read
 
-6.	MAY support http://hl7.org/fhir/us/udap-security/2021Sep/ (0.1.0) or later for registration of client applications and (authentication and authorization of client applications or users)
+6.	MAY support the [Security for Scalable Registration, Authentication, and Authorization](http://hl7.org/fhir/us/udap-security/2021Sep/) 0.1.0 or later for registration of client applications and (authentication and authorization of client applications or users)
     a.  If UDAP is supported, then all server systems and client applications that can protect private cryptographic keys and all systems of record **SHOULD** support (UDAP JWT-Based Client Authentication) for the authentication of client applications using asymmetric cryptography.
 
 
