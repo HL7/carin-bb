@@ -59,7 +59,7 @@ defined in http://terminology.hl7.org/CodeSystem/adjudication, as well as those 
 * C4BBAdjudication#priorpayerpaid "Prior payer paid" 
 * C4BBAdjudication#paidbypatient "Paid by patient"
 * C4BBAdjudication#paidbypatientcash "Paid by patient - cash"
-* C4BBAdjudication#paidbypatientlinkedaccount "Paid by patient - linked account"
+* C4BBAdjudication#paidbypatientother "Paid by patient - other"
 * C4BBAdjudication#paidtopatient "Paid to patient"
 * C4BBAdjudication#paidtoprovider "Paid to provider" 
 * C4BBAdjudication#memberliability "Member liability" 
