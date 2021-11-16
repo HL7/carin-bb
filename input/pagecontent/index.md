@@ -9,13 +9,9 @@ https://jira.hl7.org/browse/FHIR-31535?jql=cf%5B11402%5D%20%3D%20STU-1.1.0-Updat
 <p>This implementation guide describes the CARIN for Blue Button® <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 <div class="stu-note">
 <h3>Changes for STU2 (since V1.1.0)</h3>
-<p>This update addresses several technical corrections and errata and clarifications listed below. They have been reviewed
-and voted on by the members of the <a href="http://www.hl7.org/Special/committees/fm/index.cfm">HL7 Financial Management WorkGroup</a> which is sponsoring this errata release and reconciliation of the comments. <strong>To make a comment against a particular errata:</strong></p>
+<p>This ballot addresses several additions, modifications, technical corrections, errata, clarifications listed below. They have been reviewed
+and voted on by the members of the <a href="http://www.hl7.org/Special/committees/fm/index.cfm">HL7 Financial Management WorkGroup</a> which is sponsoring this ballot release and reconciliation of the comments.</p>
 
-<ol>
-  <li>Create a new Jira tracker (New trackers can be made by clicking on the link in the page footer entitled “Propose a change” and clicking the "Create" button on top)</li>
-  <li>Select “US CARIN Blue Button (FHIR)” as the Specification and fill in other relevant information.</li>
-</ol>
 <p><b>The following issues are addressed in this ballot:</b></p>
 
 <ul>
@@ -23,7 +19,7 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
     <ul>
       <li>Added orthodontics and prosthesis to <a href="ValueSet-C4BBSupportingInfoType.html">Supporting Info Type ValueSet</a> used as a discriminator for the EOB Oral profile supportingInfo slice discriminator (<a href="https://jira.hl7.org/browse/FHIR-34010">FHIR-34010</a>)</li>
       <li>Added <a href="ValueSet-C4BBSurfaceCodes.html">US Surface Codes</a> for Oral ExplanationOfBenefit.item.subSite (<a href="https://jira.hl7.org/browse/FHIR-34089">FHIR-34089</a>)</li>
-      <li>Added Invariants requiring all ExplanationOfBenefit.supportingInfo[additionalBodySite] instances be referred to by at least one ExplanationOfBenefit.item and require a tooth number for line itesm where a surface code in ExplanationOfBenefit.item.subsite exists in <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral ExplanationOfBenefit profile</a> (<a href="https://jira.hl7.org/browse/FHIR-34091">FHIR-34091</a>)</li>
+      <li>Added Invariants requiring all ExplanationOfBenefit.supportingInfo[additionalBodySite] instances be referred to by at least one ExplanationOfBenefit.item and require a tooth number for line items where a surface code in ExplanationOfBenefit.item.subsite exists in <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral ExplanationOfBenefit profile</a> (<a href="https://jira.hl7.org/browse/FHIR-34091">FHIR-34091</a>)</li>
     </ul>
   </li>
 
@@ -63,7 +59,7 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 
   <li>Removed invalid invariant from <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit profile</a> that required ExplanationOfBenefit.careTeam.provider to be an Organization reference when careTeam.role was 'site' ('site' not a code in the role ValueSet) (<a href="https://jira.hl7.org/browse/FHIR-31658">FHIR-31658</a>)</li>
 
-  <li>Added paidbypatientcash and paidbypatientlinkedaccount codes to <a href="ValueSet-C4BBAdjudication.html">Adjudication ValueSet</a> and <a href="CodeSystem-C4BBAdjudication.html">Adjudication CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-33996">FHIR-33996</a>)</li>
+  <li>Added paidbypatientcash and paidbypatientother codes to <a href="ValueSet-C4BBAdjudication.html">Adjudication ValueSet</a> and <a href="CodeSystem-C4BBAdjudication.html">Adjudication CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-33996">FHIR-33996</a>)</li>
 
   <li>Modified security guidance in <a href="Security_And_Privacy_Considerations.html">Security and Privacy Considerations</a> page (<a href="https://jira.hl7.org/browse/FHIR-31693">FHIR-31693</a>)</li>
 
