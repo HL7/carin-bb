@@ -422,9 +422,7 @@ Usage: #example
 * total[adjudicationamounttype][3].amount.value = 350.00
 * total[adjudicationamounttype][3].amount.currency = #USD
 
-// TODO replaced until code validation issue addressed
-* item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
-//* item[0].productOrService = ADADentalProcedureCode#D1110 "Prophylaxis - Adult"
+* item[0].productOrService = ADADentalProcedureCode#D1110 "Prophylaxis - Adult"
 
 
 * item[0].sequence = 1
@@ -438,9 +436,7 @@ Usage: #example
 * item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
 
 
-// TODO replaced until code validation issue addressed
-* item[1].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
-//* item[1].productOrService = ADADentalProcedureCode#D0120 "Periodic oral evaluation"
+* item[1].productOrService = ADADentalProcedureCode#D0120 "Periodic oral evaluation"
 
 * item[1].sequence = 2
 * item[1].servicedDate = "2021-03-18"
@@ -531,9 +527,7 @@ Usage: #example
 * item[0].informationSequence[+] = 10
 * item[0].informationSequence[+] = 11
 
-// TODO replaced until code validation issue addressed
-* item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
-//* item[0].productOrService = ADADentalProcedureCode#D0220 "Intraoral - periapical first radiographic image"
+* item[0].productOrService = ADADentalProcedureCode#D0220 "Intraoral - periapical first radiographic image"
 
 
 * item[0].bodySite = ADAAreaOfOralCavitySystem#10 "Upper right quadrant"

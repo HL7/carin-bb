@@ -6,7 +6,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 // 20210216 CAS: FHIR-30575
 * meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
 
-// TODO Invariant removed until validation issue resolved
+// TODO error with invariant
 //* obeys Oral-EOB-supportinginfo-bodysite-requires-line-item
 * obeys Oral-EOB-surface-subsite-requires-tooth-number
 
@@ -25,25 +25,10 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
    prosthesis 0..1 MS and
    additionalbodysite 0..* MS and
    missingtoothnumber 0..* MS and
-   /*
-   Need to add discriminator to CodeSystem-C4BBSupportingInfoType
-
-
-
-   toothnumber 1..1 MS and
-   toothbegin 1..1 MS and
-   toothend 1..1 MS and
-   toothsurface 1..1 MS and
-   missingtoothnumber 1..1 MS and
-   orthotreatindicator 1..1 MS and
-   orthoapplianceappdate 1..1 MS and
-   totalorthodontiamonths 1..1 MS and
-   priorprosthesisplacedate 1..1 MS
-   */
-     medicalrecordnumber 0..1 MS and
-     patientaccountnumber 0..1 MS and
-     //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
-     benefitpaymentstatus 1..* MS
+   medicalrecordnumber 0..1 MS and
+   patientaccountnumber 0..1 MS and
+   //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
+   benefitpaymentstatus 1..* MS
 
 * supportingInfo[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * supportingInfo[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
@@ -348,9 +333,7 @@ Description: "If item.subsite (tooth surface) exists then tooth number is requir
 Expression: "item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0"
 Severity:   #error
 
-// Invaraint causes invalid error
 Invariant:  Oral-EOB-supportinginfo-bodysite-requires-line-item
 Description: "supportingInfo repetitions with additional body site must be referred to by one or more repetitions of item.informationSequence"
 Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(item.informationSequence.distinct())"
-//Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence = ExplanationOfBenefit.item.informationSequence"
 Severity:   #error
