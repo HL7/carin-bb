@@ -16,6 +16,8 @@ Description: "Describes the various amount fields used when payers receive and a
 * #drugcost "Drug cost" "Price paid for the drug excluding mfr or other discounts.  It typically is the sum of the following components: ingredient cost, dispensing fee, sales tax, and vaccine administration"
 //* #paid "Paid" "paid"
 //* #denied "Denied"  "denied"
+* ^content = #complete
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 // * #innetwork "In-network" "in-network"
 // * #outofnetwork "Out-of-network" "out-of-network"
@@ -36,6 +38,8 @@ CodeSystem: C4BBPayeeType
 Title: "C4BB Payee Type"
 Description: "Indicates that a payee type may be a beneficiary."
 * #beneficiary "Beneficiary" "The beneficiary (patient) will be reimbursed."
+* ^content = #complete
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBClaimDiagnosisType
@@ -47,6 +51,8 @@ Description: "Indicates if the institutional diagnosis is admitting, principal, 
 * #secondary  "Secondary"  "Required when necessary to report additional diagnoses on professional and non-clinician claims"
 //* #principal "Principal" "Principal"
 //* #admitting "Admitting" "Admitting"
+* ^content = #complete
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBClaimCareTeamRole
@@ -62,6 +68,8 @@ Description: "Describes functional roles of the care team members.  Complements 
 //* #pcp "pcp" "Primary Care Provider"
 //* #site "site"  "Site Provider"
 //* #supervising "supervising" "Supervising"
+* ^content = #complete
+* ^caseSensitive = true
 * ^copyright = "This Code System is not copyrighted."
 
 
@@ -69,6 +77,8 @@ CodeSystem: C4BBCompoundLiteral
 Title: "C4BB Compound Literal"
 Description: "CodeSystem for a Literal 'compound' value"
 * #compound "compound" "Compound"
+* ^content = #complete
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
 // ******** @Saul - updated **********
@@ -85,6 +95,8 @@ Description: "Identifier Type codes that extend those defined in http://terminol
 * #pat "Patient Account Number" "Patient Account Number"
 * #um "Unique Member ID" "Indicates that the patient identifier is a unique member identifier assigned by a payer across all lines of business"
 * #uc "Unique Claim ID" "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
+* ^content = #complete
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBPayerAdjudicationStatus
@@ -98,12 +110,15 @@ Description: "Describes the various status fields used when payers adjudicate a 
 * #paid "Paid" "Indicates if the claim was approved for payment"
 * #denied "Denied" "Indicates if the claim was denied"
 * #partiallypaid "Partially Paid" "Indicates that some line items on the claim were denied"
+* ^content = #complete
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBRelatedClaimRelationshipCodes
 Title: "C4BB Related Claim Relationship Codes"
 Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number."
 * #replacedby "Replaced by claim number" "The current claim has been adjusted; i.e., replaced by or merged to another claim number."
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBSupportingInfoType
@@ -132,6 +147,7 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #prosthesis "Prosthesis" "Prosthesis replacement indicator."
 * #additionalbodysite "Additional Body Site" "Additional tooth number or oral cavity. Additional body sites are specific to line item and have to be linked by ExplanationOfBenefit.item.informationSequence."
 * #missingtoothnumber "Missing Tooth Number" "Missing tooth number."
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
 
@@ -142,6 +158,8 @@ Description: "Used as the discriminator for the data elements in adjudication an
 // 20210201 CAS: Removed as not used as a discriminator (the CodeSystem C4BBPayerBenefitPaymentStatus is used for this slice), Change ipart of FHIR-30635 - Update Benefit Payment Status slice name ,cardinality and must support
 //* #inoutnetwork "in or Out of Network" "defines the adjudication and item.adjudication slice to indicate whether a claim was adjudicatd in or out of network"
 * #denialreason "Denial Reason" "defines the adjudication slice to identify the denial reason"
+* ^content = #complete
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBClaimProcedureType
@@ -149,6 +167,8 @@ Title: "C4BB Claim Procedure Type"
 Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure"
 * #principal "Principal" "The Principal Procedure is based on the relation of the procedure to the Principal Diagnosis"
 * #other "Other"  "Other procedures performed during the inpatient institutional admission"
+* ^content = #complete
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBInstitutionalClaimSubType
@@ -156,11 +176,13 @@ Title: "C4BB Institutional Claim SubType"
 Description: "Indicates if institutional ExplanationOfBenefit is inpatient or outpatient."
 * #inpatient "Inpatient" "Claims for inpatient institutional admissions."
 * #outpatient "Outpatient"  "Claims for outpatient institutional admissions."
+* ^content = #complete
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
 
 CodeSystem: C4BBSurfaceCodes
-Title: "US Surface Codes"
+Title: "US Surface Codes System"
 Description: "This value set includes FDI tooth surface codes localized for the US Realm."
 * #M "Mesial" "The surface of a tooth that is closest to the midline (middle) of the face."
 * #O "Occlusal" "The chewing surface of posterior teeth."
@@ -174,4 +196,6 @@ Description: "This value set includes FDI tooth surface codes localized for the 
 * #DO "Distoclusal" "The Distoclusal surfaces of a tooth."
 * #DI "Distoincisal" "The Distoincisal surfaces of a tooth."
 * #MOD "Mesioclusodistal" "The Mesioclusodistal surfaces of a tooth."
+* ^content = #complete
+* ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."

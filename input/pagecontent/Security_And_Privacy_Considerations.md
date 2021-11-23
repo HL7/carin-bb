@@ -8,7 +8,7 @@ Exchange of this information needs to be protected with proper security and priv
 
 #### Legal and Regulatory Requirements
 
-Implementers must ensure that APIs fully and successfully implement privacy and security features such as, but not limited to, those required to comply with HIPAA privacy and security requirements and other applicable law protecting the privacy and security of protected health information.
+Implementers must ensure that APIs fully and successfully implement privacy and security features such as, but not limited to, those required to comply with HIPAA privacy and security requirements and other applicable law protecting the privacy and security of protected health information. Note that the HIPAA Privacy Rule applies only to HIPAA covered entities. The HIPAA Privacy Rule applies to HIPAA covered entities. After information leave the control of a HIPAA covered entity, the HIPAA Privacy Rule does not apply.  FTC consumer protection laws and state privacy laws may apply.
 
 
 #### Security Considerations and Guidance
@@ -16,8 +16,8 @@ All implementers of the CARIN Consumer-Directed Payer Data Exchange Implementati
 
 
 1.	The FHIR Security specification provides guidance related to communication security, authentication, authorization/access control, audit, digital signatures, attachments, labels, narrative, and input validation. The FHIR security specification is available [here](http://hl7.org/fhir/R4/security.html).
-2.	The FHIR Security and Privacy Module describes access control and authorization considerations to protect a FHIR server, how to document permissions granted, and hot to keep records of performed events. The FHIR Security and privacy module can be found [here](http://hl7.org/fhir/R4/secpriv-module.html).
-3.	The FHIR Implementer’s Safety Checklist helps implementers be sure that they have considered all the parts of FHIR that impact their system design regarding safety. The FHIR safety check list is available [here](http://hl7.org/fhir/R4/safety.html).
+2.	The FHIR Security and Privacy Module describes access control and authorization considerations to protect a FHIR server, how to document permissions granted, and how to keep records of performed events. The FHIR Security and privacy module can be found [here](http://hl7.org/fhir/R4/secpriv-module.html).
+3.	The FHIR Implementer’s Safety Checklist helps implementers be sure that they have considered all the parts of FHIR that impact their system design regarding privacy, security, provenance, and safety. The FHIR safety check list is available [here](http://hl7.org/fhir/R4/safety.html).
 
 ### Security Requirements
 For the purposes of information exchange defined by this IG, additional security conformance requirements are as follows:
@@ -58,11 +58,12 @@ For the purposes of information exchange defined by this IG, additional security
     14.	user/Practitioner.read
 
 6.	MAY support the [Security for Scalable Registration, Authentication, and Authorization](http://hl7.org/fhir/us/udap-security/2021Sep/) 0.1.0 or later for registration of client applications and (authentication and authorization of client applications or users)
-    1.  If UDAP is supported, then all server systems and client applications that can protect private cryptographic keys and all systems of record **SHOULD** support (UDAP JWT-Based Client Authentication) for the authentication of client applications using asymmetric cryptography.
+    1.  If UDAP is supported, then all server systems and client applications that can protect private cryptographic keys and all systems of record **SHOULD** support UDAP JWT-Based Client Authentication for the authentication of client applications using asymmetric cryptography.
 
 
 
 ### Audit Logging and Provenance
-1.	Server implementations **SHOULD** record IG related data access using the [AuditEvent](http://hl7.org/fhir/R4/auditevent.html) resource.
-2.	Server implementations **SHOULD** support the ability to directly record and/or enable clients to assert (store) provenance associated with advance directive information using the [Provenance](http://hl7.org/fhir/R4/provenance.html) resource.
+1.	Audit logs and provenance are recorded.
+2.  Server implementations **SHOULD** record IG related data access using the [AuditEvent](http://hl7.org/fhir/R4/auditevent.html) resource.
+3.	Server implementations **SHOULD** support the ability to directly record and/or enable clients to assert (store) provenance associated with advance directive information using the [Provenance](http://hl7.org/fhir/R4/provenance.html) resource.
 

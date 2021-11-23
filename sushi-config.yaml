@@ -29,6 +29,8 @@ parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
+  excludettl: 'true'
+  excludemap: 'true'
 copyrightYear: 2021+
 releaseLabel: CI - STU2 Draft
 jurisdiction: urn:iso:std:iso:3166#US
@@ -39,49 +41,49 @@ jurisdiction: urn:iso:std:iso:3166#US
 menu:
   Home: index.html
   Background:
-    The CARIN Alliance: 1_Background.html#the-carin-alliance
-    Patient Protection: 1_Background.html#patient-protection
-    Relation to Other IGs: 1_Background.html#relation-to-other-IGs
+    The CARIN Alliance: Background.html#the-carin-alliance
+    Patient Protection: Background.html#patient-protection
+    Relation to Other IGs: Background.html#relation-to-other-IGs
   Use Cases:
-    Terms and Concepts: 2_Use_Case.html#terms-and-concepts
-    Use Cases: 2_Use_Case.html#use-cases
+    Terms and Concepts: Use_Case.html#terms-and-concepts
+    Use Cases: Use_Case.html#use-cases
   Guidance:
-    General Guidance: 3_General_Guidance.html
-    Common Payer Consumer Data Set (CPCDS): 4_Common_Payer_Consumer_Data_Set.html
-    Terminology Licensure: 5_Terminology_Licensure.html 
+    General Guidance: General_Guidance.html
+    Common Payer Consumer Data Set (CPCDS): Common_Payer_Consumer_Data_Set.html
+    Terminology Licensure: Terminology.html 
   FHIR Artifacts:
     Profiles: artifacts.html#3
-    Search Parameters: 6_searchparameters.html
+    Search Parameters: searchparameters.html
     Terminology: artifacts.html#5
     Capability Statement: CapabilityStatement-c4bb.html
   Security:
     General Considerations: Security_And_Privacy_Considerations.html#general-considerations
     Security Requirements: Security_And_Privacy_Considerations.html#security-requirements
   Examples:  artifacts.html#7
-  Downloads: 8_downloads.html
+  Downloads: downloads.html
   Change Notes: change_notes.html
 
 
 pages:
   index.md:
     title: Home
-  1_Background.md: 
+  Background.md: 
     title: Background
-  2_Use_Case.md:
+  Use_Case.md:
     title: Use Case
-  3_General_Guidance.md:
+  General_Guidance.md:
     title: General Guidance
-  4_Common_Payer_Consumer_Data_Set.md:
+  Common_Payer_Consumer_Data_Set.md:
     title: Common Payer Consumer Data Set (CPCDS)
-  5_Terminology_Licensure.md:
+  Terminology.md:
     title: Terminology Licensure
   artifacts.html:
     title: Artifacts Summary
-  6_searchparameters.md:
+  searchparameters.md:
     title: Search Parameters
   Security_And_Privacy_Considerations.md:
     title: Security and Privacy Considerations
-  8_downloads.md:
+  downloads.md:
     title: Downloads
   change_notes.md:
     title: Change Notes
@@ -115,24 +117,24 @@ resources:
     description: Payer Organization Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Organization/ProviderOrganization1:
-    name: Provider Organizaiton Example 1
-    description: Provider Organizaiton Example 1
+    name: Provider Organization Example 1
+    description: Provider Organization Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Organization/ProviderOrganization3:
-    name: Provider Organizaiton Example 3
-    description: Provider Organizaiton Example 3
+    name: Provider Organization Example 3
+    description: Provider Organization Example 3
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Organization/ProviderOrganization4:
-    name: Provider Organizaiton Example 4
-    description: Provider Organizaiton Example 4
+    name: Provider Organization Example 4
+    description: Provider Organization Example 4
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Organization/ProviderOrganization5:
-    name: Provider Organizaiton Example 5
-    description: Provider Organizaiton Example 5
+    name: Provider Organization Example 5
+    description: Provider Organization Example 5
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Organization/ProviderOrganization6:
-    name: Provider Organizaiton Example 6
-    description: Provider Organizaiton Example 6
+    name: Provider Organization Example 6
+    description: Provider Organization Example 6
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Patient/ExamplePatient1: 
     name: Patient Example 1

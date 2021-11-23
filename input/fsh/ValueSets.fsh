@@ -129,13 +129,13 @@ ValueSet: C4BBRelatedClaimRelationshipCodes
 Title: "C4BB Related Claim Relationship Codes"
 Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number."
 * $HL7RelatedClaimRelationshipCS#prior 
-* C4BBRelatedClaimRelationshipCodes#replacedby 
+* C4BBRelatedClaimRelationshipCodes#replacedby
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBSupportingInfoType
 Title: "C4BB SupportingInfo Type"
 Description: "Used as the discriminator for the types of supporting information for the CARIN IG for Blue Button� Implementation Guide." 
-* codes from system C4BBSupportingInfoType 
+* codes from system C4BBSupportingInfoType
 * ^copyright = "This Valueset is not copyrighted."
 
 // ************* @Saul - replaced with C4BB **************
@@ -212,7 +212,7 @@ Description: "This value set includes Professional and Non Clinician Claim SubTy
 
 
 ValueSet: C4BBSurfaceCodes
-Title: "US Surface Codes"
+Title: "US Surface Codes Set"
 Description: "This value set includes FDI tooth surface codes localized for the US Realm."
 * codes from system C4BBSurfaceCodes
 * ^copyright = "This ValueSet is not copyrighted."

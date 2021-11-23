@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/STU1.2" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="1.1.0" defaultWorkgroup="fm" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="1.1.0" defaultWorkgroup="fm" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
 <version code="current" url="http://build.fhir.org/ig/HL7/carin-bb"/>
-<version code="1.2.0" url="http://hl7.org/fhir/us/carin-bb/STU1.2"/>
+<version code="1.2.0" url="http://hl7.org/fhir/us/carin-bb/2022Jan"/>
 <version code="1.1.0" url="http://hl7.org/fhir/us/carin-bb/STU1.1"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/carin-bb/STU1"/>
 <version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/us/carin-bb/2020Feb"/>
@@ -139,14 +139,14 @@
 <artifact id="ValueSet/C4BBEOBInstitutionalProcedureCodes" key="ValueSet-C4BBEOBInstitutionalProcedureCodes" name="Procedure Codes - AMA CPT - CMS HCPCS - CMS HIPPS"/>
 <artifact id="ValueSet/CMSICD910PCSProcedureCodes" key="ValueSet-CMSICD910PCSProcedureCodes" name="Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Coding System"/>
 <artifact id="ValueSet/AMACPTCMSHCPCSModifiers" key="ValueSet-AMACPTCMSHCPCSModifiers" name="Procedure Modifier Codes - AMA CPT - CMS HCPCS"/>
-<artifact id="Organization/ProviderOrganization1" key="Organization-ProviderOrganizationEx1" name="Provider Organizaiton Example 1"/>
 <artifact deprecated="true" id="Organization/ProviderOrganizationEx2" key="Organization-ProviderOrganizationEx2" name="Provider Organizaiton Example 2"/>
-<artifact id="Organization/ProviderOrganization3" key="Organization-ProviderOrganizationEx3" name="Provider Organizaiton Example 3"/>
-<artifact id="Organization/ProviderOrganization4" key="Organization-ProviderOrganizationEx4" name="Provider Organizaiton Example 4"/>
-<artifact id="Organization/ProviderOrganization5" key="Organization-ProviderOrganizationEx5" name="Provider Organizaiton Example 5"/>
-<artifact id="Organization/ProviderOrganization6" key="Organization-ProviderOrganizationEx6" name="Provider Organizaiton Example 6"/>
-<artifact id="ValueSet/C4BBSurfaceCodes" key="ValueSet-C4BBSurfaceCodes" name="US Surface Codes"/>
-<artifact id="CodeSystem/C4BBSurfaceCodes" key="CodeSystem-C4BBSurfaceCodes" name="US Surface Codes"/>
+<artifact id="Organization/ProviderOrganization1" key="Organization-ProviderOrganizationEx1" name="Provider Organization Example 1"/>
+<artifact id="Organization/ProviderOrganization3" key="Organization-ProviderOrganizationEx3" name="Provider Organization Example 3"/>
+<artifact id="Organization/ProviderOrganization4" key="Organization-ProviderOrganizationEx4" name="Provider Organization Example 4"/>
+<artifact id="Organization/ProviderOrganization5" key="Organization-ProviderOrganizationEx5" name="Provider Organization Example 5"/>
+<artifact id="Organization/ProviderOrganization6" key="Organization-ProviderOrganizationEx6" name="Provider Organization Example 6"/>
+<artifact id="ValueSet/C4BBSurfaceCodes" key="ValueSet-C4BBSurfaceCodes" name="US Surface Codes Set"/>
+<artifact id="CodeSystem/C4BBSurfaceCodes" key="CodeSystem-C4BBSurfaceCodes" name="US Surface Codes System"/>
 <artifact id="CodeSystem/X12ClaimAdjustmentReasonCodes" key="CodeSystem-X12ClaimAdjustmentReasonCodes" name="X12 Claim Adjustment Reason Codes"/>
 <artifact id="ValueSet/X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" key="ValueSet-X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" name="X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes"/>
 <artifact id="CodeSystem/CMSRemittanceAdviceRemarkCodes" key="CodeSystem-CMSRemittanceAdviceRemarkCodes" name="X12 Remittance Advice Remark Codes"/>
@@ -157,17 +157,14 @@
 <page deprecated="true" key="Authorization_Authentication_and_Registration" name="Authorization Authentication and Registration"/>
 <page key="Background" name="Background"/>
 <page key="9_change_notes" name="Change Notes"/>
-<page deprecated="true" key="Common_Payer_Consumer_Data_Set" name="Common Payer Consumer Data Set"/>
-<page key="4_Common_Payer_Consumer_Data_Set" name="Common Payer Consumer Data Set (CPCDS)"/>
+<page key="Common_Payer_Consumer_Data_Set" name="Common Payer Consumer Data Set (CPCDS)"/>
 <page key="downloads" name="Downloads"/>
 <page deprecated="true" key="Examples" name="Examples"/>
 <page key="General_Guidance" name="General Guidance"/>
 <page key="index" name="Home"/>
-<page key="6_searchparameters" name="Search Parameters"/>
-<page deprecated="true" key="searchparameters" name="Searchparameters"/>
+<page key="searchparameters" name="Search Parameters"/>
 <page key="Security_And_Privacy_Considerations" name="Security and Privacy Considerations"/>
 <page key="toc" name="Table of Contents"/>
-<page deprecated="true" key="Terminology" name="Terminology"/>
 <page key="5_Terminology_Licensure" name="Terminology Licensure"/>
 <page key="Use_Case" name="Use Case"/>
 </specification>

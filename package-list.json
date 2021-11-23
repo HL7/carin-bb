@@ -14,8 +14,8 @@
       {
         "version": "1.2.0",
         "desc": "CARIN Blue Button Implementation Guide Release 1 | STU2 Ballot",
-        "path": "http://hl7.org/fhir/us/carin-bb/STU1.2",
-        "date": "2021-11-12",
+        "path": "http://hl7.org/fhir/us/carin-bb/2022Jan",
+        "date": "2021-11-22",
         "status": "ballot",
         "sequence": "STU 2",
         "fhirversion": "4.0.1",

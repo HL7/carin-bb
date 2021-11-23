@@ -53,7 +53,7 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 
   <li>Added Coverage _id search parameter to <a href="CapabilityStatement-c4bb.html">Capability Statement</a> with associated guidance (<a href="https://jira.hl7.org/browse/FHIR-30009">FHIR-30009</a>)</li>
 
-  <li>Added guidance on the expectation of _include support and interpretation of _include=ExplanationOfBenefit:* to <a href="6_searchparameters.html">search Parameters page</a> and <a href="CapabilityStatement-c4bb.html">Capability Statement</a> (<a href="https://jira.hl7.org/browse/FHIR-32982">FHIR-32982</a>)</li>
+  <li>Added guidance on the expectation of _include support and interpretation of _include=ExplanationOfBenefit:* to <a href="searchparameters.html">search Parameters page</a> and <a href="CapabilityStatement-c4bb.html">Capability Statement</a> (<a href="https://jira.hl7.org/browse/FHIR-32982">FHIR-32982</a>)</li>
 
   <li>Moved ExplanationOfBenefit searches documentation from read interaction to search-type interaction in <a href="CapabilityStatement-c4bb.html">Capability Statement</a> (<a href="https://jira.hl7.org/browse/FHIR-33176">FHIR-33176</a>)</li>
 
@@ -77,7 +77,7 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 
   <li>Added clearer guidance on ExplanationOfBenefit.supportingInfo[servicefacility] and ExplanationOfBenefit.item.location[x] to <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit profile</a>; ExplanationOfBenefit.item.location[x] and ExplanationOfBenefit.supportingInfo[typeofbill] to <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html">Inpatient Institutional</a> and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional</a> ExplanationOfBenefit profiles (<a href="https://jira.hl7.org/browse/FHIR-34087">FHIR-34087</a>)</li>
 
-  <li>Removed references to PractitionerRole and Location from <a href="1_Background.html#carin-ig-for-blue-button-relation-to-other-igs">Background Relation to other IGs</a> section (<a href="https://jira.hl7.org/browse/FHIR-33060">FHIR-33060</a>)</li>
+  <li>Removed references to PractitionerRole and Location from <a href="Background.html#carin-ig-for-blue-button-relation-to-other-igs">Background Relation to other IGs</a> section (<a href="https://jira.hl7.org/browse/FHIR-33060">FHIR-33060</a>)</li>
 
   <li>Added clearer description of ExplanationOfBenefit.related for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html">Base ExplanationOfBenefit</a> profile (<a href="https://jira.hl7.org/browse/FHIR-31411">FHIR-31411</a>)</li>
 

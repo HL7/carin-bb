@@ -27,6 +27,7 @@ Description: "Code indicating the error encountered. Contains exception definiti
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
 * ^url = "http://terminology.hl7.org/CodeSystem/NCPDPRejectCode"
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -47,6 +48,8 @@ Description: "Code indicating whether or not the prescriber's instructions regar
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
 * ^url = "http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -66,6 +69,8 @@ Description: "Denotes brand or generic drug dispensed. (NCPDP ECL 686)
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
 * ^url = "http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -85,6 +90,8 @@ Description: "Code indicating the origin of the prescription. Indicates whether 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
 * ^url = "http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -104,6 +111,8 @@ Description: "Code indicating whether or not the prescription is a compound. (NC
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
 * ^url = "http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
 
@@ -163,6 +172,8 @@ These codes are used to convey the patient discharge status and are the property
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * ^url = "https://www.nubc.org/CodeSystem/PatDischargeStatus"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
 
@@ -192,6 +203,8 @@ These codes are used to report the principal diagnosis code (ICD-9 or ICD-10 cod
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * ^url = "https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
 
@@ -221,6 +234,7 @@ These codes are used to convey the revenue code and are the property of the Amer
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * ^url = "https://www.nubc.org/CodeSystem/RevenueCodes"
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
 
@@ -253,6 +267,8 @@ Note that with the advent of UB-04, the matrix methodology of constructing the f
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"""
 * ^url = "https://www.nubc.org/CodeSystem/TypeOfBill"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
 
@@ -285,6 +301,8 @@ These codes are used to convey the patient point of origin for an admission or v
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * ^url = "https://www.nubc.org/CodeSystem/PointOfOrigin"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
 
@@ -300,6 +318,8 @@ These codes are used to convey the patient point of origin for an admission or v
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * ^url = "https://www.nubc.org/CodeSystem/PointOfOriginNewborn"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
 
@@ -332,6 +352,8 @@ These codes are used to convey the priority of an admission or visit and are the
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * ^url = "https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
 
@@ -401,6 +423,8 @@ Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCod
 
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
 * ^url =  "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert HCPCSCopyrightNotice
 
@@ -434,6 +458,8 @@ pertaining to different payment systems, but often provides information about th
 assessment used to arrive at the code. Which positions of the code carry the case mix
 group information may also vary by payment systems."
 * ^url =  "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/HIPPSCodes"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert HIPPSCopyrightNotice
 
@@ -609,6 +635,8 @@ Please see Code Maintenance Committee (CMC) page for information about the CMC's
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * ^url = "https://www.ada.org/en/publications/cdt"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert ADACopyrightNotice
 
@@ -645,6 +673,8 @@ Currently, cases are classified into Medicare Severity Diagnosis Related Groups 
 
 Content can be obtained on the CMS hosted page located [here](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software)"
 * ^url = "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain MS-DRGs used throughout the US health care industry. The CMS MS-DRGs are free to use without restriction."
 
@@ -663,6 +693,7 @@ Averill RF, Goldfield NI, Muldoon J, Steinbeck BA, Grant TM. A closer look at Al
 
 [https://apps.3mhis.com/docs/Groupers/All\_Patient\_Refined\_DRG/Methodology\_overview\_GRP041/grp041\_aprdrg\_meth\_overview.pdf](https://apps.3mhis.com/docs/Groupers/All_Patient_Refined_DRG/Methodology_overview_GRP041/grp041_aprdrg_meth_overview.pdf)"""
 * ^url = "http://uri.hddaccess.com/cs/apdrg"
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * ^copyright = ""
 
@@ -678,6 +709,7 @@ Each year 3M calculates and releases a set of statistics for each 3M APR DRG bas
 
 Link to information about the code system - including how to obtain the content from 3M - is available [here.](https://www.3m.com/3M/en_US/health-information-systems-us/drive-value-based-care/patient-classification-methodologies/apr-drgs/)"
 * ^url = "http://uri.hddaccess.com/cs/aprdrg"
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * ^copyright = "The clinical logic is maintained by a team of 3M clinicians, data analysts, nosologists, programmers and economists. The logic is proprietary to 3M but is available for licensees to view in an online definitions manual.
 
@@ -742,6 +774,8 @@ This code set is required for use in the implementation guide adopted as the nat
 
 Current codes can be obtained [here](https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set)"
 * ^url = "https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set"
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain Place Of Service (POS) codes used throughout the US health care industry. The CMS POS codes are free to use without restriction."
 
@@ -770,6 +804,7 @@ External code lists maintained by X12 and external code lists maintained by othe
 
 Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."
 * ^url = "https://x12.org/codes/claim-adjustment-reason-codes"
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * ^copyright = "**Intellectual Property Information**
 
@@ -805,6 +840,8 @@ External code lists maintained by X12 and external code lists maintained by othe
 
 Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."  
 * ^url = "https://x12.org/codes/remittance-advice-remark-codes" 
+//* ^content = #complete
+* ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * ^copyright = "**Intellectual Property Information**
 
@@ -1009,6 +1046,8 @@ Teeth are numbered from the viewpoint of the dental practitioner looking into th
 * #R	"Primary teethright mandibularcanine"
 * #S	"Primary teethright mandibularfirst molar"
 * #T	"Primary teethright mandibularsecond molar"
+* ^content = #complete
+* ^caseSensitive = true
 * insert ADACopyrightNotice
 
 CodeSystem: ADAAreaOfOralCavitySystem
@@ -1021,6 +1060,8 @@ Description: "The American Dental Association Area of Oral Cavity System is a no
 * #20	"Upper left quadrant"
 * #30	"Lower left quadrant"
 * #40	"Lower right quadrant"
+* ^content = #complete
+* ^caseSensitive = true
 * insert ADACopyrightNotice
 
 ValueSet: OralBodySite
