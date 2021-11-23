@@ -1,5 +1,8 @@
 == Suppressed Messages ==
 
+# WARNING: JIRA-Artifacts file requires manual renaming of CS and VS to avoid name collisions. Some page titles were changed, but key remains the same.
+WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
+
 # INFORMATION: The following code systems are external and not supported by terminology server, and cannot be validated in examples
 INFORMATION: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.supportingInfo[3].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
 INFORMATION: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.supportingInfo[2].code.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
