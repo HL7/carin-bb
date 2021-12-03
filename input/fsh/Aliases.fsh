@@ -1,6 +1,14 @@
 //USCore -
 Alias:   $USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
 Alias:   $USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+
+
+Alias: $us-core-race = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
+Alias: $us-core-ethnicity = http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity
+Alias: $us-core-birthsex = http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
+Alias: $us-core-usps-state = http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state
+
+
 Alias:   $USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 Alias:   $USCorePractitionerRole = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
 Alias:   $USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
