@@ -531,8 +531,8 @@ Usage: #example
 
 
 * item[0].bodySite = ADAAreaOfOralCavitySystem#10 "Upper right quadrant"
-* item[0].subSite[+] = C4BBSurfaceCodes#O
-* item[0].subSite[+] = C4BBSurfaceCodes#I
+//* item[0].subSite[+] = C4BBSurfaceCodes#O
+//* item[0].subSite[+] = C4BBSurfaceCodes#I
 * item[0].servicedDate = "2021-10-28"
 
 * item[0].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"

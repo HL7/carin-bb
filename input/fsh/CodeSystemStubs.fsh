@@ -994,15 +994,18 @@ Title: "American Dental Association Universal Numbering System"
 Description: "The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
 
 Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
-* insert CodeSystemStubBoilerplate
+* ^url = "https://ada.org/ToothNumberingSystem-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL"
 * ^caseSensitive = true
+* insert CodeSystemStubBoilerplate
 * insert ADACopyrightNotice
 
 CodeSystem: ADAAreaOfOralCavitySystem
 Title: "American Dental Association Area of Oral Cavity System"
 Description: "The American Dental Association Area of Oral Cavity System is a notation system indicating a quadrant, arch, or the entire mouth."
-* insert CodeSystemStubBoilerplate
+
+* ^url = "https://ada.org/OralCavityCode-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL"
 * ^caseSensitive = true
+* insert CodeSystemStubBoilerplate
 * insert ADACopyrightNotice
 
 ValueSet: OralBodySite
