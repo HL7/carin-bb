@@ -5,4 +5,4 @@ openpyxl==3.0.7
 stringcase==1.2.0
 Jinja2==2.11.3
 commonmark==0.9.1
-lxml==4.6.3
+lxml==4.6.5
