@@ -47,8 +47,7 @@ A side by side comparison of the abstract EOB profile, and the four concrete pro
 
 <br />&nbsp;<img style="width: 100%; height: auto; float: none; align: middle;" src="SidebySideProfiles.png" /></div>
 <br />&nbsp;
-A detailed comparison of the profiles defined in this IG with their base resource or profile is shown in the following two figures. 
+Detailed comparison of the profiles defined in this IG with their base resource or profile:
 <div><img style="width: 100%; height: auto; float: none; align: middle;" src="EOBProfileComparison.png" /></div>
-<div><img style="width: 100%; height: auto; float: none; align: middle;" src="OtherProfileComparison.png" /></div>
 <div>&nbsp;</div>
 
