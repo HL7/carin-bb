@@ -8,7 +8,7 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..*
 // 20210322 CAS: FHIR-30575
-* insert Metaprofile-supportedProfile-slice
+
 * ^abstract = true 
 * identifier 1..* MS 
 * identifier.type 1..1 MS
