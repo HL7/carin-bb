@@ -148,8 +148,8 @@ Severity: #error
 
 // 20210203 CAS: https://jira.hl7.org/browse/FHIR-33024
 Invariant: EOB-vision-item-productorservice
-Description: "Vision EOB: Item productOrService not required in item.productOrService if and only if subType is vision."
-Expression: "ExplanationOfBenefit.subType.coding.where(code = 'vision' and system='http://terminology.hl7.org/CodeSystem/claim-type').exists() or ExplanationOfBenefit.item.productOrService.coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()" 
+Description: "Vision EOB: Item productOrService not required in item.productOrService if and only if type is vision."
+Expression: "ExplanationOfBenefit.type.coding.where(code = 'vision' and system='http://terminology.hl7.org/CodeSystem/claim-type').exists() or ExplanationOfBenefit.item.productOrService.coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()" 
 Severity: #error
 
 
