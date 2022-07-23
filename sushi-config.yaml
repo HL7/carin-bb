@@ -31,8 +31,8 @@ parameters:
   apply-publisher: true
   excludettl: 'true'
   excludemap: 'true'
-copyrightYear: 2021+
-releaseLabel: STU 2 Ballot
+copyrightYear: 2022+
+releaseLabel: STU 2 Pre-Publish
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

@@ -3,8 +3,10 @@ Parent:  $USCoreOrganization
 Id:  C4BB-Organization
 Title: "C4BB Organization"
 Description: "This profile builds upon the US Core Organization profile. It is used to convey a payer, provider, payee or service facility organization."
+
+* obeys uncontained-requires-lastUpdated
 * meta 1..1 MS
-* meta.lastUpdated 1..1  MS
+//* meta.lastUpdated 1..1  MS
 * meta.profile 1..*
 // 20210322 CAS: FHIR-30575
 * insert Metaprofile-supportedProfile-slice
@@ -42,3 +44,11 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * address ^comment = "Enter address of the location where the services were rendered.  If the location is a component of the Billing Provider, do not populate this data element"
 * meta.lastUpdated ^comment = "Defines the date the Resource was created or updated, whichever comes last (163).  Payers SHALL provide the last time the data was updated or the date of creation in the payer’s system of record, whichever comes last. Apps will use the meta.lastUpdated value to determine if the Reference resources are as of the current date or date of service."
 * meta.profile ^comment = "meta.profile is required as a matter of convenience of receiving systems. The meta.profile should be used by the Server to hint/assert/declare that this instance conforms to one (or more) stated profiles (with business versions). meta.profile does not capture any business logic, processing directives, or semantics (for example, inpatient or outpatient). Clients should not assume that the Server will exhaustively indicate all profiles with all versions that this instance conforms to. Clients can (and should) perform their own validation of conformance to the indicated profile(s) and to any other profiles of interest. CPCDS data element (190)"
+
+
+
+
+Invariant: uncontained-requires-lastUpdated
+Description: "meta.lastUpdated required if not a contained resource"
+Expression: "%resource = %rootResource implies meta.lastUpdated.exists()"
+Severity: #error

@@ -381,44 +381,6 @@ def get_i(type, df_i):
     return int_list
 
 
-def get_sp(r_type, df_sp, pre, canon):
-    sp_list = []
-    for i in df_sp.itertuples(index=True):
-        if i.base == r_type:
-            sp = CS.CapabilityStatementRestResourceSearchParam()
-            sp.name = i.code
-
-            # TODO need to fix this to reference the package file to reconcile definition to names
-            #if i.code in sp_specials:  # special case temp fix for us-core
-            #    sp.definition = sp_specials[i.code]
-            #el
-            if i.update == 'Y' or i.exists == 'N':
-              #  sp.definition = f'{canon}SearchParameter/{pre.lower()}-{i.base.lower()}-{i.code.split("_")[-1]}'
-                 sp.definition = f'{canon}SearchParameter/{i.base.lower()}-{i.code.split("_")[-1]}'
-            else:  # use base definition
-                # Check to see if URL is relative or absolute.
-                if(validators.url(i.sp_url)):
-                    sp.definition = f'{i.sp_url}'
-                elif (len(i.base_id) > 0): #base id provided
-                    sp.definition = f'{fhir_base_url}SearchParameter/{i.base_id}'
-                else: #otherwise attempt to create the base canonical url - Should use a mapping to determine proper name
-                    if (i.code == "_text"): # if a Resource or DomainResource search parameter
-                        sp.definition = f'{fhir_base_url}SearchParameter/DomainResource-{i.code.split("_")[-1]}'
-                    elif (i.code[0] == '_'): # if a Resource or DomainResource search parameter
-                        sp.definition = f'{fhir_base_url}SearchParameter/Resource-{i.code.split("_")[-1]}'
-                    elif (i.code in sp_common_list): # A common Parameter
-                        sp.definition = f'{fhir_base_url}SearchParameter/{i.code}'
-                    else:
-                        # removes the '_' for things like _id
-                        #sp.definition = f'{fhir_base_url}SearchParameter/{i.base.lower()}-{i.code.split("_")[-1]}'
-                        #sp.definition = f'{fhir_base_url}SearchParameter/Resource-{i.code.split("_")[-1]}'
-                        sp.definition = f'{fhir_base_url}SearchParameter/{i.base}-{i.code.split("_")[-1]}'
-
-            sp.type = i.type
-            sp.extension = get_conf(i.base_conf)
-            sp_list.append(sp.as_json())
-
-    return sp_list
 
 
 def get_combo_ext(r_type, combos):
