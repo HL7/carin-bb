@@ -192,10 +192,6 @@ Description: "This value set includes FDI tooth surface codes localized for the 
 * #F "Facial" "The surface of a tooth facing the lips."
 //V	Ventral	The surface of a tooth facing the lips.
 * #L "Lingual" "The surface of a tooth facing the tongue."
-* #MO "Mesioclusal" "The Mesioclusal surfaces of a tooth."
-* #DO "Distoclusal" "The Distoclusal surfaces of a tooth."
-* #DI "Distoincisal" "The Distoincisal surfaces of a tooth."
-* #MOD "Mesioclusodistal" "The Mesioclusodistal surfaces of a tooth."
 * ^content = #complete
 * ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
