@@ -13,7 +13,10 @@
 "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType"
 </td></tr>
 <tr><td>identifier[0].type.coding[0].code</td><td>
-#npi
+#NPI
+</td></tr>
+<tr><td>identifier[0].type.coding[0].system</td><td>
+"http://terminology.hl7.org/CodeSystem/v2-0203"
 </td></tr>
 <tr><td>identifier[0].type.coding[0].display</td><td>
 "National Provider Identifier"

@@ -23,7 +23,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
    tax 0..* MS and
    payerid 0..* MS and
    naiccode 0..* MS 
-* identifier[NPI] ^patternIdentifier.type  = C4BBIdentifierType#npi 
+* identifier[NPI] ^patternIdentifier.type  = $HL7IdentifierType#NPI
 // * identifier[NPI].type  
 * identifier[tax] ^short = "Tax ID Number"
 * identifier[tax] ^patternIdentifier.type  = $IdentifierType#TAX

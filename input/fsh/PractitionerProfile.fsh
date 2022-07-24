@@ -24,7 +24,7 @@ Description: "This profile builds upon the US Core Practitioner profile. It is u
 * identifier[tax] ^comment = "Tax ID Number.  Either the Tax Id or an NPI must be provided" 
 * identifier[tax] ^patternIdentifier.type  = $IdentifierType#TAX
 * identifier[tax] ^patternIdentifier.system = $TAXCodeCS 
-* identifier[NPI] ^patternIdentifier.type = C4BBIdentifierType#npi 
+* identifier[NPI] ^patternIdentifier.type = $HL7IdentifierType#NPI
 * identifier[NPI] ^comment = "The National Provider Identifier assigned to the Performing Provider. This is the lowest level of provider available (for example, if both individual and group are available, then the individual should be provided) (95).  Either the Tax Id or an NPI must be provided"
 * meta.lastUpdated ^comment = "Defines the date the Resource was created or updated, whichever comes last (163).  Payers SHALL provide the last time the data was updated or the date of creation in the payer’s system of record, whichever comes last. Apps will use the meta.lastUpdated value to determine if the Reference resources are as of the current date or date of service."
 * meta.profile ^comment = "meta.profile is required as a matter of convenience of receiving systems. The meta.profile should be used by the Server to hint/assert/declare that this instance conforms to one (or more) stated profiles (with business versions). meta.profile does not capture any business logic, processing directives, or semantics (for example, inpatient or outpatient). Clients should not assume that the Server will exhaustively indicate all profiles with all versions that this instance conforms to. Clients can (and should) perform their own validation of conformance to the indicated profile(s) and to any other profiles of interest. CPCDS data element (190)"
@@ -33,5 +33,5 @@ Description: "This profile builds upon the US Core Practitioner profile. It is u
 
 Invariant:  Practitioner-identifier  
 Description: "Practitioner.identifier must include an NPI or a Tax ID"
-Expression: "identifier.where(type.where(coding.where(code in ('npi' | 'TAX')).exists()).exists()).exists()"
+Expression: "identifier.where(type.where(coding.where(code in ('NPI' | 'TAX')).exists()).exists()).exists()"
 Severity:   #error

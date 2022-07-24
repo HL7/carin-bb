@@ -682,7 +682,7 @@ Usage: #example
 //* meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
-* identifier[NPI].type = $C4BBIdentifierTypeCS#npi
+* identifier[NPI].type = $HL7IdentifierType#NPI
 * identifier[NPI].value = "345678"
 * identifier[payerid].type = $C4BBIdentifierTypeCS#payerid
 * identifier[payerid].value = "901234"
@@ -697,7 +697,7 @@ Usage: #example
 //* meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2021-01-01T10:23:11+00:00"
 * language = #en-US
-* identifier[NPI].type = $C4BBIdentifierTypeCS#npi
+* identifier[NPI].type = $HL7IdentifierType#NPI
 * identifier[NPI].value = "467678"
 * identifier[payerid].type = $C4BBIdentifierTypeCS#payerid
 * identifier[payerid].value = "66783JJT"
@@ -711,7 +711,7 @@ Usage: #example
 //* meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
-* identifier[NPI].type = $C4BBIdentifierTypeCS#npi
+* identifier[NPI].type = $HL7IdentifierType#NPI
 * identifier[NPI].value = "345678"
 * identifier[tax].type = $IdentifierType#TAX
 * identifier[tax].value = "123-45-6789"
@@ -728,7 +728,7 @@ Usage: #example
 * contained[0] = OrganizationContained
 //* meta.profile = Canonical(C4BBOrganization)
 * language = #en-US
-* identifier[NPI].type = $C4BBIdentifierTypeCS#npi
+* identifier[NPI].type = $HL7IdentifierType#NPI
 * identifier[NPI].value = "345678"
 * identifier[tax].type = $IdentifierType#TAX
 * identifier[tax].value = "123-45-6789"
@@ -743,7 +743,7 @@ Description: "Provider 1"
 Usage: #inline
 //* meta.profile = Canonical(C4BBOrganization)
 * language = #en-US
-* identifier[NPI].type = $C4BBIdentifierTypeCS#npi
+* identifier[NPI].type = $HL7IdentifierType#NPI
 * identifier[NPI].value = "345678"
 * identifier[tax].type = $IdentifierType#TAX
 * identifier[tax].value = "123-45-6789"
@@ -854,7 +854,7 @@ Usage: #example
 //* meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2021-01-01T10:23:11+00:00"
 * language = #en-US
-* identifier[NPI].type = $C4BBIdentifierTypeCS#npi
+* identifier[NPI].type = $HL7IdentifierType#NPI
 * identifier[NPI].value = "0025501002"
 * name[0].family = "Schmidt"
 * name[0].given[0] = "Stewart"

@@ -166,7 +166,7 @@ Description: "Identifies the type of identifier payers and providers assign to p
 ValueSet: C4BBOrganizationIdentifierType
 Title: "C4BB Organization Identifier Type"
 Description: "Identifies the type of identifiers for organizations"
-* C4BBIdentifierType#npi
+* $HL7IdentifierType#NPI
 * C4BBIdentifierType#payerid
 * C4BBIdentifierType#naiccode
 * codes from system $IdentifierType
@@ -175,7 +175,7 @@ Description: "Identifies the type of identifiers for organizations"
 ValueSet: C4BBPractitionerIdentifierType
 Title: "C4BB Practitioner Identifier Type"
 Description: "Identifies the type of identifiers for practitioners"
-* C4BBIdentifierType#npi
+* $HL7IdentifierType#NPI
 * codes from system $IdentifierType
 * ^copyright = "This Valueset is not copyrighted."
 /*

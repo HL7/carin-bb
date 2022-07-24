@@ -18,6 +18,8 @@ FHIR-35360 - General Guidance - ### CapabilityStatement Server Requirement
 FHIR-35708
 FHIR-35710
 FHIR-35709
+FHIR-35712
+FHIR-35712 - Search for HL7IdentifierType, and invariant Practitioner-identifier  
 -->
 ### Changes and Updates for Version 1.1.0
 The current official published version of CARIN BB for FHIR R4 (STU Update of STU 1)

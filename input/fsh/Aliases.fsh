@@ -27,6 +27,7 @@ Alias:   $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinit
 Alias:   $HL7DiagnosisType = http://terminology.hl7.org/CodeSystem/ex-diagnosistype
 Alias:   $HL7ProcedureType = http://terminology.hl7.org/CodeSystem/ex-procedure-type
 Alias:   $HL7PayeeType = http://terminology.hl7.org/CodeSystem/payeetype
+Alias:   $HL7IdentifierType = http://terminology.hl7.org/CodeSystem/v2-0203
 
 Alias:   $HL7DataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 

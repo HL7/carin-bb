@@ -86,7 +86,7 @@ CodeSystem: C4BBIdentifierType
 Title: "C4BB Identifier Type"
 Description: "Identifier Type codes that extend those defined in http://terminology.hl7.org/CodeSystem/v2-0203 to define the type of identifier payers and providers assign to claims and patients"
 // * #tax "Tax ID Number" "Tax ID Number"  - use the TAX code from the base codesystem
-* #npi "National Provider Identifier" "National Provider Identifier"
+//* #npi "National Provider Identifier" "National Provider Identifier"  FHIR-35712
 //* #clia "CLIA" "CLIA"
 * #payerid "Payer ID" "Payer ID"
 * #naiccode "NAIC Code" "NAIC Code"
