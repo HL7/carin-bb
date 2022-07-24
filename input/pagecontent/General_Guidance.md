@@ -17,7 +17,7 @@
 
 <p>For profiles defined in other IGs, the meaning of Must Support is established in the defining IG. Note that the Must Support requirements for this IG are modeled after the US Core implementation guide, with the requirements for CARIN Server APIs modeled on those for US Core Responders, and the requirements for CARIN Consumer Apps modeled on those for US Core Requestors.&nbsp; When querying and reading CARIN IG for Blue Button® Profiles, *Must Support* on any profile data element <strong>SHALL</strong> be interpreted as follows:&nbsp;</p>
 <ul>
-<li>Health Plan API actors <strong>SHALL</strong>&nbsp;be capable of populating all data elements as part of the query results as specified by the CARINBlueButtonHealthPlanAPICapabilityStatement.</li>
+<li>Health Plan API actors <strong>SHALL</strong>&nbsp;be capable of populating all data elements the payer maintains as part of the query results as specified by the CARINBlueButtonHealthPlanAPICapabilityStatement.</li>
 <li>Consumer App actors <strong>SHALL</strong> be capable of processing resource instances containing the data elements without generating an error or causing the application to fail.</li>
 <li>Consumer App actors <strong>SHALL</strong> be capable of displaying the data elements for human use.</li>
 <li>In situations where information on a particular data element is not present and the reason for absence is unknown, Health Plan API actors <strong>SHALL NOT</strong> include the data elements in the resource instance returned as part of the query results.</li>
