@@ -46,6 +46,11 @@
 </ul>
 <a name="common-clinical-data-set"></a>
 
+### Profiling Constraints
+The constraints in this guide's profiles have been applied to only address the scope defined in the guide. Data element that are not part of this scope have not been constrained out, and as such, may be included by the Health Plan API. If a Health Plan API includes additional information, there **SHALL** be no expectation that client applications support the data in any way in order to be conformant with this specification.
+
+### CapabilityStatement Server Requirement
+Servers claiming conformance to this guide **SHALL** include a CapabilityStatement that has a CapabilityStatement.instantiates with a URL of http://hl7.org/fhir/us/carin-bb/CapabilityStatement/c4bb or a URL to the appropriate version of the CapabilityStatement.
 ### U.S. Core Data for Interoperability and 2015 Edition Common Clinical Data Set
 
 <p>The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access - Data Category Request 170.315(g)(8). They were created for each item in the&nbsp;<a href="https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf">2015 Edition Common Clinical Data Set (CCDS).&nbsp;</a>The 3.1.0 version of the US Core Profiles IG includes new requirements from the latest proposed ONC&nbsp;<a href="https://www.healthit.gov/topic/laws-regulation-and-policy/notice-proposed-rulemaking-improve-interoperability-health">U.S. Core Data for Interoperability(USCDI)&nbsp;</a>and includes all the&nbsp;<a href="https://www.healthit.gov/isa/api-resource-collection-health-arch">API Resource Collection in Health (ARCH)</a>resources.</p>
