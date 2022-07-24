@@ -21,6 +21,8 @@ FHIR-35709
 FHIR-35712
 FHIR-35712 - Search for HL7IdentifierType, and invariant Practitioner-identifier  
 FHIR-35729
+FHIR-35730
+FHIR-35732
 -->
 ### Changes and Updates for Version 1.1.0
 The current official published version of CARIN BB for FHIR R4 (STU Update of STU 1)
