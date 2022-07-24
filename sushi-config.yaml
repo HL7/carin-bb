@@ -24,7 +24,7 @@ description: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Butt
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 4.0.0   # updated from 3.1.1 on 9/23/21
+  hl7.fhir.us.core: 3.1.1
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
