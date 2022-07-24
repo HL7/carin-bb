@@ -39,7 +39,7 @@ Description: "This profile builds upon the US Core Patient profile. It is used t
 * deceased[x] MS 
 * name MS
 * meta.lastUpdated MS
-* address.district MS
+//* address.district MS FHIR-35031
 * address.country MS 
 
 * identifier[memberid] ^comment = "Identifier for a member assigned by the Payer for a contract; it may be different for various lines of business; ie. QHP vs MA. If members receive ID cards, that is the identifier that should be provided. (1)."
@@ -55,7 +55,7 @@ Description: "This profile builds upon the US Core Patient profile. It is used t
 * meta.profile ^comment = "meta.profile is required as a matter of convenience of receiving systems. The meta.profile should be used by the Server to hint/assert/declare that this instance conforms to one (or more) stated profiles (with business versions). meta.profile does not capture any business logic, processing directives, or semantics (for example, inpatient or outpatient). Clients should not assume that the Server will exhaustively indicate all profiles with all versions that this instance conforms to. Clients can (and should) perform their own validation of conformance to the indicated profile(s) and to any other profiles of interest. CPCDS data element (190)"
 * address.line ^comment = "Member's street name, number, direction & P.O. Box etc. (158)"
 * address.city ^comment = "The city for the member's primary address (192)" 
-* address.district ^comment = "The county for the member's primary address (125)" 
+//* address.district ^comment = "The county for the member's primary address (125)" FHIR-35031
 * address.state ^comment = "The state for the member's primary address (126)" 
 * address.postalCode ^comment = "This represents the member's 5 digit zip code (131)" 
 * address.country ^comment = "The country for the member's primary address (127)"
