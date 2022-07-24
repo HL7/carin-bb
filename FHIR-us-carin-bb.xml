@@ -90,6 +90,7 @@
 <artifact id="SearchParameter/practitionerrole-practitioner" key="SearchParameter-practitionerrole-practitioner" name="ExplanationOfBenefit_Practitioner"/>
 <artifact id="SearchParameter/explanationofbenefit-provider" key="SearchParameter-explanationofbenefit-provider" name="ExplanationOfBenefit_Provider"/>
 <artifact id="SearchParameter/explanationofbenefit-service-date" key="SearchParameter-explanationofbenefit-service-date" name="ExplanationOfBenefit_ServiceDate"/>
+<artifact id="SearchParameter/explanationofbenefit-billable-period-start" key="SearchParameter-explanationofbenefit-service-start-date" name="ExplanationOfBenefit_ServiceStartDate"/>
 <artifact id="SearchParameter/explanationofbenefit-service-start-date" key="SearchParameter-explanationofbenefit-service-start-date" name="ExplanationOfBenefit_ServiceStartDate"/>
 <artifact id="SearchParameter/explanationofbenefit-type" key="SearchParameter-explanationofbenefit-type" name="ExplanationOfBenefit_Type"/>
 <artifact id="CodeSystem/CMSHIPPSCodes" key="CodeSystem-CMSHIPPSCodes" name="Health Insurance Prospective Payment System (HIPPS)"/>

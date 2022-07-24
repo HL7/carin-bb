@@ -51,6 +51,12 @@
 <td>date</td>
 <td><code class="highlighter-rouge">GET [base]/ExplanationOfBenefit?service-start-date=[service-start-date]</code></td>
 </tr>
+<tr>
+<td>ExplanationOfBenefit</td>
+<td><a href="SearchParameter-explanationofbenefit-billable-period-start.html">billable-period-start</a></td>
+<td>date</td>
+<td><code class="highlighter-rouge">GET [base]/ExplanationOfBenefit?billable-period-start=[billable-period-start]</code></td>
+</tr>
 </tbody>
 </table>
 
