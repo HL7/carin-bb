@@ -33,22 +33,27 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[billingnetworkcontractingstatus].category MS
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
+* supportingInfo[brandgenericindicator] ^short = "Plan reported brand or generic drug indicator"
 * supportingInfo[brandgenericindicator].category = C4BBSupportingInfoType#brandgenericindicator
 * supportingInfo[brandgenericindicator].category MS
 * supportingInfo[brandgenericindicator].code from NCPDPBrandGenericIndicator (required)
 * supportingInfo[brandgenericindicator].code 1..1 MS
+* supportingInfo[rxoriginCode] ^short = "Prescription origin code"
 * supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode
 * supportingInfo[rxoriginCode].category MS
 * supportingInfo[rxoriginCode].code from NCPDPPrescriptionOriginCode (required)
 * supportingInfo[rxoriginCode].code 1..1 MS
+* supportingInfo[refillNum] ^short = "The number fill of the claim dispensed supply"
 * supportingInfo[refillNum].category = C4BBSupportingInfoType#refillnum
 * supportingInfo[refillNum].category MS
 * supportingInfo[refillNum].value[x] 1..1 MS
 * supportingInfo[refillNum].value[x] only Quantity
+* supportingInfo[refillsAuthorized] ^short = "Number or refills authorized by prescriber"
 * supportingInfo[refillsAuthorized].category = C4BBSupportingInfoType#refillsauthorized
 * supportingInfo[refillsAuthorized].category MS
 * supportingInfo[refillsAuthorized].value[x] 1..1 MS
 * supportingInfo[refillsAuthorized].value[x] only Quantity
+* supportingInfo[dawcode] ^short = "Dispense and written product selection code"
 * supportingInfo[dawcode].category = C4BBSupportingInfoType#dawcode
 * supportingInfo[dawcode].category MS
 * supportingInfo[dawcode].code from NCPDPDispensedAsWrittenOrProductSelectionCode (required)
@@ -59,10 +64,12 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[clmrecvddate].category MS
 * supportingInfo[clmrecvddate].timing[x] only date
 * supportingInfo[clmrecvddate].timing[x] 1..1 MS
+* supportingInfo[dayssupply] ^short = "Days supply"
 * supportingInfo[dayssupply].category = C4BBSupportingInfoType#dayssupply
 * supportingInfo[dayssupply].category  MS
 * supportingInfo[dayssupply].value[x] 1..1 MS
 * supportingInfo[dayssupply].value[x] only Quantity
+* supportingInfo[compoundcode] ^short = "Code indicating whether or not the prescription is a compound"
 * supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
 * supportingInfo[compoundcode].category MS
 * supportingInfo[compoundcode].code from NCPDPCompoundCode (required)
