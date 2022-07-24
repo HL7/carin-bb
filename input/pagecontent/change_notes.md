@@ -8,7 +8,8 @@ Change description or STU1.1
 FHIR-34428
 24457
 34504
-34514
+34514 & 34516
+FHIR-34669
 -->
 ### Changes and Updates for Version 1.1.0
 The current official published version of CARIN BB for FHIR R4 (STU Update of STU 1)
