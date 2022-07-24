@@ -16,6 +16,8 @@ FHIR-35031
 FHIR-35213 - General Guidance - ### Profiling Constraints
 FHIR-35360 - General Guidance - ### CapabilityStatement Server Requirement
 FHIR-35708
+FHIR-35710
+FHIR-35709
 -->
 ### Changes and Updates for Version 1.1.0
 The current official published version of CARIN BB for FHIR R4 (STU Update of STU 1)
