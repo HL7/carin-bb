@@ -10,6 +10,11 @@ Exchange of this information needs to be protected with proper security and priv
 
 Implementers must ensure that APIs fully and successfully implement privacy and security features such as, but not limited to, those required to comply with HIPAA privacy and security requirements and other applicable law protecting the privacy and security of protected health information. Note that the HIPAA Privacy Rule applies only to HIPAA covered entities. The HIPAA Privacy Rule applies to HIPAA covered entities. After information leave the control of a HIPAA covered entity, the HIPAA Privacy Rule does not apply.  FTC consumer protection laws and state privacy laws may apply.
 
+### Security/Privacy Related Technologies Including Explicit Consent and Security Labels
+1. While past ONC regulations did have optional rules for data labeling and consent directives, as of May 2020, ONC has elected to not establish rules for either data labeling and consent directives as part of the [Final Rule for the 21st Century Cures Act](https://www.federalregister.gov/documents/2020/05/01/2020-07419/21st-century-cures-act-interoperability-information-blocking-and-the-onc-health-it-certification).
+2. At present there is no explicit regulatory requirement for the use of these technologies in conjunction with this guide.
+3. However, to meet the statutes, regulations, and guiding principles above, consent directives and security labels MAY be considered and used.
+4. Organizations which plan to take advantage of these additional capabilities are responsible for negotiating support for these mechanisms between trading partners. The FHIR implementation guide defining the recommended standard is the [FHIR Data Segmentation for Privacy IG](http://hl7.org/fhir/uv/security-label-ds4p).
 
 #### Security Considerations and Guidance
 All implementers of the CARIN Consumer-Directed Payer Data Exchange Implementation Guide (IG) should follow the FHIR Security guidance, Security and Privacy Module, and the FHIR Implementer’s Safety Checklist guidance as defined in the FHIR standard where applicable and not otherwise superseded by this section of the IG.
