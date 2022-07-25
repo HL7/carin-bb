@@ -114,6 +114,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.location[x] only CodeableConcept
 * item.locationCodeableConcept from CMSPlaceofServiceCodes (required)
 
+* item.bodySite MS
 * item.bodySite ^short = "First tooth number or oral cavity code"
 * item.bodySite from OralBodySite (required) // may change to $ToothNumber
 * item.subSite ^short = "Tooth surface for all teeth on line"
