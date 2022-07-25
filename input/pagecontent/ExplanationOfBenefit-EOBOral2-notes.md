@@ -186,7 +186,7 @@
 <tr><td>item[0].informationSequence[3]</td><td>"10"</td></tr>
 <tr><td>item[0].informationSequence[4]</td><td>"11"</td></tr>
 <tr><td>item[0].productOrService.coding[0].system</td><td>
-"https://www.ada.org/en/publications/cdt"
+"http://ada.org/cdt"
 </td></tr>
 <tr><td>item[0].productOrService.coding[0].code</td><td>
 #D0220

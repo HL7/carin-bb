@@ -169,7 +169,7 @@
 1
 </td></tr>
 <tr><td>item[0].productOrService.coding[0].system</td><td>
-"https://www.ada.org/en/publications/cdt"
+"http://ada.org/cdt"
 </td></tr>
 <tr><td>item[0].productOrService.coding[0].code</td><td>
 #D1110
@@ -211,7 +211,7 @@
 2
 </td></tr>
 <tr><td>item[1].productOrService.coding[0].system</td><td>
-"https://www.ada.org/en/publications/cdt"
+"http://ada.org/cdt"
 </td></tr>
 <tr><td>item[1].productOrService.coding[0].code</td><td>
 #D0120

@@ -634,7 +634,7 @@ The Council on Dental Benefit Programs (CDBP) has ADA Bylaws responsibility for 
 Please see Code Maintenance Committee (CMC) page for information about the CMC's members and activities.
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
-* ^url = "https://www.ada.org/en/publications/cdt"
+* ^url = "http://ada.org/cdt"
 //* ^content = #complete
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate

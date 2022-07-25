@@ -34,9 +34,9 @@ INFORMATION: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.ite
 INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[0].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
 INFORMATION: ExplanationOfBenefit/OutpatientEOBExample1: ExplanationOfBenefit.item[1].revenue.coding[0]: Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
 
-INFORMATION: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[0].productOrService.coding[0]: Code System URI 'https://www.ada.org/en/publications/cdt' is unknown so the code cannot be validated
-INFORMATION: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[1].productOrService.coding[0]: Code System URI 'https://www.ada.org/en/publications/cdt' is unknown so the code cannot be validated
-INFORMATION: ExplanationOfBenefit/EOBOral2: ExplanationOfBenefit.item[0].productOrService.coding[0]: Code System URI 'https://www.ada.org/en/publications/cdt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[0].productOrService.coding[0]: Code System URI 'http://ada.org/cdt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[1].productOrService.coding[0]: Code System URI 'http://ada.org/cdt' is unknown so the code cannot be validated
+INFORMATION: ExplanationOfBenefit/EOBOral2: ExplanationOfBenefit.item[0].productOrService.coding[0]: Code System URI 'http://ada.org/cdt' is unknown so the code cannot be validated
 
 INFORMATION: ExplanationOfBenefit/EOBOral2: ExplanationOfBenefit.supportingInfo[5].code.coding[0]: Code System URI 'https://ada.org/ToothNumberingSystem-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL' is unknown so the code cannot be validated
 INFORMATION: ExplanationOfBenefit/EOBOral2: ExplanationOfBenefit.supportingInfo[6].code.coding[0]: Code System URI 'https://ada.org/ToothNumberingSystem-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL' is unknown so the code cannot be validated
@@ -158,9 +158,9 @@ WARNING: ExplanationOfBenefit/EOBInpatient1: ExplanationOfBenefit.item[0].revenu
 WARNING: ExplanationOfBenefit/EOBOutpatientInstitutional1: ExplanationOfBenefit.item[0].revenue: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
 
 
-WARNING: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[0].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.ada.org/en/publications/cdt' is unknown so the code cannot be validated]
-WARNING: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[1].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.ada.org/en/publications/cdt' is unknown so the code cannot be validated]
-WARNING: ExplanationOfBenefit/EOBOral2: ExplanationOfBenefit.item[0].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.ada.org/en/publications/cdt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[0].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://ada.org/cdt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/EOBOral1a: ExplanationOfBenefit.item[1].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://ada.org/cdt' is unknown so the code cannot be validated]
+WARNING: ExplanationOfBenefit/EOBOral2: ExplanationOfBenefit.item[0].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://ada.org/cdt' is unknown so the code cannot be validated]
 
 
 WARNING: ExplanationOfBenefit/InpatientEOBExample1: ExplanationOfBenefit.item[0].productOrService: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
@@ -208,7 +208,7 @@ WARNING: ExplanationOfBenefit/EOBOral2: ExplanationOfBenefit.item[0].bodySite: [
 
 
 # WARNING: Unable to provide support for code system (External proprietary Code system)
-WARNING: ValueSet.where(id = 'ADADentalProcedureCode'): Error from server: Unable to provide support for code system https://www.ada.org/en/publications/cdt
+WARNING: ValueSet.where(id = 'ADADentalProcedureCode'): Error from server: Unable to provide support for code system http://ada.org/cdt
 WARNING: ValueSet.where(id = 'AHANUBCPatientDischargeStatus'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PatDischargeStatus
 WARNING: ValueSet.where(id = 'AHANUBCPointOfOriginForAdmissionOrVisit'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PointOfOrigin
 WARNING: ValueSet.where(id = 'AHANUBCPresentOnAdmission'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
