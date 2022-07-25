@@ -422,7 +422,7 @@ General information can be found here: [https://www.cms.gov/Medicare/Coding/MedH
 Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets](https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets)
 
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
-* ^url =  "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
+* ^url =  "https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 //* ^content = #complete
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
