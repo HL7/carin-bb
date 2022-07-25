@@ -29,7 +29,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * identifier[tax] ^patternIdentifier.type  = $IdentifierType#TAX
 // * identifier[tax].type  
 * identifier[tax] ^patternIdentifier.system = $TAXCodeCS 
-* identifier[payerid] ^short = "Payer ID"
+* identifier[payerid] ^short = "Payer ID used in HIPAA covered claims submission transactions"
 * identifier[payerid] ^patternIdentifier.type  = C4BBIdentifierType#payerid 
 // * identifier[payerid].type  
 * identifier[naiccode] ^short = "NAIC Code"
