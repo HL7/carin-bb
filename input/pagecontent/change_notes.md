@@ -26,6 +26,7 @@ FHIR-35732
 FHIR-35735
 FHIR-35766
 FHIR-35956
+FHIR-36760
 -->
 ### Changes and Updates for Version 1.1.0
 The current official published version of CARIN BB for FHIR R4 (STU Update of STU 1)

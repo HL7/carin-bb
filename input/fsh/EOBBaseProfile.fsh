@@ -26,7 +26,8 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * patient 1..1 MS
 * provider only Reference(C4BBOrganization or C4BBPractitioner)   // based on BV2a comments 7/27
 * patient only Reference (C4BBPatient)
-* billablePeriod 0..1 MS 
+* billablePeriod 1..1 MS 
+* billablePeriod.start 1..1 MS 
 * insurer 1..1 MS
 * insurer only Reference(C4BBOrganization)
 * provider 1..1 MS
