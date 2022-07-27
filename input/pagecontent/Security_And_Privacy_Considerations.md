@@ -68,7 +68,7 @@ For the purposes of information exchange defined by this IG, additional security
 
 
 ### Audit Logging and Provenance
-1.	Audit logs and provenance are recorded.
+1.	Relevant audit and provenance events SHALL be recorded.
 2.  Server implementations **SHOULD** record IG related data access using the [AuditEvent](http://hl7.org/fhir/R4/auditevent.html) resource.
 3.	Server implementations **SHOULD** support the ability to directly record and/or enable clients to assert (store) provenance associated with advance directive information using the [Provenance](http://hl7.org/fhir/R4/provenance.html) resource.
 
