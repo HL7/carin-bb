@@ -136,6 +136,7 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #discharge-status  "Discharge Status"   "UB-04 Discharge Status (FL-17) indicates the patient’s status as of the discharge date for a facility stay."		
 * #drg	"DRG"	"DRG (Diagnosis Related Group), including the code system, the DRG version and the code value"	
 * #performingnetworkcontractingstatus	"Performing Network Contracting Status" "Indicates that the Performing Provider has a contract with the Payer as of the effective date of service or admission."		
+* #benefitpaymentstatus "Benefit Payment Status" "Indicates the in network or out of network payment status of the claim."
 * #refillnum	"Refill Number"	  "NCPDP value indicating the number fill of the current dispensed supply (0, 1, 2, etc.)"	
 * #refillsauthorized "Refills Authorized"	  "NCPDP value indicating the number of refills authorized by the subscriber (0, 1, 2, etc.)"
 * #rxorigincode	"Rx Origin Code" "NCPDP code indicating whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy."	

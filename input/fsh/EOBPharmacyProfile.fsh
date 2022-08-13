@@ -26,7 +26,9 @@ The claims data is based on submission standards adopted by the Department of He
    benefitpaymentstatus 1..1 MS
 
 * supportingInfo[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* supportingInfo[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
+* supportingInfo[benefitpaymentstatus].code from  C4BBPayerBenefitPaymentStatus  (required)
+* supportingInfo[benefitpaymentstatus].code 1..1 MS
 
 * supportingInfo[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus

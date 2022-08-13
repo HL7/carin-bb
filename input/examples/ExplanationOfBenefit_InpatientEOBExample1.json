@@ -168,6 +168,14 @@
       "category" : {
         "coding" : [
           {
+            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType",
+            "code" : "benefitpaymentstatus"
+          }
+        ]
+      },
+      "code" : {
+        "coding" : [
+          {
             "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
             "code" : "innetwork"
           }

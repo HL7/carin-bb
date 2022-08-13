@@ -203,7 +203,8 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
 * supportingInfo[patientaccountnumber].sequence = 9
-* supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
+* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
 * supportingInfo[benefitpaymentstatus].sequence = 10
 
 
@@ -294,7 +295,8 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
 * supportingInfo[patientaccountnumber].sequence = 8
-* supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
+* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
 * supportingInfo[benefitpaymentstatus].sequence = 9
 
 
@@ -470,7 +472,8 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "PATIENTACCTNO3"
 * supportingInfo[patientaccountnumber].sequence = 5
-* supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
+* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
 * supportingInfo[benefitpaymentstatus].sequence = 6
 
 
@@ -584,7 +587,8 @@ Usage: #example
 * supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#2
 * supportingInfo[additionalbodysite][=].sequence = 10
 
-* supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
+* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
 * supportingInfo[benefitpaymentstatus].sequence = 11
 
 Instance: EOBPharmacy1
@@ -675,7 +679,8 @@ Usage: #example
 * supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
 * supportingInfo[compoundcode].code = NCPDPCompoundCode#Dummy
 * supportingInfo[compoundcode].sequence = 9
-* supportingInfo[benefitpaymentstatus].category = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
+* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
 * supportingInfo[benefitpaymentstatus].sequence = 10
 
 
