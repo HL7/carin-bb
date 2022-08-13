@@ -142,7 +142,7 @@
 #additionalbodysite
 </td></tr>
 <tr><td>supportingInfo[5].code.coding[0].system</td><td>
-"https://ada.org/ToothNumberingSystem-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL"
+"http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem"
 </td></tr>
 <tr><td>supportingInfo[5].code.coding[0].code</td><td>
 #1
@@ -157,7 +157,7 @@
 #additionalbodysite
 </td></tr>
 <tr><td>supportingInfo[6].code.coding[0].system</td><td>
-"https://ada.org/ToothNumberingSystem-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL"
+"http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem"
 </td></tr>
 <tr><td>supportingInfo[6].code.coding[0].code</td><td>
 #2
@@ -207,7 +207,7 @@
 "Office"
 </td></tr>
 <tr><td>item[0].bodySite.coding[0].system</td><td>
-"https://ada.org/OralCavityCode-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL"
+"http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem"
 </td></tr>
 <tr><td>item[0].bodySite.coding[0].code</td><td>
 #10
