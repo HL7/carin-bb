@@ -234,6 +234,10 @@ Usage: #example
 * billablePeriod.end = "2019-10-31"
 * provider = Reference(OrganizationProvider1)
 * provider.display = "XXX Health Plan"
+* careTeam[+].sequence = 1
+* careTeam[=].provider = Reference(PractitionerProvider1)
+* careTeam[=].role = C4BBClaimCareTeamRole#performing "Performing provider"
+* careTeam[=].qualification = $NUCCProviderTaxonomy#364SX0200X "Oncology Clinical Nurse Specialist"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0X1A
 * diagnosis[0].type = $C4BBClaimDiagnosisTypeCS#patientreasonforvisit
@@ -349,7 +353,8 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00
 * item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
 
-* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#other
+* item[0].adjudication[benefitpaymentstatus][0].category.coding[0] = C4BBPayerAdjudicationStatus#other
+
 
 
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
@@ -859,4 +864,21 @@ Usage: #example
 * name[0].family = "Schmidt"
 * name[0].given[0] = "Stewart"
 * name[0].suffix = "DDS"
+* active = true
+
+
+
+
+Instance: PractitionerProvider1
+InstanceOf: C4BBPractitioner
+Description: "Provider 1"
+Usage: #example
+//* meta.profile = Canonical(C4BBOrganization)
+* meta.lastUpdated = "2022-07-27T10:23:11+00:00"
+* language = #en-US
+* identifier[NPI].type = $HL7IdentifierType#NPI
+* identifier[NPI].value = "846274937"
+* name[0].family = "Levin"
+* name[0].given[0] = "Henry"
+* name[0].suffix = "MD"
 * active = true
