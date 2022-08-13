@@ -332,7 +332,7 @@ If the service facility is not assigned an NPI, this data element will not be po
 
 Invariant:  Oral-EOB-surface-subsite-requires-tooth-number
 Description: "If item.subsite (tooth surface) exists then tooth number is required in bodySite or supportingInfo[additionalBodySite]"
-Expression: "item.where(subSite.exists() and (bodySite.where(coding.system='https://ada.org/ToothNumberingSystem-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='https://ada.org/ToothNumberingSystem-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0"
+Expression: "item.where(subSite.exists() and (bodySite.where(coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0"
 Severity:   #error
 
 Invariant:  Oral-EOB-supportinginfo-bodysite-requires-line-item
