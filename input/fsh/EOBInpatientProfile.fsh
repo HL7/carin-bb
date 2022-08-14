@@ -45,7 +45,6 @@ Services."
 * provider only Reference(C4BBOrganization)
 * insert SupportingInfoSlicing
 * supportingInfo contains
-     billingnetworkcontractingstatus 0..1 MS and
      admissionperiod 1..1 MS  and
      clmrecvddate 0..1 MS and
      typeofbill 0..1 MS and
@@ -64,11 +63,6 @@ Services."
 * supportingInfo[benefitpaymentstatus].code from  C4BBPayerBenefitPaymentStatus  (required)
 * supportingInfo[benefitpaymentstatus].code 1..1 MS
 
-* supportingInfo[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
-* supportingInfo[billingnetworkcontractingstatus].category MS
-* supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
-* supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 
 * supportingInfo[admissionperiod] ^short = "Admission Period"
 * supportingInfo[admissionperiod].category = C4BBSupportingInfoType#admissionperiod
@@ -152,8 +146,16 @@ Services."
 * adjudication MS
 * item.adjudication  MS
 * adjudication contains
+   billingnetworkcontractingstatus 0..1 MS and
    adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
    denialreason 0..* MS
+
+
+* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
+* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[billingnetworkcontractingstatus].category MS
+* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
+* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
 
 * adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 * adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason
@@ -220,7 +222,6 @@ Services."
 * supportingInfo[admtype] ^comment = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14)"
 * supportingInfo[typeofbill] ^comment = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of institution, the second digit classifies the type of care being billed, and the third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (17)"
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
-* supportingInfo[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * supportingInfo[admissionperiod] ^comment = "The Period.start date corresponds with the date the beneficiary was admitted to a facility and the onset of services. May precede the Statement From Date if this claim is for a beneficiary who has been continuously under care. The Period.end date corresponds with the date beneficiary was discharged from the facility, or died. Matches the final Statement Thru Date. When there is a discharge date, the Patient Discharge Status Code indicates the final disposition of the patient after discharge. (18, 19)"
 * supportingInfo[drg] ^comment = "Claim diagnosis related group (DRG). DRGs require the DRG system; i.e., MS-DRG / AP-DRG / APR-DRG, the DRG version and the code value (32, 33. 113)"
 * supportingInfo[discharge-status] ^comment = "Patient’s status as of the discharge date for a facility stay. Information located on UB04. (Form Locator 17). (117)"
@@ -230,6 +231,7 @@ Services."
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"

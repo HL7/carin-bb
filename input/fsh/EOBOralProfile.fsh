@@ -18,8 +18,6 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * provider only Reference(C4BBPractitioner)
 * insert SupportingInfoSlicing
 * supportingInfo contains
-   billingnetworkcontractingstatus 1..1 MS and
-   renderingnetworkcontractingstatus 1..1 MS and
    clmrecvddate 0..1 MS and
    servicefacility 0..1 MS and
    orthodontics 0..1 MS and
@@ -35,18 +33,6 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
 * supportingInfo[benefitpaymentstatus].code from  C4BBPayerBenefitPaymentStatus  (required)
 * supportingInfo[benefitpaymentstatus].code 1..1 MS
-
-* supportingInfo[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
-* supportingInfo[billingnetworkcontractingstatus].category MS
-* supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
-* supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
-
-* supportingInfo[renderingnetworkcontractingstatus] ^short = "Rendering provider contracting status"
-* supportingInfo[renderingnetworkcontractingstatus].category = C4BBSupportingInfoType#renderingnetworkcontractingstatus
-* supportingInfo[renderingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
-* supportingInfo[renderingnetworkcontractingstatus].category MS
-* supportingInfo[renderingnetworkcontractingstatus].code 1..1 MS
 
 * supportingInfo[clmrecvddate] ^short = "Claim received date"
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
@@ -122,7 +108,24 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.subSite ^short = "Tooth surface for all teeth on line"
 * item.subSite from C4BBSurfaceCodes (required)
 
-* adjudication 0..1
+* insert AdjudicationSlicing
+* adjudication MS
+* adjudication contains
+   billingnetworkcontractingstatus 0..1 MS and
+   renderingnetworkcontractingstatus 1..1 MS
+
+* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
+* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[billingnetworkcontractingstatus].category MS
+* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
+* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+
+* adjudication[renderingnetworkcontractingstatus] ^short = "Rendering provider contracting status"
+* adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
+* adjudication[renderingnetworkcontractingstatus].category MS
+* adjudication[renderingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
+* adjudication[renderingnetworkcontractingstatus].reason 1..1 MS
+
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
 * item.adjudication contains
@@ -286,8 +289,6 @@ ExplanationOfBenefit.repeat(supportingInfo.where(code.coding.system='http://hl7.
 
 
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
-* supportingInfo[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
-* supportingInfo[renderingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
 * supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Rendering Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.
 If the service facility is not assigned an NPI, this data element will not be populated.  Reference CMS 1500 element 32a (97, 170, 176)"
 
@@ -311,6 +312,10 @@ If the service facility is not assigned an NPI, this data element will not be po
 
 * item.bodySite ^comment = "Tooth Number - First Occurrence (196)"
 * item.subSite ^comment = "Tooth Surface (197)"
+
+* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* adjudication[renderingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
+
 
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
