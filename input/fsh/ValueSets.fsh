@@ -23,7 +23,7 @@ Description: "Describes functional roles of the care team members."
 * C4BBClaimCareTeamRole#referring
 * C4BBClaimCareTeamRole#operating 
 * C4BBClaimCareTeamRole#otheroperating 
-* C4BBClaimCareTeamRole#performing 
+* C4BBClaimCareTeamRole#rendering 
 // * C4BBClaimCareTeamRoleCS#site 
 // * C4BBClaimCareTeamRoleCS#prescribing 
 * ^copyright = "This Valueset is not copyrighted."
@@ -33,7 +33,7 @@ Title: "C4BB Claim Professional And Non Clinician Care Team Role"
 Description: "Describes functional roles of the care team members"
 * $CareTeamRoleCodeCS#primary 
 * $CareTeamRoleCodeCS#supervisor
-* C4BBClaimCareTeamRole#performing
+* C4BBClaimCareTeamRole#rendering
 * C4BBClaimCareTeamRole#purchasedservice 
 * C4BBClaimCareTeamRole#referring 
 * ^copyright = "This Valueset is not copyrighted."

@@ -189,7 +189,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (42)"
 * item.revenue ^comment = "Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed (86)"
 * adjudication[denialreason].reason ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
-* careTeam.provider ^comment = "The National Provider Identifier assigned to the care team (primary care provider, attending, referring, otheroperating, operating, and performing) for the admission. (93, 96, 98, 99, 173)"
+* careTeam.provider ^comment = "The National Provider Identifier assigned to the care team (primary care provider, attending, referring, otheroperating, operating, and rendering) for the admission. (93, 96, 98, 99, 173)"
 
 
 * insert EOBBaseProfileComments

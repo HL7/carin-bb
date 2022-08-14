@@ -237,7 +237,7 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * careTeam[+].sequence = 1
 * careTeam[=].provider = Reference(PractitionerProvider1)
-* careTeam[=].role = C4BBClaimCareTeamRole#performing "Performing provider"
+* careTeam[=].role = C4BBClaimCareTeamRole#rendering "Rendering provider"
 * careTeam[=].qualification = $NUCCProviderTaxonomy#364SX0200X "Oncology Clinical Nurse Specialist"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0X1A
@@ -362,9 +362,9 @@ Usage: #example
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1
-* supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
-* supportingInfo[performingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
-* supportingInfo[performingnetworkcontractingstatus].sequence = 2
+* supportingInfo[renderingnetworkcontractingstatus].category = C4BBSupportingInfoType#renderingnetworkcontractingstatus
+* supportingInfo[renderingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
+* supportingInfo[renderingnetworkcontractingstatus].sequence = 2
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].timingDate = 2011-05-30
 * supportingInfo[clmrecvddate].sequence = 3
@@ -458,9 +458,9 @@ Usage: #example
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1
-* supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
-* supportingInfo[performingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
-* supportingInfo[performingnetworkcontractingstatus].sequence = 2
+* supportingInfo[renderingnetworkcontractingstatus].category = C4BBSupportingInfoType#renderingnetworkcontractingstatus
+* supportingInfo[renderingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
+* supportingInfo[renderingnetworkcontractingstatus].sequence = 2
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].timingDate = 2021-03-18
 * supportingInfo[clmrecvddate].sequence = 3
@@ -555,9 +555,9 @@ Usage: #example
 * supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
 * supportingInfo[billingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
 * supportingInfo[billingnetworkcontractingstatus].sequence = 1
-* supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
-* supportingInfo[performingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
-* supportingInfo[performingnetworkcontractingstatus].sequence = 2
+* supportingInfo[renderingnetworkcontractingstatus].category = C4BBSupportingInfoType#renderingnetworkcontractingstatus
+* supportingInfo[renderingnetworkcontractingstatus].code = C4BBPayerAdjudicationStatus#contracted
+* supportingInfo[renderingnetworkcontractingstatus].sequence = 2
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].timingDate = 2021-03-18
 * supportingInfo[clmrecvddate].sequence = 3

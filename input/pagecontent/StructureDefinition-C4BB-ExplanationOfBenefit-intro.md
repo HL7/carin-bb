@@ -1,7 +1,7 @@
 <h4>Synonyms:</h4>
 <ul>
 <li>The Implementation Guide considers a health plan patient / beneficiary / member to be synonymous.&nbsp; The subscriber is the member who carries the health coverage.&nbsp; Subscriber synonyms include policy holder / insured.&nbsp; The payer synonyms are insurer / health plan / payor</li>
-<li>The practitioner functional roles of performing, rendering and servicing are synonymous.&nbsp; CPCDS uses performing</li>
+<li>The practitioner functional roles of rendering, rendering and servicing are synonymous.&nbsp; CPCDS uses rendering</li>
 <li>The terms institutional and facility are synonymous.&nbsp; CPCDS uses institutional</li>
 <li>The terms allowed and eligible are synonymous.&nbsp; CPCDS uses eligible</li>
 <li>The terms disallowed and noncovered are synonymous.&nbsp; CPCDS uses noncovered</li>
@@ -25,7 +25,7 @@ If the current adjusts a prior ExplanationOfBenefit, .related.reference = the pr
 If the current ExplanationOfBenefit has been adjusted; related.reference = the ExplanationOfBenefit.identifier of the adjusting ExplanationOfBenefit and related.relationship value = 'replacedby'.   
 The .related.reference contains the identifier of the immediately preceding or following ExplanationOfBenefit, not the first or last.</li>
 <li>.supportinginfo.sequence rule:&nbsp; client app implementations should look-up supportingInfo elements based on category values instead of sequence values</li>
-<li>.careTeam.sequence rule:&nbsp; careTeam.sequence values uniquely identify careTeam members.&nbsp; They do not necessarily indiate any order in which the patient was seen by the careTeam or identify any level of significance of the careTeam to the patient, etc.&nbsp; Client app implementations should not assign any significance to the sequence values.&nbsp;&nbsp;&nbsp;</li>
+<li>.careTeam.sequence rule:&nbsp; careTeam.sequence values uniquely identify careTeam members.&nbsp; They do not necessarily indicate any order in which the patient was seen by the careTeam or identify any level of significance of the careTeam to the patient, etc.&nbsp; Client app implementations should not assign any significance to the sequence values.&nbsp;&nbsp;&nbsp;</li>
 <li>.insurance:&nbsp;&nbsp;Define an invariant:&nbsp; Will have multiple occurrences on secondary / tertiary, etc. claims.&nbsp; Up to one occurrence, that of the ExplanationOfBenefit.insurer, will have a boolean value = 'True'.&nbsp;</li>
 <li>.insurance.focal:&nbsp; If there is an occurrence, with focal = true, EOB.insurance.coverage.payor =&nbsp; EOB.insurer is the same as EOB.insurance.coverage.payor.&nbsp;&nbsp; (Coverage.payor is 1..1).&nbsp; There can be&nbsp; 0 or * occurrences with focal = false</li>
 <li>.insurance.coverage:&nbsp; When focal = true, Coverage.payer--&gt; Organization.identifier.&nbsp; When focal = false, EOB.insurance.coverage.display = [name of other carrier]&nbsp;&nbsp;</li>

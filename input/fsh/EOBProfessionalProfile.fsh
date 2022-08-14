@@ -19,7 +19,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * insert SupportingInfoSlicing
 * supportingInfo contains
    billingnetworkcontractingstatus 0..1 MS and
-   performingnetworkcontractingstatus 0..1 MS and
+   renderingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
    servicefacility 0..1 MS and
    // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
@@ -32,11 +32,11 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
 * supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 
-* supportingInfo[performingnetworkcontractingstatus] ^short = "Performing provider contracting status"
-* supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
-* supportingInfo[performingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
-* supportingInfo[performingnetworkcontractingstatus].category MS
-* supportingInfo[performingnetworkcontractingstatus].code 1..1 MS
+* supportingInfo[renderingnetworkcontractingstatus] ^short = "Rendering provider contracting status"
+* supportingInfo[renderingnetworkcontractingstatus].category = C4BBSupportingInfoType#renderingnetworkcontractingstatus
+* supportingInfo[renderingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
+* supportingInfo[renderingnetworkcontractingstatus].category MS
+* supportingInfo[renderingnetworkcontractingstatus].code 1..1 MS
 
 * supportingInfo[clmrecvddate] ^short = "Claim received date"
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
@@ -115,8 +115,8 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
 * supportingInfo[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
-* supportingInfo[performingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
-* supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Performing Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.
+* supportingInfo[renderingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
+* supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Rndering Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.
 If the service facility is not assigned an NPI, this data element will not be populated.  Reference CMS 1500 element 32a (97, 170, 176)"
 * supportingInfo[medicalrecordnumber] ^comment = "Provider submitted medical record number that can be included on the claim. (109)"
 * supportingInfo[patientaccountnumber] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
@@ -132,7 +132,7 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.modifier ^comment = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41)"
 * item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code or CPT procedure code, submitted by the provider. (42)"
 * item.location[x] ^comment = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46)"
-* careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, performing, purchased service and referring care team. (95, 96, 99)"
+* careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, rendering, purchased service and referring care team. (95, 96, 99)"
 * item.serviced[x]  ^comment = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 

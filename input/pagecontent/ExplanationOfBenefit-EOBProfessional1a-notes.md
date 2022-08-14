@@ -37,7 +37,7 @@
 1
 </td></tr>
 <tr><td>supportingInfo[1].category.coding[0].code</td><td>
-#performingnetworkcontractingstatus
+#renderingnetworkcontractingstatus
 </td></tr>
 <tr><td>supportingInfo[1].category.coding[0].system</td><td>
 "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"

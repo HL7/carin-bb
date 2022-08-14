@@ -88,21 +88,21 @@ role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'superv
 Severity: #error
 
 Invariant: EOB-inst-careTeam-organization    // rewritten with input from Lee Surprenant  FHIR-28530
-Description: "Institutional EOB:  Careteam roles refer to an organization"
+Description: "Institutional EOB: Careteam roles refer to an organization"
 Expression:   "(
-role.where(coding.where(code in ('performing' )).exists()).exists() implies
-role.where(coding.where(code in ('performing' )).exists()).exists().provider.all(resolve() is Organization)
+role.where(coding.where(code in ('rendering' )).exists()).exists() implies
+role.where(coding.where(code in ('rendering' )).exists()).exists().provider.all(resolve() is Organization)
 )"
 Severity: #error
 
 Invariant: EOB-careteam-qualification
-Description: "Care Team Performing physician's qualifications are from Healthcare Provider Taxonomy Value Set"
-//Expression: "where(role.where(coding.code in ('performing')).exists().not() or qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')).exists()" // FHIR-35889
-//Expression: "where(role.where(coding.code in ('performing')).exists().not() or qualification.where(coding.system = 'http://nucc.org/provider-taxonomy')).exists()"
-Expression: "where(role.where(coding.code in ('performing')).exists().not() or qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')).exists()"
+Description: "Care Team Rendering physician's qualifications are from Healthcare Provider Taxonomy Value Set"
+//Expression: "where(role.where(coding.code in ('rendering')).exists().not() or qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')).exists()" // FHIR-35889
+//Expression: "where(role.where(coding.code in ('rendering')).exists().not() or qualification.where(coding.system = 'http://nucc.org/provider-taxonomy')).exists()"
+Expression: "where(role.where(coding.code in ('rendering')).exists().not() or qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')).exists()"
 /* Expression: "(
-#role.where(coding.where(code in ('performing' )).exists()).exists() implies
-role.where(coding.where(code in ('performing' )).exists()).exists().qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')
+#role.where(coding.where(code in ('rendering' )).exists()).exists() implies
+role.where(coding.where(code in ('rendering' )).exists()).exists().qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')
 )"
 */
 Severity: #error
@@ -118,16 +118,16 @@ Severity: #error
 Invariant: EOB-pharm-careTeam-organization
 Description: "Pharmacy EOB: Careteam roles refer to an organization"
 Expression: "(
-role.where(coding.where(code in ('performing' )).exists()).exists() implies
-role.where(coding.where(code in ('performing' )).exists()).exists().provider.all(resolve() is Organization)
+role.where(coding.where(code in ('rendering' )).exists()).exists() implies
+role.where(coding.where(code in ('rendering' )).exists()).exists().provider.all(resolve() is Organization)
 )"
 Severity: #error
 
 Invariant: EOB-prof-careTeam-practitioner
 Description: "Professional EOB:  Careteam roles refer to a practitioner"
 Expression: "(
-role.where(coding.where(code in ('performing' | 'primary' | 'referring' | 'supervising')).exists()).exists() implies
-role.where(coding.where(code in ('performing' | 'primary' | 'referring' | 'supervising' )).exists()).exists().provider.all(resolve() is Practitioner)
+role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervising')).exists()).exists() implies
+role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervising' )).exists()).exists().provider.all(resolve() is Practitioner)
 )" 
 Severity: #error
 
