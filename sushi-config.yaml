@@ -25,7 +25,7 @@ license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 3.1.1
-  us.nlm.vsac: 0.4.0
+  us.nlm.vsac: 0.7.0
 parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
