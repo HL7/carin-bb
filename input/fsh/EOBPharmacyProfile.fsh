@@ -20,14 +20,8 @@ The claims data is based on submission standards adopted by the Department of He
    brandgenericindicator 0..1 MS and
    rxoriginCode 0..1 MS and
    clmrecvddate 0..1 MS and
-   compoundcode 0..1 MS and
-   //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
-   benefitpaymentstatus 1..1 MS
-
-* supportingInfo[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[benefitpaymentstatus].code from  C4BBPayerBenefitPaymentStatus  (required)
-* supportingInfo[benefitpaymentstatus].code 1..1 MS
+   compoundcode 0..1 MS
+   
 
 * supportingInfo[brandgenericindicator] ^short = "Plan reported brand or generic drug indicator"
 * supportingInfo[brandgenericindicator].category = C4BBSupportingInfoType#brandgenericindicator
@@ -80,7 +74,8 @@ The claims data is based on submission standards adopted by the Department of He
 * insert AdjudicationSlicing
 * adjudication  MS
 * adjudication contains
-   billingnetworkcontractingstatus 0..1 MS
+   billingnetworkcontractingstatus 0..1 MS and
+   benefitpaymentstatus 1..1 MS
 
 
 * adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
@@ -88,6 +83,11 @@ The claims data is based on submission standards adopted by the Department of He
 * adjudication[billingnetworkcontractingstatus].category MS
 * adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus (required)
 * adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+
+* adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
+* adjudication[benefitpaymentstatus].reason 1..1 MS
 
 
 * insert ItemAdjudicationSlicing
@@ -148,8 +148,8 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
 * supportingInfo[dayssupply] ^comment = "Number of days supply of medication dispensed by the pharmacy (77)"
 * supportingInfo[compoundcode] ^comment = "The code indicating whether or not the prescription is a compound.  NCPDP field # 406-D6 (78)"
-* supportingInfo[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service. (101)"
+* adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount (92)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"

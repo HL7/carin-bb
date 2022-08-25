@@ -162,6 +162,9 @@ Usage: #example
 * adjudication[adjudicationamounttype][2].amount.currency = #USD
 * adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
 * adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
+
 
 * total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
@@ -203,9 +206,7 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
 * supportingInfo[patientaccountnumber].sequence = 9
-* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[benefitpaymentstatus].sequence = 10
+
 
 
 
@@ -259,6 +260,9 @@ Usage: #example
 * adjudication[adjudicationamounttype][1].amount.value = 0.00
 * adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
 * adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
+
 
 * total[adjudicationamounttype][2].amount.currency = #USD
 * total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
@@ -295,9 +299,7 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
 * supportingInfo[patientaccountnumber].sequence = 8
-* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[benefitpaymentstatus].sequence = 9
+
 
 
 Instance: EOBProfessional1a
@@ -417,6 +419,9 @@ Usage: #example
 * adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
 * adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
 * adjudication[renderingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
+
 
 * total[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * total[adjudicationamounttype][0].category.text = "Submitted Amount"
@@ -473,9 +478,7 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "PATIENTACCTNO3"
 * supportingInfo[patientaccountnumber].sequence = 5
-* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[benefitpaymentstatus].sequence = 6
+
 
 
 
@@ -515,6 +518,9 @@ Usage: #example
 * adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
 * adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
 * adjudication[renderingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
+
 
 * total[adjudicationamounttype][+].category = $HL7AdjudicationCS#submitted
 * total[adjudicationamounttype][=].category.text = "Submitted Amount"
@@ -586,9 +592,7 @@ Usage: #example
 * supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#2
 * supportingInfo[additionalbodysite][=].sequence = 10
 
-* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[benefitpaymentstatus].sequence = 11
+
 
 Instance: EOBPharmacy1
 InstanceOf: C4BBExplanationOfBenefitPharmacy
@@ -619,6 +623,9 @@ Usage: #example
 * insurance[0].coverage[0] = Reference(Coverage1)
 * adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
 * adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
+
 * total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
 * total[adjudicationamounttype][0].amount.value = 620.00
@@ -678,9 +685,7 @@ Usage: #example
 * supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
 * supportingInfo[compoundcode].code = NCPDPCompoundCode#Dummy
 * supportingInfo[compoundcode].sequence = 9
-* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[benefitpaymentstatus].sequence = 10
+
 
 
 Instance: OrganizationPayer1
