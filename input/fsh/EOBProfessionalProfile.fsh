@@ -142,3 +142,10 @@ If the service facility is not assigned an NPI, this data element will not be po
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 
 * insert EOBBaseProfileComments
+
+
+//FHIR-37615
+//Fields to report non-emergency transportation services data
+//Create Invariant requiring all ExplanationOfBenefit.SupportingInfo where category from C4BBTransportationServiceCategories sequence is referenced in ExplanationOfBenefit.line.informationSequence
+// Potential starter to test
+// supportingInfo.where(memberOf('C4BBTransportationServiceCategories'))).sequence.subsetOf(item.informationSequence.distinct())

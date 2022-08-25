@@ -25,14 +25,8 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
    additionalbodysite 0..* MS and
    missingtoothnumber 0..* MS and
    medicalrecordnumber 0..1 MS and
-   patientaccountnumber 0..1 MS and
-   //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
-   benefitpaymentstatus 1..* MS
-
-* supportingInfo[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[benefitpaymentstatus].code from  C4BBPayerBenefitPaymentStatus  (required)
-* supportingInfo[benefitpaymentstatus].code 1..1 MS
+   patientaccountnumber 0..1 MS
+   
 
 * supportingInfo[clmrecvddate] ^short = "Claim received date"
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
@@ -112,7 +106,8 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * adjudication MS
 * adjudication contains
    billingnetworkcontractingstatus 0..1 MS and
-   renderingnetworkcontractingstatus 1..1 MS
+   renderingnetworkcontractingstatus 1..1 MS and 
+   benefitpaymentstatus 1..* MS
 
 * adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
 * adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
@@ -125,6 +120,11 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * adjudication[renderingnetworkcontractingstatus].category MS
 * adjudication[renderingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
 * adjudication[renderingnetworkcontractingstatus].reason 1..1 MS
+
+* adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
+* adjudication[benefitpaymentstatus].reason 1..1 MS
 
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
@@ -308,14 +308,14 @@ If the service facility is not assigned an NPI, this data element will not be po
 * supportingInfo[missingtoothnumber] ^comment = "Missing Tooth Number - After First Occurrence (204)"
 * supportingInfo[missingtoothnumber].code ^comment = "Missing Tooth Number - After First Occurrence (204)"
 
-* supportingInfo[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+
 
 * item.bodySite ^comment = "Tooth Number - First Occurrence (196)"
 * item.subSite ^comment = "Tooth Surface (197)"
 
 * adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * adjudication[renderingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
-
+* adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"

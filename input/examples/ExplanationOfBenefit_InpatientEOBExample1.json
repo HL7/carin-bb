@@ -139,25 +139,6 @@
       "timingPeriod": {
         "start": "2017-05-23"
       }
-    },
-    {
-      "sequence": 3,
-      "category" : {
-        "coding" : [
-          {
-            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType",
-            "code" : "benefitpaymentstatus"
-          }
-        ]
-      },
-      "code" : {
-        "coding" : [
-          {
-            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
-            "code" : "innetwork"
-          }
-        ]
-      }
     }
   ],
   "diagnosis": [
@@ -778,6 +759,24 @@
       "amount": {
         "value": 0.0,
         "currency": "USD"
+      }
+    },
+    {
+      "category" : {
+        "coding" : [
+          {
+            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator",
+            "code" : "benefitpaymentstatus"
+          }
+        ]
+      },
+      "reason" : {
+        "coding" : [
+          {
+            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
+            "code" : "innetwork"
+          }
+        ]
       }
     }
   ],

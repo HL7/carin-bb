@@ -123,25 +123,6 @@
         "text": "Date the claim was received by the payer."
       },
       "timingDate": "2020-10-10"
-    },
-    {
-      "sequence": 2,
-      "category" : {
-        "coding" : [
-          {
-            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType",
-            "code" : "benefitpaymentstatus"
-          }
-        ]
-      },
-      "code" : {
-        "coding" : [
-          {
-            "system" : "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
-            "code" : "outofnetwork"
-          }
-        ]
-      }
     }
   ],
   "diagnosis": [
@@ -505,6 +486,30 @@
           }
         }
       ]
+    }
+  ],
+  "adjudication": [
+    {
+      "category": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator",
+            "code": "billingnetworkcontractingstatus",
+            "display": "Billing Network Contracting Status"
+          }
+        ],
+        "text": "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."
+      },
+      "reason": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus",
+            "code": "contracted",
+            "display": "Contracted"
+          }
+        ],
+        "text": "Indicates the provider was contracted for the service"
+      }
     }
   ],
   "total": [
