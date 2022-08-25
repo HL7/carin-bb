@@ -1,4 +1,4 @@
-Instance: Payer1
+Instance: OrganizationPayer1
 InstanceOf: C4BBOrganization
 Description: "Payer1"
 Usage: #example
@@ -9,5 +9,5 @@ Usage: #example
 * identifier[NPI].value = "345678"
 * identifier[payerid].type = $C4BBIdentifierTypeCS#payerid
 * identifier[payerid].value = "901234"
-* name = "Payer 1"
+* name = "Organization Payer 1"
 * active = true
