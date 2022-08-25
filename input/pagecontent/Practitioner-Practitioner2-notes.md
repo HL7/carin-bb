@@ -1,41 +1,17 @@
-<table border="1"><tr><td><b>Field</b></td><td><b>Value</b></td></tr>
-<tr><td>resourceType</td><td>
-"Practitioner"
-</td></tr>
-<tr><td>id</td><td>
-"Practitioner2"
-</td></tr>
-<tr><td>meta.lastUpdated</td><td>
-"2020-05-04T03:02:01-04:00"
-</td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner"</td></tr>
-<tr><td>identifier[0].type.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType"
-</td></tr>
-<tr><td>identifier[0].type.coding[0].code</td><td>
-#NPI
-</td></tr>
-<tr><td>identifier[0].type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/v2-0203"
-</td></tr>
-<tr><td>identifier[0].type.coding[0].display</td><td>
-"National Provider Identifier"
-</td></tr>
-<tr><td>identifier[0].type.text</td><td>
-"National Provider Identifier"
-</td></tr>
-<tr><td>identifier[0].system</td><td>
-"http://hl7.org/fhir/sid/us-npi"
-</td></tr>
-<tr><td>identifier[0].value</td><td>
-8889990000
-</td></tr>
-<tr><td>active</td><td>
-"true"
-</td></tr>
-<tr><td>name[0].family</td><td>
-"Brown"
-</td></tr>
-<tr><td>name[0].given[0]</td><td>"Jack"</td></tr>
-<tr><td>name[0].prefix[0]</td><td>"Dr."</td></tr>
-</table>
+```
+Instance: Practitioner2
+InstanceOf: Practitioner
+Title: "Practitioner Example 2"
+Description: "Practitioner Example 2"
+Usage: #example
+* meta.lastUpdated = "2020-05-04T03:02:01-04:00"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|1.2.0"
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#NPI "National Provider Identifier"
+  * text = "National Provider Identifier"
+* identifier.system = "http://hl7.org/fhir/sid/us-npi"
+* identifier.value = "8889990000"
+* active = true
+* name.family = "Brown"
+* name.given = "Jack"
+* name.prefix = "Dr."
+```

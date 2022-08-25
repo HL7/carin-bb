@@ -1,315 +1,85 @@
-<table border="1"><tr><td><b>Field</b></td><td><b>Value</b></td></tr>
-<tr><td>resourceType</td><td>
-"ExplanationOfBenefit"
-</td></tr>
-<tr><td>id</td><td>
-"EOBPharmacy1"
-</td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy"</td></tr>
-<tr><td>meta.lastUpdated</td><td>
-"2019-12-12T09:14:11+00:00"
-</td></tr>
-<tr><td>type.coding[0].code</td><td>
-#pharmacy
-</td></tr>
-<tr><td>type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/claim-type"
-</td></tr>
-<tr><td>type.text</td><td>
-"Pharmacy"
-</td></tr>
-<tr><td>use</td><td>
-"claim"
-</td></tr>
-<tr><td>supportingInfo[0].category.coding[0].code</td><td>
-#dayssupply
-</td></tr>
-<tr><td>supportingInfo[0].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
-</td></tr>
-<tr><td>supportingInfo[0].sequence</td><td>
-7
-</td></tr>
-<tr><td>supportingInfo[0].valueQuantity.value</td><td>
-30
-</td></tr>
-<tr><td>supportingInfo[1].category.coding[0].code</td><td>
-#dawcode
-</td></tr>
-<tr><td>supportingInfo[1].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
-</td></tr>
-<tr><td>supportingInfo[1].code.coding[0].code</td><td>
-#7
-</td></tr>
-<tr><td>supportingInfo[1].code.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode"
-</td></tr>
-<tr><td>supportingInfo[1].sequence</td><td>
-5
-</td></tr>
-<tr><td>supportingInfo[2].category.coding[0].code</td><td>
-#refillnum
-</td></tr>
-<tr><td>supportingInfo[2].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
-</td></tr>
-<tr><td>supportingInfo[2].valueQuantity.value</td><td>
-0
-</td></tr>
-<tr><td>supportingInfo[2].sequence</td><td>
-4
-</td></tr>
-<tr><td>supportingInfo[3].category.coding[0].code</td><td>
-#billingnetworkcontractingstatus
-</td></tr>
-<tr><td>supportingInfo[3].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
-</td></tr>
-<tr><td>supportingInfo[3].sequence</td><td>
-1
-</td></tr>
-<tr><td>supportingInfo[3].code.coding[0].code</td><td>
-#contracted
-</td></tr>
-<tr><td>supportingInfo[3].code.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus"
-</td></tr>
-<tr><td>supportingInfo[4].category.coding[0].code</td><td>
-#brandgenericindicator
-</td></tr>
-<tr><td>supportingInfo[4].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
-</td></tr>
-<tr><td>supportingInfo[4].sequence</td><td>
-2
-</td></tr>
-<tr><td>supportingInfo[4].code.coding[0].code</td><td>
-#2
-</td></tr>
-<tr><td>supportingInfo[4].code.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator"
-</td></tr>
-<tr><td>supportingInfo[5].category.coding[0].code</td><td>
-#rxorigincode
-</td></tr>
-<tr><td>supportingInfo[5].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
-</td></tr>
-<tr><td>supportingInfo[5].code.coding[0].code</td><td>
-#1
-</td></tr>
-<tr><td>supportingInfo[5].code.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode"
-</td></tr>
-<tr><td>supportingInfo[5].sequence</td><td>
-3
-</td></tr>
-<tr><td>supportingInfo[6].category.coding[0].code</td><td>
-#clmrecvddate
-</td></tr>
-<tr><td>supportingInfo[6].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
-</td></tr>
-<tr><td>supportingInfo[6].timingDate</td><td>
-"2019-10-31"
-</td></tr>
-<tr><td>supportingInfo[6].sequence</td><td>
-6
-</td></tr>
-<tr><td>supportingInfo[7].category.coding[0].code</td><td>
-#compoundcode
-</td></tr>
-<tr><td>supportingInfo[7].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType"
-</td></tr>
-<tr><td>supportingInfo[7].code.coding[0].code</td><td>
-#Dummy
-</td></tr>
-<tr><td>supportingInfo[7].code.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode"
-</td></tr>
-<tr><td>supportingInfo[7].sequence</td><td>
-8
-</td></tr>
-<tr><td>language</td><td>
-"en-US"
-</td></tr>
-<tr><td>status</td><td>
-"active"
-</td></tr>
-<tr><td>identifier[0].type.coding[0].code</td><td>
-#uc
-</td></tr>
-<tr><td>identifier[0].type.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType"
-</td></tr>
-<tr><td>identifier[0].value</td><td>
-AW123412341234123412341234123412
-</td></tr>
-<tr><td>identifier[0].system</td><td>
-"https://www.xxxplan.com/fhir/EOBIdentifier"
-</td></tr>
-<tr><td>created</td><td>
-"2019-07-02T00:00:00+00:00"
-</td></tr>
-<tr><td>insurer.reference</td><td>
-"Organization/Payer1"
-</td></tr>
-<tr><td>insurer.display</td><td>
-"XXX Health Plan"
-</td></tr>
-<tr><td>patient.reference</td><td>
-"Patient/Patient1"
-</td></tr>
-<tr><td>billablePeriod.start</td><td>
-"2019-10-30"
-</td></tr>
-<tr><td>billablePeriod.end</td><td>
-"2019-10-31"
-</td></tr>
-<tr><td>provider.reference</td><td>
-"Organization/OrganizationProvider1"
-</td></tr>
-<tr><td>provider.display</td><td>
-"XXX Health Plan"
-</td></tr>
-<tr><td>outcome</td><td>
-"partial"
-</td></tr>
-<tr><td>insurance[0].focal</td><td>
-"true"
-</td></tr>
-<tr><td>insurance[0].coverage.reference</td><td>
-"Coverage/Coverage1"
-</td></tr>
-<tr><td>total[0].category.coding[0].code</td><td>
-#paidtoprovider
-</td></tr>
-<tr><td>total[0].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
-</td></tr>
-<tr><td>total[0].category.text</td><td>
-"Payment Amount"
-</td></tr>
-<tr><td>total[0].amount.value</td><td>
-620
-</td></tr>
-<tr><td>total[0].amount.currency</td><td>
-#USD
-</td></tr>
-<tr><td>total[1].category.coding[0].code</td><td>
-#submitted
-</td></tr>
-<tr><td>total[1].category.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/adjudication"
-</td></tr>
-<tr><td>total[1].category.text</td><td>
-"Submitted Amount"
-</td></tr>
-<tr><td>total[1].amount.value</td><td>
-2650
-</td></tr>
-<tr><td>total[1].amount.currency</td><td>
-#USD
-</td></tr>
-<tr><td>total[2].category.coding[0].code</td><td>
-#paidbypatient
-</td></tr>
-<tr><td>total[2].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
-</td></tr>
-<tr><td>total[2].category.text</td><td>
-"Patient Pay Amount"
-</td></tr>
-<tr><td>total[2].amount.value</td><td>
-0
-</td></tr>
-<tr><td>total[2].amount.currency</td><td>
-#USD
-</td></tr>
-<tr><td>total[3].category.coding[0].code</td><td>
-#innetwork
-</td></tr>
-<tr><td>total[3].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus"
-</td></tr>
-<tr><td>total[3].amount.value</td><td>
-0
-</td></tr>
-<tr><td>total[3].amount.currency</td><td>
-#USD
-</td></tr>
-<tr><td>item[0].productOrService.coding[0].code</td><td>
-#0777-3105-02
-</td></tr>
-<tr><td>item[0].productOrService.coding[0].system</td><td>
-"http://hl7.org/fhir/sid/ndc"
-</td></tr>
-<tr><td>item[0].productOrService.coding[0].display</td><td>
-"100 CAPSULE in 1 BOTTLE (0777-3105-02)"
-</td></tr>
-<tr><td>item[0].sequence</td><td>
-1
-</td></tr>
-<tr><td>item[0].adjudication[0].category.coding[0].code</td><td>
-#submitted
-</td></tr>
-<tr><td>item[0].adjudication[0].category.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/adjudication"
-</td></tr>
-<tr><td>item[0].adjudication[0].amount.value</td><td>
-1000
-</td></tr>
-<tr><td>item[0].adjudication[0].amount.currency</td><td>
-#USD
-</td></tr>
-<tr><td>item[0].adjudication[1].category.coding[0].code</td><td>
-#benefit
-</td></tr>
-<tr><td>item[0].adjudication[1].category.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/adjudication"
-</td></tr>
-<tr><td>item[0].adjudication[1].amount.value</td><td>
-20
-</td></tr>
-<tr><td>item[0].adjudication[1].amount.currency</td><td>
-#USD
-</td></tr>
-<tr><td>item[0].adjudication[2].category.coding[0].code</td><td>
-#discount
-</td></tr>
-<tr><td>item[0].adjudication[2].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
-</td></tr>
-<tr><td>item[0].adjudication[2].amount.value</td><td>
-900
-</td></tr>
-<tr><td>item[0].adjudication[2].amount.currency</td><td>
-#USD
-</td></tr>
-<tr><td>item[0].adjudication[3].category.coding[0].code</td><td>
-#memberliability
-</td></tr>
-<tr><td>item[0].adjudication[3].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
-</td></tr>
-<tr><td>item[0].adjudication[3].amount.value</td><td>
-80
-</td></tr>
-<tr><td>item[0].adjudication[3].amount.currency</td><td>
-#USD
-</td></tr>
-<tr><td>item[0].adjudication[4].category.coding[0].code</td><td>
-#paidtoprovider
-</td></tr>
-<tr><td>item[0].adjudication[4].category.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication"
-</td></tr>
-<tr><td>item[0].adjudication[4].amount.value</td><td>
-20
-</td></tr>
-<tr><td>item[0].adjudication[4].amount.currency</td><td>
-#USD
-</td></tr>
-</table>
+```
+Instance: EOBPharmacy1
+InstanceOf: ExplanationOfBenefit
+Title: "EOBPharmacy1"
+Description: "EOB PHarmacy Example1"
+Usage: #example
+* meta.lastUpdated = "2019-12-12T09:14:11+00:00"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy|1.2.0"
+* language = #en-US
+* identifier.type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType#uc
+* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* identifier.value = "AW123412341234123412341234123412"
+* status = #active
+* type = http://terminology.hl7.org/CodeSystem/claim-type#pharmacy
+  * text = "Pharmacy"
+* use = #claim
+* patient = Reference(Patient1)
+* billablePeriod.start = "2019-10-30"
+* billablePeriod.end = "2019-10-31"
+* created = "2019-07-02T00:00:00+00:00"
+* insurer = Reference(OrganizationPayer1) "XXX Health Plan"
+* provider = Reference(OrganizationProvider1) "XXX Health Plan"
+* outcome = #partial
+* supportingInfo[0].sequence = 8
+* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#dayssupply
+* supportingInfo[=].valueQuantity.value = 30
+* supportingInfo[+].sequence = 6
+* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#dawcode
+* supportingInfo[=].code = http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode#7
+* supportingInfo[+].sequence = 4
+* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#refillnum
+* supportingInfo[=].valueQuantity.value = 0
+* supportingInfo[+].sequence = 5
+* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#refillsauthorized
+* supportingInfo[=].valueQuantity.value = 0
+* supportingInfo[+].sequence = 10
+* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#benefitpaymentstatus
+* supportingInfo[=].code = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[+].sequence = 2
+* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#brandgenericindicator
+* supportingInfo[=].code = http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator#2
+* supportingInfo[+].sequence = 3
+* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#rxorigincode
+* supportingInfo[=].code = http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode#1
+* supportingInfo[+].sequence = 7
+* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[=].timingDate = "2019-10-31"
+* supportingInfo[+].sequence = 9
+* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#compoundcode
+* supportingInfo[=].code = http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode#Dummy
+* insurance.focal = true
+* insurance.coverage = Reference(Coverage1)
+* item.sequence = 1
+* item.productOrService = http://hl7.org/fhir/sid/ndc#0777-3105-02 "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)"
+* item.servicedDate = "2019-07-02"
+* item.adjudication[0].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted
+* item.adjudication[=].amount.value = 1000
+* item.adjudication[=].amount.currency = #USD
+* item.adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#benefit
+* item.adjudication[=].amount.value = 20
+* item.adjudication[=].amount.currency = #USD
+* item.adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#discount
+* item.adjudication[=].amount.value = 900
+* item.adjudication[=].amount.currency = #USD
+* item.adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#memberliability
+* item.adjudication[=].amount.value = 80
+* item.adjudication[=].amount.currency = #USD
+* item.adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#paidtoprovider
+* item.adjudication[=].amount.value = 20
+* item.adjudication[=].amount.currency = #USD
+* adjudication.category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication.reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#contracted
+* total[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#paidtoprovider
+* total[=].category.text = "Payment Amount"
+* total[=].amount.value = 620
+* total[=].amount.currency = #USD
+* total[+].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted
+  * text = "Submitted Amount"
+* total[=].amount.value = 2650
+* total[=].amount.currency = #USD
+* total[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#paidbypatient
+  * text = "Patient Pay Amount"
+* total[=].amount.value = 0
+* total[=].amount.currency = #USD
+```

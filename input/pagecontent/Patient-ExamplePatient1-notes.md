@@ -1,186 +1,63 @@
-<table border="1"><tr><td><b>Field</b></td><td><b>Value</b></td></tr>
-<tr><td>resourceType</td><td>
-"Patient"
-</td></tr>
-<tr><td>id</td><td>
-"ExamplePatient1"
-</td></tr>
-<tr><td>meta.lastUpdated</td><td>
-"2020-10-30T09:48:01.8512764-04:00"
-</td></tr>
-<tr><td>meta.source</td><td>
-"Organization/PayerOrganizationExample1"
-</td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"</td></tr>
-<tr><td>language</td><td>
-"en-US"
-</td></tr>
-<tr><td>identifier[0].type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/v2-0203"
-</td></tr>
-<tr><td>identifier[0].type.coding[0].code</td><td>
-#MB
-</td></tr>
-<tr><td>identifier[0].type.coding[0].display</td><td>
-"Member Number"
-</td></tr>
-<tr><td>identifier[0].type.text</td><td>
-"An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
-</td></tr>
-<tr><td>identifier[0].system</td><td>
-"https://www.upmchealthplan.com/fhir/memberidentifier"
-</td></tr>
-<tr><td>identifier[0].value</td><td>
-88800933501
-</td></tr>
-<tr><td>identifier[0].assigner.reference</td><td>
-"Organization/PayerOrganizationExample1"
-</td></tr>
-<tr><td>identifier[0].assigner.display</td><td>
-"UPMC Health Plan"
-</td></tr>
-<tr><td>active</td><td>
-"true"
-</td></tr>
-<tr><td>name[0].family</td><td>
-"Test"
-</td></tr>
-<tr><td>name[0].given[0]</td><td>"Member 01"</td></tr>
-<tr><td>telecom[0].system</td><td>
-"phone"
-</td></tr>
-<tr><td>telecom[0].value</td><td>
-5555555551
-</td></tr>
-<tr><td>telecom[0].rank</td><td>
-"1"
-</td></tr>
-<tr><td>telecom[1].system</td><td>
-"phone"
-</td></tr>
-<tr><td>telecom[1].value</td><td>
-5555555552
-</td></tr>
-<tr><td>telecom[1].rank</td><td>
-"2"
-</td></tr>
-<tr><td>telecom[2].system</td><td>
-"phone"
-</td></tr>
-<tr><td>telecom[2].value</td><td>
-5555555553
-</td></tr>
-<tr><td>telecom[2].rank</td><td>
-"3"
-</td></tr>
-<tr><td>telecom[3].system</td><td>
-"phone"
-</td></tr>
-<tr><td>telecom[3].value</td><td>
-5555555554
-</td></tr>
-<tr><td>telecom[3].rank</td><td>
-"4"
-</td></tr>
-<tr><td>telecom[4].system</td><td>
-"phone"
-</td></tr>
-<tr><td>telecom[4].value</td><td>
-5555555555
-</td></tr>
-<tr><td>telecom[4].use</td><td>
-"home"
-</td></tr>
-<tr><td>telecom[4].rank</td><td>
-"5"
-</td></tr>
-<tr><td>telecom[5].system</td><td>
-"phone"
-</td></tr>
-<tr><td>telecom[5].value</td><td>
-5555555556
-</td></tr>
-<tr><td>telecom[5].use</td><td>
-"work"
-</td></tr>
-<tr><td>telecom[5].rank</td><td>
-"6"
-</td></tr>
-<tr><td>telecom[6].system</td><td>
-"email"
-</td></tr>
-<tr><td>telecom[6].value</td><td>
-GXXX@XXXX.com
-</td></tr>
-<tr><td>telecom[6].rank</td><td>
-"7"
-</td></tr>
-<tr><td>telecom[7].system</td><td>
-"fax"
-</td></tr>
-<tr><td>telecom[7].value</td><td>
-5555555557
-</td></tr>
-<tr><td>telecom[7].rank</td><td>
-"8"
-</td></tr>
-<tr><td>gender</td><td>
-"male"
-</td></tr>
-<tr><td>birthDate</td><td>
-"1943-01-01"
-</td></tr>
-<tr><td>address[0].type</td><td>
-"physical"
-</td></tr>
-<tr><td>address[0].line[0]</td><td>"123 Main Street"</td></tr>
-<tr><td>address[0].city</td><td>
-"PITTSBURGH"
-</td></tr>
-<tr><td>address[0].state</td><td>
-"PA"
-</td></tr>
-<tr><td>address[0].postalCode</td><td>
-"15239"
-</td></tr>
-<tr><td>address[1].type</td><td>
-"physical"
-</td></tr>
-<tr><td>address[1].line[0]</td><td>"456 Murray Avenue"</td></tr>
-<tr><td>address[1].city</td><td>
-"PITTSBURGH"
-</td></tr>
-<tr><td>address[1].state</td><td>
-"PA"
-</td></tr>
-<tr><td>address[1].postalCode</td><td>
-"15217"
-</td></tr>
-<tr><td>maritalStatus.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
-</td></tr>
-<tr><td>maritalStatus.coding[0].code</td><td>
-#UNK
-</td></tr>
-<tr><td>maritalStatus.text</td><td>
-"unknown"
-</td></tr>
-<tr><td>communication[0].language.coding[0].system</td><td>
-"urn:ietf:bcp:47"
-</td></tr>
-<tr><td>communication[0].language.coding[0].code</td><td>
-#en
-</td></tr>
-<tr><td>communication[0].language.text</td><td>
-"English"
-</td></tr>
-<tr><td>communication[0].preferred</td><td>
-"true"
-</td></tr>
-<tr><td>managingOrganization.reference</td><td>
-"Organization/PayerOrganizationExample1"
-</td></tr>
-<tr><td>managingOrganization.display</td><td>
-"UPMC Health Plan"
-</td></tr>
-</table>
+```
+Instance: ExamplePatient1
+InstanceOf: Patient
+Title: "Patient Example 1"
+Description: "Patient Example 1"
+Usage: #example
+* meta.lastUpdated = "2020-10-30T09:48:01.8512764-04:00"
+* meta.source = "Organization/PayerOrganizationExample1"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient|1.2.0"
+* language = #en-US
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MB "Member Number"
+  * text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
+* identifier.system = "https://www.upmchealthplan.com/fhir/memberidentifier"
+* identifier.value = "88800933501"
+* identifier.assigner = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* active = true
+* name.family = "Test"
+* name.given = "Member 01"
+* telecom[0].system = #phone
+* telecom[=].value = "5555555551"
+* telecom[=].rank = 1
+* telecom[+].system = #phone
+* telecom[=].value = "5555555552"
+* telecom[=].rank = 2
+* telecom[+].system = #phone
+* telecom[=].value = "5555555553"
+* telecom[=].rank = 3
+* telecom[+].system = #phone
+* telecom[=].value = "5555555554"
+* telecom[=].rank = 4
+* telecom[+].system = #phone
+* telecom[=].value = "5555555555"
+* telecom[=].use = #home
+* telecom[=].rank = 5
+* telecom[+].system = #phone
+* telecom[=].value = "5555555556"
+* telecom[=].use = #work
+* telecom[=].rank = 6
+* telecom[+].system = #email
+* telecom[=].value = "GXXX@XXXX.com"
+* telecom[=].rank = 7
+* telecom[+].system = #fax
+* telecom[=].value = "5555555557"
+* telecom[=].rank = 8
+* gender = #male
+* birthDate = "1943-01-01"
+* address[0].type = #physical
+* address[=].line = "123 Main Street"
+* address[=].city = "PITTSBURGH"
+* address[=].state = "PA"
+* address[=].postalCode = "15239"
+* address[+].type = #physical
+* address[=].line = "456 Murray Avenue"
+* address[=].city = "PITTSBURGH"
+* address[=].state = "PA"
+* address[=].postalCode = "15217"
+* maritalStatus = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK
+  * text = "unknown"
+* communication.language = urn:ietf:bcp:47#en
+  * text = "English"
+* communication.preferred = true
+* managingOrganization = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+```
