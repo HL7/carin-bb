@@ -1,85 +1,89 @@
 Instance: EOBOral1a
 InstanceOf: C4BBExplanationOfBenefitOral
-Title: "EOBOral1a"
 Description: "EOB Oral Example1"
 Usage: #example
+* id = "EOBOral1a"
+//* id = "1234-234-1243-12345678901-20190101-20191031"
+//* meta.profile = Canonical(C4BBExplanationOfBenefitOral)
 * meta.lastUpdated = "2021-03-18T10:23:00-05:00"
-* meta.profile[supportedProfile] = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Oral|1.2.0"
 * language = #en-US
-* identifier.type = $C4BBIdentifierType#uc
-* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
-* identifier.value = "210300002"
 * status = #active
-* type = $claim-type#oral
+
+
+* identifier.type = $C4BBIdentifierTypeCS#uc
+* identifier.value = "210300002"
+* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* type = $HL7ClaimTypeCS#oral
 * type.text = "Oral"
 * use = #claim
+* created = "2021-03-18T10:23:00-05:00"
+* insurer = Reference(OrganizationDentalPayer1)
+* insurer.display = "XXX Health Plan"
 * patient = Reference(Patient1)
 * billablePeriod.start = "2021-03-01"
 * billablePeriod.end = "2021-03-31"
-* created = "2021-03-18T10:23:00-05:00"
-* insurer = Reference(OrganizationDentalPayer1) "XXX Health Plan"
-* provider = Reference(PractitionerDentalProvider1) "XXX Dental Plan"
+* provider = Reference(PractitionerDentalProvider1)
+* provider.display = "XXX Dental Plan"
 * outcome = #complete
-* supportingInfo[benefitpaymentstatus].
-  * sequence = 6
-  * code = $C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[clmrecvddate].
-  * sequence = 4
-  * timingDate = "2021-03-18"
-* supportingInfo[servicefacility].
-  * sequence = 4
-  * valueReference = Reference(OrganizationProvider1)
-* supportingInfo[patientaccountnumber].
-  * sequence = 5
-  * valueString = "PATIENTACCTNO3"
-* diagnosis.sequence = 1
-* diagnosis.diagnosisCodeableConcept = $icd-10-cm#Z01.21 "Encounter for dental examination and cleaning with abnormal findings"
-* diagnosis.type = $ex-diagnosistype#principal
-* insurance.focal = true
-* insurance.coverage = Reference(CoverageDental1)
-* item[0].
-  * sequence = 1
-  * productOrService = $cdt#D1110 "Prophylaxis - Adult"
-  * servicedDate = "2021-03-18"
-  * locationCodeableConcept = $Place_of_Service_Code_Set#11 "Office"
-  * adjudication[adjudicationamounttype]
-    * amount.value = 190
-    * amount.currency = #USD
-    * category = $adjudication#submitted
-    * category.text = "Submitted Amount"
-  * adjudication[innetwork]
-* item[+]
-  * sequence = 2
-  * productOrService = $cdt#D0120 "Periodic oral evaluation"
-  * servicedDate = "2021-03-18"
-  * locationCodeableConcept = $Place_of_Service_Code_Set#11 "Office"
-  * adjudication[adjudicationamounttype]
-    * amount.value = 220
-    * amount.currency = #USD
-    * category = $adjudication#submitted
-    * category.text = "Submitted Amount"
-  * adjudication[innetwork]
-* adjudication[renderingnetworkcontractingstatus]
-  * reason = $C4BBPayerAdjudicationStatus#contracted
-* adjudication[billingnetworkcontractingstatus]
-  * reason = $C4BBPayerAdjudicationStatus#contracted
-* total[adjudicationamounttype][0]
-  * category = $adjudication#submitted
-  * category.text = "Submitted Amount"
-  * amount.value = 410
-  * amount.currency = #USD
-* total[adjudicationamounttype][+]
-  * category = $adjudication#benefit
-  * category.text = "Benefit Amount"
-  * amount.value = 350
-  * amount.currency = #USD
-* total[adjudicationamounttype][+]
-  * category = $C4BBAdjudication#discount
-  * category.text = "Discount Amount"
-  * amount.value = 60
-  * amount.currency = #USD
-* total[adjudicationamounttype][+]
-  * category = $C4BBAdjudication#paidtoprovider
-  * category.text = "Payment Amount"
-  * amount.value = 350
-  * amount.currency = #USD
+* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#Z01.21 "Encounter for dental examination and cleaning with abnormal findings"
+* diagnosis[0].type = $HL7DiagnosisType#principal
+* diagnosis[0].sequence = 1
+* insurance[0].focal = true
+* insurance[0].coverage[0] = Reference(CoverageDental1)
+
+* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
+* adjudication[renderingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+
+* total[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* total[adjudicationamounttype][0].category.text = "Submitted Amount"
+* total[adjudicationamounttype][0].amount.value = 410.00
+* total[adjudicationamounttype][0].amount.currency = #USD
+* total[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit
+* total[adjudicationamounttype][1].category.text = "Benefit Amount"
+* total[adjudicationamounttype][1].amount.value = 350.00
+* total[adjudicationamounttype][1].amount.currency = #USD
+* total[adjudicationamounttype][2].category = C4BBAdjudication#discount
+* total[adjudicationamounttype][2].category.text = "Discount Amount"
+* total[adjudicationamounttype][2].amount.value = 60.00
+* total[adjudicationamounttype][2].amount.currency = #USD
+* total[adjudicationamounttype][3].category = C4BBAdjudication#paidtoprovider
+* total[adjudicationamounttype][3].category.text = "Amount Paid to Provider"
+* total[adjudicationamounttype][3].amount.value = 350.00
+* total[adjudicationamounttype][3].amount.currency = #USD
+
+* item[0].productOrService = ADADentalProcedureCode#D1110 "Prophylaxis - Adult"
+
+
+* item[0].sequence = 1
+* item[0].servicedDate = "2021-03-18"
+
+* item[0].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"
+* item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* item[0].adjudication[adjudicationamounttype][0].amount.value = 190.00
+* item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
+
+* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
+* item[1].productOrService = ADADentalProcedureCode#D0120 "Periodic oral evaluation"
+* item[1].sequence = 2
+* item[1].servicedDate = "2021-03-18"
+* item[1].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"
+* item[1].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* item[1].adjudication[adjudicationamounttype][0].amount.value = 220.00
+* item[1].adjudication[adjudicationamounttype][0].amount.currency = #USD
+* item[1].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[clmrecvddate].timingDate = 2021-03-18
+* supportingInfo[clmrecvddate].sequence = 3
+* supportingInfo[servicefacility].category = C4BBSupportingInfoType#servicefacility
+* supportingInfo[servicefacility].sequence = 4
+* supportingInfo[servicefacility].valueReference = Reference(OrganizationProvider1)
+
+
+* supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
+* supportingInfo[patientaccountnumber].valueString = "PATIENTACCTNO3"
+* supportingInfo[patientaccountnumber].sequence = 5
+* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
+* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].sequence = 6

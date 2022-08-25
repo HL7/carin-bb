@@ -1,83 +1,89 @@
 Instance: EOBPharmacy1
 InstanceOf: C4BBExplanationOfBenefitPharmacy
-Title: "EOBPharmacy1"
 Description: "EOB PHarmacy Example1"
 Usage: #example
+* id = "EOBPharmacy1"
+//* id = "1234-234-1243-12345678901-20190101-20191031"
+//* meta.profile = Canonical(C4BBExplanationOfBenefitPharmacy)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy|1.2.0"
 * language = #en-US
-* identifier.type = $C4BBIdentifierType#uc
-* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
-* identifier.value = "AW123412341234123412341234123412"
 * status = #active
-* type = $claim-type#pharmacy
+* identifier.type = $C4BBIdentifierTypeCS#uc
+* identifier.value = "AW123412341234123412341234123412"
+* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* type = $HL7ClaimTypeCS#pharmacy
 * type.text = "Pharmacy"
 * use = #claim
+* created = "2019-07-02T00:00:00+00:00"
+* insurer = Reference(OrganizationPayer1)
+* insurer.display = "XXX Health Plan"
 * patient = Reference(Patient1)
 * billablePeriod.start = "2019-10-30"
 * billablePeriod.end = "2019-10-31"
-* created = "2019-07-02T00:00:00+00:00"
-* insurer = Reference(Payer1) "XXX Health Plan"
-* provider = Reference(OrganizationProvider1) "XXX Health Plan"
+* provider = Reference(OrganizationProvider1)
+* provider.display = "XXX Health Plan"
 * outcome = #partial
-* supportingInfo[0].sequence = 8
-* supportingInfo[=].category = $C4BBSupportingInfoType#dayssupply
-* supportingInfo[=].valueQuantity.value = 30
-* supportingInfo[+].sequence = 6
-* supportingInfo[=].category = $C4BBSupportingInfoType#dawcode
-* supportingInfo[=].code = $NCPDPDispensedAsWrittenOrProductSelectionCode#7
-* supportingInfo[+].sequence = 4
-* supportingInfo[=].category = $C4BBSupportingInfoType#refillnum
-* supportingInfo[=].valueQuantity.value = 0
-* supportingInfo[+].sequence = 5
-* supportingInfo[=].category = $C4BBSupportingInfoType#refillsauthorized
-* supportingInfo[=].valueQuantity.value = 0
-* supportingInfo[+].sequence = 10
-* supportingInfo[=].category = $C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[=].code = $C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[+].sequence = 2
-* supportingInfo[=].category = $C4BBSupportingInfoType#brandgenericindicator
-* supportingInfo[=].code = $NCPDPBrandGenericIndicator#2
-* supportingInfo[+].sequence = 3
-* supportingInfo[=].category = $C4BBSupportingInfoType#rxorigincode
-* supportingInfo[=].code = $NCPDPPrescriptionOriginCode#1
-* supportingInfo[+].sequence = 7
-* supportingInfo[=].category = $C4BBSupportingInfoType#clmrecvddate
-* supportingInfo[=].timingDate = "2019-10-31"
-* supportingInfo[+].sequence = 9
-* supportingInfo[=].category = $C4BBSupportingInfoType#compoundcode
-* supportingInfo[=].code = $NCPDPCompoundCode#Dummy
-* insurance.focal = true
-* insurance.coverage = Reference(Coverage1)
-* item.sequence = 1
-* item.productOrService = $ndc#0777-3105-02 "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)"
-* item.servicedDate = "2019-07-02"
-* item.adjudication[0].category = $adjudication#submitted
-* item.adjudication[=].amount.value = 1000
-* item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $adjudication#benefit
-* item.adjudication[=].amount.value = 20
-* item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $C4BBAdjudication#discount
-* item.adjudication[=].amount.value = 900
-* item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $C4BBAdjudication#memberliability
-* item.adjudication[=].amount.value = 80
-* item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $C4BBAdjudication#paidtoprovider
-* item.adjudication[=].amount.value = 20
-* item.adjudication[=].amount.currency = #USD
-* adjudication.category = $C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication.reason = $C4BBPayerAdjudicationStatus#contracted
-* total[0].category = $C4BBAdjudication#paidtoprovider
-* total[=].category.text = "Payment Amount"
-* total[=].amount.value = 620
-* total[=].amount.currency = #USD
-* total[+].category = $adjudication#submitted
-* total[=].category.text = "Submitted Amount"
-* total[=].amount.value = 2650
-* total[=].amount.currency = #USD
-* total[+].category = $C4BBAdjudication#paidbypatient
-* total[=].category.text = "Patient Pay Amount"
-* total[=].amount.value = 0
-* total[=].amount.currency = #USD
+* insurance[0].focal = true
+* insurance[0].coverage[0] = Reference(Coverage1)
+* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
+* total[adjudicationamounttype][0].category.text = "Payment Amount"
+* total[adjudicationamounttype][0].amount.value = 620.00
+* total[adjudicationamounttype][0].amount.currency = #USD
+* total[adjudicationamounttype][1].category = $HL7AdjudicationCS#submitted
+* total[adjudicationamounttype][1].category.text = "Submitted Amount"
+* total[adjudicationamounttype][1].amount.value = 2650.00
+* total[adjudicationamounttype][1].amount.currency = #USD
+* total[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
+* total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
+* total[adjudicationamounttype][2].amount.value = 0.00
+* total[adjudicationamounttype][2].amount.currency = #USD
+//* adjudication[benefitpaymentstatus].category = C4BBAdjudication#other
+* item[0].productOrService = $FDANationalDrugCode#0777-3105-02 "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)"
+* item[0].sequence = 1
+* item[0].servicedDate = "2019-07-02"
+* item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00
+* item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit
+* item[0].adjudication[adjudicationamounttype][1].amount.value = 20.00
+* item[0].adjudication[adjudicationamounttype][1].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][2].category = $C4BBAdjudicationCS#discount
+* item[0].adjudication[adjudicationamounttype][2].amount.value = 900.00
+* item[0].adjudication[adjudicationamounttype][2].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][3].category = $C4BBAdjudicationCS#memberliability
+* item[0].adjudication[adjudicationamounttype][3].amount.value = 80.00
+* item[0].adjudication[adjudicationamounttype][3].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][4].category = $C4BBAdjudicationCS#paidtoprovider
+* item[0].adjudication[adjudicationamounttype][4].amount.value = 20.00
+* item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD
+* supportingInfo[brandgenericindicator].category = C4BBSupportingInfoType#brandgenericindicator
+* supportingInfo[brandgenericindicator].sequence = 2
+* supportingInfo[brandgenericindicator].code = NCPDPBrandGenericIndicator#2
+* supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode
+* supportingInfo[rxoriginCode].code = NCPDPPrescriptionOriginCode#1
+* supportingInfo[rxoriginCode].sequence = 3
+* supportingInfo[refillNum].category = C4BBSupportingInfoType#refillnum
+* supportingInfo[refillNum].valueQuantity.value = 0.0
+* supportingInfo[refillNum].sequence = 4
+
+* supportingInfo[refillsAuthorized].category = C4BBSupportingInfoType#refillsauthorized
+* supportingInfo[refillsAuthorized].valueQuantity.value = 0.0
+* supportingInfo[refillsAuthorized].sequence = 5
+
+* supportingInfo[dawcode].category = C4BBSupportingInfoType#dawcode
+* supportingInfo[dawcode].code = NCPDPDispensedAsWrittenOrProductSelectionCode#7
+* supportingInfo[dawcode].sequence = 6
+* supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[clmrecvddate].timingDate = 2019-10-31
+* supportingInfo[clmrecvddate].sequence = 7
+* supportingInfo[dayssupply].category = C4BBSupportingInfoType#dayssupply
+* supportingInfo[dayssupply].sequence = 8
+* supportingInfo[dayssupply].valueQuantity.value =  30.0
+* supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
+* supportingInfo[compoundcode].code = NCPDPCompoundCode#Dummy
+* supportingInfo[compoundcode].sequence = 9
+* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
+* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].sequence = 10

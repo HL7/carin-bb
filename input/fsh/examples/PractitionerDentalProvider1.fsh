@@ -1,15 +1,13 @@
 Instance: PractitionerDentalProvider1
 InstanceOf: C4BBPractitioner
-Title: "PractitionerDentalProvider1"
 Description: "Dental Provider 1"
 Usage: #example
+//* meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2021-01-01T10:23:11+00:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|1.2.0"
 * language = #en-US
-* identifier.type = $v2-0203#NPI
-* identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "0025501002"
+* identifier[NPI].type = $HL7IdentifierType#NPI
+* identifier[NPI].value = "0025501002"
+* name[0].family = "Schmidt"
+* name[0].given[0] = "Stewart"
+* name[0].suffix = "DDS"
 * active = true
-* name.family = "Schmidt"
-* name.given = "Stewart"
-* name.suffix = "DDS"

@@ -4,7 +4,7 @@ Title: "EOB Inpatient Institutional - Example 1"
 Description: "EOB Inpatient Institutional - Example 1"
 Usage: #example
 * meta.lastUpdated = "2020-04-28T15:39:36-04:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.2.0"
+* meta.profile[supportedProfile] = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.2.0"
 * identifier.type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier.type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier.system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
@@ -33,17 +33,15 @@ Usage: #example
 * careTeam[=].provider = Reference(Practitioner2)
 * careTeam[=].role = $C4BBClaimCareTeamRole#referring "Referring"
 * careTeam[=].role.text = "The referring physician"
-* supportingInfo[0].sequence = 1
-* supportingInfo[=].category = $C4BBSupportingInfoType#clmrecvddate "Claim Received Date"
-* supportingInfo[=].category.text = "Date the claim was received by the payer."
-* supportingInfo[=].timingDate = "2017-06-01"
-* supportingInfo[+].sequence = 2
-* supportingInfo[=].category = $C4BBSupportingInfoType#admissionperiod "Admission Period"
-* supportingInfo[=].category.text = "Dates corresponding with the admission and discharge of the beneficiary to a facility"
-* supportingInfo[=].timingPeriod.start = "2017-05-23"
-* supportingInfo[+].sequence = 3
-* supportingInfo[=].category = $C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[=].code = $C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[clmrecvddate].
+  * sequence = 1
+  * timingDate = "2017-06-01"
+* supportingInfo[admissionperiod]
+  * sequence = 2
+  * timingPeriod.start = "2017-05-23"
+* supportingInfo[benefitpaymentstatus].
+  * sequence = 3
+  * code = $C4BBPayerAdjudicationStatus#innetwork
 * diagnosis[0].sequence = 1
 * diagnosis[=].diagnosisCodeableConcept = $icd-10-cm#I21.4
 * diagnosis[=].type = $ex-diagnosistype#principal "Principal Diagnosis"
@@ -155,39 +153,46 @@ Usage: #example
 * item[=].servicedPeriod.start = "2017-05-23"
 * item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
-* adjudication[0].category = $C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus "Billing Network Contracting Status"
-* adjudication[=].category.text = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."
-* adjudication[=].reason = $C4BBPayerAdjudicationStatus#contracted "Contracted"
-* adjudication[=].reason.text = "Indicates the provider was contracted for the service"
-* adjudication[+].category = $C4BBAdjudication#noncovered "Noncovered"
-* adjudication[=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-* adjudication[=].amount.value = 0
-* adjudication[=].amount.currency = #USD
-* total[0].category = $adjudication#submitted "Submitted Amount"
-* total[=].category.text = "The total submitted amount for the claim or group or line item."
-* total[=].amount.value = 7147.2
-* total[=].amount.currency = #USD
-* total[+].category = $adjudication#eligible "Eligible Amount"
-* total[=].category.text = "Amount of the change which is considered for adjudication."
-* total[=].amount.value = 1542.01
-* total[=].amount.currency = #USD
-* total[+].category = $adjudication#deductible "Deductible"
-* total[=].category.text = "Amount deducted from the eligible amount prior to adjudication."
-* total[=].amount.value = 0
-* total[=].amount.currency = #USD
-* total[+].category = $adjudication#copay "CoPay"
-* total[=].category.text = "Patient Co-Payment"
-* total[=].amount.value = 120
-* total[=].amount.currency = #USD
-* total[+].category = $C4BBAdjudication#noncovered "Noncovered"
-* total[=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-* total[=].amount.value = 0
-* total[=].amount.currency = #USD
-* total[+].category = $adjudication#benefit "Benefit Amount"
-* total[=].category.text = "Amount payable under the coverage"
-* total[=].amount.value = 1393.57
-* total[=].amount.currency = #USD
-* total[+].category = $C4BBAdjudication#memberliability "Member liability"
-* total[=].category.text = "The amount of the member's liability."
-* total[=].amount.value = 0
-* total[=].amount.currency = #USD
+* adjudication[billingnetworkcontractingstatus]
+  * reason = $C4BBPayerAdjudicationStatus#contracted "Contracted"
+  * reason.text = "Indicates the provider was contracted for the service"
+* adjudication[adjudicationamounttype]
+  * category = $C4BBAdjudication#noncovered "Noncovered"
+  * category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+  * amount.value = 0
+  * amount.currency = #USD
+* total[adjudicationamounttype][0].
+  * category = $adjudication#submitted "Submitted Amount"
+  * category.text = "The total submitted amount for the claim or group or line item."
+  * amount.value = 7147.2
+  * .amount.currency = #USD
+* total[adjudicationamounttype][+].
+  * category = $adjudication#eligible "Eligible Amount"
+  * category.text = "Amount of the change which is considered for adjudication."
+  * amount.value = 1542.01
+  * amount.currency = #USD
+* total[adjudicationamounttype][+].
+  * category = $adjudication#deductible "Deductible"
+  * category.text = "Amount deducted from the eligible amount prior to adjudication."
+  * amount.value = 0
+  * amount.currency = #USD
+* total[adjudicationamounttype][+].
+  * category = $adjudication#copay "CoPay"
+  * category.text = "Patient Co-Payment"
+  * amount.value = 120
+  * amount.currency = #USD
+* total[adjudicationamounttype][+].
+  * category = $C4BBAdjudication#noncovered "Noncovered"
+  * category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+  * amount.value = 0
+  * amount.currency = #USD
+* total[adjudicationamounttype][+].
+  * category = $adjudication#benefit "Benefit Amount"
+  * category.text = "Amount payable under the coverage"
+  * amount.value = 1393.57
+  * amount.currency = #USD
+* total[adjudicationamounttype][+].
+  * category = $C4BBAdjudication#memberliability "Member liability"
+  * category.text = "The amount of the member's liability."
+  * amount.value = 0
+  * amount.currency = #USD

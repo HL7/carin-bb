@@ -1,82 +1,89 @@
 Instance: EOBOutpatientInstitutional1
 InstanceOf: C4BBExplanationOfBenefitOutpatientInstitutional
-Title: "EOBOutpatientInstitutional1"
 Description: "EOB Outpatient Example1"
 Usage: #example
+* id = "EOBOutpatientInstitutional1"
+//* id = "1234-234-1243-12345678901-20190101-20191031"
+//* meta.profile = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional|1.2.0"
 * language = #en-US
-* identifier.type = $C4BBIdentifierType#uc
-* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
-* identifier.value = "AW123412341234123412341234123412"
 * status = #active
-* type = $claim-type#institutional
+* identifier.type = C4BBIdentifierType#uc
+* identifier.value = "AW123412341234123412341234123412"
+* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* type = $HL7ClaimTypeCS#institutional
 * type.text = "Institutional"
-* subType = $C4BBInstitutionalClaimSubType#outpatient
+* subType = C4BBInstitutionalClaimSubType#outpatient
 * subType.text = "Outpatient"
 * use = #claim
+* created = "2019-11-02T00:00:00+00:00"
+* insurer = Reference(OrganizationPayer1)
+* insurer.display = "XXX Health Plan"
 * patient = Reference(Patient1)
 * billablePeriod.start = "2019-01-01"
 * billablePeriod.end = "2019-10-31"
-* created = "2019-11-02T00:00:00+00:00"
-* insurer = Reference(Payer1) "XXX Health Plan"
-* provider = Reference(OrganizationProvider1) "XXX Health Plan"
+* provider = Reference(OrganizationProvider1)
+* provider.display = "XXX Health Plan"
+* careTeam[+].sequence = 1
+* careTeam[=].provider = Reference(PractitionerProvider1)
+* careTeam[=].role = C4BBClaimCareTeamRole#rendering "Rendering provider"
+* careTeam[=].qualification = $NUCCProviderTaxonomy#364SX0200X "Oncology Clinical Nurse Specialist"
 * outcome = #partial
-* careTeam.sequence = 1
-* careTeam.provider = Reference(PractitionerProvider1)
-* careTeam.role = $C4BBClaimCareTeamRole#rendering "Rendering provider"
-* careTeam.qualification = $provider-taxonomy#364SX0200X "Oncology Clinical Nurse Specialist"
-* supportingInfo[0].sequence = 9
-* supportingInfo[=].category = $C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[=].code = $C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[+].sequence = 2
-* supportingInfo[=].category = $C4BBSupportingInfoType#clmrecvddate
-* supportingInfo[=].timingDate = "2019-11-30"
-* supportingInfo[+].sequence = 3
-* supportingInfo[=].category = $C4BBSupportingInfoType#typeofbill
-* supportingInfo[=].code = $TypeOfBill#Dummy
-* supportingInfo[+].sequence = 4
-* supportingInfo[=].category = $C4BBSupportingInfoType#pointoforigin
-* supportingInfo[=].code = $PointOfOrigin#Dummy
-* supportingInfo[+].sequence = 5
-* supportingInfo[=].category = $C4BBSupportingInfoType#admtype
-* supportingInfo[=].code = $PriorityTypeOfAdmitOrVisit#Dummy
-* supportingInfo[+].sequence = 6
-* supportingInfo[=].category = $C4BBSupportingInfoType#discharge-status
-* supportingInfo[=].code = $PatDischargeStatus#Dummy
-* supportingInfo[+].sequence = 7
-* supportingInfo[=].category = $C4BBSupportingInfoType#medicalrecordnumber
-* supportingInfo[=].valueString = "1234-234-1243-12345678901m"
-* supportingInfo[+].sequence = 8
-* supportingInfo[=].category = $C4BBSupportingInfoType#patientaccountnumber
-* supportingInfo[=].valueString = "1234-234-1243-12345678901a"
-* diagnosis.sequence = 1
-* diagnosis.diagnosisCodeableConcept = $icd-10-cm#S06.0X1A
-* diagnosis.type = $C4BBClaimDiagnosisType#patientreasonforvisit
-* insurance.focal = true
-* insurance.coverage = Reference(Coverage1)
-* item.sequence = 1
-* item.revenue = $RevenueCodes#Dummy
-* item.productOrService = $data-absent-reason#not-applicable "Not Applicable"
-* item.servicedDate = "2019-11-02"
-* adjudication[0].category = $C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication[=].reason = $C4BBPayerAdjudicationStatus#contracted
-* adjudication[+].category = $C4BBAdjudication#paidtoprovider
-* adjudication[=].category.text = "Payment Amount"
-* adjudication[=].amount.value = 620
-* adjudication[=].amount.currency = #USD
-* adjudication[+].category = $C4BBAdjudication#paidbypatient
-* adjudication[=].category.text = "Patient Pay Amount"
-* adjudication[=].amount.value = 0
-* total[0].category = $C4BBAdjudication#paidtoprovider
-* total[=].category.text = "Payment Amount"
-* total[=].amount.value = 620
-* total[=].amount.currency = #USD
-* total[+].category = $adjudication#submitted
-* total[=].category.text = "Submitted Amount"
-* total[=].amount.value = 2650
-* total[=].amount.currency = #USD
-* total[+].category = $C4BBAdjudication#paidbypatient
-* total[=].category.text = "Patient Pay Amount"
-* total[=].amount.value = 0
-* total[=].amount.currency = #USD
+* diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0X1A
+* diagnosis[0].type = $C4BBClaimDiagnosisTypeCS#patientreasonforvisit
+* diagnosis[0].sequence = 1
+* insurance[0].focal = true
+* insurance[0].coverage[0] = Reference(Coverage1)
+
+* item[0].sequence = 1
+* item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
+* item[0].revenue = AHANUBCRevenueCodes#Dummy
+* item[0].servicedDate = "2019-11-02"
+* adjudication[adjudicationamounttype][0].category = C4BBAdjudication#paidtoprovider
+* adjudication[adjudicationamounttype][0].category.text = "Payment Amount"
+* adjudication[adjudicationamounttype][0].amount.value = 620.00
+* adjudication[adjudicationamounttype][0].amount.currency = #USD
+* adjudication[adjudicationamounttype][1].category = C4BBAdjudication#paidbypatient
+* adjudication[adjudicationamounttype][1].category.text = "Patient Pay Amount"
+* adjudication[adjudicationamounttype][1].amount.value = 0.00
+* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+
+* total[adjudicationamounttype][2].amount.currency = #USD
+* total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
+* total[adjudicationamounttype][0].category.text = "Payment Amount"
+* total[adjudicationamounttype][0].amount.value = 620.00
+* total[adjudicationamounttype][0].amount.currency = #USD
+* total[adjudicationamounttype][1].category = $HL7AdjudicationCS#submitted
+* total[adjudicationamounttype][1].category.text = "Submitted Amount"
+* total[adjudicationamounttype][1].amount.value = 2650.00
+* total[adjudicationamounttype][1].amount.currency = #USD
+* total[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
+* total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
+* total[adjudicationamounttype][2].amount.value = 0.00
+* total[adjudicationamounttype][2].amount.currency = #USD
+* supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
+* supportingInfo[clmrecvddate].timingDate = 2019-11-30
+* supportingInfo[clmrecvddate].sequence = 2
+* supportingInfo[typeofbill].category = C4BBSupportingInfoType#typeofbill
+* supportingInfo[typeofbill].code = AHANUBCTypeOfBill#Dummy
+* supportingInfo[typeofbill].sequence = 3
+* supportingInfo[pointoforigin].category = C4BBSupportingInfoType#pointoforigin
+* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn#Dummy
+* supportingInfo[pointoforigin].sequence = 4
+* supportingInfo[admtype].category = C4BBSupportingInfoType#admtype
+* supportingInfo[admtype].code = AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
+* supportingInfo[admtype].sequence = 5
+* supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
+* supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#Dummy
+* supportingInfo[discharge-status].sequence = 6
+
+* supportingInfo[medicalrecordnumber].category  = C4BBSupportingInfoType#medicalrecordnumber
+* supportingInfo[medicalrecordnumber].valueString = "1234-234-1243-12345678901m"
+* supportingInfo[medicalrecordnumber].sequence = 7
+* supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
+* supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
+* supportingInfo[patientaccountnumber].sequence = 8
+* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
+* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
+* supportingInfo[benefitpaymentstatus].sequence = 9
