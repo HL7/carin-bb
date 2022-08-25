@@ -77,7 +77,7 @@ Usage: #example
     * amount.currency = #USD
   *  adjudication[adjudicationamounttype][+]
     * category.coding[0] = $adjudication#eligible "Eligible Amount"
-    * category.coding[+] = $adjudication_1#https://bluebutton.cms.gov/resources/variables/line_prmry_alowd_chrg_amt "Line Primary Payer Allowed Charge Amount"
+///    * category.coding[+] = $adjudication_1#https://bluebutton.cms.gov/resources/variables/line_prmry_alowd_chrg_amt "Line Primary Payer Allowed Charge Amount"
     * category.text = "Amount of the change which is considered for adjudication."
     * amount.value = 56.52
     * amount.currency = #USD

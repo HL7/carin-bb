@@ -20,7 +20,7 @@ Usage: #example
 * relationship = $subscriber-relationship#self
 * period.start = "2019-01-01"
 * period.end = "2019-10-31"
-* payor = Reference(Payer1)
+* payor = Reference(OrganizationPayer1)
 * class[0].type = $coverage-class#group
 * class[=].type.text = "An employee group"
 * class[=].value = "021890"
