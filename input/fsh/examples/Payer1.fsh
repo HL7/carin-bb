@@ -1,8 +1,7 @@
-Instance: OrganizationPayer1
+Instance: Payer1
 InstanceOf: C4BBOrganization
 Description: "Payer1"
 Usage: #example
-* id = "Payer1"
 //* meta.profile = Canonical(C4BBOrganization)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
