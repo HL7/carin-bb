@@ -2,7 +2,7 @@ Instance: Coverage1
 InstanceOf: C4BBCoverage
 Title: "Coverage1"
 Description: "Coverage Example1"
-Usage: #example
+// Usage: #example
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * meta.profile[supportedProfile] = Canonical(C4BBCoverage|1.2.0)
 * language = #en-US
