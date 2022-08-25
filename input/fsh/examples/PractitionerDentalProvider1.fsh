@@ -1,5 +1,5 @@
 Instance: PractitionerDentalProvider1
-InstanceOf: Practitioner
+InstanceOf: C4BBPractitioner
 Title: "PractitionerDentalProvider1"
 Description: "Dental Provider 1"
 Usage: #example

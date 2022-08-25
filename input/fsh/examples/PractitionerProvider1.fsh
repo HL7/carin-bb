@@ -1,6 +1,6 @@
 Instance: PractitionerProvider1
-InstanceOf: Practitioner
-Title: "PractitionerProvider1"
+InstanceOf: C4BBPractitioner
+Title: "C4BBPractitionerProvider1"
 Description: "Provider 1"
 Usage: #example
 * meta.lastUpdated = "2022-07-27T10:23:11+00:00"

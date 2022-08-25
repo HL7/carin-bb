@@ -1,5 +1,5 @@
 Instance: Patient1
-InstanceOf: Patient
+InstanceOf: C4BBPatient
 Title: "Patient1"
 Description: "Patient Example1"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: ProviderOrganization6
-InstanceOf: Organization
+InstanceOf: C4BBOrganization
 Title: "Provider Organization Example 6"
 Description: "Provider Organization Example 6"
 Usage: #example

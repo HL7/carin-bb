@@ -1,5 +1,5 @@
 Instance: EOBOral2
-InstanceOf: ExplanationOfBenefit
+InstanceOf: C4BBExplanationOfBenefitOral
 Title: "EOBOral2"
 Description: "EOB Oral Example 2"
 Usage: #example

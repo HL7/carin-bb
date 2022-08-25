@@ -23,19 +23,19 @@ Description: "This profile builds upon the US Core Organization profile. It is u
    tax 0..* MS and
    payerid 0..* MS and
    naiccode 0..* MS
-* identifier[NPI].type  = $HL7IdentifierType#NPI
+* identifier[NPI] ^patternIdentifier.type  = $HL7IdentifierType#NPI
 // * identifier[NPI].type
 * identifier[tax] ^short = "Tax ID Number"
-* identifier[tax].type  = $IdentifierType#TAX
+* identifier[tax] ^patternIdentifier.type  = $IdentifierType#TAX
 // * identifier[tax].type
-* identifier[tax].system = $TAXCodeCS
+* identifier[tax] ^patternIdentifier.system = $TAXCodeCS
 * identifier[payerid] ^short = "Payer ID used in HIPAA covered claims submission transactions"
-* identifier[payerid].type  = C4BBIdentifierType#payerid
+* identifier[payerid] ^patternIdentifier.type  = C4BBIdentifierType#payerid
 // * identifier[payerid].type
 * identifier[naiccode] ^short = "NAIC Code"
 // * identifier[naiccode].type
-* identifier[naiccode].system = $NAICCodeCS
-* identifier[naiccode].type  = C4BBIdentifierType#naiccode
+* identifier[naiccode] ^patternIdentifier.system = $NAICCodeCS
+* identifier[naiccode] ^patternIdentifier.type  = C4BBIdentifierType#naiccode
 
 * identifier[tax] ^comment = "Tax ID Number"
 * identifier[payerid] ^comment = "Internal value assigned by the payer responsible for the claim (2)"

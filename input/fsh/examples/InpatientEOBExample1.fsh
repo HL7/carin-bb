@@ -1,10 +1,9 @@
 Instance: InpatientEOBExample1
-InstanceOf: ExplanationOfBenefit
+InstanceOf: C4BBExplanationOfBenefitInpatientInstitutional
 Title: "EOB Inpatient Institutional - Example 1"
 Description: "EOB Inpatient Institutional - Example 1"
 Usage: #example
 * meta.lastUpdated = "2020-04-28T15:39:36-04:00"
-* meta.source = "Organization/PayerOrganizationExample1"
 * meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.2.0"
 * identifier.type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier.type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"

@@ -1,5 +1,5 @@
 Instance: OutpatientEOBExample1
-InstanceOf: ExplanationOfBenefit
+InstanceOf: C4BBExplanationOfBenefitOutpatientInstitutional
 Title: "EOB Outpatient Institutional - Example 1"
 Description: "EOB Outpatient Institutional - Example 1"
 Usage: #example

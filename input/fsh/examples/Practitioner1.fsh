@@ -1,5 +1,5 @@
 Instance: Practitioner1
-InstanceOf: Practitioner
+InstanceOf: C4BBPractitioner
 Title: "Practitioner Example 1"
 Description: "Practitioner Example 1"
 Usage: #example

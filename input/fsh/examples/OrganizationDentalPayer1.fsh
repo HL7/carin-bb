@@ -1,5 +1,5 @@
 Instance: OrganizationDentalPayer1
-InstanceOf: Organization
+InstanceOf: C4BBOrganization
 Title: "OrganizationDentalPayer1"
 Description: "Dental Payer1"
 Usage: #example

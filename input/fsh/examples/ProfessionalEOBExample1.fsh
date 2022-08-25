@@ -1,5 +1,5 @@
 Instance: ProfessionalEOBExample1
-InstanceOf: ExplanationOfBenefit
+InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician
 Title: "EOB Professional - Example 1"
 Description: "EOB Professional - Example 1"
 Usage: #example

@@ -1,5 +1,5 @@
 Instance: EOBPharmacy1
-InstanceOf: ExplanationOfBenefit
+InstanceOf: C4BBExplanationOfBenefitPharmacy
 Title: "EOBPharmacy1"
 Description: "EOB PHarmacy Example1"
 Usage: #example

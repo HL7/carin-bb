@@ -50,7 +50,7 @@ menu:
   Guidance:
     General Guidance: General_Guidance.html
     Common Payer Consumer Data Set (CPCDS): Common_Payer_Consumer_Data_Set.html
-    Terminology Licensure: Terminology.html 
+    Terminology Licensure: Terminology.html
   FHIR Artifacts:
     Profiles: artifacts.html#3
     Search Parameters: searchparameters.html
@@ -67,7 +67,7 @@ menu:
 pages:
   index.md:
     title: Home
-  Background.md: 
+  Background.md:
     title: Background
   Use_Case.md:
     title: Use Case
@@ -90,65 +90,3 @@ pages:
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To control the package-list.json using this config, uncomment and set the "history" property. │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-
-resources:
-  Coverage/CoverageEx1:
-    name: Coverage Example 1
-    description: Coverage Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-  Coverage/CoverageEx2:
-    name: Coverage Example 2
-    description: Coverage Example 2
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-  ExplanationOfBenefit/InpatientEOBExample1:
-    name: EOB Inpatient Institutional - Example 1
-    description: EOB Inpatient Institutional - Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
-  ExplanationOfBenefit/OutpatientEOBExample1:              
-    name: EOB Outpatient Institutional - Example 1
-    description: EOB Outpatient Institutional - Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
-  ExplanationOfBenefit/ProfessionalEOBExample1:
-    name: EOB Professional - Example 1
-    description: EOB Professional - Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
-  Organization/PayerOrganizationExample1:
-    name: Payer Organization Example 1
-    description: Payer Organization Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-  Organization/ProviderOrganization1:
-    name: Provider Organization Example 1
-    description: Provider Organization Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-  Organization/ProviderOrganization3:
-    name: Provider Organization Example 3
-    description: Provider Organization Example 3
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-  Organization/ProviderOrganization4:
-    name: Provider Organization Example 4
-    description: Provider Organization Example 4
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-  Organization/ProviderOrganization5:
-    name: Provider Organization Example 5
-    description: Provider Organization Example 5
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-  Organization/ProviderOrganization6:
-    name: Provider Organization Example 6
-    description: Provider Organization Example 6
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-  Patient/ExamplePatient1: 
-    name: Patient Example 1
-    description: Patient Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
-  Practitioner/Practitioner1:
-    name: Practitioner Example 1
-    description: Practitioner Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
-  Practitioner/Practitioner2:
-    name: Practitioner Example 2
-    description: Practitioner Example 2
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
-  Practitioner/Practitioner3:
-    name: Practitioner Example 3
-    description: Practitioner Example 3
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
