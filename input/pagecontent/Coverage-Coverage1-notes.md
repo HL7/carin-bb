@@ -12,7 +12,7 @@ Usage: #example
 * identifier.value = "1234-234-1243-12345678901"
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP
-* type.text = "health insurance plan policy"
+  * text = "health insurance plan policy"
 * policyHolder = Reference(Patient1)
 * subscriber = Reference(Patient1)
 * subscriberId = "12345678901"
@@ -21,13 +21,13 @@ Usage: #example
 * relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self
 * period.start = "2019-01-01"
 * period.end = "2019-10-31"
-* payor = Reference(Payer1)
+* payor = Reference(OrganizationPayer1)
 * class[0].type = http://terminology.hl7.org/CodeSystem/coverage-class#group
 * class[=].type.text = "An employee group"
 * class[=].value = "021890"
 * class[=].name = "Acme Corporation"
 * class[+].type = http://terminology.hl7.org/CodeSystem/coverage-class#plan
-* class[=].type.text = "Plan"
+  * text = "Plan"
 * class[=].value = "XYZ123"
 * class[=].name = "XYZ123-UPMC CONSUMER ADVA"
 * network = "XYZ123-UPMC CONSUMER ADVA"

@@ -11,6 +11,7 @@ Usage: #example
 * identifier[=].system = "http://hl7.org/fhir/sid/us-npi"
 * identifier[=].value = "345678"
 * identifier[+].type = http://terminology.hl7.org/CodeSystem/v2-0203#TAX
+* identifier[=].system = "urn:oid:2.16.840.1.113883.4.4"
 * identifier[=].value = "123-45-6789"
 * active = true
 * name = "Provider 1"

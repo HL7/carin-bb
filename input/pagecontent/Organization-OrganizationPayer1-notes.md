@@ -1,5 +1,5 @@
 ```
-Instance: Payer1
+Instance: OrganizationPayer1
 InstanceOf: Organization
 Title: "OrganizationPayer1"
 Description: "Payer1"
@@ -13,5 +13,5 @@ Usage: #example
 * identifier[+].type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType#payerid
 * identifier[=].value = "901234"
 * active = true
-* name = "Payer 1"
+* name = "Organization Payer 1"
 ```

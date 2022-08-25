@@ -8,12 +8,12 @@ Usage: #example
 * meta.source = "Organization/PayerOrganizationExample1"
 * meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|1.2.0"
 * identifier.type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType#naiccode "NAIC Code"
-* identifier.type.text = "NAIC Code"
+  * text = "NAIC Code"
 * identifier.system = "urn:oid:2.16.840.1.113883.6.300"
 * identifier.value = "95216"
 * active = true
 * type = http://terminology.hl7.org/CodeSystem/organization-type#pay
-* type.text = "Payer"
+  * text = "Payer"
 * name = "UPMC Health Plan"
 * telecom[0].system = #phone
 * telecom[=].value = "1-844-220-4785 TTY: 711"

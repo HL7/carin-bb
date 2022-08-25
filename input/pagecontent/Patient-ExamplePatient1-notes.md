@@ -9,7 +9,7 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient|1.2.0"
 * language = #en-US
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MB "Member Number"
-* identifier.type.text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
+  * text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
 * identifier.system = "https://www.upmchealthplan.com/fhir/memberidentifier"
 * identifier.value = "88800933501"
 * identifier.assigner = Reference(PayerOrganizationExample1) "UPMC Health Plan"
@@ -55,9 +55,9 @@ Usage: #example
 * address[=].state = "PA"
 * address[=].postalCode = "15217"
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK
-* maritalStatus.text = "unknown"
+  * text = "unknown"
 * communication.language = urn:ietf:bcp:47#en
-* communication.language.text = "English"
+  * text = "English"
 * communication.preferred = true
 * managingOrganization = Reference(PayerOrganizationExample1) "UPMC Health Plan"
 ```

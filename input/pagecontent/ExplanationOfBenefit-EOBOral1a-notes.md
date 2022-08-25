@@ -12,7 +12,7 @@ Usage: #example
 * identifier.value = "210300002"
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/claim-type#oral
-* type.text = "Oral"
+  * text = "Oral"
 * use = #claim
 * patient = Reference(Patient1)
 * billablePeriod.start = "2021-03-01"
@@ -63,15 +63,15 @@ Usage: #example
 * total[=].amount.value = 410
 * total[=].amount.currency = #USD
 * total[+].category = http://terminology.hl7.org/CodeSystem/adjudication#benefit
-* total[=].category.text = "Benefit Amount"
+  * text = "Benefit Amount"
 * total[=].amount.value = 350
 * total[=].amount.currency = #USD
 * total[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#discount
-* total[=].category.text = "Discount Amount"
+  * text = "Discount Amount"
 * total[=].amount.value = 60
 * total[=].amount.currency = #USD
 * total[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#paidtoprovider
-* total[=].category.text = "Amount Paid to Provider"
+  * text = "Amount Paid to Provider"
 * total[=].amount.value = 350
 * total[=].amount.currency = #USD
 ```

@@ -12,7 +12,7 @@ Usage: #example
 * identifier.value = "210300002"
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#DENTAL
-* type.text = "dental care policy"
+  * text = "dental care policy"
 * policyHolder = Reference(Patient1)
 * subscriber = Reference(Patient1)
 * subscriberId = "10300007"
@@ -27,7 +27,7 @@ Usage: #example
 * class[=].value = "10300007"
 * class[=].name = "Transcorp - dental"
 * class[+].type = http://terminology.hl7.org/CodeSystem/coverage-class#plan
-* class[=].type.text = "Plan"
+  * text = "Plan"
 * class[=].value = "66783JJT"
 * class[=].name = "INSURANCE COMPANY XYZ - PRIME"
 * network = "INSURANCE COMPANY XYZ - PRIME"

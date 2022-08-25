@@ -12,15 +12,15 @@ Usage: #example
 * identifier.value = "AW123412341234123412341234123412"
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
-* type.text = "Institutional"
+  * text = "Institutional"
 * subType = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBInstitutionalClaimSubType#outpatient
-* subType.text = "Outpatient"
+  * text = "Outpatient"
 * use = #claim
 * patient = Reference(Patient1)
 * billablePeriod.start = "2019-01-01"
 * billablePeriod.end = "2019-10-31"
 * created = "2019-11-02T00:00:00+00:00"
-* insurer = Reference(Payer1) "XXX Health Plan"
+* insurer = Reference(OrganizationPayer1) "XXX Health Plan"
 * provider = Reference(OrganizationProvider1) "XXX Health Plan"
 * outcome = #partial
 * careTeam.sequence = 1
@@ -63,22 +63,22 @@ Usage: #example
 * adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
 * adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#contracted
 * adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#paidtoprovider
-* adjudication[=].category.text = "Payment Amount"
+  * text = "Payment Amount"
 * adjudication[=].amount.value = 620
 * adjudication[=].amount.currency = #USD
 * adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#paidbypatient
-* adjudication[=].category.text = "Patient Pay Amount"
+  * text = "Patient Pay Amount"
 * adjudication[=].amount.value = 0
 * total[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#paidtoprovider
 * total[=].category.text = "Payment Amount"
 * total[=].amount.value = 620
 * total[=].amount.currency = #USD
 * total[+].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted
-* total[=].category.text = "Submitted Amount"
+  * text = "Submitted Amount"
 * total[=].amount.value = 2650
 * total[=].amount.currency = #USD
 * total[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#paidbypatient
-* total[=].category.text = "Patient Pay Amount"
+  * text = "Patient Pay Amount"
 * total[=].amount.value = 0
 * total[=].amount.currency = #USD
 ```

@@ -12,13 +12,13 @@ Usage: #example
 * identifier.value = "AW123412341234123412341234123412"
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/claim-type#pharmacy
-* type.text = "Pharmacy"
+  * text = "Pharmacy"
 * use = #claim
 * patient = Reference(Patient1)
 * billablePeriod.start = "2019-10-30"
 * billablePeriod.end = "2019-10-31"
 * created = "2019-07-02T00:00:00+00:00"
-* insurer = Reference(Payer1) "XXX Health Plan"
+* insurer = Reference(OrganizationPayer1) "XXX Health Plan"
 * provider = Reference(OrganizationProvider1) "XXX Health Plan"
 * outcome = #partial
 * supportingInfo[0].sequence = 8
@@ -75,11 +75,11 @@ Usage: #example
 * total[=].amount.value = 620
 * total[=].amount.currency = #USD
 * total[+].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted
-* total[=].category.text = "Submitted Amount"
+  * text = "Submitted Amount"
 * total[=].amount.value = 2650
 * total[=].amount.currency = #USD
 * total[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#paidbypatient
-* total[=].category.text = "Patient Pay Amount"
+  * text = "Patient Pay Amount"
 * total[=].amount.value = 0
 * total[=].amount.currency = #USD
 ```
