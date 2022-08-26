@@ -8,14 +8,15 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #coinsurance "Co-insurance" "The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%."
 * #noncovered "Noncovered" "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * #priorpayerpaid "Prior payer paid" "The reduction in the payment amount to reflect the carrier as a secondary payer."
-* #paidbypatient "Paid by patient" "The amount paid by the patient."
+* #paidbypatient "Paid by patient" "The total amount paid by the patient without specifying the source."
 * #paidbypatientcash "Paid by patient - cash" "The amount paid by the patient using cash, check, or other personal account."
-* #paidbypatientother "Paid by patient - other" "The amount paid by the patient using another method like HSA, HRA, or another means other than by cash, check, or other personal account."
+* #paidbypatientother "Paid by patient - other" "The amount paid by the patient using a method different than cash (cash, check, or personal account) or health account."
 * #paidtoprovider "Paid to provider" "The amount paid to the provider."
 * #paidtopatient "Paid to patient" "paid to patient"
 * #memberliability "Member liability" "The amount of the member's liability."
 * #discount "Discount" "The amount of the discount"
 * #drugcost "Drug cost" "Price paid for the drug excluding mfr or other discounts.  It typically is the sum of the following components: ingredient cost, dispensing fee, sales tax, and vaccine administration"
+* #paidbypatienthealthaccount "Paid by patient - health account" "The amount paid by the patient using another method like HSA, HRA, FSA or other type of health account."
 //* #paid "Paid" "paid"
 //* #denied "Denied"  "denied"
 * ^content = #complete
@@ -101,7 +102,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 //* #npi "National Provider Identifier" "National Provider Identifier"  FHIR-35712
 //* #clia "CLIA" "CLIA"
 * #payerid "Payer ID" "Payer ID used in HIPAA covered claims submission transactions"
-* #naiccode "NAIC Code" "NAIC Code"
+* #naiccode "NAIC Code" "An identifier assigned to licensed and authorized insurance companies by the National Association of Insurance Commissioners (NAIC)."
 //* #mb "Member ID" "Member ID" - not needed - defined in HL7
 // * #mr "Medical Record Number" "Medical Record Number" - use the MR code from the base codesystem
 * #pat "Patient Account Number" "Patient Account Number"
