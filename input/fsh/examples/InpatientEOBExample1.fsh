@@ -4,7 +4,7 @@ Title: "EOB Inpatient Institutional - Example 1"
 Description: "EOB Inpatient Institutional - Example 1"
 Usage: #example
 * meta.lastUpdated = "2020-04-28T15:39:36-04:00"
-* meta.profile[supportedProfile] = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.2.0"
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|1.2.0)
 * identifier.type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier.type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier.system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
@@ -39,9 +39,6 @@ Usage: #example
 * supportingInfo[admissionperiod]
   * sequence = 2
   * timingPeriod.start = "2017-05-23"
-* supportingInfo[benefitpaymentstatus].
-  * sequence = 3
-  * code = $C4BBPayerAdjudicationStatus#innetwork
 * diagnosis[0].sequence = 1
 * diagnosis[=].diagnosisCodeableConcept = $icd-10-cm#I21.4
 * diagnosis[=].type = $ex-diagnosistype#principal "Principal Diagnosis"
@@ -161,6 +158,9 @@ Usage: #example
   * category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
   * amount.value = 0
   * amount.currency = #USD
+* adjudication[benefitpaymentstatus]
+  * category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+  * reason = C4BBPayerAdjudicationStatus#innetwork
 * total[adjudicationamounttype][0].
   * category = $adjudication#submitted "Submitted Amount"
   * category.text = "The total submitted amount for the claim or group or line item."
@@ -196,3 +196,7 @@ Usage: #example
   * category.text = "The amount of the member's liability."
   * amount.value = 0
   * amount.currency = #USD
+
+* adjudication[benefitpaymentstatus]
+  * category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+  * reason = C4BBPayerAdjudicationStatus#outofnetwork

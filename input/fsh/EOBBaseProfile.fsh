@@ -171,6 +171,53 @@ Expression: "type.coding.where(code = 'other' and system = 'http://terminology.h
 Severity: #error
 
 
+Invariant: patient-meta-profile-version
+Description: "Patient: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient|1.2.'))"
+Severity: #error
+
+Invariant: practitioner-meta-profile-version
+Description: "Practitioner: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|1.2.'))"
+Severity: #error
+
+Invariant: organization-meta-profile-version
+Description: "Organization: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|1.2.'))"
+Severity: #error
+
+Invariant: coverage-meta-profile-version
+Description: "Coverage: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|1.2.'))"
+Severity: #error
+
+Invariant: EOB-institutional-inpatient-meta-profile-version
+Description: "Institutional Inpatient EOB: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.2.'))"
+Severity: #error
+
+Invariant: EOB-institutional-outpatient-meta-profile-version
+Description: "Institutional Outpatient EOB: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional|1.2.'))"
+Severity: #error
+
+Invariant: EOB-professional-nonclinician-meta-profile-version
+Description: "Professional and Nonclinician EOB: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|1.2.'))"
+Severity: #error
+
+Invariant: EOB-pharmacy-meta-profile-version
+Description: "Pharmacy EOB: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy|1.2.'))"
+Severity: #error
+
+Invariant: EOB-oral-meta-profile-version
+Description: "Oral EOB: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Oral|1.2.'))"
+Severity: #error
+
+
+
 // Rulesets
 RuleSet: ItemAdjudicationInvariant
 * item obeys adjudication-has-amount-type-slice
@@ -249,7 +296,7 @@ RuleSet: EOBBaseProfileComments
 * processNote.text ^comment = "Payment denial explanation to a member, typically goes on the EOB when the payment is denied or disallowed (181)"
 
 // 20210322 CAS: FHIR-30575
-
+/*
 RuleSet: Metaprofile-supportedProfile-slice
 * meta.profile ^slicing.discriminator.type = #pattern
 * meta.profile ^slicing.discriminator.path = "$this"
@@ -257,3 +304,4 @@ RuleSet: Metaprofile-supportedProfile-slice
 * meta.profile ^slicing.ordered = false
 * meta.profile ^slicing.description = "Slice based on value"
 * meta.profile contains supportedProfile 1..1
+*/

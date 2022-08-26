@@ -2,7 +2,7 @@ Instance: OrganizationProvider1
 InstanceOf: C4BBOrganization
 Description: "Provider 1"
 Usage: #example
-//* meta.profile = Canonical(C4BBOrganization)
+* meta.profile[+] = Canonical(C4BBOrganization|1.2.0)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * identifier[NPI].type = $HL7IdentifierType#NPI

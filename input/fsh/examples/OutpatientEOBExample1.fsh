@@ -5,7 +5,7 @@ Description: "EOB Outpatient Institutional - Example 1"
 Usage: #example
 * meta.lastUpdated = "2020-10-13T11:10:24-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile[supportedProfile] = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional|1.2.0"
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|1.2.0)
 * identifier.type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier.type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier.system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
@@ -37,9 +37,6 @@ Usage: #example
 * supportingInfo[clmrecvddate]
   * sequence = 1
   * timingDate = "2020-10-10"
-* supportingInfo[benefitpaymentstatus]
-  * sequence = 2
-  * code = $C4BBPayerAdjudicationStatus#outofnetwork
 * diagnosis[0].sequence = 1
 * diagnosis[=].diagnosisCodeableConcept = $icd-10-cm#I95.1
 * diagnosis[=].type = $ex-diagnosistype#principal "Principal Diagnosis"
@@ -168,3 +165,7 @@ Usage: #example
   * category.text = "The amount of the member's liability."
   * amount.value = 0
   * amount.currency = #USD
+
+* adjudication[benefitpaymentstatus]
+  * category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+  * reason = C4BBPayerAdjudicationStatus#outofnetwork

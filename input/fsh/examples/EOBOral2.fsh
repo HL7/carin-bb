@@ -4,7 +4,7 @@ Description: "EOB Oral Example 2"
 Usage: #example
 * id = "EOBOral2"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-//* meta.profile = Canonical(C4BBExplanationOfBenefitOral)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
 * meta.lastUpdated = "2021-10-28T10:23:00-05:00"
 * language = #en-US
 * status = #active
@@ -30,6 +30,8 @@ Usage: #example
 * adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
 * adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
 * adjudication[renderingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 
 * total[adjudicationamounttype][+].category = $HL7AdjudicationCS#submitted
 * total[adjudicationamounttype][=].category.text = "Submitted Amount"
@@ -101,6 +103,4 @@ Usage: #example
 * supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#2
 * supportingInfo[additionalbodysite][=].sequence = 10
 
-* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[benefitpaymentstatus].sequence = 11
+

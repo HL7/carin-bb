@@ -3,7 +3,7 @@ InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician
 Description: "EOB Professional  Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-//* meta.profile = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active

@@ -4,8 +4,10 @@ Id: C4BB-ExplanationOfBenefit-Professional-NonClinician
 Title: "C4BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional and vision services. These services may be rendered in inpatient or outpatient, including office locations. The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 // 20210322 CAS: FHIR-30575
-* insert Metaprofile-supportedProfile-slice
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)
+//* insert Metaprofile-supportedProfile-slice
+//* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)
+* obeys EOB-professional-nonclinician-meta-profile-version
+
 * careTeam obeys EOB-prof-careTeam-practitioner
 * careTeam.qualification MS
 * careTeam.qualification from $USCoreProviderSpecialty (required)  // cardinality constraint?

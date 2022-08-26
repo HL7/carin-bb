@@ -4,7 +4,7 @@ Description: "EOB PHarmacy Example1"
 Usage: #example
 * id = "EOBPharmacy1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-//* meta.profile = Canonical(C4BBExplanationOfBenefitPharmacy)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitPharmacy|1.2.0)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -27,6 +27,9 @@ Usage: #example
 * insurance[0].coverage[0] = Reference(Coverage1)
 * adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
 * adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
+
 * total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][0].category.text = "Payment Amount"
 * total[adjudicationamounttype][0].amount.value = 620.00
@@ -84,6 +87,4 @@ Usage: #example
 * supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
 * supportingInfo[compoundcode].code = NCPDPCompoundCode#Dummy
 * supportingInfo[compoundcode].sequence = 9
-* supportingInfo[benefitpaymentstatus].category = C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[benefitpaymentstatus].code = C4BBPayerAdjudicationStatus#innetwork
-* supportingInfo[benefitpaymentstatus].sequence = 10
+

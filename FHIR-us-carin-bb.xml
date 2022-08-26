@@ -127,7 +127,7 @@
 <artifact id="ValueSet/FDANationalDrugCode" key="ValueSet-FDANationalDrugCode" name="National Drug Code (NDC)"/>
 <artifact id="ValueSet/OralBodySite" key="ValueSet-OralBodySite" name="Oral Body Site Value Set"/>
 <artifact id="Organization/OrganizationDentalPayer1" key="Organization-OrganizationDentalPayer1" name="OrganizationDentalPayer1"/>
-<artifact id="Organization/Payer1" key="Organization-Payer1" name="OrganizationPayer1"/>
+<artifact id="Organization/OrganizationPayer1" key="Organization-Payer1" name="OrganizationPayer1"/>
 <artifact id="Organization/OrganizationProvider1" key="Organization-OrganizationProvider1" name="OrganizationProvider1"/>
 <artifact id="Patient/ExamplePatient1" key="Patient-PatientEx1" name="Patient Example 1"/>
 <artifact id="Patient/Patient1" key="Patient-Patient1" name="Patient1"/>

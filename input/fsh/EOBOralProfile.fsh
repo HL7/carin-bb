@@ -4,8 +4,9 @@ Id: C4BB-ExplanationOfBenefit-Oral
 Title: "C4BB ExplanationOfBenefit Oral"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene. The ADA Dental Claim Form provides a common format for reporting dental services to a patient's dental benefit plan."
 // 20210216 CAS: FHIR-30575
-* insert Metaprofile-supportedProfile-slice
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
+//* insert Metaprofile-supportedProfile-slice
+//* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
+* obeys EOB-oral-meta-profile-version
 
 // TODO error with invariant
 //* obeys Oral-EOB-supportinginfo-bodysite-requires-line-item

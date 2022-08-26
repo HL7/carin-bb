@@ -6,8 +6,9 @@ Description: "The profile is used for Explanation of Benefits (EOBs) based on cl
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human
 Services."
 // 20210322 CAS: FHIR-30575
-* insert Metaprofile-supportedProfile-slice
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|1.2.0)
+//* insert Metaprofile-supportedProfile-slice
+//* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|1.2.0)
+* obeys EOB-institutional-inpatient-meta-profile-version
 //@Saul -- added MS
 * use MS
 * outcome MS

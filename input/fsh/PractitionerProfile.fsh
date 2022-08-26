@@ -8,9 +8,11 @@ Description: "This profile builds upon the US Core Practitioner profile. It is u
 * meta 1..1 MS
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..*
-* insert Metaprofile-supportedProfile-slice
+//* insert Metaprofile-supportedProfile-slice
 // 20210322 CAS: FHIR-30575
-* meta.profile[supportedProfile] = Canonical(C4BBPractitioner|1.2.0)
+//* meta.profile[supportedProfile] = Canonical(C4BBPractitioner|1.2.0)
+* obeys practitioner-meta-profile-version
+
 * identifier 1..* MS
 * identifier[NPI] 0..1 MS 
 * identifier contains 

@@ -9,16 +9,10 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 //* meta.lastUpdated 1..1  MS
 * meta.profile 1..*
 // 20210322 CAS: FHIR-30575
-* insert Metaprofile-supportedProfile-slice
-* meta.profile[supportedProfile] = Canonical(C4BBOrganization|1.2.0)
-// Slicing stuff missing?
-// * identifier ^slicing.discriminator.path = "$this"
-// * identifier ^slicing.rules = #open
-// * identifier ^slicing.discriminator.type = #pattern
-// * identifier ^slicing.ordered = false   // can be omitted, since false is the default
-// * identifier ^slicing.description = "Slice based on $this pattern"
-//* identifier.type 1..1 MS
-//* identifier.type from OrganizationIdentifierType (extensible)
+//* insert Metaprofile-supportedProfile-slice
+//* meta.profile[supportedProfile] = Canonical(C4BBOrganization|1.2.0)
+* obeys organization-meta-profile-version
+
 * identifier contains
    tax 0..* MS and
    payerid 0..* MS and
