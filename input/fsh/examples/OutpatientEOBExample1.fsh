@@ -165,7 +165,6 @@ Usage: #example
   * category.text = "The amount of the member's liability."
   * amount.value = 0
   * amount.currency = #USD
-
 * adjudication[benefitpaymentstatus]
   * category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
   * reason = C4BBPayerAdjudicationStatus#outofnetwork
