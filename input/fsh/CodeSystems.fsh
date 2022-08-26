@@ -90,7 +90,7 @@ Description: "Identifier Type codes that extend those defined in http://terminol
 //* #npi "National Provider Identifier" "National Provider Identifier"  FHIR-35712
 //* #clia "CLIA" "CLIA"
 * #payerid "Payer ID" "Payer ID used in HIPAA covered claims submission transactions"
-* #naiccode "NAIC Code" "NAIC Code"
+* #naiccode "NAIC Code" "An identifier assigned to licensed and authorized insurance companies by the National Association of Insurance Commissioners (NAIC)."
 //* #mb "Member ID" "Member ID" - not needed - defined in HL7
 // * #mr "Medical Record Number" "Medical Record Number" - use the MR code from the base codesystem
 * #pat "Patient Account Number" "Patient Account Number"
