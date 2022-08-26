@@ -88,23 +88,27 @@ role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'superv
 Severity: #error
 
 Invariant: EOB-inst-careTeam-organization    // rewritten with input from Lee Surprenant  FHIR-28530
-Description: "Institutional EOB:  Careteam roles refer to an organization"
+Description: "Institutional EOB: Careteam roles refer to an organization"
 Expression:   "(
-role.where(coding.where(code in ('performing' )).exists()).exists() implies
-role.where(coding.where(code in ('performing' )).exists()).exists().provider.all(resolve() is Organization)
+role.where(coding.where(code in ('rendering' )).exists()).exists() implies
+role.where(coding.where(code in ('rendering' )).exists()).exists().provider.all(resolve() is Organization)
 )"
 Severity: #error
 
 Invariant: EOB-careteam-qualification
-Description: "Care Team Performing physician's qualifications are from Healthcare Provider Taxonomy Value Set"
-Expression: "(
-role.where(coding.where(code in ('performing' )).exists()).exists() implies
-role.where(coding.where(code in ('performing' )).exists()).exists().qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')
+Description: "Care Team Rendering physician's qualifications are from Healthcare Provider Taxonomy Value Set"
+//Expression: "where(role.where(coding.code in ('rendering')).exists().not() or qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')).exists()" // FHIR-35889
+//Expression: "where(role.where(coding.code in ('rendering')).exists().not() or qualification.where(coding.system = 'http://nucc.org/provider-taxonomy')).exists()"
+Expression: "where(role.where(coding.code in ('rendering')).exists().not() or qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')).exists()"
+/* Expression: "(
+#role.where(coding.where(code in ('rendering' )).exists()).exists() implies
+role.where(coding.where(code in ('rendering' )).exists()).exists().qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')
 )"
+*/
 Severity: #error
 
 Invariant: EOB-pharm-careTeam-practitioner
-Description: "Pharmacy EOB:  Careteam roles refer to a practitioner"
+Description: "Pharmacy EOB: Careteam roles refer to a practitioner"
 Expression: "(
 role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists() implies
 role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists().provider.all(resolve() is Organization)
@@ -112,18 +116,18 @@ role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists()
 Severity: #error
 
 Invariant: EOB-pharm-careTeam-organization
-Description: "Pharmacy EOB:  Careteam roles refer to an organization"
+Description: "Pharmacy EOB: Careteam roles refer to an organization"
 Expression: "(
-role.where(coding.where(code in ('performing' )).exists()).exists() implies
-role.where(coding.where(code in ('performing' )).exists()).exists().provider.all(resolve() is Organization)
+role.where(coding.where(code in ('rendering' )).exists()).exists() implies
+role.where(coding.where(code in ('rendering' )).exists()).exists().provider.all(resolve() is Organization)
 )"
 Severity: #error
 
 Invariant: EOB-prof-careTeam-practitioner
 Description: "Professional EOB:  Careteam roles refer to a practitioner"
 Expression: "(
-role.where(coding.where(code in ('performing' | 'primary' | 'referring' | 'supervising')).exists()).exists() implies
-role.where(coding.where(code in ('performing' | 'primary' | 'referring' | 'supervising' )).exists()).exists().provider.all(resolve() is Practitioner)
+role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervising')).exists()).exists() implies
+role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervising' )).exists()).exists().provider.all(resolve() is Practitioner)
 )" 
 Severity: #error
 
@@ -165,6 +169,53 @@ Invariant: EOB-payee-other-type-requires-party
 Description: "Base EOB: if payee type is other, payee party is required"
 Expression: "type.coding.where(code = 'other' and system = 'http://terminology.hl7.org/CodeSystem/payeetype').exists() implies party.exists()"
 Severity: #error
+
+
+Invariant: patient-meta-profile-version
+Description: "Patient: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient|1.2.'))"
+Severity: #error
+
+Invariant: practitioner-meta-profile-version
+Description: "Practitioner: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|1.2.'))"
+Severity: #error
+
+Invariant: organization-meta-profile-version
+Description: "Organization: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|1.2.'))"
+Severity: #error
+
+Invariant: coverage-meta-profile-version
+Description: "Coverage: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|1.2.'))"
+Severity: #error
+
+Invariant: EOB-institutional-inpatient-meta-profile-version
+Description: "Institutional Inpatient EOB: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.2.'))"
+Severity: #error
+
+Invariant: EOB-institutional-outpatient-meta-profile-version
+Description: "Institutional Outpatient EOB: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional|1.2.'))"
+Severity: #error
+
+Invariant: EOB-professional-nonclinician-meta-profile-version
+Description: "Professional and Nonclinician EOB: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|1.2.'))"
+Severity: #error
+
+Invariant: EOB-pharmacy-meta-profile-version
+Description: "Pharmacy EOB: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy|1.2.'))"
+Severity: #error
+
+Invariant: EOB-oral-meta-profile-version
+Description: "Oral EOB: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Oral|1.2.'))"
+Severity: #error
+
 
 
 // Rulesets
@@ -245,7 +296,7 @@ RuleSet: EOBBaseProfileComments
 * processNote.text ^comment = "Payment denial explanation to a member, typically goes on the EOB when the payment is denied or disallowed (181)"
 
 // 20210322 CAS: FHIR-30575
-
+/*
 RuleSet: Metaprofile-supportedProfile-slice
 * meta.profile ^slicing.discriminator.type = #pattern
 * meta.profile ^slicing.discriminator.path = "$this"
@@ -253,3 +304,4 @@ RuleSet: Metaprofile-supportedProfile-slice
 * meta.profile ^slicing.ordered = false
 * meta.profile ^slicing.description = "Slice based on value"
 * meta.profile contains supportedProfile 1..1
+*/

@@ -62,7 +62,7 @@ Description: "Describes functional roles of the care team members.  Complements 
 * #referring "Referring"  "The referring physician"
 * #operating "Operating"  "The operating physician"
 * #otheroperating "Other Operating"  "The other operating physician"
-* #performing "Performing provider"  "The performing or rendering provider"
+* #rendering "Rendering provider"  "The performing or rendering provider"
 * #prescribing "Prescribing provider" "The prescribing provider"
 * #purchasedservice "Purchased Service" "A purchased service occurs when one provider purchases a service from another provider and then provides it to the patient, e.g. a diagnostic exam"
 //* #pcp "pcp" "Primary Care Provider"
@@ -127,7 +127,6 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #admissionperiod  "Admission Period" "Dates corresponding with the admission and discharge of the beneficiary to a facility"
 * #pointoforigin  "Point Of Origin"  "UB-04 Source of Admission (FL-15) identifies the place where the patient was identified as needing admission to a facility."  	
 * #admtype	"Admission Type"  "UB-04 Priority of the admission (FL-14) indicates, for example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled."	
-* #billingnetworkcontractingstatus	"Billing Network Contracting Status"       "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."	
 * #brandgenericindicator	"Brand Generic Indicator" "NCPDP code indicating whether the plan adjudicated the claim as a brand or generic drug."
 * #clmrecvddate	"Claim Received Date" "Date the claim was received by the payer."	
 * #compoundcode "Compound Code" "NCPDP code indicating whether or not the prescription is a compound."	
@@ -135,7 +134,6 @@ Description: "Claim Information Category - Used as the discriminator for support
 * #dayssupply	"Days Supply" "NCPDP value indicating the Number of days supply of medication dispensed by the pharmacy."	
 * #discharge-status  "Discharge Status"   "UB-04 Discharge Status (FL-17) indicates the patient’s status as of the discharge date for a facility stay."		
 * #drg	"DRG"	"DRG (Diagnosis Related Group), including the code system, the DRG version and the code value"	
-* #performingnetworkcontractingstatus	"Performing Network Contracting Status" "Indicates that the Performing Provider has a contract with the Payer as of the effective date of service or admission."		
 * #refillnum	"Refill Number"	  "NCPDP value indicating the number fill of the current dispensed supply (0, 1, 2, etc.)"	
 * #refillsauthorized "Refills Authorized"	  "NCPDP value indicating the number of refills authorized by the subscriber (0, 1, 2, etc.)"
 * #rxorigincode	"Rx Origin Code" "NCPDP code indicating whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy."	
@@ -158,6 +156,9 @@ Description: "Used as the discriminator for the data elements in adjudication an
 // 20210201 CAS: Removed as not used as a discriminator (the CodeSystem C4BBPayerBenefitPaymentStatus is used for this slice), Change ipart of FHIR-30635 - Update Benefit Payment Status slice name ,cardinality and must support
 //* #inoutnetwork "in or Out of Network" "defines the adjudication and item.adjudication slice to indicate whether a claim was adjudicatd in or out of network"
 * #denialreason "Denial Reason" "defines the adjudication slice to identify the denial reason"
+* #billingnetworkcontractingstatus	"Billing Network Contracting Status"       "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."	
+* #renderingnetworkcontractingstatus	"Rendering Network Contracting Status" "Indicates that the Rendering Provider has a contract with the Payer as of the effective date of service or admission."		
+* #benefitpaymentstatus "Benefit Payment Status" "Indicates the in network or out of network payment status of the claim."
 * ^content = #complete
 * ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."

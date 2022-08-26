@@ -1,102 +1,34 @@
-<table border="1"><tr><td><b>Field</b></td><td><b>Value</b></td></tr>
-<tr><td>resourceType</td><td>
-"Coverage"
-</td></tr>
-<tr><td>id</td><td>
-"Coverage1"
-</td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"</td></tr>
-<tr><td>meta.lastUpdated</td><td>
-"2020-07-07T13:26:22.0314215+00:00"
-</td></tr>
-<tr><td>class[0].type.coding[0].code</td><td>
-#group
-</td></tr>
-<tr><td>class[0].type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/coverage-class"
-</td></tr>
-<tr><td>class[0].type.text</td><td>
-"An employee group"
-</td></tr>
-<tr><td>class[0].value</td><td>
-021890
-</td></tr>
-<tr><td>class[0].name</td><td>
-"Acme Corporation"
-</td></tr>
-<tr><td>class[1].type.coding[0].code</td><td>
-#plan
-</td></tr>
-<tr><td>class[1].type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/coverage-class"
-</td></tr>
-<tr><td>class[1].type.text</td><td>
-"Plan"
-</td></tr>
-<tr><td>class[1].value</td><td>
-XYZ123
-</td></tr>
-<tr><td>class[1].name</td><td>
-"XYZ123-UPMC CONSUMER ADVA"
-</td></tr>
-<tr><td>language</td><td>
-"en-US"
-</td></tr>
-<tr><td>status</td><td>
-"active"
-</td></tr>
-<tr><td>identifier[0].type.coding[0].code</td><td>
-#MB
-</td></tr>
-<tr><td>identifier[0].type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/v2-0203"
-</td></tr>
-<tr><td>identifier[0].value</td><td>
-1234-234-1243-12345678901
-</td></tr>
-<tr><td>identifier[0].system</td><td>
-"https://www.xxxhealthplan.com/fhir/memberidentifier"
-</td></tr>
-<tr><td>type.coding[0].code</td><td>
-#HIP
-</td></tr>
-<tr><td>type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/v3-ActCode"
-</td></tr>
-<tr><td>type.text</td><td>
-"health insurance plan policy"
-</td></tr>
-<tr><td>policyHolder.reference</td><td>
-"Patient/Patient1"
-</td></tr>
-<tr><td>subscriber.reference</td><td>
-"Patient/Patient1"
-</td></tr>
-<tr><td>beneficiary.reference</td><td>
-"Patient/Patient1"
-</td></tr>
-<tr><td>subscriberId</td><td>
-"12345678901"
-</td></tr>
-<tr><td>dependent</td><td>
-"01"
-</td></tr>
-<tr><td>period.start</td><td>
-"2019-01-01"
-</td></tr>
-<tr><td>period.end</td><td>
-"2019-10-31"
-</td></tr>
-<tr><td>network</td><td>
-"XYZ123-UPMC CONSUMER ADVA"
-</td></tr>
-<tr><td>relationship.coding[0].code</td><td>
-#self
-</td></tr>
-<tr><td>relationship.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/subscriber-relationship"
-</td></tr>
-<tr><td>payor[0].reference</td><td>
-"Organization/Payer1"
-</td></tr>
-</table>
+```
+Instance: Coverage1
+InstanceOf: Coverage
+Title: "Coverage1"
+Description: "Coverage Example1"
+Usage: #example
+* meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|1.2.0"
+* language = #en-US
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MB
+* identifier.system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
+* identifier.value = "1234-234-1243-12345678901"
+* status = #active
+* type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP
+  * text = "health insurance plan policy"
+* policyHolder = Reference(Patient1)
+* subscriber = Reference(Patient1)
+* subscriberId = "12345678901"
+* beneficiary = Reference(Patient1)
+* dependent = "01"
+* relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self
+* period.start = "2019-01-01"
+* period.end = "2019-10-31"
+* payor = Reference(OrganizationPayer1)
+* class[0].type = http://terminology.hl7.org/CodeSystem/coverage-class#group
+* class[=].type.text = "An employee group"
+* class[=].value = "021890"
+* class[=].name = "Acme Corporation"
+* class[+].type = http://terminology.hl7.org/CodeSystem/coverage-class#plan
+  * text = "Plan"
+* class[=].value = "XYZ123"
+* class[=].name = "XYZ123-UPMC CONSUMER ADVA"
+* network = "XYZ123-UPMC CONSUMER ADVA"
+```

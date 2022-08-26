@@ -1,117 +1,34 @@
-<table border="1"><tr><td><b>Field</b></td><td><b>Value</b></td></tr>
-<tr><td>resourceType</td><td>
-"Coverage"
-</td></tr>
-<tr><td>id</td><td>
-"CoverageEx1"
-</td></tr>
-<tr><td>meta.lastUpdated</td><td>
-"2020-10-30T09:48:01.8462752-04:00"
-</td></tr>
-<tr><td>meta.source</td><td>
-"Organization/PayerOrganizationExample1"
-</td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage"</td></tr>
-<tr><td>language</td><td>
-"en-US"
-</td></tr>
-<tr><td>identifier[0].type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/v2-0203"
-</td></tr>
-<tr><td>identifier[0].type.coding[0].code</td><td>
-#MB
-</td></tr>
-<tr><td>identifier[0].type.coding[0].display</td><td>
-"Member Number"
-</td></tr>
-<tr><td>identifier[0].type.text</td><td>
-"An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
-</td></tr>
-<tr><td>identifier[0].system</td><td>
-"https://www.upmchealthplan.com/fhir/memberidentifier"
-</td></tr>
-<tr><td>identifier[0].value</td><td>
-88800933501
-</td></tr>
-<tr><td>identifier[0].assigner.reference</td><td>
-"Organization/PayerOrganizationExample1"
-</td></tr>
-<tr><td>identifier[0].assigner.display</td><td>
-"UPMC Health Plan"
-</td></tr>
-<tr><td>status</td><td>
-"active"
-</td></tr>
-<tr><td>policyHolder.reference</td><td>
-"Patient/ExamplePatient1"
-</td></tr>
-<tr><td>subscriber.reference</td><td>
-"Patient/ExamplePatient1"
-</td></tr>
-<tr><td>subscriberId</td><td>
-"888009335"
-</td></tr>
-<tr><td>beneficiary.reference</td><td>
-"Patient/ExamplePatient1"
-</td></tr>
-<tr><td>dependent</td><td>
-"01"
-</td></tr>
-<tr><td>relationship.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/subscriber-relationship"
-</td></tr>
-<tr><td>relationship.coding[0].code</td><td>
-#self
-</td></tr>
-<tr><td>relationship.text</td><td>
-"Self"
-</td></tr>
-<tr><td>period.start</td><td>
-"2020-01-01"
-</td></tr>
-<tr><td>payor[0].reference</td><td>
-"Organization/PayerOrganizationExample1"
-</td></tr>
-<tr><td>payor[0].display</td><td>
-"UPMC Health Plan"
-</td></tr>
-<tr><td>class[0].type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/coverage-class"
-</td></tr>
-<tr><td>class[0].type.coding[0].code</td><td>
-#group
-</td></tr>
-<tr><td>class[0].type.coding[0].display</td><td>
-"Group"
-</td></tr>
-<tr><td>class[0].type.text</td><td>
-"An employee group"
-</td></tr>
-<tr><td>class[0].value</td><td>
-MCHMO1
-</td></tr>
-<tr><td>class[0].name</td><td>
-"MEDICARE HMO PLAN"
-</td></tr>
-<tr><td>class[1].type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/coverage-class"
-</td></tr>
-<tr><td>class[1].type.coding[0].code</td><td>
-#plan
-</td></tr>
-<tr><td>class[1].type.coding[0].display</td><td>
-"Plan"
-</td></tr>
-<tr><td>class[1].type.text</td><td>
-"A specific suite of benefits."
-</td></tr>
-<tr><td>class[1].value</td><td>
-GR5
-</td></tr>
-<tr><td>class[1].name</td><td>
-"GR5-HMO DEDUCTIBLE"
-</td></tr>
-<tr><td>network</td><td>
-"GR5-HMO DEDUCTIBLE"
-</td></tr>
-</table>
+```
+Instance: CoverageEx1
+InstanceOf: Coverage
+Title: "Coverage Example 1"
+Description: "Coverage Example 1"
+Usage: #example
+* meta.lastUpdated = "2020-10-30T09:48:01.8462752-04:00"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|1.2.0"
+* language = #en-US
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MB "Member Number"
+  * text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
+* identifier.system = "https://www.upmchealthplan.com/fhir/memberidentifier"
+* identifier.value = "88800933501"
+* identifier.assigner = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* status = #active
+* policyHolder = Reference(ExamplePatient1)
+* subscriber = Reference(ExamplePatient1)
+* subscriberId = "888009335"
+* beneficiary = Reference(ExamplePatient1)
+* dependent = "01"
+* relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship#self
+  * text = "Self"
+* period.start = "2020-01-01"
+* payor = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* class[0].type = http://terminology.hl7.org/CodeSystem/coverage-class#group "Group"
+* class[=].type.text = "An employee group"
+* class[=].value = "MCHMO1"
+* class[=].name = "MEDICARE HMO PLAN"
+* class[+].type = http://terminology.hl7.org/CodeSystem/coverage-class#plan "Plan"
+  * text = "A specific suite of benefits."
+* class[=].value = "GR5"
+* class[=].name = "GR5-HMO DEDUCTIBLE"
+* network = "GR5-HMO DEDUCTIBLE"
+```

@@ -6,8 +6,9 @@ Description: "The profile is used for Explanation of Benefits (EOBs) based on cl
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human
 Services."
 // 20210322 CAS: FHIR-30575
-* insert Metaprofile-supportedProfile-slice
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|1.2.0)
+//* insert Metaprofile-supportedProfile-slice
+//* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|1.2.0)
+* obeys EOB-institutional-inpatient-meta-profile-version
 //@Saul -- added MS
 * use MS
 * outcome MS
@@ -45,7 +46,6 @@ Services."
 * provider only Reference(C4BBOrganization)
 * insert SupportingInfoSlicing
 * supportingInfo contains
-     billingnetworkcontractingstatus 0..1 MS and
      admissionperiod 1..1 MS  and
      clmrecvddate 0..1 MS and
      typeofbill 0..1 MS and
@@ -55,18 +55,8 @@ Services."
      drg 0..1 MS and
      // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
      medicalrecordnumber 0..1 MS and
-     patientaccountnumber 0..1 MS and
-     //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
-     benefitpaymentstatus 1..1 MS
+     patientaccountnumber 0..1 MS
 
-* supportingInfo[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* supportingInfo[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
-
-* supportingInfo[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
-* supportingInfo[billingnetworkcontractingstatus].category MS
-* supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
-* supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 
 * supportingInfo[admissionperiod] ^short = "Admission Period"
 * supportingInfo[admissionperiod].category = C4BBSupportingInfoType#admissionperiod
@@ -150,8 +140,22 @@ Services."
 * adjudication MS
 * item.adjudication  MS
 * adjudication contains
+   billingnetworkcontractingstatus 0..1 MS and
+   benefitpaymentstatus 1..1 MS and
    adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
    denialreason 0..* MS
+
+
+* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
+* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[billingnetworkcontractingstatus].category MS
+* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
+* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+
+* adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
+* adjudication[benefitpaymentstatus].reason 1..1 MS
 
 * adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 * adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason
@@ -218,16 +222,16 @@ Services."
 * supportingInfo[admtype] ^comment = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14)"
 * supportingInfo[typeofbill] ^comment = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of institution, the second digit classifies the type of care being billed, and the third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (17)"
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
-* supportingInfo[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * supportingInfo[admissionperiod] ^comment = "The Period.start date corresponds with the date the beneficiary was admitted to a facility and the onset of services. May precede the Statement From Date if this claim is for a beneficiary who has been continuously under care. The Period.end date corresponds with the date beneficiary was discharged from the facility, or died. Matches the final Statement Thru Date. When there is a discharge date, the Patient Discharge Status Code indicates the final disposition of the patient after discharge. (18, 19)"
 * supportingInfo[drg] ^comment = "Claim diagnosis related group (DRG). DRGs require the DRG system; i.e., MS-DRG / AP-DRG / APR-DRG, the DRG version and the code value (32, 33. 113)"
 * supportingInfo[discharge-status] ^comment = "Patient’s status as of the discharge date for a facility stay. Information located on UB04. (Form Locator 17). (117)"
 * supportingInfo[medicalrecordnumber] ^comment = "Provider submitted medical record number that can be included on the claim. (109)"
 * supportingInfo[patientaccountnumber] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
-* supportingInfo[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
@@ -241,7 +245,7 @@ Services."
 * item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (42)"
 * item.revenue ^comment = "Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed (86)"
 * adjudication[denialreason].reason ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
-* careTeam.provider ^comment = "The National Provider Identifier assigned to the care team (primary care provider, attending, referring, otheroperating, operating, and performing) for the admission. (93, 96, 98, 99, 173)"
+* careTeam.provider ^comment = "The National Provider Identifier assigned to the care team (primary care provider, attending, referring, otheroperating, operating, and rendering) for the admission. (93, 96, 98, 99, 173)"
 * procedure ^comment = "Medical procedure a patient received during inpatient stay. Current coding methods include: International Classification of Diseases Surgical Procedures (ICD-9). Information located on UB04 (Form Locator 74). (25, 27, 10, 12)"
 * procedure.type ^comment = "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure. (186)"
 * procedure.sequence ^comment =  " procedure.sequence values do not necessarily indicate any order in which the procedure occurred.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of procedure.type to identify primary and secondary procedures"

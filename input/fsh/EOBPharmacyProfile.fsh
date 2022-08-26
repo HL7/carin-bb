@@ -5,8 +5,10 @@ Title: "C4BB ExplanationOfBenefit Pharmacy"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies.
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
 // 20210322 CAS: FHIR-30575
-* insert Metaprofile-supportedProfile-slice
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitPharmacy|1.2.0)
+//* insert Metaprofile-supportedProfile-slice
+//* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitPharmacy|1.2.0)
+* obeys EOB-pharmacy-meta-profile-version
+
 * type = $HL7ClaimTypeCS#pharmacy
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner)   Set in Abstract Class.  No need to set here.
 * careTeam obeys EOB-pharm-careTeam-practitioner
@@ -17,22 +19,12 @@ The claims data is based on submission standards adopted by the Department of He
    dawcode 1..1 MS and
    refillNum 1..1 MS and
    refillsAuthorized 1..1 and
-   billingnetworkcontractingstatus 0..1 MS and
    brandgenericindicator 0..1 MS and
    rxoriginCode 0..1 MS and
    clmrecvddate 0..1 MS and
-   compoundcode 0..1 MS and
-   //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
-   benefitpaymentstatus 1..1 MS
+   compoundcode 0..1 MS
+   
 
-* supportingInfo[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* supportingInfo[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
-
-* supportingInfo[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
-* supportingInfo[billingnetworkcontractingstatus].category MS
-* supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus (required)
-* supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
 * supportingInfo[brandgenericindicator] ^short = "Plan reported brand or generic drug indicator"
 * supportingInfo[brandgenericindicator].category = C4BBSupportingInfoType#brandgenericindicator
 * supportingInfo[brandgenericindicator].category MS
@@ -80,7 +72,26 @@ The claims data is based on submission standards adopted by the Department of He
 * item.detail.quantity MS
 * careTeam.role from C4BBClaimPharmacyTeamRole  (required)   // was PayerPharmacyProviderRole
 * careTeam.role 1..1 MS
-* adjudication 0..1
+
+* insert AdjudicationSlicing
+* adjudication  MS
+* adjudication contains
+   billingnetworkcontractingstatus 0..1 MS and
+   benefitpaymentstatus 1..1 MS
+
+
+* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
+* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[billingnetworkcontractingstatus].category MS
+* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus (required)
+* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+
+* adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
+* adjudication[benefitpaymentstatus].reason 1..1 MS
+
+
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
 * item.adjudication contains
@@ -132,7 +143,6 @@ The claims data is based on submission standards adopted by the Department of He
 * processNote.text MS
 
 
-* supportingInfo[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service. (101)"
 * supportingInfo[brandgenericindicator] ^comment = "Whether the plan adjudicated the claim as a brand or generic drug (144)"
 * supportingInfo[rxoriginCode] ^comment = "Whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy (143)"
 * supportingInfo[refillNum] ^comment = "The number fill of the current dispensed supply (0, 1, 2, etc.) (137)"
@@ -140,7 +150,8 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
 * supportingInfo[dayssupply] ^comment = "Number of days supply of medication dispensed by the pharmacy (77)"
 * supportingInfo[compoundcode] ^comment = "The code indicating whether or not the prescription is a compound.  NCPDP field # 406-D6 (78)"
-* supportingInfo[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service. (101)"
+* adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount (92)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"

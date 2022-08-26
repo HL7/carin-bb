@@ -127,7 +127,7 @@
 <artifact id="ValueSet/FDANationalDrugCode" key="ValueSet-FDANationalDrugCode" name="National Drug Code (NDC)"/>
 <artifact id="ValueSet/OralBodySite" key="ValueSet-OralBodySite" name="Oral Body Site Value Set"/>
 <artifact id="Organization/OrganizationDentalPayer1" key="Organization-OrganizationDentalPayer1" name="OrganizationDentalPayer1"/>
-<artifact id="Organization/Payer1" key="Organization-Payer1" name="OrganizationPayer1"/>
+<artifact id="Organization/OrganizationPayer1" key="Organization-Payer1" name="OrganizationPayer1"/>
 <artifact id="Organization/OrganizationProvider1" key="Organization-OrganizationProvider1" name="OrganizationProvider1"/>
 <artifact id="Patient/ExamplePatient1" key="Patient-PatientEx1" name="Patient Example 1"/>
 <artifact id="Patient/Patient1" key="Patient-Patient1" name="Patient1"/>
@@ -136,6 +136,7 @@
 <artifact id="Practitioner/Practitioner2" key="Practitioner-PractitionerEx2" name="Practitioner Example 2"/>
 <artifact id="Practitioner/Practitioner3" key="Practitioner-PractitionerEx3" name="Practitioner Example 3"/>
 <artifact id="Practitioner/PractitionerDentalProvider1" key="Practitioner-PractitionerDentalProvider1" name="PractitionerDentalProvider1"/>
+<artifact id="Practitioner/PractitionerProvider1" key="Practitioner-PractitionerProvider1" name="PractitionerProvider1"/>
 <artifact id="ValueSet/AMACPTCMSHCPCSProcedureCodes" key="ValueSet-AMACPTCMSHCPCSProcedureCodes" name="Procedure Codes - AMA CPT - CMS HCPCS"/>
 <artifact id="ValueSet/C4BBEOBInstitutionalProcedureCodes" key="ValueSet-C4BBEOBInstitutionalProcedureCodes" name="Procedure Codes - AMA CPT - CMS HCPCS - CMS HIPPS"/>
 <artifact id="ValueSet/CMSICD910PCSProcedureCodes" key="ValueSet-CMSICD910PCSProcedureCodes" name="Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Coding System"/>

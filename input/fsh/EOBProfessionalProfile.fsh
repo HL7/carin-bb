@@ -4,8 +4,10 @@ Id: C4BB-ExplanationOfBenefit-Professional-NonClinician
 Title: "C4BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional and vision services. These services may be rendered in inpatient or outpatient, including office locations. The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 // 20210322 CAS: FHIR-30575
-* insert Metaprofile-supportedProfile-slice
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)
+//* insert Metaprofile-supportedProfile-slice
+//* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)
+* obeys EOB-professional-nonclinician-meta-profile-version
+
 * careTeam obeys EOB-prof-careTeam-practitioner
 * careTeam.qualification MS
 * careTeam.qualification from $USCoreProviderSpecialty (required)  // cardinality constraint?
@@ -18,25 +20,12 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner) -- set in base class
 * insert SupportingInfoSlicing
 * supportingInfo contains
-   billingnetworkcontractingstatus 0..1 MS and
-   performingnetworkcontractingstatus 0..1 MS and
    clmrecvddate 0..1 MS and
    servicefacility 0..1 MS and
    // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
    medicalrecordnumber 0..1 MS and
    patientaccountnumber 0..1 MS
 
-* supportingInfo[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
-* supportingInfo[billingnetworkcontractingstatus].category MS
-* supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
-* supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
-
-* supportingInfo[performingnetworkcontractingstatus] ^short = "Performing provider contracting status"
-* supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
-* supportingInfo[performingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
-* supportingInfo[performingnetworkcontractingstatus].category MS
-* supportingInfo[performingnetworkcontractingstatus].code 1..1 MS
 
 * supportingInfo[clmrecvddate] ^short = "Claim received date"
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
@@ -80,7 +69,24 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.location[x] only CodeableConcept
 * item.locationCodeableConcept from CMSPlaceofServiceCodes (required)
 
-* adjudication 0..1
+* insert AdjudicationSlicing
+* adjudication MS
+* adjudication contains
+   billingnetworkcontractingstatus 0..1 MS and
+   renderingnetworkcontractingstatus 0..1 MS
+
+* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
+* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[billingnetworkcontractingstatus].category MS
+* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
+* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+
+* adjudication[renderingnetworkcontractingstatus] ^short = "Rendering provider contracting status"
+* adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
+* adjudication[renderingnetworkcontractingstatus].category MS
+* adjudication[renderingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
+* adjudication[renderingnetworkcontractingstatus].reason 1..1 MS
+
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
 * item.adjudication contains
@@ -114,12 +120,13 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
-* supportingInfo[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
-* supportingInfo[performingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
-* supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Performing Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.
+
+* supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Rndering Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.
 If the service facility is not assigned an NPI, this data element will not be populated.  Reference CMS 1500 element 32a (97, 170, 176)"
 * supportingInfo[medicalrecordnumber] ^comment = "Provider submitted medical record number that can be included on the claim. (109)"
 * supportingInfo[patientaccountnumber] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
+* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* adjudication[renderingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
@@ -132,8 +139,15 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.modifier ^comment = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41)"
 * item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code or CPT procedure code, submitted by the provider. (42)"
 * item.location[x] ^comment = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46)"
-* careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, performing, purchased service and referring care team. (95, 96, 99)"
+* careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, rendering, purchased service and referring care team. (95, 96, 99)"
 * item.serviced[x]  ^comment = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 
 * insert EOBBaseProfileComments
+
+
+//FHIR-37615
+//Fields to report non-emergency transportation services data
+//Create Invariant requiring all ExplanationOfBenefit.SupportingInfo where category from C4BBTransportationServiceCategories sequence is referenced in ExplanationOfBenefit.line.informationSequence
+// Potential starter to test
+// supportingInfo.where(memberOf('C4BBTransportationServiceCategories'))).sequence.subsetOf(item.informationSequence.distinct())

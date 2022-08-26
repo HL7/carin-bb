@@ -4,8 +4,9 @@ Id: C4BB-ExplanationOfBenefit-Oral
 Title: "C4BB ExplanationOfBenefit Oral"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene. The ADA Dental Claim Form provides a common format for reporting dental services to a patient's dental benefit plan."
 // 20210216 CAS: FHIR-30575
-* insert Metaprofile-supportedProfile-slice
-* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
+//* insert Metaprofile-supportedProfile-slice
+//* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
+* obeys EOB-oral-meta-profile-version
 
 // TODO error with invariant
 //* obeys Oral-EOB-supportinginfo-bodysite-requires-line-item
@@ -18,8 +19,6 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * provider only Reference(C4BBPractitioner)
 * insert SupportingInfoSlicing
 * supportingInfo contains
-   billingnetworkcontractingstatus 1..1 MS and
-   performingnetworkcontractingstatus 1..1 MS and
    clmrecvddate 0..1 MS and
    servicefacility 0..1 MS and
    orthodontics 0..1 MS and
@@ -27,24 +26,8 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
    additionalbodysite 0..* MS and
    missingtoothnumber 0..* MS and
    medicalrecordnumber 0..1 MS and
-   patientaccountnumber 0..1 MS and
-   //  FHIR-33082 - Move total [benefitpaymentstatus] slice to supportingInfo
-   benefitpaymentstatus 1..* MS
-
-* supportingInfo[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* supportingInfo[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
-
-* supportingInfo[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* supportingInfo[billingnetworkcontractingstatus].category = C4BBSupportingInfoType#billingnetworkcontractingstatus
-* supportingInfo[billingnetworkcontractingstatus].category MS
-* supportingInfo[billingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
-* supportingInfo[billingnetworkcontractingstatus].code 1..1 MS
-
-* supportingInfo[performingnetworkcontractingstatus] ^short = "Performing provider contracting status"
-* supportingInfo[performingnetworkcontractingstatus].category = C4BBSupportingInfoType#performingnetworkcontractingstatus
-* supportingInfo[performingnetworkcontractingstatus].code from C4BBPayerProviderContractingStatus  (required)
-* supportingInfo[performingnetworkcontractingstatus].category MS
-* supportingInfo[performingnetworkcontractingstatus].code 1..1 MS
+   patientaccountnumber 0..1 MS
+   
 
 * supportingInfo[clmrecvddate] ^short = "Claim received date"
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
@@ -120,7 +103,30 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.subSite ^short = "Tooth surface for all teeth on line"
 * item.subSite from C4BBSurfaceCodes (required)
 
-* adjudication 0..1
+* insert AdjudicationSlicing
+* adjudication MS
+* adjudication contains
+   billingnetworkcontractingstatus 0..1 MS and
+   renderingnetworkcontractingstatus 1..1 MS and 
+   benefitpaymentstatus 1..* MS
+
+* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
+* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[billingnetworkcontractingstatus].category MS
+* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
+* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+
+* adjudication[renderingnetworkcontractingstatus] ^short = "Rendering provider contracting status"
+* adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
+* adjudication[renderingnetworkcontractingstatus].category MS
+* adjudication[renderingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
+* adjudication[renderingnetworkcontractingstatus].reason 1..1 MS
+
+* adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
+* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
+* adjudication[benefitpaymentstatus].reason 1..1 MS
+
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
 * item.adjudication contains
@@ -284,9 +290,7 @@ ExplanationOfBenefit.repeat(supportingInfo.where(code.coding.system='http://hl7.
 
 
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
-* supportingInfo[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
-* supportingInfo[performingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
-* supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Performing Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.
+* supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Rendering Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.
 If the service facility is not assigned an NPI, this data element will not be populated.  Reference CMS 1500 element 32a (97, 170, 176)"
 
 * supportingInfo[orthodontics] ^comment = "Orthodontics Treatment Indicator (199)"
@@ -305,10 +309,14 @@ If the service facility is not assigned an NPI, this data element will not be po
 * supportingInfo[missingtoothnumber] ^comment = "Missing Tooth Number - After First Occurrence (204)"
 * supportingInfo[missingtoothnumber].code ^comment = "Missing Tooth Number - After First Occurrence (204)"
 
-* supportingInfo[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+
 
 * item.bodySite ^comment = "Tooth Number - First Occurrence (196)"
 * item.subSite ^comment = "Tooth Surface (197)"
+
+* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* adjudication[renderingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
+* adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
@@ -322,7 +330,7 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.modifier ^comment = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41)"
 * item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code or CPT procedure code, submitted by the provider. (42)"
 * item.location[x] ^comment = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46)"
-* careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, performing, purchased service and referring care team. (95, 96, 99)"
+* careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, rendering, purchased service and referring care team. (95, 96, 99)"
 * item.serviced[x]  ^comment = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 
@@ -332,7 +340,7 @@ If the service facility is not assigned an NPI, this data element will not be po
 
 Invariant:  Oral-EOB-surface-subsite-requires-tooth-number
 Description: "If item.subsite (tooth surface) exists then tooth number is required in bodySite or supportingInfo[additionalBodySite]"
-Expression: "item.where(subSite.exists() and (bodySite.where(coding.system='https://ada.org/ToothNumberingSystem-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='https://ada.org/ToothNumberingSystem-TEMPORARY-WAITING-FOR-HTA-DEFINED-URL' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0"
+Expression: "item.where(subSite.exists() and (bodySite.where(coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0"
 Severity:   #error
 
 Invariant:  Oral-EOB-supportinginfo-bodysite-requires-line-item

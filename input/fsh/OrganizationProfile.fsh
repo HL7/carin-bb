@@ -9,33 +9,27 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 //* meta.lastUpdated 1..1  MS
 * meta.profile 1..*
 // 20210322 CAS: FHIR-30575
-* insert Metaprofile-supportedProfile-slice
-* meta.profile[supportedProfile] = Canonical(C4BBOrganization|1.2.0)
-// Slicing stuff missing?
-// * identifier ^slicing.discriminator.path = "$this"
-// * identifier ^slicing.rules = #open
-// * identifier ^slicing.discriminator.type = #pattern 
-// * identifier ^slicing.ordered = false   // can be omitted, since false is the default
-// * identifier ^slicing.description = "Slice based on $this pattern"
-//* identifier.type 1..1 MS
-//* identifier.type from OrganizationIdentifierType (extensible)
-* identifier contains 
+//* insert Metaprofile-supportedProfile-slice
+//* meta.profile[supportedProfile] = Canonical(C4BBOrganization|1.2.0)
+* obeys organization-meta-profile-version
+
+* identifier contains
    tax 0..* MS and
    payerid 0..* MS and
-   naiccode 0..* MS 
+   naiccode 0..* MS
 * identifier[NPI] ^patternIdentifier.type  = $HL7IdentifierType#NPI
-// * identifier[NPI].type  
+// * identifier[NPI].type
 * identifier[tax] ^short = "Tax ID Number"
 * identifier[tax] ^patternIdentifier.type  = $IdentifierType#TAX
-// * identifier[tax].type  
-* identifier[tax] ^patternIdentifier.system = $TAXCodeCS 
+// * identifier[tax].type
+* identifier[tax] ^patternIdentifier.system = $TAXCodeCS
 * identifier[payerid] ^short = "Payer ID used in HIPAA covered claims submission transactions"
-* identifier[payerid] ^patternIdentifier.type  = C4BBIdentifierType#payerid 
-// * identifier[payerid].type  
+* identifier[payerid] ^patternIdentifier.type  = C4BBIdentifierType#payerid
+// * identifier[payerid].type
 * identifier[naiccode] ^short = "NAIC Code"
-// * identifier[naiccode].type 
+// * identifier[naiccode].type
 * identifier[naiccode] ^patternIdentifier.system = $NAICCodeCS
-* identifier[naiccode] ^patternIdentifier.type  = C4BBIdentifierType#naiccode  
+* identifier[naiccode] ^patternIdentifier.type  = C4BBIdentifierType#naiccode
 
 * identifier[tax] ^comment = "Tax ID Number"
 * identifier[payerid] ^comment = "Internal value assigned by the payer responsible for the claim (2)"

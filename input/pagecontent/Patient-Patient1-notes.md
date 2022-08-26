@@ -1,80 +1,30 @@
-<table border="1"><tr><td><b>Field</b></td><td><b>Value</b></td></tr>
-<tr><td>resourceType</td><td>
-"Patient"
-</td></tr>
-<tr><td>id</td><td>
-"Patient1"
-</td></tr>
-<tr><td>meta.profile[0]</td><td>"http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient"</td></tr>
-<tr><td>meta.lastUpdated</td><td>
-"2020-07-07T13:26:22.0314215+00:00"
-</td></tr>
-<tr><td>identifier[0].type.coding[0].code</td><td>
-#MB
-</td></tr>
-<tr><td>identifier[0].type.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/v2-0203"
-</td></tr>
-<tr><td>identifier[0].value</td><td>
-1234-234-1243-12345678901
-</td></tr>
-<tr><td>identifier[0].system</td><td>
-"https://www.xxxhealthplan.com/fhir/memberidentifier"
-</td></tr>
-<tr><td>identifier[1].type.coding[0].code</td><td>
-#um
-</td></tr>
-<tr><td>identifier[1].type.coding[0].system</td><td>
-"http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType"
-</td></tr>
-<tr><td>identifier[1].value</td><td>
-1234-234-1243-12345678901u
-</td></tr>
-<tr><td>identifier[1].system</td><td>
-"https://www.xxxhealthplan.com/fhir/iniquememberidentifier"
-</td></tr>
-<tr><td>language</td><td>
-"en-US"
-</td></tr>
-<tr><td>active</td><td>
-"true"
-</td></tr>
-<tr><td>name[0].family</td><td>
-"Example1"
-</td></tr>
-<tr><td>name[0].given[0]</td><td>"Johnny"</td></tr>
-<tr><td>telecom[0].system</td><td>
-"phone"
-</td></tr>
-<tr><td>telecom[0].value</td><td>
-(301)666-1212
-</td></tr>
-<tr><td>telecom[0].rank</td><td>
-"2"
-</td></tr>
-<tr><td>gender</td><td>
-"male"
-</td></tr>
-<tr><td>birthDate</td><td>
-"1986-01-01"
-</td></tr>
-<tr><td>address[0].type</td><td>
-"physical"
-</td></tr>
-<tr><td>address[0].line[0]</td><td>"123 Main Street"</td></tr>
-<tr><td>address[0].city</td><td>
-"Pittsburgh"
-</td></tr>
-<tr><td>address[0].state</td><td>
-"PA"
-</td></tr>
-<tr><td>address[0].postalCode</td><td>
-"12519"
-</td></tr>
-<tr><td>maritalStatus.coding[0].code</td><td>
-#UNK
-</td></tr>
-<tr><td>maritalStatus.coding[0].system</td><td>
-"http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
-</td></tr>
-</table>
+```
+Instance: Patient1
+InstanceOf: Patient
+Title: "Patient1"
+Description: "Patient Example1"
+Usage: #example
+* meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient|1.2.0"
+* language = #en-US
+* identifier[0].type = http://terminology.hl7.org/CodeSystem/v2-0203#MB
+* identifier[=].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
+* identifier[=].value = "1234-234-1243-12345678901"
+* identifier[+].type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType#um
+* identifier[=].system = "https://www.xxxhealthplan.com/fhir/iniquememberidentifier"
+* identifier[=].value = "1234-234-1243-12345678901u"
+* active = true
+* name.family = "Example1"
+* name.given = "Johnny"
+* telecom.system = #phone
+* telecom.value = "(301)666-1212"
+* telecom.rank = 2
+* gender = #male
+* birthDate = "1986-01-01"
+* address.type = #physical
+* address.line = "123 Main Street"
+* address.city = "Pittsburgh"
+* address.state = "PA"
+* address.postalCode = "12519"
+* maritalStatus = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK
+```
