@@ -1,6 +1,6 @@
 Instance: EOBPharmacy1
 InstanceOf: C4BBExplanationOfBenefitPharmacy
-Description: "EOB PHarmacy Example1"
+Description: "EOB Pharmacy Example1"
 Usage: #example
 * id = "EOBPharmacy1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
