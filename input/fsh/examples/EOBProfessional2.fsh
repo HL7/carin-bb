@@ -1,7 +1,7 @@
-Instance: ProfessionalEOBExample1
+Instance: EOBProfessional2
 InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician
-Title: "EOB Professional - Example 1"
-Description: "EOB Professional - Example 1"
+Title: "EOB Professional - Example 2"
+Description: "EOB Professional - Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-20T14:46:05-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"

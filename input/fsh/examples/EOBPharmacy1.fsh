@@ -1,8 +1,7 @@
 Instance: EOBPharmacy1
 InstanceOf: C4BBExplanationOfBenefitPharmacy
-Description: "EOB Pharmacy Example1"
+Description: "EOB Pharmacy Example 1"
 Usage: #example
-* id = "EOBPharmacy1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitPharmacy|1.2.0)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
@@ -87,4 +86,3 @@ Usage: #example
 * supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
 * supportingInfo[compoundcode].code = NCPDPCompoundCode#Dummy
 * supportingInfo[compoundcode].sequence = 9
-

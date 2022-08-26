@@ -1,7 +1,7 @@
-Instance: InpatientEOBExample1
+Instance: EOBInpatientExample2
 InstanceOf: C4BBExplanationOfBenefitInpatientInstitutional
-Title: "EOB Inpatient Institutional - Example 1"
-Description: "EOB Inpatient Institutional - Example 1"
+Title: "EOB Inpatient Institutional - Example 2"
+Description: "EOB Inpatient Institutional - Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-04-28T15:39:36-04:00"
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|1.2.0)

@@ -1,6 +1,7 @@
 Instance: EOBInpatient1
 InstanceOf: C4BBExplanationOfBenefitInpatientInstitutional
-Description: "EOB Inpatient Example1"
+Title: "EOB Inpatient Institutional - Example 1"
+Description: "EOB Inpatient Institutional - Example 1"
 Usage: #example
 * id = "EOBInpatient1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
@@ -93,4 +94,3 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
 * supportingInfo[patientaccountnumber].sequence = 9
-
