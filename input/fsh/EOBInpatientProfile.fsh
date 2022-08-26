@@ -252,3 +252,11 @@ Services."
 
 
 * insert EOBBaseProfileComments
+* obeys C4BBExplanationOfBenefitInpatientInstitutional-Version
+
+
+// SHould be called with profile. $versionprefix is the same for all profiles
+Invariant:  C4BBExplanationOfBenefitInpatientInstitutional-Version
+Description: "Requirement that first two digits of version match"
+Expression: ".meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.3'))"
+Severity:   #error

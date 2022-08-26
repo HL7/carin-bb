@@ -9,8 +9,8 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * meta.profile 1..*
 // 20210322 CAS: FHIR-30575
 
-* ^abstract = true 
-* identifier 1..* MS 
+* ^abstract = true
+* identifier 1..* MS
 * identifier.type 1..1 MS
 * identifier.type from C4BBClaimIdentifierType (extensible)
 
@@ -22,29 +22,29 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * type 1..1 MS
 * type from $HL7ClaimType (required)
 //   * claim MS   - igor sez we discussed removing MS
-* use = #claim 
+* use = #claim
 * patient 1..1 MS
 * provider only Reference(C4BBOrganization or C4BBPractitioner)   // based on BV2a comments 7/27
 * patient only Reference (C4BBPatient)
-* billablePeriod 1..1 MS 
-* billablePeriod.start 1..1 MS 
+* billablePeriod 1..1 MS
+* billablePeriod.start 1..1 MS
 * insurer 1..1 MS
 * insurer only Reference(C4BBOrganization)
 * provider 1..1 MS
 * related 0..* MS
 * related.relationship 1..1 MS
 * related.relationship from C4BBRelatedClaimRelationshipCodes (required)
-* related.reference 1..1 MS 
+* related.reference 1..1 MS
 * payee 0..1 MS
 * payee obeys EOB-payee-other-type-requires-party
 * payee.type 1..1 MS
 * payee.type from C4BBPayeeType (required)
 * payee.party 0..1 MS
 * payee.party only Reference(C4BBOrganization or C4BBPatient or C4BBPractitioner)
-* careTeam 0..* MS 
+* careTeam 0..* MS
 * careTeam.provider 1..1 MS
 * careTeam.provider only Reference(C4BBOrganization or C4BBPractitioner)
-* careTeam.role MS 
+* careTeam.role MS
 * supportingInfo 0..* MS
 * supportingInfo.category from C4BBSupportingInfoType (extensible)
 
@@ -53,28 +53,28 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * insurance 1..* MS
 * insurance.coverage 1..1 MS
 * insurance.focal 1..1  MS
-* insurance obeys EOB-insurance-focal 
+* insurance obeys EOB-insurance-focal
 * insurance.coverage only Reference(C4BBCoverage)
 //* adjudication.category from C4BBAdjudicationDiscriminator (required)   // per Igor
 * item 1..* MS // Make all EoB profiles require EoB.item FHIR-34114
 * item.adjudication.category 1..1 MS
 //* item.adjudication.category from C4BBAdjudicationDiscriminator (required)  // Per Igor
 * item.noteNumber MS
-* item.sequence MS 
+* item.sequence MS
 //* total.category from C4BBAdjudicationDiscriminator (required)
-* payment MS 
+* payment MS
 * payment.type from C4BBPayerClaimPaymentStatusCode (required)
-* payment.type MS 
+* payment.type MS
 * processNote MS
 * priority from http://hl7.org/fhir/ValueSet/process-priority  // Fix a bug in R4 EOB which points to a CodeSystem.   Eliminates an error on output
-* total 1..* MS 
+* total 1..* MS
 
 * insert EOBBaseProfileComments
 
 
 
 
-Invariant:  EOB-insurance-focal  
+Invariant:  EOB-insurance-focal
 Description: "EOB.insurance:  at most one with focal = true"
 Expression: "insurance.select (focal = true).count() < 2"
 Severity:   #error
@@ -128,7 +128,7 @@ Description: "Professional EOB:  Careteam roles refer to a practitioner"
 Expression: "(
 role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervising')).exists()).exists() implies
 role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervising' )).exists()).exists().provider.all(resolve() is Practitioner)
-)" 
+)"
 Severity: #error
 
 
@@ -147,14 +147,14 @@ Severity: #error
 /*
 Invariant: EOB-out-inst-item-productorservice
 Description: "Outpatient Institutional EOB:  Item productOrService required. Data absent reason of Not Applicable is not allowed."
-Expression: "coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()" 
+Expression: "coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()"
 Severity: #error
 */
 
 // 20210203 CAS: https://jira.hl7.org/browse/FHIR-33024
 Invariant: EOB-vision-item-productorservice
 Description: "Vision EOB: Item productOrService not required in item.productOrService if and only if type is vision."
-Expression: "ExplanationOfBenefit.type.coding.where(code = 'vision' and system='http://terminology.hl7.org/CodeSystem/claim-type').exists() or ExplanationOfBenefit.item.productOrService.coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()" 
+Expression: "ExplanationOfBenefit.type.coding.where(code = 'vision' and system='http://terminology.hl7.org/CodeSystem/claim-type').exists() or ExplanationOfBenefit.item.productOrService.coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()"
 Severity: #error
 
 
@@ -234,17 +234,17 @@ RuleSet: AdjudicationSlicing
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * adjudication ^slicing.description = "Slice based on value pattern"
 * adjudication ^slicing.discriminator.type = #pattern
-* adjudication.category 1..1 MS 
+* adjudication.category 1..1 MS
 * adjudication.category from C4BBAdjudicationCategoryDiscriminator (required)
 
 RuleSet: SupportingInfoSlicing
-* supportingInfo ^slicing.discriminator.type = #pattern 
+* supportingInfo ^slicing.discriminator.type = #pattern
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
 * supportingInfo ^slicing.description = "Slice based on $this pattern"
-* supportingInfo MS 
-// * supportingInfo.category MS  -- we will flag in each slice 
+* supportingInfo MS
+// * supportingInfo.category MS  -- we will flag in each slice
 
 RuleSet: TotalSlicing
 * total ^slicing.rules = #open
@@ -252,14 +252,14 @@ RuleSet: TotalSlicing
 * total ^slicing.description = "Slice based on value pattern"
 * total  ^slicing.discriminator.type = #pattern
 * total  ^slicing.discriminator.path = "category"
-* total.category 1..1 MS 
+* total.category 1..1 MS
 
 
 RuleSet: ItemAdjudicationSlicing
 * item.adjudication ^slicing.rules = #open
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
 * item.adjudication ^slicing.description = "Slice based on value pattern"
-* item.adjudication ^slicing.discriminator.type = #pattern 
+* item.adjudication ^slicing.discriminator.type = #pattern
 * item.adjudication ^slicing.discriminator.path = "category"
 * item.adjudication.category from C4BBAdjudicationCategoryDiscriminator (required)
 
@@ -305,3 +305,5 @@ RuleSet: Metaprofile-supportedProfile-slice
 * meta.profile ^slicing.description = "Slice based on value"
 * meta.profile contains supportedProfile 1..1
 */
+
+//
