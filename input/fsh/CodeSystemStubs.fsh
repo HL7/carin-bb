@@ -5,7 +5,7 @@ RuleSet: CodeSystemStubBoilerplate
 * ^contact[0].name = "HL7 International - Financial Management Work Group"
 * ^contact[0].telecom[0].system = #url
 * ^contact[0].telecom[0].value = "http://hl7.org/Special/committees/fm"
-* ^contact[0].telecom[1].system = #email 
+* ^contact[0].telecom[1].system = #email
 * ^contact[0].telecom[1].value = "fmlists@lists.hl7.org"
 * ^contact[1].name = "Jean Duteau"
 * ^contact[1].telecom[0].system = #email
@@ -37,7 +37,7 @@ Description: "Code indicating the error encountered. Contains exception definiti
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* codes from system NCPDPRejectCode 
+* codes from system NCPDPRejectCode
 * insert NCPDPCopyrightNotice
 
 
@@ -80,7 +80,7 @@ Description: "Denotes brand or generic drug dispensed. (NCPDP ECL 686)
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* codes from system NCPDPBrandGenericIndicator 
+* codes from system NCPDPBrandGenericIndicator
 * insert NCPDPCopyrightNotice
 
 CodeSystem: NCPDPPrescriptionOriginCode
@@ -142,7 +142,7 @@ Information regarding the FDA published NDC Directory can be found [here](https:
 
 Users should note a few important items
 
-*   The NDC Directory is updated daily. 
+*   The NDC Directory is updated daily.
 *   The new NDC Directory contains ONLY information on final marketed drugs submitted to FDA in SPL electronic listing files by labelers.
 *   The NDC Directory does not contain all listed drugs. The new version includes the final marketed drugs which listing information were submitted electronically. It does not include animal drugs, blood products, or human drugs that are not in final marketed form, such as Active Pharmaceutical Ingredients(APIs), drugs for further processing, drugs manufactured exclusively for a private label distributor, or drugs that are marketed solely as part of a kit or combination product or inner layer of a multi-level packaged product not marketed individually. For more information about how certain kits or multi-level packaged drugs are addressed in the new NDC Directory, see the NDC Directory Package File definitions document. For the FDA Online Label Repository page and additional resources go to: [FDA Online Label Repository](https://labels.fda.gov/)"
 * codes from system $FDANationalDrugCode
@@ -152,7 +152,7 @@ ValueSet: FDANDCOrCompound
 Title: "NDC or Compound"
 Description: "Values will be the NDC Codes when the Compound Code value is 0 or 1.  When the Compound Code value = 2, the value will be the literal, ‘compound’"
 * codes from system $FDANationalDrugCode
-* include C4BBCompoundLiteral#compound 
+* include C4BBCompoundLiteral#compound
 
 // ***************************NUBC start ***********
 RuleSet: AHANUBCCopyrightNotice
@@ -329,12 +329,12 @@ Description: "The UB-04 Data File contains the complete set of NUBC codes. Every
 
 This code system consists of the following:
 
-*   FL 15 - Point of Origin for Admission or Visit 
+*   FL 15 - Point of Origin for Admission or Visit
 
 These codes are used to convey the patient point of origin for an admission or visit and are the property of the American Hospital Association
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
-// 20210226 CAS: https://jira.hl7.org/browse/FHIR-31384 
+// 20210226 CAS: https://jira.hl7.org/browse/FHIR-31384
 * codes from system AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn
 // 20210201 CAS:  https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
 * codes from system AHANUBCPointOfOriginForAdmissionOrVisitNewborn
@@ -376,7 +376,7 @@ To obtain the underlying code systems, please see information [here](https://www
 RuleSet: AMACopyrightNotice
 * ^copyright = "CPT is copyrighted by the AMA and as such must be licensed to be used in electronic products or other forms.
 
-Any individual or entity using CPT content needs permission or a license (i.e., a written agreement authorizing use of CPT codes) from the AMA or an authorized distributor. 
+Any individual or entity using CPT content needs permission or a license (i.e., a written agreement authorizing use of CPT codes) from the AMA or an authorized distributor.
 
  Examples where a license and royalty payment are required (not an exhaustive list):
 
@@ -385,7 +385,7 @@ Any individual or entity using CPT content needs permission or a license (i.e., 
 *   Distribution of products that require use of CPT content
 *   Any proposed use of CPT content including the creation of derivative works of CPT content, translations or localized versions of CPT content
 
-For more information see [here](https://www.ama-assn.org/practice-management/cpt/ama-cpt-licensing-overview) 
+For more information see [here](https://www.ama-assn.org/practice-management/cpt/ama-cpt-licensing-overview)
 
 If you have a question or would like to license CPT content,  please see [here](http://info.commerce.ama-assn.org/ama-data-file-request-2020).
 
@@ -467,7 +467,7 @@ group information may also vary by payment systems."
 ValueSet: AMACPTCMSHCPCSProcedureCodes
 // 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
 Title: "Procedure Codes - AMA CPT - CMS HCPCS"
-Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. 
+Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition.
 
 The target set for this value set are the procedure codes from the CPT and HCPCS files.
 
@@ -517,7 +517,7 @@ See information on the use of HCPCS Level I (proprietary and owned by American M
 ValueSet: C4BBEOBInstitutionalProcedureCodes
 // 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
 Title: "Procedure Codes - AMA CPT - CMS HCPCS - CMS HIPPS"
-Description: "The Value Set is a combination of three Code Systems: CPT (HCPCS I), HCPCS II procedure codes, and HIPPS rate codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition. 
+Description: "The Value Set is a combination of three Code Systems: CPT (HCPCS I), HCPCS II procedure codes, and HIPPS rate codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition.
 
 The target set for this value set are the procedure codes from the CPT and HCPCS files and the rate codes from the HIPPS files.
 
@@ -562,7 +562,7 @@ HIPPS codes. HIPPS codes are placed in data element SV202 on the electronic 837
 institutional claims transaction, using an HP qualifier, or in Form Locator (FL) 44
 (\"HCPCS/rate\") on a paper UB-04 claims form. The associated revenue code is placed in
 data element SV201 or in FL 42. In certain circumstances, multiple HIPPS codes may
-appear on separate lines of a single claim. 
+appear on separate lines of a single claim.
 
 HIPPS codes are alpha-numeric codes of five digits. Each code contains intelligence,
 with certain positions of the code indicating the case mix group itself, and other positions
@@ -583,8 +583,8 @@ CMS maintains HIPPS. There are no known constraints on the use of HIPPS. See mor
 
 ValueSet:  AMACPTCMSHCPCSModifiers
 // 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
-Title: "Procedure Modifier Codes - AMA CPT - CMS HCPCS" 
-Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure code modifiers. Modifiers help further describe a procedure code without changing its definition.  
+Title: "Procedure Modifier Codes - AMA CPT - CMS HCPCS"
+Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure code modifiers. Modifiers help further describe a procedure code without changing its definition.
 
 The target set for this value set are the procedure code modifiers from the CPT and HCPCS files.
 
@@ -685,10 +685,10 @@ Description: """In 1987, the state of New York passed legislation instituting a 
 
 The AP DRG code system is no longer updated as DRG classification system evolved to APR DRG. Evolution of DRG is summarized in the APR DRG methodology overview as well as in various articles.
 
-  
+
 Goldfield N. The evolution of diagnosis-related groups (DRGs): from its beginnings in case-mix and resource use theory, to its implementation for payment and now for its current utilization for quality within and outside the hospital. Qual Manage Health Care. 2010;19(1)3-16.
 
-  
+
 Averill RF, Goldfield NI, Muldoon J, Steinbeck BA, Grant TM. A closer look at All-Patient Refined DRGs. J AHIMA. 2002;73(1):46-49.
 
 [https://apps.3mhis.com/docs/Groupers/All\_Patient\_Refined\_DRG/Methodology\_overview\_GRP041/grp041\_aprdrg\_meth\_overview.pdf](https://apps.3mhis.com/docs/Groupers/All_Patient_Refined_DRG/Methodology_overview_GRP041/grp041_aprdrg_meth_overview.pdf)"""
@@ -716,7 +716,7 @@ Link to information about the code system - including how to obtain the content 
 To license APR DRG from 3M, see request form [here](https://engage.3m.com/PPS_Groupers_Contact)"
 
 
-ValueSet: CMSMS3MAPAPRDRG 
+ValueSet: CMSMS3MAPAPRDRG
 Title: "MS-DRGs - AP-DRGs - APR-DRGs"
 Description: """This value set defines three sets of DRGs, MS-DRGs (Medicare Severity Diagnosis Related Groups), APR-DRGs (All Patient Refined Diagnosis Related Groups) and AP-DRGs (All Patient Diagnosis Related Groups). Identifying a DRG code requires a version.
 
@@ -748,10 +748,10 @@ In 1987, the state of New York passed legislation instituting a DRG-based prospe
 
 The AP DRG code system is no longer updated as DRG classification system evolved to APR DRG. Evolution of DRG is summarized in the APR DRG methodology overview as well as in various articles.
 
-  
+
 Goldfield N. The evolution of diagnosis-related groups (DRGs): from its beginnings in case-mix and resource use theory, to its implementation for payment and now for its current utilization for quality within and outside the hospital. Qual Manage Health Care. 2010;19(1)3-16.
 
-  
+
 Averill RF, Goldfield NI, Muldoon J, Steinbeck BA, Grant TM. A closer look at All-Patient Refined DRGs. J AHIMA. 2002;73(1):46-49.
 
 [https://apps.3mhis.com/docs/Groupers/All\_Patient\_Refined\_DRG/Methodology\_overview\_GRP041/grp041\_aprdrg\_meth\_overview.pdf](https://apps.3mhis.com/docs/Groupers/All_Patient_Refined_DRG/Methodology_overview_GRP041/grp041_aprdrg_meth_overview.pdf)"""
@@ -838,8 +838,8 @@ External code lists maintained by X12 and external code lists maintained by othe
 
 [https://x12.org/codes](https://x12.org/codes)
 
-Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."  
-* ^url = "https://x12.org/codes/remittance-advice-remark-codes" 
+Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."
+* ^url = "https://x12.org/codes/remittance-advice-remark-codes"
 //* ^content = #complete
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
@@ -879,8 +879,8 @@ External code lists maintained by X12 and external code lists maintained by othe
 [https://x12.org/codes](https://x12.org/codes)
 
 Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."
-* codes from system X12ClaimAdjustmentReasonCodes 
-* codes from system CMSRemittanceAdviceRemarkCodes 
+* codes from system X12ClaimAdjustmentReasonCodes
+* codes from system CMSRemittanceAdviceRemarkCodes
 * ^copyright = "**Intellectual Property Information**
 
 All X12 products are subject to this IP policy, including published and draft works.
@@ -926,11 +926,11 @@ RuleSet: ICD910CMCopyrightNotice
 //  ******* ICD ********
 
 
-ValueSet: CDCICD910CMDiagnosisCodes 
+ValueSet: CDCICD910CMDiagnosisCodes
 Title: "Diagnosis Codes - International Classification of Diseases, Clinical Modification (ICD-9-CM, ICD-10-CM)"
 Description: "The Value Set is a combination of values from volume 1 and volume 2 from the Code System International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) and values in the Code System International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)
 
-The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States. 
+The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States.
 
 The ICD-9-CM consists of:
 
@@ -956,11 +956,11 @@ Most files are provided in compressed zip format for ease in downloading. These 
 * insert ICD910CMCopyrightNotice
 
 
-ValueSet: CMSICD910PCSProcedureCodes 
+ValueSet: CMSICD910PCSProcedureCodes
 Title: "Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Coding System"
-Description: "The Value Set is a combination of values from volume 3 from the Code System International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) and values in the Code System ICD-10 Procedure Coding System. 
+Description: "The Value Set is a combination of values from volume 3 from the Code System International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) and values in the Code System ICD-10 Procedure Coding System.
 
-The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States. 
+The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States.
 
 The ICD-9-CM consists of:
 
@@ -972,7 +972,7 @@ The National Center for Health Statistics (NCHS) and the [Centers for Medicare a
 
 The ICD-10-PCS is the replacement for ICD-9-CM, volume 3, effective October 1, 2015.
 
-The ICD-10-PCS is a procedure classification published by the United States Centers for Medicare & Medicaid Services (CMS) ([https://www.cms.gov](https://www.cms.gov/)) for classifying procedures  
+The ICD-10-PCS is a procedure classification published by the United States Centers for Medicare & Medicaid Services (CMS) ([https://www.cms.gov](https://www.cms.gov/)) for classifying procedures
 performed in hospital inpatient health care settings.
 
 Current and previous releases of ICD-9-CM are available here: [https://www.cdc.gov/nchs/icd/icd9cm.htm](https://www.cdc.gov/nchs/icd/icd9cm.htm)
@@ -993,7 +993,9 @@ CodeSystem: ADAUniversalNumberingSystem
 Title: "American Dental Association Universal Numbering System"
 Description: "The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
 
-Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
+Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * ^url = "http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem"
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
@@ -1001,7 +1003,9 @@ Teeth are numbered from the viewpoint of the dental practitioner looking into th
 
 CodeSystem: ADAAreaOfOralCavitySystem
 Title: "American Dental Association Area of Oral Cavity System"
-Description: "The American Dental Association Area of Oral Cavity System is a notation system indicating a quadrant, arch, or the entire mouth."
+Description: "The American Dental Association Area of Oral Cavity System is a notation system indicating a quadrant, arch, or the entire mouth.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 
 * ^url = "http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem"
 * ^caseSensitive = true
@@ -1024,6 +1028,3 @@ Description: "The American Dental Association Universal Numbering System is a to
 Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
 * codes from system ADAUniversalNumberingSystem
 * insert ADACopyrightNotice
-
-
-

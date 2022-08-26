@@ -2,7 +2,9 @@
 // CodeSystemStubs.fsh contains stubs for external codesystems.
 CodeSystem: C4BBAdjudication
 Title: "C4BB Adjudication"
-Description: "Describes the various amount fields used when payers receive and adjudicate a claim.  It complements the values defined in http://terminology.hl7.org/CodeSystem/adjudication."
+Description: "Describes the various amount fields used when payers receive and adjudicate a claim.  It complements the values defined in http://terminology.hl7.org/CodeSystem/adjudication.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #coinsurance "Co-insurance" "The amount the insured individual pays, as a set percentage of the cost of covered medical services, as an out-of-pocket payment to the provider. Example: Insured pays 20% and the insurer pays 80%."
 * #noncovered "Noncovered" "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * #priorpayerpaid "Prior payer paid" "The reduction in the payment amount to reflect the carrier as a secondary payer."
@@ -36,7 +38,9 @@ Description: "Describes the various amount fields used when payers receive and a
 
 CodeSystem: C4BBPayeeType
 Title: "C4BB Payee Type"
-Description: "Indicates that a payee type may be a beneficiary."
+Description: "Indicates that a payee type may be a beneficiary.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #beneficiary "Beneficiary" "The beneficiary (patient) will be reimbursed."
 * ^content = #complete
 * ^caseSensitive = true
@@ -44,7 +48,9 @@ Description: "Indicates that a payee type may be a beneficiary."
 
 CodeSystem: C4BBClaimDiagnosisType
 Title: "C4BB Claim Diagnosis Type"
-Description: "Indicates if the institutional diagnosis is admitting, principal, secondary, other, an external cause of injury or a patient reason for visit.  Complements http://terminology.hl7.org/CodeSystem/ex-diagnosistype."
+Description: "Indicates if the institutional diagnosis is admitting, principal, secondary, other, an external cause of injury or a patient reason for visit.  Complements http://terminology.hl7.org/CodeSystem/ex-diagnosistype.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #externalcauseofinjury "External Cause of Injury" "Required when an external cause of injury is needed to describe the injury"
 * #patientreasonforvisit "Patient Reason for Visit" "Identifies the patient's reason for the outpatient institutional visit"
 * #other "Other"  "Required when other conditions coexist or develop subsequently during the treatment"
@@ -57,7 +63,9 @@ Description: "Indicates if the institutional diagnosis is admitting, principal, 
 
 CodeSystem: C4BBClaimCareTeamRole
 Title: "C4BB Claim Care Team Role"
-Description: "Describes functional roles of the care team members.  Complements http://terminology.hl7.org/CodeSystem/claimcareteamrole"
+Description: "Describes functional roles of the care team members.  Complements http://terminology.hl7.org/CodeSystem/claimcareteamrole.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #attending  "Attending"  "The attending physician"
 * #referring "Referring"  "The referring physician"
 * #operating "Operating"  "The operating physician"
@@ -75,7 +83,9 @@ Description: "Describes functional roles of the care team members.  Complements 
 
 CodeSystem: C4BBCompoundLiteral
 Title: "C4BB Compound Literal"
-Description: "CodeSystem for a Literal 'compound' value"
+Description: "CodeSystem for a Literal 'compound' value.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #compound "compound" "Compound"
 * ^content = #complete
 * ^caseSensitive = true
@@ -84,7 +94,9 @@ Description: "CodeSystem for a Literal 'compound' value"
 // ******** @Saul - updated **********
 CodeSystem: C4BBIdentifierType
 Title: "C4BB Identifier Type"
-Description: "Identifier Type codes that extend those defined in http://terminology.hl7.org/CodeSystem/v2-0203 to define the type of identifier payers and providers assign to claims and patients"
+Description: "Identifier Type codes that extend those defined in http://terminology.hl7.org/CodeSystem/v2-0203 to define the type of identifier payers and providers assign to claims and patients.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 // * #tax "Tax ID Number" "Tax ID Number"  - use the TAX code from the base codesystem
 //* #npi "National Provider Identifier" "National Provider Identifier"  FHIR-35712
 //* #clia "CLIA" "CLIA"
@@ -101,7 +113,9 @@ Description: "Identifier Type codes that extend those defined in http://terminol
 
 CodeSystem: C4BBPayerAdjudicationStatus
 Title: "C4BB Payer Adjudication Status"
-Description: "Describes the various status fields used when payers adjudicate a claim, such as whether the claim was adjudicated in or out of network, if the provider was contracted or non-contracted for the service"
+Description: "Describes the various status fields used when payers adjudicate a claim, such as whether the claim was adjudicated in or out of network, if the provider was contracted or non-contracted for the service.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #innetwork	"In Network" "Indicates the claim or claim line was paid in network.  This does not indicate the contracting status of the provider"
 * #outofnetwork "Out Of Network" "Indicates the claim or claim line was paid out of network.  This does not indicate the contracting status of the provider"
 * #other "Other" "Indicates other network status or when a network does not apply"
@@ -116,27 +130,31 @@ Description: "Describes the various status fields used when payers adjudicate a 
 
 CodeSystem: C4BBRelatedClaimRelationshipCodes
 Title: "C4BB Related Claim Relationship Codes"
-Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number."
+Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #replacedby "Replaced by claim number" "The current claim has been adjusted; i.e., replaced by or merged to another claim number."
 * ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBSupportingInfoType
 Title: "C4BB Supporting Info Type"
-Description: "Claim Information Category - Used as the discriminator for supportingInfo" 
+Description: "Claim Information Category - Used as the discriminator for supportingInfo.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #admissionperiod  "Admission Period" "Dates corresponding with the admission and discharge of the beneficiary to a facility"
-* #pointoforigin  "Point Of Origin"  "UB-04 Source of Admission (FL-15) identifies the place where the patient was identified as needing admission to a facility."  	
-* #admtype	"Admission Type"  "UB-04 Priority of the admission (FL-14) indicates, for example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled."	
+* #pointoforigin  "Point Of Origin"  "UB-04 Source of Admission (FL-15) identifies the place where the patient was identified as needing admission to a facility."
+* #admtype	"Admission Type"  "UB-04 Priority of the admission (FL-14) indicates, for example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled."
 * #brandgenericindicator	"Brand Generic Indicator" "NCPDP code indicating whether the plan adjudicated the claim as a brand or generic drug."
-* #clmrecvddate	"Claim Received Date" "Date the claim was received by the payer."	
-* #compoundcode "Compound Code" "NCPDP code indicating whether or not the prescription is a compound."	
-* #dawcode "DAW (Dispense As Written) Code" "NCPDP code indicating the prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication."	
-* #dayssupply	"Days Supply" "NCPDP value indicating the Number of days supply of medication dispensed by the pharmacy."	
-* #discharge-status  "Discharge Status"   "UB-04 Discharge Status (FL-17) indicates the patient’s status as of the discharge date for a facility stay."		
-* #drg	"DRG"	"DRG (Diagnosis Related Group), including the code system, the DRG version and the code value"	
-* #refillnum	"Refill Number"	  "NCPDP value indicating the number fill of the current dispensed supply (0, 1, 2, etc.)"	
+* #clmrecvddate	"Claim Received Date" "Date the claim was received by the payer."
+* #compoundcode "Compound Code" "NCPDP code indicating whether or not the prescription is a compound."
+* #dawcode "DAW (Dispense As Written) Code" "NCPDP code indicating the prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication."
+* #dayssupply	"Days Supply" "NCPDP value indicating the Number of days supply of medication dispensed by the pharmacy."
+* #discharge-status  "Discharge Status"   "UB-04 Discharge Status (FL-17) indicates the patient’s status as of the discharge date for a facility stay."
+* #drg	"DRG"	"DRG (Diagnosis Related Group), including the code system, the DRG version and the code value"
+* #refillnum	"Refill Number"	  "NCPDP value indicating the number fill of the current dispensed supply (0, 1, 2, etc.)"
 * #refillsauthorized "Refills Authorized"	  "NCPDP value indicating the number of refills authorized by the subscriber (0, 1, 2, etc.)"
-* #rxorigincode	"Rx Origin Code" "NCPDP code indicating whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy."	
+* #rxorigincode	"Rx Origin Code" "NCPDP code indicating whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy."
 * #servicefacility  "Service Facility" "The facility where the service occurred.  Examples include hospitals, nursing homes, laboratories or homeless shelters."
 * #typeofbill "Type of Bill"  "UB-04 Type of Bill (FL-04) provides specific information for payer purposes."
 * #medicalrecordnumber "Medical Record Number" "Patient Medical Record Number associated with the specific claim."
@@ -151,13 +169,15 @@ Description: "Claim Information Category - Used as the discriminator for support
 
 CodeSystem: C4BBAdjudicationDiscriminator
 Title: "C4BB Adjudication Discriminator"
-Description: "Used as the discriminator for the data elements in adjudication and item.adjudication"
+Description: "Used as the discriminator for the data elements in adjudication and item.adjudication.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #allowedunits	"allowed units" "defines the adjudication slice to define allowed units"
 // 20210201 CAS: Removed as not used as a discriminator (the CodeSystem C4BBPayerBenefitPaymentStatus is used for this slice), Change ipart of FHIR-30635 - Update Benefit Payment Status slice name ,cardinality and must support
 //* #inoutnetwork "in or Out of Network" "defines the adjudication and item.adjudication slice to indicate whether a claim was adjudicatd in or out of network"
 * #denialreason "Denial Reason" "defines the adjudication slice to identify the denial reason"
-* #billingnetworkcontractingstatus	"Billing Network Contracting Status"       "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."	
-* #renderingnetworkcontractingstatus	"Rendering Network Contracting Status" "Indicates that the Rendering Provider has a contract with the Payer as of the effective date of service or admission."		
+* #billingnetworkcontractingstatus	"Billing Network Contracting Status"       "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."
+* #renderingnetworkcontractingstatus	"Rendering Network Contracting Status" "Indicates that the Rendering Provider has a contract with the Payer as of the effective date of service or admission."
 * #benefitpaymentstatus "Benefit Payment Status" "Indicates the in network or out of network payment status of the claim."
 * ^content = #complete
 * ^caseSensitive = true
@@ -165,7 +185,9 @@ Description: "Used as the discriminator for the data elements in adjudication an
 
 CodeSystem: C4BBClaimProcedureType
 Title: "C4BB Claim Procedure Type"
-Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure"
+Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #principal "Principal" "The Principal Procedure is based on the relation of the procedure to the Principal Diagnosis"
 * #other "Other"  "Other procedures performed during the inpatient institutional admission"
 * ^content = #complete
@@ -174,7 +196,9 @@ Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is th
 
 CodeSystem: C4BBInstitutionalClaimSubType
 Title: "C4BB Institutional Claim SubType"
-Description: "Indicates if institutional ExplanationOfBenefit is inpatient or outpatient."
+Description: "Indicates if institutional ExplanationOfBenefit is inpatient or outpatient.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #inpatient "Inpatient" "Claims for inpatient institutional admissions."
 * #outpatient "Outpatient"  "Claims for outpatient institutional admissions."
 * ^content = #complete
@@ -184,7 +208,9 @@ Description: "Indicates if institutional ExplanationOfBenefit is inpatient or ou
 
 CodeSystem: C4BBSurfaceCodes
 Title: "US Surface Codes System"
-Description: "This value set includes FDI tooth surface codes localized for the US Realm."
+Description: "This value set includes FDI tooth surface codes localized for the US Realm.
+
+This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #M "Mesial" "The surface of a tooth that is closest to the midline (middle) of the face."
 * #O "Occlusal" "The chewing surface of posterior teeth."
 * #I "Incisal" "The biting edge of anterior teeth."
