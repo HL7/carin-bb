@@ -4,23 +4,21 @@
 
 require "pry"
 
-def GetType(filetext)
-   lines = filetext.split("\n")
-   # InstanceOf on the 2nd line
-    return lines[1].split(":")[1].strip
-end
 rmoutput = `rm -rf fshoutput`
 gofshoutput = `gofsh output --indent --no-alias -o fshoutput`
+puts "JSONInput = ./output"
 puts "FSHInput = ./fshoutput/input/fsh/instances"
 puts "MDOutput = ./input/pagecontent"
-fshinputfiles = Dir.glob("./fshoutput/input/fsh/instances/*.fsh")
-fshinputfiles.each { |fsh|
-  fshcontent = File.read(fsh)
-  filetype = GetType(fshcontent)
-  next if filetype == "SearchParameter"
-  next if filetype == "CapabilityStatement"
-  instancename = fsh.split("/").last.split(".").first
+jsoninputfiles = Dir.glob("./output/*.json").map{ |json| json.split("/")[2]}
+skiptypes = ["ConceptMap", "StructureDefinition", "ValueSet", "CodeSystem", "CapabilityStatement", "OperationOutcome"]
+jsoninputfiles.each {|json|
+  next if json.count("-") < 2
+  filetype = json.split("-")[0]
+  next if skiptypes.include?(filetype)
+  instancename = (json.split("-")[1] + "-" + json.split("-")[2]).split(".")[0]
+  fsh = "fshoutput/input/fsh/instances/" + instancename + ".fsh"
   notes_file_name = filetype + "-" + instancename + "-notes.md"
+  fshcontent = File.read(fsh)
   md = "input/pagecontent/" + notes_file_name
   mdfile = File.open(md, "w")
   mdcontent = "```\n" + fshcontent + "\n```"
