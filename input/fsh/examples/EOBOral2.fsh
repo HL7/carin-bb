@@ -2,13 +2,10 @@ Instance: EOBOral2
 InstanceOf: C4BBExplanationOfBenefitOral
 Description: "EOB Oral Example 2"
 Usage: #example
-* id = "EOBOral2"
-//* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
 * meta.lastUpdated = "2021-10-28T10:23:00-05:00"
 * language = #en-US
 * status = #active
-
 * identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "210300012"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
@@ -102,5 +99,3 @@ Usage: #example
 * supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite
 * supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#2
 * supportingInfo[additionalbodysite][=].sequence = 10
-
-

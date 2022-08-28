@@ -1,6 +1,6 @@
-Instance: PractitionerProvider1
+Instance: Practitioner4
 InstanceOf: C4BBPractitioner
-Description: "Provider 1"
+Description: "Practitioner 4"
 Usage: #example
 * meta.profile[+] = Canonical(C4BBPractitioner|1.2.0)
 * meta.lastUpdated = "2022-07-27T10:23:11+00:00"

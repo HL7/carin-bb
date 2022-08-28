@@ -1,8 +1,8 @@
-Instance: EOBOutpatientInstitutional1
+Instance: EOBOutpatient1
 InstanceOf: C4BBExplanationOfBenefitOutpatientInstitutional
-Description: "EOB Outpatient Example1"
+Title: "EOB Outpatient Institutional - Example 1"
+Description: "EOB Outpatient Institutional - Example 1"
 Usage: #example
-* id = "EOBOutpatientInstitutional1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|1.2.0)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
@@ -86,4 +86,3 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "1234-234-1243-12345678901a"
 * supportingInfo[patientaccountnumber].sequence = 8
-

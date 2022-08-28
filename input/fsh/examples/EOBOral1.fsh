@@ -1,15 +1,12 @@
-Instance: EOBOral1a
+Instance: EOBOral1
 InstanceOf: C4BBExplanationOfBenefitOral
-Description: "EOB Oral Example1"
+Description: "EOB Oral Example 1"
 Usage: #example
-* id = "EOBOral1a"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
 * meta.lastUpdated = "2021-03-18T10:23:00-05:00"
 * language = #en-US
 * status = #active
-
-
 * identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "210300002"
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
@@ -86,4 +83,3 @@ Usage: #example
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString = "PATIENTACCTNO3"
 * supportingInfo[patientaccountnumber].sequence = 5
-

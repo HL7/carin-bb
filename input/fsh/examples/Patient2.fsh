@@ -1,7 +1,7 @@
-Instance: ExamplePatient1
+Instance: Patient2
 InstanceOf: C4BBPatient
-Title: "Patient Example 1"
-Description: "Patient Example 1"
+Title: "Patient Example 2"
+Description: "Patient Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-30T09:48:01.8512764-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"

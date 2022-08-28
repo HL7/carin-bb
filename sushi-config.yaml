@@ -95,99 +95,99 @@ pages:
 # ╰───────────────────────────────────────────_────────────────────────────────────────────────────╯
 
 resources:
-  Patient/ExamplePatient1: 
+  Patient/Patient1:
     name: Patient Example 1
     description: Patient Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
-  Patient/Patient1: 
-    name: Patient Example1
-    description: Patient Example1
+  Patient/Patient2:
+    name: Patient Example 2
+    description: Patient Example 2
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient
   Coverage/Coverage1:
-    name: Coverage Example1
+    name: Coverage Example 1
     description: Coverage Example1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+  Coverage/Coverage2:
+    name: Coverage Example 2
+    description: Coverage Example 2
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
+  Coverage/Coverage3:
+    name: Coverage Example 3
+    description: Coverage Example 3
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
   Coverage/CoverageDental1:
     name: Dental Coverage Example1
     description: Dental Coverage Example1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-  Coverage/CoverageEx1:
-    name: Coverage Example 1
-    description: Coverage Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-  Coverage/CoverageEx2:
-    name: Coverage Example 2
-    description: Coverage Example 2
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage
-  ExplanationOfBenefit/InpatientEOBExample1:
-    name: EOB Inpatient Institutional - Example 1
-    description: EOB Inpatient Institutional - Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
   ExplanationOfBenefit/EOBInpatient1:
     name: EOB Inpatient Example1
-    description: EOB Inpatient Example1
+    description: EOB Inpatient Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
-  ExplanationOfBenefit/OutpatientEOBExample1:              
+  ExplanationOfBenefit/EOBInpatient2:
+    name: EOB Inpatient Example 2
+    description: EOB Inpatient Example 2
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
+  ExplanationOfBenefit/EOBOutpatient1:
     name: EOB Outpatient Institutional - Example 1
     description: EOB Outpatient Institutional - Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
-  ExplanationOfBenefit/EOBOutpatientInstitutional1:              
-    name: EOB Outpatient Example1
-    description: EOB Outpatient Example1
+  ExplanationOfBenefit/EOBOutpatient2:
+    name: EOB Outpatient Institutional - Example 2
+    description: EOB Outpatient Institutional - Example 2
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
-  ExplanationOfBenefit/ProfessionalEOBExample1:
+  ExplanationOfBenefit/EOBProfessional1:
     name: EOB Professional - Example 1
     description: EOB Professional - Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
-  ExplanationOfBenefit/EOBProfessional1a:
-    name: EOB Professional Example1
-    description: EOB Professional Example1
+  ExplanationOfBenefit/EOBProfessional2:
+    name: EOB Professional - Example 2
+    description: EOB Professional - Example 2
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
   ExplanationOfBenefit/EOBPharmacy1:
     name: EOB Pharmacy Example1
     description: EOB Pharmacy Example1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy
-  ExplanationOfBenefit/EOBOral1a:
-    name: EOB Oral Example1
-    description: EOB Oral Example1
+  ExplanationOfBenefit/EOBOral1:
+    name: EOB Oral Example 1
+    description: EOB Oral Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Oral
   ExplanationOfBenefit/EOBOral2:
     name: EOB Oral Example 2
     description: EOB Oral Example 2
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Oral
-  Organization/OrganizationProvider1:
-    name: Provider 1
-    description: Provider 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-  Organization/OrganizationPayer1:
-    name: Payer1
-    description: Payer1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-  Organization/PayerOrganizationExample1:
-    name: Payer Organization Example 1
-    description: Payer Organization Example 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Organization/ProviderOrganization1:
-    name: Provider Organization Example 1
-    description: Provider Organization Example 1
+    name: Provider Organization 1
+    description: Provider Organization 1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+  Organization/ProviderOrganization2:
+    name: Provider Organization 2
+    description: Provider Organization 2
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Organization/ProviderOrganization3:
-    name: Provider Organization Example 3
-    description: Provider Organization Example 3
+    name: Provider Organization 3
+    description: Provider Organization 3
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Organization/ProviderOrganization4:
-    name: Provider Organization Example 4
-    description: Provider Organization Example 4
+    name: Provider Organization 4
+    description: Provider Organization 4
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Organization/ProviderOrganization5:
-    name: Provider Organization Example 5
-    description: Provider Organization Example 5
+    name: Provider Organization 5
+    description: Provider Organization 5
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Organization/ProviderOrganization6:
-    name: Provider Organization Example 6
-    description: Provider Organization Example 6
+    name: Provider Organization 6
+    description: Provider Organization 6
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-  Organization/OrganizationDentalPayer1:
+  Organization/Payer1:
+    name: Payer 1
+    description: Payer 1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+  Organization/Payer2:
+    name: Payer 2
+    description: Payer 2
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
+  Organization/DentalPayer1:
     name: Dental Payer1
     description: Dental Payer1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
@@ -206,8 +206,4 @@ resources:
   Practitioner/PractitionerDentalProvider1:
     name: Dental Provider 1
     description: Dental Provider 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
-  Practitioner/PractitionerProvider1:
-    name: Provider 1
-    description: Provider 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner

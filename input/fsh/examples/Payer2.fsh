@@ -1,7 +1,7 @@
-Instance: PayerOrganizationExample1
+Instance: Payer2
 InstanceOf: C4BBOrganization
-Title: "Payer Organization Example 1"
-Description: "Payer Organization Example 1"
+Title: "Payer Organization Example 2"
+Description: "Payer Organization Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-09-08T00:00:00+00:00"
 * meta.source = "Organization/PayerOrganizationExample1"

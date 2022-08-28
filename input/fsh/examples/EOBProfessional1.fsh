@@ -1,6 +1,7 @@
-Instance: EOBProfessional1a
+Instance: EOBProfessional1
 InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician
-Description: "EOB Professional Example1"
+Description: "EOB Professional Example 1"
+Title: "EOB Professional - Example 1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)

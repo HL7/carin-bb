@@ -1,7 +1,7 @@
-Instance: OutpatientEOBExample1
+Instance: EOBOutpatient2
 InstanceOf: C4BBExplanationOfBenefitOutpatientInstitutional
-Title: "EOB Outpatient Institutional - Example 1"
-Description: "EOB Outpatient Institutional - Example 1"
+Title: "EOB Outpatient Institutional - Example 2"
+Description: "EOB Outpatient Institutional - Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-13T11:10:24-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"

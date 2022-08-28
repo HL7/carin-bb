@@ -1,32 +1,32 @@
 Instance: Coverage1
 InstanceOf: C4BBCoverage
-Title: "Coverage1"
-Description: "Coverage Example1"
-// Usage: #example
-* meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
-* meta.profile = Canonical(C4BBCoverage|1.2.0)
+Title: "Coverage Example 1"
+Description: "Coverage Example 1"
+Usage: #example
+* meta.lastUpdated = "2020-10-30T09:48:01.8462752-04:00"
+* meta.profile[+] = Canonical(C4BBCoverage|1.2.0)
 * language = #en-US
-* identifier.type = $v2-0203#MB
-* identifier.system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
-* identifier.value = "1234-234-1243-12345678901"
+* identifier.type = $v2-0203#MB "Member Number"
+* identifier.type.text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
+* identifier.system = "https://www.upmchealthplan.com/fhir/memberidentifier"
+* identifier.value = "88800933501"
+* identifier.assigner = Reference(PayerOrganizationExample1) "UPMC Health Plan"
 * status = #active
-* type = $v3-ActCode#HIP
-* type.text = "health insurance plan policy"
-* policyHolder = Reference(Patient1)
-* subscriber = Reference(Patient1)
-* subscriberId = "12345678901"
-* beneficiary = Reference(Patient1)
+* policyHolder = Reference(ExamplePatient1)
+* subscriber = Reference(ExamplePatient1)
+* subscriberId = "888009335"
+* beneficiary = Reference(ExamplePatient1)
 * dependent = "01"
 * relationship = $subscriber-relationship#self
-* period.start = "2019-01-01"
-* period.end = "2019-10-31"
-* payor = Reference(OrganizationPayer1)
-* class[0].type = $coverage-class#group
+* relationship.text = "Self"
+* period.start = "2020-01-01"
+* payor = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* class[0].type = $coverage-class#group "Group"
 * class[=].type.text = "An employee group"
-* class[=].value = "021890"
-* class[=].name = "Acme Corporation"
-* class[+].type = $coverage-class#plan
-* class[=].type.text = "Plan"
-* class[=].value = "XYZ123"
-* class[=].name = "XYZ123-UPMC CONSUMER ADVA"
-* network = "XYZ123-UPMC CONSUMER ADVA"
+* class[=].value = "MCHMO1"
+* class[=].name = "MEDICARE HMO PLAN"
+* class[+].type = $coverage-class#plan "Plan"
+* class[=].type.text = "A specific suite of benefits."
+* class[=].value = "GR5"
+* class[=].name = "GR5-HMO DEDUCTIBLE"
+* network = "GR5-HMO DEDUCTIBLE"
