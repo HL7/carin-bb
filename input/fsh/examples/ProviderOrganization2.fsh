@@ -1,6 +1,7 @@
-Instance: OrganizationProvider1
+Instance: ProviderOrganization2
 InstanceOf: C4BBOrganization
-Description: "Provider 1"
+Title: "Provider Organization Example 2"
+Description: "Provider Organization Example 2"
 Usage: #example
 * meta.profile[+] = Canonical(C4BBOrganization|1.2.0)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"

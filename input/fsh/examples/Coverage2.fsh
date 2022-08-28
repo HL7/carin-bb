@@ -1,7 +1,7 @@
-Instance: CoverageEx1
+Instance: Coverage2
 InstanceOf: C4BBCoverage
-Title: "Coverage Example 1"
-Description: "Coverage Example 1"
+Title: "Coverage Example 2"
+Description: "Coverage Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-30T09:48:01.8462752-04:00"
 * meta.profile[+] = Canonical(C4BBCoverage|1.2.0)
@@ -19,7 +19,8 @@ Usage: #example
 * dependent = "01"
 * relationship = $subscriber-relationship#self
 * relationship.text = "Self"
-* period.start = "2020-01-01"
+* period.start = "2017-01-01"
+* period.end = "2017-06-30"
 * payor = Reference(PayerOrganizationExample1) "UPMC Health Plan"
 * class[0].type = $coverage-class#group "Group"
 * class[=].type.text = "An employee group"
@@ -27,6 +28,6 @@ Usage: #example
 * class[=].name = "MEDICARE HMO PLAN"
 * class[+].type = $coverage-class#plan "Plan"
 * class[=].type.text = "A specific suite of benefits."
-* class[=].value = "GR5"
-* class[=].name = "GR5-HMO DEDUCTIBLE"
-* network = "GR5-HMO DEDUCTIBLE"
+* class[=].value = "GI8"
+* class[=].name = "GI8-HMO DEDUCTIBLE"
+* network = "GI8-HMO DEDUCTIBLE"

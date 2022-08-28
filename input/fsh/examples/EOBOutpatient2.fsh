@@ -1,4 +1,4 @@
-Instance: EOBOutpatientInstitutional2
+Instance: EOBOutpatient2
 InstanceOf: C4BBExplanationOfBenefitOutpatientInstitutional
 Title: "EOB Outpatient Institutional - Example 2"
 Description: "EOB Outpatient Institutional - Example 2"
