@@ -17,15 +17,15 @@ Usage: #example
 * subType.text = "Outpatient"
 * use = #claim
 * created = "2019-11-02T00:00:00+00:00"
-* insurer = Reference(OrganizationPayer1)
-* insurer.display = "XXX Health Plan"
-* patient = Reference(Patient1)
+* insurer = Reference(Payer1)
+* insurer.display = "Organization Payer 1"
+* patient = Reference(Patient2)
 * billablePeriod.start = "2019-01-01"
 * billablePeriod.end = "2019-10-31"
-* provider = Reference(OrganizationProvider1)
-* provider.display = "XXX Health Plan"
+* provider = Reference(ProviderOrganization1)
+* provider.display = "Orange Medical Group"
 * careTeam[+].sequence = 1
-* careTeam[=].provider = Reference(PractitionerProvider1)
+* careTeam[=].provider = Reference(ProviderOrganization1)
 * careTeam[=].role = C4BBClaimCareTeamRole#rendering "Rendering provider"
 * careTeam[=].qualification = $NUCCProviderTaxonomy#364SX0200X "Oncology Clinical Nurse Specialist"
 * outcome = #partial
@@ -34,7 +34,6 @@ Usage: #example
 * diagnosis[0].sequence = 1
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
-
 * item[0].sequence = 1
 * item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
 * item[0].revenue = AHANUBCRevenueCodes#Dummy

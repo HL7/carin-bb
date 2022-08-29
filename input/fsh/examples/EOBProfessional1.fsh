@@ -15,12 +15,12 @@ Usage: #example
 * type.text = "Professional"
 * use = #claim
 * created = "2019-07-02T00:00:00+00:00"
-* insurer = Reference(OrganizationPayer1)
+* insurer = Reference(Payer1)
 * insurer.display = "XXX Health Plan"
-* patient = Reference(Patient1)
+* patient = Reference(Patient2)
 * billablePeriod.start = "2019-01-01"
 * billablePeriod.end = "2019-10-31"
-* provider = Reference(OrganizationProvider1)
+* provider = Reference(ProviderOrganization1)
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0X1A
@@ -60,7 +60,7 @@ Usage: #example
 * supportingInfo[clmrecvddate].sequence = 3
 * supportingInfo[servicefacility].category = C4BBSupportingInfoType#servicefacility
 * supportingInfo[servicefacility].sequence = 4
-* supportingInfo[servicefacility].valueReference = Reference(OrganizationProvider1)
+* supportingInfo[servicefacility].valueReference = Reference(ProviderOrganization1)
 
 * supportingInfo[medicalrecordnumber].category  = C4BBSupportingInfoType#medicalrecordnumber
 * supportingInfo[medicalrecordnumber].valueString = "1234-234-1243-12345678901m"
