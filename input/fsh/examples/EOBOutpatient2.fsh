@@ -16,11 +16,11 @@ Usage: #example
 * subType = $C4BBInstitutionalClaimSubType#outpatient
 * subType.text = "Outpatient"
 * use = #claim
-* patient = Reference(ExamplePatient1)
+* patient = Reference(Patient1)
 * billablePeriod.start = "2020-09-29"
 * billablePeriod.end = "2020-09-29"
 * created = "2020-10-10T00:00:00-04:00"
-* insurer = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* insurer = Reference(Payer2) "UPMC Health Plan"
 * provider = Reference(ProviderOrganization5)
 * payee.type = $payeetype#provider "Provider"
 * payee.type.text = "Any benefit payable will be paid to the provider (Assignment of Benefit)."
@@ -54,7 +54,7 @@ Usage: #example
 * diagnosis[=].type = $C4BBClaimDiagnosisType#other "Other"
 * diagnosis[=].type.text = "Required when other conditions coexist or develop subsequently during the treatment"
 * insurance.focal = true
-* insurance.coverage = Reference(CoverageEx1)
+* insurance.coverage = Reference(Coverage1)
 * item[0]
   * sequence = 1
   * revenue = $RevenueCodes#0551

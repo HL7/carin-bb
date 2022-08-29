@@ -12,15 +12,15 @@ Description: "Coverage Example 3"
 * status = #active
 * type = $v3-ActCode#HIP
 * type.text = "health insurance plan policy"
-* policyHolder = Reference(Patient1)
-* subscriber = Reference(Patient1)
+* policyHolder = Reference(Patient2)
+* subscriber = Reference(Patient2)
 * subscriberId = "12345678901"
-* beneficiary = Reference(Patient1)
+* beneficiary = Reference(Patient2)
 * dependent = "01"
 * relationship = $subscriber-relationship#self
 * period.start = "2019-01-01"
 * period.end = "2019-10-31"
-* payor = Reference(OrganizationPayer1)
+* payor = Reference(Payer1)
 * class[0].type = $coverage-class#group
 * class[=].type.text = "An employee group"
 * class[=].value = "021890"

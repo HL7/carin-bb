@@ -11,7 +11,7 @@ Usage: #example
 * identifier[memberid].type.text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
 * identifier[memberid].system = "https://www.upmchealthplan.com/fhir/memberidentifier"
 * identifier[memberid].value = "88800933501"
-* identifier[memberid].assigner = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* identifier[memberid].assigner = Reference(Payer2) "UPMC Health Plan"
 * active = true
 * name.family = "Test"
 * name.given = "Member 01"
@@ -58,4 +58,4 @@ Usage: #example
 * communication.language = urn:ietf:bcp:47#en
 * communication.language.text = "English"
 * communication.preferred = true
-* managingOrganization = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* managingOrganization = Reference(Payer2) "UPMC Health Plan"

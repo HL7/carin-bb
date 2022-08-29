@@ -19,12 +19,12 @@ Usage: #example
 * subType.text = "Inpatient"
 * use = #claim
 * created = "2019-11-02T00:00:00+00:00"
-* insurer = Reference(OrganizationPayer1)
+* insurer = Reference(Payer1)
 * insurer.display = "XXX Health Plan"
-* patient = Reference(Patient1)
+* patient = Reference(Patient2)
 * billablePeriod.start = "2019-01-01"
 * billablePeriod.end = "2019-10-31"
-* provider = Reference(OrganizationProvider1)
+* provider = Reference(ProviderOrganization1)
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * diagnosis[0].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#S06.0X1A

@@ -10,17 +10,17 @@ Usage: #example
 * identifier.type.text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
 * identifier.system = "https://www.upmchealthplan.com/fhir/memberidentifier"
 * identifier.value = "88800933501"
-* identifier.assigner = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* identifier.assigner = Reference(Payer2) "UPMC Health Plan"
 * status = #active
-* policyHolder = Reference(ExamplePatient1)
-* subscriber = Reference(ExamplePatient1)
+* policyHolder = Reference(Patient1)
+* subscriber = Reference(Patient1)
 * subscriberId = "888009335"
-* beneficiary = Reference(ExamplePatient1)
+* beneficiary = Reference(Patient1)
 * dependent = "01"
 * relationship = $subscriber-relationship#self
 * relationship.text = "Self"
 * period.start = "2020-01-01"
-* payor = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* payor = Reference(Payer2) "UPMC Health Plan"
 * class[0].type = $coverage-class#group "Group"
 * class[=].type.text = "An employee group"
 * class[=].value = "MCHMO1"
