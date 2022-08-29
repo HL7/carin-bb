@@ -38,17 +38,20 @@ Usage: #example
 * item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
 * item[0].revenue = AHANUBCRevenueCodes#Dummy
 * item[0].servicedDate = "2019-11-02"
-* adjudication[adjudicationamounttype][0].category = C4BBAdjudication#paidtoprovider
-* adjudication[adjudicationamounttype][0].category.text = "Payment Amount"
-* adjudication[adjudicationamounttype][0].amount.value = 620.00
-* adjudication[adjudicationamounttype][0].amount.currency = #USD
-* adjudication[adjudicationamounttype][1].category = C4BBAdjudication#paidbypatient
-* adjudication[adjudicationamounttype][1].category.text = "Patient Pay Amount"
-* adjudication[adjudicationamounttype][1].amount.value = 0.00
-* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
-* adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
-* adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
+// Header-Level adjudication only
+* adjudication[adjudicationamounttype][0]
+  * category = C4BBAdjudication#paidtoprovider
+  * category.text = "Payment Amount"
+  * amount.value = 620.00
+  * amount.currency = #USD
+* adjudication[adjudicationamounttype][1]
+  * category = C4BBAdjudication#paidbypatient
+  * category.text = "Patient Pay Amount"
+  * amount.value = 0.00
+* adjudication[billingnetworkcontractingstatus]
+  * reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[benefitpaymentstatus]
+  * reason = C4BBPayerAdjudicationStatus#innetwork
 
 * total[adjudicationamounttype][2].amount.currency = #USD
 * total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider

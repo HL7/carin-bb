@@ -55,6 +55,7 @@ Usage: #example
 * diagnosis[=].type.text = "Required when other conditions coexist or develop subsequently during the treatment"
 * insurance.focal = true
 * insurance.coverage = Reference(Coverage1)
+// Item-Level adjudication only
 * item[0]
   * sequence = 1
   * revenue = $RevenueCodes#0551
@@ -165,6 +166,3 @@ Usage: #example
   * category.text = "The amount of the member's liability."
   * amount.value = 0
   * amount.currency = #USD
-* adjudication[benefitpaymentstatus]
-  * category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
-  * reason = C4BBPayerAdjudicationStatus#outofnetwork
