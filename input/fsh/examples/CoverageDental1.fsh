@@ -12,15 +12,15 @@ Usage: #example
 * status = #active
 * type = $v3-ActCode#DENTAL
 * type.text = "dental care policy"
-* policyHolder = Reference(Patient1)
-* subscriber = Reference(Patient1)
+* policyHolder = Reference(Patient2)
+* subscriber = Reference(Patient2)
 * subscriberId = "10300007"
-* beneficiary = Reference(Patient1)
+* beneficiary = Reference(Patient2)
 * dependent = "01"
 * relationship = $subscriber-relationship#self
 * period.start = "2021-01-01"
 * period.end = "2021-12-31"
-* payor = Reference(OrganizationDentalPayer1)
+* payor = Reference(DentalPayer1)
 * class[0].type = $coverage-class#group
 * class[=].type.text = "An employee group"
 * class[=].value = "10300007"

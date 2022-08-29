@@ -15,11 +15,11 @@ Usage: #example
 * subType = $C4BBInstitutionalClaimSubType#inpatient
 * subType.text = "Inpatient"
 * use = #claim
-* patient = Reference(ExamplePatient1)
+* patient = Reference(Patient1)
 * billablePeriod.start = "2017-05-23"
 * billablePeriod.end = "2017-05-23"
 * created = "2017-06-01T00:00:00-04:00"
-* insurer = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* insurer = Reference(Payer2) "UPMC Health Plan"
 * provider = Reference(ProviderOrganization3)
 * payee.type = $payeetype#provider "Provider"
 * payee.type.text = "Any benefit payable will be paid to the provider (Assignment of Benefit)."
@@ -71,7 +71,7 @@ Usage: #example
 * procedure[=].date = "2017-05-23"
 * procedure[=].procedureCodeableConcept = $ICD10#B215YZZ
 * insurance.focal = true
-* insurance.coverage = Reference(CoverageEx2)
+* insurance.coverage = Reference(Coverage2)
 * item[0].sequence = 1
 * item[=].revenue = $RevenueCodes#0301
 * item[=].productOrService = $cpt#99231

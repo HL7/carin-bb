@@ -14,12 +14,12 @@ Usage: #example
 * type.text = "Pharmacy"
 * use = #claim
 * created = "2019-07-02T00:00:00+00:00"
-* insurer = Reference(OrganizationPayer1)
+* insurer = Reference(Payer1)
 * insurer.display = "XXX Health Plan"
-* patient = Reference(Patient1)
+* patient = Reference(Patient2)
 * billablePeriod.start = "2019-10-30"
 * billablePeriod.end = "2019-10-31"
-* provider = Reference(OrganizationProvider1)
+* provider = Reference(ProviderOrganization1)
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * insurance[0].focal = true

@@ -14,9 +14,9 @@ Usage: #example
 * type.text = "Oral"
 * use = #claim
 * created = "2021-03-18T10:23:00-05:00"
-* insurer = Reference(OrganizationDentalPayer1)
+* insurer = Reference(DentalPayer1)
 * insurer.display = "XXX Health Plan"
-* patient = Reference(Patient1)
+* patient = Reference(Patient2)
 * billablePeriod.start = "2021-03-01"
 * billablePeriod.end = "2021-03-31"
 * provider = Reference(PractitionerDentalProvider1)
@@ -77,7 +77,7 @@ Usage: #example
 * supportingInfo[clmrecvddate].sequence = 3
 * supportingInfo[servicefacility].category = C4BBSupportingInfoType#servicefacility
 * supportingInfo[servicefacility].sequence = 4
-* supportingInfo[servicefacility].valueReference = Reference(OrganizationProvider1)
+* supportingInfo[servicefacility].valueReference = Reference(ProviderOrganization1)
 
 
 * supportingInfo[patientaccountnumber].category  = C4BBSupportingInfoType#patientaccountnumber

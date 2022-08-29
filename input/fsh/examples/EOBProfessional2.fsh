@@ -14,11 +14,11 @@ Usage: #example
 * type = $claim-type#professional
 * type.text = "Professional"
 * use = #claim
-* patient = Reference(ExamplePatient1)
+* patient = Reference(Patient1)
 * billablePeriod.start = "2020-08-04"
 * billablePeriod.end = "2020-08-04"
 * created = "2020-08-24T00:00:00-04:00"
-* insurer = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* insurer = Reference(Payer2) "UPMC Health Plan"
 * provider = Reference(ProviderOrganization1)
 * payee.type = $payeetype#provider "Provider"
 * payee.type.text = "Any benefit payable will be paid to the provider (Assignment of Benefit)."
@@ -45,7 +45,7 @@ Usage: #example
 * diagnosis[=].type = $C4BBClaimDiagnosisType#secondary "secondary"
 * diagnosis[=].type.text = "Required when necessary to report additional diagnoses on professional and non-clinician claims"
 * insurance.focal = true
-* insurance.coverage = Reference(CoverageEx1)
+* insurance.coverage = Reference(Coverage1)
 * item[0].sequence = 1
 * item[=].productOrService = $cpt#75710
 * item[=].servicedDate = "2020-08-04"
