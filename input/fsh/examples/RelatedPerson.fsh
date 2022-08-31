@@ -6,10 +6,6 @@ Usage: #example
 * meta.lastUpdated = "2020-05-04T03:02:01-04:00"
 * meta.profile[+] = Canonical(C4BBRelatedPerson|1.2.0)
 * active = true
-* identifier.type = $v2-0203#NPI "National Provider Identifier"
-* identifier.type.text = "National Provider Identifier"
-* identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "7778889990"
 * patient = Reference(Patient1)
 * name[0].family = "Example1"
 * name[0].given[0] = "Mary"
