@@ -10,7 +10,7 @@ puts "JSONInput = ./output"
 puts "FSHInput = ./fshoutput/input/fsh/instances"
 puts "MDOutput = ./input/pagecontent"
 jsoninputfiles = Dir.glob("./output/*.json").map{ |json| json.split("/")[2]}
-skiptypes = ["ConceptMap", "StructureDefinition", "ValueSet", "CodeSystem", "CapabilityStatement", "OperationOutcome"]
+skiptypes = ["ConceptMap", "StructureDefinition", "ValueSet", "CodeSystem", "CapabilityStatement", "OperationOutcome", "SearchParameter"]
 jsoninputfiles.each {|json|
   next if json.count("-") < 1
   filetype = json.split("-")[0]
