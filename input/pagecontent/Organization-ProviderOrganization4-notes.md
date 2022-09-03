@@ -1,8 +1,8 @@
 ```
 Instance: ProviderOrganization4
 InstanceOf: Organization
-Title: "Provider Organization Example 4"
-Description: "Provider Organization Example 4"
+Title: "Provider Organization 4"
+Description: "Provider Organization 4"
 Usage: #example
 * meta.lastUpdated = "2020-05-04T03:02:01-04:00"
 * meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|1.2.0"

@@ -61,6 +61,7 @@
 <artifact id="ValueSet/C4BBProfessionalAndNonClinicianClaimType" key="ValueSet-C4BBProfessionalAndNonClinicianClaimType" name="C4BB Professional And Non Clinician Claim Type"/>
 <artifact id="ValueSet/C4BBRelatedClaimRelationshipCodes" key="ValueSet-C4BBRelatedClaimRelationshipCodes" name="C4BB Related Claim Relationship Codes"/>
 <artifact id="CodeSystem/C4BBRelatedClaimRelationshipCodes" key="CodeSystem-C4BBRelatedClaimRelationshipCodes" name="C4BB Related Claim Relationship Codes"/>
+<artifact id="StructureDefinition/C4BB-RelatedPerson" key="StructureDefinition-C4BB-RelatedPerson" name="C4BB RelatedPerson"/>
 <artifact id="CodeSystem/C4BBSupportingInfoType" key="CodeSystem-C4BBSupportingInfoType" name="C4BB Supporting Info Type"/>
 <artifact id="ValueSet/C4BBSupportingInfoType" key="ValueSet-C4BBSupportingInfoType" name="C4BB SupportingInfo Type"/>
 <artifact id="ValueSet/C4BBTotalCategoryDiscriminator" key="ValueSet-C4BBTotalCategoryDiscriminator" name="C4BB Total Category Discriminator"/>
@@ -156,6 +157,7 @@
 <artifact id="Organization/ProviderOrganization4" key="Organization-ProviderOrganizationEx4" name="Provider Organization 4"/>
 <artifact id="Organization/ProviderOrganization5" key="Organization-ProviderOrganizationEx5" name="Provider Organization 5"/>
 <artifact id="Organization/ProviderOrganization6" key="Organization-ProviderOrganizationEx6" name="Provider Organization 6"/>
+<artifact id="RelatedPerson/RelatedPerson1" key="RelatedPerson-RelatedPerson1" name="Related Person 1"/>
 <artifact id="ValueSet/C4BBSurfaceCodes" key="ValueSet-C4BBSurfaceCodes" name="US Surface Codes Set"/>
 <artifact id="CodeSystem/C4BBSurfaceCodes" key="CodeSystem-C4BBSurfaceCodes" name="US Surface Codes System"/>
 <artifact id="CodeSystem/X12ClaimAdjustmentReasonCodes" key="CodeSystem-X12ClaimAdjustmentReasonCodes" name="X12 Claim Adjustment Reason Codes"/>

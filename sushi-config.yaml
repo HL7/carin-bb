@@ -207,3 +207,7 @@ resources:
     name: Dental Provider 1
     description: Dental Provider 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner
+  RelatedPerson/RelatedPerson1:
+    name: Related Person 1
+    description: Related Person 1
+    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-RelatedPerson

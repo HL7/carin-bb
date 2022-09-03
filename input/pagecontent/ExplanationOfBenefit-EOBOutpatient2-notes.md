@@ -1,8 +1,8 @@
 ```
-Instance: OutpatientEOBExample1
+Instance: EOBOutpatient2
 InstanceOf: ExplanationOfBenefit
-Title: "EOB Outpatient Institutional - Example 1"
-Description: "EOB Outpatient Institutional - Example 1"
+Title: "EOB Outpatient Institutional - Example 2"
+Description: "EOB Outpatient Institutional - Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-13T11:10:24-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
@@ -17,11 +17,11 @@ Usage: #example
 * subType = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBInstitutionalClaimSubType#outpatient
   * text = "Outpatient"
 * use = #claim
-* patient = Reference(ExamplePatient1)
+* patient = Reference(Patient1)
 * billablePeriod.start = "2020-09-29"
 * billablePeriod.end = "2020-09-29"
 * created = "2020-10-10T00:00:00-04:00"
-* insurer = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* insurer = Reference(Payer2) "UPMC Health Plan"
 * provider = Reference(ProviderOrganization5)
 * payee.type = http://terminology.hl7.org/CodeSystem/payeetype#provider "Provider"
   * text = "Any benefit payable will be paid to the provider (Assignment of Benefit)."
@@ -35,12 +35,9 @@ Usage: #example
 * careTeam[=].provider = Reference(Practitioner3)
 * careTeam[=].role = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimCareTeamRole#referring "Referring"
   * text = "The referring physician"
-* supportingInfo[0].sequence = 2
-* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[=].code = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#outofnetwork
-* supportingInfo[+].sequence = 1
-* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#clmrecvddate
-* supportingInfo[=].timingDate = "2020-10-10"
+* supportingInfo.sequence = 1
+* supportingInfo.category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#clmrecvddate
+* supportingInfo.timingDate = "2020-10-10"
 * diagnosis[0].sequence = 1
 * diagnosis[=].diagnosisCodeableConcept = http://hl7.org/fhir/sid/icd-10-cm#I95.1
 * diagnosis[=].type = http://terminology.hl7.org/CodeSystem/ex-diagnosistype#principal "Principal Diagnosis"
@@ -58,7 +55,7 @@ Usage: #example
 * diagnosis[=].type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType#other "Other"
   * text = "Required when other conditions coexist or develop subsequently during the treatment"
 * insurance.focal = true
-* insurance.coverage = Reference(CoverageEx1)
+* insurance.coverage = Reference(Coverage1)
 * item[0].sequence = 1
 * item[=].revenue = https://www.nubc.org/CodeSystem/RevenueCodes#0551
 * item[=].productOrService = http://www.ama-assn.org/go/cpt#99231
@@ -103,6 +100,8 @@ Usage: #example
   * text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * item[=].adjudication[=].amount.value = 0
 * item[=].adjudication[=].amount.currency = #USD
+* adjudication.category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication.reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
 * total[0].category = http://terminology.hl7.org/CodeSystem/adjudication#eligible "Eligible Amount"
 * total[=].category.text = "Amount of the change which is considered for adjudication."
 * total[=].amount.value = 56.52

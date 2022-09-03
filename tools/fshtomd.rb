@@ -10,18 +10,21 @@ puts "JSONInput = ./output"
 puts "FSHInput = ./fshoutput/input/fsh/instances"
 puts "MDOutput = ./input/pagecontent"
 jsoninputfiles = Dir.glob("./output/*.json").map{ |json| json.split("/")[2]}
-binding.pry
-puts jsoninputfiles
-skiptypes = ["ConceptMap", "StructureDefinition", "ValueSet", "CodeSystem", "CapabilityStatement", "OperationOutcome"]
+skiptypes = ["ConceptMap", "StructureDefinition", "ValueSet", "CodeSystem", "CapabilityStatement", "OperationOutcome", "SearchParameter"]
 jsoninputfiles.each {|json|
-  puts json
-  # next if json.count("-") < 1
+  next if json.count("-") < 1
   filetype = json.split("-")[0]
   next if skiptypes.include?(filetype)
-  instancename = (json.split("-")[1] + "-" + json.split("-")[2]).split(".")[0]
+  instancename = ( json.split("-")[1]).split(".")[0]
+  if filetype == "SearchParameter"
+    instancename = ( json.split("-")[1] + "-" + json.split("-")[2]).split(".")[0]
+  end
   fsh = "fshoutput/input/fsh/instances/" + instancename + ".fsh"
-  puts instancename
   notes_file_name = filetype + "-" + instancename + "-notes.md"
+  if !File.exists?(fsh)
+    puts "FSH file " + fsh + " does not exist (json = " + json + ") !"
+    next
+  end
   fshcontent = File.read(fsh)
   md = "input/pagecontent/" + notes_file_name
   mdfile = File.open(md, "w")

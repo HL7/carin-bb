@@ -1,7 +1,7 @@
 ```
-Instance: OrganizationDentalPayer1
+Instance: DentalPayer1
 InstanceOf: Organization
-Title: "OrganizationDentalPayer1"
+Title: "Dental Payer1"
 Description: "Dental Payer1"
 Usage: #example
 * meta.lastUpdated = "2021-01-01T10:23:11+00:00"

@@ -1,8 +1,8 @@
 ```
-Instance: ProfessionalEOBExample1
+Instance: EOBProfessional2
 InstanceOf: ExplanationOfBenefit
-Title: "EOB Professional - Example 1"
-Description: "EOB Professional - Example 1"
+Title: "EOB Professional - Example 2"
+Description: "EOB Professional - Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-20T14:46:05-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
@@ -15,11 +15,11 @@ Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/claim-type#professional
   * text = "Professional"
 * use = #claim
-* patient = Reference(ExamplePatient1)
+* patient = Reference(Patient1)
 * billablePeriod.start = "2020-08-04"
 * billablePeriod.end = "2020-08-04"
 * created = "2020-08-24T00:00:00-04:00"
-* insurer = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* insurer = Reference(Payer2) "UPMC Health Plan"
 * provider = Reference(ProviderOrganization1)
 * payee.type = http://terminology.hl7.org/CodeSystem/payeetype#provider "Provider"
   * text = "Any benefit payable will be paid to the provider (Assignment of Benefit)."
@@ -46,7 +46,7 @@ Usage: #example
 * diagnosis[=].type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType#secondary "secondary"
   * text = "Required when necessary to report additional diagnoses on professional and non-clinician claims"
 * insurance.focal = true
-* insurance.coverage = Reference(CoverageEx1)
+* insurance.coverage = Reference(Coverage1)
 * item[0].sequence = 1
 * item[=].productOrService = http://www.ama-assn.org/go/cpt#75710
 * item[=].servicedDate = "2020-08-04"

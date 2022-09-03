@@ -1,8 +1,8 @@
 ```
 Instance: EOBPharmacy1
 InstanceOf: ExplanationOfBenefit
-Title: "EOBPharmacy1"
-Description: "EOB PHarmacy Example1"
+Title: "EOB Pharmacy Example1"
+Description: "EOB Pharmacy Example1"
 Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy|1.2.0"
@@ -14,12 +14,12 @@ Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/claim-type#pharmacy
   * text = "Pharmacy"
 * use = #claim
-* patient = Reference(Patient1)
+* patient = Reference(Patient2)
 * billablePeriod.start = "2019-10-30"
 * billablePeriod.end = "2019-10-31"
 * created = "2019-07-02T00:00:00+00:00"
-* insurer = Reference(OrganizationPayer1) "XXX Health Plan"
-* provider = Reference(OrganizationProvider1) "XXX Health Plan"
+* insurer = Reference(Payer1) "XXX Health Plan"
+* provider = Reference(ProviderOrganization1) "XXX Health Plan"
 * outcome = #partial
 * supportingInfo[0].sequence = 8
 * supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#dayssupply
@@ -33,9 +33,6 @@ Usage: #example
 * supportingInfo[+].sequence = 5
 * supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#refillsauthorized
 * supportingInfo[=].valueQuantity.value = 0
-* supportingInfo[+].sequence = 10
-* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[=].code = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
 * supportingInfo[+].sequence = 2
 * supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#brandgenericindicator
 * supportingInfo[=].code = http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator#2
@@ -68,8 +65,10 @@ Usage: #example
 * item.adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#paidtoprovider
 * item.adjudication[=].amount.value = 20
 * item.adjudication[=].amount.currency = #USD
-* adjudication.category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication.reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#contracted
+* adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
+* adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#contracted
 * total[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#paidtoprovider
 * total[=].category.text = "Payment Amount"
 * total[=].amount.value = 620

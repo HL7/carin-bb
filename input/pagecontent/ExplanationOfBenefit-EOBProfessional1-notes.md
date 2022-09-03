@@ -1,8 +1,8 @@
 ```
-Instance: EOBProfessional1a
+Instance: EOBProfessional1
 InstanceOf: ExplanationOfBenefit
-Title: "EOBProfessional1a"
-Description: "EOB Professional  Example1"
+Title: "EOB Professional - Example 1"
+Description: "EOB Professional - Example 1"
 Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|1.2.0"
@@ -14,19 +14,19 @@ Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/claim-type#professional
   * text = "Professional"
 * use = #claim
-* patient = Reference(Patient1)
+* patient = Reference(Patient2)
 * billablePeriod.start = "2019-01-01"
 * billablePeriod.end = "2019-10-31"
 * created = "2019-07-02T00:00:00+00:00"
-* insurer = Reference(OrganizationPayer1) "XXX Health Plan"
-* provider = Reference(OrganizationProvider1) "XXX Health Plan"
+* insurer = Reference(Payer1) "XXX Health Plan"
+* provider = Reference(ProviderOrganization1) "XXX Health Plan"
 * outcome = #partial
 * supportingInfo[0].sequence = 3
 * supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[=].timingDate = "2011-05-30"
 * supportingInfo[+].sequence = 4
 * supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#servicefacility
-* supportingInfo[=].valueReference = Reference(OrganizationProvider1)
+* supportingInfo[=].valueReference = Reference(ProviderOrganization1)
 * supportingInfo[+].sequence = 5
 * supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#medicalrecordnumber
 * supportingInfo[=].valueString = "1234-234-1243-12345678901m"

@@ -1,8 +1,8 @@
 ```
-Instance: ExamplePatient1
+Instance: Patient2
 InstanceOf: Patient
-Title: "Patient Example 1"
-Description: "Patient Example 1"
+Title: "Patient Example 2"
+Description: "Patient Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-30T09:48:01.8512764-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
@@ -12,7 +12,7 @@ Usage: #example
   * text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
 * identifier.system = "https://www.upmchealthplan.com/fhir/memberidentifier"
 * identifier.value = "88800933501"
-* identifier.assigner = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* identifier.assigner = Reference(Payer2) "UPMC Health Plan"
 * active = true
 * name.family = "Test"
 * name.given = "Member 01"
@@ -59,5 +59,5 @@ Usage: #example
 * communication.language = urn:ietf:bcp:47#en
   * text = "English"
 * communication.preferred = true
-* managingOrganization = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* managingOrganization = Reference(Payer2) "UPMC Health Plan"
 ```

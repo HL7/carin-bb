@@ -1,8 +1,8 @@
 ```
-Instance: InpatientEOBExample1
+Instance: EOBInpatient2
 InstanceOf: ExplanationOfBenefit
-Title: "EOB Inpatient Institutional - Example 1"
-Description: "EOB Inpatient Institutional - Example 1"
+Title: "EOB Inpatient Example 2"
+Description: "EOB Inpatient Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-04-28T15:39:36-04:00"
 * meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.2.0"
@@ -16,11 +16,11 @@ Usage: #example
 * subType = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBInstitutionalClaimSubType#inpatient
   * text = "Inpatient"
 * use = #claim
-* patient = Reference(ExamplePatient1)
+* patient = Reference(Patient1)
 * billablePeriod.start = "2017-05-23"
 * billablePeriod.end = "2017-05-23"
 * created = "2017-06-01T00:00:00-04:00"
-* insurer = Reference(PayerOrganizationExample1) "UPMC Health Plan"
+* insurer = Reference(Payer2) "UPMC Health Plan"
 * provider = Reference(ProviderOrganization3)
 * payee.type = http://terminology.hl7.org/CodeSystem/payeetype#provider "Provider"
   * text = "Any benefit payable will be paid to the provider (Assignment of Benefit)."
@@ -37,9 +37,6 @@ Usage: #example
 * supportingInfo[0].sequence = 2
 * supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#admissionperiod
 * supportingInfo[=].timingPeriod.start = "2017-05-23"
-* supportingInfo[+].sequence = 3
-* supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#benefitpaymentstatus
-* supportingInfo[=].code = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
 * supportingInfo[+].sequence = 1
 * supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[=].timingDate = "2017-06-01"
@@ -75,7 +72,7 @@ Usage: #example
 * procedure[=].date = "2017-05-23"
 * procedure[=].procedureCodeableConcept = http://www.cms.gov/Medicare/Coding/ICD10#B215YZZ
 * insurance.focal = true
-* insurance.coverage = Reference(CoverageEx2)
+* insurance.coverage = Reference(Coverage2)
 * item[0].sequence = 1
 * item[=].revenue = https://www.nubc.org/CodeSystem/RevenueCodes#0301
 * item[=].productOrService = http://www.ama-assn.org/go/cpt#99231
@@ -154,7 +151,9 @@ Usage: #example
 * item[=].servicedPeriod.start = "2017-05-23"
 * item[=].locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#21
   * text = "HOSPITAL - INPATIENT HOSPITAL"
-* adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#outofnetwork
+* adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
 * adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#contracted "Contracted"
   * text = "Indicates the provider was contracted for the service"
 * adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#noncovered "Noncovered"
