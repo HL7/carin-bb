@@ -142,6 +142,7 @@ def main():
                 conditionalUpdate=r.conditionalUpdate if r.conditionalUpdate not in none_list else None,
                 conditionalDelete=r.conditionalDelete if r.conditionalDelete not in none_list else None,
                 referencePolicy=[re.sub('\s+','',x) for x in r.referencePolicy.split(",") if x],
+                # Known issue, this combines SHALL and SHOULD Search includes and will not allow the ability to express the capability expectation. Correction afterward is necessary
                 searchInclude=[re.sub('\s+','',x) for x in r.shall_include.split(
                     ",") + r.should_include.split(",") if x],
                 searchRevInclude=[re.sub('\s+','',x) for x in r.shall_revinclude.split(
@@ -216,10 +217,8 @@ def main():
     sp_map = {sp.code: sp.type for sp in df_sp.itertuples(index=True)}
     sp_url_map  = {sp.code: sp.rel_url for sp in df_sp.itertuples(index=True)}
     pname_map = {p.Profile: p.Name for p in df_profiles.itertuples(index=True)}
-    #if (hasattr(p.Profile , 'url')):
+    
     purl_map = {p.Profile:p.url if hasattr(p.Profile , 'url') and p.url not in none_list else p.Profile for p in df_profiles.itertuples(index=True)}
-    #else:
-    #    purl_map=''
         
     print(pname_map)
 
@@ -348,9 +347,9 @@ def create_capabilitystatement(meta, canon, publisher, publisher_endpoint, xls):
         "xml",
         "json"
     ]
-    cs.patchFormat = [
-        "application/json-patch+json",
-    ]
+    #cs.patchFormat = [
+    #    "application/json-patch+json",
+    #]
     cs.implementationGuide = meta.ig.split(",") + get_igs(xls)
 
     return cs

@@ -22,6 +22,7 @@
 <artifact id="CodeSystem/C4BBAdjudication" key="CodeSystem-C4BBAdjudication" name="C4BB Adjudication"/>
 <artifact id="ValueSet/C4BBAdjudicationCategoryDiscriminator" key="ValueSet-C4BBAdjudicationCategoryDiscriminator" name="C4BB Adjudication Category Discriminator"/>
 <artifact id="CodeSystem/C4BBAdjudicationDiscriminator" key="CodeSystem-C4BBAdjudicationDiscriminator" name="C4BB Adjudication Discriminator"/>
+<artifact id="CapabilityStatement/c4bb-new" key="CapabilityStatement-c4bb" name="C4BB CapabilityStatement"/>
 <artifact id="CapabilityStatement/c4bb" key="CapabilityStatement-c4bb" name="C4BB CapabilityStatement"/>
 <artifact id="CodeSystem/C4BBClaimCareTeamRole" key="CodeSystem-C4BBClaimCareTeamRole" name="C4BB Claim Care Team Role"/>
 <artifact id="CodeSystem/C4BBClaimDiagnosisType" key="CodeSystem-C4BBClaimDiagnosisType" name="C4BB Claim Diagnosis Type"/>
