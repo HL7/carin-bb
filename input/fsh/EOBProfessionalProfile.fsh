@@ -91,17 +91,17 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.adjudication MS
 * item.adjudication contains
    adjudicationamounttype 1..* MS and
-   denialreason 0..1 MS and
+   adjustmentreason 0..1 MS and
    benefitpaymentstatus 1..1 MS and
    allowedunits 0..1 MS
 
 * item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
-* item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason
-* item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
-* item.adjudication[denialreason].reason 1..1 MS
-* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
+* item.adjudication[adjustmentreason].category  = C4BBAdjudicationDiscriminator#adjustmentreason
+* item.adjudication[adjustmentreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
+* item.adjudication[adjustmentreason].reason 1..1 MS
+* item.adjudication[adjustmentreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
@@ -128,7 +128,7 @@ If the service facility is not assigned an NPI, this data element will not be po
 * adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * adjudication[renderingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
-* item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+* item.adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * item.adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"

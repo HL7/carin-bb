@@ -177,7 +177,8 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #allowedunits	"allowed units" "defines the adjudication slice to define allowed units"
 // 20210201 CAS: Removed as not used as a discriminator (the CodeSystem C4BBPayerBenefitPaymentStatus is used for this slice), Change ipart of FHIR-30635 - Update Benefit Payment Status slice name ,cardinality and must support
 //* #inoutnetwork "in or Out of Network" "defines the adjudication and item.adjudication slice to indicate whether a claim was adjudicatd in or out of network"
-* #denialreason "Denial Reason" "defines the adjudication slice to identify the denial reason"
+* #adjustmentreason "Adjustment Reason" "Defines the adjudication slice to identify the adjustment reason"
+* #rejectreason "Reject Reason" "Defines the adjudication slice to identify the reject reason"
 * #billingnetworkcontractingstatus	"Billing Network Contracting Status"       "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."
 * #renderingnetworkcontractingstatus	"Rendering Network Contracting Status" "Indicates that the Rendering Provider has a contract with the Payer as of the effective date of service or admission."
 * #benefitpaymentstatus "Benefit Payment Status" "Indicates the in network or out of network payment status of the claim."

@@ -96,17 +96,17 @@ The claims data is based on submission standards adopted by the Department of He
 * item.adjudication MS
 * item.adjudication contains
    adjudicationamounttype 1..* MS and
-   denialreason 0..1 MS
+   rejectreason 0..1 MS
 
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
 
-* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
-* item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason
-* item.adjudication[denialreason].reason from NCPDPRejectCode
-* item.adjudication[denialreason].reason 1..1 MS
+* item.adjudication[rejectreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
+* item.adjudication[rejectreason].category  = C4BBAdjudicationDiscriminator#rejectreason
+* item.adjudication[rejectreason].reason from NCPDPRejectCode
+* item.adjudication[rejectreason].reason 1..1 MS
 * insert TotalSlicing
 * total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total.category 1..1 MS
@@ -153,7 +153,7 @@ The claims data is based on submission standards adopted by the Department of He
 * adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service. (101)"
 * adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
-* item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount (92)"
+* item.adjudication[rejectreason] ^comment = "Reason codes used to interpret the Non-Covered Amount (92)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * identifier ^comment = "Assigned by the pharmacy at the time the prescription is filled (35)"
 * item.productOrService ^comment = "Values are NDC Codes (38) when Compound Code (78) = 0 or 1.  When the Compound Code = 2, productOrService = 'compound' and map the ingredient to ExplanationOfBenefit.item.detail.productOrService"
