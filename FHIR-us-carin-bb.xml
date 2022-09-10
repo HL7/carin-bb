@@ -22,6 +22,7 @@
 <artifact id="CodeSystem/C4BBAdjudication" key="CodeSystem-C4BBAdjudication" name="C4BB Adjudication"/>
 <artifact id="ValueSet/C4BBAdjudicationCategoryDiscriminator" key="ValueSet-C4BBAdjudicationCategoryDiscriminator" name="C4BB Adjudication Category Discriminator"/>
 <artifact id="CodeSystem/C4BBAdjudicationDiscriminator" key="CodeSystem-C4BBAdjudicationDiscriminator" name="C4BB Adjudication Discriminator"/>
+<artifact id="ValueSet/C4BBAmbulanceTransportReason" key="ValueSet-C4BBAmbulanceTransportReason" name="C4BB Ambulance Transport Reason Codes"/>
 <artifact id="CapabilityStatement/c4bb" key="CapabilityStatement-c4bb" name="C4BB CapabilityStatement"/>
 <artifact id="CodeSystem/C4BBClaimCareTeamRole" key="CodeSystem-C4BBClaimCareTeamRole" name="C4BB Claim Care Team Role"/>
 <artifact id="CodeSystem/C4BBClaimDiagnosisType" key="CodeSystem-C4BBClaimDiagnosisType" name="C4BB Claim Diagnosis Type"/>
@@ -65,6 +66,7 @@
 <artifact id="CodeSystem/C4BBSupportingInfoType" key="CodeSystem-C4BBSupportingInfoType" name="C4BB Supporting Info Type"/>
 <artifact id="ValueSet/C4BBSupportingInfoType" key="ValueSet-C4BBSupportingInfoType" name="C4BB SupportingInfo Type"/>
 <artifact id="ValueSet/C4BBTotalCategoryDiscriminator" key="ValueSet-C4BBTotalCategoryDiscriminator" name="C4BB Total Category Discriminator"/>
+<artifact id="ValueSet/C4BBTransportationServiceCategories" key="ValueSet-C4BBTransportationServiceCategories" name="C4BB Transportation Services Categories"/>
 <artifact id="ValueSet/CMSPlaceofServiceCodes" key="ValueSet-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS)"/>
 <artifact id="CodeSystem/CMSPlaceofServiceCodes" key="CodeSystem-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS)"/>
 <artifact id="Coverage/Coverage1" key="Coverage-Coverage1" name="Coverage Example 1"/>
@@ -86,6 +88,7 @@
 <artifact id="ExplanationOfBenefit/EOBPharmacy1" key="ExplanationOfBenefit-EOBPharmacy1" name="EOB Pharmacy Example1"/>
 <artifact id="ExplanationOfBenefit/EOBProfessional1" key="ExplanationOfBenefit-EOBProfessionalEx1" name="EOB Professional - Example 1"/>
 <artifact id="ExplanationOfBenefit/EOBProfessional2" key="ExplanationOfBenefit-EOBProfessional2" name="EOB Professional - Example 2"/>
+<artifact id="ExplanationOfBenefit/EOBProfessionalTransportation1" key="ExplanationOfBenefit-EOBProfessionalTransportation1" name="EOB Professional - Transportation 1"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBOral1a" key="ExplanationOfBenefit-EOBOral1a" name="EOBOral1a"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBOutpatientInstitutional1" key="ExplanationOfBenefit-EOBOutpatientInstitutional1" name="EOBOutpatientInstitutional1"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBProfessional1a" key="ExplanationOfBenefit-EOBProfessional1a" name="EOBProfessional1a"/>
@@ -157,6 +160,7 @@
 <artifact id="Organization/ProviderOrganization4" key="Organization-ProviderOrganizationEx4" name="Provider Organization 4"/>
 <artifact id="Organization/ProviderOrganization5" key="Organization-ProviderOrganizationEx5" name="Provider Organization 5"/>
 <artifact id="Organization/ProviderOrganization6" key="Organization-ProviderOrganizationEx6" name="Provider Organization 6"/>
+<artifact id="Organization/ProviderTransportationOrganization1" key="Organization-ProviderTransportationOrganization1" name="Provider Transportation Organization Example 1"/>
 <artifact id="RelatedPerson/RelatedPerson1" key="RelatedPerson-RelatedPerson1" name="Related Person 1"/>
 <artifact id="ValueSet/C4BBSurfaceCodes" key="ValueSet-C4BBSurfaceCodes" name="US Surface Codes Set"/>
 <artifact id="CodeSystem/C4BBSurfaceCodes" key="CodeSystem-C4BBSurfaceCodes" name="US Surface Codes System"/>

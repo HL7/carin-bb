@@ -165,6 +165,13 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #prosthesis "Prosthesis" "Prosthesis replacement indicator."
 * #additionalbodysite "Additional Body Site" "Additional tooth number or oral cavity. Additional body sites are specific to line item and have to be linked by ExplanationOfBenefit.item.informationSequence."
 * #missingtoothnumber "Missing Tooth Number" "Missing tooth number."
+* #patientweight "Patient Weight" "Patient weight (for transportation services)"
+* #ambulancetransportreason "Ambulance Transport Reason" "Reason ambulance transport was needed (for transportation services)"
+* #transportationdistance "Transportation Distance" "Distance traveled (for transportation services)"
+* #roudtrippurpose "Round Trip Purpose" "Reason for round trip (for transportation services)"
+* #stretcherpurpose "Stretcher Purpose" "Purpose of using a stretcher (for transportation services)"
+* #pickuplocation "Pick-up Location" "Patient pick-up Location (for transportation services)"
+* #dropofflocation "Drop-off Location" "Patient drop-off location (for transportation services)"
 * ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 

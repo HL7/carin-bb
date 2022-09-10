@@ -138,6 +138,25 @@ Description: "Used as the discriminator for the types of supporting information 
 * codes from system C4BBSupportingInfoType
 * ^copyright = "This Valueset is not copyrighted."
 
+ValueSet: C4BBTransportationServiceCategories
+Title: "C4BB Transportation Services Categories"
+Description: "Transportation Services Supporting Info Category Codes" 
+* C4BBSupportingInfoType#patientweight
+* C4BBSupportingInfoType#ambulancetransportreason
+* C4BBSupportingInfoType#transportationdistance
+* C4BBSupportingInfoType#roudtrippurpose
+* C4BBSupportingInfoType#stretcherpurpose
+* C4BBSupportingInfoType#pickuplocation
+* C4BBSupportingInfoType#dropofflocation
+* ^copyright = "This Valueset is not copyrighted."
+
+ValueSet: C4BBAmbulanceTransportReason
+Title: "C4BB Ambulance Transport Reason Codes"
+Description: "Transportation Services Ambulatory Transport Reason Codes" 
+* codes from system $X12AmbulanceTransReas
+* ^copyright = "This Valueset is not copyrighted."
+
+
 // ************* @Saul - replaced with C4BB **************
 //ValueSet: PatientIdentifierType
 //Title: "Patient Identifier Type"
