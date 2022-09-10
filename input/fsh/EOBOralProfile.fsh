@@ -8,8 +8,8 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
 * obeys EOB-oral-meta-profile-version
 
-// TODO error with invariant
-//* obeys Oral-EOB-supportinginfo-bodysite-requires-line-item
+
+* obeys Oral-EOB-supportinginfo-bodysite-requires-line-item
 * obeys Oral-EOB-surface-subsite-requires-tooth-number
 
 * careTeam obeys EOB-prof-careTeam-practitioner
@@ -61,6 +61,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * supportingInfo[additionalbodysite] ^short = "Additional tooth number or oral cavity code"
 * supportingInfo[additionalbodysite].category = C4BBSupportingInfoType#additionalbodysite
 * supportingInfo[additionalbodysite].category MS
+* supportingInfo[additionalbodysite].sequence MS
 * supportingInfo[additionalbodysite].code 1..1 MS
 * supportingInfo[additionalbodysite].code from OralBodySite (required)
 
@@ -345,5 +346,5 @@ Severity:   #error
 
 Invariant:  Oral-EOB-supportinginfo-bodysite-requires-line-item
 Description: "supportingInfo repetitions with additional body site must be referred to by one or more repetitions of item.informationSequence"
-Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(item.informationSequence.distinct())"
+Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(%context.item.informationSequence.distinct())"
 Severity:   #error
