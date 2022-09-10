@@ -87,7 +87,6 @@
 <artifact id="ExplanationOfBenefit/EOBProfessional1" key="ExplanationOfBenefit-EOBProfessionalEx1" name="EOB Professional - Example 1"/>
 <artifact id="ExplanationOfBenefit/EOBProfessional2" key="ExplanationOfBenefit-EOBProfessional2" name="EOB Professional - Example 2"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBOral1a" key="ExplanationOfBenefit-EOBOral1a" name="EOBOral1a"/>
-<artifact id="ExplanationOfBenefit/EOBOral3" key="ExplanationOfBenefit-EOBOral3" name="EOBOral3"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBOutpatientInstitutional1" key="ExplanationOfBenefit-EOBOutpatientInstitutional1" name="EOBOutpatientInstitutional1"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBProfessional1a" key="ExplanationOfBenefit-EOBProfessional1a" name="EOBProfessional1a"/>
 <artifact id="SearchParameter/explanationofbenefit-care-team" key="SearchParameter-explanationofbenefit-care-team" name="ExplanationOfBenefit_Careteam"/>

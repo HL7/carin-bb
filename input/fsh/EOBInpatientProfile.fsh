@@ -135,7 +135,9 @@ Services."
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+/* removed - FHIR-38063 - Update Invariants to support contracting and benefit payment status move to EOB.adjudication
 * insert AdjudicationInvariant
+*/
 * insert AdjudicationSlicing
 * adjudication MS
 * item.adjudication  MS
