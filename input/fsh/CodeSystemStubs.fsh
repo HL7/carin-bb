@@ -790,7 +790,7 @@ Current codes can be obtained [here](https://www.cms.gov/Medicare/Coding/place-o
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain Place Of Service (POS) codes used throughout the US health care industry. The CMS POS codes are free to use without restriction."
 
 // ******** CARCs / RARCs ***************
-
+/*
 //  *** @ Saul - No change to CodeSystem CARCs ; RARCs are new
 CodeSystem: X12ClaimAdjustmentReasonCodes
 Title: "X12 Claim Adjustment Reason Codes"
@@ -825,7 +825,7 @@ Additional information on X12 licensing program can be found here:
 **Purchasing Information:**
 
 To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com."
-
+*/
 CodeSystem: CMSRemittanceAdviceRemarkCodes
 Title: "X12 Remittance Advice Remark Codes"
 Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
