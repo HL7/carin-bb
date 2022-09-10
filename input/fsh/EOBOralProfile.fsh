@@ -8,8 +8,9 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
 * obeys EOB-oral-meta-profile-version
 
-// TODO error with invariant
-//* obeys Oral-EOB-supportinginfo-bodysite-requires-line-item
+
+* obeys Oral-EOB-supportinginfo-additionalbodysite-requires-line-item
+* obeys Oral-line-item-with-linked-additionalbody-site-requires-bodysite
 * obeys Oral-EOB-surface-subsite-requires-tooth-number
 
 * careTeam obeys EOB-prof-careTeam-practitioner
@@ -61,6 +62,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * supportingInfo[additionalbodysite] ^short = "Additional tooth number or oral cavity code"
 * supportingInfo[additionalbodysite].category = C4BBSupportingInfoType#additionalbodysite
 * supportingInfo[additionalbodysite].category MS
+* supportingInfo[additionalbodysite].sequence MS
 * supportingInfo[additionalbodysite].code 1..1 MS
 * supportingInfo[additionalbodysite].code from OralBodySite (required)
 
@@ -343,7 +345,17 @@ Description: "If item.subsite (tooth surface) exists then tooth number is requir
 Expression: "item.where(subSite.exists() and (bodySite.where(coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0"
 Severity:   #error
 
-Invariant:  Oral-EOB-supportinginfo-bodysite-requires-line-item
+Invariant:  Oral-EOB-supportinginfo-additionalbodysite-requires-line-item
 Description: "supportingInfo repetitions with additional body site must be referred to by one or more repetitions of item.informationSequence"
-Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(item.informationSequence.distinct())"
+Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(%context.item.informationSequence)"
 Severity:   #error
+
+
+Invariant:  Oral-line-item-with-linked-additionalbody-site-requires-bodysite
+Description: "At least one item.bodySite needs to be present if an item.informationSequence references supportingInfo[additionalbodysite].sequence"
+//Expression: "item.where(informationSequence.intersect(%context.supportingInfo.where(category.coding.code = 'additionalbodysite').sequence).exists()).bodySite.exists()"
+Expression: "item.where(informationSequence.intersect(%context.supportingInfo.where(category.coding.code = 'additionalbodysite').sequence).exists()).where(bodySite.count() != count()).empty()"
+Severity:   #error
+
+
+//item.where(informationSequence.intersect(%context.supportingInfo.where(category.coding.code = 'additionalbodysite').sequence).exists()).where(bodySite.count() != count()).empty()
