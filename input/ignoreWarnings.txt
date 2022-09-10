@@ -1,5 +1,9 @@
 == Suppressed Messages ==
 
+# Approved US Core Variance for RelatedPerson profile (RelatedPerson profile not in US Core 3.1.1) - https://jira.hl7.org/browse/FHIR-38103
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-RelatedPerson').baseDefinition: US FHIR Usage rules require that all profiles on RelatedPerson derive from the core US profile
+
+
 # INFORMATION: The following code systems are external and not supported by terminology server, and cannot be validated in examples
 Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
 Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated
