@@ -7,6 +7,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)
 * obeys EOB-professional-nonclinician-meta-profile-version
+* obeys EOB-prof-all-transportation-supportinginfo-linked-to-line
 
 * careTeam obeys EOB-prof-careTeam-practitioner
 * careTeam.qualification MS
@@ -24,8 +25,14 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
    servicefacility 0..1 MS and
    // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
    medicalrecordnumber 0..1 MS and
-   patientaccountnumber 0..1 MS
-
+   patientaccountnumber 0..1 MS and
+   patientweight 0..* MS and
+   ambulancetransportreason 0..* MS and
+   transportationdistance 0..* MS and
+   roudtrippurpose 0..* MS and
+   stretcherpurpose 0..* MS and
+   pickuplocation 0..* MS and
+   dropofflocation 0..* MS
 
 * supportingInfo[clmrecvddate] ^short = "Claim received date"
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
@@ -46,6 +53,57 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * supportingInfo[patientaccountnumber] ^short = "Patient account number"
 * supportingInfo[patientaccountnumber].category = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString 1..1 MS
+
+
+* supportingInfo[patientweight].category = C4BBSupportingInfoType#patientweight
+* supportingInfo[patientweight].value[x] only Quantity
+* supportingInfo[patientweight].valueQuantity 1..1
+* supportingInfo[patientweight].valueQuantity.unit = "[lb_av]"
+* supportingInfo[patientweight].valueQuantity.system = "http://unitsofmeasure.org"
+* supportingInfo[patientweight].valueQuantity.value 1..1
+* supportingInfo[patientweight].code 0..0
+* supportingInfo[patientweight].timing[x] 0..0
+
+* supportingInfo[ambulancetransportreason].category = C4BBSupportingInfoType#ambulancetransportreason
+* supportingInfo[ambulancetransportreason].reason 1..1
+* supportingInfo[ambulancetransportreason].reason from C4BBAmbulanceTransportReason (required)
+* supportingInfo[ambulancetransportreason].code 0..0
+* supportingInfo[ambulancetransportreason].timing[x] 0..0
+
+* supportingInfo[transportationdistance].category = C4BBSupportingInfoType#transportationdistance
+* supportingInfo[transportationdistance].value[x] only Quantity
+* supportingInfo[transportationdistance].valueQuantity 1..1
+* supportingInfo[transportationdistance].valueQuantity.unit = "[mi_i]"
+* supportingInfo[transportationdistance].valueQuantity.system = "http://unitsofmeasure.org"
+* supportingInfo[transportationdistance].valueQuantity.value 1..1
+* supportingInfo[transportationdistance].code 0..0
+* supportingInfo[transportationdistance].timing[x] 0..0
+
+* supportingInfo[roudtrippurpose].category = C4BBSupportingInfoType#roudtrippurpose
+* supportingInfo[roudtrippurpose].value[x] only string
+* supportingInfo[roudtrippurpose].valueString 1..1
+* supportingInfo[roudtrippurpose].code 0..0
+* supportingInfo[roudtrippurpose].timing[x] 0..0
+
+* supportingInfo[stretcherpurpose].category = C4BBSupportingInfoType#stretcherpurpose
+* supportingInfo[stretcherpurpose].value[x] only string
+* supportingInfo[stretcherpurpose].valueString 1..1
+* supportingInfo[stretcherpurpose].code 0..0
+* supportingInfo[stretcherpurpose].timing[x] 0..0
+
+* supportingInfo[pickuplocation].category = C4BBSupportingInfoType#pickuplocation
+* supportingInfo[pickuplocation].value[x] only string
+* supportingInfo[pickuplocation].valueString 1..1
+* supportingInfo[pickuplocation].code 0..0
+* supportingInfo[pickuplocation].timing[x] 0..0
+
+* supportingInfo[dropofflocation].category = C4BBSupportingInfoType#dropofflocation
+* supportingInfo[dropofflocation].value[x] only string
+* supportingInfo[dropofflocation].valueString 1..1
+* supportingInfo[dropofflocation].code 0..0
+* supportingInfo[dropofflocation].timing[x] 0..0
+
+
 * careTeam.role from C4BBClaimProfessionalAndNonClinicianCareTeamRole   (required)  // was PayerProfessionalAndNonClinicianProviderRole
 * careTeam.role 1..1 MS
 * diagnosis 1..* MS
@@ -110,7 +168,10 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.adjudication[adjudicationamounttype].amount 1..1
 
 * item.adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* item.adjudication[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+* item.adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item.adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
+* item.adjudication[benefitpaymentstatus].reason 1..1 MS
+
 * insert TotalSlicing
 * total.category from C4BBAdjudication  (extensible)
 * total contains

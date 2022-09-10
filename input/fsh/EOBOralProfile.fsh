@@ -151,7 +151,9 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
 * item.adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* item.adjudication[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+* item.adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item.adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
+* item.adjudication[benefitpaymentstatus].reason 1..1 MS
 * insert TotalSlicing
 //* total.category from C4BBAdjudication  (extensible)
 * total contains

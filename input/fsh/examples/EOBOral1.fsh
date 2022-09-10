@@ -63,7 +63,8 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][0].amount.value = 190.00
 * item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
 
-* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
+* item[0].adjudication[benefitpaymentstatus][0].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item[0].adjudication[benefitpaymentstatus][0].reason = C4BBPayerAdjudicationStatus#innetwork
 * item[1].productOrService = ADADentalProcedureCode#D0120 "Periodic oral evaluation"
 * item[1].sequence = 2
 * item[1].servicedDate = "2021-03-18"
@@ -71,7 +72,9 @@ Usage: #example
 * item[1].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
 * item[1].adjudication[adjudicationamounttype][0].amount.value = 220.00
 * item[1].adjudication[adjudicationamounttype][0].amount.currency = #USD
-* item[1].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
+* item[1].adjudication[benefitpaymentstatus][0].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item[1].adjudication[benefitpaymentstatus][0].reason = C4BBPayerAdjudicationStatus#innetwork
+
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].timingDate = 2021-03-18
 * supportingInfo[clmrecvddate].sequence = 3

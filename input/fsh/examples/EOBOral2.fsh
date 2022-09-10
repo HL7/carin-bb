@@ -68,7 +68,8 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][=].amount.value = 150.00
 * item[0].adjudication[adjudicationamounttype][=].amount.currency = #USD
 
-* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
+* item[0].adjudication[benefitpaymentstatus][0].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item[0].adjudication[benefitpaymentstatus][0].reason = C4BBPayerAdjudicationStatus#innetwork
 
 
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
