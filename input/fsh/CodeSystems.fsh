@@ -11,12 +11,13 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #paidbypatient "Paid by patient" "The total amount paid by the patient without specifying the source."
 * #paidbypatientcash "Paid by patient - cash" "The amount paid by the patient using cash, check, or other personal account."
 * #paidbypatientother "Paid by patient - other" "The amount paid by the patient using a method different than cash (cash, check, or personal account) or health account."
+* #paidbypatienthealthaccount "Paid by patient - health account" "The amount paid by the patient using another method like HSA, HRA, FSA or other type of health account."
 * #paidtoprovider "Paid to provider" "The amount paid to the provider."
 * #paidtopatient "Paid to patient" "paid to patient"
 * #memberliability "Member liability" "The amount of the member's liability."
 * #discount "Discount" "The amount of the discount"
 * #drugcost "Drug cost" "Price paid for the drug excluding mfr or other discounts.  It typically is the sum of the following components: ingredient cost, dispensing fee, sales tax, and vaccine administration"
-* #paidbypatienthealthaccount "Paid by patient - health account" "The amount paid by the patient using another method like HSA, HRA, FSA or other type of health account."
+
 //* #paid "Paid" "paid"
 //* #denied "Denied"  "denied"
 * ^content = #complete
