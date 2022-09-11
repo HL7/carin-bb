@@ -150,9 +150,9 @@ Usage: #example
 * item[=].servicedPeriod.start = "2017-05-23"
 * item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
-* adjudication[billingnetworkcontractingstatus]
-  * reason = $C4BBPayerAdjudicationStatus#contracted "Contracted"
-  * reason.text = "Indicates the provider was contracted for the service"
+* adjudication[billingnetworkstatus]
+  * reason = $C4BBPayerAdjudicationStatus#innetwork "In Network"
+  * reason.text = "Indicates the provider was in network for the service"
 * adjudication[adjudicationamounttype]
   * category = $C4BBAdjudication#noncovered "Noncovered"
   * category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."

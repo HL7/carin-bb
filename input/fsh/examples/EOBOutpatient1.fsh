@@ -48,8 +48,8 @@ Usage: #example
   * category = C4BBAdjudication#paidbypatient
   * category.text = "Patient Pay Amount"
   * amount.value = 0.00
-* adjudication[billingnetworkcontractingstatus]
-  * reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[billingnetworkstatus]
+  * reason = C4BBPayerAdjudicationStatus#innetwork
 * adjudication[benefitpaymentstatus]
   * reason = C4BBPayerAdjudicationStatus#innetwork
 

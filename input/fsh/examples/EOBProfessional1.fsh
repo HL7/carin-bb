@@ -29,10 +29,10 @@ Usage: #example
 * insurance[+].focal = true
 * insurance[=].coverage[+] = Reference(Coverage1)
 
-* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
-* adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
-* adjudication[renderingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
+* adjudication[billingnetworkstatus].reason = C4BBPayerAdjudicationStatus#innetwork
+* adjudication[renderingnetworkstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkstatus
+* adjudication[renderingnetworkstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 * total[adjudicationamounttype][+].category = $C4BBAdjudicationCS#paidtoprovider
 * total[adjudicationamounttype][=].category.text = "Payment Amount"
 * total[adjudicationamounttype][=].amount.value = 620.00

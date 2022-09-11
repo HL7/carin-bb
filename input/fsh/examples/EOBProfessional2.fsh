@@ -232,10 +232,10 @@ Usage: #example
 * item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
 * item[=].adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[=].adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
-* adjudication.category = $C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus "Billing Network Contracting Status"
+* adjudication.category = $C4BBAdjudicationDiscriminator#billingnetworkstatus "Billing Network Status"
 * adjudication.category.text = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."
-* adjudication.reason = $C4BBPayerAdjudicationStatus#contracted "Contracted"
-* adjudication.reason.text = "Indicates the provider was contracted for the service"
+* adjudication.reason = $C4BBPayerAdjudicationStatus#innetwork "In Network"
+* adjudication.reason.text = "Indicates the provider was in network for the service"
 * total[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
 * total[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
 * total[adjudicationamounttype][=].amount.value = 820

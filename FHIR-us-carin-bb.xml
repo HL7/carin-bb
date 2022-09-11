@@ -22,7 +22,7 @@
 <artifact id="CodeSystem/C4BBAdjudication" key="CodeSystem-C4BBAdjudication" name="C4BB Adjudication"/>
 <artifact id="ValueSet/C4BBAdjudicationCategoryDiscriminator" key="ValueSet-C4BBAdjudicationCategoryDiscriminator" name="C4BB Adjudication Category Discriminator"/>
 <artifact id="CodeSystem/C4BBAdjudicationDiscriminator" key="CodeSystem-C4BBAdjudicationDiscriminator" name="C4BB Adjudication Discriminator"/>
-<artifact id="ValueSet/C4BBAmbulanceTransportReason" key="ValueSet-C4BBAmbulanceTransportReason" name="C4BB Ambulance Transport Reason Codes"/>
+<artifact id="ValueSet/C4BBAmbulanceTransportReasonCodes" key="ValueSet-C4BBAmbulanceTransportReasonCodes" name="C4BB Ambulance Transport Reasons"/>
 <artifact id="CapabilityStatement/c4bb" key="CapabilityStatement-c4bb" name="C4BB CapabilityStatement"/>
 <artifact id="CodeSystem/C4BBClaimCareTeamRole" key="CodeSystem-C4BBClaimCareTeamRole" name="C4BB Claim Care Team Role"/>
 <artifact id="CodeSystem/C4BBClaimDiagnosisType" key="CodeSystem-C4BBClaimDiagnosisType" name="C4BB Claim Diagnosis Type"/>
@@ -55,7 +55,8 @@
 <artifact id="CodeSystem/C4BBPayerAdjudicationStatus" key="CodeSystem-C4BBPayerAdjudicationStatus" name="C4BB Payer Adjudication Status"/>
 <artifact id="ValueSet/C4BBPayerBenefitPaymentStatus" key="ValueSet-C4BBPayerBenefitPaymentStatus" name="C4BB Payer Benefit Payment Status"/>
 <artifact id="ValueSet/C4BBPayerClaimPaymentStatusCode" key="ValueSet-C4BBPayerClaimPaymentStatusCode" name="C4BB Payer Claim Payment Status Code"/>
-<artifact id="ValueSet/C4BBPayerProviderContractingStatus" key="ValueSet-C4BBPayerProviderContractingStatus" name="C4BB Payer Provider Contracting Status"/>
+<artifact deprecated="true" id="ValueSet/C4BBPayerProviderContractingStatus" key="ValueSet-C4BBPayerProviderContractingStatus" name="C4BB Payer Provider Contracting Status"/>
+<artifact id="ValueSet/C4BBPayerProviderNetworkStatus" key="ValueSet-C4BBPayerProviderNetworkStatus" name="C4BB Payer Provider Network Status"/>
 <artifact id="StructureDefinition/C4BB-Practitioner" key="StructureDefinition-C4BB-Practitioner" name="C4BB Practitioner"/>
 <artifact id="ValueSet/C4BBPractitionerIdentifierType" key="ValueSet-C4BBPractitionerIdentifierType" name="C4BB Practitioner Identifier Type"/>
 <artifact id="ValueSet/C4BBProfessionalAndNonClinicianClaimSubType" key="ValueSet-C4BBProfessionalAndNonClinicianClaimSubType" name="C4BB Professional And Non Clinician Claim SubType"/>
@@ -164,6 +165,7 @@
 <artifact id="RelatedPerson/RelatedPerson1" key="RelatedPerson-RelatedPerson1" name="Related Person 1"/>
 <artifact id="ValueSet/C4BBSurfaceCodes" key="ValueSet-C4BBSurfaceCodes" name="US Surface Codes Set"/>
 <artifact id="CodeSystem/C4BBSurfaceCodes" key="CodeSystem-C4BBSurfaceCodes" name="US Surface Codes System"/>
+<artifact id="CodeSystem/X12AmbulanceTransportReasonCodes" key="CodeSystem-X12AmbulanceTransportReasonCodes" name="X12 Ambulance Transport Reason Codes"/>
 <artifact id="CodeSystem/X12ClaimAdjustmentReasonCodes" key="CodeSystem-X12ClaimAdjustmentReasonCodes" name="X12 Claim Adjustment Reason Codes"/>
 <artifact id="ValueSet/X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" key="ValueSet-X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" name="X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes"/>
 <artifact id="CodeSystem/CMSRemittanceAdviceRemarkCodes" key="CodeSystem-CMSRemittanceAdviceRemarkCodes" name="X12 Remittance Advice Remark Codes"/>

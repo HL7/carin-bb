@@ -4,7 +4,8 @@ Title: "C4BB Adjudication Category Discriminator"
 Description: "Used as the discriminator for adjudication.category and item.adjudication.category for the CARIN IG for Blue Button®"
 * codes from valueset C4BBAdjudication
 // 20210127 CAS: Added to resolve the issue where this "all slices" discriminator (category) required ValueSet did not include a valueset reuuired for the required benefitpaymentstatus slice discriminator
-* codes from valueset C4BBPayerBenefitPaymentStatus
+// Removed according to FHIR-38059
+//* codes from valueset C4BBPayerBenefitPaymentStatus
 * codes from system C4BBAdjudicationDiscriminator
 * ^copyright = "This Valueset is not copyrighted."
 
@@ -68,11 +69,11 @@ defined in http://terminology.hl7.org/CodeSystem/adjudication, as well as those 
 * ^copyright = "This Valueset is not copyrighted."
 
 
-ValueSet: C4BBPayerProviderContractingStatus
-Title: "C4BB Payer Provider Contracting Status"
-Description: "Indicates that the Provider has a contract with the Payer as of the effective date of service or admission."
-* C4BBPayerAdjudicationStatus#contracted "Contracted" 
-* C4BBPayerAdjudicationStatus#noncontracted "Non-Contracted" 
+ValueSet: C4BBPayerProviderNetworkStatus
+Title: "C4BB Payer Provider Network Status"
+Description: "Indicates the provider network status in relation to a patient's coverage as of the effective date of service or admission."
+* C4BBPayerAdjudicationStatus#innetwork	"In Network"
+* C4BBPayerAdjudicationStatus#outofnetwork "Out Of Network"
 * ^copyright = "This Valueset is not copyrighted."
 
 ValueSet: C4BBPayerBenefitPaymentStatus
@@ -148,12 +149,6 @@ Description: "Transportation Services Supporting Info Category Codes"
 * C4BBSupportingInfoType#stretcherpurpose
 * C4BBSupportingInfoType#pickuplocation
 * C4BBSupportingInfoType#dropofflocation
-* ^copyright = "This Valueset is not copyrighted."
-
-ValueSet: C4BBAmbulanceTransportReason
-Title: "C4BB Ambulance Transport Reason Codes"
-Description: "Transportation Services Ambulatory Transport Reason Codes" 
-* codes from system $X12AmbulanceTransReas
 * ^copyright = "This Valueset is not copyrighted."
 
 

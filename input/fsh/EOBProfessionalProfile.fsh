@@ -66,7 +66,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 
 * supportingInfo[ambulancetransportreason].category = C4BBSupportingInfoType#ambulancetransportreason
 * supportingInfo[ambulancetransportreason].reason 1..1
-* supportingInfo[ambulancetransportreason].reason from C4BBAmbulanceTransportReason (required)
+* supportingInfo[ambulancetransportreason].reason from C4BBAmbulanceTransportReasonCodes (required)
 * supportingInfo[ambulancetransportreason].code 0..0
 * supportingInfo[ambulancetransportreason].timing[x] 0..0
 
@@ -130,20 +130,20 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * insert AdjudicationSlicing
 * adjudication MS
 * adjudication contains
-   billingnetworkcontractingstatus 0..1 MS and
-   renderingnetworkcontractingstatus 0..1 MS
+   billingnetworkstatus 0..1 MS and
+   renderingnetworkstatus 0..1 MS
 
-* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication[billingnetworkcontractingstatus].category MS
-* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
-* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+* adjudication[billingnetworkstatus] ^short = "Billing provider networking status"
+* adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
+* adjudication[billingnetworkstatus].category MS
+* adjudication[billingnetworkstatus].reason from C4BBPayerProviderNetworkStatus  (required)
+* adjudication[billingnetworkstatus].reason 1..1 MS
 
-* adjudication[renderingnetworkcontractingstatus] ^short = "Rendering provider contracting status"
-* adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
-* adjudication[renderingnetworkcontractingstatus].category MS
-* adjudication[renderingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
-* adjudication[renderingnetworkcontractingstatus].reason 1..1 MS
+* adjudication[renderingnetworkstatus] ^short = "Rendering provider networking status"
+* adjudication[renderingnetworkstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkstatus
+* adjudication[renderingnetworkstatus].category MS
+* adjudication[renderingnetworkstatus].reason from C4BBPayerProviderNetworkStatus  (required)
+* adjudication[renderingnetworkstatus].reason 1..1 MS
 
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
@@ -186,8 +186,8 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 If the service facility is not assigned an NPI, this data element will not be populated.  Reference CMS 1500 element 32a (97, 170, 176)"
 * supportingInfo[medicalrecordnumber] ^comment = "Provider submitted medical record number that can be included on the claim. (109)"
 * supportingInfo[patientaccountnumber] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
-* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
-* adjudication[renderingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
+* adjudication[billingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* adjudication[renderingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"

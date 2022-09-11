@@ -76,15 +76,15 @@ The claims data is based on submission standards adopted by the Department of He
 * insert AdjudicationSlicing
 * adjudication  MS
 * adjudication contains
-   billingnetworkcontractingstatus 0..1 MS and
+   billingnetworkstatus 0..1 MS and
    benefitpaymentstatus 1..1 MS
 
 
-* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication[billingnetworkcontractingstatus].category MS
-* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus (required)
-* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+* adjudication[billingnetworkstatus] ^short = "Billing provider networking status"
+* adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
+* adjudication[billingnetworkstatus].category MS
+* adjudication[billingnetworkstatus].reason from C4BBPayerProviderNetworkStatus (required)
+* adjudication[billingnetworkstatus].reason 1..1 MS
 
 * adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
@@ -150,7 +150,7 @@ The claims data is based on submission standards adopted by the Department of He
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
 * supportingInfo[dayssupply] ^comment = "Number of days supply of medication dispensed by the pharmacy (77)"
 * supportingInfo[compoundcode] ^comment = "The code indicating whether or not the prescription is a compound.  NCPDP field # 406-D6 (78)"
-* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service. (101)"
+* adjudication[billingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service. (101)"
 * adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * item.adjudication[rejectreason] ^comment = "Reason codes used to interpret the Non-Covered Amount (92)"

@@ -904,6 +904,50 @@ To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.c
 The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Remark Codes (RARC) used throughout the US health care industry."
 
 
+
+
+//  *** @ Saul - No change to CodeSystem CARCs ; RARCs are new
+CodeSystem: X12AmbulanceTransportReasonCodes
+Title: "X12 Ambulance Transport Reason Codes"
+Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
+
+The X12 Ambulance Transport Reason Codes indicate the reason for ambulance transport. These codes are listed within an X12 implementation guide (TR3) and maintained by X12.
+
+Internal code lists maintained by X12 [More information from X12 pending]
+
+Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."
+* ^url = $X12AmbulanceTransReas
+* ^caseSensitive = true
+* insert CodeSystemStubBoilerplate
+* ^content = #not-present
+* ^copyright = "**Intellectual Property Information**
+
+All X12 products are subject to this IP policy, including published and draft works.
+
+X12 is the only organization authorized to grant permission for use of X12 products. Users of all X12 products should make sure that they understand the permissible uses, as well as the limitations on such usage, as outlined below.
+
+Additional IP information can be found here: [https://x12.org/products/ip-use](https://x12.org/products/ip-use)
+
+**Licensing Information**
+
+Send an email to ip@x12.org to request permission to reproduce X12 IP. Include your name, organization, title, address, city, state, zip, email, a detailed description of the Submitted Artifact, including the underlying or cited X12 Product, and a detailed description of the intended audience and planned distribution method for the Artifact.
+
+Additional information on X12 licensing program can be found here:
+
+[https://x12.org/products/licensing-program](https://x12.org/products/licensing-program)
+
+**Purchasing Information:**
+
+To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com."
+
+
+
+ValueSet: C4BBAmbulanceTransportReasonCodes
+Title: "C4BB Ambulance Transport Reasons"
+Description: "Transportation Services Ambulatory Transport Reason Codes" 
+* codes from system X12AmbulanceTransportReasonCodes
+* ^copyright = "This Valueset is not copyrighted."
+
 //  ********* ICD diagnosis codes / procedure codes
 /*
 RuleSet: ICD9CopyrightNotice

@@ -23,20 +23,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^content = #complete
 * ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
-// * #innetwork "In-network" "in-network"
-// * #outofnetwork "Out-of-network" "out-of-network"
-// * #other "Other" "other"
-// * #contracted "Contracted" "contracted"
-// * #non-contracted "Non-contracted" "non-contracted"
-// * #subscriber "Subscriber" "subscriber"
-// * #provider "Provider" "provider"
-// * #paid "Paid" "paid"
-// * #denied "Denied"  "denied"
-// * #submitted "Submitted" "The total submitted amount for the claim or group or line item."
-// * #allowed "Allowed" "Allowed"
-// * #deductible "Deductible" "Amount deducted from the eligible amount prior to adjudication."
-// * #copay "copay" "Patient Co-Payment"
-// * #payment "Payment" "payment"
+
 
 CodeSystem: C4BBPayeeType
 Title: "C4BB Payee Type"
@@ -115,14 +102,12 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 
 CodeSystem: C4BBPayerAdjudicationStatus
 Title: "C4BB Payer Adjudication Status"
-Description: "Describes the various status fields used when payers adjudicate a claim, such as whether the claim was adjudicated in or out of network, if the provider was contracted or non-contracted for the service.
+Description: "Describes the various status fields used when payers adjudicate a claim, such as whether the claim was adjudicated in or out of network, if the provider was in or not in network for the service.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
-* #innetwork	"In Network" "Indicates the claim or claim line was paid in network.  This does not indicate the contracting status of the provider"
-* #outofnetwork "Out Of Network" "Indicates the claim or claim line was paid out of network.  This does not indicate the contracting status of the provider"
+* #innetwork	"In Network" "Indicates an in network status in relation to a patient's coverage"
+* #outofnetwork "Out Of Network" "Indicates a not in network status in relation to a patient's coverage"
 * #other "Other" "Indicates other network status or when a network does not apply"
-* #contracted "Contracted" "Indicates the provider was contracted for the service"
-* #noncontracted "Non-Contracted" "Indicates the provider was not contracted for the service"
 * #paid "Paid" "Indicates if the claim was approved for payment"
 * #denied "Denied" "Indicates if the claim was denied"
 * #partiallypaid "Partially Paid" "Indicates that some line items on the claim were denied"
@@ -186,9 +171,9 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 //* #inoutnetwork "in or Out of Network" "defines the adjudication and item.adjudication slice to indicate whether a claim was adjudicatd in or out of network"
 * #adjustmentreason "Adjustment Reason" "Defines the adjudication slice to identify the adjustment reason"
 * #rejectreason "Reject Reason" "Defines the adjudication slice to identify the reject reason"
-* #billingnetworkcontractingstatus	"Billing Network Contracting Status"       "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."
-* #renderingnetworkcontractingstatus	"Rendering Network Contracting Status" "Indicates that the Rendering Provider has a contract with the Payer as of the effective date of service or admission."
-* #benefitpaymentstatus "Benefit Payment Status" "Indicates the in network or out of network payment status of the claim."
+* #billingnetworkstatus	"Billing Network Status"       "Indicates the Billing Provider network status in relation to a patient's coverage as of the effective date of service or admission."
+* #renderingnetworkstatus	"Rendering Network Status" "Indicates the Rendering Provider network status in relation to a patient's coverage as of the effective date of service or admission."
+* #benefitpaymentstatus "Benefit Payment Status" "Indicates the network payment status in relation to a patient's coverage as of the effective date of service or admission."
 * ^content = #complete
 * ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."

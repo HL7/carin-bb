@@ -108,21 +108,21 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * insert AdjudicationSlicing
 * adjudication MS
 * adjudication contains
-   billingnetworkcontractingstatus 0..1 MS and
-   renderingnetworkcontractingstatus 1..1 MS and 
+   billingnetworkstatus 0..1 MS and
+   renderingnetworkstatus 1..1 MS and 
    benefitpaymentstatus 1..* MS
 
-* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication[billingnetworkcontractingstatus].category MS
-* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
-* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+* adjudication[billingnetworkstatus] ^short = "Billing provider network status"
+* adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
+* adjudication[billingnetworkstatus].category MS
+* adjudication[billingnetworkstatus].reason from C4BBPayerProviderNetworkStatus  (required)
+* adjudication[billingnetworkstatus].reason 1..1 MS
 
-* adjudication[renderingnetworkcontractingstatus] ^short = "Rendering provider contracting status"
-* adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
-* adjudication[renderingnetworkcontractingstatus].category MS
-* adjudication[renderingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
-* adjudication[renderingnetworkcontractingstatus].reason 1..1 MS
+* adjudication[renderingnetworkstatus] ^short = "Rendering provider network status"
+* adjudication[renderingnetworkstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkstatus
+* adjudication[renderingnetworkstatus].category MS
+* adjudication[renderingnetworkstatus].reason from C4BBPayerProviderNetworkStatus  (required)
+* adjudication[renderingnetworkstatus].reason 1..1 MS
 
 * adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
@@ -318,8 +318,8 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.bodySite ^comment = "Tooth Number - First Occurrence (196)"
 * item.subSite ^comment = "Tooth Surface (197)"
 
-* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
-* adjudication[renderingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
+* adjudication[billingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* adjudication[renderingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
 * adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
