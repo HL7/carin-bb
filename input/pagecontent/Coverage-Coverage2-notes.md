@@ -5,7 +5,7 @@ Title: "Coverage Example 2"
 Description: "Coverage Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-30T09:48:01.8462752-04:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|1.2.0"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.0.0"
 * language = #en-US
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MB "Member Number"
   * text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
