@@ -5,7 +5,7 @@ Description: "EOB Outpatient Institutional - Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-13T11:10:24-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|1.2.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|2.0.0)
 * identifier.type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier.type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier.system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"

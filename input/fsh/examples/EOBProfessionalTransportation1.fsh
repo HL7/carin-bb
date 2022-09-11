@@ -5,7 +5,7 @@ Description: "EOB Professional - Transportation Services Example 1"
 Usage: #example
 * meta.lastUpdated = "2022-09-10T14:46:05-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.0.0)
 * identifier.type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier.type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier.system = "https://www.example.com/fhir/EOBIdentifier"

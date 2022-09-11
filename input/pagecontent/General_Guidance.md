@@ -62,6 +62,8 @@ Payers **MAY** choose to also provide resource level text to enable consumers ap
 
 Explanation of Benefit information can be complex. Many of the data elements in this guide go beyond what is commonly included in printed Explanation of Benefit documents today. Payers may also provide additional data elements beyond what is in this guide. As part of their API documentation, Payers **SHOULD** include descriptions of the data elements they provide, particularly for data elements not covered in this guide, and may consider providing a display mapping like can be found in the [Example ExplanationOfBenefit Render Mapping](#example-eob-render-mapping) section of this implementation guide.
 
+<a name="example-eob-render-mapping"></a>
+
 ### Example ExplanationOfBenefit Render Mapping
 
 Explanation Of Benefits documents that are either mailed in a physical form or downloaded through a member portal vary widely from payer to payer. There is no such thing as a standardized Explanation Of Benefits document format. There are some common elements across many of these documents, such as how much was charged by a provider and how much is covered by the insurance, but the manner in which this data is presented is determined by the individual payer.

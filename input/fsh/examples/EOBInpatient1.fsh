@@ -5,7 +5,7 @@ Description: "EOB Inpatient Institutional - Example 1"
 Usage: #example
 * id = "EOBInpatient1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|1.2.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|2.0.0)
 
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
