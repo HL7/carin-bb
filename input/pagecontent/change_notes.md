@@ -111,7 +111,7 @@ The current official published version of CARIN BB for FHIR R4
 -->
 
 ### Changes and Updates for Version 1.1.0
-The current official published version of CARIN BB for FHIR R4 (STU Update of STU 1)
+STU Update of STU 1
 
 <ul>
     <li>Added Data Absent Reason "not-applicable" code to <a href="http://hl7.org/fhir/us/carin-bb/stu1.1/ValueSet-C4BBEOBInstitutionalProcedureCodes.html#definition">Institutional Procedure Codes ValueSet</a> for use with Inpatient Institutional EOB item.productOrService and an <a href="http://hl7.org/fhir/us/carin-bb/stu1.1/StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional-definitions.html#ExplanationOfBenefit.item.productOrService">Invariant disallowing the use of this code in Outpatient Institutional EOB</a> (<a href="http://hl7.org/fhir/us/carin-bb/stu1.1/https://jira.hl7.org/browse/FHIR-30357">FHIR-30357</a>)</li>
