@@ -93,10 +93,10 @@ Usage: #example
 * supportingInfo[patientaccountnumber].sequence = 8
 
 * supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite
-* supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#1
+* supportingInfo[additionalbodysite][=].code = $ADAUniversalToothDesignationSystem#1
 * supportingInfo[additionalbodysite][=].sequence = 9
 
 
 * supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite
-* supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#2
+* supportingInfo[additionalbodysite][=].code = $ADAUniversalToothDesignationSystem#2
 * supportingInfo[additionalbodysite][=].sequence = 10

@@ -35,7 +35,7 @@ Usage: #example
 
 * item[0].sequence = 1
 * item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
-* item[0].revenue = AHANUBCRevenueCodes#Dummy
+* item[0].revenue = $AHANUBCRevenueCodes#Dummy
 * item[0].servicedDate = "2019-11-02"
 * adjudication[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
 * adjudication[adjudicationamounttype][0].category.text = "Payment Amount"
@@ -76,16 +76,16 @@ Usage: #example
 * supportingInfo[clmrecvddate].timingDate = 2011-05-30
 * supportingInfo[clmrecvddate].sequence = 3
 * supportingInfo[typeofbill].category  = C4BBSupportingInfoType#typeofbill
-* supportingInfo[typeofbill].code = AHANUBCTypeOfBill#Dummy
+* supportingInfo[typeofbill].code = $AHANUBCTypeOfBill#Dummy
 * supportingInfo[typeofbill].sequence = 4
 * supportingInfo[pointoforigin].category  = C4BBSupportingInfoType#pointoforigin
-* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn#Dummy
+* supportingInfo[pointoforigin].code = $AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn#Dummy
 * supportingInfo[pointoforigin].sequence = 5
 * supportingInfo[admtype].category  = C4BBSupportingInfoType#admtype
-* supportingInfo[admtype].code = AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
+* supportingInfo[admtype].code = $AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
 * supportingInfo[admtype].sequence = 6
 * supportingInfo[discharge-status].category  = C4BBSupportingInfoType#discharge-status
-* supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#11
+* supportingInfo[discharge-status].code = $AHANUBCPatientDischargeStatus#11
 * supportingInfo[discharge-status].sequence = 7
 
 * supportingInfo[medicalrecordnumber].category  = C4BBSupportingInfoType#medicalrecordnumber

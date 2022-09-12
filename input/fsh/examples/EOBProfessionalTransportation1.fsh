@@ -42,7 +42,7 @@ Usage: #example
 
 * supportingInfo[ambulancetransportreason][+].category = C4BBSupportingInfoType#ambulancetransportreason
 * supportingInfo[ambulancetransportreason][=].sequence = 3
-* supportingInfo[ambulancetransportreason][=].reason = X12AmbulanceTransportReasonCodes#B "Patient was transported for the benefit of a preferred physician"
+* supportingInfo[ambulancetransportreason][=].reason = https://x12.org/codesystem.x12.org/5010/1317#B "Patient was transported for the benefit of a preferred physician"
 
 
 * supportingInfo[transportationdistance][+].category = C4BBSupportingInfoType#transportationdistance
