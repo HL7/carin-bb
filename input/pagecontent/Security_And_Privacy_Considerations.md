@@ -20,9 +20,9 @@ Implementers must ensure that APIs fully and successfully implement privacy and 
 All implementers of the CARIN Consumer-Directed Payer Data Exchange Implementation Guide (IG) should follow the FHIR Security guidance, Security and Privacy Module, and the FHIR Implementer’s Safety Checklist guidance as defined in the FHIR standard where applicable and not otherwise superseded by this section of the IG.
 
 
-1.	The FHIR Security specification provides guidance related to communication security, authentication, authorization/access control, audit, digital signatures, attachments, labels, narrative, and input validation. The FHIR security specification is available [here](http://hl7.org/fhir/R4/security.html).
-2.	The FHIR Security and Privacy Module describes access control and authorization considerations to protect a FHIR server, how to document permissions granted, and how to keep records of performed events. The FHIR Security and privacy module can be found [here](http://hl7.org/fhir/R4/secpriv-module.html).
-3.	The FHIR Implementer’s Safety Checklist helps implementers be sure that they have considered all the parts of FHIR that impact their system design regarding privacy, security, provenance, and safety. The FHIR safety check list is available [here](http://hl7.org/fhir/R4/safety.html).
+1.	The FHIR Security specification provides guidance related to communication security, authentication, authorization/access control, audit, digital signatures, attachments, labels, narrative, and input validation. The FHIR security specification is available [here]({{site.data.fhir.path}}security.html).
+2.	The FHIR Security and Privacy Module describes access control and authorization considerations to protect a FHIR server, how to document permissions granted, and how to keep records of performed events. The FHIR Security and privacy module can be found [here]({{site.data.fhir.path}}secpriv-module.html).
+3.	The FHIR Implementer’s Safety Checklist helps implementers be sure that they have considered all the parts of FHIR that impact their system design regarding privacy, security, provenance, and safety. The FHIR safety check list is available [here]({{site.data.fhir.path}}safety.html).
 
 ### Security Requirements
 For the purposes of information exchange defined by this IG, additional security conformance requirements are as follows:
@@ -69,6 +69,6 @@ For the purposes of information exchange defined by this IG, additional security
 
 ### Audit Logging and Provenance
 1.	Relevant audit and provenance events SHALL be recorded.
-2.  Server implementations **SHOULD** record IG related data access using the [AuditEvent](http://hl7.org/fhir/R4/auditevent.html) resource.
-3.	Server implementations **SHOULD** support the ability to directly record and/or enable clients to assert (store) provenance associated with advance directive information using the [Provenance](http://hl7.org/fhir/R4/provenance.html) resource.
+2.  Server implementations **SHOULD** record IG related data access using the [AuditEvent]({{site.data.fhir.path}}auditevent.html) resource.
+3.	Server implementations **SHOULD** support the ability to directly record and/or enable clients to assert (store) provenance associated with advance directive information using the [Provenance]({{site.data.fhir.path}}provenance.html) resource.
 
