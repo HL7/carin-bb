@@ -13,6 +13,9 @@ Usage: #example
 * status = #active
 * type = $claim-type#professional
 * type.text = "Professional"
+
+* subType = X12AmbulanceTransportReasonCodes#B "Patient was transported for the benefit of a preferred physician"
+
 * use = #claim
 * patient = Reference(Patient1)
 * billablePeriod.start = "2022-09-10"
@@ -42,7 +45,7 @@ Usage: #example
 
 * supportingInfo[ambulancetransportreason][+].category = C4BBSupportingInfoType#ambulancetransportreason
 * supportingInfo[ambulancetransportreason][=].sequence = 3
-* supportingInfo[ambulancetransportreason][=].reason = https://x12.org/codesystem.x12.org/5010/1317#B "Patient was transported for the benefit of a preferred physician"
+* supportingInfo[ambulancetransportreason][=].reason = X12AmbulanceTransportReasonCodes#B "Patient was transported for the benefit of a preferred physician"
 
 
 * supportingInfo[transportationdistance][+].category = C4BBSupportingInfoType#transportationdistance
