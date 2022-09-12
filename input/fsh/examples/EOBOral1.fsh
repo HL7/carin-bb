@@ -52,7 +52,7 @@ Usage: #example
 * total[adjudicationamounttype][3].amount.value = 350.00
 * total[adjudicationamounttype][3].amount.currency = #USD
 
-* item[0].productOrService = ADADentalProcedureCode#D1110 "Prophylaxis - Adult"
+* item[0].productOrService = $ADADentalProcedureCode#D1110 "Prophylaxis - Adult"
 
 
 * item[0].sequence = 1
@@ -65,7 +65,7 @@ Usage: #example
 
 * item[0].adjudication[benefitpaymentstatus][0].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[0].adjudication[benefitpaymentstatus][0].reason = C4BBPayerAdjudicationStatus#innetwork
-* item[1].productOrService = ADADentalProcedureCode#D0120 "Periodic oral evaluation"
+* item[1].productOrService = $ADADentalProcedureCode#D0120 "Periodic oral evaluation"
 * item[1].sequence = 2
 * item[1].servicedDate = "2021-03-18"
 * item[1].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"

@@ -61,7 +61,7 @@ Usage: #example
   * revenue = $RevenueCodes#0551
   * productOrService = $cpt#99231
   * servicedDate = "2020-09-29"
-  * locationCodeableConcept = $Place_of_Service_Code_Set#12
+  * locationCodeableConcept = $CMSPlaceofServiceCodes#12
   * locationCodeableConcept.text = "HOME"
   * adjudication[adjudicationamounttype][0].
     * category = $adjudication#submitted "Submitted Amount"
@@ -99,7 +99,7 @@ Usage: #example
   * revenue = $RevenueCodes#0023
   * productOrService = $cpt#99231
   * servicedDate = "2020-09-29"
-  * locationCodeableConcept = $Place_of_Service_Code_Set#12
+  * locationCodeableConcept = $CMSPlaceofServiceCodes#12
   * locationCodeableConcept.text = "HOME"
   * adjudication[0]
     * category = $adjudication#submitted "Submitted Amount"

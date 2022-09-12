@@ -76,79 +76,79 @@ Usage: #example
 * item[=].revenue = $RevenueCodes#0301
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 2
 * item[=].revenue = $RevenueCodes#0260
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 3
 * item[=].revenue = $RevenueCodes#0305
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 4
 * item[=].revenue = $RevenueCodes#0324
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 5
 * item[=].revenue = $RevenueCodes#0259
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 6
 * item[=].revenue = $RevenueCodes#0250
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 7
 * item[=].revenue = $RevenueCodes#0710
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 8
 * item[=].revenue = $RevenueCodes#0210
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 9
 * item[=].revenue = $RevenueCodes#0272
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 10
 * item[=].revenue = $RevenueCodes#0370
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 11
 * item[=].revenue = $RevenueCodes#0730
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 12
 * item[=].revenue = $RevenueCodes#0450
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 13
 * item[=].revenue = $RevenueCodes#0481
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * adjudication[billingnetworkstatus]
   * reason = $C4BBPayerAdjudicationStatus#innetwork "In Network"

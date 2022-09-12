@@ -79,7 +79,7 @@ Usage: #example
 * supportingInfo[admtype].code = AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
 * supportingInfo[admtype].sequence = 5
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
-* supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#Dummy
+* supportingInfo[discharge-status].code = $PatDischargeStatus#Dummy
 * supportingInfo[discharge-status].sequence = 6
 
 * supportingInfo[medicalrecordnumber].category  = C4BBSupportingInfoType#medicalrecordnumber
