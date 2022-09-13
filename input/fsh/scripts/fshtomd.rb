@@ -12,7 +12,7 @@ puts "MDOutput = ./input/pagecontent"
 jsoninputfiles = Dir.glob("./output/*.json").map{ |json| json.split("/")[2]}
 binding.pry
 puts jsoninputfiles
-skiptypes = ["ConceptMap", "StructureDefinition", "ValueSet", "CodeSystem", "CapabilityStatement", "OperationOutcome", "SearchParameter"]
+skiptypes = ["ConceptMap", "StructureDefinition", "ValueSet", "CodeSystem", "CapabilityStatement", "OperationOutcome"]
 jsoninputfiles.each {|json|
   puts json
   # next if json.count("-") < 1

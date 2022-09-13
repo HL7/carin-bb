@@ -5,7 +5,7 @@ Title: "EOB Oral Example 1"
 Description: "EOB Oral Example 1"
 Usage: #example
 * meta.lastUpdated = "2021-03-18T10:23:00-05:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Oral|2.0.0"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Oral|1.2.0"
 * language = #en-US
 * identifier.type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType#uc
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
@@ -39,26 +39,24 @@ Usage: #example
 * item[=].productOrService = http://ada.org/cdt#D1110 "Prophylaxis - Adult"
 * item[=].servicedDate = "2021-03-18"
 * item[=].locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#11 "Office"
-* item[=].adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
-* item[=].adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
-* item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted
+* item[=].adjudication[0].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted
 * item[=].adjudication[=].amount.value = 190
 * item[=].adjudication[=].amount.currency = #USD
+* item[=].adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
 * item[+].sequence = 2
 * item[=].productOrService = http://ada.org/cdt#D0120 "Periodic oral evaluation"
 * item[=].servicedDate = "2021-03-18"
 * item[=].locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#11 "Office"
-* item[=].adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
-* item[=].adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
-* item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted
+* item[=].adjudication[0].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted
 * item[=].adjudication[=].amount.value = 220
 * item[=].adjudication[=].amount.currency = #USD
-* adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#renderingnetworkstatus
-* adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
+* item[=].adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
+* adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
+* adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#contracted
 * adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
-* adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkstatus
-* adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
+* adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#contracted
 * total[0].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted
 * total[=].category.text = "Submitted Amount"
 * total[=].amount.value = 410

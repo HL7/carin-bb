@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.carin-bb
 canonical: http://hl7.org/fhir/us/carin-bb
-version: 2.0.0
+version: 1.2.0
 name: CARINConsumerDirectedPayerDataExchange
 title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 status: active
@@ -34,12 +34,8 @@ parameters:
   apply-publisher: true
   excludettl: 'true'
   excludemap: 'true'
-  special-url:
-    - https://x12.org/codesystem.x12.org/5010/1317
-    - https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
-
 copyrightYear: 2022+
-releaseLabel: STU 2
+releaseLabel: STU 2 Pre-Publish
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -147,10 +143,6 @@ resources:
     name: EOB Professional - Example 2
     description: EOB Professional - Example 2
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
-  ExplanationOfBenefit/EOBProfessionalTransportation1:
-    name: EOB Professional - Transportation 1
-    description: EOB Professional - Transportation 1
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
   ExplanationOfBenefit/EOBPharmacy1:
     name: EOB Pharmacy Example1
     description: EOB Pharmacy Example1
@@ -186,10 +178,6 @@ resources:
   Organization/ProviderOrganization6:
     name: Provider Organization 6
     description: Provider Organization 6
-    exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
-  Organization/ProviderTransportationOrganization1:
-    name: Provider Transportation Organization Example 1
-    description: Provider Transportation Organization Example 1
     exampleCanonical: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization
   Organization/Payer1:
     name: Payer 1

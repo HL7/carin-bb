@@ -5,7 +5,7 @@ Title: "EOB Inpatient Example 2"
 Description: "EOB Inpatient Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-04-28T15:39:36-04:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|2.0.0"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|1.2.0"
 * identifier.type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType#uc "Unique Claim ID"
   * text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier.system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
@@ -153,9 +153,9 @@ Usage: #example
   * text = "HOSPITAL - INPATIENT HOSPITAL"
 * adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#outofnetwork
-* adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkstatus
-* adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork "In Network"
-  * text = "Indicates the provider was in network for the service"
+* adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#contracted "Contracted"
+  * text = "Indicates the provider was contracted for the service"
 * adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication#noncovered "Noncovered"
   * text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * adjudication[=].amount.value = 0

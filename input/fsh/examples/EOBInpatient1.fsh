@@ -5,7 +5,7 @@ Description: "EOB Inpatient Institutional - Example 1"
 Usage: #example
 * id = "EOBInpatient1"
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|2.0.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|1.2.0)
 
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
@@ -35,7 +35,7 @@ Usage: #example
 
 * item[0].sequence = 1
 * item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
-* item[0].revenue = $AHANUBCRevenueCodes#Dummy
+* item[0].revenue = AHANUBCRevenueCodes#Dummy
 * item[0].servicedDate = "2019-11-02"
 * adjudication[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
 * adjudication[adjudicationamounttype][0].category.text = "Payment Amount"
@@ -49,8 +49,8 @@ Usage: #example
 * adjudication[adjudicationamounttype][2].category.text = "Patient Pay Amount"
 * adjudication[adjudicationamounttype][2].amount.value = 0.00
 * adjudication[adjudicationamounttype][2].amount.currency = #USD
-* adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
-* adjudication[billingnetworkstatus].reason = C4BBPayerAdjudicationStatus#innetwork
+* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
+* adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
 * adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 
@@ -76,16 +76,16 @@ Usage: #example
 * supportingInfo[clmrecvddate].timingDate = 2011-05-30
 * supportingInfo[clmrecvddate].sequence = 3
 * supportingInfo[typeofbill].category  = C4BBSupportingInfoType#typeofbill
-* supportingInfo[typeofbill].code = $AHANUBCTypeOfBill#Dummy
+* supportingInfo[typeofbill].code = AHANUBCTypeOfBill#Dummy
 * supportingInfo[typeofbill].sequence = 4
 * supportingInfo[pointoforigin].category  = C4BBSupportingInfoType#pointoforigin
-* supportingInfo[pointoforigin].code = $AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn#Dummy
+* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn#Dummy
 * supportingInfo[pointoforigin].sequence = 5
 * supportingInfo[admtype].category  = C4BBSupportingInfoType#admtype
-* supportingInfo[admtype].code = $AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
+* supportingInfo[admtype].code = AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
 * supportingInfo[admtype].sequence = 6
 * supportingInfo[discharge-status].category  = C4BBSupportingInfoType#discharge-status
-* supportingInfo[discharge-status].code = $AHANUBCPatientDischargeStatus#11
+* supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#11
 * supportingInfo[discharge-status].sequence = 7
 
 * supportingInfo[medicalrecordnumber].category  = C4BBSupportingInfoType#medicalrecordnumber

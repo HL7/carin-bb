@@ -23,7 +23,20 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^content = #complete
 * ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
-
+// * #innetwork "In-network" "in-network"
+// * #outofnetwork "Out-of-network" "out-of-network"
+// * #other "Other" "other"
+// * #contracted "Contracted" "contracted"
+// * #non-contracted "Non-contracted" "non-contracted"
+// * #subscriber "Subscriber" "subscriber"
+// * #provider "Provider" "provider"
+// * #paid "Paid" "paid"
+// * #denied "Denied"  "denied"
+// * #submitted "Submitted" "The total submitted amount for the claim or group or line item."
+// * #allowed "Allowed" "Allowed"
+// * #deductible "Deductible" "Amount deducted from the eligible amount prior to adjudication."
+// * #copay "copay" "Patient Co-Payment"
+// * #payment "Payment" "payment"
 
 CodeSystem: C4BBPayeeType
 Title: "C4BB Payee Type"
@@ -102,12 +115,14 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 
 CodeSystem: C4BBPayerAdjudicationStatus
 Title: "C4BB Payer Adjudication Status"
-Description: "Describes the various status fields used when payers adjudicate a claim, such as whether the claim was adjudicated in or out of network, if the provider was in or not in network for the service.
+Description: "Describes the various status fields used when payers adjudicate a claim, such as whether the claim was adjudicated in or out of network, if the provider was contracted or non-contracted for the service.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
-* #innetwork	"In Network" "Indicates an in network status in relation to a patient's coverage"
-* #outofnetwork "Out Of Network" "Indicates a not in network status in relation to a patient's coverage"
+* #innetwork	"In Network" "Indicates the claim or claim line was paid in network.  This does not indicate the contracting status of the provider"
+* #outofnetwork "Out Of Network" "Indicates the claim or claim line was paid out of network.  This does not indicate the contracting status of the provider"
 * #other "Other" "Indicates other network status or when a network does not apply"
+* #contracted "Contracted" "Indicates the provider was contracted for the service"
+* #noncontracted "Non-Contracted" "Indicates the provider was not contracted for the service"
 * #paid "Paid" "Indicates if the claim was approved for payment"
 * #denied "Denied" "Indicates if the claim was denied"
 * #partiallypaid "Partially Paid" "Indicates that some line items on the claim were denied"
@@ -150,13 +165,6 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #prosthesis "Prosthesis" "Prosthesis replacement indicator."
 * #additionalbodysite "Additional Body Site" "Additional tooth number or oral cavity. Additional body sites are specific to line item and have to be linked by ExplanationOfBenefit.item.informationSequence."
 * #missingtoothnumber "Missing Tooth Number" "Missing tooth number."
-* #patientweight "Patient Weight" "Patient weight (for transportation services)"
-* #ambulancetransportreason "Ambulance Transport Reason" "Reason ambulance transport was needed (for transportation services)"
-* #transportationdistance "Transportation Distance" "Distance traveled (for transportation services)"
-* #roudtrippurpose "Round Trip Purpose" "Reason for round trip (for transportation services)"
-* #stretcherpurpose "Stretcher Purpose" "Purpose of using a stretcher (for transportation services)"
-* #pickuplocation "Pick-up Location" "Patient pick-up Location (for transportation services)"
-* #dropofflocation "Drop-off Location" "Patient drop-off location (for transportation services)"
 * ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."
 
@@ -169,11 +177,10 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #allowedunits	"allowed units" "defines the adjudication slice to define allowed units"
 // 20210201 CAS: Removed as not used as a discriminator (the CodeSystem C4BBPayerBenefitPaymentStatus is used for this slice), Change ipart of FHIR-30635 - Update Benefit Payment Status slice name ,cardinality and must support
 //* #inoutnetwork "in or Out of Network" "defines the adjudication and item.adjudication slice to indicate whether a claim was adjudicatd in or out of network"
-* #adjustmentreason "Adjustment Reason" "Defines the adjudication slice to identify the adjustment reason"
-* #rejectreason "Reject Reason" "Defines the adjudication slice to identify the reject reason"
-* #billingnetworkstatus	"Billing Network Status"       "Indicates the Billing Provider network status in relation to a patient's coverage as of the effective date of service or admission."
-* #renderingnetworkstatus	"Rendering Network Status" "Indicates the Rendering Provider network status in relation to a patient's coverage as of the effective date of service or admission."
-* #benefitpaymentstatus "Benefit Payment Status" "Indicates the network payment status in relation to a patient's coverage as of the effective date of service or admission."
+* #denialreason "Denial Reason" "defines the adjudication slice to identify the denial reason"
+* #billingnetworkcontractingstatus	"Billing Network Contracting Status"       "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."
+* #renderingnetworkcontractingstatus	"Rendering Network Contracting Status" "Indicates that the Rendering Provider has a contract with the Payer as of the effective date of service or admission."
+* #benefitpaymentstatus "Benefit Payment Status" "Indicates the in network or out of network payment status of the claim."
 * ^content = #complete
 * ^caseSensitive = true
 * ^copyright = "This CodeSystem is not copyrighted."

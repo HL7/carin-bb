@@ -19,7 +19,7 @@ RuleSet: NCPDPCopyrightNotice
 * ^copyright = "National Council for Prescription Drugs Programs, Inc. (NCPDP) publications are owned by NCPDP, 9240 East Raintree Drive Scottsdale, AZ 85260, and protected by the copyright laws of the United States. 17 U.S.C. §101, et. seq. Permission is given to Council members to copy and use the work or any part thereof in connection with the business purposes of the Council members. The work may not be changed or altered. The work may be shared within the member company but may not be distributed and/or copied for/by others outside of the member’s company. The work may not be sold, used or exploited for commercial purposes. This permission may be revoked by NCPDP at any time. NCPDP is not responsible for any errors or damage as a result of the use of the work.
 
 All material is provided as is, without warranty of any kind, expressed or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, completeness and non-infringement of third party rights. In no event shall NCPDP, its members or its contributors be liable for any claim, or any direct, special, indirect or consequential damages, or any damages whatsoever resulting from loss of use, data or profits, whether in an action of contract, negligence or other tortious action, arising out of or in connection with the use or performance of the material. Revised: September 2016"
-/*
+
 CodeSystem: NCPDPRejectCode
 Title: "NCPDP Reject Code"
 Description: "Code indicating the error encountered. Contains exception definitions for use when transaction processing cannot be completed. (NCPDP ECL 511-FB).
@@ -30,17 +30,17 @@ Link to information about the code system - including how to obtain the content:
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
-*/
+
 ValueSet: NCPDPRejectCode
 Title: "NCPDP Reject Code"
 Description: "Code indicating the error encountered. Contains exception definitions for use when transaction processing cannot be completed. (NCPDP ECL 511-FB).
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* codes from system $NCPDPRejectCode
+* codes from system NCPDPRejectCode
 * insert NCPDPCopyrightNotice
 
-/*
+
 CodeSystem: NCPDPDispensedAsWrittenOrProductSelectionCode
 Title: "NCPDP Dispense As Written (DAW)/Product Selection Code"
 Description: "Code indicating whether or not the prescriber's instructions regarding generic substitution were followed. (NCPDP ECL 408-D8)
@@ -52,17 +52,16 @@ Link to information about the code system - including how to obtain the content:
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
-*/
+
 ValueSet: NCPDPDispensedAsWrittenOrProductSelectionCode
 Title: "NCPDP Dispense As Written (DAW)/Product Selection Code"
 Description: "Code indicating whether or not the prescriber's instructions regarding generic substitution were followed. (NCPDP ECL 408-D8)
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* codes from system $NCPDPDispensedAsWrittenOrProductSelectionCode
+* codes from system NCPDPDispensedAsWrittenOrProductSelectionCode
 * insert NCPDPCopyrightNotice
 
-/*
 CodeSystem: NCPDPBrandGenericIndicator
 Title: "NCPDP Brand Generic Indicator"
 Description: "Denotes brand or generic drug dispensed. (NCPDP ECL 686)
@@ -74,7 +73,6 @@ Link to information about the code system - including how to obtain the content:
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
-*/
 
 ValueSet: NCPDPBrandGenericIndicator
 Title: "NCPDP Brand Generic Indicator"
@@ -82,10 +80,9 @@ Description: "Denotes brand or generic drug dispensed. (NCPDP ECL 686)
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* codes from system $NCPDPBrandGenericIndicator
+* codes from system NCPDPBrandGenericIndicator
 * insert NCPDPCopyrightNotice
 
-/*
 CodeSystem: NCPDPPrescriptionOriginCode
 Title: "NCPDP Prescription Origin Code"
 Description: "Code indicating the origin of the prescription. Indicates whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy. (NCPDP ECL 419-DJ)
@@ -97,17 +94,16 @@ Link to information about the code system - including how to obtain the content:
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
-*/
+
 ValueSet: NCPDPPrescriptionOriginCode
 Title: "NCPDP Prescription Origin Code"
 Description: "Code indicating the origin of the prescription. Indicates whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy. (NCPDP ECL 419-DJ)
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* codes from system $NCPDPPrescriptionOriginCode
+* codes from system NCPDPPrescriptionOriginCode
 * insert NCPDPCopyrightNotice
 
-/*
 CodeSystem: NCPDPCompoundCode
 Title: "NCPDP Compound Code"
 Description: "Code indicating whether or not the prescription is a compound. (NCPDP ECL 406-D6)
@@ -119,14 +115,14 @@ Link to information about the code system - including how to obtain the content:
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert NCPDPCopyrightNotice
-*/
+
 ValueSet: NCPDPCompoundCode
 Title: "NCPDP Compound Code"
 Description: "Code indicating whether or not the prescription is a compound. (NCPDP ECL 406-D6)
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
 
-* codes from system $NCPDPCompoundCode
+* codes from system NCPDPCompoundCode
 * insert NCPDPCopyrightNotice
 
 //  **************** FDA NDC ******************************
@@ -164,7 +160,6 @@ RuleSet: AHANUBCCopyrightNotice
 
 These codes are listed within the UB-04 Data Specifications Manual. The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. No other publication—governmental or private/commercial—can be considered authoritative. The AHA wants to make you aware that the use of codes, descriptions, or any other content contained in the manual to be used in a software application, publication, or any other derivative work must be properly licensed by the AHA. If your organization uses or intends to use any of the codes or other related content from the manual in this manner, please contact the AHA’s licensing manager, Tim Carlson, at 312.893.6816 or email tcarlson@aha.org"
 
-/*
 CodeSystem: AHANUBCPatientDischargeStatus
 Title: "NUBC Patient Discharge Status Codes"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
@@ -181,7 +176,6 @@ To obtain the underlying code systems, please see information [here](https://www
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
-*/
 
 ValueSet: AHANUBCPatientDischargeStatus
 Title: "NUBC Patient Discharge Status Codes"
@@ -194,7 +188,7 @@ This code system consists of the following:
 These codes are used to convey the patient discharge status and are the property of the American Hospital Association.
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
-* codes from system $AHANUBCPatientDischargeStatus
+* codes from system AHANUBCPatientDischargeStatus
 * insert AHANUBCCopyrightNotice
 
 CodeSystem: AHANUBCPresentOnAdmission
@@ -228,7 +222,6 @@ To obtain the underlying code systems, please see information [here](https://www
 * codes from system AHANUBCPresentOnAdmission
 * insert AHANUBCCopyrightNotice
 
-/*
 CodeSystem: AHANUBCRevenueCodes
 Title: "NUBC Revenue Codes"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
@@ -244,7 +237,6 @@ To obtain the underlying code systems, please see information [here](https://www
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
-*/
 
 ValueSet: AHANUBCRevenueCodes
 Title: "NUBC Revenue Codes"
@@ -257,10 +249,9 @@ This code system consists of the following:
 These codes are used to convey the revenue code and are the property of the American Hospital Association.
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
-* codes from system $AHANUBCRevenueCodes
+* codes from system AHANUBCRevenueCodes
 * insert AHANUBCCopyrightNotice
 
-/*
 CodeSystem: AHANUBCTypeOfBill
 Title: "NUBC Type Of Bill Codes"
 Description: """The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
@@ -280,7 +271,6 @@ To obtain the underlying code systems, please see information [here](https://www
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
-*/
 
 ValueSet: AHANUBCTypeOfBill
 Title: "NUBC Type of Bill Codes"
@@ -296,11 +286,10 @@ A code indicating the specific Type of Bill (TOB), e.g., hospital inpatient, out
 Note that with the advent of UB-04, the matrix methodology of constructing the first component of TOB codes according to digit position was abandoned in favor of specifying valid discrete codes. As a result, the first three digits in TOB have no underlying meaning.
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"""
-* codes from system $AHANUBCTypeOfBill
+* codes from system AHANUBCTypeOfBill
 * insert AHANUBCCopyrightNotice
 
 // 2021028 CAS: FHIR-31384 - NUBC Point Of Origin - newborns
-/*
 CodeSystem: AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn
 Title: "NUBC Point Of Origin for Non-newborn"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
@@ -316,10 +305,8 @@ To obtain the underlying code systems, please see information [here](https://www
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
-*/
 
 // 20210201 CAS: https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
-/*
 CodeSystem: AHANUBCPointOfOriginForAdmissionOrVisitNewborn
 Title: "NUBC Point Of Origin for Newborn"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
@@ -335,7 +322,7 @@ To obtain the underlying code systems, please see information [here](https://www
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
-*/
+
 ValueSet: AHANUBCPointOfOriginForAdmissionOrVisit
 Title: "NUBC Point Of Origin"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
@@ -348,12 +335,11 @@ These codes are used to convey the patient point of origin for an admission or v
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 // 20210226 CAS: https://jira.hl7.org/browse/FHIR-31384
-* codes from system $AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn
+* codes from system AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn
 // 20210201 CAS:  https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
-* codes from system $AHANUBCPointOfOriginForAdmissionOrVisitNewborn
+* codes from system AHANUBCPointOfOriginForAdmissionOrVisitNewborn
 * insert AHANUBCCopyrightNotice
 
-/*
 CodeSystem: AHANUBCPriorityTypeOfAdmissionOrVisit
 Title: "NUBC Priority (Type) of Admission or Visit"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
@@ -370,7 +356,6 @@ To obtain the underlying code systems, please see information [here](https://www
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
-*/
 
 ValueSet: AHANUBCPriorityTypeOfAdmissionOrVisit
 Title: "NUBC Priority (Type) of Admission or Visit"
@@ -383,7 +368,7 @@ This code system consists of the following:
 These codes are used to convey the priority of an admission or visit and are the property of the American Hospital Association.
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
-* codes from system $AHANUBCPriorityTypeOfAdmissionOrVisit
+* codes from system AHANUBCPriorityTypeOfAdmissionOrVisit
 * insert AHANUBCCopyrightNotice
 
 //********start: AMA / HCPCS************
@@ -427,7 +412,7 @@ RuleSet: HIPPSCopyrightNotice
 * ^copyright = "CMS maintains HIPPS. There are no known constraints on the use of HIPPS. See more information about HIPPS codes [here](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/HIPPSCodes)"
 
 
-/*
+
 CodeSystem: CMSHCPCSCodes
 Title: "Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes"
 Description: "The Level II HCPCS codes, which are established by CMS's Alpha-Numeric Editorial Panel, primarily represent items and supplies and non-physician services not covered by the American Medical Association's Current Procedural Terminology-4 (CPT-4) codes; Medicare, Medicaid, and private health insurers use HCPCS procedure and modifier codes for claims processing.  Level II alphanumeric procedure and modifier codes comprise the A to V range.
@@ -442,12 +427,11 @@ These files contain the Level II alphanumeric HCPCS procedure and modifier codes
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert HCPCSCopyrightNotice
-*/
+
 
 
 // 20210201 CAS: Placeholder fix for https://jira.hl7.org/browse/FHIR-30413 - Add HIPPS to Institutional item.productOrService Value Set
 // Approach adding a special valueset for inpatient
-/*
 CodeSystem: CMSHIPPSCodes
 Title: "Health Insurance Prospective Payment System (HIPPS)"
 Description: "Health Insurance Prospective Payment System (HIPPS) rate codes represent specific sets
@@ -478,7 +462,7 @@ group information may also vary by payment systems."
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert HIPPSCopyrightNotice
-*/
+
 
 ValueSet: AMACPTCMSHCPCSProcedureCodes
 // 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
@@ -514,7 +498,7 @@ Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCod
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
 * include $HL7DataAbsentReason#not-applicable "Not Applicable"
 * codes from system $CPT
-* codes from system $CMSHCPCSCodes
+* codes from system CMSHCPCSCodes
 * ^copyright = "Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
 
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
@@ -587,8 +571,8 @@ pertaining to different payment systems, but often provides information about th
 assessment used to arrive at the code. Which positions of the code carry the case mix
 group information may also vary by payment systems."
 * codes from system $CPT
-* codes from system $CMSHCPCSCodes
-* codes from system $CMSHIPPSCodes
+* codes from system CMSHCPCSCodes
+* codes from system CMSHIPPSCodes
 * include $HL7DataAbsentReason#not-applicable "Not Applicable"
 * ^copyright = "Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
 
@@ -630,12 +614,12 @@ Releases can be found here: [https://www.cms.gov/Medicare/Coding/HCPCSReleaseCod
 
 These files contain the Level II alphanumeric HCPCS procedure and modifier codes, their long and short descriptions, and applicable Medicare administrative, coverage and pricing data."
 * codes from system $CPT
-* codes from system $CMSHCPCSCodes
+* codes from system CMSHCPCSCodes
 * ^copyright = "Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
 
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
 
-/*
+
 // ******** American Dental Association CDT ********
 CodeSystem: ADADentalProcedureCode
 Title: "ADA Code on Dental Procedures and Nomenclature"
@@ -655,7 +639,7 @@ To obtain the underlying code systems, please see information [here](https://www
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert ADACopyrightNotice
-*/
+
 
 
 ValueSet: ADADentalProcedureCode
@@ -671,14 +655,14 @@ The Council on Dental Benefit Programs (CDBP) has ADA Bylaws responsibility for 
 Please see Code Maintenance Committee (CMC) page for information about the CMC's members and activities.
 
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
-* codes from system $ADADentalProcedureCode
+* codes from system ADADentalProcedureCode
 * include $HL7DataAbsentReason#not-applicable "Not Applicable"
 * insert ADACopyrightNotice
 
 
 
 // ******** DRGs ***************
-/*
+
 CodeSystem: CMSMSDRG
 Title: "Medicare Severity Diagnosis Related Groups (MS-DRGs)"
 Description: "Section 1886(d) of the Act specifies that the Secretary shall establish a classification system (referred to as DRGs) for inpatient discharges and adjust payments under the IPPS based on appropriate weighting factors assigned to each DRG.  Therefore, under the IPPS, we[CMS] pay for inpatient hospital services on a rate per discharge basis that varies according to the DRG to which a beneficiary's stay is assigned. The formula used to calculate payment for a specific case multiplies an individual hospital's payment rate per case by the weight of the DRG to which the case is assigned.  Each DRG weight represents the average resources required to care for cases in that particular DRG, relative to the average resources used to treat cases in all DRGs.
@@ -693,8 +677,8 @@ Content can be obtained on the CMS hosted page located [here](https://www.cms.go
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain MS-DRGs used throughout the US health care industry. The CMS MS-DRGs are free to use without restriction."
-*/
-/*
+
+
 CodeSystem: THREEMAPDRG
 Title: "All Patient Diagnosis Related Groups (AP-DRGs)"
 Description: """In 1987, the state of New York passed legislation instituting a DRG-based prospective payment system for all non-Medicare patients. The legislation included a requirement that the New York State Department of Health (NYDH) evaluate the applicability of the DRGs to a non-Medicare population. In particular, the legislation required that the DRGs be evaluated with respect to neonates and patients with Human Immunodeficiency Virus (HIV) infections. NYDH entered into an agreement with 3M HIS to assist with the evaluation of the need for DRG modifications as well as to make the necessary changes in the DRG definitions and software. The DRG definitions developed by NYDH and 3M HIS are referred to as the All Patient DRGs (AP DRGs).
@@ -712,8 +696,7 @@ Averill RF, Goldfield NI, Muldoon J, Steinbeck BA, Grant TM. A closer look at Al
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * ^copyright = ""
-*/
-/*
+
 CodeSystem: THREEMAPRDRG
 Title: "All Patient Refined Diagnosis Related Groups (APR-DRGs)"
 Description: "3M APR DRGs have become the standard across the U.S. for classifying hospital inpatients in non-Medicare populations. As of January 2019, 27 state Medicaid programs use 3M APR DRGs to pay hospitals, as do approximately a dozen commercial payers and Medicaid managed care organizations. Over 2,400 hospitals have licensed 3M APR DRGs to verify payment and analyze their internal operations.
@@ -731,7 +714,7 @@ Link to information about the code system - including how to obtain the content 
 * ^copyright = "The clinical logic is maintained by a team of 3M clinicians, data analysts, nosologists, programmers and economists. The logic is proprietary to 3M but is available for licensees to view in an online definitions manual.
 
 To license APR DRG from 3M, see request form [here](https://engage.3m.com/PPS_Groupers_Contact)"
-*/
+
 
 ValueSet: CMSMS3MAPAPRDRG
 Title: "MS-DRGs - AP-DRGs - APR-DRGs"
@@ -773,9 +756,9 @@ Averill RF, Goldfield NI, Muldoon J, Steinbeck BA, Grant TM. A closer look at Al
 
 [https://apps.3mhis.com/docs/Groupers/All\_Patient\_Refined\_DRG/Methodology\_overview\_GRP041/grp041\_aprdrg\_meth\_overview.pdf](https://apps.3mhis.com/docs/Groupers/All_Patient_Refined_DRG/Methodology_overview_GRP041/grp041_aprdrg_meth_overview.pdf)"""
 
-* codes from system $CMSMSDRG
-* codes from system $THREEMAPDRG
-* codes from system $THREEMAPRDRG
+* codes from system CMSMSDRG
+* codes from system THREEMAPDRG
+* codes from system THREEMAPRDRG
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain MS-DRGs used throughout the US health care industry. The CMS MS-DRGs are free to use without restriction.
 
 The clinical logic is maintained by a team of 3M clinicians, data analysts, nosologists, programmers and economists. The logic is proprietary to 3M but is available for licensees to view in an online definitions manual.
@@ -783,7 +766,7 @@ The clinical logic is maintained by a team of 3M clinicians, data analysts, noso
 To license APR DRG from 3M, see request form [here](https://engage.3m.com/PPS_Groupers_Contact)"
 
 // ******** Place of Service ***************
-/*CodeSystem: CMSPlaceofServiceCodes
+CodeSystem: CMSPlaceofServiceCodes
 Title: "CMS Place of Service Codes (POS)"
 Description: "Place of Service Codes are two-digit codes placed on health care professional claims to indicate the setting in which a service was provided. The Centers for Medicare & Medicaid Services (CMS) maintain POS codes used throughout the health care industry.
 
@@ -795,7 +778,6 @@ Current codes can be obtained [here](https://www.cms.gov/Medicare/Coding/place-o
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain Place Of Service (POS) codes used throughout the US health care industry. The CMS POS codes are free to use without restriction."
-*/
 
 ValueSet: CMSPlaceofServiceCodes
 Title: "CMS Place of Service Codes (POS)"
@@ -804,13 +786,12 @@ Description: "Place of Service Codes are two-digit codes placed on health care p
 This code set is required for use in the implementation guide adopted as the national standard for electronic transmission of professional health care claims under the provisions of the Health Insurance Portability and Accountability Act of 1996 (HIPAA). HIPAA directed the Secretary of HHS to adopt national standards for electronic transactions. These standard transactions require all health plans and providers to use standard code sets to populate data elements in each transaction. The Transaction and Code Set Rule adopted the ASC X12N-837 Health Care Claim: Professional, volumes 1 and 2, as the standard for electronic submission of professional claims. This standard names the POS code set currently maintained by CMS as the code set to be used for describing sites of service in such claims. POS information is often needed to determine the acceptability of direct billing of Medicare, Medicaid and private insurance services provided by a given provider.
 
 Current codes can be obtained [here](https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set)"
-* codes from system $CMSPlaceofServiceCodes
+* codes from system CMSPlaceofServiceCodes
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain Place Of Service (POS) codes used throughout the US health care industry. The CMS POS codes are free to use without restriction."
 
 // ******** CARCs / RARCs ***************
 
 //  *** @ Saul - No change to CodeSystem CARCs ; RARCs are new
-/*
 CodeSystem: X12ClaimAdjustmentReasonCodes
 Title: "X12 Claim Adjustment Reason Codes"
 Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
@@ -844,8 +825,7 @@ Additional information on X12 licensing program can be found here:
 **Purchasing Information:**
 
 To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com."
-*/
-/*
+
 CodeSystem: CMSRemittanceAdviceRemarkCodes
 Title: "X12 Remittance Advice Remark Codes"
 Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
@@ -882,7 +862,7 @@ Additional information on X12 licensing program can be found here:
 **Purchasing Information:**
 
 To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com."
-*/
+
 
 ValueSet: X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 Title: "X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes"
@@ -899,8 +879,8 @@ External code lists maintained by X12 and external code lists maintained by othe
 [https://x12.org/codes](https://x12.org/codes)
 
 Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."
-* codes from system $X12ClaimAdjustmentReasonCodes
-* codes from system $CMSRemittanceAdviceRemarkCodes
+* codes from system X12ClaimAdjustmentReasonCodes
+* codes from system CMSRemittanceAdviceRemarkCodes
 * ^copyright = "**Intellectual Property Information**
 
 All X12 products are subject to this IP policy, including published and draft works.
@@ -923,50 +903,6 @@ To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.c
 
 The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Remark Codes (RARC) used throughout the US health care industry."
 
-
-
-
-//  *** @ Saul - No change to CodeSystem CARCs ; RARCs are new
-CodeSystem: X12AmbulanceTransportReasonCodes
-Title: "X12 Ambulance Transport Reason Codes"
-Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
-
-The X12 Ambulance Transport Reason Codes indicate the reason for ambulance transport. These codes are listed within an X12 implementation guide (TR3) and maintained by X12.
-
-Internal code lists maintained by X12 [More information from X12 pending]
-
-Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."
-* ^url = $X12AmbulanceTransReas
-* ^caseSensitive = true
-* insert CodeSystemStubBoilerplate
-* ^content = #not-present
-* ^copyright = "**Intellectual Property Information**
-
-All X12 products are subject to this IP policy, including published and draft works.
-
-X12 is the only organization authorized to grant permission for use of X12 products. Users of all X12 products should make sure that they understand the permissible uses, as well as the limitations on such usage, as outlined below.
-
-Additional IP information can be found here: [https://x12.org/products/ip-use](https://x12.org/products/ip-use)
-
-**Licensing Information**
-
-Send an email to ip@x12.org to request permission to reproduce X12 IP. Include your name, organization, title, address, city, state, zip, email, a detailed description of the Submitted Artifact, including the underlying or cited X12 Product, and a detailed description of the intended audience and planned distribution method for the Artifact.
-
-Additional information on X12 licensing program can be found here:
-
-[https://x12.org/products/licensing-program](https://x12.org/products/licensing-program)
-
-**Purchasing Information:**
-
-To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com."
-
-
-
-ValueSet: C4BBAmbulanceTransportReasonCodes
-Title: "C4BB Ambulance Transport Reasons"
-Description: "Transportation Services Ambulatory Transport Reason Codes" 
-* codes from system X12AmbulanceTransportReasonCodes
-* ^copyright = "This Valueset is not copyrighted."
 
 //  ********* ICD diagnosis codes / procedure codes
 /*
@@ -1052,7 +988,7 @@ Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of IC
 The International Classification of Diseases, Ninth Revision, Procedure Coding System (ICD-9-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS) available for public use. CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-9-PCS."
 
 
-/*
+
 CodeSystem: ADAUniversalNumberingSystem
 Title: "American Dental Association Universal Numbering System"
 Description: "The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
@@ -1064,8 +1000,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert ADACopyrightNotice
-*/
-/*
+
 CodeSystem: ADAAreaOfOralCavitySystem
 Title: "American Dental Association Area of Oral Cavity System"
 Description: "The American Dental Association Area of Oral Cavity System is a notation system indicating a quadrant, arch, or the entire mouth.
@@ -1077,14 +1012,12 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * insert CodeSystemStubBoilerplate
 * insert ADACopyrightNotice
 
-*/
-
 ValueSet: OralBodySite
 Title: "Oral Body Site Value Set"
 Description: "Oral Body Site indicating tooth numbers and area of oral cavity."
 
-* codes from system $ADAUniversalToothDesignationSystem
-* codes from system $ADAAreaOralCavitySystem
+* codes from system ADAUniversalNumberingSystem
+* codes from system ADAAreaOfOralCavitySystem
 * insert ADACopyrightNotice
 
 
@@ -1093,5 +1026,5 @@ Title: "American Dental Association Universal Numbering Value Set"
 Description: "The American Dental Association Universal Numbering System is a tooth notation system primarily used in the United States.
 
 Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
-* codes from system $ADAUniversalToothDesignationSystem
+* codes from system ADAUniversalNumberingSystem
 * insert ADACopyrightNotice

@@ -5,7 +5,7 @@ Description: "EOB Outpatient Institutional - Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-13T11:10:24-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|2.0.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|1.2.0)
 * identifier.type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier.type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier.system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
@@ -58,10 +58,10 @@ Usage: #example
 // Item-Level adjudication only
 * item[0]
   * sequence = 1
-  * revenue = $AHANUBCRevenueCodes#0551
+  * revenue = $RevenueCodes#0551
   * productOrService = $cpt#99231
   * servicedDate = "2020-09-29"
-  * locationCodeableConcept = $CMSPlaceofServiceCodes#12
+  * locationCodeableConcept = $Place_of_Service_Code_Set#12
   * locationCodeableConcept.text = "HOME"
   * adjudication[adjudicationamounttype][0].
     * category = $adjudication#submitted "Submitted Amount"
@@ -96,10 +96,10 @@ Usage: #example
     * amount.currency = #USD
 * item[+]
   * sequence = 2
-  * revenue = $AHANUBCRevenueCodes#0023
+  * revenue = $RevenueCodes#0023
   * productOrService = $cpt#99231
   * servicedDate = "2020-09-29"
-  * locationCodeableConcept = $CMSPlaceofServiceCodes#12
+  * locationCodeableConcept = $Place_of_Service_Code_Set#12
   * locationCodeableConcept.text = "HOME"
   * adjudication[0]
     * category = $adjudication#submitted "Submitted Amount"
