@@ -4,7 +4,7 @@ Title: "EOB Inpatient Institutional - Example 2"
 Description: "EOB Inpatient Institutional - Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-04-28T15:39:36-04:00"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|1.2.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|2.0.0)
 * identifier.type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier.type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier.system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
@@ -73,86 +73,86 @@ Usage: #example
 * insurance.focal = true
 * insurance.coverage = Reference(Coverage2)
 * item[0].sequence = 1
-* item[=].revenue = $RevenueCodes#0301
+* item[=].revenue = $AHANUBCRevenueCodes#0301
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 2
-* item[=].revenue = $RevenueCodes#0260
+* item[=].revenue = $AHANUBCRevenueCodes#0260
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 3
-* item[=].revenue = $RevenueCodes#0305
+* item[=].revenue = $AHANUBCRevenueCodes#0305
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 4
-* item[=].revenue = $RevenueCodes#0324
+* item[=].revenue = $AHANUBCRevenueCodes#0324
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 5
-* item[=].revenue = $RevenueCodes#0259
+* item[=].revenue = $AHANUBCRevenueCodes#0259
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 6
-* item[=].revenue = $RevenueCodes#0250
+* item[=].revenue = $AHANUBCRevenueCodes#0250
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 7
-* item[=].revenue = $RevenueCodes#0710
+* item[=].revenue = $AHANUBCRevenueCodes#0710
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 8
-* item[=].revenue = $RevenueCodes#0210
+* item[=].revenue = $AHANUBCRevenueCodes#0210
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 9
-* item[=].revenue = $RevenueCodes#0272
+* item[=].revenue = $AHANUBCRevenueCodes#0272
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 10
-* item[=].revenue = $RevenueCodes#0370
+* item[=].revenue = $AHANUBCRevenueCodes#0370
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 11
-* item[=].revenue = $RevenueCodes#0730
+* item[=].revenue = $AHANUBCRevenueCodes#0730
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 12
-* item[=].revenue = $RevenueCodes#0450
+* item[=].revenue = $AHANUBCRevenueCodes#0450
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[+].sequence = 13
-* item[=].revenue = $RevenueCodes#0481
+* item[=].revenue = $AHANUBCRevenueCodes#0481
 * item[=].productOrService = $cpt#99231
 * item[=].servicedPeriod.start = "2017-05-23"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
-* adjudication[billingnetworkcontractingstatus]
-  * reason = $C4BBPayerAdjudicationStatus#contracted "Contracted"
-  * reason.text = "Indicates the provider was contracted for the service"
+* adjudication[billingnetworkstatus]
+  * reason = $C4BBPayerAdjudicationStatus#innetwork "In Network"
+  * reason.text = "Indicates the provider was in network for the service"
 * adjudication[adjudicationamounttype]
   * category = $C4BBAdjudication#noncovered "Noncovered"
   * category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."

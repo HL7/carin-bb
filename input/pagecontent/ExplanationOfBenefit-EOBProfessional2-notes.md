@@ -6,7 +6,7 @@ Description: "EOB Professional - Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-20T14:46:05-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|1.2.0"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|2.0.0"
 * identifier.type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType#uc "Unique Claim ID"
   * text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier.system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
@@ -52,8 +52,10 @@ Usage: #example
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#21
   * text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[0].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
-* item[=].adjudication[=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item[=].adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
+* item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
+  * text = "The total submitted amount for the claim or group or line item."
 * item[=].adjudication[=].amount.value = 68.8
 * item[=].adjudication[=].amount.currency = #USD
 * item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#copay "CoPay"
@@ -76,15 +78,15 @@ Usage: #example
   * text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * item[=].adjudication[=].amount.value = 0
 * item[=].adjudication[=].amount.currency = #USD
-* item[=].adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork "In Network"
-  * text = "Indicates the claim or claim line was paid in network. This does not indicate the contracting status of the provider"
 * item[+].sequence = 2
 * item[=].productOrService = http://www.ama-assn.org/go/cpt#75710
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#21
   * text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[0].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
-* item[=].adjudication[=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item[=].adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
+* item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
+  * text = "The total submitted amount for the claim or group or line item."
 * item[=].adjudication[=].amount.value = -68.8
 * item[=].adjudication[=].amount.currency = #USD
 * item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#copay "CoPay"
@@ -107,15 +109,15 @@ Usage: #example
   * text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * item[=].adjudication[=].amount.value = 0
 * item[=].adjudication[=].amount.currency = #USD
-* item[=].adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork "In Network"
-  * text = "Indicates the claim or claim line was paid in network. This does not indicate the contracting status of the provider"
 * item[+].sequence = 3
 * item[=].productOrService = http://www.ama-assn.org/go/cpt#75710
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#21
   * text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[0].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
-* item[=].adjudication[=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item[=].adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
+* item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
+  * text = "The total submitted amount for the claim or group or line item."
 * item[=].adjudication[=].amount.value = 68.8
 * item[=].adjudication[=].amount.currency = #USD
 * item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#copay "CoPay"
@@ -138,15 +140,15 @@ Usage: #example
   * text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * item[=].adjudication[=].amount.value = 0
 * item[=].adjudication[=].amount.currency = #USD
-* item[=].adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork "In Network"
-  * text = "Indicates the claim or claim line was paid in network. This does not indicate the contracting status of the provider"
 * item[+].sequence = 4
 * item[=].productOrService = http://www.ama-assn.org/go/cpt#37228
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#21
   * text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[0].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
-* item[=].adjudication[=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item[=].adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
+* item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
+  * text = "The total submitted amount for the claim or group or line item."
 * item[=].adjudication[=].amount.value = 751.2
 * item[=].adjudication[=].amount.currency = #USD
 * item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#copay "CoPay"
@@ -169,15 +171,15 @@ Usage: #example
   * text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * item[=].adjudication[=].amount.value = 224.11
 * item[=].adjudication[=].amount.currency = #USD
-* item[=].adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork "In Network"
-  * text = "Indicates the claim or claim line was paid in network. This does not indicate the contracting status of the provider"
 * item[+].sequence = 5
 * item[=].productOrService = http://www.ama-assn.org/go/cpt#37228
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#21
   * text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[0].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
-* item[=].adjudication[=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item[=].adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
+* item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
+  * text = "The total submitted amount for the claim or group or line item."
 * item[=].adjudication[=].amount.value = 751.2
 * item[=].adjudication[=].amount.currency = #USD
 * item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#copay "CoPay"
@@ -200,15 +202,15 @@ Usage: #example
   * text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * item[=].adjudication[=].amount.value = 0
 * item[=].adjudication[=].amount.currency = #USD
-* item[=].adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork "In Network"
-  * text = "Indicates the claim or claim line was paid in network. This does not indicate the contracting status of the provider"
 * item[+].sequence = 6
 * item[=].productOrService = http://www.ama-assn.org/go/cpt#37228
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#21
   * text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[0].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
-* item[=].adjudication[=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item[=].adjudication[=].reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork
+* item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
+  * text = "The total submitted amount for the claim or group or line item."
 * item[=].adjudication[=].amount.value = -751.2
 * item[=].adjudication[=].amount.currency = #USD
 * item[=].adjudication[+].category = http://terminology.hl7.org/CodeSystem/adjudication#copay "CoPay"
@@ -231,12 +233,10 @@ Usage: #example
   * text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
 * item[=].adjudication[=].amount.value = -224.11
 * item[=].adjudication[=].amount.currency = #USD
-* item[=].adjudication[+].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork "In Network"
-  * text = "Indicates the claim or claim line was paid in network. This does not indicate the contracting status of the provider"
-* adjudication.category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus "Billing Network Contracting Status"
+* adjudication.category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#billingnetworkstatus "Billing Network Status"
   * text = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."
-* adjudication.reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#contracted "Contracted"
-  * text = "Indicates the provider was contracted for the service"
+* adjudication.reason = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus#innetwork "In Network"
+  * text = "Indicates the provider was in network for the service"
 * total[0].category = http://terminology.hl7.org/CodeSystem/adjudication#submitted "Submitted Amount"
 * total[=].category.text = "The total submitted amount for the claim or group or line item."
 * total[=].amount.value = 820

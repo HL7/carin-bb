@@ -132,9 +132,17 @@ role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'superv
 Severity: #error
 
 
+
+Invariant: EOB-prof-all-transportation-supportinginfo-linked-to-line
+Description: "Professional EOB: SupportingInfo repetitions with with transportation category code must be referred to by one or more repetitions of item.informationSequence"
+Expression: "supportingInfo.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBTransportationServiceCategories')).sequence.subsetOf(%context.item.informationSequence)"
+Severity: #error
+
+
+
 Invariant: EOB-institutional-item-or-header-adjudication
-Description: "Institutional EOB:  Should have adjudication at the item or header level, but not both"
-Expression: "(adjudication.exists() != item.adjudication.exists())"
+Description: "Institutional EOB:  Should have adjudication with adjudicationamounttype slice at the item or header level, but not both"
+Expression: "adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists() != item.adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists()"
 Severity: #error
 
 
@@ -178,9 +186,10 @@ Severity: #error
 RuleSet: ItemAdjudicationInvariant
 * item obeys adjudication-has-amount-type-slice
 
+/* removed - FHIR-38063 - Update Invariants to support contracting and benefit payment status move to EOB.adjudication
 RuleSet: AdjudicationInvariant
 * obeys adjudication-has-amount-type-slice
-
+*/
 RuleSet: EOBHeaderItemAdjudicationInvariant
 * obeys EOB-institutional-item-or-header-adjudication
 

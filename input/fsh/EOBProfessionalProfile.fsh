@@ -7,6 +7,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)
 * obeys EOB-professional-nonclinician-meta-profile-version
+* obeys EOB-prof-all-transportation-supportinginfo-linked-to-line
 
 * careTeam obeys EOB-prof-careTeam-practitioner
 * careTeam.qualification MS
@@ -16,7 +17,6 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 //* type = $HL7ClaimTypeCS#professional
 * type from C4BBProfessionalAndNonClinicianClaimType (required)
 
-
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner) -- set in base class
 * insert SupportingInfoSlicing
 * supportingInfo contains
@@ -24,8 +24,14 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
    servicefacility 0..1 MS and
    // 20210312 CAS: https://jira.hl7.org/browse/FHIR-31534 - Medical Record Number and Patient Account Number
    medicalrecordnumber 0..1 MS and
-   patientaccountnumber 0..1 MS
-
+   patientaccountnumber 0..1 MS and
+   patientweight 0..* MS and
+   ambulancetransportreason 0..* MS and
+   transportationdistance 0..* MS and
+   roudtrippurpose 0..* MS and
+   stretcherpurpose 0..* MS and
+   pickuplocation 0..* MS and
+   dropofflocation 0..* MS
 
 * supportingInfo[clmrecvddate] ^short = "Claim received date"
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
@@ -46,6 +52,57 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * supportingInfo[patientaccountnumber] ^short = "Patient account number"
 * supportingInfo[patientaccountnumber].category = C4BBSupportingInfoType#patientaccountnumber
 * supportingInfo[patientaccountnumber].valueString 1..1 MS
+
+
+* supportingInfo[patientweight].category = C4BBSupportingInfoType#patientweight
+* supportingInfo[patientweight].value[x] only Quantity
+* supportingInfo[patientweight].valueQuantity 1..1
+* supportingInfo[patientweight].valueQuantity.unit = "[lb_av]"
+* supportingInfo[patientweight].valueQuantity.system = "http://unitsofmeasure.org"
+* supportingInfo[patientweight].valueQuantity.value 1..1
+* supportingInfo[patientweight].code 0..0
+* supportingInfo[patientweight].timing[x] 0..0
+
+* supportingInfo[ambulancetransportreason].category = C4BBSupportingInfoType#ambulancetransportreason
+* supportingInfo[ambulancetransportreason].reason 1..1
+* supportingInfo[ambulancetransportreason].reason from C4BBAmbulanceTransportReasonCodes (required)
+* supportingInfo[ambulancetransportreason].code 0..0
+* supportingInfo[ambulancetransportreason].timing[x] 0..0
+
+* supportingInfo[transportationdistance].category = C4BBSupportingInfoType#transportationdistance
+* supportingInfo[transportationdistance].value[x] only Quantity
+* supportingInfo[transportationdistance].valueQuantity 1..1
+* supportingInfo[transportationdistance].valueQuantity.unit = "[mi_i]"
+* supportingInfo[transportationdistance].valueQuantity.system = "http://unitsofmeasure.org"
+* supportingInfo[transportationdistance].valueQuantity.value 1..1
+* supportingInfo[transportationdistance].code 0..0
+* supportingInfo[transportationdistance].timing[x] 0..0
+
+* supportingInfo[roudtrippurpose].category = C4BBSupportingInfoType#roudtrippurpose
+* supportingInfo[roudtrippurpose].value[x] only string
+* supportingInfo[roudtrippurpose].valueString 1..1
+* supportingInfo[roudtrippurpose].code 0..0
+* supportingInfo[roudtrippurpose].timing[x] 0..0
+
+* supportingInfo[stretcherpurpose].category = C4BBSupportingInfoType#stretcherpurpose
+* supportingInfo[stretcherpurpose].value[x] only string
+* supportingInfo[stretcherpurpose].valueString 1..1
+* supportingInfo[stretcherpurpose].code 0..0
+* supportingInfo[stretcherpurpose].timing[x] 0..0
+
+* supportingInfo[pickuplocation].category = C4BBSupportingInfoType#pickuplocation
+* supportingInfo[pickuplocation].value[x] only string
+* supportingInfo[pickuplocation].valueString 1..1
+* supportingInfo[pickuplocation].code 0..0
+* supportingInfo[pickuplocation].timing[x] 0..0
+
+* supportingInfo[dropofflocation].category = C4BBSupportingInfoType#dropofflocation
+* supportingInfo[dropofflocation].value[x] only string
+* supportingInfo[dropofflocation].valueString 1..1
+* supportingInfo[dropofflocation].code 0..0
+* supportingInfo[dropofflocation].timing[x] 0..0
+
+
 * careTeam.role from C4BBClaimProfessionalAndNonClinicianCareTeamRole   (required)  // was PayerProfessionalAndNonClinicianProviderRole
 * careTeam.role 1..1 MS
 * diagnosis 1..* MS
@@ -72,36 +129,36 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * insert AdjudicationSlicing
 * adjudication MS
 * adjudication contains
-   billingnetworkcontractingstatus 0..1 MS and
-   renderingnetworkcontractingstatus 0..1 MS
+   billingnetworkstatus 0..1 MS and
+   renderingnetworkstatus 0..1 MS
 
-* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication[billingnetworkcontractingstatus].category MS
-* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
-* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+* adjudication[billingnetworkstatus] ^short = "Billing provider networking status"
+* adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
+* adjudication[billingnetworkstatus].category MS
+* adjudication[billingnetworkstatus].reason from C4BBPayerProviderNetworkStatus  (required)
+* adjudication[billingnetworkstatus].reason 1..1 MS
 
-* adjudication[renderingnetworkcontractingstatus] ^short = "Rendering provider contracting status"
-* adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
-* adjudication[renderingnetworkcontractingstatus].category MS
-* adjudication[renderingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
-* adjudication[renderingnetworkcontractingstatus].reason 1..1 MS
+* adjudication[renderingnetworkstatus] ^short = "Rendering provider networking status"
+* adjudication[renderingnetworkstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkstatus
+* adjudication[renderingnetworkstatus].category MS
+* adjudication[renderingnetworkstatus].reason from C4BBPayerProviderNetworkStatus  (required)
+* adjudication[renderingnetworkstatus].reason 1..1 MS
 
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
 * item.adjudication contains
    adjudicationamounttype 1..* MS and
-   denialreason 0..1 MS and
+   adjustmentreason 0..1 MS and
    benefitpaymentstatus 1..1 MS and
    allowedunits 0..1 MS
 
 * item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
-* item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason
-* item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
-* item.adjudication[denialreason].reason 1..1 MS
-* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
+* item.adjudication[adjustmentreason].category  = C4BBAdjudicationDiscriminator#adjustmentreason
+* item.adjudication[adjustmentreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
+* item.adjudication[adjustmentreason].reason 1..1 MS
+* item.adjudication[adjustmentreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
@@ -110,7 +167,10 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.adjudication[adjudicationamounttype].amount 1..1
 
 * item.adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* item.adjudication[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+* item.adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item.adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
+* item.adjudication[benefitpaymentstatus].reason 1..1 MS
+
 * insert TotalSlicing
 * total.category from C4BBAdjudication  (extensible)
 * total contains
@@ -125,10 +185,10 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 If the service facility is not assigned an NPI, this data element will not be populated.  Reference CMS 1500 element 32a (97, 170, 176)"
 * supportingInfo[medicalrecordnumber] ^comment = "Provider submitted medical record number that can be included on the claim. (109)"
 * supportingInfo[patientaccountnumber] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
-* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
-* adjudication[renderingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
+* adjudication[billingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* adjudication[renderingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
-* item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+* item.adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * item.adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"

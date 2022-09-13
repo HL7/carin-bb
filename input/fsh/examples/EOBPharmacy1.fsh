@@ -3,7 +3,7 @@ InstanceOf: C4BBExplanationOfBenefitPharmacy
 Description: "EOB Pharmacy Example 1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitPharmacy|1.2.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitPharmacy|2.0.0)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -24,8 +24,8 @@ Usage: #example
 * outcome = #partial
 * insurance[0].focal = true
 * insurance[0].coverage[0] = Reference(Coverage1)
-* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
+* adjudication[billingnetworkstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 * adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 
@@ -62,9 +62,9 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD
 * supportingInfo[brandgenericindicator].category = C4BBSupportingInfoType#brandgenericindicator
 * supportingInfo[brandgenericindicator].sequence = 2
-* supportingInfo[brandgenericindicator].code = NCPDPBrandGenericIndicator#2
+* supportingInfo[brandgenericindicator].code = $NCPDPBrandGenericIndicator#2
 * supportingInfo[rxoriginCode].category = C4BBSupportingInfoType#rxorigincode
-* supportingInfo[rxoriginCode].code = NCPDPPrescriptionOriginCode#1
+* supportingInfo[rxoriginCode].code = $NCPDPPrescriptionOriginCode#1
 * supportingInfo[rxoriginCode].sequence = 3
 * supportingInfo[refillNum].category = C4BBSupportingInfoType#refillnum
 * supportingInfo[refillNum].valueQuantity.value = 0.0
@@ -75,7 +75,7 @@ Usage: #example
 * supportingInfo[refillsAuthorized].sequence = 5
 
 * supportingInfo[dawcode].category = C4BBSupportingInfoType#dawcode
-* supportingInfo[dawcode].code = NCPDPDispensedAsWrittenOrProductSelectionCode#7
+* supportingInfo[dawcode].code = $NCPDPDispensedAsWrittenOrProductSelectionCode#7
 * supportingInfo[dawcode].sequence = 6
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].timingDate = 2019-10-31
@@ -84,5 +84,5 @@ Usage: #example
 * supportingInfo[dayssupply].sequence = 8
 * supportingInfo[dayssupply].valueQuantity.value =  30.0
 * supportingInfo[compoundcode].category = C4BBSupportingInfoType#compoundcode
-* supportingInfo[compoundcode].code = NCPDPCompoundCode#Dummy
+* supportingInfo[compoundcode].code = $NCPDPCompoundCode#Dummy
 * supportingInfo[compoundcode].sequence = 9

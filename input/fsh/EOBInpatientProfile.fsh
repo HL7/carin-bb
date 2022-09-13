@@ -117,7 +117,7 @@ Services."
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
    adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
-   denialreason 0..* MS and
+   adjustmentreason 0..* MS and
    allowedunits 0..1 MS
 
 * item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
@@ -126,41 +126,43 @@ Services."
 // FHIR-30807 - Change cardinality in EOB Inpatient and Outpatient Institutional Profiles
 * item.adjudication[allowedunits].value 1..1 MS
 
-* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
-* item.adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason
-* item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
-* item.adjudication[denialreason].reason 1..1 MS
+* item.adjudication[adjustmentreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
+* item.adjudication[adjustmentreason].category = C4BBAdjudicationDiscriminator#adjustmentreason
+* item.adjudication[adjustmentreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
+* item.adjudication[adjustmentreason].reason 1..1 MS
 
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+/* removed - FHIR-38063 - Update Invariants to support contracting and benefit payment status move to EOB.adjudication
 * insert AdjudicationInvariant
+*/
 * insert AdjudicationSlicing
 * adjudication MS
 * item.adjudication  MS
 * adjudication contains
-   billingnetworkcontractingstatus 0..1 MS and
+   billingnetworkstatus 0..1 MS and
    benefitpaymentstatus 1..1 MS and
    adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
-   denialreason 0..* MS
+   adjustmentreason 0..* MS
 
 
-* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication[billingnetworkcontractingstatus].category MS
-* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
-* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+* adjudication[billingnetworkstatus] ^short = "Billing provider network status"
+* adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
+* adjudication[billingnetworkstatus].category MS
+* adjudication[billingnetworkstatus].reason from C4BBPayerProviderNetworkStatus  (required)
+* adjudication[billingnetworkstatus].reason 1..1 MS
 
 * adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
 * adjudication[benefitpaymentstatus].reason 1..1 MS
 
-* adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
-* adjudication[denialreason].category = C4BBAdjudicationDiscriminator#denialreason
-* adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
-* adjudication[denialreason].reason 1..1 MS
+* adjudication[adjustmentreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
+* adjudication[adjustmentreason].category = C4BBAdjudicationDiscriminator#adjustmentreason
+* adjudication[adjustmentreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
+* adjudication[adjustmentreason].reason 1..1 MS
 
 * adjudication[adjudicationamounttype] ^short = "Claim level adjudication type and amount"
 * adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
@@ -228,11 +230,11 @@ Services."
 * supportingInfo[medicalrecordnumber] ^comment = "Provider submitted medical record number that can be included on the claim. (109)"
 * supportingInfo[patientaccountnumber] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
-* item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+* item.adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
-* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* adjudication[billingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
-* adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+* adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
@@ -244,7 +246,7 @@ Services."
 * item.modifier ^comment = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41)"
 * item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (42)"
 * item.revenue ^comment = "Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed (86)"
-* adjudication[denialreason].reason ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+* adjudication[adjustmentreason].reason ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * careTeam.provider ^comment = "The National Provider Identifier assigned to the care team (primary care provider, attending, referring, otheroperating, operating, and rendering) for the admission. (93, 96, 98, 99, 173)"
 * procedure ^comment = "Medical procedure a patient received during inpatient stay. Current coding methods include: International Classification of Diseases Surgical Procedures (ICD-9). Information located on UB04 (Form Locator 74). (25, 27, 10, 12)"
 * procedure.type ^comment = "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure. (186)"

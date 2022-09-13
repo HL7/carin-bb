@@ -4,7 +4,7 @@ Title: "EOB Outpatient Institutional - Example 1"
 Description: "EOB Outpatient Institutional - Example 1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|1.2.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|2.0.0)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -36,7 +36,7 @@ Usage: #example
 * insurance[0].coverage[0] = Reference(Coverage1)
 * item[0].sequence = 1
 * item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
-* item[0].revenue = AHANUBCRevenueCodes#Dummy
+* item[0].revenue = $AHANUBCRevenueCodes#Dummy
 * item[0].servicedDate = "2019-11-02"
 // Header-Level adjudication only
 * adjudication[adjudicationamounttype][0]
@@ -48,8 +48,8 @@ Usage: #example
   * category = C4BBAdjudication#paidbypatient
   * category.text = "Patient Pay Amount"
   * amount.value = 0.00
-* adjudication[billingnetworkcontractingstatus]
-  * reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[billingnetworkstatus]
+  * reason = C4BBPayerAdjudicationStatus#innetwork
 * adjudication[benefitpaymentstatus]
   * reason = C4BBPayerAdjudicationStatus#innetwork
 
@@ -70,16 +70,16 @@ Usage: #example
 * supportingInfo[clmrecvddate].timingDate = 2019-11-30
 * supportingInfo[clmrecvddate].sequence = 2
 * supportingInfo[typeofbill].category = C4BBSupportingInfoType#typeofbill
-* supportingInfo[typeofbill].code = AHANUBCTypeOfBill#Dummy
+* supportingInfo[typeofbill].code = $AHANUBCTypeOfBill#Dummy
 * supportingInfo[typeofbill].sequence = 3
 * supportingInfo[pointoforigin].category = C4BBSupportingInfoType#pointoforigin
-* supportingInfo[pointoforigin].code = AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn#Dummy
+* supportingInfo[pointoforigin].code = $AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn#Dummy
 * supportingInfo[pointoforigin].sequence = 4
 * supportingInfo[admtype].category = C4BBSupportingInfoType#admtype
-* supportingInfo[admtype].code = AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
+* supportingInfo[admtype].code = $AHANUBCPriorityTypeOfAdmissionOrVisit#Dummy
 * supportingInfo[admtype].sequence = 5
 * supportingInfo[discharge-status].category = C4BBSupportingInfoType#discharge-status
-* supportingInfo[discharge-status].code = AHANUBCPatientDischargeStatus#Dummy
+* supportingInfo[discharge-status].code = $AHANUBCPatientDischargeStatus#Dummy
 * supportingInfo[discharge-status].sequence = 6
 
 * supportingInfo[medicalrecordnumber].category  = C4BBSupportingInfoType#medicalrecordnumber

@@ -5,64 +5,76 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-bb/Struct
 
 
 # INFORMATION: The following code systems are external and not supported by terminology server, and cannot be validated in examples
-Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated
-Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated
-Code System URI 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated
-Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated
-Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated
-Code System URI 'http://ada.org/cdt' is unknown so the code cannot be validated
-Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
 Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/CodeSystem/AHANUBCTypeOfBill' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/CodeSystem/AHANUBCPointOfOriginNonnewborn' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/CodeSystem/AHANUBCPriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/CodeSystem/AHANUBCPatientDischargeStatus' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/CodeSystem/AHANUBCRevenueCodes' is unknown so the code cannot be validated
+Code System URI 'http://terminology.hl7.org/CodeSystem/CMSPlaceofServiceCodes' is unknown so the code cannot be validated
+Code System URI 'https://terminology.hl7.org/CodeSystem/CDT' is unknown so the code cannot be validated
+
+
+
+Code System URI 'https://x12.org/codesystem.x12.org/5010/1317' is unknown so the code cannot be validated
 
 # WARNING: The following code systems are external and not supported by terminology server, and cannot be validated in examples
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericIndicator because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' is unknown so the code cannot be validated]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' is unknown so the code cannot be validated]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/TypeOfBill' is unknown so the code cannot be validated]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/PointOfOrigin' is unknown so the code cannot be validated]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/PatDischargeStatus' is unknown so the code cannot be validated]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.nubc.org/CodeSystem/RevenueCodes' is unknown so the code cannot be validated]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSICD910PCSProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://ada.org/cdt' is unknown so the code cannot be validated]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBEOBInstitutionalProcedureCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' is unknown so the code cannot be validated]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' is unknown so the code cannot be validated]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' is unknown so the code cannot be validated]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/AHANUBCTypeOfBill' is unknown so the code cannot be validated]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/AHANUBCPointOfOriginNonnewborn' is unknown so the code cannot be validated]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/AHANUBCPriorityTypeOfAdmitOrVisit' is unknown so the code cannot be validated]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/AHANUBCPatientDischargeStatus' is unknown so the code cannot be validated]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/AHANUBCRevenueCodes' is unknown so the code cannot be validated]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode because the value set or a code system it depends on is not known to the validator, Code System URI 'https://terminology.hl7.org/CodeSystem/CDT' is unknown so the code cannot be validated]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/CMSPlaceofServiceCodes' is unknown so the code cannot be validated]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' is unknown so the code cannot be validated]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem' is unknown so the code cannot be validated]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAmbulanceTransportReasonCodes because the value set or a code system it depends on is not known to the validator, Code System URI 'https://x12.org/codesystem.x12.org/5010/1317' is unknown so the code cannot be validated]
+
+
+
 
 # WARNING: Unable to provide support for code system (External proprietary Code system)
 WARNING: ValueSet.where(id = 'ADADentalProcedureCode'): Error from server: Unable to provide support for code system http://ada.org/cdt
-WARNING: ValueSet.where(id = 'AHANUBCPatientDischargeStatus'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PatDischargeStatus
 WARNING: ValueSet.where(id = 'AHANUBCPointOfOriginForAdmissionOrVisit'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PointOfOrigin
 WARNING: ValueSet.where(id = 'AHANUBCPresentOnAdmission'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
-WARNING: ValueSet.where(id = 'AHANUBCPriorityTypeOfAdmissionOrVisit'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit
-WARNING: ValueSet.where(id = 'AHANUBCRevenueCodes'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/RevenueCodes
-WARNING: ValueSet.where(id = 'AHANUBCTypeOfBill'): Error from server: Unable to provide support for code system https://www.nubc.org/CodeSystem/TypeOfBill
 WARNING: ValueSet.where(id = 'AMACPTCMSHCPCSModifiers'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 WARNING: ValueSet.where(id = 'AMACPTCMSHCPCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 WARNING: ValueSet.where(id = 'C4BBEOBInstitutionalProcedureCodes'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 WARNING: ValueSet.where(id = 'CDCICD910CMDiagnosisCodes'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd9
 WARNING: ValueSet.where(id = 'CMSICD910PCSProcedureCodes'): Error from server: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/ICD10
 WARNING: ValueSet.where(id = 'CMSMS3MAPAPRDRG'): Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software
-WARNING: ValueSet.where(id = 'CMSPlaceofServiceCodes'): Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set
 WARNING: ValueSet.where(id = 'NCPDPBrandGenericIndicator'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator
 WARNING: ValueSet.where(id = 'NCPDPCompoundCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode
 WARNING: ValueSet.where(id = 'NCPDPDispensedAsWrittenOrProductSelectionCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode
 WARNING: ValueSet.where(id = 'NCPDPPrescriptionOriginCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode
 WARNING: ValueSet.where(id = 'NCPDPRejectCode'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPRejectCode
 WARNING: ValueSet.where(id = 'X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes'): Error from server: Unable to provide support for code system https://x12.org/codes/claim-adjustment-reason-codes
-
-# Warning about unsupported CodeSystem with url identified by HTA but not yet published in THO
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' is unknown so the code cannot be validated]
-Code System URI 'http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' is unknown so the code cannot be validated
-Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem' is unknown so the code cannot be validated]
-Code System URI 'http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem' is unknown so the code cannot be validated
+WARNING: ValueSet.where(id = 'C4BBAmbulanceTransportReasonCodes'): Error from server: Unable to provide support for code system https://x12.org/codesystem.x12.org/5010/1317
+WARNING: ValueSet.where(id = 'ADAUniversalNumberingSystem'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem
+WARNING: ValueSet.where(id = 'AHANUBCPatientDischargeStatus'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/AHANUBCPatientDischargeStatus
+WARNING: ValueSet.where(id = 'AHANUBCPriorityTypeOfAdmissionOrVisit'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/AHANUBCPriorityTypeOfAdmitOrVisit
+WARNING: ValueSet.where(id = 'AHANUBCRevenueCodes'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/AHANUBCRevenueCodes
+WARNING: ValueSet.where(id = 'AHANUBCTypeOfBill'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/AHANUBCTypeOfBill
+WARNING: ValueSet.where(id = 'CMSPlaceofServiceCodes'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/CMSPlaceofServiceCodes
+WARNING: ValueSet.where(id = 'OralBodySite'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem
+WARNING: ValueSet.where(id = 'ADADentalProcedureCode'): Error from server: Unable to provide support for code system https://terminology.hl7.org/CodeSystem/CDT
+WARNING: ValueSet.where(id = 'AHANUBCPointOfOriginForAdmissionOrVisit'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/AHANUBCPointOfOriginNonnewborn
+WARNING: ValueSet.where(id = 'CMSMS3MAPAPRDRG'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/MSDRG
+WARNING: ValueSet.where(id = 'X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/X12ClaimAdjustmentReasonCodes
 
 # Invalid NDC display warnings (extra spaces in display)
 WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.item[0].productOrService: The display "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)" is not a valid display for the code {http://hl7.org/fhir/sid/ndc}0777-3105-02 - should be one of ['Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02)  (package)'] (from http://tx.fhir.org/r4)

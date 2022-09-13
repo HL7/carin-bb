@@ -108,21 +108,21 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * insert AdjudicationSlicing
 * adjudication MS
 * adjudication contains
-   billingnetworkcontractingstatus 0..1 MS and
-   renderingnetworkcontractingstatus 1..1 MS and 
+   billingnetworkstatus 0..1 MS and
+   renderingnetworkstatus 1..1 MS and 
    benefitpaymentstatus 1..* MS
 
-* adjudication[billingnetworkcontractingstatus] ^short = "Billing provider contracting status"
-* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication[billingnetworkcontractingstatus].category MS
-* adjudication[billingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
-* adjudication[billingnetworkcontractingstatus].reason 1..1 MS
+* adjudication[billingnetworkstatus] ^short = "Billing provider network status"
+* adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
+* adjudication[billingnetworkstatus].category MS
+* adjudication[billingnetworkstatus].reason from C4BBPayerProviderNetworkStatus  (required)
+* adjudication[billingnetworkstatus].reason 1..1 MS
 
-* adjudication[renderingnetworkcontractingstatus] ^short = "Rendering provider contracting status"
-* adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
-* adjudication[renderingnetworkcontractingstatus].category MS
-* adjudication[renderingnetworkcontractingstatus].reason from C4BBPayerProviderContractingStatus  (required)
-* adjudication[renderingnetworkcontractingstatus].reason 1..1 MS
+* adjudication[renderingnetworkstatus] ^short = "Rendering provider network status"
+* adjudication[renderingnetworkstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkstatus
+* adjudication[renderingnetworkstatus].category MS
+* adjudication[renderingnetworkstatus].reason from C4BBPayerProviderNetworkStatus  (required)
+* adjudication[renderingnetworkstatus].reason 1..1 MS
 
 * adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
@@ -133,17 +133,17 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.adjudication MS
 * item.adjudication contains
    adjudicationamounttype 1..* MS and
-   denialreason 0..1 MS and
+   adjustmentreason 0..1 MS and
    benefitpaymentstatus 1..1 MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
 * item.adjudication[allowedunits].category = C4BBAdjudicationDiscriminator#allowedunits
 * item.adjudication[allowedunits].value only decimal
 
-* item.adjudication[denialreason].category  = C4BBAdjudicationDiscriminator#denialreason
-* item.adjudication[denialreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
-* item.adjudication[denialreason].reason 1..1 MS
-* item.adjudication[denialreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
+* item.adjudication[adjustmentreason].category  = C4BBAdjudicationDiscriminator#adjustmentreason
+* item.adjudication[adjustmentreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
+* item.adjudication[adjustmentreason].reason 1..1 MS
+* item.adjudication[adjustmentreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
@@ -151,7 +151,9 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
 * item.adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
-* item.adjudication[benefitpaymentstatus].category from C4BBPayerBenefitPaymentStatus (required)
+* item.adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item.adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
+* item.adjudication[benefitpaymentstatus].reason 1..1 MS
 * insert TotalSlicing
 //* total.category from C4BBAdjudication  (extensible)
 * total contains
@@ -159,135 +161,6 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 
 * total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
 * total[adjudicationamounttype].category from C4BBAdjudication (required)
-
-
-
-/*
-Invariant:  Oral-EOB-subsite-requires-tooth
-Description: "If item.subsite exists then tooth number is required in bodySite or supportingInfo"
-Expression: "ExplanationOfBenefit.item.subSite.exists() implies ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists()"
-Severity:   #error
-//In variant
-// ExplanationOfBenefit.item.subSite.exists() implies ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists()
-
-
-// ExplanationOfBenefit.item.subSite.exists() implies ExplanationOfBenefit or ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists()
-/*
-subsite exists implies // ExplanationOfBenefit.item.subSite.exists() implies
-   (
-      item.bodysite is tooth // ExplanationOfBenefit.item.bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists()
-   or
-
-   )
-
-   All item with subsite informationSequence(s)
-      ExplanationOfBenefit.repeat(item.where(subSite.exists()).informationSequence)
-   .intersect(
-      supportingInfo where tooth sequence
-      ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').sequence
-
-
-Gather all of the item informationSequence that have a surface and the bodySite is not a toothnumber)
-   ExplanationOfBenefit.repeat(item.where(subSite.exists() and bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()).informationSequence)
-intersect with the supportingInfo where there is a tooth number
-
-
-
-
-*****************
-EVERY ITEM WITH A SURFACE HAS AT LEAST ONE TOOTH ASSOCIATED WITH IT
-*****************
-*
-****** ExplanationOfBenefit.repeat(item.where(subSite.exists() and bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()))
-.count() = 0 or ExplanationOfBenefit.repeat(item.where(subSite.exists() and bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()).informationSequence).combine(ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').sequence).isDistinct().not()
-
-
-Set where we need a tooth nuber in supportingInfo
-   item.where(subSite.exists() and bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not())
-
-The matching supportingInfo Sequence numbers
-   %context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence
-
-
-Match for each line
-   where(informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())
-
-where(informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct().not())
-
-getting close
-ExplanationOfBenefit.repeat(item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() or where(informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())))).count() = 0
-
-   ExplanationOfBenefit.repeat(item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()
-         (issue here) or where(informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())))).count() = 0
-
-
-
-
-
-
-item.informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct().not()
-
-item.informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct().not()
-
-
-where we find in supporting info
-
-   informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct().not()
-
-
-mucked
-   item.where(bodySite.where(subSite.exists().not() or (coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct()))
-
-
-
-
-
-
-
-subSite.exists().not()
-or
-   bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()
-   or
-
-
-
-single item success
-   item.subSite.exists().not() or item.bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists() or item.where(informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct()).count() = 0
-
-
-closer
-   item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() or informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct()))
-
-
-FINAL???!!!???!
-   item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0
-   item.where(subSite.exists() and (bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0
-
-*****************
-EVERY TOOTH HAS A LINE ITEM
-*****************
-
-****** ExplanationOfBenefit.repeat(supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite')).sequence.subsetOf(ExplanationOfBenefit.item.informationSequence)
-
-
-
-ExplanationOfBenefit.repeat(item.where(subSite.exists() and bodySite.where(coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists().not()).informationSequence).combine(ExplanationOfBenefit.supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').sequence).isDistinct().not()
-
-ExplanationOfBenefit.repeat(supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists())
-
-ExplanationOfBenefit.repeat(supportingInfo.where(category.coding.code = 'additionalbodysite' and code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem').exists())
-
-
-ExplanationOfBenefit.repeat(supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite'))
-
-
-
-ExplanationOfBenefit.repeat(supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite'))
-
-ExplanationOfBenefit.repeat(supportingInfo.where(code.coding.system='http://hl7.org/fhir/us/carin-bb/CodeSystem/ADAUniversalNumberingSystem' and category.coding.code = 'additionalbodysite')).subsetOf(ExplanationOfBenefit.item.informationSequence)
-
-*/
-// This does not work if there is more than one line.
 
 
 
@@ -316,12 +189,12 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.bodySite ^comment = "Tooth Number - First Occurrence (196)"
 * item.subSite ^comment = "Tooth Surface (197)"
 
-* adjudication[billingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
-* adjudication[renderingnetworkcontractingstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
+* adjudication[billingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* adjudication[renderingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
 * adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
-* item.adjudication[denialreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+* item.adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * item.adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"

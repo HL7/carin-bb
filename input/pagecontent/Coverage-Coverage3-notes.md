@@ -5,7 +5,7 @@ Title: "Coverage Example 3"
 Description: "Coverage Example 3"
 Usage: #example
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|1.2.0"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.0.0"
 * language = #en-US
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MB
 * identifier.system = "https://www.xxxhealthplan.com/fhir/memberidentifier"

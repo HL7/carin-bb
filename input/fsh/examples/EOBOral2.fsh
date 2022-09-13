@@ -2,7 +2,7 @@ Instance: EOBOral2
 InstanceOf: C4BBExplanationOfBenefitOral
 Description: "EOB Oral Example 2"
 Usage: #example
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOral|2.0.0)
 * meta.lastUpdated = "2021-10-28T10:23:00-05:00"
 * language = #en-US
 * status = #active
@@ -23,10 +23,10 @@ Usage: #example
 * outcome = #complete
 * insurance[+].focal = true
 * insurance[=].coverage[0] = Reference(CoverageDental1)
-* adjudication[billingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#billingnetworkcontractingstatus
-* adjudication[billingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
-* adjudication[renderingnetworkcontractingstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkcontractingstatus
-* adjudication[renderingnetworkcontractingstatus].reason = C4BBPayerAdjudicationStatus#contracted
+* adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
+* adjudication[billingnetworkstatus].reason = C4BBPayerAdjudicationStatus#innetwork
+* adjudication[renderingnetworkstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkstatus
+* adjudication[renderingnetworkstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 * adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 
@@ -55,10 +55,10 @@ Usage: #example
 * item[0].informationSequence[+] = 10
 * item[0].informationSequence[+] = 11
 
-* item[0].productOrService = ADADentalProcedureCode#D0220 "Intraoral - periapical first radiographic image"
+* item[0].productOrService = $ADADentalProcedureCode#D0220 "Intraoral - periapical first radiographic image"
 
 
-* item[0].bodySite = ADAAreaOfOralCavitySystem#10 "Upper right quadrant"
+* item[0].bodySite = $ADAAreaOralCavitySystem#10 "Upper right quadrant"
 * item[0].subSite[+] = C4BBSurfaceCodes#O
 * item[0].subSite[+] = C4BBSurfaceCodes#I
 * item[0].servicedDate = "2021-10-28"
@@ -68,7 +68,8 @@ Usage: #example
 * item[0].adjudication[adjudicationamounttype][=].amount.value = 150.00
 * item[0].adjudication[adjudicationamounttype][=].amount.currency = #USD
 
-* item[0].adjudication[benefitpaymentstatus][0].category = C4BBPayerAdjudicationStatus#innetwork
+* item[0].adjudication[benefitpaymentstatus][0].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
+* item[0].adjudication[benefitpaymentstatus][0].reason = C4BBPayerAdjudicationStatus#innetwork
 
 
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
@@ -92,10 +93,10 @@ Usage: #example
 * supportingInfo[patientaccountnumber].sequence = 8
 
 * supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite
-* supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#1
+* supportingInfo[additionalbodysite][=].code = $ADAUniversalToothDesignationSystem#1
 * supportingInfo[additionalbodysite][=].sequence = 9
 
 
 * supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite
-* supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#2
+* supportingInfo[additionalbodysite][=].code = $ADAUniversalToothDesignationSystem#2
 * supportingInfo[additionalbodysite][=].sequence = 10
