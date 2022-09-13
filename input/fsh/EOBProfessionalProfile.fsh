@@ -17,7 +17,6 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 //* type = $HL7ClaimTypeCS#professional
 * type from C4BBProfessionalAndNonClinicianClaimType (required)
 
-
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner) -- set in base class
 * insert SupportingInfoSlicing
 * supportingInfo contains

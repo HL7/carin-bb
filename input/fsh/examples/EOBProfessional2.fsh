@@ -49,7 +49,7 @@ Usage: #example
 * item[+].sequence = 1
 * item[=].productOrService = $cpt#75710
 * item[=].servicedDate = "2020-08-04"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
 * item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
@@ -80,7 +80,7 @@ Usage: #example
 * item[+].sequence = 2
 * item[=].productOrService = $cpt#75710
 * item[=].servicedDate = "2020-08-04"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
 * item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
@@ -111,7 +111,7 @@ Usage: #example
 * item[+].sequence = 3
 * item[=].productOrService = $cpt#75710
 * item[=].servicedDate = "2020-08-04"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
 * item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
@@ -142,7 +142,7 @@ Usage: #example
 * item[+].sequence = 4
 * item[=].productOrService = $cpt#37228
 * item[=].servicedDate = "2020-08-04"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
 * item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
@@ -173,7 +173,7 @@ Usage: #example
 * item[+].sequence = 5
 * item[=].productOrService = $cpt#37228
 * item[=].servicedDate = "2020-08-04"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
 * item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
@@ -204,7 +204,7 @@ Usage: #example
 * item[+].sequence = 6
 * item[=].productOrService = $cpt#37228
 * item[=].servicedDate = "2020-08-04"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#21
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
 * item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
 * item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."

@@ -58,10 +58,10 @@ Usage: #example
 // Item-Level adjudication only
 * item[0]
   * sequence = 1
-  * revenue = $RevenueCodes#0551
+  * revenue = $AHANUBCRevenueCodes#0551
   * productOrService = $cpt#99231
   * servicedDate = "2020-09-29"
-  * locationCodeableConcept = $Place_of_Service_Code_Set#12
+  * locationCodeableConcept = $CMSPlaceofServiceCodes#12
   * locationCodeableConcept.text = "HOME"
   * adjudication[adjudicationamounttype][0].
     * category = $adjudication#submitted "Submitted Amount"
@@ -96,10 +96,10 @@ Usage: #example
     * amount.currency = #USD
 * item[+]
   * sequence = 2
-  * revenue = $RevenueCodes#0023
+  * revenue = $AHANUBCRevenueCodes#0023
   * productOrService = $cpt#99231
   * servicedDate = "2020-09-29"
-  * locationCodeableConcept = $Place_of_Service_Code_Set#12
+  * locationCodeableConcept = $CMSPlaceofServiceCodes#12
   * locationCodeableConcept.text = "HOME"
   * adjudication[0]
     * category = $adjudication#submitted "Submitted Amount"

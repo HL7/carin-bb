@@ -55,10 +55,10 @@ Usage: #example
 * item[0].informationSequence[+] = 10
 * item[0].informationSequence[+] = 11
 
-* item[0].productOrService = ADADentalProcedureCode#D0220 "Intraoral - periapical first radiographic image"
+* item[0].productOrService = $ADADentalProcedureCode#D0220 "Intraoral - periapical first radiographic image"
 
 
-* item[0].bodySite = ADAAreaOfOralCavitySystem#10 "Upper right quadrant"
+* item[0].bodySite = $ADAAreaOralCavitySystem#10 "Upper right quadrant"
 * item[0].subSite[+] = C4BBSurfaceCodes#O
 * item[0].subSite[+] = C4BBSurfaceCodes#I
 * item[0].servicedDate = "2021-10-28"
@@ -93,10 +93,10 @@ Usage: #example
 * supportingInfo[patientaccountnumber].sequence = 8
 
 * supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite
-* supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#1
+* supportingInfo[additionalbodysite][=].code = $ADAUniversalToothDesignationSystem#1
 * supportingInfo[additionalbodysite][=].sequence = 9
 
 
 * supportingInfo[additionalbodysite][+].category = C4BBSupportingInfoType#additionalbodysite
-* supportingInfo[additionalbodysite][=].code = ADAUniversalNumberingSystem#2
+* supportingInfo[additionalbodysite][=].code = $ADAUniversalToothDesignationSystem#2
 * supportingInfo[additionalbodysite][=].sequence = 10

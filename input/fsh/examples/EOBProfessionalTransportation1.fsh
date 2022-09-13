@@ -13,6 +13,9 @@ Usage: #example
 * status = #active
 * type = $claim-type#professional
 * type.text = "Professional"
+
+* subType = X12AmbulanceTransportReasonCodes#B "Patient was transported for the benefit of a preferred physician"
+
 * use = #claim
 * patient = Reference(Patient1)
 * billablePeriod.start = "2022-09-10"
@@ -42,7 +45,7 @@ Usage: #example
 
 * supportingInfo[ambulancetransportreason][+].category = C4BBSupportingInfoType#ambulancetransportreason
 * supportingInfo[ambulancetransportreason][=].sequence = 3
-* supportingInfo[ambulancetransportreason][=].reason = $X12AmbulanceTransReas#B "Patient was transported for the benefit of a preferred physician"
+* supportingInfo[ambulancetransportreason][=].reason = X12AmbulanceTransportReasonCodes#B "Patient was transported for the benefit of a preferred physician"
 
 
 * supportingInfo[transportationdistance][+].category = C4BBSupportingInfoType#transportationdistance
@@ -97,7 +100,7 @@ Usage: #example
 * item[+].sequence = 1
 * item[=].productOrService = $cpt#A0428 "Ambulance service, basic life support, non-emergency transport (BLS)"
 * item[=].servicedDate = "2022-09-10"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#41
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#41
 * item[=].locationCodeableConcept.text = "Ambulance - Land"
 * item[=].informationSequence[+] = 2
 * item[=].informationSequence[+] = 3
@@ -128,7 +131,7 @@ Usage: #example
 * item[+].sequence = 2
 * item[=].productOrService = $cpt#A0428 "Ambulance service, basic life support, non-emergency transport (BLS)"
 * item[=].servicedDate = "2022-09-10"
-* item[=].locationCodeableConcept = $Place_of_Service_Code_Set#41
+* item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#41
 * item[=].locationCodeableConcept.text = "Ambulance - Land"
 * item[=].informationSequence[+] = 2
 * item[=].informationSequence[+] = 3
