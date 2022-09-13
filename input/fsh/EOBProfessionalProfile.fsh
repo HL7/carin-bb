@@ -16,7 +16,6 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * billablePeriod 1..1
 //* type = $HL7ClaimTypeCS#professional
 * type from C4BBProfessionalAndNonClinicianClaimType (required)
-* subType from C4BBAmbulanceTransportReasonCodes (required)
 
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner) -- set in base class
 * insert SupportingInfoSlicing

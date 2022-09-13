@@ -936,7 +936,7 @@ The X12 Ambulance Transport Reason Codes indicate the reason for ambulance trans
 Internal code lists maintained by X12 [More information from X12 pending]
 
 Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."
-* ^url = "https://x12.org/codesystem.x12.org/5010/1317"
+* ^url = $X12AmbulanceTransReas
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * ^content = #not-present
