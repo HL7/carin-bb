@@ -1,46 +1,11 @@
 CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®) was developed under the <a href="http://hl7.org/fhir/us/carin-bb/stu1.1/https://www.carinalliance.com/">CARIN Alliance</a>.
 
-
-<!-- 
-### Changes and Updates for Version 2.0.0
-The current official published version of CARIN BB for FHIR R4 
-Change description or STU1.1
-FHIR-34428
-24457
-34504
-34514 & 34516
-FHIR-34669
-FHIR-34784
-FHIR-35031
-FHIR-35361
-FHIR-35213 - General Guidance - ### Profiling Constraints
-FHIR-35360 - General Guidance - ### CapabilityStatement Server Requirement
-FHIR-35708
-FHIR-35710
-FHIR-35709
-FHIR-35712
-FHIR-35712 - Search for HL7IdentifierType, and invariant Practitioner-identifier  
-FHIR-35729
-FHIR-35730
-FHIR-35732
-FHIR-35735
-FHIR-35766
-FHIR-35956
-FHIR-36760
-FHIR-37561
-FHIR-36770 and FHIR-36771
-FHIR-37334
-FHIR-37335
-FHIR-37561
-FHIR-31693
--->
-
-### Changes and Updates for Version 2.0.0
+### Changes and Updates for Version 2.0.0 (from version 1.1.0)
 The current official published version of CARIN BB for FHIR R4 
 
-<!--
+
 <ul>
-  <li>Added <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral ExplanationOfBenefit profile</a> and vision subtType to <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit profile</a> (<a href="https://jira.hl7.org/browse/FHIR-FHIR-34009">FHIR-34009</a> and <a href="https://jira.hl7.org/browse/FHIR-FHIR-27025">FHIR-27025</a>)
+  <li>Added <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral ExplanationOfBenefit profile</a> and vision type to <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit profile</a> (<a href="https://jira.hl7.org/browse/FHIR-FHIR-34009">FHIR-34009</a>, <a href="https://jira.hl7.org/browse/FHIR-FHIR-27025">FHIR-27025</a>, <a href="https://jira.hl7.org/browse/FHIR-FHIR-37706">FHIR-37706</a>, <a href="https://jira.hl7.org/browse/FHIR-FHIR-37562">FHIR-37562</a>, and <a href="https://jira.hl7.org/browse/FHIR-35146">FHIR-35146</a>)
     <ul>
       <li>Added orthodontics and prosthesis to <a href="ValueSet-C4BBSupportingInfoType.html">Supporting Info Type ValueSet</a> used as a discriminator for the EOB Oral profile supportingInfo slice discriminator (<a href="https://jira.hl7.org/browse/FHIR-34010">FHIR-34010</a>)</li>
       <li>Added <a href="ValueSet-C4BBSurfaceCodes.html">US Surface Codes</a> for Oral ExplanationOfBenefit.item.subSite (<a href="https://jira.hl7.org/browse/FHIR-34089">FHIR-34089</a>)</li>
@@ -48,21 +13,30 @@ The current official published version of CARIN BB for FHIR R4
     </ul>
   </li>
 
-  <li>Updated from US Core 3.1.0 to 4.0.0 affecting the inherited requirements of the <a href="StructureDefinition-C4BB-Patient.html">Patient</a>, <a href="StructureDefinition-C4BB-Practitioner.html">Practitioner</a>, and <a href="StructureDefinition-C4BB-Organization.html">Organization</a> profiles. (<a href="https://jira.hl7.org/browse/FHIR-33177">FHIR-33177</a>)</li>
-
   <li>Changed cardinality of ExplanationOfBenefit.item from 0..* to 1..* in <a href="StructureDefinition-C4BB-ExplanationOfBenefit.html">Base ExplanationOfBenefit profile</a> requiring ExplanationOfBenefit for all <a href="artifacts.html#structures-resource-profiles">all Resource ExplanationOfBenefit profiles</a> (<a href="https://jira.hl7.org/browse/FHIR-34114">FHIR-34114</a>)</li>
 
   <li>Require item.location[x] to be only CodeableConcept in <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional</a> and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral</a> ExplanationOfBenefit profiles (<a href="https://jira.hl7.org/browse/FHIR-32067">FHIR-32067</a>)</li>
+
   <li>Changed <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit</a> item.location[x] from cardinality of 0..1 to 1..1 and added Must Support (<a href="https://jira.hl7.org/browse/FHIR-34148">FHIR-34148</a>)</li>
 
-  <li>Changed item.serviced[x] and billablePeriod cardinality (<a href="https://jira.hl7.org/browse/FHIR-31639">FHIR-31639</a>)
+  <li>Changed item.serviced[x] and billablePeriod cardinality (<a href="https://jira.hl7.org/browse/FHIR-31639">FHIR-31639</a> and <a href="https://jira.hl7.org/browse/FHIR-36760">FHIR-36760</a>)
     <ul>
-      <li>ExplanationOfBenefit.item.serviced[x] from 0..1 to 1..1 for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional ExplanationOfBenefit profile</a></li>
+      <li>ExplanationOfBenefit.item.serviced[x] from 0..1 to 1..1 and billablePeriod from 0..1 to 1..1 for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional ExplanationOfBenefit profile</a></li>
       <li>ExplanationOfBenefit.item.serviced[x] and ExplanationOfBenefit.billablePeriod from 0..1 to 1..1 for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit profile</a></li>
       <li>ExplanationOfBenefit.item.serviced[x] from 0..1 to 1..1 for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy ExplanationOfBenefit profile</a></li>
     </ul>
   </li>
-  <li>Moved ExplanationOfBenefit.total[benefitpaymentstatus] slice to ExplanationOfBenefit.supportingInfo[benefitpaymentstatus] (therefore not requiring an amount property) for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html">Inpatient Institutional</a>, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional</a>, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy</a>, and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral</a> ExplanationOfBenefit profiles (<a href="https://jira.hl7.org/browse/FHIR-33082">FHIR-33082</a>)</li>
+  <li>Moved ExplanationOfBenefit.total[benefitpaymentstatus] slice to ExplanationOfBenefit.adjudication[benefitpaymentstatus] (therefore not requiring an amount property) for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html">Inpatient Institutional</a>, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional</a>, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy</a>, and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral</a> ExplanationOfBenefit profiles, changed the pattern to match other adjudication repetitions, and update the invariants appropriately(<a href="https://jira.hl7.org/browse/FHIR-33082">FHIR-33082</a>, <a href="https://jira.hl7.org/browse/FHIR-37726">FHIR-37726</a>, <a href="https://jira.hl7.org/browse/FHIR-38063">FHIR-38063</a>, and <a href="https://jira.hl7.org/browse/FHIR-35358">FHIR-35358</a>)</li>
+
+
+  <li>Changed codes term of "performing" provider to "rendering" provider in the <a href="CodeSystem-C4BBClaimCareTeamRole.html">Claim Care Team Role</a> and <a href="CodeSystem-C4BBAdjudicationDiscriminator.html">Adjudication Discriminator</a> CodeSystems and in <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral ExplanationOfBenefit </a> and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit</a> profiles rendering provider network status (<a href="https://jira.hl7.org/browse/FHIR-37727">FHIR-37727</a>)</li>
+
+  <li>Changed rendering network status from ExplanationOfBenefit.supportingInfor slice to ExplanationOfBenefit.adjudication slice in <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral ExplanationOfBenefit </a> and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit</a> profiles and changed billing network status ExplanationOfBenefit.supportingInfo slice to ExplanationOfBenefit.adjudication slice in <a href="artifacts.html#structures-resource-profiles">all non-abstract ExplanationOfBenefit profiles</a> (<a href="https://jira.hl7.org/browse/FHIR-37728">FHIR-37728</a>)</li>
+
+  <li>Changed provider "contracting network status" to provider "network status" by updating <a href="CodeSystem-C4BBAdjudicationDiscriminator.html">Adjudication Discriminator</a>; changing the C4BBPayerProviderContractingStatus ValueSet to <a href="ValueSet-C4BBPayerProviderNetworkStatus.html">C4BBPayerProviderNetworkStatus ValueSet</a> with `innetwork` and `outofnetwork` codes; removing "contracted" and "notcontracted" codes in <a href="CodeSystem-C4BBPayerAdjudicationStatus.html">Payer Adjudication Status ValueSet</a>, and updating the `innetwork` and `outofnetwork` code definitions for applicability for the provider network status (<a href="https://jira.hl7.org/browse/FHIR-38059">FHIR-38059</a>)</li>
+
+
+  <li>Updated the definition of <a href="General_Guidance.html#must-support">Must Support</a> to state "Health Plan API actors **SHALL** be capable of populating all data elements the payer maintains" which are marked as Must Support, and remove the requirement that "Consumer App actors SHOULD be capable of storing the information for other purposes" (<a href="https://jira.hl7.org/browse/FHIR-36675">FHIR-36675</a> and <a href="https://jira.hl7.org/browse/FHIR-35730">FHIR-35730</a>)</li>
 
   <li>Changed ExplanationOfBenefit.adjudication and ExplanationOfBenefit.item.adjudication slicing from closed to open for <a href="artifacts.html#structures-resource-profiles">all Resource ExplanationOfBenefit profiles</a> (<a href="https://jira.hl7.org/browse/FHIR-34241">FHIR-34241</a>)</li>
 
@@ -70,23 +44,45 @@ The current official published version of CARIN BB for FHIR R4
 
   <li>Removed Invariant that not allowing not-applicable code for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional ExplanationOfBenefit profile</a> item.productOrService (<a href="https://jira.hl7.org/browse/FHIR-32850">FHIR-32850</a>)</li>
 
+
+  <li>Changed <a href="StructureDefinition-C4BB-Practitioner.html">Practitioner</a> and <a href="StructureDefinition-C4BB-Organization.html">Organization</a> profiles identifier.type in the NPI slice to use the `NPI` from CodeSystem http://terminology.hl7.org/CodeSystem/v2-0203 (<a href="https://jira.hl7.org/browse/FHIR-35712">FHIR-35712</a>)</li>
+
+
+  <li>Added Non-emergency transport information to ExplanationOfBenefit.supportingInfo slices to the <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit profile</a> along with invariant rules (<a href="https://jira.hl7.org/browse/FHIR-37615">FHIR-37615</a>)</li>
+
+  <li>Removed meta.profile requirements on <a href="StructureDefinition-C4BB-ExplanationOfBenefit.html">Abstract base ExplanationOfBenefit profile</a> (<a href="https://jira.hl7.org/browse/FHIR-34504">FHIR-34504</a>)</li>
+
   <li>Added refillsAuthorized slice to ExplanationOfBenefit.supportingInfo of <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy ExplanationOfBenefit</a> profile (<a href="https://jira.hl7.org/browse/FHIR-33487">FHIR-33487</a>)</li>
 
-  <li>Changed payee.party cardinality from 1..1 to 0..1 and added invariant requiring payee.party if payee.type='other' in <a href="StructureDefinition-C4BB-ExplanationOfBenefit.html">Base ExplanationOfBenefit profile</a> (<a href="https://jira.hl7.org/browse/FHIR-31699">FHIR-31699</a>)</li>
+  <li>Changed payee.party cardinality from 1..1 to 0..1 and added invariant requiring payee.party if payee.type='other' in <a href="StructureDefinition-C4BB-ExplanationOfBenefit.html">Base ExplanationOfBenefit profile</a> and added new <a href="StructureDefinition-C4BB-RelatedPerson.html">RelatedPerson profile</a> as a reference option (<a href="https://jira.hl7.org/browse/FHIR-31699">FHIR-31699</a> & <a href="https://jira.hl7.org/browse/FHIR-37740">FHIR-37740</a>)</li>
 
-  <li>Added <a href="SearchParameter-explanationofbenefit-service-start-date.html">service-start-date search parameter</a> (<a href="https://jira.hl7.org/browse/FHIR-33165">FHIR-33165</a>)</li>
+  <li>Added <a href="SearchParameter-explanationofbenefit-service-start-date.html">service-start-date search parameter</a> and <a href="SearchParameter-explanationofbenefit-billable-period-start.html">billable-period-start search parameter</a> (<a href="https://jira.hl7.org/browse/FHIR-33165">FHIR-33165</a> & <a href="https://jira.hl7.org/browse/FHIR-34428">FHIR-34428</a>)</li>
 
-  <li>Added Coverage _id search parameter to <a href="CapabilityStatement-c4bb.html">Capability Statement</a> with associated guidance (<a href="https://jira.hl7.org/browse/FHIR-30009">FHIR-30009</a>)</li>
+  <li>Added _id search parameter for all resources and change conformance expectation for Practitioner & Organization resources to SHOULD to allow for them to be supported as contained resources in <a href="CapabilityStatement-c4bb.html">Capability Statement</a> with associated guidance and related the resources' meta.lastUpdated requirement (<a href="https://jira.hl7.org/browse/FHIR-38108">FHIR-38108</a> and <a href="https://jira.hl7.org/browse/FHIR-36676">FHIR-36676</a>)</li>
 
-  <li>Added guidance on the expectation of _include support and interpretation of _include=ExplanationOfBenefit:* to <a href="searchparameters.html">search Parameters page</a> and <a href="CapabilityStatement-c4bb.html">Capability Statement</a> (<a href="https://jira.hl7.org/browse/FHIR-32982">FHIR-32982</a>)</li>
+  <li>Added guidance on the expectation of _include support and interpretation of _include=ExplanationOfBenefit:* to <a href="searchparameters.html">search Parameters page</a> and <a href="CapabilityStatement-c4bb.html">Capability Statement</a> including adding ExplanationOfBenefit:payee (<a href="https://jira.hl7.org/browse/FHIR-32982">FHIR-32982</a>)</li>
+
+
+  <li>Added a requirement in the <a href="General_Guidance.html#capabilitystatement-server-requirement">General Guidance</a> that servers SHALL include a CapabilityStatement that has a CapabilityStatement.instantiates specifying the CapabilityStatement in this specification (<a href="https://jira.hl7.org/browse/FHIR-35360">FHIR-35360</a>)</li>
+
+
+  <li>Updated the <a href="CapabilityStatement-c4bb.html">CapabilityStatement</a> security section allowing unauthorized requests responses of HTTP 403 "Forbidden" or HTTP 404 "Not Found" in addition to the previously stated HTTP 401 "Unauthorized" (<a href="https://jira.hl7.org/browse/FHIR-35766">FHIR-35766</a>)</li>
 
   <li>Moved ExplanationOfBenefit searches documentation from read interaction to search-type interaction in <a href="CapabilityStatement-c4bb.html">Capability Statement</a> (<a href="https://jira.hl7.org/browse/FHIR-33176">FHIR-33176</a>)</li>
 
   <li>Removed invalid invariant from <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit profile</a> that required ExplanationOfBenefit.careTeam.provider to be an Organization reference when careTeam.role was 'site' ('site' not a code in the role ValueSet) (<a href="https://jira.hl7.org/browse/FHIR-31658">FHIR-31658</a>)</li>
 
-  <li>Added paidbypatientcash and paidbypatientother codes to <a href="ValueSet-C4BBAdjudication.html">Adjudication ValueSet</a> and <a href="CodeSystem-C4BBAdjudication.html">Adjudication CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-33996">FHIR-33996</a>)</li>
+  <li>Corrected invalid invariant for the CareTeam qualification being from a specific CodeSystem when the type is rendering in the <a href="StructureDefinition-C4BB-ExplanationOfBenefit.html">Abstract base ExplanationOfBenefit profile</a> (<a href="https://jira.hl7.org/browse/FHIR-35889">FHIR-35889</a>)</li>
 
-  <li>Modified security guidance in <a href="Security_And_Privacy_Considerations.html">Security and Privacy Considerations</a> page (<a href="https://jira.hl7.org/browse/FHIR-31693">FHIR-31693</a>)</li>
+  <li>Added paidbypatientcash, paidbypatientother, paidbypatienthealthaccount codes to <a href="ValueSet-C4BBAdjudication.html">Adjudication ValueSet</a> and <a href="CodeSystem-C4BBAdjudication.html">Adjudication CodeSystem</a> (<a href="https://jira.hl7.org/browse/FHIR-33996">FHIR-33996</a> & <a href="https://jira.hl7.org/browse/FHIR-33996">FHIR-37831</a>)</li>
+
+  <li>Updated the url for the HCPCS Level II codes in <a href="ValueSet-C4BBEOBInstitutionalProcedureCodes.html">C4BBEOBInstitutionalProcedureCodes</a> (<a href="https://jira.hl7.org/browse/FHIR-37334">FHIR-37334</a>)</li>
+
+  <li>Removed the fixed meta.profile slice requirement including the full version and replaced with invariant requirements requiring a meta.profile with the major and minor version included in <a href="artifacts.html#structures-resource-profiles">all non-abstract ExplanationOfBenefit profiles</a> (to allow instances from different patch versions to still validate) (<a href="https://jira.hl7.org/browse/FHIR-34223">FHIR-34223</a>)</li>
+
+  <li>Updated from US Core 3.1.0 to 3.1.1. (<a href="https://jira.hl7.org/browse/FHIR-33177">FHIR-33177</a> and <a href="https://jira.hl7.org/browse/FHIR-35708">FHIR-35708</a>)</li>
+
+  <li>Modified security guidance in <a href="Security_And_Privacy_Considerations.html">Security and Privacy Considerations</a> page (<a href="https://jira.hl7.org/browse/FHIR-31693">FHIR-31693</a>, <a href="https://jira.hl7.org/browse/FHIR-35729">FHIR-35729</a> & <a href="https://jira.hl7.org/browse/FHIR-35722">FHIR-35722</a>)</li>
 
   <li>Changed display of code other from default value of "Provider to "Other" in <a href="ValueSet-C4BBPayeeType.html">Payee Type ValueSet</a> (<a href="https://jira.hl7.org/browse/FHIR-34020">FHIR-34020</a>)</li>
 
@@ -106,9 +102,24 @@ The current official published version of CARIN BB for FHIR R4
 
   <li>Added clearer description of ExplanationOfBenefit.related for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html">Base ExplanationOfBenefit</a> profile (<a href="https://jira.hl7.org/browse/FHIR-31411">FHIR-31411</a>)</li>
 
+  <li>Removed CodeSystems that were duplicative of those identified in terminology.hl7.org (THO). These removals are non-substantive as they do not change the CodeSystem url used in resource instance communication</a> (<a href="https://jira.hl7.org/browse/FHIR-38285">FHIR-38285</a>)</li>
+
   <li>Updated element short descriptions to be more meaningful for all  <a href="artifacts.html#structures-resource-profiles">all Resource profiles</a> (<a href="https://jira.hl7.org/browse/FHIR-34091">FHIR-34091</a>)</li>
+
+  <li>Add guidance to the <a href="General_Guidance.html#payer-considerations-for-app-rendering">General Guidance</a> section providing more information on considerations payers and consumer apps should make for the purposes of improving rendering of the Explanation Of Benefit data. A <a href="General_Guidance.html#example-explanationofbenefit-render-mapping">example explanation of benefit document</a> with mapping to CPCDS data elements and profile paths is provided to assist consumer app developers in understanding the data elements and suggesting how payers might improve their API documentation for connecting system developers (<a href="https://jira.hl7.org/browse/FHIR-31069">FHIR-31069</a>)</li>
+
+  <li>Updated <a href="Common_Payer_Consumer_Data_Set.html#common-payer-consumer-data-set-cpcds">diagrams and CPCDS resources</a> to match the changes on the latest version of this specification (<a href="https://jira.hl7.org/browse/FHIR-35212">FHIR-35212</a> and <a href="https://jira.hl7.org/browse/FHIR-34513">FHIR-34513</a>)</li>
+
+  <li>Remove Must Support from Patient.address.district in the <a href="StructureDefinition-C4BB-Patient.html">Patient profile</a> (<a href="https://jira.hl7.org/browse/FHIR-35710">FHIR-35710</a>)</li>
+
+  <li>Added a note for implementers to all locally defined CodeSystems that may switch the to central terminology.hl7.org (THO) that the code system is subject to change in a future version (<a href="https://jira.hl7.org/browse/FHIR-37830">FHIR-37830</a>)</li>
+
+  <li>Added guidance regarding the definition of the payer id identifier to the <a href="CodeSystem-C4BBIdentifierType.html">Identifier Type CodeSystem</a> and the <a href="StructureDefinition-C4BB-Organization-definitions.html">Organization profile</a> identifier payerid slice (<a href="https://jira.hl7.org/browse/FHIR-36771">FHIR-36771</a> and <a href="https://jira.hl7.org/browse/FHIR-36770">FHIR-36770</a>)</li>
+
+  <li>Removed broken link reference to "API Resource Collection in Health (ARCH)" from the <a href="General_Guidance.html">General Guidance</a> page (<a href="https://jira.hl7.org/browse/FHIR-35956">FHIR-35956</a>)</li>
+
 </ul>
--->
+
 
 ### Changes and Updates for Version 1.1.0
 STU Update of STU 1
