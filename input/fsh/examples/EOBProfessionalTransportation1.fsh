@@ -13,6 +13,9 @@ Usage: #example
 * status = #active
 * type = $claim-type#professional
 * type.text = "Professional"
+
+* subType = X12AmbulanceTransportReasonCodes#B "Patient was transported for the benefit of a preferred physician"
+
 * use = #claim
 * patient = Reference(Patient1)
 * billablePeriod.start = "2022-09-10"

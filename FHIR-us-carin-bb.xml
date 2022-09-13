@@ -17,7 +17,7 @@
 <artifact deprecated="true" id="CodeSystem/THREEMAPDRG" key="CodeSystem-THREEMAPDRG" name="All Patient Diagnosis Related Groups (AP-DRGs)"/>
 <artifact deprecated="true" id="CodeSystem/THREEMAPRDRG" key="CodeSystem-THREEMAPRDRG" name="All Patient Refined Diagnosis Related Groups (APR-DRGs)"/>
 <artifact deprecated="true" id="CodeSystem/ADAAreaOfOralCavitySystem" key="CodeSystem-ADAAreaOfOralCavitySystem" name="American Dental Association Area of Oral Cavity System"/>
-<artifact id="CodeSystem/ADAUniversalNumberingSystem" key="CodeSystem-ADAUniversalNumberingSystem" name="American Dental Association Universal Numbering System"/>
+<artifact deprecated="true" id="CodeSystem/ADAUniversalNumberingSystem" key="CodeSystem-ADAUniversalNumberingSystem" name="American Dental Association Universal Numbering System"/>
 <artifact id="ValueSet/ADAUniversalNumberingSystem" key="ValueSet-ADAUniversalNumberingSystem" name="American Dental Association Universal Numbering Value Set"/>
 <artifact id="ValueSet/C4BBAdjudication" key="ValueSet-C4BBAdjudication" name="C4BB Adjudication"/>
 <artifact id="CodeSystem/C4BBAdjudication" key="CodeSystem-C4BBAdjudication" name="C4BB Adjudication"/>
@@ -106,11 +106,11 @@
 <artifact id="SearchParameter/explanationofbenefit-billable-period-start" key="SearchParameter-explanationofbenefit-service-start-date" name="ExplanationOfBenefit_ServiceStartDate"/>
 <artifact id="SearchParameter/explanationofbenefit-service-start-date" key="SearchParameter-explanationofbenefit-service-start-date" name="ExplanationOfBenefit_ServiceStartDate"/>
 <artifact id="SearchParameter/explanationofbenefit-type" key="SearchParameter-explanationofbenefit-type" name="ExplanationOfBenefit_Type"/>
-<artifact id="CodeSystem/CMSHIPPSCodes" key="CodeSystem-CMSHIPPSCodes" name="Health Insurance Prospective Payment System (HIPPS)"/>
+<artifact deprecated="true" id="CodeSystem/CMSHIPPSCodes" key="CodeSystem-CMSHIPPSCodes" name="Health Insurance Prospective Payment System (HIPPS)"/>
 <artifact deprecated="true" id="CodeSystem/CMSHCPCSCodes" key="CodeSystem-CMSHCPCSCodes" name="Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes"/>
 <artifact deprecated="true" id="CodeSystem/ICD10PCS" key="CodeSystem-ICD10PCS" name="ICD-10 Procedure Coding System"/>
 <artifact id="ValueSet/CMSMS3MAPAPRDRG" key="ValueSet-CMSMS3MAPAPRDRG" name="MS-DRGs - AP-DRGs - APR-DRGs"/>
-<artifact id="CodeSystem/CMSMSDRG" key="CodeSystem-CMSMSDRG" name="Medicare Severity Diagnosis Related Groups (MS-DRGs)"/>
+<artifact deprecated="true" id="CodeSystem/CMSMSDRG" key="CodeSystem-CMSMSDRG" name="Medicare Severity Diagnosis Related Groups (MS-DRGs)"/>
 <artifact deprecated="true" id="ValueSet/NCPDPBrandGenericCode" key="ValueSet-NCPDPBrandGenericCode" name="NCPDP Brand Generic Code"/>
 <artifact id="ValueSet/NCPDPBrandGenericIndicator" key="ValueSet-NCPDPBrandGenericIndicator" name="NCPDP Brand Generic Indicator"/>
 <artifact deprecated="true" id="CodeSystem/NCPDPBrandGenericIndicator" key="CodeSystem-NCPDPBrandGenericIndicator" name="NCPDP Brand Generic Indicator CS"/>
@@ -124,18 +124,18 @@
 <artifact deprecated="true" id="CodeSystem/NCPDPRejectCode" key="CodeSystem-NCPDPRejectCode" name="NCPDP Reject Code CS"/>
 <artifact id="ValueSet/FDANDCOrCompound" key="ValueSet-FDANDCOrCompound" name="NDC or Compound"/>
 <artifact id="ValueSet/AHANUBCPatientDischargeStatus" key="ValueSet-AHANUBCPatientDischargeStatus" name="NUBC Patient Discharge Status Codes"/>
-<artifact id="CodeSystem/AHANUBCPatientDischargeStatus" key="CodeSystem-AHANUBCPatientDischargeStatus" name="NUBC Patient Discharge Status Codes"/>
+<artifact deprecated="true" id="CodeSystem/AHANUBCPatientDischargeStatus" key="CodeSystem-AHANUBCPatientDischargeStatus" name="NUBC Patient Discharge Status Codes CS"/>
 <artifact id="ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit" key="ValueSet-AHANUBCPointOfOriginForAdmissionOrVisit" name="NUBC Point Of Origin"/>
 <artifact deprecated="true" id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisit" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisit" name="NUBC Point Of Origin CS"/>
-<artifact id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNewborn" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNewborn" name="NUBC Point Of Origin for Newborn"/>
-<artifact id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn" name="NUBC Point Of Origin for Non-newborn"/>
+<artifact deprecated="true" id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNewborn" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNewborn" name="NUBC Point Of Origin for Newborn"/>
+<artifact deprecated="true" id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn" name="NUBC Point Of Origin for Non-newborn"/>
 <artifact id="ValueSet/AHANUBCPresentOnAdmission" key="ValueSet-AHANUBCPresentOnAdmission" name="NUBC Present On Admission Indicator Codes"/>
 <artifact id="CodeSystem/AHANUBCPresentOnAdmission" key="CodeSystem-AHANUBCPresentOnAdmission" name="NUBC Present On Admission Indicator Codes"/>
 <artifact id="ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit" key="ValueSet-AHANUBCPriorityTypeOfAdmissionOrVisit" name="NUBC Priority (Type) of Admission or Visit"/>
-<artifact id="CodeSystem/AHANUBCPriorityTypeOfAdmissionOrVisit" key="CodeSystem-AHANUBCPriorityTypeOfAdmissionOrVisit" name="NUBC Priority (Type) of Admission or Visit"/>
+<artifact deprecated="true" id="CodeSystem/AHANUBCPriorityTypeOfAdmissionOrVisit" key="CodeSystem-AHANUBCPriorityTypeOfAdmissionOrVisit" name="NUBC Priority (Type) of Admission or Visit CS"/>
 <artifact id="ValueSet/AHANUBCRevenueCodes" key="ValueSet-AHANUBCRevenueCodes" name="NUBC Revenue Codes"/>
-<artifact id="CodeSystem/AHANUBCRevenueCodes" key="CodeSystem-AHANUBCRevenueCodes" name="NUBC Revenue Codes"/>
-<artifact id="CodeSystem/AHANUBCTypeOfBill" key="CodeSystem-AHANUBCTypeOfBill" name="NUBC Type Of Bill Codes"/>
+<artifact deprecated="true" id="CodeSystem/AHANUBCRevenueCodes" key="CodeSystem-AHANUBCRevenueCodes" name="NUBC Revenue Codes CS"/>
+<artifact deprecated="true" id="CodeSystem/AHANUBCTypeOfBill" key="CodeSystem-AHANUBCTypeOfBill" name="NUBC Type Of Bill Codes CS"/>
 <artifact id="ValueSet/AHANUBCTypeOfBill" key="ValueSet-AHANUBCTypeOfBill" name="NUBC Type of Bill Codes"/>
 <artifact id="ValueSet/FDANationalDrugCode" key="ValueSet-FDANationalDrugCode" name="National Drug Code (NDC)"/>
 <artifact id="ValueSet/OralBodySite" key="ValueSet-OralBodySite" name="Oral Body Site Value Set"/>
@@ -167,7 +167,7 @@
 <artifact id="ValueSet/C4BBSurfaceCodes" key="ValueSet-C4BBSurfaceCodes" name="US Surface Codes Set"/>
 <artifact id="CodeSystem/C4BBSurfaceCodes" key="CodeSystem-C4BBSurfaceCodes" name="US Surface Codes System"/>
 <artifact id="CodeSystem/X12AmbulanceTransportReasonCodes" key="CodeSystem-X12AmbulanceTransportReasonCodes" name="X12 Ambulance Transport Reason Codes"/>
-<artifact id="CodeSystem/X12ClaimAdjustmentReasonCodes" key="CodeSystem-X12ClaimAdjustmentReasonCodes" name="X12 Claim Adjustment Reason Codes"/>
+<artifact deprecated="true" id="CodeSystem/X12ClaimAdjustmentReasonCodes" key="CodeSystem-X12ClaimAdjustmentReasonCodes" name="X12 Claim Adjustment Reason Codes"/>
 <artifact id="ValueSet/X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" key="ValueSet-X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" name="X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes"/>
 <artifact deprecated="true" id="CodeSystem/CMSRemittanceAdviceRemarkCodes" key="CodeSystem-CMSRemittanceAdviceRemarkCodes" name="X12 Remittance Advice Remark Codes"/>
 <page key="NA" name="(NA)"/>

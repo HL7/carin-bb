@@ -58,7 +58,7 @@ Usage: #example
 // Item-Level adjudication only
 * item[0]
   * sequence = 1
-  * revenue = $RevenueCodes#0551
+  * revenue = $AHANUBCRevenueCodes#0551
   * productOrService = $cpt#99231
   * servicedDate = "2020-09-29"
   * locationCodeableConcept = $CMSPlaceofServiceCodes#12
@@ -96,7 +96,7 @@ Usage: #example
     * amount.currency = #USD
 * item[+]
   * sequence = 2
-  * revenue = $RevenueCodes#0023
+  * revenue = $AHANUBCRevenueCodes#0023
   * productOrService = $cpt#99231
   * servicedDate = "2020-09-29"
   * locationCodeableConcept = $CMSPlaceofServiceCodes#12
