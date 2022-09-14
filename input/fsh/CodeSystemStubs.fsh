@@ -933,9 +933,9 @@ Description: "X12, chartered by the American National Standards Institute for mo
 
 The X12 Ambulance Transport Reason Codes indicate the reason for ambulance transport. These codes are listed within an X12 implementation guide (TR3) and maintained by X12.
 
-Internal code lists maintained by X12 [More information from X12 pending]
+A list of codes and associated descriptions established, maintained, and published as part of an X12 Standard.
 
-Click on the name of any external code list to access more information about the code list, view the codes, or submit a maintenance request. These external code lists were previously published on either [www.wpc-edi.com/reference](http://www.wpc-edi.com/reference) or [www.x12.org/codes](http://www.x12.org/codes)."
+These codes are listed within an X12 implementation guide maintained by X12. All X12 work products are copyrighted. See https://x12.org/products/licensing-program for licensing terms and conditions."
 * ^url = $X12AmbulanceTransReas
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
