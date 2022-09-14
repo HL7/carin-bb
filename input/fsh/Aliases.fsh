@@ -104,7 +104,7 @@ Alias: $X12CARCCS = https://x12.org/codes/claim-adjustment-reason-codes
 Alias: $CMSRARCCS = https://x12.org/codes/remittance-advice-remark-codes
 Alias: $CMSRemittanceAdviceRemarkCodes = http://terminology.hl7.org/CodeSystem/RARC
 Alias: $X12ClaimAdjustmentReasonCodes = http://terminology.hl7.org/CodeSystem/X12ClaimAdjustmentReasonCodes
-Alias: $X12AmbulanceTransReas = https://x12.org/codesystem.x12.org/5010/1317
+Alias: $X12AmbulanceTransReas = https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes
 
 
 Alias: $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm

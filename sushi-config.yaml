@@ -35,7 +35,7 @@ parameters:
   excludettl: 'true'
   excludemap: 'true'
   special-url:
-    - https://x12.org/codesystem.x12.org/5010/1317
+    - https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes
     - https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
 
 copyrightYear: 2022+
