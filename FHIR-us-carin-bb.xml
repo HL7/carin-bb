@@ -94,6 +94,7 @@
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBOral1a" key="ExplanationOfBenefit-EOBOral1a" name="EOBOral1a"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBOutpatientInstitutional1" key="ExplanationOfBenefit-EOBOutpatientInstitutional1" name="EOBOutpatientInstitutional1"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBProfessional1a" key="ExplanationOfBenefit-EOBProfessional1a" name="EOBProfessional1a"/>
+<artifact id="SearchParameter/explanationofbenefit-billable-period-start" key="SearchParameter-explanationofbenefit-billable-period-start" name="ExplanationOfBenefit_BillablePeriodStart"/>
 <artifact id="SearchParameter/explanationofbenefit-care-team" key="SearchParameter-explanationofbenefit-care-team" name="ExplanationOfBenefit_Careteam"/>
 <artifact id="SearchParameter/explanationofbenefit-coverage" key="SearchParameter-explanationofbenefit-coverage" name="ExplanationOfBenefit_Coverage"/>
 <artifact id="SearchParameter/explanationofbenefit-identifier" key="SearchParameter-explanationofbenefit-identifier" name="ExplanationOfBenefit_Identifier"/>
@@ -103,7 +104,6 @@
 <artifact id="SearchParameter/practitionerrole-practitioner" key="SearchParameter-practitionerrole-practitioner" name="ExplanationOfBenefit_Practitioner"/>
 <artifact id="SearchParameter/explanationofbenefit-provider" key="SearchParameter-explanationofbenefit-provider" name="ExplanationOfBenefit_Provider"/>
 <artifact id="SearchParameter/explanationofbenefit-service-date" key="SearchParameter-explanationofbenefit-service-date" name="ExplanationOfBenefit_ServiceDate"/>
-<artifact id="SearchParameter/explanationofbenefit-billable-period-start" key="SearchParameter-explanationofbenefit-service-start-date" name="ExplanationOfBenefit_ServiceStartDate"/>
 <artifact id="SearchParameter/explanationofbenefit-service-start-date" key="SearchParameter-explanationofbenefit-service-start-date" name="ExplanationOfBenefit_ServiceStartDate"/>
 <artifact id="SearchParameter/explanationofbenefit-type" key="SearchParameter-explanationofbenefit-type" name="ExplanationOfBenefit_Type"/>
 <artifact deprecated="true" id="CodeSystem/CMSHIPPSCodes" key="CodeSystem-CMSHIPPSCodes" name="Health Insurance Prospective Payment System (HIPPS)"/>

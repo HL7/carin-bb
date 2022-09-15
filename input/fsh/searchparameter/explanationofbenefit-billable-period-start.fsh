@@ -1,6 +1,6 @@
 Instance: explanationofbenefit-billable-period-start
 InstanceOf: SearchParameter
-Title: "ExplanationOfBenefit_ServiceStartDate"
+Title: "ExplanationOfBenefit_BillablePeriodStart"
 Description: "Starting Date of the service for the EOB using billablePeriod.period.start. The billable-period-start search parameter using the billablePeriod.period.start provides results with the earliest billablePeriod.start from a professional and non-clinician EOB or an oral EOB."
 Usage: #definition
 * meta.versionId = "1"
@@ -9,7 +9,7 @@ Usage: #definition
 * extension.valueCode = #trial-use
 * url = "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-billable-period-start"
 * version = "2.0.0"
-* name = "ExplanationOfBenefit_ServiceStartDate"
+* name = "ExplanationOfBenefit_BillablePeriodStart"
 * status = #active
 * experimental = false
 * date = "2022-04-20T10:19:00+00:00"

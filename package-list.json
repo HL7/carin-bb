@@ -14,7 +14,7 @@
       {
         "version": "2.0.0",
         "desc": "CARIN Blue Button Implementation Guide Release 2 - US Realm STU",
-        "changes": "change_notes.html#changes-and-updates-for-version-2-0-0",
+        "changes": "change_notes.html#changes-and-updates-for-version-200-from-version-110",
         "path": "http://hl7.org/fhir/us/carin-bb/STU2",
         "date": "2022-10-01",
         "status": "trial-use",
