@@ -100,7 +100,7 @@ The current official published version of CARIN BB for FHIR R4
 
   <li>Added clearer description of ExplanationOfBenefit.related for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html">Base ExplanationOfBenefit</a> profile (<a href="https://jira.hl7.org/browse/FHIR-31411">FHIR-31411</a>)</li>
 
-  <li>Removed CodeSystems that were duplicative of those identified in terminology.hl7.org (THO). These removals are non-substantive as they do not change the CodeSystem url used in resource instance communication</a> (<a href="https://jira.hl7.org/browse/FHIR-38285">FHIR-38285</a>)</li>
+  <li>Removed CodeSystems that were duplicative of those identified in terminology.hl7.org (THO). These removals are non-substantive as they do not change the CodeSystem url used in resource instance communication (<a href="https://jira.hl7.org/browse/FHIR-38285">FHIR-38285</a>)</li>
 
   <li>Updated element short descriptions to be more meaningful for all  <a href="artifacts.html#structures-resource-profiles">all Resource profiles</a> (<a href="https://jira.hl7.org/browse/FHIR-34091">FHIR-34091</a>)</li>
 
