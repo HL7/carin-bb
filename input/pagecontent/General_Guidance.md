@@ -72,7 +72,7 @@ The information found in payer Explanation Of Benefits documents represent only 
 
 Below is an example generic Explanation Of Benefits document that represents some of the information one might find from payers. This example is not exhaustive, but does present some common information found on these documents. As shown in this example document, payers may include more than one claim on a single explanation of benefit document. The ExplanationOfBenefit profiles in this guide address a single claim. In this example there would be two ExplanationOfBenefit resources, one for each claim, that both relate to this one "printed" document. Below is an example mapping from these informational elements to CPCDS data elements and specific resource data element paths. This mapping can be used by app developers as guidance to understanding how information found on EOB documents relate to the profiles in this guide. This mapping can also be used by payers as guidance for how they could further develop their API documentation to enable client apps connecting to their API.
 
-<p><img style="width: 85%; float: none; align: middle;" src="EOBRender.png"/></p>
+<p><img style="float: none; align: middle;" src="EOBRender.png"/></p>
 
 <table border="1">
 <colgroup>
