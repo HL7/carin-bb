@@ -51,20 +51,19 @@ The constraints in this guide's profiles have been applied to only address the s
 ### CapabilityStatement Server Requirement
 Servers claiming conformance to this guide **SHALL** include a CapabilityStatement that has a CapabilityStatement.instantiates with a URL of http://hl7.org/fhir/us/carin-bb/CapabilityStatement/c4bb or a URL to the appropriate version of the CapabilityStatement.
 
-### Payer Considerations for App Rendering
+<a name="considerations-for-app-rendering"></a>
+### Considerations for App Rendering
 Many of the codes used in this guide are proprietary with [licensing requirements](Terminology.html). While it is recommended that consumer apps acquire the necessary licenses to show descriptions for these codes, not all app developers may be in a position to do so. Because of this, payers **MAY** choose to provide a concept text `[CodeableConcept].text` or the coding display `[CodeableConcept].coding.display. It is the responsibility of the payer to make sure that the descriptions provided are correct.
 
-If the 'display' element is populated, the string used in `display` **SHALL** be one of the display strings defined for that code by the code system (code systems may define multiple display strings for a single code).
-
-With the additional statement noting that "If the code description available is not known to be an exact match of a display string defined by the code system, the  `[CodeableConcept].text` should be used in place of the `[CodeableConcept].coding.display`."
+If the 'display' element is populated, the string used in `display` **SHALL** be one of the display strings defined for that code by the code system (code systems may define multiple display strings for a single code). If the code description available is not known to be an exact match of a display string defined by the code system, the  `[CodeableConcept].text` should be used in place of the `[CodeableConcept].coding.display`.
 
 Payers **MAY** choose to also provide resource level text to enable consumers apps to render resources in a manner that the payer would like to have the data presented. The `[Resource].text` is a Narrative datatype that has a `div` element that is an xhtml datatype. This element **MAY** be used to provide an easily renderable version of the resource that is meant for human viewing. This capability may be of particular interest to payers for ExplanationOfBenefit resources and can be used to enable the rendering of the Explanation of Benefit data in a fashion similar to their mailed or portal accessible Explanation of Benefit documents.
 
-Explanation of Benefit information can be complex. Many of the data elements in this guide go beyond what is commonly included in printed Explanation of Benefit documents today. Payers may also provide additional data elements beyond what is in this guide. As part of their API documentation, Payers **SHOULD** include descriptions of the data elements they provide, particularly for data elements not covered in this guide, and may consider providing a display mapping like can be found in the [Example ExplanationOfBenefit Render Mapping](#example-eob-render-mapping) section of this implementation guide.
+Explanation of Benefit information can be complex. Many of the data elements in this guide go beyond what is commonly included in printed Explanation of Benefit documents today. Payers may also provide additional data elements beyond what is in this guide. As part of their API documentation, Payers **SHOULD** include descriptions of the data elements they provide, particularly for data elements not covered in this guide, and may consider providing a display mapping like can be found in the [Example Printed Explanation Of Benefit Mapping](#example-printed-eob-mapping) section of this implementation guide.
 
-<a name="example-eob-render-mapping"></a>
+<a name="example-printed-eob-mapping"></a>
 
-### Example ExplanationOfBenefit Render Mapping
+### Printed Example Explanation Of Benefit Mapping
 
 Explanation Of Benefits documents that are either mailed in a physical form or downloaded through a member portal vary widely from payer to payer. There is no such thing as a standardized Explanation Of Benefits document format. There are some common elements across many of these documents, such as how much was charged by a provider and how much is covered by the insurance, but the manner in which this data is presented is determined by the individual payer.
 
