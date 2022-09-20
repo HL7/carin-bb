@@ -10,9 +10,22 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 // 20210322 CAS: FHIR-30575
 
 * ^abstract = true
-* identifier 1..* MS
-* identifier.type 1..1 MS
-* identifier.type from C4BBClaimIdentifierType (extensible)
+//* identifier 1..* MS
+//* identifier.type 1..1 MS
+//* identifier.type from C4BBClaimIdentifierType (extensible)
+
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false   // can be omitted, since false is the default
+* identifier ^slicing.description = "Slice based on value pattern"
+* identifier contains 
+   uniqueclaimid 1..1  MS
+* identifier[uniqueclaimid] ^short = "Unique Claim Identifier"
+* identifier[uniqueclaimid].type = C4BBIdentifierType#uc
+* identifier[uniqueclaimid].value ^short = "Unique Claim Identifier"
+* identifier[uniqueclaimid].value 1..1 MS
+
 
 //@Saul -- added status MS
 * status MS

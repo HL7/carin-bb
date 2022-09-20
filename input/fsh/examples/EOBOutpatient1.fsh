@@ -8,9 +8,9 @@ Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
-* identifier.type = C4BBIdentifierType#uc
-* identifier.value = "AW123412341234123412341234123412"
-* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* identifier[uniqueclaimid].type = C4BBIdentifierType#uc
+* identifier[uniqueclaimid].value = "AW123412341234123412341234123412"
+* identifier[uniqueclaimid].system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
 * type.text = "Institutional"
 * subType = C4BBInstitutionalClaimSubType#outpatient

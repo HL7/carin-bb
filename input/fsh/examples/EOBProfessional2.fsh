@@ -6,10 +6,10 @@ Usage: #example
 * meta.lastUpdated = "2020-10-20T14:46:05-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.0.0)
-* identifier.type = $C4BBIdentifierType#uc "Unique Claim ID"
-* identifier.type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
-* identifier.system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
-* identifier.value = "ProfessionalEOBExample1"
+* identifier[uniqueclaimid].type = $C4BBIdentifierType#uc "Unique Claim ID"
+* identifier[uniqueclaimid].type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
+* identifier[uniqueclaimid].system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
+* identifier[uniqueclaimid].value = "ProfessionalEOBExample1"
 * status = #active
 * type = $claim-type#professional
 * type.text = "Professional"

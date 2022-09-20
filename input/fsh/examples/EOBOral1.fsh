@@ -7,9 +7,9 @@ Usage: #example
 * meta.lastUpdated = "2021-03-18T10:23:00-05:00"
 * language = #en-US
 * status = #active
-* identifier.type = $C4BBIdentifierTypeCS#uc
-* identifier.value = "210300002"
-* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* identifier[uniqueclaimid].type = $C4BBIdentifierTypeCS#uc
+* identifier[uniqueclaimid].value = "210300002"
+* identifier[uniqueclaimid].system = "https://www.xxxplan.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#oral
 * type.text = "Oral"
 * use = #claim
