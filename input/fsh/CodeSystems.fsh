@@ -22,6 +22,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 //* #denied "Denied"  "denied"
 * ^content = #complete
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 
@@ -33,6 +34,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #beneficiary "Beneficiary" "The beneficiary (patient) will be reimbursed."
 * ^content = #complete
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBClaimDiagnosisType
@@ -48,6 +50,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 //* #admitting "Admitting" "Admitting"
 * ^content = #complete
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBClaimCareTeamRole
@@ -67,6 +70,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 //* #supervising "supervising" "Supervising"
 * ^content = #complete
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This Code System is not copyrighted."
 
 
@@ -78,6 +82,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #compound "compound" "Compound"
 * ^content = #complete
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 // ******** @Saul - updated **********
@@ -98,6 +103,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #uc "Unique Claim ID" "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * ^content = #complete
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBPayerAdjudicationStatus
@@ -113,6 +119,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #partiallypaid "Partially Paid" "Indicates that some line items on the claim were denied"
 * ^content = #complete
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBRelatedClaimRelationshipCodes
@@ -122,6 +129,7 @@ Description: "Identifies if the current claim represents a claim that has been a
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
 * #replacedby "Replaced by claim number" "The current claim has been adjusted; i.e., replaced by or merged to another claim number."
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBSupportingInfoType
@@ -158,6 +166,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #pickuplocation "Pick-up Location" "Patient pick-up Location (for transportation services)"
 * #dropofflocation "Drop-off Location" "Patient drop-off location (for transportation services)"
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 
@@ -176,6 +185,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #benefitpaymentstatus "Benefit Payment Status" "Indicates the network payment status in relation to a patient's coverage as of the effective date of service or admission."
 * ^content = #complete
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBClaimProcedureType
@@ -187,6 +197,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #other "Other"  "Other procedures performed during the inpatient institutional admission"
 * ^content = #complete
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBInstitutionalClaimSubType
@@ -198,6 +209,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #outpatient "Outpatient"  "Claims for outpatient institutional admissions."
 * ^content = #complete
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
 
@@ -216,4 +228,5 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * #L "Lingual" "The surface of a tooth facing the tongue."
 * ^content = #complete
 * ^caseSensitive = true
+* ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."

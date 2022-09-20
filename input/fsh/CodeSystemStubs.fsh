@@ -14,6 +14,7 @@ RuleSet: CodeSystemStubBoilerplate
 * ^jurisdiction[0].coding[0].code = #US
 * ^jurisdiction[0].coding[0].display = "United States of America"
 * ^content = #not-present
+* ^experimental = false
 
 RuleSet: NCPDPCopyrightNotice
 * ^copyright = "National Council for Prescription Drugs Programs, Inc. (NCPDP) publications are owned by NCPDP, 9240 East Raintree Drive Scottsdale, AZ 85260, and protected by the copyright laws of the United States. 17 U.S.C. §101, et. seq. Permission is given to Council members to copy and use the work or any part thereof in connection with the business purposes of the Council members. The work may not be changed or altered. The work may be shared within the member company but may not be distributed and/or copied for/by others outside of the member’s company. The work may not be sold, used or exploited for commercial purposes. This permission may be revoked by NCPDP at any time. NCPDP is not responsible for any errors or damage as a result of the use of the work.
@@ -39,6 +40,7 @@ Link to information about the code system - including how to obtain the content:
 
 * codes from system $NCPDPRejectCode
 * insert NCPDPCopyrightNotice
+* ^experimental = false
 
 /*
 CodeSystem: NCPDPDispensedAsWrittenOrProductSelectionCode
@@ -61,7 +63,7 @@ Link to information about the code system - including how to obtain the content:
 
 * codes from system $NCPDPDispensedAsWrittenOrProductSelectionCode
 * insert NCPDPCopyrightNotice
-
+* ^experimental = false
 /*
 CodeSystem: NCPDPBrandGenericIndicator
 Title: "NCPDP Brand Generic Indicator"
@@ -84,6 +86,7 @@ Link to information about the code system - including how to obtain the content:
 
 * codes from system $NCPDPBrandGenericIndicator
 * insert NCPDPCopyrightNotice
+* ^experimental = false
 
 /*
 CodeSystem: NCPDPPrescriptionOriginCode
@@ -106,6 +109,7 @@ Link to information about the code system - including how to obtain the content:
 
 * codes from system $NCPDPPrescriptionOriginCode
 * insert NCPDPCopyrightNotice
+* ^experimental = false
 
 /*
 CodeSystem: NCPDPCompoundCode
@@ -128,6 +132,7 @@ Link to information about the code system - including how to obtain the content:
 
 * codes from system $NCPDPCompoundCode
 * insert NCPDPCopyrightNotice
+* ^experimental = false
 
 //  **************** FDA NDC ******************************
 
@@ -151,18 +156,21 @@ Users should note a few important items
 *   The NDC Directory does not contain all listed drugs. The new version includes the final marketed drugs which listing information were submitted electronically. It does not include animal drugs, blood products, or human drugs that are not in final marketed form, such as Active Pharmaceutical Ingredients(APIs), drugs for further processing, drugs manufactured exclusively for a private label distributor, or drugs that are marketed solely as part of a kit or combination product or inner layer of a multi-level packaged product not marketed individually. For more information about how certain kits or multi-level packaged drugs are addressed in the new NDC Directory, see the NDC Directory Package File definitions document. For the FDA Online Label Repository page and additional resources go to: [FDA Online Label Repository](https://labels.fda.gov/)"
 * codes from system $FDANationalDrugCode
 * ^copyright = "NDC codes have no copyright acknowledgment or license requirements."
+* ^experimental = false
 
 ValueSet: FDANDCOrCompound
 Title: "NDC or Compound"
 Description: "Values will be the NDC Codes when the Compound Code value is 0 or 1.  When the Compound Code value = 2, the value will be the literal, ‘compound’"
 * codes from system $FDANationalDrugCode
 * include C4BBCompoundLiteral#compound
+* ^experimental = false
 
 // ***************************NUBC start ***********
 RuleSet: AHANUBCCopyrightNotice
 * ^copyright = "Licensing information can be found [here](https://www.nubc.org/license).
 
 These codes are listed within the UB-04 Data Specifications Manual. The Official UB-04 Data Specifications Manual, copyrighted by the American Hospital Association, is the only official source of UB-04 billing information adopted by the National Uniform Billing Committee. No other publication—governmental or private/commercial—can be considered authoritative. The AHA wants to make you aware that the use of codes, descriptions, or any other content contained in the manual to be used in a software application, publication, or any other derivative work must be properly licensed by the AHA. If your organization uses or intends to use any of the codes or other related content from the manual in this manner, please contact the AHA’s licensing manager, Tim Carlson, at 312.893.6816 or email tcarlson@aha.org"
+
 
 /*
 CodeSystem: AHANUBCPatientDischargeStatus
@@ -196,6 +204,7 @@ These codes are used to convey the patient discharge status and are the property
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * codes from system $AHANUBCPatientDischargeStatus
 * insert AHANUBCCopyrightNotice
+* ^experimental = false
 
 CodeSystem: AHANUBCPresentOnAdmission
 Title: "NUBC Present On Admission Indicator Codes"
@@ -213,6 +222,7 @@ To obtain the underlying code systems, please see information [here](https://www
 * ^caseSensitive = true
 * insert CodeSystemStubBoilerplate
 * insert AHANUBCCopyrightNotice
+* ^experimental = false
 
 ValueSet: AHANUBCPresentOnAdmission
 Title: "NUBC Present On Admission Indicator Codes"
@@ -227,6 +237,7 @@ These codes are used to report the principal diagnosis code (ICD-9 or ICD-10 cod
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * codes from system AHANUBCPresentOnAdmission
 * insert AHANUBCCopyrightNotice
+* ^experimental = false
 
 /*
 CodeSystem: AHANUBCRevenueCodes
@@ -259,6 +270,7 @@ These codes are used to convey the revenue code and are the property of the Amer
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * codes from system $AHANUBCRevenueCodes
 * insert AHANUBCCopyrightNotice
+* ^experimental = false
 
 /*
 CodeSystem: AHANUBCTypeOfBill
@@ -298,6 +310,7 @@ Note that with the advent of UB-04, the matrix methodology of constructing the f
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"""
 * codes from system $AHANUBCTypeOfBill
 * insert AHANUBCCopyrightNotice
+* ^experimental = false
 
 // 2021028 CAS: FHIR-31384 - NUBC Point Of Origin - newborns
 /*
@@ -352,6 +365,7 @@ To obtain the underlying code systems, please see information [here](https://www
 // 20210201 CAS:  https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
 * codes from system $AHANUBCPointOfOriginForAdmissionOrVisitNewborn
 * insert AHANUBCCopyrightNotice
+* ^experimental = false
 
 /*
 CodeSystem: AHANUBCPriorityTypeOfAdmissionOrVisit
@@ -385,6 +399,7 @@ These codes are used to convey the priority of an admission or visit and are the
 To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
 * codes from system $AHANUBCPriorityTypeOfAdmissionOrVisit
 * insert AHANUBCCopyrightNotice
+* ^experimental = false
 
 //********start: AMA / HCPCS************
 
@@ -518,7 +533,7 @@ These files contain the Level II alphanumeric HCPCS procedure and modifier codes
 * ^copyright = "Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
 
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
-
+* ^experimental = false
 
 
 
@@ -595,7 +610,7 @@ group information may also vary by payment systems."
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)
 
 CMS maintains HIPPS. There are no known constraints on the use of HIPPS. See more information about HIPPS codes [here](https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/HIPPSCodes)"
-
+* ^experimental = false
 
 ValueSet:  AMACPTCMSHCPCSModifiers
 // 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
@@ -634,6 +649,7 @@ These files contain the Level II alphanumeric HCPCS procedure and modifier codes
 * ^copyright = "Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
 
 See information on the use of HCPCS Level I (proprietary and owned by American Medical Association) and Level II codes [here](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions)"
+* ^experimental = false
 
 /*
 // ******** American Dental Association CDT ********
@@ -674,7 +690,7 @@ To obtain the underlying code systems, please see information [here](https://www
 * codes from system $ADADentalProcedureCode
 * include $HL7DataAbsentReason#not-applicable "Not Applicable"
 * insert ADACopyrightNotice
-
+* ^experimental = false
 
 
 // ******** DRGs ***************
@@ -781,6 +797,7 @@ Averill RF, Goldfield NI, Muldoon J, Steinbeck BA, Grant TM. A closer look at Al
 The clinical logic is maintained by a team of 3M clinicians, data analysts, nosologists, programmers and economists. The logic is proprietary to 3M but is available for licensees to view in an online definitions manual.
 
 To license APR DRG from 3M, see request form [here](https://engage.3m.com/PPS_Groupers_Contact)"
+* ^experimental = false
 
 // ******** Place of Service ***************
 /*CodeSystem: CMSPlaceofServiceCodes
@@ -806,6 +823,7 @@ This code set is required for use in the implementation guide adopted as the nat
 Current codes can be obtained [here](https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set)"
 * codes from system $CMSPlaceofServiceCodes
 * ^copyright = "The Centers for Medicare & Medicaid Services (CMS) maintain Place Of Service (POS) codes used throughout the US health care industry. The CMS POS codes are free to use without restriction."
+* ^experimental = false
 
 // ******** CARCs / RARCs ***************
 
@@ -922,7 +940,7 @@ Additional information on X12 licensing program can be found here:
 To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com
 
 The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Remark Codes (RARC) used throughout the US health care industry."
-
+* ^experimental = false
 
 
 
@@ -959,7 +977,7 @@ Additional information on X12 licensing program can be found here:
 **Purchasing Information:**
 
 To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com."
-
+* ^experimental = false
 
 
 ValueSet: C4BBAmbulanceTransportReasonCodes
@@ -967,7 +985,7 @@ Title: "C4BB Ambulance Transport Reasons"
 Description: "Transportation Services Ambulatory Transport Reason Codes" 
 * codes from system X12AmbulanceTransportReasonCodes
 * ^copyright = "This Valueset is not copyrighted."
-
+* ^experimental = false
 //  ********* ICD diagnosis codes / procedure codes
 /*
 RuleSet: ICD9CopyrightNotice
@@ -1018,7 +1036,7 @@ Most files are provided in compressed zip format for ease in downloading. These 
 * codes from system $ICD10CM
 * codes from system $ICD9CM
 * insert ICD910CMCopyrightNotice
-
+* ^experimental = false
 
 ValueSet: CMSICD910PCSProcedureCodes
 Title: "Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Coding System"
@@ -1050,7 +1068,7 @@ Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of IC
 * codes from system $ICD9PCS
 * ^copyright = "The International Classification of Diseases, Tenth Revision, Procedure Coding System (ICD-10-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS) available for public use. CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-10-PCS.
 The International Classification of Diseases, Ninth Revision, Procedure Coding System (ICD-9-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS) available for public use. CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-9-PCS."
-
+* ^experimental = false
 
 /*
 CodeSystem: ADAUniversalNumberingSystem
@@ -1086,6 +1104,7 @@ Description: "Oral Body Site indicating tooth numbers and area of oral cavity."
 * codes from system $ADAUniversalToothDesignationSystem
 * codes from system $ADAAreaOralCavitySystem
 * insert ADACopyrightNotice
+* ^experimental = false
 
 
 ValueSet: ADAUniversalNumberingSystem
@@ -1095,3 +1114,4 @@ Description: "The American Dental Association Universal Numbering System is a to
 Teeth are numbered from the viewpoint of the dental practitioner looking into the open mouth, clockwise starting from the distalmost right maxillary teeth."
 * codes from system $ADAUniversalToothDesignationSystem
 * insert ADACopyrightNotice
+* ^experimental = false

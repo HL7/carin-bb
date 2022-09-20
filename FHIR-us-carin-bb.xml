@@ -72,7 +72,7 @@
 <artifact id="ValueSet/CMSPlaceofServiceCodes" key="ValueSet-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS)"/>
 <artifact deprecated="true" id="CodeSystem/CMSPlaceofServiceCodes" key="CodeSystem-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS) CS"/>
 <artifact id="Coverage/Coverage1" key="Coverage-Coverage1" name="Coverage Example 1"/>
-<artifact deprecated="true" id="Coverage/CoverageEx1" key="Coverage-CoverageEx1" name="Coverage Example 1"/>
+<artifact deprecated="true" id="Coverage/CoverageEx1" key="Coverage-CoverageEx1" name="Coverage Example 1 (deprecated)"/>
 <artifact id="Coverage/Coverage2" key="Coverage-CoverageEx2" name="Coverage Example 2"/>
 <artifact id="Coverage/Coverage3" key="Coverage-Coverage3" name="Coverage Example 3"/>
 <artifact id="SearchParameter/coverage-payor" key="SearchParameter-coverage-payor" name="Coverage_Payor"/>
@@ -142,7 +142,7 @@
 <artifact deprecated="true" id="Organization/OrganizationDentalPayer1" key="Organization-OrganizationDentalPayer1" name="OrganizationDentalPayer1"/>
 <artifact deprecated="true" id="Organization/OrganizationProvider1" key="Organization-OrganizationProvider1" name="OrganizationProvider1"/>
 <artifact id="Patient/Patient1" key="Patient-Patient1" name="Patient Example 1"/>
-<artifact deprecated="true" id="Patient/ExamplePatient1" key="Patient-PatientEx1" name="Patient Example 1"/>
+<artifact deprecated="true" id="Patient/ExamplePatient1" key="Patient-PatientEx1" name="Patient Example 1 (deprecated)"/>
 <artifact id="Patient/Patient2" key="Patient-Patient2" name="Patient Example 2"/>
 <artifact id="Organization/Payer1" key="Organization-Payer1" name="Payer 1"/>
 <artifact id="Organization/Payer2" key="Organization-Payer2" name="Payer 2"/>
