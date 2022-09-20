@@ -95,6 +95,8 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.productOrService from ADADentalProcedureCode (required)
 
 * item.productOrService MS
+* item.productOrService MS
+* item.serviced[x] 1..1 MS
 * item.location[x] 1..1 MS
 * item.location[x] only CodeableConcept
 * item.locationCodeableConcept from CMSPlaceofServiceCodes (required)
