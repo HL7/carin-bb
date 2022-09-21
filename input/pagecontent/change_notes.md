@@ -26,6 +26,11 @@ The current official published version of CARIN BB for FHIR R4
       <li>ExplanationOfBenefit.item.serviced[x] from 0..1 to 1..1 for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy ExplanationOfBenefit profile</a></li>
     </ul>
   </li>
+
+  <li>Changed the <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy Explanation Of Benefit profile</a> serviced[x] to only be a date (<a href="https://jira.hl7.org/browse/FHIR-38668">FHIR-38668</a>) *</li>
+
+  <li>Added Must Support to ExplanationOfBenefit.item.serviced[x] leaf elements on the <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional</a> and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician</a> ExplanationOfBenefit profiles (<a href="https://jira.hl7.org/browse/FHIR-38669">FHIR-38669</a>) *</li>
+
   <li>Moved ExplanationOfBenefit.total[benefitpaymentstatus] slice to ExplanationOfBenefit.adjudication[benefitpaymentstatus] (therefore not requiring an amount property) for <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional.html">Inpatient Institutional</a>, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional.html">Outpatient Institutional</a>, <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy</a>, and <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral</a> ExplanationOfBenefit profiles, changed the pattern to match other adjudication repetitions, and update the invariants appropriately(<a href="https://jira.hl7.org/browse/FHIR-33082">FHIR-33082</a>, <a href="https://jira.hl7.org/browse/FHIR-37726">FHIR-37726</a>, <a href="https://jira.hl7.org/browse/FHIR-38063">FHIR-38063</a>, and <a href="https://jira.hl7.org/browse/FHIR-35358">FHIR-35358</a>) *</li>
 
 
@@ -47,6 +52,7 @@ The current official published version of CARIN BB for FHIR R4
 
   <li>Changed <a href="StructureDefinition-C4BB-Practitioner.html">Practitioner</a> and <a href="StructureDefinition-C4BB-Organization.html">Organization</a> profiles identifier.type in the NPI slice to use the `NPI` from CodeSystem http://terminology.hl7.org/CodeSystem/v2-0203 (<a href="https://jira.hl7.org/browse/FHIR-35712">FHIR-35712</a>) *</li>
 
+  <li>Updated the <a href="StructureDefinition-C4BB-ExplanationOfBenefit.html">Base Explanation Of Benefit profile</a> to require the identifier to contain the unique claim id (<a href="https://jira.hl7.org/browse/FHIR-38660">FHIR-38660</a>) *</li>
 
   <li>Added Non-emergency transport information to ExplanationOfBenefit.supportingInfo slices to the <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician.html">Professional NonClinician ExplanationOfBenefit profile</a> along with invariant rules (<a href="https://jira.hl7.org/browse/FHIR-37615">FHIR-37615</a>)</li>
 
@@ -106,7 +112,7 @@ The current official published version of CARIN BB for FHIR R4
 
   <li>Add guidance to the <a href="General_Guidance.html#considerations-for-app-rendering">General Guidance</a> section providing more information on considerations payers and consumer apps should make for understanding improving rendering of the Explanation Of Benefit data. A <a href="General_Guidance.html#example-printed-eob-mapping">example explanation of benefit document</a> with mapping to CPCDS data elements and profile paths is provided to assist consumer app developers in understanding the data elements and suggesting how payers might improve their API documentation for connecting system developers (<a href="https://jira.hl7.org/browse/FHIR-31069">FHIR-31069</a>)</li>
 
-  <li>Updated <a href="Common_Payer_Consumer_Data_Set.html#common-payer-consumer-data-set-cpcds">diagrams and CPCDS resources</a> to match the changes on the latest version of this specification (<a href="https://jira.hl7.org/browse/FHIR-35212">FHIR-35212</a> and <a href="https://jira.hl7.org/browse/FHIR-34513">FHIR-34513</a>)</li>
+  <li>Updated <a href="Common_Payer_Consumer_Data_Set.html#common-payer-consumer-data-set-cpcds">diagrams and CPCDS resources</a> to match the changes on the latest version of this specification and added comparison of Explanation of Benefit dates (<a href="https://jira.hl7.org/browse/FHIR-35212">FHIR-35212</a>, <a href="https://jira.hl7.org/browse/FHIR-34513">FHIR-34513</a>, and  <a href="https://jira.hl7.org/browse/FHIR-38661">FHIR-38661</a>)</li>
 
   <li>Remove Must Support from Patient.address.district in the <a href="StructureDefinition-C4BB-Patient.html">Patient profile</a> (<a href="https://jira.hl7.org/browse/FHIR-35710">FHIR-35710</a>)</li>
 
