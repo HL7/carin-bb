@@ -3,6 +3,9 @@
 # Approved US Core Variance for RelatedPerson profile (RelatedPerson profile not in US Core 3.1.1) - https://jira.hl7.org/browse/FHIR-38103
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-RelatedPerson').baseDefinition: US FHIR Usage rules require that all profiles on RelatedPerson derive from the core US profile
 
+# JIRA Artifacts difference - Due to IG artifacts named the same (and need to be renamed for Jira) and others that were renamed, but key the same.
+WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
+
 
 # INFORMATION: The following code systems are external and not supported by terminology server, and cannot be validated in examples
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
