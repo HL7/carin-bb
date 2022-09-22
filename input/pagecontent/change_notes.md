@@ -41,7 +41,7 @@ The current official published version of CARIN BB for FHIR R4
   <li>Changed provider "contracting network status" to provider "network status" by updating <a href="CodeSystem-C4BBAdjudicationDiscriminator.html">Adjudication Discriminator</a>; changing the C4BBPayerProviderContractingStatus ValueSet to <a href="ValueSet-C4BBPayerProviderNetworkStatus.html">C4BBPayerProviderNetworkStatus ValueSet</a> with `innetwork` and `outofnetwork` codes; removing "contracted" and "notcontracted" codes in <a href="CodeSystem-C4BBPayerAdjudicationStatus.html">Payer Adjudication Status ValueSet</a>, and updating the `innetwork` and `outofnetwork` code definitions for applicability for the provider network status (<a href="https://jira.hl7.org/browse/FHIR-38059">FHIR-38059</a>) *</li>
 
 
-  <li>Updated the definition of <a href="General_Guidance.html#must-support">Must Support</a> to state "Health Plan API actors SHALL be capable of populating all data elements the payer maintains" which are marked as Must Support, and remove the requirement that "Consumer App actors SHOULD be capable of storing the information for other purposes" (<a href="https://jira.hl7.org/browse/FHIR-36675">FHIR-36675</a> and <a href="https://jira.hl7.org/browse/FHIR-35730">FHIR-35730</a>)</li>
+  <li>Updated the definition of <a href="Conformance_Requirements.html#must-support">Must Support</a> to state "Health Plan API actors SHALL be capable of populating all data elements the payer maintains" which are marked as Must Support, and remove the requirement that "Consumer App actors SHOULD be capable of storing the information for other purposes" (<a href="https://jira.hl7.org/browse/FHIR-36675">FHIR-36675</a> and <a href="https://jira.hl7.org/browse/FHIR-35730">FHIR-35730</a>)</li>
 
   <li>Changed ExplanationOfBenefit.adjudication and ExplanationOfBenefit.item.adjudication slicing from closed to open for <a href="artifacts.html#structures-resource-profiles">all Resource ExplanationOfBenefit profiles</a> (<a href="https://jira.hl7.org/browse/FHIR-34241">FHIR-34241</a>)</li>
 
@@ -69,7 +69,7 @@ The current official published version of CARIN BB for FHIR R4
   <li>Added guidance on the expectation of _include support and interpretation of _include=ExplanationOfBenefit:* to <a href="searchparameters.html">search Parameters page</a> and <a href="CapabilityStatement-c4bb.html">Capability Statement</a> including adding ExplanationOfBenefit:payee (<a href="https://jira.hl7.org/browse/FHIR-32982">FHIR-32982</a>)</li>
 
 
-  <li>Added a requirement in the <a href="General_Guidance.html#capabilitystatement-server-requirement">General Guidance</a> that servers SHALL include a CapabilityStatement that has a CapabilityStatement.instantiates specifying the CapabilityStatement in this specification (<a href="https://jira.hl7.org/browse/FHIR-35360">FHIR-35360</a>)</li>
+  <li>Added a requirement in the <a href="Conformance_Requirements.html#capabilitystatement-server-requirement">General Guidance</a> that servers SHALL include a CapabilityStatement that has a CapabilityStatement.instantiates specifying the CapabilityStatement in this specification (<a href="https://jira.hl7.org/browse/FHIR-35360">FHIR-35360</a>)</li>
 
 
   <li>Updated the <a href="CapabilityStatement-c4bb.html">CapabilityStatement</a> security section allowing unauthorized requests responses of HTTP 403 "Forbidden" or HTTP 404 "Not Found" in addition to the previously stated HTTP 401 "Unauthorized" (<a href="https://jira.hl7.org/browse/FHIR-35766">FHIR-35766</a>)</li>
@@ -110,7 +110,7 @@ The current official published version of CARIN BB for FHIR R4
 
   <li>Updated element short descriptions to be more meaningful for all  <a href="artifacts.html#structures-resource-profiles">all Resource profiles</a> (<a href="https://jira.hl7.org/browse/FHIR-34091">FHIR-34091</a>)</li>
 
-  <li>Add guidance to the <a href="General_Guidance.html#considerations-for-app-rendering">General Guidance</a> section providing more information on considerations payers and consumer apps should make for understanding improving rendering of the Explanation Of Benefit data. A <a href="General_Guidance.html#example-printed-eob-mapping">example explanation of benefit document</a> with mapping to CPCDS data elements and profile paths is provided to assist consumer app developers in understanding the data elements and suggesting how payers might improve their API documentation for connecting system developers (<a href="https://jira.hl7.org/browse/FHIR-31069">FHIR-31069</a>)</li>
+  <li>Add guidance to the <a href="General_Guidance.html#considerations-for-improving-interoperability">General Guidance</a> section providing more information on considerations payers and consumer apps should make for understanding improving rendering of the Explanation Of Benefit data. A <a href="General_Guidance.html#example-printed-eob-mapping">example explanation of benefit document</a> with mapping to CPCDS data elements and profile paths is provided to assist consumer app developers in understanding the data elements and suggesting how payers might improve their API documentation for connecting system developers (<a href="https://jira.hl7.org/browse/FHIR-31069">FHIR-31069</a>)</li>
 
   <li>Updated <a href="Common_Payer_Consumer_Data_Set.html#common-payer-consumer-data-set-cpcds">diagrams and CPCDS resources</a> to match the changes on the latest version of this specification and added comparison of Explanation of Benefit dates (<a href="https://jira.hl7.org/browse/FHIR-35212">FHIR-35212</a>, <a href="https://jira.hl7.org/browse/FHIR-34513">FHIR-34513</a>, and  <a href="https://jira.hl7.org/browse/FHIR-38661">FHIR-38661</a>)</li>
 
@@ -120,7 +120,9 @@ The current official published version of CARIN BB for FHIR R4
 
   <li>Added guidance regarding the definition of the payer id identifier to the <a href="CodeSystem-C4BBIdentifierType.html">Identifier Type CodeSystem</a> and the <a href="StructureDefinition-C4BB-Organization-definitions.html">Organization profile</a> identifier payerid slice (<a href="https://jira.hl7.org/browse/FHIR-36771">FHIR-36771</a> and <a href="https://jira.hl7.org/browse/FHIR-36770">FHIR-36770</a>)</li>
 
-  <li>Removed broken link reference to "API Resource Collection in Health (ARCH)" from the <a href="General_Guidance.html">General Guidance</a> page (<a href="https://jira.hl7.org/browse/FHIR-35956">FHIR-35956</a>)</li>
+  <li>Made navigation and title updates <a href="https://jira.hl7.org/browse/FHIR-38692">FHIR-38692</a>)</li>
+
+  <li>Removed broken link reference to "API Resource Collection in Health (ARCH)" from the <a href="Conformance_Requirements.html">General Guidance</a> page (<a href="https://jira.hl7.org/browse/FHIR-35956">FHIR-35956</a>)</li>
 
 </ul>
 

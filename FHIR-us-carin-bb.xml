@@ -178,6 +178,7 @@
 <page key="Background" name="Background"/>
 <page key="9_change_notes" name="Change Notes"/>
 <page key="Common_Payer_Consumer_Data_Set" name="Common Payer Consumer Data Set (CPCDS)"/>
+<page key="Conformance_Requirements" name="Conformance Requirements"/>
 <page key="downloads" name="Downloads"/>
 <page deprecated="true" key="Examples" name="Examples"/>
 <page key="General_Guidance" name="General Guidance"/>
