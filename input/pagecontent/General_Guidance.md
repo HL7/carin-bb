@@ -2,7 +2,7 @@
 <a name="considerations-for-improving-interoperability"></a>
 
 ### Considerations for Improving Interoperability
-Many of the codes used in this guide are proprietary with [licensing requirements](Terminology.html). While it is recommended that consumer apps acquire the necessary licenses to show descriptions for these codes, not all app developers may be in a position to do so. Because of this, payers **MAY** choose to provide a concept text `[CodeableConcept].text` or the coding display `[CodeableConcept].coding.display. It is the responsibility of the payer to make sure that the descriptions provided are correct.
+Many of the codes used in this guide are proprietary with [licensing requirements](Terminology_Licensure.html). While it is recommended that consumer apps acquire the necessary licenses to show descriptions for these codes, not all app developers may be in a position to do so. Because of this, payers **MAY** choose to provide a concept text `[CodeableConcept].text` or the coding display `[CodeableConcept].coding.display. It is the responsibility of the payer to make sure that the descriptions provided are correct.
 
 If the 'display' element is populated, the string used in `display` **SHALL** be one of the display strings defined for that code by the code system (code systems may define multiple display strings for a single code). If the code description available is not known to be an exact match of a display string defined by the code system, the  `[CodeableConcept].text` should be used in place of the `[CodeableConcept].coding.display`.
 
