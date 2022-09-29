@@ -11,32 +11,32 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="ValueSet/ADADentalProcedureCode" key="ValueSet-ADADentalProcedureCode" name="ADA Code on Dental Procedures and Nomenclature"/>
 <artifact deprecated="true" id="CodeSystem/ADADentalProcedureCode" key="CodeSystem-ADADentalProcedureCode" name="ADA Code on Dental Procedures and Nomenclature CS"/>
+<artifact id="ValueSet/ADADentalProcedureCode" key="ValueSet-ADADentalProcedureCode" name="ADA Code on Dental Procedures and Nomenclature Value Set"/>
 <artifact deprecated="true" id="CodeSystem/AMACPTCodes" key="CodeSystem-AMACPTCodes" name="AMA CPT Codes"/>
 <artifact deprecated="true" id="CodeSystem/THREEMAPDRG" key="CodeSystem-THREEMAPDRG" name="All Patient Diagnosis Related Groups (AP-DRGs)"/>
 <artifact deprecated="true" id="CodeSystem/THREEMAPRDRG" key="CodeSystem-THREEMAPRDRG" name="All Patient Refined Diagnosis Related Groups (APR-DRGs)"/>
 <artifact deprecated="true" id="CodeSystem/ADAAreaOfOralCavitySystem" key="CodeSystem-ADAAreaOfOralCavitySystem" name="American Dental Association Area of Oral Cavity System"/>
 <artifact deprecated="true" id="CodeSystem/ADAUniversalNumberingSystem" key="CodeSystem-ADAUniversalNumberingSystem" name="American Dental Association Universal Numbering System"/>
 <artifact id="ValueSet/ADAUniversalNumberingSystem" key="ValueSet-ADAUniversalNumberingSystem" name="American Dental Association Universal Numbering Value Set"/>
-<artifact id="ValueSet/C4BBAdjudication" key="ValueSet-C4BBAdjudication" name="C4BB Adjudication"/>
-<artifact id="CodeSystem/C4BBAdjudication" key="CodeSystem-C4BBAdjudication" name="C4BB Adjudication"/>
-<artifact id="ValueSet/C4BBAdjudicationCategoryDiscriminator" key="ValueSet-C4BBAdjudicationCategoryDiscriminator" name="C4BB Adjudication Category Discriminator"/>
-<artifact id="CodeSystem/C4BBAdjudicationDiscriminator" key="CodeSystem-C4BBAdjudicationDiscriminator" name="C4BB Adjudication Discriminator"/>
-<artifact id="ValueSet/C4BBAmbulanceTransportReasonCodes" key="ValueSet-C4BBAmbulanceTransportReasonCodes" name="C4BB Ambulance Transport Reasons"/>
+<artifact id="ValueSet/C4BBAdjudicationCategoryDiscriminator" key="ValueSet-C4BBAdjudicationCategoryDiscriminator" name="C4BB Adjudication Category Discriminator Value Set"/>
+<artifact id="CodeSystem/C4BBAdjudication" key="CodeSystem-C4BBAdjudication" name="C4BB Adjudication Code System"/>
+<artifact id="CodeSystem/C4BBAdjudicationDiscriminator" key="CodeSystem-C4BBAdjudicationDiscriminator" name="C4BB Adjudication Discriminator Code System"/>
+<artifact id="ValueSet/C4BBAdjudication" key="ValueSet-C4BBAdjudication" name="C4BB Adjudication Value Set"/>
+<artifact id="ValueSet/C4BBAmbulanceTransportReasonCodes" key="ValueSet-C4BBAmbulanceTransportReasonCodes" name="C4BB Ambulance Transport Reasons Value Set"/>
 <artifact id="CapabilityStatement/c4bb" key="CapabilityStatement-c4bb" name="C4BB CapabilityStatement"/>
-<artifact id="CodeSystem/C4BBClaimCareTeamRole" key="CodeSystem-C4BBClaimCareTeamRole" name="C4BB Claim Care Team Role"/>
-<artifact id="CodeSystem/C4BBClaimDiagnosisType" key="CodeSystem-C4BBClaimDiagnosisType" name="C4BB Claim Diagnosis Type"/>
-<artifact id="ValueSet/C4BBClaimIdentifierType" key="ValueSet-C4BBClaimIdentifierType" name="C4BB Claim Identifier Type"/>
-<artifact id="ValueSet/C4BBClaimInpatientInstitutionalDiagnosisType" key="ValueSet-C4BBClaimInpatientInstitutionalDiagnosisType" name="C4BB Claim Inpatient Institutional Diagnosis Type"/>
-<artifact id="ValueSet/C4BBClaimInstitutionalCareTeamRole" key="ValueSet-C4BBClaimInstitutionalCareTeamRole" name="C4BB Claim Institutional Care Team Role"/>
-<artifact id="ValueSet/C4BBClaimOutpatientInstitutionalDiagnosisType" key="ValueSet-C4BBClaimOutpatientInstitutionalDiagnosisType" name="C4BB Claim Outpatient Institutional Diagnosis Type"/>
-<artifact id="ValueSet/C4BBClaimPharmacyTeamRole" key="ValueSet-C4BBClaimPharmacyTeamRole" name="C4BB Claim Pharmacy CareTeam Roles"/>
-<artifact id="ValueSet/C4BBClaimProcedureType" key="ValueSet-C4BBClaimProcedureType" name="C4BB Claim Procedure Type"/>
-<artifact id="CodeSystem/C4BBClaimProcedureType" key="CodeSystem-C4BBClaimProcedureType" name="C4BB Claim Procedure Type"/>
-<artifact id="ValueSet/C4BBClaimProfessionalAndNonClinicianCareTeamRole" key="ValueSet-C4BBClaimProfessionalAndNonClinicianCareTeamRole" name="C4BB Claim Professional And Non Clinician Care Team Role"/>
-<artifact id="ValueSet/C4BBClaimProfessionalAndNonClinicianDiagnosisType" key="ValueSet-C4BBClaimProfessionalAndNonClinicianDiagnosisType" name="C4BB Claim Professional And Non Clinician Diagnosis Type"/>
-<artifact id="CodeSystem/C4BBCompoundLiteral" key="CodeSystem-C4BBCompoundLiteral" name="C4BB Compound Literal"/>
+<artifact id="CodeSystem/C4BBClaimCareTeamRole" key="CodeSystem-C4BBClaimCareTeamRole" name="C4BB Claim Care Team Role Code System"/>
+<artifact id="CodeSystem/C4BBClaimDiagnosisType" key="CodeSystem-C4BBClaimDiagnosisType" name="C4BB Claim Diagnosis Type Code System"/>
+<artifact id="ValueSet/C4BBClaimIdentifierType" key="ValueSet-C4BBClaimIdentifierType" name="C4BB Claim Identifier Type Value Set"/>
+<artifact id="ValueSet/C4BBClaimInpatientInstitutionalDiagnosisType" key="ValueSet-C4BBClaimInpatientInstitutionalDiagnosisType" name="C4BB Claim Inpatient Institutional Diagnosis Type Value Set"/>
+<artifact id="ValueSet/C4BBClaimInstitutionalCareTeamRole" key="ValueSet-C4BBClaimInstitutionalCareTeamRole" name="C4BB Claim Institutional Care Team Role Value Set"/>
+<artifact id="ValueSet/C4BBClaimOutpatientInstitutionalDiagnosisType" key="ValueSet-C4BBClaimOutpatientInstitutionalDiagnosisType" name="C4BB Claim Outpatient Institutional Diagnosis Type Value Set"/>
+<artifact id="ValueSet/C4BBClaimPharmacyTeamRole" key="ValueSet-C4BBClaimPharmacyTeamRole" name="C4BB Claim Pharmacy CareTeam Role Value Set"/>
+<artifact id="CodeSystem/C4BBClaimProcedureType" key="CodeSystem-C4BBClaimProcedureType" name="C4BB Claim Procedure Type Code System"/>
+<artifact id="ValueSet/C4BBClaimProcedureType" key="ValueSet-C4BBClaimProcedureType" name="C4BB Claim Procedure Type Value Set"/>
+<artifact id="ValueSet/C4BBClaimProfessionalAndNonClinicianCareTeamRole" key="ValueSet-C4BBClaimProfessionalAndNonClinicianCareTeamRole" name="C4BB Claim Professional And Non Clinician Care Team Role Value Set"/>
+<artifact id="ValueSet/C4BBClaimProfessionalAndNonClinicianDiagnosisType" key="ValueSet-C4BBClaimProfessionalAndNonClinicianDiagnosisType" name="C4BB Claim Professional And Non Clinician Diagnosis Type Value Set"/>
+<artifact id="CodeSystem/C4BBCompoundLiteral" key="CodeSystem-C4BBCompoundLiteral" name="C4BB Compound Literal Code System"/>
 <artifact id="StructureDefinition/C4BB-Coverage" key="StructureDefinition-C4BB-Coverage" name="C4BB Coverage"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit" key="StructureDefinition-C4BB-ExplanationOfBenefit" name="C4BB Explanation Of Benefit"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional" key="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional" name="C4BB ExplanationOfBenefit Inpatient Institutional"/>
@@ -44,33 +44,33 @@
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional" key="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional" name="C4BB ExplanationOfBenefit Outpatient Institutional"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy" key="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy" name="C4BB ExplanationOfBenefit Pharmacy"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician" key="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician" name="C4BB ExplanationOfBenefit Professional NonClinician"/>
-<artifact id="CodeSystem/C4BBIdentifierType" key="CodeSystem-C4BBIdentifierType" name="C4BB Identifier Type"/>
-<artifact id="ValueSet/C4BBInstitutionalClaimSubType" key="ValueSet-C4BBClaimSubType" name="C4BB Institutional Claim SubType"/>
-<artifact id="CodeSystem/C4BBInstitutionalClaimSubType" key="CodeSystem-C4BBClaimSubType" name="C4BB Institutional Claim SubType"/>
+<artifact id="CodeSystem/C4BBIdentifierType" key="CodeSystem-C4BBIdentifierType" name="C4BB Identifier Type Code System"/>
+<artifact id="CodeSystem/C4BBInstitutionalClaimSubType" key="CodeSystem-C4BBClaimSubType" name="C4BB Institutional Claim SubType Code System"/>
+<artifact id="ValueSet/C4BBInstitutionalClaimSubType" key="ValueSet-C4BBClaimSubType" name="C4BB Institutional Claim SubType Value Set"/>
 <artifact id="StructureDefinition/C4BB-Organization" key="StructureDefinition-C4BB-Organization" name="C4BB Organization"/>
-<artifact id="ValueSet/C4BBOrganizationIdentifierType" key="ValueSet-C4BBOrganizationIdentifierType" name="C4BB Organization Identifier Type"/>
+<artifact id="ValueSet/C4BBOrganizationIdentifierType" key="ValueSet-C4BBOrganizationIdentifierType" name="C4BB Organization Identifier Type Value Set"/>
 <artifact id="StructureDefinition/C4BB-Patient" key="StructureDefinition-C4BB-Patient" name="C4BB Patient"/>
-<artifact id="ValueSet/C4BBPatientIdentifierType" key="ValueSet-C4BBPatientIdentifierType" name="C4BB Patient Identifier Type"/>
-<artifact id="ValueSet/C4BBPayeeType" key="ValueSet-C4BBPayeeType" name="C4BB Payee Type"/>
-<artifact id="CodeSystem/C4BBPayeeType" key="CodeSystem-C4BBPayeeType" name="C4BB Payee Type"/>
-<artifact id="CodeSystem/C4BBPayerAdjudicationStatus" key="CodeSystem-C4BBPayerAdjudicationStatus" name="C4BB Payer Adjudication Status"/>
-<artifact id="ValueSet/C4BBPayerBenefitPaymentStatus" key="ValueSet-C4BBPayerBenefitPaymentStatus" name="C4BB Payer Benefit Payment Status"/>
-<artifact id="ValueSet/C4BBPayerClaimPaymentStatusCode" key="ValueSet-C4BBPayerClaimPaymentStatusCode" name="C4BB Payer Claim Payment Status Code"/>
+<artifact id="ValueSet/C4BBPatientIdentifierType" key="ValueSet-C4BBPatientIdentifierType" name="C4BB Patient Identifier Type Value Set"/>
+<artifact id="CodeSystem/C4BBPayeeType" key="CodeSystem-C4BBPayeeType" name="C4BB Payee Type Code System"/>
+<artifact id="ValueSet/C4BBPayeeType" key="ValueSet-C4BBPayeeType" name="C4BB Payee Type Value Set"/>
+<artifact id="CodeSystem/C4BBPayerAdjudicationStatus" key="CodeSystem-C4BBPayerAdjudicationStatus" name="C4BB Payer Adjudication Status Code System"/>
+<artifact id="ValueSet/C4BBPayerBenefitPaymentStatus" key="ValueSet-C4BBPayerBenefitPaymentStatus" name="C4BB Payer Benefit Payment Status Value Set"/>
+<artifact id="ValueSet/C4BBPayerClaimPaymentStatusCode" key="ValueSet-C4BBPayerClaimPaymentStatusCode" name="C4BB Payer Claim Payment Status Code Value Set"/>
 <artifact deprecated="true" id="ValueSet/C4BBPayerProviderContractingStatus" key="ValueSet-C4BBPayerProviderContractingStatus" name="C4BB Payer Provider Contracting Status"/>
-<artifact id="ValueSet/C4BBPayerProviderNetworkStatus" key="ValueSet-C4BBPayerProviderNetworkStatus" name="C4BB Payer Provider Network Status"/>
+<artifact id="ValueSet/C4BBPayerProviderNetworkStatus" key="ValueSet-C4BBPayerProviderNetworkStatus" name="C4BB Payer Provider Network Status Value Set"/>
 <artifact id="StructureDefinition/C4BB-Practitioner" key="StructureDefinition-C4BB-Practitioner" name="C4BB Practitioner"/>
-<artifact id="ValueSet/C4BBPractitionerIdentifierType" key="ValueSet-C4BBPractitionerIdentifierType" name="C4BB Practitioner Identifier Type"/>
-<artifact id="ValueSet/C4BBProfessionalAndNonClinicianClaimSubType" key="ValueSet-C4BBProfessionalAndNonClinicianClaimSubType" name="C4BB Professional And Non Clinician Claim SubType"/>
-<artifact id="ValueSet/C4BBProfessionalAndNonClinicianClaimType" key="ValueSet-C4BBProfessionalAndNonClinicianClaimType" name="C4BB Professional And Non Clinician Claim Type"/>
-<artifact id="ValueSet/C4BBRelatedClaimRelationshipCodes" key="ValueSet-C4BBRelatedClaimRelationshipCodes" name="C4BB Related Claim Relationship Codes"/>
-<artifact id="CodeSystem/C4BBRelatedClaimRelationshipCodes" key="CodeSystem-C4BBRelatedClaimRelationshipCodes" name="C4BB Related Claim Relationship Codes"/>
+<artifact id="ValueSet/C4BBPractitionerIdentifierType" key="ValueSet-C4BBPractitionerIdentifierType" name="C4BB Practitioner Identifier Type Value Set"/>
+<artifact id="ValueSet/C4BBProfessionalAndNonClinicianClaimSubType" key="ValueSet-C4BBProfessionalAndNonClinicianClaimSubType" name="C4BB Professional And Non Clinician Claim SubType Value Set"/>
+<artifact id="ValueSet/C4BBProfessionalAndNonClinicianClaimType" key="ValueSet-C4BBProfessionalAndNonClinicianClaimType" name="C4BB Professional And Non Clinician Claim Type Value Set"/>
+<artifact id="CodeSystem/C4BBRelatedClaimRelationshipCodes" key="CodeSystem-C4BBRelatedClaimRelationshipCodes" name="C4BB Related Claim Relationship Code System"/>
+<artifact id="ValueSet/C4BBRelatedClaimRelationshipCodes" key="ValueSet-C4BBRelatedClaimRelationshipCodes" name="C4BB Related Claim Relationship Codes Value Set"/>
 <artifact id="StructureDefinition/C4BB-RelatedPerson" key="StructureDefinition-C4BB-RelatedPerson" name="C4BB RelatedPerson"/>
-<artifact id="CodeSystem/C4BBSupportingInfoType" key="CodeSystem-C4BBSupportingInfoType" name="C4BB Supporting Info Type"/>
-<artifact id="ValueSet/C4BBSupportingInfoType" key="ValueSet-C4BBSupportingInfoType" name="C4BB SupportingInfo Type"/>
-<artifact id="ValueSet/C4BBTotalCategoryDiscriminator" key="ValueSet-C4BBTotalCategoryDiscriminator" name="C4BB Total Category Discriminator"/>
-<artifact id="ValueSet/C4BBTransportationServiceCategories" key="ValueSet-C4BBTransportationServiceCategories" name="C4BB Transportation Services Categories"/>
-<artifact id="ValueSet/CMSPlaceofServiceCodes" key="ValueSet-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS)"/>
+<artifact id="CodeSystem/C4BBSupportingInfoType" key="CodeSystem-C4BBSupportingInfoType" name="C4BB Supporting Info Type Code System"/>
+<artifact id="ValueSet/C4BBSupportingInfoType" key="ValueSet-C4BBSupportingInfoType" name="C4BB SupportingInfo Type Value Set"/>
+<artifact id="ValueSet/C4BBTotalCategoryDiscriminator" key="ValueSet-C4BBTotalCategoryDiscriminator" name="C4BB Total Category Discriminator Value Set"/>
+<artifact id="ValueSet/C4BBTransportationServiceCategories" key="ValueSet-C4BBTransportationServiceCategories" name="C4BB Transportation Services Categories Value Set"/>
 <artifact deprecated="true" id="CodeSystem/CMSPlaceofServiceCodes" key="CodeSystem-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS) CS"/>
+<artifact id="ValueSet/CMSPlaceofServiceCodes" key="ValueSet-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS) Value Set"/>
 <artifact id="Coverage/Coverage1" key="Coverage-Coverage1" name="Coverage Example 1"/>
 <artifact deprecated="true" id="Coverage/CoverageEx1" key="Coverage-CoverageEx1" name="Coverage Example 1 (deprecated)"/>
 <artifact id="Coverage/Coverage2" key="Coverage-CoverageEx2" name="Coverage Example 2"/>
@@ -79,7 +79,7 @@
 <artifact id="Coverage/CoverageDental1" key="Coverage-CoverageDental1" name="Dental Coverage Example1"/>
 <artifact id="Organization/DentalPayer1" key="Organization-DentalPayer1" name="Dental Payer1"/>
 <artifact id="Practitioner/PractitionerDentalProvider1" key="Practitioner-PractitionerDentalProvider1" name="Dental Provider 1"/>
-<artifact id="ValueSet/CDCICD910CMDiagnosisCodes" key="ValueSet-CDCICD910CMDiagnosisCodes" name="Diagnosis Codes - International Classification of Diseases, Clinical Modification (ICD-9-CM, ICD-10-CM)"/>
+<artifact id="ValueSet/CDCICD910CMDiagnosisCodes" key="ValueSet-CDCICD910CMDiagnosisCodes" name="Diagnosis Codes - International Classification of Diseases, Clinical Modification (ICD-9-CM, ICD-10-CM) Value Set"/>
 <artifact id="ExplanationOfBenefit/EOBInpatient2" key="ExplanationOfBenefit-EOBInpatient2" name="EOB Inpatient Example 2"/>
 <artifact id="ExplanationOfBenefit/EOBInpatient1" key="ExplanationOfBenefit-EOBInpatient1" name="EOB Inpatient Example1"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/InpatientEOBExample1" key="ExplanationOfBenefit-EOBInpatientInstitutionalEx1" name="EOB Inpatient Institutional - Example 1"/>
@@ -109,35 +109,35 @@
 <artifact deprecated="true" id="CodeSystem/CMSHIPPSCodes" key="CodeSystem-CMSHIPPSCodes" name="Health Insurance Prospective Payment System (HIPPS)"/>
 <artifact deprecated="true" id="CodeSystem/CMSHCPCSCodes" key="CodeSystem-CMSHCPCSCodes" name="Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes"/>
 <artifact deprecated="true" id="CodeSystem/ICD10PCS" key="CodeSystem-ICD10PCS" name="ICD-10 Procedure Coding System"/>
-<artifact id="ValueSet/CMSMS3MAPAPRDRG" key="ValueSet-CMSMS3MAPAPRDRG" name="MS-DRGs - AP-DRGs - APR-DRGs"/>
+<artifact id="ValueSet/CMSMS3MAPAPRDRG" key="ValueSet-CMSMS3MAPAPRDRG" name="MS-DRGs - AP-DRGs - APR-DRGs Value Set"/>
 <artifact deprecated="true" id="CodeSystem/CMSMSDRG" key="CodeSystem-CMSMSDRG" name="Medicare Severity Diagnosis Related Groups (MS-DRGs)"/>
 <artifact deprecated="true" id="ValueSet/NCPDPBrandGenericCode" key="ValueSet-NCPDPBrandGenericCode" name="NCPDP Brand Generic Code"/>
-<artifact id="ValueSet/NCPDPBrandGenericIndicator" key="ValueSet-NCPDPBrandGenericIndicator" name="NCPDP Brand Generic Indicator"/>
 <artifact deprecated="true" id="CodeSystem/NCPDPBrandGenericIndicator" key="CodeSystem-NCPDPBrandGenericIndicator" name="NCPDP Brand Generic Indicator CS"/>
-<artifact id="ValueSet/NCPDPCompoundCode" key="ValueSet-NCPDPCompoundCode" name="NCPDP Compound Code"/>
+<artifact id="ValueSet/NCPDPBrandGenericIndicator" key="ValueSet-NCPDPBrandGenericIndicator" name="NCPDP Brand Generic Indicator Value Set"/>
 <artifact deprecated="true" id="CodeSystem/NCPDPCompoundCode" key="CodeSystem-NCPDPCompoundCode" name="NCPDP Compound Code"/>
-<artifact id="ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode" key="ValueSet-NCPDPDispensedAsWrittenOrProductSelectionCode" name="NCPDP Dispense As Written (DAW)/Product Selection Code"/>
+<artifact id="ValueSet/NCPDPCompoundCode" key="ValueSet-NCPDPCompoundCode" name="NCPDP Compound Code Value Set"/>
 <artifact deprecated="true" id="CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode" key="CodeSystem-NCPDPDispensedAsWrittenOrProductSelectionCode" name="NCPDP Dispense As Written (DAW)/Product Selection Code CS"/>
-<artifact id="ValueSet/NCPDPPrescriptionOriginCode" key="ValueSet-NCPDPPrescriptionOriginCode" name="NCPDP Prescription Origin Code"/>
+<artifact id="ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode" key="ValueSet-NCPDPDispensedAsWrittenOrProductSelectionCode" name="NCPDP Dispense As Written (DAW)/Product Selection Code Value Set"/>
 <artifact deprecated="true" id="CodeSystem/NCPDPPrescriptionOriginCode" key="CodeSystem-NCPDPPrescriptionOriginCode" name="NCPDP Prescription Origin Code CS"/>
-<artifact id="ValueSet/NCPDPRejectCode" key="ValueSet-NCPDPRejectCode" name="NCPDP Reject Code"/>
+<artifact id="ValueSet/NCPDPPrescriptionOriginCode" key="ValueSet-NCPDPPrescriptionOriginCode" name="NCPDP Prescription Origin Code Value Set"/>
 <artifact deprecated="true" id="CodeSystem/NCPDPRejectCode" key="CodeSystem-NCPDPRejectCode" name="NCPDP Reject Code CS"/>
-<artifact id="ValueSet/FDANDCOrCompound" key="ValueSet-FDANDCOrCompound" name="NDC or Compound"/>
-<artifact id="ValueSet/AHANUBCPatientDischargeStatus" key="ValueSet-AHANUBCPatientDischargeStatus" name="NUBC Patient Discharge Status Codes"/>
+<artifact id="ValueSet/NCPDPRejectCode" key="ValueSet-NCPDPRejectCode" name="NCPDP Reject Code Value Set"/>
+<artifact id="ValueSet/FDANDCOrCompound" key="ValueSet-FDANDCOrCompound" name="NDC or Compound Value Set"/>
 <artifact deprecated="true" id="CodeSystem/AHANUBCPatientDischargeStatus" key="CodeSystem-AHANUBCPatientDischargeStatus" name="NUBC Patient Discharge Status Codes CS"/>
-<artifact id="ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit" key="ValueSet-AHANUBCPointOfOriginForAdmissionOrVisit" name="NUBC Point Of Origin"/>
+<artifact id="ValueSet/AHANUBCPatientDischargeStatus" key="ValueSet-AHANUBCPatientDischargeStatus" name="NUBC Patient Discharge Status Codes Value Set"/>
 <artifact deprecated="true" id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisit" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisit" name="NUBC Point Of Origin CS"/>
+<artifact id="ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit" key="ValueSet-AHANUBCPointOfOriginForAdmissionOrVisit" name="NUBC Point Of Origin Value Set"/>
 <artifact deprecated="true" id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNewborn" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNewborn" name="NUBC Point Of Origin for Newborn"/>
 <artifact deprecated="true" id="CodeSystem/AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn" key="CodeSystem-AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn" name="NUBC Point Of Origin for Non-newborn"/>
-<artifact id="ValueSet/AHANUBCPresentOnAdmission" key="ValueSet-AHANUBCPresentOnAdmission" name="NUBC Present On Admission Indicator Codes"/>
-<artifact id="CodeSystem/AHANUBCPresentOnAdmission" key="CodeSystem-AHANUBCPresentOnAdmission" name="NUBC Present On Admission Indicator Codes"/>
-<artifact id="ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit" key="ValueSet-AHANUBCPriorityTypeOfAdmissionOrVisit" name="NUBC Priority (Type) of Admission or Visit"/>
+<artifact id="CodeSystem/AHANUBCPresentOnAdmission" key="CodeSystem-AHANUBCPresentOnAdmission" name="NUBC Present On Admission Indicator Code System"/>
+<artifact id="ValueSet/AHANUBCPresentOnAdmission" key="ValueSet-AHANUBCPresentOnAdmission" name="NUBC Present On Admission Indicator Codes Value Set"/>
 <artifact deprecated="true" id="CodeSystem/AHANUBCPriorityTypeOfAdmissionOrVisit" key="CodeSystem-AHANUBCPriorityTypeOfAdmissionOrVisit" name="NUBC Priority (Type) of Admission or Visit CS"/>
-<artifact id="ValueSet/AHANUBCRevenueCodes" key="ValueSet-AHANUBCRevenueCodes" name="NUBC Revenue Codes"/>
+<artifact id="ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit" key="ValueSet-AHANUBCPriorityTypeOfAdmissionOrVisit" name="NUBC Priority (Type) of Admission or Visit Value Set"/>
 <artifact deprecated="true" id="CodeSystem/AHANUBCRevenueCodes" key="CodeSystem-AHANUBCRevenueCodes" name="NUBC Revenue Codes CS"/>
+<artifact id="ValueSet/AHANUBCRevenueCodes" key="ValueSet-AHANUBCRevenueCodes" name="NUBC Revenue Codes Value Set"/>
 <artifact deprecated="true" id="CodeSystem/AHANUBCTypeOfBill" key="CodeSystem-AHANUBCTypeOfBill" name="NUBC Type Of Bill Codes CS"/>
-<artifact id="ValueSet/AHANUBCTypeOfBill" key="ValueSet-AHANUBCTypeOfBill" name="NUBC Type of Bill Codes"/>
-<artifact id="ValueSet/FDANationalDrugCode" key="ValueSet-FDANationalDrugCode" name="National Drug Code (NDC)"/>
+<artifact id="ValueSet/AHANUBCTypeOfBill" key="ValueSet-AHANUBCTypeOfBill" name="NUBC Type of Bill Codes Value Set"/>
+<artifact id="ValueSet/FDANationalDrugCode" key="ValueSet-FDANationalDrugCode" name="National Drug Code (NDC) Value Set"/>
 <artifact id="ValueSet/OralBodySite" key="ValueSet-OralBodySite" name="Oral Body Site Value Set"/>
 <artifact deprecated="true" id="Organization/OrganizationDentalPayer1" key="Organization-OrganizationDentalPayer1" name="OrganizationDentalPayer1"/>
 <artifact deprecated="true" id="Organization/OrganizationProvider1" key="Organization-OrganizationProvider1" name="OrganizationProvider1"/>
@@ -151,10 +151,10 @@
 <artifact id="Practitioner/Practitioner2" key="Practitioner-PractitionerEx2" name="Practitioner Example 2"/>
 <artifact id="Practitioner/Practitioner3" key="Practitioner-PractitionerEx3" name="Practitioner Example 3"/>
 <artifact id="Practitioner/Practitioner4" key="Practitioner-Practitioner4" name="Practitioner4"/>
-<artifact id="ValueSet/AMACPTCMSHCPCSProcedureCodes" key="ValueSet-AMACPTCMSHCPCSProcedureCodes" name="Procedure Codes - AMA CPT - CMS HCPCS"/>
-<artifact id="ValueSet/C4BBEOBInstitutionalProcedureCodes" key="ValueSet-C4BBEOBInstitutionalProcedureCodes" name="Procedure Codes - AMA CPT - CMS HCPCS - CMS HIPPS"/>
-<artifact id="ValueSet/CMSICD910PCSProcedureCodes" key="ValueSet-CMSICD910PCSProcedureCodes" name="Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Coding System"/>
-<artifact id="ValueSet/AMACPTCMSHCPCSModifiers" key="ValueSet-AMACPTCMSHCPCSModifiers" name="Procedure Modifier Codes - AMA CPT - CMS HCPCS"/>
+<artifact id="ValueSet/C4BBEOBInstitutionalProcedureCodes" key="ValueSet-C4BBEOBInstitutionalProcedureCodes" name="Procedure Codes - AMA CPT - CMS HCPCS - CMS HIPPS Value Set"/>
+<artifact id="ValueSet/AMACPTCMSHCPCSProcedureCodes" key="ValueSet-AMACPTCMSHCPCSProcedureCodes" name="Procedure Codes - AMA CPT - CMS HCPCS Value Set"/>
+<artifact id="ValueSet/CMSICD910PCSProcedureCodes" key="ValueSet-CMSICD910PCSProcedureCodes" name="Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Value Set"/>
+<artifact id="ValueSet/AMACPTCMSHCPCSModifiers" key="ValueSet-AMACPTCMSHCPCSModifiers" name="Procedure Modifier Codes - AMA CPT - CMS HCPCS Value Set"/>
 <artifact deprecated="true" id="Organization/ProviderOrganizationEx2" key="Organization-ProviderOrganizationEx2" name="Provider Organizaiton Example 2"/>
 <artifact id="Organization/ProviderOrganization1" key="Organization-ProviderOrganizationEx1" name="Provider Organization 1"/>
 <artifact id="Organization/ProviderOrganization2" key="Organization-ProviderOrganization2" name="Provider Organization 2"/>
@@ -164,11 +164,11 @@
 <artifact id="Organization/ProviderOrganization6" key="Organization-ProviderOrganizationEx6" name="Provider Organization 6"/>
 <artifact id="Organization/ProviderTransportationOrganization1" key="Organization-ProviderTransportationOrganization1" name="Provider Transportation Organization Example 1"/>
 <artifact id="RelatedPerson/RelatedPerson1" key="RelatedPerson-RelatedPerson1" name="Related Person 1"/>
-<artifact id="ValueSet/C4BBSurfaceCodes" key="ValueSet-C4BBSurfaceCodes" name="US Surface Codes Set"/>
+<artifact id="ValueSet/C4BBSurfaceCodes" key="ValueSet-C4BBSurfaceCodes" name="US Surface Codes Set Value Set"/>
 <artifact id="CodeSystem/C4BBSurfaceCodes" key="CodeSystem-C4BBSurfaceCodes" name="US Surface Codes System"/>
-<artifact id="CodeSystem/X12AmbulanceTransportReasonCodes" key="CodeSystem-X12AmbulanceTransportReasonCodes" name="X12 Ambulance Transport Reason Codes"/>
+<artifact id="CodeSystem/X12AmbulanceTransportReasonCodes" key="CodeSystem-X12AmbulanceTransportReasonCodes" name="X12 Ambulance Transport Reason Codes Code System"/>
 <artifact deprecated="true" id="CodeSystem/X12ClaimAdjustmentReasonCodes" key="CodeSystem-X12ClaimAdjustmentReasonCodes" name="X12 Claim Adjustment Reason Codes"/>
-<artifact id="ValueSet/X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" key="ValueSet-X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" name="X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes"/>
+<artifact id="ValueSet/X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" key="ValueSet-X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes" name="X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes Value Set"/>
 <artifact deprecated="true" id="CodeSystem/CMSRemittanceAdviceRemarkCodes" key="CodeSystem-CMSRemittanceAdviceRemarkCodes" name="X12 Remittance Advice Remark Codes"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>

@@ -3,8 +3,8 @@
 # Approved US Core Variance for RelatedPerson profile (RelatedPerson profile not in US Core 3.1.1) - https://jira.hl7.org/browse/FHIR-38103
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-RelatedPerson').baseDefinition: US FHIR Usage rules require that all profiles on RelatedPerson derive from the core US profile
 
-# JIRA Artifacts difference - Due to IG artifacts named the same (and need to be renamed for Jira) and others that were renamed, but key the same.
-WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
+# US Core Coverage is draft and not published
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage').baseDefinition: US FHIR Usage rules require that all profiles on Coverage derive from the core US profile
 
 
 # INFORMATION: The following code systems are external and not supported by terminology server, and cannot be validated in examples
@@ -82,7 +82,7 @@ WARNING: ValueSet.where(id = 'C4BBAmbulanceTransportReasonCodes'): Error from se
 # Invalid NDC display warnings (extra spaces in display)
 WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.item[0].productOrService: The display "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)" is not a valid display for the code {http://hl7.org/fhir/sid/ndc}0777-3105-02 - should be one of ['Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02)  (package)'] (from http://tx.fhir.org/r4)
 
-# Warning is off base -- all entries for all repeats of each identifier slice should be constrained as specified
+# Warning -- all entries for all repeats of each identifier slice should be constrained as specified - This is by design
 INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[21].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[22].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[20].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
