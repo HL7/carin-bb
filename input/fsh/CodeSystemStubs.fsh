@@ -33,7 +33,7 @@ Link to information about the code system - including how to obtain the content:
 * insert NCPDPCopyrightNotice
 */
 ValueSet: NCPDPRejectCode
-Title: "NCPDP Reject Code"
+Title: "NCPDP Reject Code Value Set"
 Description: "Code indicating the error encountered. Contains exception definitions for use when transaction processing cannot be completed. (NCPDP ECL 511-FB).
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
@@ -56,7 +56,7 @@ Link to information about the code system - including how to obtain the content:
 * insert NCPDPCopyrightNotice
 */
 ValueSet: NCPDPDispensedAsWrittenOrProductSelectionCode
-Title: "NCPDP Dispense As Written (DAW)/Product Selection Code"
+Title: "NCPDP Dispense As Written (DAW)/Product Selection Code Value Set"
 Description: "Code indicating whether or not the prescriber's instructions regarding generic substitution were followed. (NCPDP ECL 408-D8)
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
@@ -79,7 +79,7 @@ Link to information about the code system - including how to obtain the content:
 */
 
 ValueSet: NCPDPBrandGenericIndicator
-Title: "NCPDP Brand Generic Indicator"
+Title: "NCPDP Brand Generic Indicator Value Set"
 Description: "Denotes brand or generic drug dispensed. (NCPDP ECL 686)
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
@@ -102,7 +102,7 @@ Link to information about the code system - including how to obtain the content:
 * insert NCPDPCopyrightNotice
 */
 ValueSet: NCPDPPrescriptionOriginCode
-Title: "NCPDP Prescription Origin Code"
+Title: "NCPDP Prescription Origin Code Value Set"
 Description: "Code indicating the origin of the prescription. Indicates whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy. (NCPDP ECL 419-DJ)
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
@@ -125,7 +125,7 @@ Link to information about the code system - including how to obtain the content:
 * insert NCPDPCopyrightNotice
 */
 ValueSet: NCPDPCompoundCode
-Title: "NCPDP Compound Code"
+Title: "NCPDP Compound Code Value Set"
 Description: "Code indicating whether or not the prescription is a compound. (NCPDP ECL 406-D6)
 
 Link to information about the code system - including how to obtain the content: [https://standards.ncpdp.org/Access-to-Standards.aspx](https://standards.ncpdp.org/Access-to-Standards.aspx)"
@@ -138,7 +138,7 @@ Link to information about the code system - including how to obtain the content:
 
 
 ValueSet: FDANationalDrugCode
-Title: "National Drug Code (NDC)"
+Title: "National Drug Code (NDC) Value Set"
 Description: "The Drug Listing Act of 1972 requires registered drug establishments to provide the Food and Drug Administration (FDA) with a current list of all drugs manufactured, prepared, propagated, compounded, or processed by it for commercial distribution.  (See Section 510 of the Federal Food, Drug, and Cosmetic Act (Act) (21 U.S.C. § 360)). Drug products are identified and reported using a unique, three-segment number, called the National Drug Code (NDC), which serves as a universal product identifier for drugs. FDA publishes the listed NDC numbers and the information submitted as part of the listing information in the NDC Directory which is updated daily.
 
 The information submitted as part of the listing process, the NDC number, and the NDC Directory are used in the implementation and enforcement of the Act.
@@ -159,7 +159,7 @@ Users should note a few important items
 * ^experimental = false
 
 ValueSet: FDANDCOrCompound
-Title: "NDC or Compound"
+Title: "NDC or Compound Value Set"
 Description: "Values will be the NDC Codes when the Compound Code value is 0 or 1.  When the Compound Code value = 2, the value will be the literal, ‘compound’"
 * codes from system $FDANationalDrugCode
 * include C4BBCompoundLiteral#compound
@@ -192,7 +192,7 @@ To obtain the underlying code systems, please see information [here](https://www
 */
 
 ValueSet: AHANUBCPatientDischargeStatus
-Title: "NUBC Patient Discharge Status Codes"
+Title: "NUBC Patient Discharge Status Codes Value Set"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
 
 This code system consists of the following:
@@ -207,7 +207,7 @@ To obtain the underlying code systems, please see information [here](https://www
 * ^experimental = false
 
 CodeSystem: AHANUBCPresentOnAdmission
-Title: "NUBC Present On Admission Indicator Codes"
+Title: "NUBC Present On Admission Indicator Code System"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
 
 This code system consists of the following:
@@ -225,7 +225,7 @@ To obtain the underlying code systems, please see information [here](https://www
 * ^experimental = false
 
 ValueSet: AHANUBCPresentOnAdmission
-Title: "NUBC Present On Admission Indicator Codes"
+Title: "NUBC Present On Admission Indicator Codes Value Set"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
 
 This code system consists of the following:
@@ -258,7 +258,7 @@ To obtain the underlying code systems, please see information [here](https://www
 */
 
 ValueSet: AHANUBCRevenueCodes
-Title: "NUBC Revenue Codes"
+Title: "NUBC Revenue Codes Value Set"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
 
 This code system consists of the following:
@@ -295,7 +295,7 @@ To obtain the underlying code systems, please see information [here](https://www
 */
 
 ValueSet: AHANUBCTypeOfBill
-Title: "NUBC Type of Bill Codes"
+Title: "NUBC Type of Bill Codes Value Set"
 Description: """The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
 
 This code system consists of the following:
@@ -350,7 +350,7 @@ To obtain the underlying code systems, please see information [here](https://www
 * insert AHANUBCCopyrightNotice
 */
 ValueSet: AHANUBCPointOfOriginForAdmissionOrVisit
-Title: "NUBC Point Of Origin"
+Title: "NUBC Point Of Origin Value Set"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
 
 This code system consists of the following:
@@ -387,7 +387,7 @@ To obtain the underlying code systems, please see information [here](https://www
 */
 
 ValueSet: AHANUBCPriorityTypeOfAdmissionOrVisit
-Title: "NUBC Priority (Type) of Admission or Visit"
+Title: "NUBC Priority (Type) of Admission or Visit Value Set"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
 
 This code system consists of the following:
@@ -497,7 +497,7 @@ group information may also vary by payment systems."
 
 ValueSet: AMACPTCMSHCPCSProcedureCodes
 // 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
-Title: "Procedure Codes - AMA CPT - CMS HCPCS"
+Title: "Procedure Codes - AMA CPT - CMS HCPCS Value Set"
 Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition.
 
 The target set for this value set are the procedure codes from the CPT and HCPCS files.
@@ -547,7 +547,7 @@ See information on the use of HCPCS Level I (proprietary and owned by American M
 // Approach adding a special valueset for inpatient
 ValueSet: C4BBEOBInstitutionalProcedureCodes
 // 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
-Title: "Procedure Codes - AMA CPT - CMS HCPCS - CMS HIPPS"
+Title: "Procedure Codes - AMA CPT - CMS HCPCS - CMS HIPPS Value Set"
 Description: "The Value Set is a combination of three Code Systems: CPT (HCPCS I), HCPCS II procedure codes, and HIPPS rate codes. They are submitted by providers to payers to convey the specific procedure performed. Procedure Codes leverage US Core Procedure Codes composition.
 
 The target set for this value set are the procedure codes from the CPT and HCPCS files and the rate codes from the HIPPS files.
@@ -614,7 +614,7 @@ CMS maintains HIPPS. There are no known constraints on the use of HIPPS. See mor
 
 ValueSet:  AMACPTCMSHCPCSModifiers
 // 20210215 CAS: FHIR-31074 - Please shorten the titles for the IP, OP, and Professional Procedure code and modifiers ValueSets
-Title: "Procedure Modifier Codes - AMA CPT - CMS HCPCS"
+Title: "Procedure Modifier Codes - AMA CPT - CMS HCPCS Value Set"
 Description: "The Value Set is a combination of two Code Systems: CPT (HCPCS I) and HCPCS II procedure code modifiers. Modifiers help further describe a procedure code without changing its definition.
 
 The target set for this value set are the procedure code modifiers from the CPT and HCPCS files.
@@ -675,7 +675,7 @@ To obtain the underlying code systems, please see information [here](https://www
 
 
 ValueSet: ADADentalProcedureCode
-Title: "ADA Code on Dental Procedures and Nomenclature"
+Title: "ADA Code on Dental Procedures and Nomenclature Value Set"
 Description: "The purpose of the CDT Code is to achieve uniformity, consistency and specificity in accurately documenting dental treatment. One use of the CDT Code is to provide for the efficient processing of dental claims, and another is to populate an Electronic Health Record.
 
 On August 17, 2000 the CDT Code was named as a HIPAA standard code set. Any claim submitted on a HIPAA standard electronic dental claim must use dental procedure codes from the version of the CDT Code in effect on the date of service. The CDT Code is also used on paper dental claims, and the ADA's paper claim form data content reflects the HIPAA electronic standard.
@@ -750,7 +750,7 @@ To license APR DRG from 3M, see request form [here](https://engage.3m.com/PPS_Gr
 */
 
 ValueSet: CMSMS3MAPAPRDRG
-Title: "MS-DRGs - AP-DRGs - APR-DRGs"
+Title: "MS-DRGs - AP-DRGs - APR-DRGs Value Set"
 Description: """This value set defines three sets of DRGs, MS-DRGs (Medicare Severity Diagnosis Related Groups), APR-DRGs (All Patient Refined Diagnosis Related Groups) and AP-DRGs (All Patient Diagnosis Related Groups). Identifying a DRG code requires a version.
 
 **MS-DRGs**
@@ -815,7 +815,7 @@ Current codes can be obtained [here](https://www.cms.gov/Medicare/Coding/place-o
 */
 
 ValueSet: CMSPlaceofServiceCodes
-Title: "CMS Place of Service Codes (POS)"
+Title: "CMS Place of Service Codes (POS) Value Set"
 Description: "Place of Service Codes are two-digit codes placed on health care professional claims to indicate the setting in which a service was provided. The Centers for Medicare & Medicaid Services (CMS) maintain POS codes used throughout the health care industry.
 
 This code set is required for use in the implementation guide adopted as the national standard for electronic transmission of professional health care claims under the provisions of the Health Insurance Portability and Accountability Act of 1996 (HIPAA). HIPAA directed the Secretary of HHS to adopt national standards for electronic transactions. These standard transactions require all health plans and providers to use standard code sets to populate data elements in each transaction. The Transaction and Code Set Rule adopted the ASC X12N-837 Health Care Claim: Professional, volumes 1 and 2, as the standard for electronic submission of professional claims. This standard names the POS code set currently maintained by CMS as the code set to be used for describing sites of service in such claims. POS information is often needed to determine the acceptability of direct billing of Medicare, Medicaid and private insurance services provided by a given provider.
@@ -903,7 +903,7 @@ To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.c
 */
 
 ValueSet: X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
-Title: "X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes"
+Title: "X12 Claim Adjustment Reason Codes - Remittance Advice Remark Codes Value Set"
 Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
 
 The X12 Claim Adjustment Reason Codes describe why a claim or service line was paid differently than it was billed. These codes are listed within an X12 implementation guide (TR3) and maintained by X12.
@@ -946,7 +946,7 @@ The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Re
 
 //  *** @ Saul - No change to CodeSystem CARCs ; RARCs are new
 CodeSystem: X12AmbulanceTransportReasonCodes
-Title: "X12 Ambulance Transport Reason Codes"
+Title: "X12 Ambulance Transport Reason Codes Code System"
 Description: "X12, chartered by the American National Standards Institute for more than 40 years, develops and maintains EDI standards and XML schemas which drive business processes globally. X12's diverse membership includes technologists and business process experts in health care, insurance, transportation, finance, government, supply chain and other industries.
 
 The X12 Ambulance Transport Reason Codes indicate the reason for ambulance transport. These codes are listed within an X12 implementation guide (TR3) and maintained by X12.
@@ -981,7 +981,7 @@ To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.c
 
 
 ValueSet: C4BBAmbulanceTransportReasonCodes
-Title: "C4BB Ambulance Transport Reasons"
+Title: "C4BB Ambulance Transport Reasons Value Set"
 Description: "Transportation Services Ambulatory Transport Reason Codes" 
 * codes from system X12AmbulanceTransportReasonCodes
 * ^copyright = "This Valueset is not copyrighted."
@@ -1009,7 +1009,7 @@ RuleSet: ICD910CMCopyrightNotice
 
 
 ValueSet: CDCICD910CMDiagnosisCodes
-Title: "Diagnosis Codes - International Classification of Diseases, Clinical Modification (ICD-9-CM, ICD-10-CM)"
+Title: "Diagnosis Codes - International Classification of Diseases, Clinical Modification (ICD-9-CM, ICD-10-CM) Value Set"
 Description: "The Value Set is a combination of values from volume 1 and volume 2 from the Code System International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) and values in the Code System International Classification of Diseases, Tenth Revision, Clinical Modification (ICD-10-CM)
 
 The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States.
@@ -1039,7 +1039,7 @@ Most files are provided in compressed zip format for ease in downloading. These 
 * ^experimental = false
 
 ValueSet: CMSICD910PCSProcedureCodes
-Title: "Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Coding System"
+Title: "Procedure Codes - International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) - ICD-10 Procedure Value Set"
 Description: "The Value Set is a combination of values from volume 3 from the Code System International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) and values in the Code System ICD-10 Procedure Coding System.
 
 The International Classification of Diseases, Ninth Revision, Clinical Modification (ICD-9-CM) is based on the World Health Organization’s Ninth Revision, International Classification of Diseases (ICD-9). ICD-9-CM was the official system of assigning codes to diagnoses and procedures associated with hospital utilization in the United States.

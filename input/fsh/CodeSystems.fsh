@@ -1,7 +1,7 @@
 // Contains Codesystems Defined WITHIN this IG
 // CodeSystemStubs.fsh contains stubs for external codesystems.
 CodeSystem: C4BBAdjudication
-Title: "C4BB Adjudication"
+Title: "C4BB Adjudication Code System"
 Description: "Describes the various amount fields used when payers receive and adjudicate a claim.  It complements the values defined in http://terminology.hl7.org/CodeSystem/adjudication.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
@@ -27,7 +27,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 
 
 CodeSystem: C4BBPayeeType
-Title: "C4BB Payee Type"
+Title: "C4BB Payee Type Code System"
 Description: "Indicates that a payee type may be a beneficiary.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
@@ -38,7 +38,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBClaimDiagnosisType
-Title: "C4BB Claim Diagnosis Type"
+Title: "C4BB Claim Diagnosis Type Code System"
 Description: "Indicates if the institutional diagnosis is admitting, principal, secondary, other, an external cause of injury or a patient reason for visit.  Complements http://terminology.hl7.org/CodeSystem/ex-diagnosistype.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
@@ -54,7 +54,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBClaimCareTeamRole
-Title: "C4BB Claim Care Team Role"
+Title: "C4BB Claim Care Team Role Code System"
 Description: "Describes functional roles of the care team members.  Complements http://terminology.hl7.org/CodeSystem/claimcareteamrole.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
@@ -75,7 +75,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 
 
 CodeSystem: C4BBCompoundLiteral
-Title: "C4BB Compound Literal"
+Title: "C4BB Compound Literal Code System"
 Description: "CodeSystem for a Literal 'compound' value.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
@@ -87,7 +87,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 
 // ******** @Saul - updated **********
 CodeSystem: C4BBIdentifierType
-Title: "C4BB Identifier Type"
+Title: "C4BB Identifier Type Code System"
 Description: "Identifier Type codes that extend those defined in http://terminology.hl7.org/CodeSystem/v2-0203 to define the type of identifier payers and providers assign to claims and patients.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
@@ -107,7 +107,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBPayerAdjudicationStatus
-Title: "C4BB Payer Adjudication Status"
+Title: "C4BB Payer Adjudication Status Code System"
 Description: "Describes the various status fields used when payers adjudicate a claim, such as whether the claim was adjudicated in or out of network, if the provider was in or not in network for the service.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
@@ -123,7 +123,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBRelatedClaimRelationshipCodes
-Title: "C4BB Related Claim Relationship Codes"
+Title: "C4BB Related Claim Relationship Code System"
 Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
@@ -133,7 +133,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBSupportingInfoType
-Title: "C4BB Supporting Info Type"
+Title: "C4BB Supporting Info Type Code System"
 Description: "Claim Information Category - Used as the discriminator for supportingInfo.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
@@ -171,7 +171,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 
 
 CodeSystem: C4BBAdjudicationDiscriminator
-Title: "C4BB Adjudication Discriminator"
+Title: "C4BB Adjudication Discriminator Code System"
 Description: "Used as the discriminator for the data elements in adjudication and item.adjudication.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
@@ -189,7 +189,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBClaimProcedureType
-Title: "C4BB Claim Procedure Type"
+Title: "C4BB Claim Procedure Type Code System"
 Description: "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."
@@ -201,7 +201,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^copyright = "This CodeSystem is not copyrighted."
 
 CodeSystem: C4BBInstitutionalClaimSubType
-Title: "C4BB Institutional Claim SubType"
+Title: "C4BB Institutional Claim SubType Code System"
 Description: "Indicates if institutional ExplanationOfBenefit is inpatient or outpatient.
 
 This is a code system defined locally by the CARIN BlueButton IG. As this IG matures, it is expected that this CodeSystem will be migrated to THO (terminology.hl7.org). The current CodeSystem url should be considered temporary and subject to change in a future version."

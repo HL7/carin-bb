@@ -58,7 +58,7 @@ menu:
     Conformance Requirements: Conformance_Requirements.html
     Common Payer Consumer Data Set (CPCDS): Common_Payer_Consumer_Data_Set.html
     General Guidance: General_Guidance.html
-    Terminology Licensure: Terminology.html
+    Terminology Licensure: Terminology_Licensure.html
   FHIR Artifacts:
     Profiles: artifacts.html#3
     Search Parameters: searchparameters.html
@@ -85,7 +85,7 @@ pages:
     title: General Guidance
   Common_Payer_Consumer_Data_Set.md:
     title: Common Payer Consumer Data Set (CPCDS)
-  Terminology.md:
+  Terminology_Licensure.md:
     title: Terminology Licensure
   artifacts.html:
     title: Artifacts Summary
