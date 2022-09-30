@@ -13,12 +13,12 @@ Alias: $TypeOfBill = https://www.nubc.org/CodeSystem/TypeOfBill
 Alias: $PointOfOrigin = https://www.nubc.org/CodeSystem/PointOfOrigin
 Alias: $PriorityTypeOfAdmitOrVisit = https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit
 Alias: $PatDischargeStatus = https://www.nubc.org/CodeSystem/PatDischargeStatus
-Alias: $AHANUBCPatientDischargeStatus = http://terminology.hl7.org/CodeSystem/AHANUBCPatientDischargeStatus
-Alias: $AHANUBCPointOfOriginForAdmissionOrVisitNewborn = http://terminology.hl7.org/CodeSystem/AHANUBCPointOfOriginNewborn
-Alias: $AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn = http://terminology.hl7.org/CodeSystem/AHANUBCPointOfOriginNonnewborn
-Alias: $AHANUBCPriorityTypeOfAdmissionOrVisit = http://terminology.hl7.org/CodeSystem/AHANUBCPriorityTypeOfAdmitOrVisit
-Alias: $AHANUBCRevenueCodes = http://terminology.hl7.org/CodeSystem/AHANUBCRevenueCodes
-Alias: $AHANUBCTypeOfBill = http://terminology.hl7.org/CodeSystem/AHANUBCTypeOfBill
+Alias: $AHANUBCPatientDischargeStatus = https://www.nubc.org/CodeSystem/PatDischargeStatus
+Alias: $AHANUBCPointOfOriginForAdmissionOrVisitNewborn = https://www.nubc.org/CodeSystem/PointOfOriginNewborn
+Alias: $AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn = https://www.nubc.org/CodeSystem/PointOfOrigin
+Alias: $AHANUBCPriorityTypeOfAdmissionOrVisit = https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit
+Alias: $AHANUBCRevenueCodes = https://www.nubc.org/CodeSystem/RevenueCodes
+Alias: $AHANUBCTypeOfBill = https://www.nubc.org/CodeSystem/TypeOfBill
 Alias: $icd-10-cm = http://hl7.org/fhir/sid/icd-10-cm
 Alias: $ex-diagnosistype = http://terminology.hl7.org/CodeSystem/ex-diagnosistype
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
@@ -26,7 +26,7 @@ Alias: $C4BBAdjudicationDiscriminator = http://hl7.org/fhir/us/carin-bb/CodeSyst
 Alias: $C4BBAdjudication = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudication
 Alias: $adjudication = http://terminology.hl7.org/CodeSystem/adjudication
 Alias: $cdt = http://ada.org/cdt
-Alias: $ADADentalProcedureCode = https://terminology.hl7.org/CodeSystem/CDT
+Alias: $ADADentalProcedureCode = http://www.ada.org/cdt
 Alias: $Place_of_Service_Code_Set = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set
 Alias: $ADAUniversalToothDesignationSystem = http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem
 Alias: $ADAAreaOralCavitySystem = http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem
@@ -102,8 +102,11 @@ Alias: $AHANUBCPresentOnAdmissionOID  = urn:oid:2.16.840.1.113883.6.301.11
 
 Alias: $X12CARCCS = https://x12.org/codes/claim-adjustment-reason-codes
 Alias: $CMSRARCCS = https://x12.org/codes/remittance-advice-remark-codes
-Alias: $CMSRemittanceAdviceRemarkCodes = http://terminology.hl7.org/CodeSystem/RARC
-Alias: $X12ClaimAdjustmentReasonCodes = http://terminology.hl7.org/CodeSystem/X12ClaimAdjustmentReasonCodes
+Alias: $CMSRemittanceAdviceRemarkCodes = https://x12.org/codes/remittance-advice-remark-codes
+
+
+Alias: $X12ClaimAdjustmentReasonCodes = https://x12.org/codes/claim-adjustment-reason-codes
+
 Alias: $X12AmbulanceTransReas = https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes
 
 
@@ -113,14 +116,12 @@ Alias: $ICD10PCS = http://www.cms.gov/Medicare/Coding/ICD10
 Alias: $ICD9PCS = http://www.cms.gov/Medicare/Coding/ICD9
 Alias: $CPT = http://www.ama-assn.org/go/cpt
 Alias: $HCPCS = https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets
-Alias: $CMSHCPCSCodes = http://terminology.hl7.org/CodeSystem/hcpcs-Level-II
-Alias: $CMSHIPPSCodes = http://terminology.hl7.org/CodeSystem/HIPPS
-//Alias:   $AMACPTMODIFIERS = http://www.ama-assn.org/go/cpt-modifiers
-//Alias:   $HCPCSMODIFIERS = http://www.cms.gov/hcpcs-level-II-modifiers
-Alias: $CMSMSDRG = http://terminology.hl7.org/CodeSystem/MSDRG
+Alias: $CMSHCPCSCodes = https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets
+Alias: $CMSHIPPSCodes = https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/ProspMedicareFeeSvcPmtGen/HIPPSCodes
+Alias: $CMSMSDRG = https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software
 Alias: $THREEMAPDRG = http://uri.hddaccess.com/cs/apdrg
 Alias: $THREEMAPRDRG = http://uri.hddaccess.com/cs/aprdrg
-Alias: $CMSPlaceofServiceCodes = http://terminology.hl7.org/CodeSystem/CMSPlaceofServiceCodes
+Alias: $CMSPlaceofServiceCodes = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set
 //Alias:   $CPTALLVS = http://hl7.org/fhir/ValueSet/cpt-all
 //Alias:   $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: $FDANationalDrugCode = http://hl7.org/fhir/sid/ndc
