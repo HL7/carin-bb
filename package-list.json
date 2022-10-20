@@ -41,7 +41,7 @@
         "status": "trial-use",
         "sequence": "STU 1",
         "fhirversion": "4.0.1",
-        "current": true
+        "current": false
       },
       {
         "version": "1.0.0",
@@ -51,7 +51,7 @@
         "status": "trial-use",
         "sequence": "STU 1",
         "fhirversion": "4.0.1",
-        "current": true
+        "current": false
       },
       {
         "version": "0.1.0",
