@@ -31,6 +31,7 @@ Code System URI 'http://www.ada.org/cdt' is unknown so the code cannot be valida
 Code System URI 'https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes' is unknown so the code cannot be validated
 
 
+
 Code System URI 'https://x12.org/codesystem.x12.org/5010/1317' is unknown so the code cannot be validated
 
 # WARNING: The following code systems are external and not supported by terminology server, and cannot be validated in examples
@@ -51,6 +52,7 @@ Code System URI 'https://x12.org/codesystem.x12.org/5010/1317' is unknown so the
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' is unknown so the code cannot be validated]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem' is unknown so the code cannot be validated]
 
+Unable to check whether code is in value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAmbulanceTransportReasonCodes: [Code System URI 'https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes' is unknown so the code cannot be validated]
 
 
 
