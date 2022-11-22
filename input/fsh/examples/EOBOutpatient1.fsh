@@ -33,7 +33,7 @@ Usage: #example
 * diagnosis[0].type = $C4BBClaimDiagnosisTypeCS#patientreasonforvisit
 * diagnosis[0].sequence = 1
 * insurance[0].focal = true
-* insurance[0].coverage[0] = Reference(Coverage1)
+* insurance[0].coverage[0] = Reference(Coverage3)
 * item[0].sequence = 1
 * item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
 * item[0].revenue = $AHANUBCRevenueCodes#Dummy

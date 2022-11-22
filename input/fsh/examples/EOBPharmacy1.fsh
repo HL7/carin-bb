@@ -23,7 +23,7 @@ Usage: #example
 * provider.display = "XXX Health Plan"
 * outcome = #partial
 * insurance[0].focal = true
-* insurance[0].coverage[0] = Reference(Coverage1)
+* insurance[0].coverage[0] = Reference(Coverage3)
 * adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
 * adjudication[billingnetworkstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 * adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus

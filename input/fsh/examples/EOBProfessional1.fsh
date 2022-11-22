@@ -27,7 +27,7 @@ Usage: #example
 * diagnosis[=].type = $HL7DiagnosisType#principal
 * diagnosis[=].sequence = 1
 * insurance[+].focal = true
-* insurance[=].coverage[+] = Reference(Coverage1)
+* insurance[=].coverage[+] = Reference(Coverage3)
 
 * adjudication[billingnetworkstatus].category = C4BBAdjudicationDiscriminator#billingnetworkstatus
 * adjudication[billingnetworkstatus].reason = C4BBPayerAdjudicationStatus#innetwork
