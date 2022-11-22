@@ -1,5 +1,11 @@
 == Suppressed Messages ==
 
+# Was approved for publication before the HTML fragment warnings were introduced. Grahame agreed these need not be fixed before publication.
+WARNING: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+
 # Approved US Core Variance for RelatedPerson profile (RelatedPerson profile not in US Core 3.1.1) - https://jira.hl7.org/browse/FHIR-38103
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-RelatedPerson').baseDefinition: US FHIR Usage rules require that all profiles on RelatedPerson derive from the core US profile
 
