@@ -3,6 +3,36 @@ Parent: C4BB-ExplanationOfBenefit
 Id: C4BB-ExplanationOfBenefit-Professional-NonClinician
 Title: "C4BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional and vision services. These services may be rendered in inpatient or outpatient, including office locations. The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
+
+* insert BaseExplanationOfBenefitProfessionalNonClinician
+
+// Financial specific constraints
+* item.adjudication[adjudicationamounttype].amount  MS
+* item.adjudication[adjudicationamounttype].amount 1..1
+
+* total 1..* MS
+* insert TotalSlicing
+* total.category from C4BBAdjudication  (extensible)
+* total contains
+   adjudicationamounttype 1..* MS
+
+* total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
+* total[adjudicationamounttype].category from C4BBAdjudication  (required)
+* total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+* total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
+
+Profile: C4BBExplanationOfBenefitProfessionalNonClinicianNonFinancial
+Parent: C4BB-ExplanationOfBenefit
+Id: C4BB-ExplanationOfBenefit-Professional-NonClinician-NonFinancial
+Title: "C4BB ExplanationOfBenefit Professional NonClinician - Non-Financial"
+Description: "This profile without financial data is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional and vision services. These services may be rendered in inpatient or outpatient, including office locations. The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
+
+* insert BaseExplanationOfBenefitProfessionalNonClinician
+* insert ExplanationOfBenefitNonFinancial
+
+// Complete Professional & NonClinician Institutional Constraints (Financial and NonFinancial)
+RuleSet: BaseExplanationOfBenefitProfessionalNonClinician
+
 // 20210322 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)
@@ -163,14 +193,18 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
+/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+*/
 
 * item.adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item.adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
 * item.adjudication[benefitpaymentstatus].reason 1..1 MS
 
+/* Moved financial elements to financial profile
+* total 1..* MS
 * insert TotalSlicing
 * total.category from C4BBAdjudication  (extensible)
 * total contains
@@ -178,7 +212,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 
 * total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
-
+*/
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
 
 * supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Rndering Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.
@@ -191,7 +225,9 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * item.adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+/* Moved financial elements to financial profile
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+*/
 * diagnosis ^comment = "Diagnosis codes describe an individual's disease or medical condition. (6, 7, 8, 21, 22, 23, 30)"
 * diagnosis.type ^comment = "Indicates if the professional and non-clinician diagnosis is principal or secondary (21, 22, 23)"
 * diagnosis.sequence ^comment =  "Diagnosis.sequence values do not necessarily indicate any order in which the diagnosis was reported or identified.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of diagnosis.type to identify primary, secondary, etc."
@@ -201,7 +237,9 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.location[x] ^comment = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46)"
 * careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, rendering, purchased service and referring care team. (95, 96, 99)"
 * item.serviced[x]  ^comment = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
+/* Moved financial elements to financial profile
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
+*/
 
 * insert EOBBaseProfileComments
 

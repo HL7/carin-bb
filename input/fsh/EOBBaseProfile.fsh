@@ -80,7 +80,7 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * payment.type MS
 * processNote MS
 * priority from http://hl7.org/fhir/ValueSet/process-priority  // Fix a bug in R4 EOB which points to a CodeSystem.   Eliminates an error on output
-* total 1..* MS
+
 
 * insert EOBBaseProfileComments
 
@@ -196,6 +196,37 @@ Severity: #error
 
 
 // Rulesets
+
+RuleSet: ExplanationOfBenefitNonFinancial
+* item.unitPrice 0..0
+* item.net 0..0
+* item.adjudication.amount 0..0
+* item.detail.unitPrice 0..0
+* item.detail.net 0..0
+//* item.detail.adjudication.amount 0..0
+* item.detail.subDetail.unitPrice 0..0
+* item.detail.subDetail.net 0..0
+//* item.detail.subDetail.adjudication.amount 0..0
+
+* addItem.unitPrice 0..0
+* addItem.net 0..0
+//* addItem.adjudication.amount 0..0
+* addItem.detail.unitPrice 0..0
+* addItem.detail.net 0..0
+//* addItem.detail.adjudication.amount 0..0
+* addItem.detail.subDetail.unitPrice 0..0
+* addItem.detail.subDetail.net 0..0
+//* addItem.detail.subDetail.adjudication.amount 0..0
+
+
+* total 0..0
+* payment.amount 0..0
+* benefitBalance.financial 0..0
+
+
+
+
+
 RuleSet: ItemAdjudicationInvariant
 * item obeys adjudication-has-amount-type-slice
 

@@ -5,6 +5,39 @@ Title: "C4BB ExplanationOfBenefit Inpatient Institutional"
 Description: "The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at an institution as part of an overnight stay.
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human
 Services."
+* insert BaseExplanationOfBenefitInpatientInstitutional
+
+// Financial specific constraints
+* item.adjudication[adjudicationamounttype].amount MS
+* item.adjudication[adjudicationamounttype].amount 1..1
+
+* insert TotalSlicing
+* total.category from C4BBTotalCategoryDiscriminator (extensible)
+* total contains
+   adjudicationamounttype 1..* MS
+
+* total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
+* total[adjudicationamounttype].category from C4BBAdjudication  (required)
+* total[adjudicationamounttype].amount MS
+* total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+* total.amount ^comment = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
+
+
+Profile: C4BBExplanationOfBenefitInpatientInstitutionalNonFinancial
+Parent: C4BB-ExplanationOfBenefit
+Id: C4BB-ExplanationOfBenefit-Inpatient-Institutional-NonFinancial
+Title: "C4BB ExplanationOfBenefit Inpatient Institutional - Non-Financial"
+Description: "The profile without financial data is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at an institution as part of an overnight stay.
+The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human
+Services."
+* insert BaseExplanationOfBenefitInpatientInstitutional
+* insert ExplanationOfBenefitNonFinancial
+
+
+
+// Complete Inpatitient Institutional Constraints (Financial and NonFinancial)
+RuleSet: BaseExplanationOfBenefitInpatientInstitutional
+
 // 20210322 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|1.2.0)
@@ -133,8 +166,10 @@ Services."
 
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
+/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype].amount MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+*/
 /* removed - FHIR-38063 - Update Invariants to support contracting and benefit payment status move to EOB.adjudication
 * insert AdjudicationInvariant
 */
@@ -167,6 +202,7 @@ Services."
 * adjudication[adjudicationamounttype] ^short = "Claim level adjudication type and amount"
 * adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
 * adjudication[adjudicationamounttype].amount 1..1
+/* Moved financial elements to financial profile
 * insert TotalSlicing
 * total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total contains
@@ -174,7 +210,9 @@ Services."
 
 * total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
+
 * total[adjudicationamounttype].amount MS
+*/
 //* total[adjudicationamounttype].amount 1..1
 * patient MS
 * insurer MS
@@ -236,8 +274,10 @@ Services."
 * adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+/* Moved financial elements to financial profile
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
+*/
 * diagnosis.onAdmission ^comment = "Used to capture whether a diagnosis was present at time of a patient's admission. (28)"
 * diagnosis ^comment = "Diagnosis codes describe an individual's disease or medical condition. (6, 7, 8, 21, 22, 23, 30)"
 * diagnosis.type ^comment =  "Indicates if the inpatient institutional diagnosis is admitting, principal, other or an external cause of injury. (21, 22, 23)"

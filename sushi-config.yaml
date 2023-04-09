@@ -97,6 +97,56 @@ pages:
     title: Downloads
   change_notes.md:
     title: Change Notes
+
+
+
+# Groups can control certain aspects of the IG generation.  The IG
+# documentation recommends that authors use the default groups that
+# are provided by the templating framework, but if authors want to
+# use their own instead, they can use the mechanism below.  This will
+# create IG.definition.grouping entries and associate the individual
+# resource entries with the corresponding groupIds.
+groups:
+  CapabilityStatements:
+    name: "Behavior: Capability Statements"
+    description: The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide. Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.
+    resources:
+    - CapabilityStatement/c4bb
+  AbstractProfiles:
+    name: "Structures: Abstract Profiles"
+    description: These are profiles on resources or data types that describe patterns used by other profiles, but cannot be instantiated directly. I.e. instances can conform to profiles based on these abstract profiles, but do not declare conformance to the abstract profiles themselves.
+    resources:
+    - StructureDefinition/C4BB-ExplanationOfBenefit
+  FinancialEOBProfiles:
+    name: "Structures: Financial ExplanationOfBenefit Profiles"
+    description: ExplanationOfBenefit profiles that include, and in some places, require, financial information. These are useful for sharing EoB information with patient's and their representatives where financial data needs to be included.
+    resources:
+    - StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
+    - StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
+    - StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
+    - StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy
+    - StructureDefinition/C4BB-ExplanationOfBenefit-Oral
+  NonFinancialEOBProfiles:
+    name: "Structures: Non-Financial ExplanationOfBenefit Profiles"
+    description: ExplanationOfBenefit profiles that do not include or allow financial information. These are useful for sharing EoB information with providers or payers where financial data is not appropriate.
+    resources:
+    - StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional-NonFinancial
+    - StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional-NonFinancial
+    - StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician-NonFinancial
+    - StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-NonFinancial
+    - StructureDefinition/C4BB-ExplanationOfBenefit-Oral-NonFinancial
+  SupportiveResourceProfiles:
+    name: "Structures: Supportive Resource Profiles"
+    description: These define constraints on other, non-ExplanationOfBenefit, FHIR resources for systems conforming to this implementation guide.
+    resources:
+    - StructureDefinition/C4BB-Patient
+    - StructureDefinition/C4BB-Coverage
+    - StructureDefinition/C4BB-Organization
+    - StructureDefinition/C4BB-Practitioner
+    - StructureDefinition/C4BB-RelatedPerson
+    
+    
+
 # ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
 # │  To control the package-list.json using this config, uncomment and set the "history" property. │
 # ╰───────────────────────────────────────────_────────────────────────────────────────────────────╯

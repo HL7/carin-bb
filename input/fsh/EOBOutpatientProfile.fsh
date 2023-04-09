@@ -4,6 +4,43 @@ Id: C4BB-ExplanationOfBenefit-Outpatient-Institutional
 Title: "C4BB ExplanationOfBenefit Outpatient Institutional"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at an institution that are not part of an overnight stay.
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services."
+
+* insert BaseExplanationOfBenefitOutpatientInstitutional
+
+// Financial specific constraints
+
+* adjudication[adjudicationamounttype].amount 1..1 MS
+
+* item.adjudication[adjudicationamounttype].amount  MS
+* item.adjudication[adjudicationamounttype].amount 1..1
+
+* total 1..* MS
+* insert TotalSlicing
+* total.category from C4BBTotalCategoryDiscriminator (extensible)
+* total contains
+   adjudicationamounttype 1..* MS
+
+* total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
+* total[adjudicationamounttype].category from C4BBAdjudication  (required)
+* total[adjudicationamounttype].amount MS
+
+* total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+* total.amount ^comment = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
+
+
+Profile: C4BBExplanationOfBenefitOutpatientInstitutionalNonFinancial
+Parent: C4BB-ExplanationOfBenefit
+Id: C4BB-ExplanationOfBenefit-Outpatient-Institutional-NonFinancial
+Title: "C4BB ExplanationOfBenefit Outpatient Institutional - Non-Financial"
+Description: "This profile without financial data is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at an institution that are not part of an overnight stay.
+The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services."
+* insert BaseExplanationOfBenefitOutpatientInstitutional
+* insert ExplanationOfBenefitNonFinancial
+
+
+
+// Complete Oupatitient Institutional Constraints (Financial and NonFinancial)
+RuleSet: BaseExplanationOfBenefitOutpatientInstitutional
 // 20210322 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|1.2.0)
@@ -108,8 +145,10 @@ The claims data is based on the institutional claim form UB-04, submission stand
 
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
+/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+*/
 /* removed - FHIR-38063 - Update Invariants to support contracting and benefit payment status move to EOB.adjudication
 * insert AdjudicationInvariant
 */
@@ -140,10 +179,15 @@ The claims data is based on the institutional claim form UB-04, submission stand
 
 * adjudication[adjudicationamounttype] ^short = "Claim level adjudication type and amount"
 * adjudication[adjudicationamounttype].category from C4BBAdjudication (required)
+/* Moved financial elements to financial profile
 * adjudication[adjudicationamounttype].amount 1..1 MS
+*/
 * diagnosis 1..*
 * diagnosis.type 1..1 MS
 * diagnosis.type from C4BBClaimOutpatientInstitutionalDiagnosisType  (required)
+
+/* Moved financial elements to financial profile
+* total 1..* MS
 * insert TotalSlicing
 * total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total contains
@@ -153,6 +197,7 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 * total[adjudicationamounttype].amount MS
 //* total[adjudicationamounttype].amount 1..1
+*/
 * status MS
 * created MS
 * item.sequence MS
@@ -183,8 +228,10 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+/* Moved financial elements to financial profile
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
+*/
 * diagnosis ^comment = "Diagnosis codes describe an individual's disease or medical condition. (6, 7, 8, 21, 22, 23, 30)"
 * diagnosis.type ^comment =  "Indicates if the outpatient institutional diagnosis is principal, other, an external cause of injury or a patient reason for visit. (21, 22, 23)"
 * diagnosis.sequence ^comment =  "Diagnosis.sequence values do not necessarily indicate any order in which the diagnosis was reported or identified.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of diagnosis.type to identify primary, secondary, etc."

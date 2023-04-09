@@ -3,6 +3,40 @@ Parent: C4BB-ExplanationOfBenefit
 Id: C4BB-ExplanationOfBenefit-Oral
 Title: "C4BB ExplanationOfBenefit Oral"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene. The ADA Dental Claim Form provides a common format for reporting dental services to a patient's dental benefit plan."
+
+* insert BaseExplanationOfBenefitOral
+
+// Financial specific constraints
+* item.adjudication[adjudicationamounttype].amount  MS
+* item.adjudication[adjudicationamounttype].amount 1..1
+
+* total 1..* MS
+* insert TotalSlicing
+//* total.category from C4BBAdjudication  (extensible)
+* total contains
+   adjudicationamounttype 1..* MS
+
+* total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
+* total[adjudicationamounttype].category from C4BBAdjudication (required)
+
+* total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+* total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
+
+
+Profile: C4BBExplanationOfBenefitOralNonFinancial
+Parent: C4BB-ExplanationOfBenefit
+Id: C4BB-ExplanationOfBenefit-Oral-NonFinancial
+Title: "C4BB ExplanationOfBenefit Oral - Non-Financial"
+Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene. The ADA Dental Claim Form provides a common format for reporting dental services to a patient's dental benefit plan."
+
+* insert BaseExplanationOfBenefitOral
+* insert ExplanationOfBenefitNonFinancial
+
+
+
+// Complete Orl Constraints (Financial and NonFinancial)
+RuleSet: BaseExplanationOfBenefitOral
+
 // 20210216 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
@@ -150,12 +184,17 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
+/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+*/
 * item.adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item.adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
 * item.adjudication[benefitpaymentstatus].reason 1..1 MS
+
+/* Moved financial elements to financial profile
+* total 1..* MS
 * insert TotalSlicing
 //* total.category from C4BBAdjudication  (extensible)
 * total contains
@@ -163,7 +202,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 
 * total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
 * total[adjudicationamounttype].category from C4BBAdjudication (required)
-
+*/
 
 
 * supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
@@ -199,7 +238,9 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * item.adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+/* Moved financial elements to financial profile
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+*/
 * diagnosis ^comment = "Diagnosis codes describe an individual's disease or medical condition. (6, 7, 8, 21, 22, 23, 30)"
 * diagnosis.type ^comment = "Indicates if the professional and non-clinician diagnosis is principal or secondary (21, 22, 23)"
 * diagnosis.sequence ^comment =  "Diagnosis.sequence values do not necessarily indicate any order in which the diagnosis was reported or identified.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of diagnosis.type to identify primary, secondary, etc."
@@ -209,8 +250,9 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.location[x] ^comment = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46)"
 * careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, rendering, purchased service and referring care team. (95, 96, 99)"
 * item.serviced[x]  ^comment = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
+/* Moved financial elements to financial profile
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
-
+*/
 * insert EOBBaseProfileComments
 
 
