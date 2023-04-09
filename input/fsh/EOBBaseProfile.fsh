@@ -218,6 +218,7 @@ RuleSet: ExplanationOfBenefitNonFinancial
 * addItem.detail.subDetail.net 0..0
 //* addItem.detail.subDetail.adjudication.amount 0..0
 
+* adjudication.amount 0..0
 
 * total 0..0
 * payment.amount 0..0

@@ -10,6 +10,7 @@ Services."
 // Financial specific constraints
 * item.adjudication[adjudicationamounttype].amount MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+* adjudication[adjudicationamounttype].amount 1..1
 
 * insert TotalSlicing
 * total.category from C4BBTotalCategoryDiscriminator (extensible)
@@ -201,8 +202,10 @@ RuleSet: BaseExplanationOfBenefitInpatientInstitutional
 
 * adjudication[adjudicationamounttype] ^short = "Claim level adjudication type and amount"
 * adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
-* adjudication[adjudicationamounttype].amount 1..1
+
 /* Moved financial elements to financial profile
+* adjudication[adjudicationamounttype].amount 1..1
+
 * insert TotalSlicing
 * total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total contains
