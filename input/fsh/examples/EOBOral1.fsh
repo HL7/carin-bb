@@ -4,6 +4,44 @@ Description: "EOB Oral Example 1"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitOral|2.0.0)
+* insert BaseEOBOral1
+
+// Financial data
+* item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* item[0].adjudication[adjudicationamounttype][0].amount.value = 190.00
+* item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
+
+* item[1].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* item[1].adjudication[adjudicationamounttype][0].amount.value = 220.00
+* item[1].adjudication[adjudicationamounttype][0].amount.currency = #USD
+
+* total[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* total[adjudicationamounttype][0].category.text = "Submitted Amount"
+* total[adjudicationamounttype][0].amount.value = 410.00
+* total[adjudicationamounttype][0].amount.currency = #USD
+* total[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit
+* total[adjudicationamounttype][1].category.text = "Benefit Amount"
+* total[adjudicationamounttype][1].amount.value = 350.00
+* total[adjudicationamounttype][1].amount.currency = #USD
+* total[adjudicationamounttype][2].category = C4BBAdjudication#discount
+* total[adjudicationamounttype][2].category.text = "Discount Amount"
+* total[adjudicationamounttype][2].amount.value = 60.00
+* total[adjudicationamounttype][2].amount.currency = #USD
+* total[adjudicationamounttype][3].category = C4BBAdjudication#paidtoprovider
+* total[adjudicationamounttype][3].category.text = "Amount Paid to Provider"
+* total[adjudicationamounttype][3].amount.value = 350.00
+* total[adjudicationamounttype][3].amount.currency = #USD
+
+Instance: EOBOralNonFinancial1
+InstanceOf: C4BBExplanationOfBenefitOralNonFinancial
+Description: "EOB Oral Non-Financial Example 1"
+Usage: #example
+
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOralNonFinancial|2.0.0)
+* insert BaseEOBOral1
+
+RuleSet: BaseEOBOral1
+
 * meta.lastUpdated = "2021-03-18T10:23:00-05:00"
 * language = #en-US
 * status = #active
@@ -35,22 +73,7 @@ Usage: #example
 * adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 
-* total[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
-* total[adjudicationamounttype][0].category.text = "Submitted Amount"
-* total[adjudicationamounttype][0].amount.value = 410.00
-* total[adjudicationamounttype][0].amount.currency = #USD
-* total[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit
-* total[adjudicationamounttype][1].category.text = "Benefit Amount"
-* total[adjudicationamounttype][1].amount.value = 350.00
-* total[adjudicationamounttype][1].amount.currency = #USD
-* total[adjudicationamounttype][2].category = C4BBAdjudication#discount
-* total[adjudicationamounttype][2].category.text = "Discount Amount"
-* total[adjudicationamounttype][2].amount.value = 60.00
-* total[adjudicationamounttype][2].amount.currency = #USD
-* total[adjudicationamounttype][3].category = C4BBAdjudication#paidtoprovider
-* total[adjudicationamounttype][3].category.text = "Amount Paid to Provider"
-* total[adjudicationamounttype][3].amount.value = 350.00
-* total[adjudicationamounttype][3].amount.currency = #USD
+
 
 * item[0].productOrService = $ADADentalProcedureCode#D1110 "Prophylaxis - Adult"
 
@@ -59,9 +82,6 @@ Usage: #example
 * item[0].servicedDate = "2021-03-18"
 
 * item[0].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"
-* item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
-* item[0].adjudication[adjudicationamounttype][0].amount.value = 190.00
-* item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
 
 * item[0].adjudication[benefitpaymentstatus][0].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[0].adjudication[benefitpaymentstatus][0].reason = C4BBPayerAdjudicationStatus#innetwork
@@ -69,9 +89,6 @@ Usage: #example
 * item[1].sequence = 2
 * item[1].servicedDate = "2021-03-18"
 * item[1].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"
-* item[1].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
-* item[1].adjudication[adjudicationamounttype][0].amount.value = 220.00
-* item[1].adjudication[adjudicationamounttype][0].amount.currency = #USD
 * item[1].adjudication[benefitpaymentstatus][0].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[1].adjudication[benefitpaymentstatus][0].reason = C4BBPayerAdjudicationStatus#innetwork
 

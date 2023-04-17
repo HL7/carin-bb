@@ -2,8 +2,51 @@ Instance: EOBPharmacy1
 InstanceOf: C4BBExplanationOfBenefitPharmacy
 Description: "EOB Pharmacy Example 1"
 Usage: #example
-//* id = "1234-234-1243-12345678901-20190101-20191031"
+
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitPharmacy|2.0.0)
+* insert BaseEOBPharmacy1
+
+* total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
+* total[adjudicationamounttype][0].category.text = "Payment Amount"
+* total[adjudicationamounttype][0].amount.value = 620.00
+* total[adjudicationamounttype][0].amount.currency = #USD
+* total[adjudicationamounttype][1].category = $HL7AdjudicationCS#submitted
+* total[adjudicationamounttype][1].category.text = "Submitted Amount"
+* total[adjudicationamounttype][1].amount.value = 2650.00
+* total[adjudicationamounttype][1].amount.currency = #USD
+* total[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
+* total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
+* total[adjudicationamounttype][2].amount.value = 0.00
+* total[adjudicationamounttype][2].amount.currency = #USD
+
+* item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
+* item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00
+* item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit
+* item[0].adjudication[adjudicationamounttype][1].amount.value = 20.00
+* item[0].adjudication[adjudicationamounttype][1].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][2].category = $C4BBAdjudicationCS#discount
+* item[0].adjudication[adjudicationamounttype][2].amount.value = 900.00
+* item[0].adjudication[adjudicationamounttype][2].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][3].category = $C4BBAdjudicationCS#memberliability
+* item[0].adjudication[adjudicationamounttype][3].amount.value = 80.00
+* item[0].adjudication[adjudicationamounttype][3].amount.currency = #USD
+* item[0].adjudication[adjudicationamounttype][4].category = $C4BBAdjudicationCS#paidtoprovider
+* item[0].adjudication[adjudicationamounttype][4].amount.value = 20.00
+* item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD
+
+Instance: EOBPharmacyNonFinancial1
+InstanceOf: C4BBExplanationOfBenefitPharmacyNonFinancial
+Description: "EOB Pharmacy Non-Financial Example 1"
+Usage: #example
+
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitPharmacyNonFinancial|2.0.0)
+* insert BaseEOBPharmacy1
+
+
+RuleSet: BaseEOBPharmacy1
+//* id = "1234-234-1243-12345678901-20190101-20191031"
+
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -29,37 +72,12 @@ Usage: #example
 * adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 
-* total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
-* total[adjudicationamounttype][0].category.text = "Payment Amount"
-* total[adjudicationamounttype][0].amount.value = 620.00
-* total[adjudicationamounttype][0].amount.currency = #USD
-* total[adjudicationamounttype][1].category = $HL7AdjudicationCS#submitted
-* total[adjudicationamounttype][1].category.text = "Submitted Amount"
-* total[adjudicationamounttype][1].amount.value = 2650.00
-* total[adjudicationamounttype][1].amount.currency = #USD
-* total[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
-* total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
-* total[adjudicationamounttype][2].amount.value = 0.00
-* total[adjudicationamounttype][2].amount.currency = #USD
+
 //* adjudication[benefitpaymentstatus].category = C4BBAdjudication#other
 * item[0].productOrService = $FDANationalDrugCode#0777-3105-02 "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)"
 * item[0].sequence = 1
 * item[0].servicedDate = "2019-07-02"
-* item[0].adjudication[adjudicationamounttype][0].category = $HL7AdjudicationCS#submitted
-* item[0].adjudication[adjudicationamounttype][0].amount.value = 1000.00
-* item[0].adjudication[adjudicationamounttype][0].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][1].category = $HL7AdjudicationCS#benefit
-* item[0].adjudication[adjudicationamounttype][1].amount.value = 20.00
-* item[0].adjudication[adjudicationamounttype][1].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][2].category = $C4BBAdjudicationCS#discount
-* item[0].adjudication[adjudicationamounttype][2].amount.value = 900.00
-* item[0].adjudication[adjudicationamounttype][2].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][3].category = $C4BBAdjudicationCS#memberliability
-* item[0].adjudication[adjudicationamounttype][3].amount.value = 80.00
-* item[0].adjudication[adjudicationamounttype][3].amount.currency = #USD
-* item[0].adjudication[adjudicationamounttype][4].category = $C4BBAdjudicationCS#paidtoprovider
-* item[0].adjudication[adjudicationamounttype][4].amount.value = 20.00
-* item[0].adjudication[adjudicationamounttype][4].amount.currency = #USD
+
 * supportingInfo[brandgenericindicator].category = C4BBSupportingInfoType#brandgenericindicator
 * supportingInfo[brandgenericindicator].sequence = 2
 * supportingInfo[brandgenericindicator].code = $NCPDPBrandGenericIndicator#2

@@ -5,14 +5,28 @@ Title: "C4BB ExplanationOfBenefit Outpatient Institutional"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at an institution that are not part of an overnight stay.
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services."
 
+* obeys EOB-institutional-outpatient-meta-profile-version
 * insert BaseExplanationOfBenefitOutpatientInstitutional
 
 // Financial specific constraints
 
-* adjudication[adjudicationamounttype].amount 1..1 MS
+* item.adjudication contains
+   adjudicationamounttype 0..* MS  /* restricted to 1..* by invariant */
 
+* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
+* item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+
+* insert EOBHeaderItemAdjudicationInvariant
+* insert ItemAdjudicationInvariant
+
+* adjudication contains
+   adjudicationamounttype 0..* MS  /* restricted to 1..* by invariant */
+
+* adjudication[adjudicationamounttype] ^short = "Claim level adjudication type and amount"
+* adjudication[adjudicationamounttype].category from C4BBAdjudication (required)
+* adjudication[adjudicationamounttype].amount 1..1 MS
 
 * total 1..* MS
 * insert TotalSlicing
@@ -24,6 +38,10 @@ The claims data is based on the institutional claim form UB-04, submission stand
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 * total[adjudicationamounttype].amount MS
 
+
+
+* item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+* adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
 
@@ -34,6 +52,8 @@ Id: C4BB-ExplanationOfBenefit-Outpatient-Institutional-NonFinancial
 Title: "C4BB ExplanationOfBenefit Outpatient Institutional - Non-Financial"
 Description: "This profile without financial data is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for outpatient services, which may include including the use of equipment and supplies, laboratory services, radiology services and other charges. Outpatient claims are submitted for services rendered at an institution that are not part of an overnight stay.
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services."
+
+* obeys EOB-institutional-outpatient-nonfinancial-meta-profile-version
 * insert BaseExplanationOfBenefitOutpatientInstitutional
 * insert ExplanationOfBenefitNonFinancial
 
@@ -44,7 +64,7 @@ RuleSet: BaseExplanationOfBenefitOutpatientInstitutional
 // 20210322 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|1.2.0)
-* obeys EOB-institutional-outpatient-meta-profile-version
+
 
 // 20210203 CAS: https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
 * obeys EOB-inst-pointoforigin
@@ -124,11 +144,15 @@ RuleSet: BaseExplanationOfBenefitOutpatientInstitutional
 */
 //* item.productOrService ^comment = "Put the comment here for item.productOrService here"
 //* item  ^comment = "Put the comment here for item"
+/* Moved financial elements to financial profile
 * insert EOBHeaderItemAdjudicationInvariant
 * insert ItemAdjudicationInvariant
+*/
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
-   adjudicationamounttype 0..* MS and  /* restricted to 1..* by invariant */
+/* Moved financial elements to financial profile
+   adjudicationamounttype 0..* MS and  /* restricted to 1..* by invariant *
+*/
    adjustmentreason 0..* MS and
    allowedunits 0..1 MS
 
@@ -143,9 +167,9 @@ RuleSet: BaseExplanationOfBenefitOutpatientInstitutional
 * item.adjudication[adjustmentreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[adjustmentreason].reason 1..1 MS
 
+/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
-/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
 */
@@ -158,7 +182,9 @@ RuleSet: BaseExplanationOfBenefitOutpatientInstitutional
 * adjudication contains
    billingnetworkstatus 0..1 MS and
    benefitpaymentstatus 1..1 MS and
-   adjudicationamounttype 0..* MS and  /* restricted to 1..* by invariant */
+/* Moved financial elements to financial profile
+   adjudicationamounttype 0..* MS and  /* restricted to 1..* by invariant *
+*/   
    adjustmentreason 0..* MS
 
 * adjudication[billingnetworkstatus] ^short = "Billing provider networking status"
@@ -177,9 +203,9 @@ RuleSet: BaseExplanationOfBenefitOutpatientInstitutional
 * adjudication[adjustmentreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * adjudication[adjustmentreason].reason 1..1 MS
 
+/* Moved financial elements to financial profile
 * adjudication[adjudicationamounttype] ^short = "Claim level adjudication type and amount"
 * adjudication[adjudicationamounttype].category from C4BBAdjudication (required)
-/* Moved financial elements to financial profile
 * adjudication[adjudicationamounttype].amount 1..1 MS
 */
 * diagnosis 1..*
@@ -223,12 +249,14 @@ RuleSet: BaseExplanationOfBenefitOutpatientInstitutional
 * supportingInfo[patientaccountnumber] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+*/
 * adjudication[billingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
 * adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 * adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
-* adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 /* Moved financial elements to financial profile
+* adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
 */

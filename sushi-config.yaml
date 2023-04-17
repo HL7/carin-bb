@@ -97,7 +97,8 @@ pages:
     title: Downloads
   change_notes.md:
     title: Change Notes
-
+  ImplementationGuide-hl7.fhir.us.carin-bb.md:
+    title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®) ImplementationGuide Resource
 
 
 # Groups can control certain aspects of the IG generation.  The IG
@@ -118,7 +119,7 @@ groups:
     resources:
     - StructureDefinition/C4BB-ExplanationOfBenefit
   FinancialEOBProfiles:
-    name: "Structures: Financial ExplanationOfBenefit Profiles"
+    name: "Structures: ExplanationOfBenefit Profiles"
     description: ExplanationOfBenefit profiles that include, and in some places, require, financial information. These are useful for sharing EoB information with patient's and their representatives where financial data needs to be included.
     resources:
     - StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional

@@ -3,9 +3,73 @@ InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician
 Title: "EOB Professional - Transportation 1"
 Description: "EOB Professional - Transportation Services Example 1"
 Usage: #example
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.0.0)
+* insert BaseEOBProfessionalTransportation1
+
+* item[0].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 40.35
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 40.35
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 40.35
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
+* item[1].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 42.62
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 42.62
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 42.62
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
+* total[+].category = $adjudication#submitted "Submitted Amount"
+* total[=].category.text = "The total submitted amount for the claim or group or line item."
+* total[=].amount.value = 82.97
+* total[=].amount.currency = #USD
+* total[+].category = $adjudication#eligible "Eligible Amount"
+* total[=].category.text = "Amount of the change which is considered for adjudication."
+* total[=].amount.value = 82.97
+* total[=].amount.currency = #USD
+* total[+].category = $adjudication#benefit "Benefit Amount"
+* total[=].category.text = "Amount payable under the coverage"
+* total[=].amount.value = 82.97
+* total[=].amount.currency = #USD
+* total[+].category = $C4BBAdjudication#memberliability "Member liability"
+* total[=].category.text = "The amount of the member's liability."
+* total[=].amount.value = 0
+* total[=].amount.currency = #USD
+
+Instance: EOBProfessionalTransportationNonFinancial1
+InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinicianNonFinancial
+Title: "EOB Professional Non-Financial - Transportation 1"
+Description: "EOB Professional Non-Financial - Transportation Services Example 1"
+Usage: #example
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinicianNonFinancial|2.0.0)
+* insert BaseEOBProfessionalTransportation1
+
+
+RuleSet: BaseEOBProfessionalTransportation1
 * meta.lastUpdated = "2022-09-10T14:46:05-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.0.0)
+
 * identifier[uniqueclaimid].type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier[uniqueclaimid].type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier[uniqueclaimid].system = "https://www.example.com/fhir/EOBIdentifier"
@@ -109,22 +173,7 @@ Usage: #example
 * item[=].informationSequence[+] = 7
 * item[=].informationSequence[+] = 10
 * item[=].informationSequence[+] = 11
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 40.35
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 40.35
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 40.35
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
 * item[=].adjudication[benefitpaymentstatus][+].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[=].adjudication[benefitpaymentstatus][=].reason = C4BBPayerAdjudicationStatus#innetwork
 
@@ -140,22 +189,7 @@ Usage: #example
 * item[=].informationSequence[+] = 7
 * item[=].informationSequence[+] = 8
 * item[=].informationSequence[+] = 9
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 42.62
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 42.62
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 42.62
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
 * item[=].adjudication[benefitpaymentstatus][+].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[=].adjudication[benefitpaymentstatus][=].reason = C4BBPayerAdjudicationStatus#innetwork
 
@@ -164,19 +198,3 @@ Usage: #example
 * adjudication.reason = $C4BBPayerAdjudicationStatus#innetwork "In Network"
 * adjudication.reason.text = "Indicates the provider was in network for the service"
 
-* total[+].category = $adjudication#submitted "Submitted Amount"
-* total[=].category.text = "The total submitted amount for the claim or group or line item."
-* total[=].amount.value = 82.97
-* total[=].amount.currency = #USD
-* total[+].category = $adjudication#eligible "Eligible Amount"
-* total[=].category.text = "Amount of the change which is considered for adjudication."
-* total[=].amount.value = 82.97
-* total[=].amount.currency = #USD
-* total[+].category = $adjudication#benefit "Benefit Amount"
-* total[=].category.text = "Amount payable under the coverage"
-* total[=].amount.value = 82.97
-* total[=].amount.currency = #USD
-* total[+].category = $C4BBAdjudication#memberliability "Member liability"
-* total[=].category.text = "The amount of the member's liability."
-* total[=].amount.value = 0
-* total[=].amount.currency = #USD

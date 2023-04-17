@@ -3,8 +3,47 @@ InstanceOf: C4BBExplanationOfBenefitOutpatientInstitutional
 Title: "EOB Outpatient Institutional - Example 1"
 Description: "EOB Outpatient Institutional - Example 1"
 Usage: #example
-//* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutional|2.0.0)
+* insert BaseEOBOutpatient1
+
+
+* adjudication[adjudicationamounttype][0]
+  * category = C4BBAdjudication#paidtoprovider
+  * category.text = "Payment Amount"
+  * amount.value = 620.00
+  * amount.currency = #USD
+* adjudication[adjudicationamounttype][1]
+  * category = C4BBAdjudication#paidbypatient
+  * category.text = "Patient Pay Amount"
+  * amount.value = 0.00
+
+* total[adjudicationamounttype][2].amount.currency = #USD
+* total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
+* total[adjudicationamounttype][0].category.text = "Payment Amount"
+* total[adjudicationamounttype][0].amount.value = 620.00
+* total[adjudicationamounttype][0].amount.currency = #USD
+* total[adjudicationamounttype][1].category = $HL7AdjudicationCS#submitted
+* total[adjudicationamounttype][1].category.text = "Submitted Amount"
+* total[adjudicationamounttype][1].amount.value = 2650.00
+* total[adjudicationamounttype][1].amount.currency = #USD
+* total[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
+* total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
+* total[adjudicationamounttype][2].amount.value = 0.00
+* total[adjudicationamounttype][2].amount.currency = #USD
+
+
+Instance: EOBOutpatientNonFinancial1
+InstanceOf: C4BBExplanationOfBenefitOutpatientInstitutionalNonFinancial
+Title: "EOB Outpatient Institutional Non-Financial - Example 1"
+Description: "EOB Outpatient Institutional Non-Financial - Example 1"
+Usage: #example
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOutpatientInstitutionalNonFinancial|2.0.0)
+* insert BaseEOBOutpatient1
+
+
+RuleSet: BaseEOBOutpatient1
+//* id = "1234-234-1243-12345678901-20190101-20191031"
+
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active
@@ -39,33 +78,12 @@ Usage: #example
 * item[0].revenue = $AHANUBCRevenueCodes#Dummy
 * item[0].servicedDate = "2019-11-02"
 // Header-Level adjudication only
-* adjudication[adjudicationamounttype][0]
-  * category = C4BBAdjudication#paidtoprovider
-  * category.text = "Payment Amount"
-  * amount.value = 620.00
-  * amount.currency = #USD
-* adjudication[adjudicationamounttype][1]
-  * category = C4BBAdjudication#paidbypatient
-  * category.text = "Patient Pay Amount"
-  * amount.value = 0.00
+
 * adjudication[billingnetworkstatus]
   * reason = C4BBPayerAdjudicationStatus#innetwork
 * adjudication[benefitpaymentstatus]
   * reason = C4BBPayerAdjudicationStatus#innetwork
 
-* total[adjudicationamounttype][2].amount.currency = #USD
-* total[adjudicationamounttype][0].category = $C4BBAdjudicationCS#paidtoprovider
-* total[adjudicationamounttype][0].category.text = "Payment Amount"
-* total[adjudicationamounttype][0].amount.value = 620.00
-* total[adjudicationamounttype][0].amount.currency = #USD
-* total[adjudicationamounttype][1].category = $HL7AdjudicationCS#submitted
-* total[adjudicationamounttype][1].category.text = "Submitted Amount"
-* total[adjudicationamounttype][1].amount.value = 2650.00
-* total[adjudicationamounttype][1].amount.currency = #USD
-* total[adjudicationamounttype][2].category = $C4BBAdjudicationCS#paidbypatient
-* total[adjudicationamounttype][2].category.text = "Patient Pay Amount"
-* total[adjudicationamounttype][2].amount.value = 0.00
-* total[adjudicationamounttype][2].amount.currency = #USD
 * supportingInfo[clmrecvddate].category = C4BBSupportingInfoType#clmrecvddate
 * supportingInfo[clmrecvddate].timingDate = 2019-11-30
 * supportingInfo[clmrecvddate].sequence = 2

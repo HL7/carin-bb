@@ -89,6 +89,7 @@ WARNING: ValueSet.where(id = 'AHANUBCPointOfOriginForAdmissionOrVisit'): Error f
 WARNING: ValueSet.where(id = 'CMSMS3MAPAPRDRG'): Error from server: Unable to provide support for code system https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software
 WARNING: ValueSet.where(id = 'X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes'): Error from server: Unable to provide support for code system https://x12.org/codes/claim-adjustment-reason-codes
 WARNING: ValueSet.where(id = 'C4BBAmbulanceTransportReasonCodes'): Error from server: Unable to provide support for code system https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes
+WARNING: ExplanationOfBenefit/EOBProfessionalTransportation1: ExplanationOfBenefit.supportingInfo[2].reason: Unable to check whether code is in value set http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAmbulanceTransportReasonCodes: [Code System URI 'https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes' is unknown so the code cannot be validated]
 
 # Invalid NDC display warnings (extra spaces in display)
 WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.item[0].productOrService: The display "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)" is not a valid display for the code {http://hl7.org/fhir/sid/ndc}0777-3105-02 - should be one of ['Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02)  (package)'] (from http://tx.fhir.org/r4)

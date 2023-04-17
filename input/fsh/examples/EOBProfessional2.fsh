@@ -3,9 +3,204 @@ InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician
 Title: "EOB Professional - Example 2"
 Description: "EOB Professional - Example 2"
 Usage: #example
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.0.0)
+* insert BaseEOBProfessional2
+
+* item[0].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 68.8
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 34.8
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 34.8
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
+* item[1].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = -68.8
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = -34.8
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = -34.8
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
+* item[2].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 68.8
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 34.8
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 34.8
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
+* item[3].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 751.2
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 224.11
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 224.11
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
+* item[4].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 751.2
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 224.11
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 224.11
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
+* item[5].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = -751.2
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = -224.11
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
+* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+* item[=].adjudication[adjudicationamounttype][=].amount.value = -224.11
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
+* total[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
+* total[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
+* total[adjudicationamounttype][=].amount.value = 820
+* total[adjudicationamounttype][=].amount.currency = #USD
+* total[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
+* total[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
+* total[adjudicationamounttype][=].amount.value = 258.91
+* total[adjudicationamounttype][=].amount.currency = #USD
+* total[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
+* total[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
+* total[adjudicationamounttype][=].amount.value = 0
+* total[adjudicationamounttype][=].amount.currency = #USD
+* total[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
+* total[adjudicationamounttype][=].category.text = "Patient Co-Payment"
+* total[adjudicationamounttype][=].amount.value = 0
+* total[adjudicationamounttype][=].amount.currency = #USD
+* total[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
+* total[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
+* total[adjudicationamounttype][=].amount.value = 0
+* total[adjudicationamounttype][=].amount.currency = #USD
+* total[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
+* total[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
+* total[adjudicationamounttype][=].amount.value = 258.91
+* total[adjudicationamounttype][=].amount.currency = #USD
+* total[adjudicationamounttype][+].category = $C4BBAdjudication#memberliability "Member liability"
+* total[adjudicationamounttype][=].category.text = "The amount of the member's liability."
+* total[adjudicationamounttype][=].amount.value = 0
+* total[adjudicationamounttype][=].amount.currency = #USD
+
+
+
+Instance: EOBProfessionalNonFinancial2
+InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinicianNonFinancial
+Title: "EOB Professional Non-Financial - Example 2"
+Description: "EOB Professional Non-Financial - Example 2"
+Usage: #example
+
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinicianNonFinancial|2.0.0)
+* insert BaseEOBProfessional2
+
+
+RuleSet: BaseEOBProfessional2
 * meta.lastUpdated = "2020-10-20T14:46:05-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.0.0)
+
 * identifier[uniqueclaimid].type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier[uniqueclaimid].type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier[uniqueclaimid].system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
@@ -51,30 +246,7 @@ Usage: #example
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 68.8
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 34.8
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 34.8
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
 * item[=].adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[=].adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 * item[+].sequence = 2
@@ -82,30 +254,7 @@ Usage: #example
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = -68.8
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = -34.8
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = -34.8
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
 * item[=].adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[=].adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 * item[+].sequence = 3
@@ -113,30 +262,7 @@ Usage: #example
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 68.8
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 34.8
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 34.8
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
 * item[=].adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[=].adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 * item[+].sequence = 4
@@ -144,30 +270,7 @@ Usage: #example
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 751.2
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 224.11
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 224.11
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
 * item[=].adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[=].adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 * item[+].sequence = 5
@@ -175,30 +278,7 @@ Usage: #example
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 751.2
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 224.11
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 224.11
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
 * item[=].adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[=].adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 * item[+].sequence = 6
@@ -206,61 +286,10 @@ Usage: #example
 * item[=].servicedDate = "2020-08-04"
 * item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#21
 * item[=].locationCodeableConcept.text = "HOSPITAL - INPATIENT HOSPITAL"
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = -751.2
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Patient Co-Payment"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = -224.11
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 0
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-* item[=].adjudication[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
-* item[=].adjudication[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-* item[=].adjudication[adjudicationamounttype][=].amount.value = -224.11
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
 * item[=].adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[=].adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 * adjudication.category = $C4BBAdjudicationDiscriminator#billingnetworkstatus "Billing Network Status"
 * adjudication.category.text = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission."
 * adjudication.reason = $C4BBPayerAdjudicationStatus#innetwork "In Network"
 * adjudication.reason.text = "Indicates the provider was in network for the service"
-* total[adjudicationamounttype][+].category = $adjudication#submitted "Submitted Amount"
-* total[adjudicationamounttype][=].category.text = "The total submitted amount for the claim or group or line item."
-* total[adjudicationamounttype][=].amount.value = 820
-* total[adjudicationamounttype][=].amount.currency = #USD
-* total[adjudicationamounttype][+].category = $adjudication#eligible "Eligible Amount"
-* total[adjudicationamounttype][=].category.text = "Amount of the change which is considered for adjudication."
-* total[adjudicationamounttype][=].amount.value = 258.91
-* total[adjudicationamounttype][=].amount.currency = #USD
-* total[adjudicationamounttype][+].category = $adjudication#deductible "Deductible"
-* total[adjudicationamounttype][=].category.text = "Amount deducted from the eligible amount prior to adjudication."
-* total[adjudicationamounttype][=].amount.value = 0
-* total[adjudicationamounttype][=].amount.currency = #USD
-* total[adjudicationamounttype][+].category = $adjudication#copay "CoPay"
-* total[adjudicationamounttype][=].category.text = "Patient Co-Payment"
-* total[adjudicationamounttype][=].amount.value = 0
-* total[adjudicationamounttype][=].amount.currency = #USD
-* total[adjudicationamounttype][+].category = $C4BBAdjudication#noncovered "Noncovered"
-* total[adjudicationamounttype][=].category.text = "The portion of the cost of this service that was deemed not eligible by the insurer because the service or member was not covered by the subscriber contract."
-* total[adjudicationamounttype][=].amount.value = 0
-* total[adjudicationamounttype][=].amount.currency = #USD
-* total[adjudicationamounttype][+].category = $adjudication#benefit "Benefit Amount"
-* total[adjudicationamounttype][=].category.text = "Amount payable under the coverage"
-* total[adjudicationamounttype][=].amount.value = 258.91
-* total[adjudicationamounttype][=].amount.currency = #USD
-* total[adjudicationamounttype][+].category = $C4BBAdjudication#memberliability "Member liability"
-* total[adjudicationamounttype][=].category.text = "The amount of the member's liability."
-* total[adjudicationamounttype][=].amount.value = 0
-* total[adjudicationamounttype][=].amount.currency = #USD

@@ -5,9 +5,16 @@ Title: "C4BB ExplanationOfBenefit Pharmacy"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies.
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
 
+* obeys EOB-pharmacy-meta-profile-version
 * insert BaseExplanationOfBenefitPharmacy
 
 // Financial specific constraints
+
+* item.adjudication contains
+   adjudicationamounttype 1..* MS
+
+* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
+* item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
 
@@ -21,8 +28,12 @@ The claims data is based on submission standards adopted by the Department of He
 
 * total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
+
+
+* item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, allowed, etc.) (148)"
+
 
 Profile: C4BBExplanationOfBenefitPharmacyNonFinancial
 Parent: C4BB-ExplanationOfBenefit
@@ -31,6 +42,7 @@ Title: "C4BB ExplanationOfBenefit Pharmacy - Non-Financial"
 Description: "This profile without financial data is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies.
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
 
+* obeys EOB-pharmacy-nonfinancial-meta-profile-version
 * insert BaseExplanationOfBenefitPharmacy
 * insert ExplanationOfBenefitNonFinancial
 
@@ -41,7 +53,7 @@ RuleSet: BaseExplanationOfBenefitPharmacy
 // 20210322 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitPharmacy|1.2.0)
-* obeys EOB-pharmacy-meta-profile-version
+
 
 * type = $HL7ClaimTypeCS#pharmacy
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner)   Set in Abstract Class.  No need to set here.
@@ -129,12 +141,14 @@ RuleSet: BaseExplanationOfBenefitPharmacy
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
 * item.adjudication contains
+/* Moved financial elements to financial profile
    adjudicationamounttype 1..* MS and
+*/   
    rejectreason 0..1 MS
 
+/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
-/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
 */
@@ -194,7 +208,9 @@ RuleSet: BaseExplanationOfBenefitPharmacy
 * supportingInfo[compoundcode] ^comment = "The code indicating whether or not the prescription is a compound.  NCPDP field # 406-D6 (78)"
 * adjudication[billingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service. (101)"
 * adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+*/
 * item.adjudication[rejectreason] ^comment = "Reason codes used to interpret the Non-Covered Amount (92)"
 /* Moved financial elements to financial profile
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"

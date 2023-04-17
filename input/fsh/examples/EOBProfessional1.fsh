@@ -3,6 +3,39 @@ InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinician
 Description: "EOB Professional Example 1"
 Title: "EOB Professional - Example 1"
 Usage: #example
+
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.0.0)
+* insert BaseEOBProfessional1
+
+* item[=].adjudication[adjudicationamounttype][+].category = $HL7AdjudicationCS#submitted
+* item[=].adjudication[adjudicationamounttype][=].amount.value = 1000.00
+* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
+
+* total[adjudicationamounttype][+].category = $C4BBAdjudicationCS#paidtoprovider
+* total[adjudicationamounttype][=].category.text = "Payment Amount"
+* total[adjudicationamounttype][=].amount.value = 620.00
+* total[adjudicationamounttype][=].amount.currency = #USD
+* total[adjudicationamounttype][+].category = $HL7AdjudicationCS#submitted
+* total[adjudicationamounttype][=].category.text = "Submitted Amount"
+* total[adjudicationamounttype][=].amount.value = 2650.00
+* total[adjudicationamounttype][=].amount.currency = #USD
+* total[adjudicationamounttype][+].category = $C4BBAdjudicationCS#paidbypatient
+* total[adjudicationamounttype][=].category.text = "Patient Pay Amount"
+* total[adjudicationamounttype][=].amount.value = 0.00
+* total[adjudicationamounttype][=].amount.currency = #USD
+
+
+Instance: EOBProfessionalNonFinancial1
+InstanceOf: C4BBExplanationOfBenefitProfessionalNonClinicianNonFinancial
+Description: "EOB Professional Non-Financial Example 1"
+Title: "EOB Professional Non-Financial - Example 1"
+Usage: #example
+
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinicianNonFinancial|2.0.0)
+* insert BaseEOBProfessional1
+
+RuleSet: BaseEOBProfessional1
 //* id = "1234-234-1243-12345678901-20190101-20191031"
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.0.0)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
@@ -33,27 +66,14 @@ Usage: #example
 * adjudication[billingnetworkstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 * adjudication[renderingnetworkstatus].category = C4BBAdjudicationDiscriminator#renderingnetworkstatus
 * adjudication[renderingnetworkstatus].reason = C4BBPayerAdjudicationStatus#innetwork
-* total[adjudicationamounttype][+].category = $C4BBAdjudicationCS#paidtoprovider
-* total[adjudicationamounttype][=].category.text = "Payment Amount"
-* total[adjudicationamounttype][=].amount.value = 620.00
-* total[adjudicationamounttype][=].amount.currency = #USD
-* total[adjudicationamounttype][+].category = $HL7AdjudicationCS#submitted
-* total[adjudicationamounttype][=].category.text = "Submitted Amount"
-* total[adjudicationamounttype][=].amount.value = 2650.00
-* total[adjudicationamounttype][=].amount.currency = #USD
-* total[adjudicationamounttype][+].category = $C4BBAdjudicationCS#paidbypatient
-* total[adjudicationamounttype][=].category.text = "Patient Pay Amount"
-* total[adjudicationamounttype][=].amount.value = 0.00
-* total[adjudicationamounttype][=].amount.currency = #USD
+
 /*Testing for DAR*/
 //* item[0].productOrService = $HL7DataAbsentReason#not-applicable "Not Applicable"
 * item[+].productOrService = $CPT#97110 "Physical Therapy"
 * item[=].sequence = 1
 * item[=].servicedDate = "2019-07-02"
 * item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"
-* item[=].adjudication[adjudicationamounttype][+].category = $HL7AdjudicationCS#submitted
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 1000.00
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
 * item[=].adjudication[benefitpaymentstatus][+].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[=].adjudication[benefitpaymentstatus][=].reason = C4BBPayerAdjudicationStatus#other
 

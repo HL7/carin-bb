@@ -2,7 +2,43 @@ Instance: EOBOral2
 InstanceOf: C4BBExplanationOfBenefitOral
 Description: "EOB Oral Example 2"
 Usage: #example
+
 * meta.profile[+] = Canonical(C4BBExplanationOfBenefitOral|2.0.0)
+* insert BaseEOBOral2
+
+* item[0].adjudication[adjudicationamounttype][+].category = $HL7AdjudicationCS#submitted
+* item[0].adjudication[adjudicationamounttype][=].amount.value = 150.00
+* item[0].adjudication[adjudicationamounttype][=].amount.currency = #USD
+
+* total[adjudicationamounttype][+].category = $HL7AdjudicationCS#submitted
+* total[adjudicationamounttype][=].category.text = "Submitted Amount"
+* total[adjudicationamounttype][=].amount.value = 150.00
+* total[adjudicationamounttype][=].amount.currency = #USD
+* total[adjudicationamounttype][+].category = $HL7AdjudicationCS#benefit
+* total[adjudicationamounttype][=].category.text = "Benefit Amount"
+* total[adjudicationamounttype][=].amount.value = 110.00
+* total[adjudicationamounttype][=].amount.currency = #USD
+* total[adjudicationamounttype][+].category = C4BBAdjudication#discount
+* total[adjudicationamounttype][=].category.text = "Discount Amount"
+* total[adjudicationamounttype][=].amount.value = 40.00
+* total[adjudicationamounttype][=].amount.currency = #USD
+* total[adjudicationamounttype][+].category = C4BBAdjudication#paidtoprovider
+* total[adjudicationamounttype][=].category.text = "Amount Paid to Provider"
+* total[adjudicationamounttype][=].amount.value = 100.00
+* total[adjudicationamounttype][=].amount.currency = #USD
+
+
+Instance: EOBOralNonFinancial2
+InstanceOf: C4BBExplanationOfBenefitOralNonFinancial
+Description: "EOB Oral Non-Financial Example 2"
+Usage: #example
+
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOralNonFinancial|2.0.0)
+* insert BaseEOBOral2
+
+
+RuleSet: BaseEOBOral2
+
 * meta.lastUpdated = "2021-10-28T10:23:00-05:00"
 * language = #en-US
 * status = #active
@@ -30,22 +66,7 @@ Usage: #example
 * adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * adjudication[benefitpaymentstatus].reason = C4BBPayerAdjudicationStatus#innetwork
 
-* total[adjudicationamounttype][+].category = $HL7AdjudicationCS#submitted
-* total[adjudicationamounttype][=].category.text = "Submitted Amount"
-* total[adjudicationamounttype][=].amount.value = 150.00
-* total[adjudicationamounttype][=].amount.currency = #USD
-* total[adjudicationamounttype][+].category = $HL7AdjudicationCS#benefit
-* total[adjudicationamounttype][=].category.text = "Benefit Amount"
-* total[adjudicationamounttype][=].amount.value = 110.00
-* total[adjudicationamounttype][=].amount.currency = #USD
-* total[adjudicationamounttype][+].category = C4BBAdjudication#discount
-* total[adjudicationamounttype][=].category.text = "Discount Amount"
-* total[adjudicationamounttype][=].amount.value = 40.00
-* total[adjudicationamounttype][=].amount.currency = #USD
-* total[adjudicationamounttype][+].category = C4BBAdjudication#paidtoprovider
-* total[adjudicationamounttype][=].category.text = "Amount Paid to Provider"
-* total[adjudicationamounttype][=].amount.value = 100.00
-* total[adjudicationamounttype][=].amount.currency = #USD
+
 
 * item[0].sequence = 1
 
@@ -64,9 +85,6 @@ Usage: #example
 * item[0].servicedDate = "2021-10-28"
 
 * item[0].locationCodeableConcept = $CMSPlaceofServiceCodes#11 "Office"
-* item[0].adjudication[adjudicationamounttype][+].category = $HL7AdjudicationCS#submitted
-* item[0].adjudication[adjudicationamounttype][=].amount.value = 150.00
-* item[0].adjudication[adjudicationamounttype][=].amount.currency = #USD
 
 * item[0].adjudication[benefitpaymentstatus][0].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[0].adjudication[benefitpaymentstatus][0].reason = C4BBPayerAdjudicationStatus#innetwork

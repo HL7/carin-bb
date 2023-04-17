@@ -4,9 +4,16 @@ Id: C4BB-ExplanationOfBenefit-Oral
 Title: "C4BB ExplanationOfBenefit Oral"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene. The ADA Dental Claim Form provides a common format for reporting dental services to a patient's dental benefit plan."
 
+* obeys EOB-oral-meta-profile-version
 * insert BaseExplanationOfBenefitOral
 
 // Financial specific constraints
+* item.adjudication contains
+   adjudicationamounttype 1..* MS
+
+* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
+* item.adjudication[adjudicationamounttype].category from C4BBAdjudication
+* item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
 
@@ -19,6 +26,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
 * total[adjudicationamounttype].category from C4BBAdjudication (required)
 
+* item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 
@@ -29,6 +37,7 @@ Id: C4BB-ExplanationOfBenefit-Oral-NonFinancial
 Title: "C4BB ExplanationOfBenefit Oral - Non-Financial"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by providers of oral services including Dental, Denture and Hygiene. The ADA Dental Claim Form provides a common format for reporting dental services to a patient's dental benefit plan."
 
+* obeys EOB-oral-nonfinancial-meta-profile-version
 * insert BaseExplanationOfBenefitOral
 * insert ExplanationOfBenefitNonFinancial
 
@@ -40,7 +49,7 @@ RuleSet: BaseExplanationOfBenefitOral
 // 20210216 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
-* obeys EOB-oral-meta-profile-version
+
 
 
 * obeys Oral-EOB-supportinginfo-additionalbodysite-requires-line-item
@@ -168,7 +177,9 @@ RuleSet: BaseExplanationOfBenefitOral
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
 * item.adjudication contains
+/* Moved financial elements to financial profile
    adjudicationamounttype 1..* MS and
+*/
    adjustmentreason 0..1 MS and
    benefitpaymentstatus 1..1 MS and
    allowedunits 0..1 MS
@@ -181,10 +192,10 @@ RuleSet: BaseExplanationOfBenefitOral
 * item.adjudication[adjustmentreason].reason 1..1 MS
 * item.adjudication[adjustmentreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 
+/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
-/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
 */
@@ -236,7 +247,9 @@ If the service facility is not assigned an NPI, this data element will not be po
 
 * item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
 * item.adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+/* Moved financial elements to financial profile
 * item.adjudication[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
+*/
 * item.adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
 /* Moved financial elements to financial profile
 * total[adjudicationamounttype] ^comment = "Describes the various amount fields used when payers receive and adjudicate a claim. (187)"
