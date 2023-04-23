@@ -60,14 +60,14 @@ menu:
     General Guidance: General_Guidance.html
     Terminology Licensure: Terminology_Licensure.html
   FHIR Artifacts:
-    Profiles: artifacts.html#3
+    Profiles: artifacts.html#structures-abstract-profiles
     Search Parameters: searchparameters.html
-    Terminology: artifacts.html#5
+    Terminology: artifacts.html#terminology-value-sets
     Capability Statement: CapabilityStatement-c4bb.html
   Security:
     General Considerations: Security_And_Privacy_Considerations.html#general-considerations
     Security Requirements: Security_And_Privacy_Considerations.html#security-requirements
-  Examples:  artifacts.html#7
+  Examples:  artifacts.html#example-example-instances
   Downloads: downloads.html
   Change Notes: change_notes.html
 
