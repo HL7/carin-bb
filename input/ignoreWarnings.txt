@@ -93,6 +93,7 @@ WARNING: ExplanationOfBenefit/EOBProfessionalTransportation1: ExplanationOfBenef
 
 # Invalid NDC display warnings (extra spaces in display)
 WARNING: ExplanationOfBenefit/EOBPharmacy1: ExplanationOfBenefit.item[0].productOrService: The display "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)" is not a valid display for the code {http://hl7.org/fhir/sid/ndc}0777-3105-02 - should be one of ['Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02)  (package)'] (from http://tx.fhir.org/r4)
+WARNING: ExplanationOfBenefit/EOBPharmacyNonFinancial1: ExplanationOfBenefit.item[0].productOrService: The display "Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02) (package)" is not a valid display for the code {http://hl7.org/fhir/sid/ndc}0777-3105-02 - should be one of ['Prozac, 100 CAPSULE in 1 BOTTLE (0777-3105-02)  (package)'] (from http://tx.fhir.org/r4)
 
 # Warning -- all entries for all repeats of each identifier slice should be constrained as specified - This is by design
 INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[21].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)

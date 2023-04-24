@@ -4,6 +4,7 @@ Id: C4BB-ExplanationOfBenefit-Professional-NonClinician
 Title: "C4BB ExplanationOfBenefit Professional NonClinician"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional and vision services. These services may be rendered in inpatient or outpatient, including office locations. The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 
+* obeys EOB-professional-nonclinician-meta-profile-version
 * insert BaseExplanationOfBenefitProfessionalNonClinician
 
 // Financial specific constraints
@@ -36,16 +37,18 @@ Id: C4BB-ExplanationOfBenefit-Professional-NonClinician-NonFinancial
 Title: "C4BB ExplanationOfBenefit Professional NonClinician - Non-Financial"
 Description: "This profile without financial data is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional and vision services. These services may be rendered in inpatient or outpatient, including office locations. The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
 
+* obeys EOB-professional-nonclinician-nonfinancial-meta-profile-version
 * insert BaseExplanationOfBenefitProfessionalNonClinician
 * insert ExplanationOfBenefitNonFinancial
 
 // Complete Professional & NonClinician Institutional Constraints (Financial and NonFinancial)
+
 RuleSet: BaseExplanationOfBenefitProfessionalNonClinician
 
 // 20210322 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)
-* obeys EOB-professional-nonclinician-meta-profile-version
+
 * obeys EOB-prof-all-transportation-supportinginfo-linked-to-line
 
 * careTeam obeys EOB-prof-careTeam-practitioner
