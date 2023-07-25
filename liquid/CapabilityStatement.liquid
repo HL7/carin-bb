@@ -1,0 +1,631 @@
+<div>
+  {% assign foo = "bar" %}
+  {{ foo }}
+    
+  {% for sft in software %}
+    <p>Applies to software: {{sft.name}}
+      {% if sft.version.exists() %}version: {{sft.version}}{% endif %}
+      {% if sft.date.exists() %}{{sft.date}}{% endif %}
+    </p>
+  {% endfor %}
+  {% for imp in implementation %}
+    <div>
+      <p>Implementation: {{imp.url}}
+        {% if imp.custodian.display.exists() %}
+          managed by:
+          {% if imp.custodian.reference.exists() %}
+            <a href="{{imp.custodian.reference}}">
+              {{imp.custodian.display}}
+            </a>
+          {% else %}
+            {{imp.custodian.display}}
+          {% endif %}
+        {% endif %}
+      </p>
+      {{imp.description}}
+    </div>
+  {% endfor %}
+  <br/>
+  <h2>General</h2>
+  <div class="table-wrapper">
+    <table class="grid">
+      <tbody>
+        <tr>
+          <th>Supported FHIR Version:</th>
+          <td>
+            {{fhirVersion}}
+          </td>
+        </tr>
+        {% if instantiates.exists() %}
+          <tr>
+            <th>Instantiates other Capabilities:</th>
+            <td>
+              <ul>
+                {% for capability in instantiates %}
+                  <li>
+                    <a href="{{capability}}">
+                      {{capability}}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+        {% endif %}
+        {% if imports.exists() %}
+          <tr>
+            <th>Imports other Capabilities:</th>
+            <td>
+              <ul>
+                {% for capability in imports %}
+                  <li>
+                    {{capability}}
+                  </li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+        {% endif %}
+        {% if implementationGuide.exists() %}
+          <tr>
+            <th>Supports other guides:</th>
+            <td>
+              <ul>
+                {% for ig in implementationGuide %}
+                  <li>
+                    {{ig}}
+                  </li>
+                {% endfor %}
+              </ul>
+            </td>
+          </tr>
+        {% endif %}
+        {% if format.exists() %}
+          <tr>
+            <th>Supported exchange formats:</th>
+            <td>
+              {{format}}
+            </td>
+          </tr>
+        {% endif %}
+        {% if patchFormat.exists() %}
+          <tr>
+            <th>Supported patch formats:</th>
+            <td>
+              {{patchFormat}}
+            </td>
+          </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+  <p>
+    <b>Jump to:</b>
+  </p>
+  <ul>
+    {% for Arest in rest %}
+      <li><a href="#{{Arest.mode}}">REST {{Arest.mode}}</a></li>
+    {% endfor %}
+    {% if messaging %}
+      <li><a href="#messaging">Messaging</a></li>
+    {% endif %}
+    {% if documents %}
+      <li><a href="#documents">Documents</a></li>
+    {% endif %}
+  </ul>
+  {% for Arest in rest %}
+    <br/>
+    <a name="{{Arest.mode}}"> </a>
+    <h2>REST {{Arest.mode}} behavior</h2>
+    {% if Arest.documentation.exists() %}
+      <div>{{Arest.documentation}}</div>
+    {% endif %}
+    {% if Arest.security.exists() %}
+      <br/>
+      <p>
+        <b>Security:</b>
+      </p>
+      {% if Arest.security.service.coding.code.exists() %}
+        <ul>
+          {% for Asecurity in Arest.security.service.coding.code %}
+            <li>{{Asecurity}}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if Arest.security.description %}
+        <div>{{ Arest.security.description }}</div>
+      {% endif %}
+    {% endif %}
+    {% if Arest.resource.exists() %}
+      <br/>
+      <h3>Resource summary</h3>
+      <div class="table-wrapper">              
+        <table class="grid">
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>Search</th>
+              <th>Read</th>
+              <th>Read Version</th>
+              <th>Instance History</th>
+              <th>Resource History</th>
+              <th>Create</th>
+              <th>Update</th>
+              <th>Delete</th>
+              <th>Operations</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for Aresource in Arest.resource %}
+              <tr>
+                <th>
+                  {{Aresource.type}}
+                  {% for Aprofile in Aresource.profile %}
+                    (<a href="{{Aprofile}}">Profile</a>)
+                  {% endfor %}
+                </th>
+                <td>
+                  {% for Aop in Aresource.interaction.where(code = 'search-type') %}
+                    <a title="{{Aop.documentation.value}}" href="#{{Aresource.type}}-{{Aop.code}}">
+
+                      {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                        {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                      {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                        <b>PROHIBITED</b>
+                      {% else %}
+                        Yes
+                      {% endif %}
+                    </a>
+                  {% endfor %}
+                </td>
+                <td>
+                  {% for Aop in Aresource.interaction.where(code = 'read') %}
+                    <a title="{{Aop.documentation.value}}" href="#{{Aresource.type}}-{{Aop.code}}">
+                      {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                        {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                      {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                        <b>PROHIBITED</b>
+                      {% else %}
+                        Yes
+                      {% endif %}
+                    </a>
+                  {% endfor %}
+                  {% for cRead in Aresource.conditionalRead %}
+                    <br/>(conditional read:<br/>{{cRead}})
+                  {% endfor %}
+                </td>
+                <td>
+                  {% for Aop in Aresource.interaction.where(code = 'vread') %}
+                    <a title="{{Aop.documentation.value}}" href="#{{Aresource.type}}-{{Aop.code}}">
+                      {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                        {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                      {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                        <b>PROHIBITED</b>
+                      {% else %}
+                        Yes
+                      {% endif %}
+                    </a>
+                  {% endfor %}
+                  {% if Aresource.readHistory = false %}(current only){% endif %}
+                </td>
+                <td>
+                  {% for Aop in Aresource.interaction.where(code = 'history-instance') %}
+                    <a title="{{Aop.documentation.value}}" href="#{{Aresource.type}}-{{Aop.code}}">
+                      {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                        {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                      {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                        <b>PROHIBITED</b>
+                      {% else %}
+                        Yes
+                      {% endif %}
+                    </a>
+                  {% endfor %}
+                </td>
+                <td>
+                  {% for Aop in Aresource.interaction.where(code = 'history-type') %}
+                    <a title="{{Aop.documentation.value}}" href="#{{Aresource.type}}-{{Aop.code}}">
+                      {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                        {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                      {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                        <b>PROHIBITED</b>
+                      {% else %}
+                        Yes
+                      {% endif %}
+                    </a>
+                  {% endfor %}
+                </td>
+                <td>
+                  {% for Aop in Aresource.interaction.where(code = 'create') %}
+                    <a title="{{Aop.documentation.value}}" href="#{{Aresource.type}}-{{Aop.code}}">
+                      {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                        {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                      {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                        <b>PROHIBITED</b>
+                      {% else %}
+                        Yes
+                      {% endif %}
+                    </a>
+                  {% endfor %}
+                  {% if Aresource.conditionalCreate = true %}(conditional supported){% endif %}
+                </td>
+                <td>
+                  {% for Aop in Aresource.interaction.where(code = 'update') %}
+                    <a title="{{Aop.documentation.value}}" href="#{{Aresource.type}}-{{Aop.code}}">
+                      {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                        {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                      {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                        <b>PROHIBITED</b>
+                      {% else %}
+                        Yes
+                      {% endif %}
+                    </a>
+                  {% endfor %}
+                  {% if Aresource.updateCreate = false %}(existing only){% endif %}
+                  {% if Aresource.conditionalUpdate = true %}(conditional supported){% endif %}
+                </td>
+                <td>
+                  {% for Aop in Aresource.interaction.where(code = 'delete') %}
+                    <a title="{{Aop.documentation.value}}" href="#{{Aresource.type}}-{{Aop.code}}">
+                      {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                        {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                      {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                        <b>PROHIBITED</b>
+                      {% else %}
+                        Yes
+                      {% endif %}
+                    </a>
+                  {% endfor %}
+                  {% if Aresource.conditionalDelete.exists() %}(conditional {{Aresource.conditionalDelete}}){% endif %}
+                </td>
+                <td>
+                  {% for Aop in Aresoruce.operation %}
+                    ${{Aop.name}}:
+                    {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                      {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                    {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                      <b>PROHIBITED</b>
+                    {% else %}
+                      Yes
+                    {% endif %}
+                    {% if forloop.first = false %}
+                      <br/>
+                    {% endif %}
+                  {% endfor %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% endif %}
+    {% if Arest.operation.exists() %}
+      <p>
+        <b>Operations:</b>
+      </p>
+      <ul>
+        {% for Aop in Arest.operation %}
+          <li>
+            <a href="{{Aop.definition|downcase}}">${{Aop.name}}</a>
+            {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+              {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+            {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+              <b>PROHIBITED</b>
+            {% else %}
+              Yes
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% if Arest.interaction.exists() %}
+      <h3>General interactions</h3>
+      <div class="table-wrapper">
+        <table class="list">
+        <thead>
+          <tr>
+            <th style="text-align: center">Name</th>
+            {% if Arest.interaction.extension(http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation).exists() or 
+                  Arest.interaction.extension(http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited).exists() %}
+              <th style="text-align: center">Conformance</th>
+            {% endif %}
+            <th style="text-align: center">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for Aop in Aresource.interaction %}
+            <tr>
+              <td>
+                <b>
+                  <a name="{{Aresource.type}}-{{Aop.code}}">&#xA0;</a>
+                  <span>{{Aop.code}}</span>
+                </b>
+              </td>
+              {% if Arest.interaction.extension(http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation).exists() or 
+                    Arest.interaction.extension(http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited).exists() %}
+                <td>
+                  {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                    {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                  {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                    <b>PROHIBITED</b>
+                  {% endif %}
+                </td>
+              {% endif %}
+              <td>
+                {{Aop.documentation}}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      </div>
+    {% endif %}
+    {% for Aresource in Arest.resource %}
+      <br/>
+      <br/>
+      <h3>
+        <a href="http://hl7.org/fhir/{{Aresource.type | downcase}}.html">{{Aresource.type}}</a>              
+      </h3>
+      {% for Aprofile in Aresource.profile %}
+        <p>Profile: {{Aprofile}}</p>
+      {% endfor %}
+      {% if Aresource.supportedProfile.exists() %}
+        <p>Supported Profile(s):</p>
+        <ul>
+          {% for Aprofile in Aresource.supportedProfile %}
+            <li>
+              {{Aprofile}}
+              {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+              {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                <b>PROHIBITED</b>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if Aresource.versioning.exists() or Aresource.referencePolicy.exists() %}
+        <h4>Behavior</h4>
+        {% if Aresource.versioning.exists() %}
+          <p>Versioning support: {{Aresource.versioning}}</p>
+        {% endif %}
+        {% if Aresource.referencePolicy.exists() %}
+          <p>Reference policy: {{Aresource.referencePolicy}}</p>
+        {% endif %}
+      {% endif %}
+      <!-- Note: description doesn't exist yet -->
+      {{documentation}}
+      <h4>Interactions</h4>
+      <div class="table-wrapper">
+        <table class="list">
+          <thead>
+            <tr>
+              <th style="text-align: center">Name</th>
+              {% if Aresource.interaction.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() or 
+                    Aresource.interaction.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').exists() or
+                    Aresource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() or 
+                    Aresource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').exists() %}
+                <th style="text-align: center">Conformance</th>
+              {% endif %}
+              <th style="text-align: center">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for Aop in Aresource.interaction.where(documentation.exists()) %}
+              <tr>
+                <td>
+                  <b>
+                    <a name="{{Aresource.type}}-{{Aop.code}}">&#xA0;</a>
+                    <span>{{Aop.code}}</span>
+                  </b>
+                </td>
+                {% if Aresource.interaction.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() or 
+                      Aresource.interaction.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').exists() or
+                      Aresource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() or 
+                      Aresource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').exists() %}
+                  <td>
+                    {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                      {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                    {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                      <b>PROHIBITED</b>
+                    {% endif %}
+                  </td>
+                {% endif %}
+                <td>
+                  {{Aop.documentation}}
+                </td>
+              </tr>
+            {% endfor %}
+            {% for Aop in Aresource.operation.where(documentation.exists()) %}
+              <tr>
+                <th>
+                  <a name="{{Aresource.type}}-{{Aop.name}}">&#xA0;</a>
+                  <span>${{Aop.name}}</span>
+                </th>
+                {% if Aresource.interaction.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() or 
+                      Aresource.interaction.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').exists() or
+                      Aresource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() or 
+                      Aresource.operation.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').exists() %}
+                  <td>
+                    {% if Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                      {{Aop.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                    {% elsif Aop.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                      <b>PROHIBITED</b>
+                    {% endif %}
+                  </td>
+                {% endif %}
+                <td>
+                  {{Aop.documentation}}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% if Aresource.searchInclude.exists() or Aresource.searchRevInclude.exists() or Aresource.searchParam.exists() %}
+        <h4>Search</h4>
+        {% if Aresource.searchInclude.exists() %}
+          <p>Supported Includes: {{Aresource.searchInclude}}</p>
+        {% endif %}
+        {% if Aresource.searchRevInclude.exists() %}
+          <p>Supported Reverse-Includes: {{Aresource.searchRevInclude}}</p>
+        {% endif %}
+        {% if Aresource.searchParam.exists() %}
+          <div class="table-wrapper">
+            <table class="list">
+              <thead>
+                <tr>
+                  <th style="text-align: center">Parameter</th>
+                  {% if Aresource.searchParam.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() or 
+                        Aresource.searchParam.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').exists() %}
+                    <th style="text-align: center">Conformance</th>
+                  {% endif %}
+                  <th style="text-align: center">Type</th>
+                  <th style="text-align: center">Definition &amp; Chaining</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for Aparam in Aresource.searchParam %}
+                  <tr>
+                    <td>
+                      <b>
+                        {% if Aparam.definition.exists() %}
+                          <a href="{{Aparam.definition.value}}">{{Aparam.name}}</a>
+                        {% else %}
+                          {{Aparam.name}}
+                        {% endif %}
+                      </b>
+                    </td>
+                    {% if Aresource.searchParam.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() or 
+                          Aresource.searchParam.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').exists() %}
+                      <td>
+                        {% if Aparam.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').exists() %}
+                          {{Aparam.extension('http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation').value}}
+                        {% elsif Aparam.modifierExtension.where(url='http://hl7.org/fhir/StructureDefinition/capabilitystatement-prohibited').value = true %}
+                          <b>PROHIBITED</b>
+                        {% endif %}
+                      </td>
+                    {% endif %}
+                    <td>{{Aparam.type}}
+                      {% if Aparam.target.exists() %}
+                        ({{Aparam.target}})
+                      {% endif %}
+                    </td>
+                    <td>
+                      {{Aparam.documentation}}
+                      {% if Aparam.chain.exists() %}
+                        Chaining: {{Aparam.chain}}
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {% for Amsg in messaging %}
+    <br/>
+    <br/>
+    <a name="messaging"></a>
+    <h2>Messaging</h2>
+    {% if Amsg.endpoint.exists() %}
+      <p>
+        <b>End point(s): </b>
+      </p>
+      <div class="table-wrapper">
+        <table cellpadding="grid">
+          <tbody>
+            <tr>
+              <th>Address</th>
+              <th>Protocol(s)</th>
+            </tr>
+            {% for Aendpoint in Amsg.endpoint %}
+              <tr>
+                <td>{{Aendpoint.address}}</td>
+                <td>
+                  {% for Aprotocol in Aendpoint.protocol %}
+                    {% if forloop.first = false %}, {% endif %}
+                    {% if Aprotocol.display.exists() %}
+                      {{Aprotocol.display}}
+                    {% else %}
+                      {{Aprotocol.code}}
+                    {% endif %}
+                  {% endfor %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% endif %}
+    {{Amsg.documentation}}
+    <div class="table-wrapper">
+      <table class="grid">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Category</th>
+            <th>Mode</th>
+            <th>Focus</th>
+            <th>Request</th>
+            <th>Response</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for Aevent in Amsg.event %}
+            <tr>
+              <td>{{Aevent.code}}</td>
+              <td>{{Aevent.category}}</td>
+              <td>{{Aevent.mode}}</td>
+              <td>{{Aevent.focus}}</td>
+              <td>
+                {%for Aref in Aevent.request.reference %}
+                  <a href="{{Aref.value}}.html">{{Aref}}</a>
+                {% endfor %}
+              </td>
+              <td>
+                {%for Aref in Aevent.response.reference %}
+                  <a href="{{Aref.value}}.html">{{Aref}}</a>
+                {% endfor %}
+              </td>
+              <td>{{Aevent.documentation}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endfor %}
+  {% if document.exists() %}
+    <br/>
+    <br/>
+    <a name="documents"> </a>
+    <h2>Documents</h2>
+    <div class="table-wrapper">
+      <table class="grid">
+        <thead>
+          <tr>
+            <th>Mode</th>
+            <th>Profile</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for Adoc in document %}
+            <tr>
+              <td>{{Adoc.mode}}</td>
+              <td>
+                {% for Aprofile in Adoc.profile %}
+                  {{Aprofile}}
+                {% endfor %}
+              </td>
+              <td>{{Adoc.documentation}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endif %}
+</div>

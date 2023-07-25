@@ -32,6 +32,8 @@ parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
+  produce-jekyll-data: true
+  path-liquid: "liquid"
   excludettl: 'true'
   excludemap: 'true'
   special-url:
