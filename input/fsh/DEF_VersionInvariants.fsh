@@ -73,3 +73,8 @@ Invariant: EOB-oral-nonfinancial-meta-profile-version
 Description: "Oral EOB: meta.profile with canonical and major.minor. version required."
 Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Oral-NonFinancial|2.0.'))"
 Severity: #error
+
+Invariant: provenance-meta-profile-version
+Description: "Provenance: meta.profile with canonical and major.minor. version required."
+Expression: "meta.profile.exists($this.startsWith('http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Provenance|2.0.'))"
+Severity: #error

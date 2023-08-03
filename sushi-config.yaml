@@ -32,6 +32,7 @@ parameters:
   show-inherited-invariants: false
   apply-jurisdiction: true
   apply-publisher: true
+  path-liquid: liquid
   excludettl: 'true'
   excludemap: 'true'
   special-url:

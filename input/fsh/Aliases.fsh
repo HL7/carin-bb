@@ -52,6 +52,7 @@ Alias: $2.16.840.1.114222.4.11.1066 = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.
 //USCore -
 Alias:   $USCoreLocation = http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
 Alias:   $USCorePatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+Alias:   $USCoreProvenance = http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance
 
 
 Alias: $us-core-race = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
