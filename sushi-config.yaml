@@ -39,7 +39,7 @@ parameters:
     - https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes
     - https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
 
-copyrightYear: 2022+
+copyrightYear: 2023+
 releaseLabel: STU 2
 jurisdiction: urn:iso:std:iso:3166#US
 
