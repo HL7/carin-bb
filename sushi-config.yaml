@@ -16,8 +16,13 @@ version: 2.0.0
 name: CARINConsumerDirectedPayerDataExchange
 title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 status: active
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
+    valueCode: fm  # <<< The value must be the code for the workgroup
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
 publisher:
-  name: HL7 Financial Management Working Group
+  name: HL7 International / Financial Management
   url: http://www.hl7.org/Special/committees/fm
   email: fm@lists.HL7.org
 description: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
@@ -30,15 +35,21 @@ dependencies:
     version: 0.7.0
 parameters:
   show-inherited-invariants: false
-  apply-jurisdiction: true
-  apply-publisher: true
+  default-jurisdiction: true
+  default-publisher: true
+  default-version: true
+  default-contact: true
+  apply-jurisdiction: false
+  apply-publisher: false
+  apply-version: false
+  apply-contact: false
   excludettl: 'true'
   excludemap: 'true'
   special-url:
     - https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes
     - https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
 
-copyrightYear: 2022+
+copyrightYear: 2023+
 releaseLabel: STU 2
 jurisdiction: urn:iso:std:iso:3166#US
 
