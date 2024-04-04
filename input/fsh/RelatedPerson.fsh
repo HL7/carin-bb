@@ -14,7 +14,7 @@ Description: "This profile is used to convey basic demographic information about
 * telecom 0..* MS
 * address 0..* MS
 * obeys relatedperson-name-or-relationship
-* obeys relatedperson-meta-profile-version
+//* obeys relatedperson-meta-profile-version
 
 Invariant: relatedperson-name-or-relationship
 Description: "Either a name or a relationship SHALL be provided (or both)"

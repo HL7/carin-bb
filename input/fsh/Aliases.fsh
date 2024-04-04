@@ -132,3 +132,5 @@ Alias: $C4BBAdjudicationCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdju
 Alias: $C4BBIdentifierTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType
 Alias: $C4BBClaimDiagnosisTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType
 Alias: $C4BBAdjudicationDiscriminator =  http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator
+
+Alias: $R5CoverageKind = http://hl7.org/fhir/5.0/StructureDefinition/extension-Coverage.kind

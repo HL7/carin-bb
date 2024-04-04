@@ -1,14 +1,15 @@
-Profile: C4BBExplanationOfBenefitInpatientInstitutional
+Profile: C4BBExplanationOfBenefitInpatientInstitutionalBasis
 Parent: C4BB-ExplanationOfBenefit
-Id: C4BB-ExplanationOfBenefit-Inpatient-Institutional
-Title: "C4BB ExplanationOfBenefit Inpatient Institutional"
-Description: "The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at an institution as part of an overnight stay.
+Id: C4BB-ExplanationOfBenefit-Inpatient-Institutional-Basis
+Title: "C4BB ExplanationOfBenefit Inpatient Institutional Basis"
+Description: "The basis profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at an institution as part of an overnight stay.
 The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human
-Services."
+Services.
+The basis profile does not have requirements for financial data."
 // 20210322 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitInpatientInstitutional|1.2.0)
-* obeys EOB-institutional-inpatient-meta-profile-version
+//* obeys EOB-institutional-inpatient-meta-profile-version
 //@Saul -- added MS
 * use MS
 * outcome MS
@@ -112,11 +113,16 @@ Services."
 * item.revenue from AHANUBCRevenueCodes (required)
 * item.modifier from AMACPTCMSHCPCSModifiers (required)
 * item.productOrService from C4BBEOBInstitutionalProcedureCodes (required)
-* insert EOBHeaderItemAdjudicationInvariant
-* insert ItemAdjudicationInvariant
+
+// CHANGE FOR NON-FINANCIAL
+//* insert EOBHeaderItemAdjudicationInvariant
+// CHANGE FOR NON-FINANCIAL
+//* insert ItemAdjudicationInvariant
+
 * insert ItemAdjudicationSlicing
 * item.adjudication contains
-   adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
+// CHANGE FOR NON-FINANCIAL
+//   adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
    adjustmentreason 0..* MS and
    allowedunits 0..1 MS
 
@@ -131,10 +137,13 @@ Services."
 * item.adjudication[adjustmentreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * item.adjudication[adjustmentreason].reason 1..1 MS
 
+// CHANGE FOR NON-FINANCIAL
+/*
 * item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+*/
 /* removed - FHIR-38063 - Update Invariants to support contracting and benefit payment status move to EOB.adjudication
 * insert AdjudicationInvariant
 */
@@ -144,7 +153,8 @@ Services."
 * adjudication contains
    billingnetworkstatus 0..1 MS and
    benefitpaymentstatus 1..1 MS and
-   adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
+// CHANGE FOR NON-FINANCIAL   
+//   adjudicationamounttype 0..* MS and   /* restricted to 1..* by invariant */
    adjustmentreason 0..* MS
 
 
@@ -164,9 +174,13 @@ Services."
 * adjudication[adjustmentreason].reason from X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes
 * adjudication[adjustmentreason].reason 1..1 MS
 
+// CHANGE FOR NON-FINANCIAL
+/*
 * adjudication[adjudicationamounttype] ^short = "Claim level adjudication type and amount"
 * adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
 * adjudication[adjudicationamounttype].amount 1..1
+*/
+/*
 * insert TotalSlicing
 * total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total contains
@@ -175,7 +189,8 @@ Services."
 * total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
 * total[adjudicationamounttype].amount MS
-//* total[adjudicationamounttype].amount 1..1
+* total[adjudicationamounttype].amount 1..1
+*/
 * patient MS
 * insurer MS
 // 20210309 CAS: FHIR-31477 - Change cardinality of inpatient profile's insurance to 1..* to allow for coordination of benefits, consistent with the rest of the CARIN EOB profiles
@@ -219,6 +234,80 @@ Services."
 * careTeam.provider MS
 * billablePeriod.start MS
 * billablePeriod.end MS
+
+* supportingInfo[pointoforigin] ^comment = "Identifies the place where the patient was identified as needing admission to an institution. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13)"
+* supportingInfo[admtype] ^comment = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14)"
+* supportingInfo[typeofbill] ^comment = "UB04 (Form Locator 4) type of bill code provides specific information for payer purposes. The first digit of the three-digit number denotes the type of institution, the second digit classifies the type of care being billed, and the third digit  identifies the frequency of the bill for a specific course of treatment or inpatient confinement. (17)"
+* supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
+* supportingInfo[admissionperiod] ^comment = "The Period.start date corresponds with the date the beneficiary was admitted to a facility and the onset of services. May precede the Statement From Date if this claim is for a beneficiary who has been continuously under care. The Period.end date corresponds with the date beneficiary was discharged from the facility, or died. Matches the final Statement Thru Date. When there is a discharge date, the Patient Discharge Status Code indicates the final disposition of the patient after discharge. (18, 19)"
+* supportingInfo[drg] ^comment = "Claim diagnosis related group (DRG). DRGs require the DRG system; i.e., MS-DRG / AP-DRG / APR-DRG, the DRG version and the code value (32, 33. 113)"
+* supportingInfo[discharge-status] ^comment = "Patient’s status as of the discharge date for a facility stay. Information located on UB04. (Form Locator 17). (117)"
+* supportingInfo[medicalrecordnumber] ^comment = "Provider submitted medical record number that can be included on the claim. (109)"
+* supportingInfo[patientaccountnumber] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
+* item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
+* item.adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+* adjudication[billingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+* adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+* diagnosis.onAdmission ^comment = "Used to capture whether a diagnosis was present at time of a patient's admission. (28)"
+* diagnosis ^comment = "Diagnosis codes describe an individual's disease or medical condition. (6, 7, 8, 21, 22, 23, 30)"
+* diagnosis.type ^comment =  "Indicates if the inpatient institutional diagnosis is admitting, principal, other or an external cause of injury. (21, 22, 23)"
+* diagnosis.sequence ^comment =  "Diagnosis.sequence values do not necessarily indicate any order in which the diagnosis was reported or identified.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of diagnosis.type to identify primary, secondary, etc."
+* item.productOrService ^comment = "Medical procedure a patient received from a health care provider. Current coding methods include: CPT-4 and HCFA Common Procedure Coding System Level II - (HCPCSII). (40)"
+* item.modifier ^comment = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41)"
+* item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (42)"
+* item.revenue ^comment = "Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed (86)"
+* adjudication[adjustmentreason].reason ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+* careTeam.provider ^comment = "The National Provider Identifier assigned to the care team (primary care provider, attending, referring, otheroperating, operating, and rendering) for the admission. (93, 96, 98, 99, 173)"
+* procedure ^comment = "Medical procedure a patient received during inpatient stay. Current coding methods include: International Classification of Diseases Surgical Procedures (ICD-9). Information located on UB04 (Form Locator 74). (25, 27, 10, 12)"
+* procedure.type ^comment = "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure. (186)"
+* procedure.sequence ^comment =  " procedure.sequence values do not necessarily indicate any order in which the procedure occurred.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of procedure.type to identify primary and secondary procedures"
+
+
+* insert EOBBaseProfileComments
+
+
+
+Profile: C4BBExplanationOfBenefitInpatientInstitutional
+Parent: C4BB-ExplanationOfBenefit-Inpatient-Institutional-Basis
+Id: C4BB-ExplanationOfBenefit-Inpatient-Institutional
+Title: "C4BB ExplanationOfBenefit Inpatient Institutional"
+Description: "The profile is used for Explanation of Benefits (EOBs) based on claims submitted by clinics, hospitals, skilled nursing facilities and other institutions for inpatient services, which may include the use of equipment and supplies, laboratory services, radiology services and other charges. Inpatient claims are submitted for services rendered at an institution as part of an overnight stay.
+The claims data is based on the institutional claim format UB-04, submission standards adopted by the Department of Health and Human
+Services.
+The profile has requirements for financial data."
+
+* insert EOBHeaderItemAdjudicationInvariant
+* insert ItemAdjudicationInvariant
+//* insert ItemAdjudicationSlicing
+* item.adjudication contains
+   adjudicationamounttype 0..* MS  /* restricted to 1..* by invariant */
+
+* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
+* item.adjudication[adjudicationamounttype].category from C4BBAdjudication
+* item.adjudication[adjudicationamounttype].amount MS
+* item.adjudication[adjudicationamounttype].amount 1..1
+
+//* insert AdjudicationSlicing
+* adjudication contains
+   adjudicationamounttype 0..* MS  /* restricted to 1..* by invariant */
+
+
+* adjudication[adjudicationamounttype] ^short = "Claim level adjudication type and amount"
+* adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
+* adjudication[adjudicationamounttype].amount 1..1
+
+* total 1..* MS
+* insert TotalSlicing
+* total.category from C4BBTotalCategoryDiscriminator (extensible)
+* total contains
+   adjudicationamounttype 1..* MS
+
+* total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
+* total[adjudicationamounttype].category from C4BBAdjudication  (required)
+* total[adjudicationamounttype].amount MS
+* total[adjudicationamounttype].amount 1..1
+
 
 * supportingInfo[pointoforigin] ^comment = "Identifies the place where the patient was identified as needing admission to an institution. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13)"
 * supportingInfo[admtype] ^comment = "Priority of the admission. Information located on (UB04 Form Locator 14). For example, an admission type of elective indicates that the patient's condition permitted time for medical services to be scheduled. (14)"

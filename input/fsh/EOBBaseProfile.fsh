@@ -80,7 +80,9 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * payment.type MS
 * processNote MS
 * priority from http://hl7.org/fhir/ValueSet/process-priority  // Fix a bug in R4 EOB which points to a CodeSystem.   Eliminates an error on output
-* total 1..* MS
+// CHANGE FOR NON-FINANCIAL
+//* total 1..* MS
+
 
 * insert EOBBaseProfileComments
 

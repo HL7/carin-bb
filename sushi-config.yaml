@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.carin-bb
 canonical: http://hl7.org/fhir/us/carin-bb
-version: 2.0.0
+version: 2.1.0-draft
 name: CARINConsumerDirectedPayerDataExchange
 title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 status: active
@@ -29,7 +29,8 @@ description: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Butt
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.1
+  hl7.fhir.us.core: 6.1.0
+  hl7.fhir.extensions.r5: 4.0.1
   us.nlm.vsac:
     uri: http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.nlm.vsac
     version: 0.7.0
@@ -49,7 +50,7 @@ parameters:
     - https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes
     - https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
 
-copyrightYear: 2023+
+copyrightYear: 2024+
 releaseLabel: STU 2
 jurisdiction: urn:iso:std:iso:3166#US
 
