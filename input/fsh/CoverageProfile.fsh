@@ -20,7 +20,11 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 //* subscriber only Reference(C4BBPatient)
 
 * extension contains
-    $R5CoverageKind named coverage-kind 1..1
+   $R5CoverageKind named coverage-kind 1..1 and
+   InsuranceProductLine named product-line 0..1  MS and
+   InsuranceProductType named product-type 0..1 MS and
+   CoverageBenefitType named benefit-type 0..* MS
+
 
 * extension[coverage-kind]
   * valueCode 1..1
@@ -169,7 +173,7 @@ Description: "Insurance Product Type Value Set"
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false
 
-
+/*
 CodeSystem: C4BBCoverageClassCS
 Title: "C4BB Insurance Product Line Code System"
 Description: "Insurance Product Line Code System"
@@ -178,6 +182,7 @@ Description: "Insurance Product Line Code System"
 * #benefit-type "Benefit Type" "Type of benefit offered through insurance coverage"
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false
+*/
 
 
 ValueSet: C4BBCoverageClassVS
@@ -187,3 +192,36 @@ Description: "C4BB Coverage Class Value Set"
 * codes from system $CoverageClassCS
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false
+
+
+
+Extension: InsuranceProductLine
+//Id: usdf-FormularyReference-extension
+Title: "Insurance Product Line"
+Description: "Insurance Product Line."
+* ^context[+].type = #element
+* ^context[=].expression = "Coverage"
+* value[x] 1..1
+* value[x] only CodeableConcept
+* valueCodeableConcept from C4BBInsuranceProductLineVS (extensible)
+
+
+Extension: InsuranceProductType
+//Id: usdf-FormularyReference-extension
+Title: "Insurance Product Type"
+Description: "Insurance Product Type."
+* ^context[+].type = #element
+* ^context[=].expression = "Coverage"
+* value[x] 1..1
+* value[x] only CodeableConcept
+* valueCodeableConcept from C4BBInsuranceProductTypeVS (extensible)
+
+Extension: CoverageBenefitType
+//Id: usdf-FormularyReference-extension
+Title: "Coverage Benefit Type"
+Description: "Coverage Benefit Type."
+* ^context[+].type = #element
+* ^context[=].expression = "Coverage"
+* value[x] 1..1
+* value[x] only CodeableConcept
+* valueCodeableConcept from http://hl7.org/fhir/us/ndh/ValueSet/NdhCoverageTypeVS (extensible)
