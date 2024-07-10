@@ -308,20 +308,20 @@ If the service facility is not assigned an NPI, this data element will not be po
 
 Invariant:  Oral-EOB-surface-subsite-requires-tooth-number
 Description: "If item.subsite (tooth surface) exists then tooth number is required in bodySite or supportingInfo[additionalBodySite]"
-Expression: "item.where(subSite.exists() and (bodySite.where(coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' and category.coding.code = 'additionalbodysite').sequence).isDistinct())).count() = 0"
+//Expression: "item.where(subSite.exists() and (bodySite.where(coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.where(coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists() and category.where(coding.code = 'additionalbodysite').exists()).sequence).isDistinct())).count() = 0"
+Expression: "item.where(subSite.exists() and (bodySite.coding.where(system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.where(system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists() and category.coding.where(code = 'additionalbodysite').exists()).sequence).isDistinct())).count() = 0"
 Severity:   #error
 
 Invariant:  Oral-EOB-supportinginfo-additionalbodysite-requires-line-item
 Description: "supportingInfo repetitions with additional body site must be referred to by one or more repetitions of item.informationSequence"
-Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(%context.item.informationSequence)"
+//Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(%context.item.informationSequence)"
+//Expression: "supportingInfo.where(category.coding.where(code = 'additionalbodysite').exists()).where(sequence.subsetOf(%context.item.informationSequence)).exists()"
+Expression: "supportingInfo.where(category.coding.where(code = 'additionalbodysite').exists()).sequence.subsetOf(%context.item.informationSequence)"
 Severity:   #error
 
 
 Invariant:  Oral-line-item-with-linked-additionalbody-site-requires-bodysite
 Description: "At least one item.bodySite needs to be present if an item.informationSequence references supportingInfo[additionalbodysite].sequence"
 //Expression: "item.where(informationSequence.intersect(%context.supportingInfo.where(category.coding.code = 'additionalbodysite').sequence).exists()).bodySite.exists()"
-Expression: "item.where(informationSequence.intersect(%context.supportingInfo.where(category.coding.code = 'additionalbodysite').sequence).exists()).where(bodySite.count() != count()).empty()"
+Expression: "item.where(informationSequence.intersect(%context.supportingInfo.where(category.coding.where(code = 'additionalbodysite').exists()).sequence).exists()).where(bodySite.count() != count()).empty()"
 Severity:   #error
-
-
-//item.where(informationSequence.intersect(%context.supportingInfo.where(category.coding.code = 'additionalbodysite').sequence).exists()).where(bodySite.count() != count()).empty()
