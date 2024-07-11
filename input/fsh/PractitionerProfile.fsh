@@ -1,9 +1,10 @@
 
 Profile: C4BBPractitioner
-Parent: $USCorePractitioner
+Parent: USCorePractitionerProfile|6.1.0
 Id: C4BB-Practitioner
 Title: "C4BB Practitioner"
 Description: "This profile builds upon the US Core Practitioner profile. It is used to convey information about the practitioner who provided to the patient services described on the claim."
+* ^extension[$compliesWithProfile].valueCanonical = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|3.1.1"
 * obeys Practitioner-identifier
 * meta 1..1 MS
 * meta.lastUpdated 0..1 MS

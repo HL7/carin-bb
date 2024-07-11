@@ -1,7 +1,7 @@
 // TODO relax meta.profile no invariant, just require at least one. Across all profiles (Jira ticket? If no ticket, create one.)
 
 Profile: C4BBCoverage
-Parent: USCoreCoverageProfile
+Parent: USCoreCoverageProfile|6.1.0
 Id: C4BB-Coverage
 Title: "C4BB Coverage"
 Description: "Data that reflect a payer’s coverage that was effective as of the date of service or the date of admission of the claim."
@@ -192,6 +192,7 @@ Description: "C4BB Coverage Class Value Set"
 * codes from system $CoverageClassCS
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false
+
 
 
 
