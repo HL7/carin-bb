@@ -29,7 +29,17 @@ description: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Butt
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 6.1.0
+  hl7.fhir.us.core:
+    id: uscore6
+    version: 6.1.0
+    reason: |
+      Defines USCDIv3 expectations on a range of resources that will be queried by CARIN BlueButton client systems
+  hl7.fhir.us.core.3.1.1:
+    version: 3.1.1
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore3
+    reason: |
+      Defines USCDIv3 expectations on a range of resources that will be queried by CARIN BlueButton client systems
   hl7.fhir.extensions.r5: 4.0.1
   us.nlm.vsac:
     uri: http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.nlm.vsac
