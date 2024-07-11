@@ -119,7 +119,7 @@
                             "valueCode": "SHALL"
                         }
                     ],
-                    "documentation": "When an EOB references another resource (e.g., Patient or Practitioner), the reference may be versioned or versionless. Payers SHALL use versioned references whenever they maintain point-in-time data (data that was effective as of the date of service or date of admission on the claim), but MAY use versionless references when they do not maintain versioned data. Clients MAY request referenced resources as part of an EOB search (by supplying the _include parameter) or directly using read or vread. Payers SHALL support both approaches, and SHALL return the same content for referenced resources in either case. \u201c:iterate\" should be used if you request to include Coverage:payor in the EOB response bundle, e.g. GET [base]/ExplanationOfBenefit?_id[parameter=value]&_include=ExplanationOfBenefit:coverage&_include:iterate=Coverage:payor.",
+                    "documentation": "When an EOB references another resource (e.g., Patient or Practitioner), the reference may be versioned or versionless. Payers SHALL use versioned references whenever they maintain point-in-time data (data that was effective as of the date of service or date of admission on the claim), but MAY use versionless references when they do not maintain versioned data. Clients MAY request referenced resources as part of an EOB search (by supplying the _include parameter) or directly using read or vread. Payers SHALL support both approaches, and SHALL return the same content for referenced resources in either case. \u201c:iterate\" should be used if you request to include Coverage:payor in the EOB response bundle, e.g. GET [base]/ExplanationOfBenefit?_id[parameter=value]&_include=ExplanationOfBenefit:coverage&_include:iterate=Coverage:payor.\n\nPayers SHALL support _revinclude for Provenance",
                     "interaction": [
                         {
                             "extension": [
@@ -161,6 +161,9 @@
                         "ExplanationOfBenefit:insurer",
                         "ExplanationOfBenefit:payee",
                         "ExplanationOfBenefit:*"
+                    ],
+                    "searchRevInclude": [
+                        "Provenance:target"
                     ],
                     "searchParam": [
                         {
@@ -543,6 +546,42 @@
                         "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-RelatedPerson"
                     ],
                     "type": "RelatedPerson"
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                            "valueCode": "SHALL"
+                        }
+                    ],
+                    "documentation": "* The US Core Provenance resource **SHALL** be supported for these resources:\n    * ExplanationOfBenefit",
+                    "interaction": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHALL"
+                                }
+                            ],
+                            "code": "read"
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                                    "valueCode": "SHOULD"
+                                }
+                            ],
+                            "code": "vread"
+                        }
+                    ],
+                    "referencePolicy": [
+                        "resolves"
+                    ],
+                    "supportedProfile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|6.1.0"
+                    ],
+                    "type": "Provenance"
                 }
             ],
             "security": {
