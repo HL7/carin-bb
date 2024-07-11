@@ -31,7 +31,7 @@
 
 ### Missing Data
 
-<p>If the source system does not have data for a *Must Support* data element with minimum cardinality = 0, the data element is omitted from the resource. If the source system does not have data for a required data element (in other words, where the minimum cardinality is &gt; 0), follow guidance defined in the core FHIR specification and summarized in the&nbsp;<a href="{{site.data.fhir.ver.hl7_fhir_us_core}}/general-guidance.html#missing-data">US Core.</a></p>
+<p>If the source system does not have data for a *Must Support* data element with minimum cardinality = 0, the data element is omitted from the resource. If the source system does not have data for a required data element (in other words, where the minimum cardinality is &gt; 0), follow guidance defined in the core FHIR specification and summarized in the&nbsp;<a href="{{site.data.fhir.ver.uscore6}}/general-requirements.html#missing-data">US Core.</a></p>
 ### Conformance to US Core Profiles
 <p>Any actor acting as a Health Plan API actor in this IG <strong>SHALL</strong>:</p>
 <ul>
