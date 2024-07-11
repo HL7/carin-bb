@@ -5,7 +5,7 @@ Title: "EOB Inpatient Example1"
 Description: "EOB Inpatient Example 1"
 Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|2.0.0"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|2.1.0"
 * language = #en-US
 * identifier.type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType#uc
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"

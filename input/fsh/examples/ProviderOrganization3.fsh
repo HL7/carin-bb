@@ -4,11 +4,11 @@ Title: "Provider Organization Example 3"
 Description: "Provider Organization Example 3"
 Usage: #example
 * meta.lastUpdated = "2020-05-04T03:02:01-04:00"
-* meta.profile[+] = Canonical(C4BBOrganization|2.0.0)
+* meta.profile[+] = Canonical(C4BBOrganization|2.1.0)
 * identifier.type = $v2-0203#NPI "National Provider Identifier"
 * identifier.type.text = "National Provider Identifier"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "3334445550"
+* identifier.value = "9941339100"
 * active = true
 * name = "Green Medical Group"
 * address.line = "Attn: Green Medical Group"

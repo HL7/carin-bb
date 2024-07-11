@@ -5,7 +5,7 @@ Description: "EOB Professional - Transportation Services Example 1"
 Usage: #example
 * meta.lastUpdated = "2022-09-10T14:46:05-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.0.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.1.0)
 * identifier[uniqueclaimid].type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier[uniqueclaimid].type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier[uniqueclaimid].system = "https://www.example.com/fhir/EOBIdentifier"
@@ -13,9 +13,6 @@ Usage: #example
 * status = #active
 * type = $claim-type#professional
 * type.text = "Professional"
-
-* subType = X12AmbulanceTransportReasonCodes#B "Patient was transported for the benefit of a preferred physician"
-
 * use = #claim
 * patient = Reference(Patient1)
 * billablePeriod.start = "2022-09-10"
@@ -26,11 +23,11 @@ Usage: #example
 * payee.type.text = "Any benefit payable will be paid to the provider (Assignment of Benefit)."
 * payee.party = Reference(ProviderTransportationOrganization1)
 * outcome = #complete
-* careTeam[+].sequence = 1
-* careTeam[=].provider = Reference(ProviderTransportationOrganization1)
-* careTeam[=].role = C4BBClaimCareTeamRole#rendering "Rendering provider"
-* careTeam[=].role.text = "The rendering care provider."
-* careTeam[=].qualification = $NUCCProviderTaxonomy#343900000X "Transportation Services; Non-emergency Medical Transport (VAN)"
+//* careTeam[+].sequence = 1
+//* careTeam[=].provider = Reference(ProviderTransportationOrganization1)
+//* careTeam[=].role = C4BBClaimCareTeamRole#rendering "Rendering provider"
+//* careTeam[=].role.text = "The rendering care provider."
+//* careTeam[=].qualification = $NUCCProviderTaxonomy#343900000X "Non-emergency Medical Transport (VAN)"
 * supportingInfo[clmrecvddate].sequence = 1
 * supportingInfo[clmrecvddate].category = $C4BBSupportingInfoType#clmrecvddate "Claim Received Date"
 * supportingInfo[clmrecvddate].category.text = "Date the claim was received by the payer."
