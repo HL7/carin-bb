@@ -116,7 +116,9 @@ The basis profile does not have requirements for financial data."
 // CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358
 * item.modifier MS
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
-* item.productOrService obeys EOB-vision-item-productorservice
+
+//* item.productOrService obeys EOB-vision-item-productorservice
+* obeys EOB-vision-item-productorservice
 // 20210201 CAS: FHIR-30357 - item.productOrService is required when item.revenue is provided
 //* item.productOrService obeys EOB-prof-item-productorservice
 // CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358
