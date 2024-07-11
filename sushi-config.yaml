@@ -80,7 +80,12 @@ menu:
     General Considerations: Security_And_Privacy_Considerations.html#general-considerations
     Security Requirements: Security_And_Privacy_Considerations.html#security-requirements
   Examples:  artifacts.html#7
-  Downloads: downloads.html
+  
+  Support:  
+    Project Home: https://confluence.hl7.org/pages/viewpage.action?pageId=81008633
+    Discussion Forum: https://chat.fhir.org/#narrow/stream/204607-CARIN-IG-for-Blue-Button.C2.AE
+    Propose a Change: https://jira.hl7.org/secure/CreateIssueDetails!init.jspa?pid=10405&customfield_11302=FHIR-us-carin-bb&issuetype=10600
+    Downloads: downloads.html
   Change Notes: change_notes.html
 
 
