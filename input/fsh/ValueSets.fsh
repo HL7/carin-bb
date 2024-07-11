@@ -107,7 +107,7 @@ Description: "Identifies the type of recipient of the adjudication amount; i.e.,
 * C4BBPayeeType#beneficiary 
 * $HL7PayeeType#subscriber 
 * $HL7PayeeType#provider
-* $HL7PayeeType#other "Other" 
+* $HL7PayeeType#other
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false
 
