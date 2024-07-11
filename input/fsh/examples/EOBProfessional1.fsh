@@ -68,10 +68,6 @@ Usage: #example
 * item[=].adjudication[adjudicationamounttype][=].amount.value = 200.00
 * item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
 
-* item[=].adjudication[adjudicationamounttype][+].category = $HL7AdjudicationCS#paidtoprovider
-* item[=].adjudication[adjudicationamounttype][=].amount.value = 200.00
-* item[=].adjudication[adjudicationamounttype][=].amount.currency = #USD
-
 * item[=].adjudication[benefitpaymentstatus][+].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item[=].adjudication[benefitpaymentstatus][=].reason = C4BBPayerAdjudicationStatus#other
 
