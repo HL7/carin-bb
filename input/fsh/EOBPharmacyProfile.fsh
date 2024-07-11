@@ -1,13 +1,14 @@
-Profile: C4BBExplanationOfBenefitPharmacy
+Profile: C4BBExplanationOfBenefitPharmacyBasis
 Parent: C4BB-ExplanationOfBenefit
-Id: C4BB-ExplanationOfBenefit-Pharmacy
-Title: "C4BB ExplanationOfBenefit Pharmacy"
+Id: C4BB-ExplanationOfBenefit-Pharmacy-Basis
+Title: "C4BB ExplanationOfBenefit Pharmacy Basis"
 Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies.
-The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)"
+The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)
+The basis profile does not have requirements for financial data."
 // 20210322 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitPharmacy|1.2.0)
-* obeys EOB-pharmacy-meta-profile-version
+//* obeys EOB-pharmacy-meta-profile-version
 
 * type = $HL7ClaimTypeCS#pharmacy
 // * provider only Reference(C4BBOrganization or C4BBPractitionerRole or C4BBPractitioner)   Set in Abstract Class.  No need to set here.
@@ -95,19 +96,23 @@ The claims data is based on submission standards adopted by the Department of He
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
 * item.adjudication contains
-   adjudicationamounttype 1..* MS and
+// CHANGE FOR NON-FINANCIAL
+//   adjudicationamounttype 1..* MS and
    rejectreason 0..1 MS
 
-* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
+/* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+*/
 
 * item.adjudication[rejectreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 * item.adjudication[rejectreason].category  = C4BBAdjudicationDiscriminator#rejectreason
 * item.adjudication[rejectreason].reason from NCPDPRejectCode
 * item.adjudication[rejectreason].reason 1..1 MS
-* insert TotalSlicing
+
+// CHANGE FOR NON-FINANCIAL
+/* insert TotalSlicing
 * total.category from C4BBTotalCategoryDiscriminator (extensible)
 * total.category 1..1 MS
 * total contains
@@ -115,7 +120,7 @@ The claims data is based on submission standards adopted by the Department of He
 
 * total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
 * total[adjudicationamounttype].category from C4BBAdjudication  (required)
-
+*/
 * patient MS
 * insurance.coverage MS
 * insurance MS
@@ -142,6 +147,61 @@ The claims data is based on submission standards adopted by the Department of He
 * total.amount MS
 * created MS
 * processNote.text MS
+
+
+* supportingInfo[brandgenericindicator] ^comment = "Whether the plan adjudicated the claim as a brand or generic drug (144)"
+* supportingInfo[rxoriginCode] ^comment = "Whether the prescription was transmitted as an electronic prescription, by phone, by fax, or as a written paper copy (143)"
+* supportingInfo[refillNum] ^comment = "The number fill of the current dispensed supply (0, 1, 2, etc.) (137)"
+* supportingInfo[dawcode] ^comment = "Prescriber's instruction regarding substitution of generic equivalents or order to dispense the specific prescribed medication (79)"
+* supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
+* supportingInfo[dayssupply] ^comment = "Number of days supply of medication dispensed by the pharmacy (77)"
+* supportingInfo[compoundcode] ^comment = "The code indicating whether or not the prescription is a compound.  NCPDP field # 406-D6 (78)"
+* adjudication[billingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) that is effective on the date of service. (101)"
+* adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+* item.adjudication[rejectreason] ^comment = "Reason codes used to interpret the Non-Covered Amount (92)"
+* identifier ^comment = "Assigned by the pharmacy at the time the prescription is filled (35)"
+* item.productOrService ^comment = "Values are NDC Codes (38) when Compound Code (78) = 0 or 1.  When the Compound Code = 2, productOrService = 'compound' and map the ingredient to ExplanationOfBenefit.item.detail.productOrService"
+* item.detail.productOrService ^comment = "Values are NDC Codes (38) when Compound Code (78) = 2"
+* item.quantity ^comment = "Quantity dispensed for the drug (39) / The unit of measurement for the drug. (gram, ml, etc.) (151).  Populate for all Compound Code values.  When the Compound Code = 2, if available, map the ingredient to ExplanationOfBenefit.item.detail.quantity"
+* careTeam.provider ^comment = "The identifier assigned to the PCP (96) or the identifier from NCPDP field # 411-DB (Prescriber ID) that identifies the National Provider Identifier (NPI) of the provider who prescribed the pharmaceutical. (122)."
+* item.serviced[x] ^comment = "Identifies date the prescription was filled or professional service rendered (90)"   // listed as item.serviced in CPCDS spreadsheet
+
+* insert EOBBaseProfileComments
+
+
+
+
+
+
+
+
+
+Profile: C4BBExplanationOfBenefitPharmacy
+Parent: C4BB-ExplanationOfBenefit-Pharmacy-Basis
+Id: C4BB-ExplanationOfBenefit-Pharmacy
+Title: "C4BB ExplanationOfBenefit Pharmacy"
+Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by retail pharmacies.
+The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)
+The profile has requirements for financial data."
+
+* item.adjudication contains
+   adjudicationamounttype 1..* MS
+   
+
+* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
+* item.adjudication[adjudicationamounttype].category from C4BBAdjudication
+* item.adjudication[adjudicationamounttype].amount  MS
+* item.adjudication[adjudicationamounttype].amount 1..1
+
+* total 1..* MS
+* insert TotalSlicing
+* total.category from C4BBTotalCategoryDiscriminator (extensible)
+* total.category 1..1 MS
+* total contains
+   adjudicationamounttype 1..* MS
+
+* total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
+* total[adjudicationamounttype].category from C4BBAdjudication  (required)
 
 
 * supportingInfo[brandgenericindicator] ^comment = "Whether the plan adjudicated the claim as a brand or generic drug (144)"

@@ -4,7 +4,7 @@ Title: "RelatedPerson Example 1"
 Description: "RelatedPerson Example 1"
 Usage: #example
 * meta.lastUpdated = "2020-05-04T03:02:01-04:00"
-* meta.profile[+] = Canonical(C4BBRelatedPerson|2.0.0)
+* meta.profile[+] = Canonical(C4BBRelatedPerson|2.1.0)
 * active = true
 * patient = Reference(Patient1)
 * name[0].family = "Example1"

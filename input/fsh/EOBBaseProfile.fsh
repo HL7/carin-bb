@@ -80,7 +80,9 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 * payment.type MS
 * processNote MS
 * priority from http://hl7.org/fhir/ValueSet/process-priority  // Fix a bug in R4 EOB which points to a CodeSystem.   Eliminates an error on output
-* total 1..* MS
+// CHANGE FOR NON-FINANCIAL
+//* total 1..* MS
+
 
 * insert EOBBaseProfileComments
 
@@ -89,22 +91,37 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 
 Invariant:  EOB-insurance-focal
 Description: "EOB.insurance:  at most one with focal = true"
-Expression: "insurance.select (focal = true).count() < 2"
+//Expression: "insurance.select (focal = true).count() < 2"
+// TODO Add Jira ticket
+Expression: "select (focal = true).count() < 2"
 Severity:   #error
 
 Invariant: EOB-inst-careTeam-practitioner // rewritten with input from Lee Surprenant FHIR-28530
 Description: "Institutional EOB: Careteam roles refer to a practitioner"
-Expression: "(
+/*Expression: "(
 role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'supervising')).exists()).exists() implies
 role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'supervising')).exists()).exists().provider.all(resolve() is Practitioner)
+)"
+*/
+// TODO Add Jira ticket
+Expression: "(
+role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'supervisor')).exists()).exists() implies
+provider.all(resolve() is Practitioner)
 )"
 Severity: #error
 
 Invariant: EOB-inst-careTeam-organization    // rewritten with input from Lee Surprenant  FHIR-28530
 Description: "Institutional EOB: Careteam roles refer to an organization"
+// TODO Add Jira ticket
+/*
 Expression:   "(
 role.where(coding.where(code in ('rendering' )).exists()).exists() implies
 role.where(coding.where(code in ('rendering' )).exists()).exists().provider.all(resolve() is Organization)
+)"
+*/
+Expression:   "(
+role.where(coding.where(code in ('rendering' )).exists()).exists() implies
+provider.all(resolve() is Organization)
 )"
 Severity: #error
 
@@ -122,25 +139,46 @@ Severity: #error
 
 Invariant: EOB-pharm-careTeam-practitioner
 Description: "Pharmacy EOB: Careteam roles refer to a practitioner"
+// TODO Add Jira Ticket
+/*
 Expression: "(
 role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists() implies
 role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists().provider.all(resolve() is Organization)
+)"
+*/
+Expression: "(
+role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists() implies
+provider.all(resolve() is Organization)
 )"
 Severity: #error
 
 Invariant: EOB-pharm-careTeam-organization
 Description: "Pharmacy EOB: Careteam roles refer to an organization"
+// TODO Add Jira Ticket
+/*
 Expression: "(
 role.where(coding.where(code in ('rendering' )).exists()).exists() implies
 role.where(coding.where(code in ('rendering' )).exists()).exists().provider.all(resolve() is Organization)
+)"
+*/
+Expression: "(
+role.where(coding.where(code in ('rendering' )).exists()).exists() implies
+provider.all(resolve() is Organization)
 )"
 Severity: #error
 
 Invariant: EOB-prof-careTeam-practitioner
 Description: "Professional EOB:  Careteam roles refer to a practitioner"
+// TODO Add Jira Ticket
+/*
 Expression: "(
 role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervising')).exists()).exists() implies
 role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervising' )).exists()).exists().provider.all(resolve() is Practitioner)
+)"
+*/
+Expression: "(
+role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervisor')).exists()).exists() implies
+provider.all(resolve() is Practitioner)
 )"
 Severity: #error
 
@@ -175,14 +213,17 @@ Severity: #error
 // 20210203 CAS: https://jira.hl7.org/browse/FHIR-33024
 Invariant: EOB-vision-item-productorservice
 Description: "Vision EOB: Item productOrService not required in item.productOrService if and only if type is vision."
-Expression: "ExplanationOfBenefit.type.coding.where(code = 'vision' and system='http://terminology.hl7.org/CodeSystem/claim-type').exists() or ExplanationOfBenefit.item.productOrService.coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()"
+// TODO Add Jira Ticket
+//Expression: "ExplanationOfBenefit.type.coding.where(code = 'vision' and system='http://terminology.hl7.org/CodeSystem/claim-type').exists() or ExplanationOfBenefit.item.productOrService.coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()"
+Expression: "type.coding.where(code = 'vision' and system='http://terminology.hl7.org/CodeSystem/claim-type').exists() or item.productOrService.coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()"
 Severity: #error
 
 
 // 20210203 CAS: https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
 Invariant: EOB-inst-pointoforigin
 Description: "Where Admission Type and Point of Origin slices exist, if Type of Admission code is Newborn, Point of Origin must be from Point of Origin - Newborn CodeSystem  or Type of Admission is not Newborn and Point of Origin must be from Point of Origin Nonnewborn CodeSystem."
-Expression: "(supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code = '4').exists() and supportingInfo.where(code.coding.system='AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn').exists()).not() and (supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code != '4').exists() and supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PointOfOriginNewborn').exists() ).not()"
+//Expression: "(supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code = '4').exists() and supportingInfo.where(code.coding.system='AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn').exists()).not() and (supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code != '4').exists() and supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PointOfOriginNewborn').exists() ).not()"
+Expression: "(supportingInfo.where(code.coding.where(system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit').exists() and code.coding.where(code = '4').exists()).exists() and supportingInfo.where(code.coding.where(system='AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn').exists()).exists()).not() and (supportingInfo.where(code.coding.where(system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit').exists() and code.coding.where(code = '4').exists().not()).exists() and supportingInfo.where(code.coding.where(system = 'https://www.nubc.org/CodeSystem/PointOfOriginNewborn').exists()).exists() ).not()"
 Severity: #error
 
 

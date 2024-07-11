@@ -13,8 +13,8 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2022-04-20T10:19:00+00:00"
-* publisher = "HL7 Financial Management Working Group"
-* contact.name = "HL7 Financial Management Working Group"
+* publisher = "HL7 International / Financial Management"
+* contact.name = "HL7 International / Financial Management"
 * contact.telecom[0].system = #url
 * contact.telecom[=].value = "http://www.hl7.org/Special/committees/fm"
 * contact.telecom[+].system = #email

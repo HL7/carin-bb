@@ -6,7 +6,7 @@ Description: "EOB Professional - Transportation 1"
 Usage: #example
 * meta.lastUpdated = "2022-09-10T14:46:05-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|2.0.0"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|2.1.0"
 * identifier.type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType#uc "Unique Claim ID"
   * text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier.system = "https://www.example.com/fhir/EOBIdentifier"
@@ -28,7 +28,7 @@ Usage: #example
 * careTeam.provider = Reference(ProviderTransportationOrganization1)
 * careTeam.role = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimCareTeamRole#rendering "Rendering provider"
   * text = "The rendering care provider."
-* careTeam.qualification = http://nucc.org/provider-taxonomy#343900000X "Transportation Services; Non-emergency Medical Transport (VAN)"
+* careTeam.qualification = http://nucc.org/provider-taxonomy#343900000X "Non-emergency Medical Transport (VAN)"
 * supportingInfo[0].sequence = 1
 * supportingInfo[=].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType#clmrecvddate "Claim Received Date"
   * text = "Date the claim was received by the payer."

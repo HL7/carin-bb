@@ -34,10 +34,10 @@ For the purposes of information exchange defined by this IG, additional security
 2.	Implementers of this Implementation Guide **SHOULD** support SMART on FHIR Authorization best practices [Transport Security section](https://docs.smarthealthit.org/authorization/best-practices/#11--transport-security).
 
 ### Authentication and Authorization Requirements
-1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements](https://www.hl7.org/fhir/us/core/security.html).
+1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements]({{site.data.fhir.ver.uscore6}}/security.html).
 2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](https://hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) JSON file with scopes defined in the `scopes_supported` property.
 3.	Implementations **SHOULD** consider the SMART on FHIR Best Practices in Authorization found [here](https://docs.smarthealthit.org/authorization/best-practices/).
-4.	Server implementation **SHALL** support the following [“SMART Core Capabilities”](http://hl7.org/fhir/smart-app-launch/conformance/index.html#core-capabilities) and **MAY** support additional capabilities:
+4.	Server implementation **SHALL** support the following [“SMART Core Capabilities”](https://hl7.org/fhir/smart-app-launch/1.0.0/conformance/index.html#core-capabilities) and **MAY** support additional capabilities:
     1.	`launch-standalone`: support for SMART’s Standalone Launch mode
     2.	`client-public`: support for SMART’s public client profile (no client authentication)
     3.	`client-confidential-symmetric`: support for SMART’s confidential client profile 

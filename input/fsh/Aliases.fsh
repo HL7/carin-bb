@@ -1,6 +1,5 @@
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $payeetype = http://terminology.hl7.org/CodeSystem/payeetype
-Alias: $ICD9 = http://www.cms.gov/Medicare/Coding/ICD9
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $subscriber-relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship
 Alias: $coverage-class = http://terminology.hl7.org/CodeSystem/coverage-class
@@ -44,7 +43,6 @@ Alias: $cpt = http://www.ama-assn.org/go/cpt
 Alias: $C4BBClaimProcedureType = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimProcedureType
 Alias: $ICD10 = http://www.cms.gov/Medicare/Coding/ICD10
 Alias: $adjudication_1 = https://bluebutton.cms.gov/resources/codesystem/adjudication
-Alias: $claimcareteamrole = http://terminology.hl7.org/CodeSystem/claimcareteamrole
 Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $2.16.840.1.114222.4.11.1066 = http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066
@@ -86,7 +84,7 @@ Alias: $HL7DataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-
 //Alias: $ToothSurfaceCS = http://terminology.hl7.org/CodeSystem/FDI-surface
 Alias: $ToothNumber = http://hl7.org/fhir/ValueSet/tooth
 
-Alias: $CareTeamRoleCodeCS = http://terminology.hl7.org/CodeSystem/claimcareteamrole
+Alias: $CareTeamRoleCodeCS = http://terminology.hl7.org/CodeSystem/claimcareteamrole|1.0.0
 Alias: $PresentOnAdmissionV2CS = urn:oid:2.16.840.1.113883.6.301.11
 Alias: $NAICCodeCS = urn:oid:2.16.840.1.113883.6.300
 Alias: $TAXCodeCS = urn:oid:2.16.840.1.113883.4.4
@@ -111,7 +109,7 @@ Alias: $X12AmbulanceTransReas = https://x12.org/codesystem.x12.org/ambulance-tra
 
 
 Alias: $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
-Alias: $ICD9CM = http://terminology.hl7.org/CodeSystem/icd9
+Alias: $ICD9CM = http://hl7.org/fhir/sid/icd-9-cm
 Alias: $ICD10PCS = http://www.cms.gov/Medicare/Coding/ICD10
 Alias: $ICD9PCS = http://www.cms.gov/Medicare/Coding/ICD9
 Alias: $CPT = http://www.ama-assn.org/go/cpt
@@ -132,3 +130,7 @@ Alias: $C4BBAdjudicationCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdju
 Alias: $C4BBIdentifierTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType
 Alias: $C4BBClaimDiagnosisTypeCS = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBClaimDiagnosisType
 Alias: $C4BBAdjudicationDiscriminator =  http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator
+
+Alias: $R5CoverageKind = http://hl7.org/fhir/5.0/StructureDefinition/extension-Coverage.kind
+
+Alias: $compliesWithProfile = http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile

@@ -1,12 +1,13 @@
-Profile: C4BBExplanationOfBenefitProfessionalNonClinician
+Profile: C4BBExplanationOfBenefitProfessionalNonClinicianBasis
 Parent: C4BB-ExplanationOfBenefit
-Id: C4BB-ExplanationOfBenefit-Professional-NonClinician
-Title: "C4BB ExplanationOfBenefit Professional NonClinician"
-Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional and vision services. These services may be rendered in inpatient or outpatient, including office locations. The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500."
+Id: C4BB-ExplanationOfBenefit-Professional-NonClinician-Basis
+Title: "C4BB ExplanationOfBenefit Professional NonClinician Basis"
+Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional and vision services. These services may be rendered in inpatient or outpatient, including office locations. The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500.
+The basis profile does not have requirements for financial data."
 // 20210322 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|1.2.0)
-* obeys EOB-professional-nonclinician-meta-profile-version
+//* obeys EOB-professional-nonclinician-meta-profile-version
 * obeys EOB-prof-all-transportation-supportinginfo-linked-to-line
 
 * careTeam obeys EOB-prof-careTeam-practitioner
@@ -115,7 +116,9 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 // CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358
 * item.modifier MS
 * item.productOrService from AMACPTCMSHCPCSProcedureCodes (required)
-* item.productOrService obeys EOB-vision-item-productorservice
+
+//* item.productOrService obeys EOB-vision-item-productorservice
+* obeys EOB-vision-item-productorservice
 // 20210201 CAS: FHIR-30357 - item.productOrService is required when item.revenue is provided
 //* item.productOrService obeys EOB-prof-item-productorservice
 // CAS 20210118: Add MS to Professional and NonClinican item.productOrService and item.modifier https://jira.hl7.org/browse/FHIR-30358
@@ -147,7 +150,8 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * insert ItemAdjudicationSlicing
 * item.adjudication MS
 * item.adjudication contains
-   adjudicationamounttype 1..* MS and
+// CHANGE FOR NON-FINANCIAL
+//   adjudicationamounttype 1..* MS and
    adjustmentreason 0..1 MS and
    benefitpaymentstatus 1..1 MS and
    allowedunits 0..1 MS
@@ -160,17 +164,78 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 * item.adjudication[adjustmentreason].reason 1..1 MS
 * item.adjudication[adjustmentreason] ^short = "Reason codes used to interpret the Non-Covered Amount (92)"
 
-* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
+// CHANGE FOR NON-FINANCIAL
+/* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype] ^short = "Amounts"
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+*/
 
 * item.adjudication[benefitpaymentstatus] ^short = "Indicates the in network or out of network payment status of the claim. (142)"
 * item.adjudication[benefitpaymentstatus].category = C4BBAdjudicationDiscriminator#benefitpaymentstatus
 * item.adjudication[benefitpaymentstatus].reason from  C4BBPayerBenefitPaymentStatus  (required)
 * item.adjudication[benefitpaymentstatus].reason 1..1 MS
 
+// CHANGE FOR NON-FINANCIAL
+/* insert TotalSlicing
+* total.category from C4BBAdjudication  (extensible)
+* total contains
+   adjudicationamounttype 1..* MS
+
+* total[adjudicationamounttype] ^short =  "Total adjudication type and amount"
+* total[adjudicationamounttype].category from C4BBAdjudication  (required)
+*/
+* supportingInfo[clmrecvddate] ^comment = "The date the claim was received by the payer (88)"
+
+* supportingInfo[servicefacility] ^comment = "Service Facility Location information conveys the name, full address and identifier of the facility where services were rendered when that is different from the Billing/Rndering Provider. Service Facility Location is not just an address nor is it a patient’s home. Examples of Service Facility Location include hospitals, nursing homes, laboratories or homeless shelter. Service Facility Location identifier is the facility’s Type 2 Organization NPI if they are a health care provider as defined under HIPAA.
+If the service facility is not assigned an NPI, this data element will not be populated.  Reference CMS 1500 element 32a (97, 170, 176)"
+* supportingInfo[medicalrecordnumber] ^comment = "Provider submitted medical record number that can be included on the claim. (109)"
+* supportingInfo[patientaccountnumber] ^comment = "Provider assigned patient account number that can be included on the claim. (109)"
+* adjudication[billingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Plan (regardless of the network) as of the effective date of service or admission. (101)"
+* adjudication[renderingnetworkstatus] ^comment = "Indicates that the Billing Provider has a contract with the Payer as of the effective date of service or admission. (101)"
+* item.adjudication[allowedunits] ^comment = "The quantity of units, times, days, visits, services, or treatments allowed for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider. (149)"
+* item.adjudication[adjustmentreason] ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
+* item.adjudication[benefitpaymentstatus] ^comment = "Indicates the in network or out of network payment status of the claim. (142)"
+* diagnosis ^comment = "Diagnosis codes describe an individual's disease or medical condition. (6, 7, 8, 21, 22, 23, 30)"
+* diagnosis.type ^comment = "Indicates if the professional and non-clinician diagnosis is principal or secondary (21, 22, 23)"
+* diagnosis.sequence ^comment =  "Diagnosis.sequence values do not necessarily indicate any order in which the diagnosis was reported or identified.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of diagnosis.type to identify primary, secondary, etc."
+* item.productOrService ^comment = "Medical procedure a patient received from a health care provider. Current coding methods include: CPT-4 and HCFA Common Procedure Coding System Level II - (HCPCSII). (40)"
+* item.modifier ^comment = "Modifier(s) for the procedure represented on this line. Identifies special circumstances related to the performance of the service. (41)"
+* item.quantity ^comment = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code or CPT procedure code, submitted by the provider. (42)"
+* item.location[x] ^comment = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46)"
+* careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, rendering, purchased service and referring care team. (95, 96, 99)"
+* item.serviced[x]  ^comment = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
+
+
+* insert EOBBaseProfileComments
+
+
+//FHIR-37615
+//Fields to report non-emergency transportation services data
+//Create Invariant requiring all ExplanationOfBenefit.SupportingInfo where category from C4BBTransportationServiceCategories sequence is referenced in ExplanationOfBenefit.line.informationSequence
+// Potential starter to test
+// supportingInfo.where(memberOf('C4BBTransportationServiceCategories'))).sequence.subsetOf(item.informationSequence.distinct())
+
+
+
+Profile: C4BBExplanationOfBenefitProfessionalNonClinician
+Parent: C4BB-ExplanationOfBenefit-Professional-NonClinician-Basis
+Id: C4BB-ExplanationOfBenefit-Professional-NonClinician
+Title: "C4BB ExplanationOfBenefit Professional NonClinician"
+Description: "This profile is used for Explanation of Benefits (EOBs) based on claims submitted by physicians, suppliers and other non-institutional providers for professional and vision services. These services may be rendered in inpatient or outpatient, including office locations. The claims data is based on the professional claim form 1500, submission standards adopted by the Department of Health and Human Services as form CMS-1500.
+The profile has requirements for financial data."
+
+* item.adjudication contains
+   adjudicationamounttype 1..* MS
+   
+* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
+* item.adjudication[adjudicationamounttype].category from C4BBAdjudication
+* item.adjudication[adjudicationamounttype] ^short = "Amounts"
+* item.adjudication[adjudicationamounttype].amount  MS
+* item.adjudication[adjudicationamounttype].amount 1..1
+
+* total 1..* MS
 * insert TotalSlicing
 * total.category from C4BBAdjudication  (extensible)
 * total contains
@@ -204,10 +269,3 @@ If the service facility is not assigned an NPI, this data element will not be po
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
 
 * insert EOBBaseProfileComments
-
-
-//FHIR-37615
-//Fields to report non-emergency transportation services data
-//Create Invariant requiring all ExplanationOfBenefit.SupportingInfo where category from C4BBTransportationServiceCategories sequence is referenced in ExplanationOfBenefit.line.informationSequence
-// Potential starter to test
-// supportingInfo.where(memberOf('C4BBTransportationServiceCategories'))).sequence.subsetOf(item.informationSequence.distinct())

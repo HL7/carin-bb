@@ -5,7 +5,7 @@ Title: "EOB Professional - Example 1"
 Description: "EOB Professional - Example 1"
 Usage: #example
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|2.0.0"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|2.1.0"
 * language = #en-US
 * identifier.type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType#uc
 * identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
@@ -39,7 +39,7 @@ Usage: #example
 * insurance.focal = true
 * insurance.coverage = Reference(Coverage1)
 * item.sequence = 1
-* item.productOrService = http://www.ama-assn.org/go/cpt#97110 "Physical Therapy"
+* item.productOrService = http://www.ama-assn.org/go/cpt#97110 "Therapeutic procedure, 1 or more areas, each 15 minutes; therapeutic exercises to develop strength and endurance, range of motion and flexibility"
 * item.servicedDate = "2019-07-02"
 * item.locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#11 "Office"
 * item.adjudication[0].category = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBAdjudicationDiscriminator#benefitpaymentstatus

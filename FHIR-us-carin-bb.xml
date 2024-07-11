@@ -19,6 +19,9 @@
 <artifact deprecated="true" id="CodeSystem/ADAAreaOfOralCavitySystem" key="CodeSystem-ADAAreaOfOralCavitySystem" name="American Dental Association Area of Oral Cavity System"/>
 <artifact deprecated="true" id="CodeSystem/ADAUniversalNumberingSystem" key="CodeSystem-ADAUniversalNumberingSystem" name="American Dental Association Universal Numbering System"/>
 <artifact id="ValueSet/ADAUniversalNumberingSystem" key="ValueSet-ADAUniversalNumberingSystem" name="American Dental Association Universal Numbering Value Set"/>
+<artifact id="ExplanationOfBenefit/BB-EOBOral1-nonfinancial" key="ExplanationOfBenefit-BB-EOBOral1-nonfinancial" name="BB-EOBOral1-nonfinancial"/>
+<artifact id="ExplanationOfBenefit/BB-EOBOral2-nonfinancial" key="ExplanationOfBenefit-BB-EOBOral2-nonfinancial" name="BB-EOBOral2-nonfinancial"/>
+<artifact id="ExplanationOfBenefit/BB-EOBPharmacy1-nonfinancial" key="ExplanationOfBenefit-BB-EOBPharmacy1-nonfinancial" name="BB-EOBPharmacy1-nonfinancial"/>
 <artifact id="ValueSet/C4BBAdjudicationCategoryDiscriminator" key="ValueSet-C4BBAdjudicationCategoryDiscriminator" name="C4BB Adjudication Category Discriminator Value Set"/>
 <artifact id="CodeSystem/C4BBAdjudication" key="CodeSystem-C4BBAdjudication" name="C4BB Adjudication Code System"/>
 <artifact id="CodeSystem/C4BBAdjudicationDiscriminator" key="CodeSystem-C4BBAdjudicationDiscriminator" name="C4BB Adjudication Discriminator Code System"/>
@@ -38,15 +41,25 @@
 <artifact id="ValueSet/C4BBClaimProfessionalAndNonClinicianDiagnosisType" key="ValueSet-C4BBClaimProfessionalAndNonClinicianDiagnosisType" name="C4BB Claim Professional And Non Clinician Diagnosis Type Value Set"/>
 <artifact id="CodeSystem/C4BBCompoundLiteral" key="CodeSystem-C4BBCompoundLiteral" name="C4BB Compound Literal Code System"/>
 <artifact id="StructureDefinition/C4BB-Coverage" key="StructureDefinition-C4BB-Coverage" name="C4BB Coverage"/>
+<artifact id="ValueSet/C4BBCoverageClassVS" key="ValueSet-C4BBCoverageClassVS" name="C4BB Coverage Class Value Set"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit" key="StructureDefinition-C4BB-ExplanationOfBenefit" name="C4BB Explanation Of Benefit"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional" key="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional" name="C4BB ExplanationOfBenefit Inpatient Institutional"/>
+<artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional-Basis" key="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional-Basis" name="C4BB ExplanationOfBenefit Inpatient Institutional Basis"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Oral" key="StructureDefinition-C4BB-ExplanationOfBenefit-Oral" name="C4BB ExplanationOfBenefit Oral"/>
+<artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Oral-Basis" key="StructureDefinition-C4BB-ExplanationOfBenefit-Oral-Basis" name="C4BB ExplanationOfBenefit Oral Basis"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional" key="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional" name="C4BB ExplanationOfBenefit Outpatient Institutional"/>
+<artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional-Basis" key="StructureDefinition-C4BB-ExplanationOfBenefit-Outpatient-Institutional-Basis" name="C4BB ExplanationOfBenefit Outpatient Institutional Basis"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy" key="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy" name="C4BB ExplanationOfBenefit Pharmacy"/>
+<artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis" key="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy-Basis" name="C4BB ExplanationOfBenefit Pharmacy Basis"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician" key="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician" name="C4BB ExplanationOfBenefit Professional NonClinician"/>
+<artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician-Basis" key="StructureDefinition-C4BB-ExplanationOfBenefit-Professional-NonClinician-Basis" name="C4BB ExplanationOfBenefit Professional NonClinician Basis"/>
 <artifact id="CodeSystem/C4BBIdentifierType" key="CodeSystem-C4BBIdentifierType" name="C4BB Identifier Type Code System"/>
 <artifact id="CodeSystem/C4BBInstitutionalClaimSubType" key="CodeSystem-C4BBClaimSubType" name="C4BB Institutional Claim SubType Code System"/>
 <artifact id="ValueSet/C4BBInstitutionalClaimSubType" key="ValueSet-C4BBClaimSubType" name="C4BB Institutional Claim SubType Value Set"/>
+<artifact id="CodeSystem/C4BBInsuranceProductLineCS" key="CodeSystem-C4BBInsuranceProductLineCS" name="C4BB Insurance Product Line Code System"/>
+<artifact id="ValueSet/C4BBInsuranceProductLineVS" key="ValueSet-C4BBInsuranceProductLineVS" name="C4BB Insurance Product Line Value Set"/>
+<artifact id="CodeSystem/C4BBInsuranceProductTypeCS" key="CodeSystem-C4BBInsuranceProductTypeCS" name="C4BB Insurance Product Type Code System"/>
+<artifact id="ValueSet/C4BBInsuranceProductTypeVS" key="ValueSet-C4BBInsuranceProductTypeVS" name="C4BB Insurance Product Type Value Set"/>
 <artifact id="StructureDefinition/C4BB-Organization" key="StructureDefinition-C4BB-Organization" name="C4BB Organization"/>
 <artifact id="ValueSet/C4BBOrganizationIdentifierType" key="ValueSet-C4BBOrganizationIdentifierType" name="C4BB Organization Identifier Type Value Set"/>
 <artifact id="StructureDefinition/C4BB-Patient" key="StructureDefinition-C4BB-Patient" name="C4BB Patient"/>
@@ -71,6 +84,7 @@
 <artifact id="ValueSet/C4BBTransportationServiceCategories" key="ValueSet-C4BBTransportationServiceCategories" name="C4BB Transportation Services Categories Value Set"/>
 <artifact deprecated="true" id="CodeSystem/CMSPlaceofServiceCodes" key="CodeSystem-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS) CS"/>
 <artifact id="ValueSet/CMSPlaceofServiceCodes" key="ValueSet-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS) Value Set"/>
+<artifact id="StructureDefinition/CoverageBenefitType" key="StructureDefinition-CoverageBenefitType" name="Coverage Benefit Type"/>
 <artifact id="Coverage/Coverage1" key="Coverage-Coverage1" name="Coverage Example 1"/>
 <artifact deprecated="true" id="Coverage/CoverageEx1" key="Coverage-CoverageEx1" name="Coverage Example 1 (deprecated)"/>
 <artifact id="Coverage/Coverage2" key="Coverage-CoverageEx2" name="Coverage Example 2"/>
@@ -83,14 +97,21 @@
 <artifact id="ExplanationOfBenefit/EOBInpatient2" key="ExplanationOfBenefit-EOBInpatient2" name="EOB Inpatient Example 2"/>
 <artifact id="ExplanationOfBenefit/EOBInpatient1" key="ExplanationOfBenefit-EOBInpatient1" name="EOB Inpatient Example1"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/InpatientEOBExample1" key="ExplanationOfBenefit-EOBInpatientInstitutionalEx1" name="EOB Inpatient Institutional - Example 1"/>
+<artifact id="ExplanationOfBenefit/BB-EOBInpatient1-nonfinancial" key="ExplanationOfBenefit-BB-EOBInpatient1-nonfinancial" name="EOB Inpatient Institutional - Example 1 - Nonfinancial"/>
+<artifact id="ExplanationOfBenefit/BB-EOBInpatient2-nonfinancial" key="ExplanationOfBenefit-BB-EOBInpatient2-nonfinancial" name="EOB Inpatient Institutional - Example 2 - Nonfinancial"/>
 <artifact id="ExplanationOfBenefit/EOBOral1" key="ExplanationOfBenefit-EOBOral1" name="EOB Oral Example 1"/>
 <artifact id="ExplanationOfBenefit/EOBOral2" key="ExplanationOfBenefit-EOBOral2" name="EOB Oral Example 2"/>
 <artifact id="ExplanationOfBenefit/EOBOutpatient1" key="ExplanationOfBenefit-EOBOutpatientInstitutionalEx1" name="EOB Outpatient Institutional - Example 1"/>
+<artifact id="ExplanationOfBenefit/BB-EOBOutpatient1-nonfinancial" key="ExplanationOfBenefit-BB-EOBOutpatient1-nonfinancial" name="EOB Outpatient Institutional - Example 1 - Nonfinancial"/>
 <artifact id="ExplanationOfBenefit/EOBOutpatient2" key="ExplanationOfBenefit-EOBOutpatient2" name="EOB Outpatient Institutional - Example 2"/>
+<artifact id="ExplanationOfBenefit/BB-EOBOutpatient2-nonfinancial" key="ExplanationOfBenefit-BB-EOBOutpatient2-nonfinancial" name="EOB Outpatient Institutional - Example 2 - Nonfinancial"/>
 <artifact id="ExplanationOfBenefit/EOBPharmacy1" key="ExplanationOfBenefit-EOBPharmacy1" name="EOB Pharmacy Example1"/>
 <artifact id="ExplanationOfBenefit/EOBProfessional1" key="ExplanationOfBenefit-EOBProfessionalEx1" name="EOB Professional - Example 1"/>
+<artifact id="ExplanationOfBenefit/BB-EOBProfessional1-nonfinancial" key="ExplanationOfBenefit-BB-EOBProfessional1-nonfinancial" name="EOB Professional - Example 1 - Nonfinancial"/>
 <artifact id="ExplanationOfBenefit/EOBProfessional2" key="ExplanationOfBenefit-EOBProfessional2" name="EOB Professional - Example 2"/>
+<artifact id="ExplanationOfBenefit/BB-EOBProfessional2-nonfinancial" key="ExplanationOfBenefit-BB-EOBProfessional2-nonfinancial" name="EOB Professional - Example 2 - Nonfinancial"/>
 <artifact id="ExplanationOfBenefit/EOBProfessionalTransportation1" key="ExplanationOfBenefit-EOBProfessionalTransportation1" name="EOB Professional - Transportation 1"/>
+<artifact id="ExplanationOfBenefit/BB-EOBProfessionalTransportation1-nonfinancial" key="ExplanationOfBenefit-BB-EOBProfessionalTransportation1-nonfinancial" name="EOB Professional - Transportation 1 - Nonfinancial"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBOral1a" key="ExplanationOfBenefit-EOBOral1a" name="EOBOral1a"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBOutpatientInstitutional1" key="ExplanationOfBenefit-EOBOutpatientInstitutional1" name="EOBOutpatientInstitutional1"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBProfessional1a" key="ExplanationOfBenefit-EOBProfessional1a" name="EOBProfessional1a"/>
@@ -109,6 +130,8 @@
 <artifact deprecated="true" id="CodeSystem/CMSHIPPSCodes" key="CodeSystem-CMSHIPPSCodes" name="Health Insurance Prospective Payment System (HIPPS)"/>
 <artifact deprecated="true" id="CodeSystem/CMSHCPCSCodes" key="CodeSystem-CMSHCPCSCodes" name="Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes"/>
 <artifact deprecated="true" id="CodeSystem/ICD10PCS" key="CodeSystem-ICD10PCS" name="ICD-10 Procedure Coding System"/>
+<artifact id="StructureDefinition/InsuranceProductLine" key="StructureDefinition-InsuranceProductLine" name="Insurance Product Line"/>
+<artifact id="StructureDefinition/InsuranceProductType" key="StructureDefinition-InsuranceProductType" name="Insurance Product Type"/>
 <artifact id="ValueSet/CMSMS3MAPAPRDRG" key="ValueSet-CMSMS3MAPAPRDRG" name="MS-DRGs - AP-DRGs - APR-DRGs Value Set"/>
 <artifact deprecated="true" id="CodeSystem/CMSMSDRG" key="CodeSystem-CMSMSDRG" name="Medicare Severity Diagnosis Related Groups (MS-DRGs)"/>
 <artifact deprecated="true" id="ValueSet/NCPDPBrandGenericCode" key="ValueSet-NCPDPBrandGenericCode" name="NCPDP Brand Generic Code"/>
@@ -186,6 +209,7 @@
 <page key="searchparameters" name="Search Parameters"/>
 <page key="Security_And_Privacy_Considerations" name="Security and Privacy Considerations"/>
 <page key="toc" name="Table of Contents"/>
+<page deprecated="true" key="Terminology" name="Terminology"/>
 <page key="5_Terminology_Licensure" name="Terminology Licensure"/>
 <page key="Use_Case" name="Use Case"/>
 </specification>

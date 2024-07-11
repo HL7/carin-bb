@@ -5,7 +5,7 @@ Description: "EOB Professional - Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-20T14:46:05-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.0.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinician|2.1.0)
 * identifier[uniqueclaimid].type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier[uniqueclaimid].type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier[uniqueclaimid].system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
@@ -25,11 +25,11 @@ Usage: #example
 * payee.party = Reference(ProviderOrganization1)
 * outcome = #complete
 * careTeam[+].sequence = 1
-* careTeam[=].provider = Reference(ProviderOrganization1)
-* careTeam[=].role = $claimcareteamrole#primary "Primary provider"
+* careTeam[=].provider = Reference(Practitioner1)
+* careTeam[=].role = $CareTeamRoleCodeCS#primary "Primary provider"
 * careTeam[=].role.text = "The primary care provider."
 * careTeam[+].sequence = 2
-* careTeam[=].provider = Reference(Practitioner1)
+* careTeam[=].provider = Reference(Practitioner2)
 * careTeam[=].role = C4BBClaimCareTeamRole#referring "Referring"
 * careTeam[=].role.text = "The referring physician"
 * supportingInfo.sequence = 1

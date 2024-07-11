@@ -13,8 +13,8 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2021-11-05T09:48:45+00:00"
-* publisher = "HL7 Financial Management Working Group"
-* contact.name = "HL7 Financial Management Working Group"
+* publisher = "HL7 International / Financial Management"
+* contact.name = "HL7 International / Financial Management"
 * contact.telecom[0].system = #url
 * contact.telecom[=].value = "http://www.hl7.org/Special/committees/fm"
 * contact.telecom[+].system = #email
@@ -24,7 +24,8 @@ Usage: #definition
 * code = #service-start-date
 * base = #ExplanationOfBenefit
 * type = #date
-* expression = "ExplanationOfBenefit.billablePeriod.start | ExplanationOfBenefit.item.servicedDate | ExplanationOfBenefit.item.servicedPeriod.start"
+//* expression = "ExplanationOfBenefit.billablePeriod.start | ExplanationOfBenefit.item.servicedDate | ExplanationOfBenefit.item.servicedPeriod.start"
+* expression = "ExplanationOfBenefit.billablePeriod.start | ExplanationOfBenefit.item.serviced.ofType(date) | ExplanationOfBenefit.item.serviced.ofType(Period).start"
 * xpath = "f:ExplanationOfBenefit/f:billablePeriod.start | f:ExplanationOfBenefit/f:item/f:servicedDate | f:ExplanationOfBenefit/f:item/f:servicedPeriod.start"
 * xpathUsage = #normal
 * comparator[0] = #eq

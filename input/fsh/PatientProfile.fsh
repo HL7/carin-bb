@@ -1,15 +1,16 @@
 Profile: C4BBPatient
-Parent: $USCorePatient
+Parent: USCorePatientProfile|6.1.0
 Id: C4BB-Patient
 Title: "C4BB Patient"
 Description: "This profile builds upon the US Core Patient profile. It is used to convey information about the patient who received the services described on the claim."
+* ^extension[$compliesWithProfile].valueCanonical = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|3.1.1"
 * meta 1..1 MS
 * meta.lastUpdated 1..1 MS
 * meta.profile 1..*
 //* insert Metaprofile-supportedProfile-slice
 // 20210216 CAS: FHIR-30575 Pulled from block vote1a
 //* meta.profile[supportedProfile] = Canonical(C4BBPatient|1.2.0)
-* obeys patient-meta-profile-version
+//* obeys patient-meta-profile-version
 
 * identifier.type from C4BBPatientIdentifierType (extensible)
 //* identifier ^slicing.discriminator.path = "$this"
