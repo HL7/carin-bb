@@ -77,24 +77,27 @@ Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/car
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem was not found
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem
 
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' could not be found, so the code cannot be validated
 Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode was not found
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode was not found
 
- A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' could not be found, so the code cannot be validated
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' could not be found, so the code cannot be validated
 Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericIndicator|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator was not found
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericIndicator|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator was not found
 
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' could not be found, so the code cannot be validated
 Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode was not found
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode was not found
 
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' could not be found, so the code cannot be validated
 Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode was not found
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode was not found
 
-A definition for CodeSystem 'https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes' could not be found, so the code cannot be validated
-Resolved system https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes (v2.1.0-draft), but the definition doesn't include any codes, so the code has not been validated
+Resolved system https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes (v2.1.0), but the definition doesn't include any codes, so the code has not been validated
 The definition for the Code System with URI 'https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes' doesn't provide any codes so the code cannot be validated
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes
 
@@ -105,3 +108,16 @@ A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/ADAAreaOralCa
 
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPRejectCode
+Error from http://tx.fhir.org/r4: Unable to provide support for code system https://x12.org/codes/claim-adjustment-reason-codes
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/ICD9
+
+
+# All slices constraints Inherited from US Core 6.1.0 - The pattern is defined in the slice and not in the repeating element ($this) which allows users the necessary flexibility ====
+
+INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[18].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[19].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[20].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[21].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[22].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/C4BB-Practitioner: StructureDefinition.snapshot.element[19].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)

@@ -1,6 +1,5 @@
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $payeetype = http://terminology.hl7.org/CodeSystem/payeetype
-Alias: $ICD9 = http://www.cms.gov/Medicare/Coding/ICD9
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $subscriber-relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship
 Alias: $coverage-class = http://terminology.hl7.org/CodeSystem/coverage-class
@@ -110,7 +109,7 @@ Alias: $X12AmbulanceTransReas = https://x12.org/codesystem.x12.org/ambulance-tra
 
 
 Alias: $ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
-Alias: $ICD9CM = http://terminology.hl7.org/CodeSystem/icd-9-cm
+Alias: $ICD9CM = http://hl7.org/fhir/sid/icd-9-cm
 Alias: $ICD10PCS = http://www.cms.gov/Medicare/Coding/ICD10
 Alias: $ICD9PCS = http://www.cms.gov/Medicare/Coding/ICD9
 Alias: $CPT = http://www.ama-assn.org/go/cpt

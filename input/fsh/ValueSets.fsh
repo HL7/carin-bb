@@ -142,7 +142,7 @@ Description: "Indicates if the outpatient institutional diagnosis is principal, 
 ValueSet: C4BBRelatedClaimRelationshipCodes
 Title: "C4BB Related Claim Relationship Codes Value Set"
 Description: "Identifies if the current claim represents a claim that has been adjusted and was given a prior claim number or if the current claim has been adjusted; i.e., replaced by or merged to another claim number."
-* $HL7RelatedClaimRelationshipCS#prior 
+* $HL7RelatedClaimRelationshipCS|1.0.0#prior 
 * C4BBRelatedClaimRelationshipCodes#replacedby
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false

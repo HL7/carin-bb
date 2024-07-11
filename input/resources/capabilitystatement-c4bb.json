@@ -2,10 +2,15 @@
     "id": "c4bb",
     "contact": [
         {
+            "name": "HL7 International / Financial Management",
             "telecom": [
                 {
                     "system": "url",
-                    "value": "http://www.hl7.org/Special/committees/fm/index.cfm"
+                    "value": "http://www.hl7.org/Special/committees/fm"
+                },
+                {
+                    "system": "email",
+                    "value": "fm@lists.HL7.org"
                 }
             ]
         }
