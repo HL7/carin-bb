@@ -13,7 +13,7 @@ https://jira.hl7.org/browse/FHIR-31535?jql=cf%5B11402%5D%20%3D%20STU-1.1.0-Updat
 <ul>
 <li>Primary
 <ul>
-<li>Amol Vyas (Cambia Health Solutions) - <a href="mailto:amol.vyas@cambiahealth.com">amol.vyas@cambiahealth.com</a></li>
+<li>Amol Vyas (NCQA) - <a href="mailto:avyas@ncqa.org">avyas@ncqa.org</a></li>
 <li>Pat Taylor (Blue Cross Blue Shield Association) - <a href="mailto:pat.taylor@bcbsa.com">pat.taylor@bcbsa.com</a></li>
 <li>HL7 Financial Management Workgroup</li>
 </ul>
@@ -21,7 +21,7 @@ https://jira.hl7.org/browse/FHIR-31535?jql=cf%5B11402%5D%20%3D%20STU-1.1.0-Updat
 <li>Secondary
 <ul>
 <li>Adam Culbertson (Humana) - <a href="mailto:ACulbertson1@humana.com">ACulbertson1@humana.com</a></li>
-<li>Corey Spears (MITRE) - <a href="mailto:cspears@mitre.org">cspears@mitre.org</a></li>   
+<li>Corey Spears (MITRE) - <a href="mailto:corey.spears@lantanagroup.com">corey.spears@lantanagroup.com</a></li>   
 <li>Igor Sirkovich (Smile CDR, Inc.) - <a href="mailto:igor@smilecdr.com">igor@smilecdr.com</a></li>   
 <li>Jason Teeple (Cigna) - <a href="mailto:jason.teeple@cigna.com">jason.teeple@cigna.com</a></li>
 <li>Josh Lamb (UPMC) - <a href="mailto:igor@smilecdr.com">lambj4@upmc.edu</a></li> 
