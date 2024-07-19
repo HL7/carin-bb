@@ -5,7 +5,7 @@ Title: "Related Person 1"
 Description: "Related Person 1"
 Usage: #example
 * meta.lastUpdated = "2020-05-04T03:02:01-04:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-RelatedPerson|2.1.0"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-RelatedPerson|2.1.0-snapshot"
 * active = true
 * patient = Reference(Patient1)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH

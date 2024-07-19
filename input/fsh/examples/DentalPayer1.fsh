@@ -2,7 +2,7 @@ Instance: DentalPayer1
 InstanceOf: C4BBOrganization
 Description: "Dental Payer1"
 Usage: #example
-* meta.profile[+] = Canonical(C4BBOrganization|2.1.0)
+* meta.profile[+] = Canonical(C4BBOrganization|2.1.0-snapshot)
 * meta.lastUpdated = "2021-01-01T10:23:11+00:00"
 * language = #en-US
 * identifier[NPI].type = $HL7IdentifierType#NPI

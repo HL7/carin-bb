@@ -558,6 +558,6 @@
     "status": "active",
     "title": "C4BB CapabilityStatement",
     "url": "http://hl7.org/fhir/us/carin-bb/CapabilityStatement/c4bb",
-    "version": "2.0.0",
+    "version": "2.1.0-snapshot",
     "resourceType": "CapabilityStatement"
 }

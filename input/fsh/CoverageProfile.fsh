@@ -18,7 +18,7 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 // 20210312 CAS: Remove per https://jira.hl7.org/browse/FHIR-31535 - Revert Coverage.Subscriber Type to that defined by the base Resource
 //* subscriber 0..1 
 //* subscriber only Reference(C4BBPatient)
-
+/*
 * extension contains
    $R5CoverageKind named coverage-kind 1..1 and
    InsuranceProductLine named product-line 0..1  MS and
@@ -29,6 +29,8 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 * extension[coverage-kind]
   * valueCode 1..1
   * valueCode = #insurance
+*/
+
 //* extension[$R5CoverageKind] 1..1
 //* extension[$R5CoverageKind].valueCode 1..1
 /* extension contains 
@@ -128,7 +130,7 @@ Needs to be made in to extensions
 
 
 // TODO move to THO or correct file
-
+/*
 CodeSystem: C4BBInsuranceProductLineCS
 Title: "C4BB Insurance Product Line Code System"
 Description: "Insurance Product Line Code System"
@@ -172,7 +174,7 @@ Description: "Insurance Product Type Value Set"
 * codes from system C4BBInsuranceProductTypeCS
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false
-
+*/
 /*
 CodeSystem: C4BBCoverageClassCS
 Title: "C4BB Insurance Product Line Code System"
@@ -184,7 +186,7 @@ Description: "Insurance Product Line Code System"
 * ^experimental = false
 */
 
-
+/*
 ValueSet: C4BBCoverageClassVS
 Title: "C4BB Coverage Class Value Set"
 Description: "C4BB Coverage Class Value Set"
@@ -226,3 +228,4 @@ Description: "Coverage Benefit Type."
 * value[x] 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept from http://hl7.org/fhir/us/ndh/ValueSet/NdhCoverageTypeVS (extensible)
+*/

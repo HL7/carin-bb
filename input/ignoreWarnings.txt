@@ -10,8 +10,6 @@ INFORMATION: CodeSystem/C4BBClaimProcedureType: CodeSystem: Most code systems de
 INFORMATION: CodeSystem/C4BBCompoundLiteral: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/C4BBIdentifierType: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/C4BBInstitutionalClaimSubType: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-INFORMATION: CodeSystem/C4BBInsuranceProductLineCS: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-INFORMATION: CodeSystem/C4BBInsuranceProductTypeCS: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/C4BBPayeeType: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/C4BBPayerAdjudicationStatus: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/C4BBRelatedClaimRelationshipCodes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
@@ -22,89 +20,94 @@ INFORMATION: CodeSystem/C4BBSurfaceCodes: CodeSystem: Most code systems defined 
 # ERROR, INFORMATION: CPT A0428 is a Valid CPT code -  https://www.cms.gov/medicare-coverage-database/view/article.aspx?articleId=56468&ver=11
 Unknown code 'A0428' in the CodeSystem 'http://www.ama-assn.org/go/cpt' version '2023'
 Code 'A0428' not found in CPT
-None of the codings provided are in the value set 'Procedure Codes - AMA CPT - CMS HCPCS Value Set' (http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes|2.1.0), and a coding from this value set is required) (codes = http://www.ama-assn.org/go/cpt#A0428)
+None of the codings provided are in the value set 'Procedure Codes - AMA CPT - CMS HCPCS Value Set' (http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes|2.1.0-snapshot), and a coding from this value set is required) (codes = http://www.ama-assn.org/go/cpt#A0428)
 
 
 # INFORMATION: CodeSystems that are draft in THO, will need to be changed in future versions of THO
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/ex-diagnosistype|1.0.0
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/claim-type|1.0.0
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/payeetype|1.0.0
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/adjudication|1.0.0
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/claimcareteamrole|1.0.0
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/coverage-class|1.0.0
+
 
 
 # INFORMATION: The following code systems are external and not supported by terminology server, and cannot be validated in examples
+A definition for CodeSystem 'https://www.nubc.org/CodeSystem/TypeOfBill' could not be found, so the code cannot be validated (error because this is a required binding)
 A definition for CodeSystem 'https://www.nubc.org/CodeSystem/TypeOfBill' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill|2.1.0' because the code system https://www.nubc.org/CodeSystem/TypeOfBill was not found
-A definition for CodeSystem 'https://www.nubc.org/CodeSystem/TypeOfBill' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill|2.1.0' because the code system https://www.nubc.org/CodeSystem/TypeOfBill was not found
+
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill|2.1.0-snapshot' because the code system https://www.nubc.org/CodeSystem/TypeOfBill was not found
+A definition for CodeSystem 'https://www.nubc.org/CodeSystem/TypeOfBill' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill|2.1.0-snapshot' because the code system https://www.nubc.org/CodeSystem/TypeOfBill was not found
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.nubc.org/CodeSystem/TypeOfBill
 
+A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PointOfOrigin' could not be found, so the code cannot be validated (error because this is a required binding)
 A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PointOfOrigin' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit|2.1.0' because the code system https://www.nubc.org/CodeSystem/PointOfOrigin was not found
-A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PointOfOrigin' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit|2.1.0' because the code system https://www.nubc.org/CodeSystem/PointOfOrigin was not found
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit|2.1.0-snapshot' because the code system https://www.nubc.org/CodeSystem/PointOfOrigin was not found
+A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PointOfOrigin' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPointOfOriginForAdmissionOrVisit|2.1.0-snapshot' because the code system https://www.nubc.org/CodeSystem/PointOfOrigin was not found
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.nubc.org/CodeSystem/PointOfOrigin
 
+A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' could not be found, so the code cannot be validated (error because this is a required binding)
 A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit|2.1.0' because the code system https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit was not found
-A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit|2.1.0' because the code system https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit was not found
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit|2.1.0-snapshot' because the code system https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit was not found
+A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPriorityTypeOfAdmissionOrVisit|2.1.0-snapshot' because the code system https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit was not found
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit
 
+A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PatDischargeStatus' could not be found, so the code cannot be validated (error because this is a required binding)
 A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PatDischargeStatus' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus|2.1.0' because the code system https://www.nubc.org/CodeSystem/PatDischargeStatus was not found
-A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PatDischargeStatus' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus|2.1.0' because the code system https://www.nubc.org/CodeSystem/PatDischargeStatus was not found
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus|2.1.0-snapshot' because the code system https://www.nubc.org/CodeSystem/PatDischargeStatus was not found
+A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PatDischargeStatus' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCPatientDischargeStatus|2.1.0-snapshot' because the code system https://www.nubc.org/CodeSystem/PatDischargeStatus was not found
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.nubc.org/CodeSystem/PatDischargeStatus
 
-A definition for CodeSystem 'https://www.nubc.org/CodeSystem/RevenueCodes' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes|2.1.0' because the code system https://www.nubc.org/CodeSystem/RevenueCodes was not found
-A definition for CodeSystem 'https://www.nubc.org/CodeSystem/RevenueCodes' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes|2.1.0' because the code system https://www.nubc.org/CodeSystem/RevenueCodes was not found
+A definition for CodeSystem 'https://www.nubc.org/CodeSystem/RevenueCodes' could not be found, so the code cannot be validated (error because this is a required binding)
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes|2.1.0-snapshot' because the code system https://www.nubc.org/CodeSystem/RevenueCodes was not found
+A definition for CodeSystem 'https://www.nubc.org/CodeSystem/RevenueCodes' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCRevenueCodes|2.1.0-snapshot' because the code system https://www.nubc.org/CodeSystem/RevenueCodes was not found
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.nubc.org/CodeSystem/RevenueCodes
 
+A definition for CodeSystem 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' could not be found, so the code cannot be validated (error because this is a required binding)
 A definition for CodeSystem 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes|2.1.0' because the code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set was not found
-A definition for CodeSystem 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes|2.1.0' because the code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set was not found
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes|2.1.0-snapshot' because the code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set was not found
+A definition for CodeSystem 'https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/CMSPlaceofServiceCodes|2.1.0-snapshot' because the code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set was not found
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set
 
-A definition for CodeSystem 'http://www.ada.org/cdt' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode|2.1.0' because the code system http://www.ada.org/cdt was not found
-A definition for CodeSystem 'http://www.ada.org/cdt' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode|2.1.0' because the code system http://www.ada.org/cdt was not found
+A definition for CodeSystem 'http://www.ada.org/cdt' could not be found, so the code cannot be validated (error because this is a required binding)
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode|2.1.0-snapshot' because the code system http://www.ada.org/cdt was not found
+A definition for CodeSystem 'http://www.ada.org/cdt' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/ADADentalProcedureCode|2.1.0-snapshot' because the code system http://www.ada.org/cdt was not found
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://www.ada.org/cdt
 
 
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' could not be found, so the code cannot be validated (error because this is a required binding)
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem was not found
-A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem was not found
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem was not found
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem was not found
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem
 
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' could not be found, so the code cannot be validated (error because this is a required binding)
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode was not found
-A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode was not found
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode was not found
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPDispensedAsWrittenOrProductSelectionCode|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/NCPDPDispensedAsWrittenOrProductSelectionCode was not found
 
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' could not be found, so the code cannot be validated (error because this is a required binding)
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericIndicator|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator was not found
-A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericIndicator|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator was not found
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericIndicator|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator was not found
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPBrandGenericIndicator|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator was not found
 
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' could not be found, so the code cannot be validated (error because this is a required binding)
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode was not found
-A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode was not found
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode was not found
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPPrescriptionOriginCode|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode was not found
 
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' could not be found, so the code cannot be validated (error because this is a required binding)
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode was not found
-A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode was not found
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode was not found
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/NCPDPCompoundCode|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode was not found
 
-Resolved system https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes (v2.1.0), but the definition doesn't include any codes, so the code has not been validated
 The definition for the Code System with URI 'https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes' doesn't provide any codes so the code cannot be validated
+Resolved system https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes (v2.1.0-snapshot), but the definition doesn't include any codes, so the code has not been validated
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes
 
 
-A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem' could not be found, so the code cannot be validated
-Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem was not found
-A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite|2.1.0' because the code system http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem was not found
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem was not found
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem' could not be found, so the code cannot be validated (error because this is a required binding)
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem was not found
 
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/AcuteInpatientPPS/MS-DRG-Classifications-and-Software
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator

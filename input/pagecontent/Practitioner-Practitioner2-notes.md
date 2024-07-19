@@ -5,7 +5,7 @@ Title: "Practitioner Example 2"
 Description: "Practitioner Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-05-04T03:02:01-04:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|2.1.0"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|2.1.0-snapshot"
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#NPI "National Provider Identifier"
   * text = "National Provider Identifier"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"

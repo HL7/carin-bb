@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="2.0.0" defaultWorkgroup="fm" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="2.2.0-snapshot1" defaultWorkgroup="fm" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
 <version code="current" url="http://build.fhir.org/ig/HL7/carin-bb"/>
+<version code="2.2.0-snapshot1" url="http://hl7.org/fhir/us/carin-bb/STU2.1-snapshot"/>
 <version code="2.0.0" url="http://hl7.org/fhir/us/carin-bb/STU2"/>
 <version code="1.2.0" url="http://hl7.org/fhir/us/carin-bb/2022Jan"/>
 <version code="1.1.0" url="http://hl7.org/fhir/us/carin-bb/STU1.1"/>
@@ -41,7 +42,6 @@
 <artifact id="ValueSet/C4BBClaimProfessionalAndNonClinicianDiagnosisType" key="ValueSet-C4BBClaimProfessionalAndNonClinicianDiagnosisType" name="C4BB Claim Professional And Non Clinician Diagnosis Type Value Set"/>
 <artifact id="CodeSystem/C4BBCompoundLiteral" key="CodeSystem-C4BBCompoundLiteral" name="C4BB Compound Literal Code System"/>
 <artifact id="StructureDefinition/C4BB-Coverage" key="StructureDefinition-C4BB-Coverage" name="C4BB Coverage"/>
-<artifact id="ValueSet/C4BBCoverageClassVS" key="ValueSet-C4BBCoverageClassVS" name="C4BB Coverage Class Value Set"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit" key="StructureDefinition-C4BB-ExplanationOfBenefit" name="C4BB Explanation Of Benefit"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional" key="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional" name="C4BB ExplanationOfBenefit Inpatient Institutional"/>
 <artifact id="StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional-Basis" key="StructureDefinition-C4BB-ExplanationOfBenefit-Inpatient-Institutional-Basis" name="C4BB ExplanationOfBenefit Inpatient Institutional Basis"/>
@@ -56,10 +56,6 @@
 <artifact id="CodeSystem/C4BBIdentifierType" key="CodeSystem-C4BBIdentifierType" name="C4BB Identifier Type Code System"/>
 <artifact id="CodeSystem/C4BBInstitutionalClaimSubType" key="CodeSystem-C4BBClaimSubType" name="C4BB Institutional Claim SubType Code System"/>
 <artifact id="ValueSet/C4BBInstitutionalClaimSubType" key="ValueSet-C4BBClaimSubType" name="C4BB Institutional Claim SubType Value Set"/>
-<artifact id="CodeSystem/C4BBInsuranceProductLineCS" key="CodeSystem-C4BBInsuranceProductLineCS" name="C4BB Insurance Product Line Code System"/>
-<artifact id="ValueSet/C4BBInsuranceProductLineVS" key="ValueSet-C4BBInsuranceProductLineVS" name="C4BB Insurance Product Line Value Set"/>
-<artifact id="CodeSystem/C4BBInsuranceProductTypeCS" key="CodeSystem-C4BBInsuranceProductTypeCS" name="C4BB Insurance Product Type Code System"/>
-<artifact id="ValueSet/C4BBInsuranceProductTypeVS" key="ValueSet-C4BBInsuranceProductTypeVS" name="C4BB Insurance Product Type Value Set"/>
 <artifact id="StructureDefinition/C4BB-Organization" key="StructureDefinition-C4BB-Organization" name="C4BB Organization"/>
 <artifact id="ValueSet/C4BBOrganizationIdentifierType" key="ValueSet-C4BBOrganizationIdentifierType" name="C4BB Organization Identifier Type Value Set"/>
 <artifact id="StructureDefinition/C4BB-Patient" key="StructureDefinition-C4BB-Patient" name="C4BB Patient"/>
@@ -84,7 +80,6 @@
 <artifact id="ValueSet/C4BBTransportationServiceCategories" key="ValueSet-C4BBTransportationServiceCategories" name="C4BB Transportation Services Categories Value Set"/>
 <artifact deprecated="true" id="CodeSystem/CMSPlaceofServiceCodes" key="CodeSystem-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS) CS"/>
 <artifact id="ValueSet/CMSPlaceofServiceCodes" key="ValueSet-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS) Value Set"/>
-<artifact id="StructureDefinition/CoverageBenefitType" key="StructureDefinition-CoverageBenefitType" name="Coverage Benefit Type"/>
 <artifact id="Coverage/Coverage1" key="Coverage-Coverage1" name="Coverage Example 1"/>
 <artifact deprecated="true" id="Coverage/CoverageEx1" key="Coverage-CoverageEx1" name="Coverage Example 1 (deprecated)"/>
 <artifact id="Coverage/Coverage2" key="Coverage-CoverageEx2" name="Coverage Example 2"/>
@@ -130,8 +125,6 @@
 <artifact deprecated="true" id="CodeSystem/CMSHIPPSCodes" key="CodeSystem-CMSHIPPSCodes" name="Health Insurance Prospective Payment System (HIPPS)"/>
 <artifact deprecated="true" id="CodeSystem/CMSHCPCSCodes" key="CodeSystem-CMSHCPCSCodes" name="Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes"/>
 <artifact deprecated="true" id="CodeSystem/ICD10PCS" key="CodeSystem-ICD10PCS" name="ICD-10 Procedure Coding System"/>
-<artifact id="StructureDefinition/InsuranceProductLine" key="StructureDefinition-InsuranceProductLine" name="Insurance Product Line"/>
-<artifact id="StructureDefinition/InsuranceProductType" key="StructureDefinition-InsuranceProductType" name="Insurance Product Type"/>
 <artifact id="ValueSet/CMSMS3MAPAPRDRG" key="ValueSet-CMSMS3MAPAPRDRG" name="MS-DRGs - AP-DRGs - APR-DRGs Value Set"/>
 <artifact deprecated="true" id="CodeSystem/CMSMSDRG" key="CodeSystem-CMSMSDRG" name="Medicare Severity Diagnosis Related Groups (MS-DRGs)"/>
 <artifact deprecated="true" id="ValueSet/NCPDPBrandGenericCode" key="ValueSet-NCPDPBrandGenericCode" name="NCPDP Brand Generic Code"/>

@@ -5,7 +5,7 @@ Description: "Patient Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-30T09:48:01.8512764-04:00"
 * meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile[+] = Canonical(C4BBPatient|2.1.0)
+* meta.profile[+] = Canonical(C4BBPatient|2.1.0-snapshot)
 * language = #en-US
 * identifier[memberid].type = $v2-0203#MB "Member Number"
 * identifier[memberid].type.text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."

@@ -5,7 +5,7 @@ Title: "EOB Inpatient Example 2"
 Description: "EOB Inpatient Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-04-28T15:39:36-04:00"
-* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|2.1.0"
+* meta.profile = "http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|2.1.0-snapshot"
 * identifier.type = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType#uc "Unique Claim ID"
   * text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier.system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"

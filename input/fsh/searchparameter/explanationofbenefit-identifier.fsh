@@ -8,7 +8,7 @@ Usage: #definition
 * extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * extension.valueCode = #trial-use
 * url = "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-identifier"
-* version = "2.0.0"
+* version = "2.1.0-snapshot"
 * name = "ExplanationOfBenefit_Identifier"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-identifier"
 * status = #active
