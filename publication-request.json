@@ -1,6 +1,6 @@
 {
     "package-id": "hl7.fhir.us.carin-bb",
-    "version": "2.2.0-snapshot1",
+    "version": "2.1.0-snapshot1",
     "path": "http://hl7.org/fhir/us/carin-bb/STU2.1-snapshot",
     "milestone": true,
     "status": "trial-use",
