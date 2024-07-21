@@ -17,14 +17,9 @@ INFORMATION: CodeSystem/C4BBSupportingInfoType: CodeSystem: Most code systems de
 INFORMATION: CodeSystem/C4BBSurfaceCodes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 
-# ERROR, INFORMATION: CPT A0428 is a Valid CPT code -  https://www.cms.gov/medicare-coverage-database/view/article.aspx?articleId=56468&ver=11
-Unknown code 'A0428' in the CodeSystem 'http://www.ama-assn.org/go/cpt' version '2023'
-Code 'A0428' not found in CPT
-None of the codings provided are in the value set 'Procedure Codes - AMA CPT - CMS HCPCS Value Set' (http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes|2.1.0-snapshot), and a coding from this value set is required) (codes = http://www.ama-assn.org/go/cpt#A0428)
-
-
-# INFORMATION: CodeSystems that are draft in THO, will need to be changed in future versions of THO
-
+# ERROR, Link to a specific code in an IG included stub CodeSystem (CS does not have codes defined, so the link to the specific code is broken)
+Hyperlink 'CodeSystem-X12AmbulanceTransportReasonCodes.html#X12AmbulanceTransportReasonCodes-B' at 'div/blockquote/p/a' for 'X12 Ambulance Transport Reason Codes Code System' does not resolve
+The link 'CodeSystem-X12AmbulanceTransportReasonCodes.html#X12AmbulanceTransportReasonCodes-B' for "X12 Ambulance Transport Reason Codes Code System" cannot be resolved (valid targets: [X12AmbulanceTransportReasonCodes, segment-header, publish-box, hcX12AmbulanceTransportReasonCodes, bottom, hl7-logo, segment-post-footer, codesystem-x12-ambulance-transport-reason-codes-code-system, hl7-search, hl7-search-lnk, family-logo, family-nav, ig-status, X12AmbulanceTransportReasonCodes-und, top, root, stripe, segment-footer, hl7-nav, segment-navbar, segment-content, segment-breadcrumb])
 
 
 # INFORMATION: The following code systems are external and not supported by terminology server, and cannot be validated in examples
@@ -104,6 +99,9 @@ The definition for the Code System with URI 'https://x12.org/codesystem.x12.org/
 Resolved system https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes (v2.1.0-snapshot), but the definition doesn't include any codes, so the code has not been validated
 Error from http://tx.fhir.org/r4: Unable to provide support for code system https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes
 
+A definition for CodeSystem 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets' could not be found, so the code cannot be validated (error because this is a required binding)
+Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes|2.1.0-snapshot' because the code system https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets was not found
+A definition for CodeSystem 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets' could not be found, so the code cannot be validated; Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AMACPTCMSHCPCSProcedureCodes|2.1.0-snapshot' because the code system https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets was not found
 
 Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/OralBodySite|2.1.0-snapshot' because the code system http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem was not found
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/ADAAreaOralCavitySystem' could not be found, so the code cannot be validated (error because this is a required binding)

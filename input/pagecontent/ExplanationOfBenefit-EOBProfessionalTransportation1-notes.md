@@ -83,7 +83,7 @@ Usage: #example
 * item[=].informationSequence[+] = 7
 * item[=].informationSequence[+] = 10
 * item[=].informationSequence[+] = 11
-* item[=].productOrService = http://www.ama-assn.org/go/cpt#A0428 "Ambulance service, basic life support, non-emergency transport (BLS)"
+* item[=].productOrService = https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets#A0428 "Ambulance service, basic life support, non-emergency transport (BLS)"
 * item[=].servicedDate = "2022-09-10"
 * item[=].locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#41
   * text = "Ambulance - Land"
@@ -113,7 +113,7 @@ Usage: #example
 * item[=].informationSequence[+] = 7
 * item[=].informationSequence[+] = 8
 * item[=].informationSequence[+] = 9
-* item[=].productOrService = http://www.ama-assn.org/go/cpt#A0428 "Ambulance service, basic life support, non-emergency transport (BLS)"
+* item[=].productOrService = https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets#A0428 "Ambulance service, basic life support, non-emergency transport (BLS)"
 * item[=].servicedDate = "2022-09-10"
 * item[=].locationCodeableConcept = https://www.cms.gov/Medicare/Coding/place-of-service-codes/Place_of_Service_Code_Set#41
   * text = "Ambulance - Land"

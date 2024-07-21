@@ -95,7 +95,7 @@ Usage: #example
 
 
 * item[+].sequence = 1
-* item[=].productOrService = $cpt#A0428 "Ambulance service, basic life support, non-emergency transport (BLS)"
+* item[=].productOrService = $HCPCS#A0428 "Ambulance service, basic life support, non-emergency transport (BLS)"
 * item[=].servicedDate = "2022-09-10"
 * item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#41
 * item[=].locationCodeableConcept.text = "Ambulance - Land"
@@ -126,7 +126,7 @@ Usage: #example
 * item[=].adjudication[benefitpaymentstatus][=].reason = C4BBPayerAdjudicationStatus#innetwork
 
 * item[+].sequence = 2
-* item[=].productOrService = $cpt#A0428 "Ambulance service, basic life support, non-emergency transport (BLS)"
+* item[=].productOrService = $HCPCS#A0428 "Ambulance service, basic life support, non-emergency transport (BLS)"
 * item[=].servicedDate = "2022-09-10"
 * item[=].locationCodeableConcept = $CMSPlaceofServiceCodes#41
 * item[=].locationCodeableConcept.text = "Ambulance - Land"
