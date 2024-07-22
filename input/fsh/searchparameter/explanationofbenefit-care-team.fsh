@@ -6,7 +6,7 @@ Usage: #definition
 * extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * extension.valueCode = #trial-use
 * url = "http://hl7.org/fhir/us/carin-bb/SearchParameter/explanationofbenefit-care-team"
-* version = "2.1.0-snapshot"
+* version = "2.1.0-snapshot1"
 * name = "ExplanationOfBenefit_Careteam"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/ExplanationOfBenefit-care-team"
 * status = #active

@@ -2,7 +2,7 @@ Instance: BB-EOBOral2-nonfinancial
 InstanceOf: C4BBExplanationOfBenefitOralBasis
 Description: "EOB Oral Example 2 - Nonfinancial"
 Usage: #example
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOralBasis|2.1.0-snapshot)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOralBasis|2.1.0-snapshot1)
 * meta.lastUpdated = "2021-10-28T10:23:00-05:00"
 * language = #en-US
 * status = #active

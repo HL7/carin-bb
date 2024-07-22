@@ -4,7 +4,7 @@ Description: "EOB Professional Example 1 - Nonfinancial"
 Title: "EOB Professional - Example 1 - Nonfinancial"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinicianBasis|2.1.0-snapshot)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinicianBasis|2.1.0-snapshot1)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
 * status = #active

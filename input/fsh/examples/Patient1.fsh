@@ -3,7 +3,7 @@ InstanceOf: C4BBPatient
 Description: "Patient Example1"
 Usage: #example
 //* id = "1234-234-1243-12345678901"
-* meta.profile[+] = Canonical(C4BBPatient|2.1.0-snapshot)
+* meta.profile[+] = Canonical(C4BBPatient|2.1.0-snapshot1)
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * language = #en-US
 * id = "Patient1"
