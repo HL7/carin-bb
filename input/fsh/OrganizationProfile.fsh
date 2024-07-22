@@ -33,6 +33,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * identifier[naiccode] ^patternIdentifier.system = $NAICCodeCS
 * identifier[naiccode] ^patternIdentifier.type  = C4BBIdentifierType#naiccode
 */
+* identifier[NAIC] MS
 * identifier[NAIC] ^short = "NAIC Code"
 // * identifier[naiccode].type
 * identifier[NAIC] ^patternIdentifier.system = $NAICCodeCS

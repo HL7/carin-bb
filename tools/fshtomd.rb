@@ -4,7 +4,7 @@
 
 require "pry"
 
-rmoutput = `rm -rf fshoutput`
+#rmoutput = `rm -rf fshoutput`
 gofshoutput = `gofsh output --indent --no-alias -o fshoutput`
 puts "JSONInput = ./output"
 puts "FSHInput = ./fshoutput/input/fsh/instances"
@@ -21,7 +21,7 @@ jsoninputfiles.each {|json|
   end
   fsh = "fshoutput/input/fsh/instances/" + instancename + ".fsh"
   notes_file_name = filetype + "-" + instancename + "-notes.md"
-  if !File.exists?(fsh)
+  if !File.exist?(fsh)
     puts "FSH file " + fsh + " does not exist (json = " + json + ") !"
     next
   end

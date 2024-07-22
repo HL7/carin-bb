@@ -61,7 +61,7 @@ parameters:
     - https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
 
 copyrightYear: 2024+
-releaseLabel: STU 2
+releaseLabel: STU 2.1 prepublication draft
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
