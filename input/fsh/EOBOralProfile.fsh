@@ -18,7 +18,7 @@ The basis profile does not have requirements for financial data."
 * careTeam.qualification MS
 * careTeam.qualification from $USCoreProviderSpecialty (required)  // cardinality constraint?
 * type = $HL7ClaimTypeCS#oral
-* provider only Reference(C4BBPractitioner)
+* provider only Reference(C4BBPractitioner or C4BBOrganization)
 * insert SupportingInfoSlicing
 * supportingInfo contains
    clmrecvddate 0..1 MS and
