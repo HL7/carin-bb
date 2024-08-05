@@ -215,6 +215,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 The claims data is based on the institutional claim form UB-04, submission standards adopted by the Department of Health and Human Services.
 The profile has requirements for financial data."
 
+* obeys EOB-institutional-outpatient-meta-profile-version
 * insert EOBHeaderItemAdjudicationInvariant
 * insert ItemAdjudicationInvariant
 * item.adjudication contains

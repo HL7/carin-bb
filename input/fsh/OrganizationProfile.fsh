@@ -11,7 +11,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 // 20210322 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBOrganization|1.2.0)
-//* obeys organization-meta-profile-version
+* obeys organization-meta-profile-version
 
 * identifier contains
    tax 0..* MS and

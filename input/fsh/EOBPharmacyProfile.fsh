@@ -184,6 +184,7 @@ Description: "This profile is used for Explanation of Benefits (EOBs) based on c
 The claims data is based on submission standards adopted by the Department of Health and Human Services defined by NCPDP (National Council for Prescription Drug Program)
 The profile has requirements for financial data."
 
+* obeys EOB-pharmacy-meta-profile-version
 * item.adjudication contains
    adjudicationamounttype 1..* MS
    

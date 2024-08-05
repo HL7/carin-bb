@@ -277,6 +277,7 @@ The claims data is based on the institutional claim format UB-04, submission sta
 Services.
 The profile has requirements for financial data."
 
+* obeys EOB-institutional-inpatient-meta-profile-version
 * insert EOBHeaderItemAdjudicationInvariant
 * insert ItemAdjudicationInvariant
 //* insert ItemAdjudicationSlicing

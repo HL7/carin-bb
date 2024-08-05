@@ -234,7 +234,7 @@ The profile has requirements for financial data."
 // 20210216 CAS: FHIR-30575
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBExplanationOfBenefitOral|1.2.0)
-//* obeys EOB-oral-meta-profile-version
+* obeys EOB-oral-meta-profile-version
 
 * item.adjudication contains
    adjudicationamounttype 1..* MS
