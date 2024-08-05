@@ -21,7 +21,7 @@ https://jira.hl7.org/browse/FHIR-31535?jql=cf%5B11402%5D%20%3D%20STU-1.1.0-Updat
 <li>Secondary
 <ul>
 <li>Adam Culbertson (Humana) - <a href="mailto:ACulbertson1@humana.com">ACulbertson1@humana.com</a></li>
-<li>Corey Spears (MITRE) - <a href="mailto:corey.spears@lantanagroup.com">corey.spears@lantanagroup.com</a></li>   
+<li>Corey Spears (Lantana Consulting Group) - <a href="mailto:corey.spears@lantanagroup.com">corey.spears@lantanagroup.com</a></li>   
 <li>Igor Sirkovich (Smile CDR, Inc.) - <a href="mailto:igor@smilecdr.com">igor@smilecdr.com</a></li>   
 <li>Jason Teeple (Cigna) - <a href="mailto:jason.teeple@cigna.com">jason.teeple@cigna.com</a></li>
 <li>Josh Lamb (UPMC) - <a href="mailto:igor@smilecdr.com">lambj4@upmc.edu</a></li> 
