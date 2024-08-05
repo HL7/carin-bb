@@ -14,7 +14,6 @@ ValueSet: C4BBTotalCategoryDiscriminator
 Title: "C4BB Total Category Discriminator Value Set"
 Description: "Used as the discriminator for total.category for the CARIN IG for Blue Button®"
 * codes from valueset C4BBAdjudication
-* codes from valueset C4BBPayerBenefitPaymentStatus
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false
 
