@@ -8,6 +8,8 @@ https://jira.hl7.org/browse/FHIR-31535?jql=cf%5B11402%5D%20%3D%20STU-1.1.0-Updat
 
 <p>This implementation guide describes the CARIN for Blue Button® <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
 
+<p class="new-content">Where possible, new and updated pre-publishing content are highlighted with green text and background or pages marked with a comment in a similar style to this one for the convenience of reviewers of this STU Update Peer Review - <strong>This highlighting will be removed prior to publication</strong></p>
+
 <a name="authors"> </a>
 ### Authors
 <ul>

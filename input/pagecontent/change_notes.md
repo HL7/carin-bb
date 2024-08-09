@@ -1,10 +1,10 @@
 CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®) was developed under the <a href="https://www.carinalliance.com/">CARIN Alliance</a>.
 
-### Changes and Updates for Version 2.0.0 (from version 1.1.0)
-The current official published version of CARIN BB for FHIR R4 
 
 
-### Changes and Updates for Version 2.1.0 (from version 2.0.0)
+<h3> Changes and Updates for Version 2.1.0 (from version 2.0.0)</h3>
+
+<p class="bg-success">
 The current official published version of CARIN BB for FHIR R4 
 <ul>
   <li>Changed base profile of the <a href="StructureDefinition-C4BB-Patient.html">Patient</a>, <a href="StructureDefinition-C4BB-Coverage.html">Coverage</a>, <a href="StructureDefinition-C4BB-Practitioner.html">Practitioner</a>, <a href="StructureDefinition-C4BB-Organization.html">Organization</a>, and <a href="StructureDefinition-C4BB-RelatedPerson.html">RelatedPerson</a> to <a href="https://hl7.org/fhir/us/core/STU6.1/">US Core 6.1</a> and added complies with requirements to <a href="https://hl7.org/fhir/us/core/STU3.1.1/">US Core 3.1.1</a> where there was a profile in that version (<a href="https://jira.hl7.org/browse/FHIR-46374">FHIR-46374</a>) *.  Note: Most of the changes from US Core 3.1.1 to 6.1 are reductions in Must Support requirements, but there are a small number of breaking changes to note, including:
@@ -28,6 +28,7 @@ The current official published version of CARIN BB for FHIR R4
   <li>Updated the menu structure adding support links. (<a href="https://jira.hl7.org/browse/FHIR-46270">FHIR-46270</a>)</li>
 
 </ul>
+</p>
 
 ### Changes and Updates for Version 2.0.0 (from version 1.1.0)
 The current official published version of CARIN BB for FHIR R4 
@@ -88,6 +89,8 @@ The current official published version of CARIN BB for FHIR R4
   <li>Removed meta.profile requirements on <a href="https://hl7.org/fhir/us/carin-bb/STU2/StructureDefinition-C4BB-ExplanationOfBenefit.html">Abstract base ExplanationOfBenefit profile</a> (<a href="https://jira.hl7.org/browse/FHIR-34504">FHIR-34504</a>)</li>
 
   <li>Added refillsAuthorized slice to ExplanationOfBenefit.supportingInfo of <a href="https://hl7.org/fhir/us/carin-bb/STU2/StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy ExplanationOfBenefit</a> profile (<a href="https://jira.hl7.org/browse/FHIR-33487">FHIR-33487</a>)</li>
+
+  <li>Added to rejectreason code to <a href="CodeSystem-C4BBAdjudicationDiscriminator.html">Adjudication Discriminator</a> and changed ExplanationOfBenefit.item.adjudication denialreason slice to rejectreason with a fixed category code of rejectreason in <a href="https://build.fhir.org/ig/HL7/carin-bb/StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy.html">Pharmacy Explanation Of Benefit profile</a>. (<a href="https://jira.hl7.org/browse/FHIR-38062">FHIR-38062</a>) *</li>
 
   <li>Changed payee.party cardinality from 1..1 to 0..1 and added invariant requiring payee.party if payee.type='other' in <a href="https://hl7.org/fhir/us/carin-bb/STU2/StructureDefinition-C4BB-ExplanationOfBenefit.html">Base ExplanationOfBenefit profile</a> and added new <a href="https://hl7.org/fhir/us/carin-bb/STU2/StructureDefinition-C4BB-RelatedPerson.html">RelatedPerson profile</a> as a reference option (<a href="https://jira.hl7.org/browse/FHIR-31699">FHIR-31699</a> and <a href="https://jira.hl7.org/browse/FHIR-37740">FHIR-37740</a>)</li>
 

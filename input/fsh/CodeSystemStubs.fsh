@@ -1035,6 +1035,7 @@ Current and previous releases of ICD-10-CM are available in PDF and XML format h
 Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to nchsicd10cm@cdc.gov."
 * codes from system $ICD10CM
 * codes from system $ICD9CM
+* $HL7DataAbsentReason#masked
 * insert ICD910CMCopyrightNotice
 * ^experimental = false
 

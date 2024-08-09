@@ -128,6 +128,66 @@ pages:
 # │  To control the package-list.json using this config, uncomment and set the "history" property. │
 # ╰───────────────────────────────────────────_────────────────────────────────────────────────────╯
 
+
+groups:
+  capability:
+    name: "Behavior: Capability Statements"
+    description: "The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide. Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements."
+    resources:
+      - CapabilityStatement/c4bb
+
+  search:
+    name: "Behavior: Search Parameters"
+    description: "These define the properties by which a RESTful server can be searched. They can also be used for sorting and including related resources."
+    resources:
+      - SearchParameter/coverage-payor
+      - SearchParameter/explanationofbenefit-billable-period-start
+      - SearchParameter/explanationofbenefit-care-team
+      - SearchParameter/explanationofbenefit-coverage
+      - SearchParameter/explanationofbenefit-identifier
+      - SearchParameter/explanationofbenefit-insurer
+      - SearchParameter/practitionerrole-organization
+      - SearchParameter/explanationofbenefit-patient
+      - SearchParameter/practitionerrole-practitioner
+      - SearchParameter/explanationofbenefit-provider
+      - SearchParameter/explanationofbenefit-service-date
+      - SearchParameter/explanationofbenefit-service-start-date
+      - SearchParameter/explanationofbenefit-type
+
+  abstract:
+    name: "Structures: Abstract Profiles"
+    description: "These are profiles on resources or data types that describe patterns used by other profiles, but cannot be instantiated directly. I.e. instances can conform to profiles based on these abstract profiles, but do not declare conformance to the abstract profiles themselves."
+    resources:
+      - StructureDefinition/C4BB-ExplanationOfBenefit
+
+  basis:
+    name: "Structures: Explanation of Benefits Basis Profiles"
+    description: "Basis profiles that define all non-financial element requirements for ExplanationOfBenefit types. These profiles are not expected to be implemented directly within the context of the consumer directed data exchange use case defined by this guide, but rather from within the context in which external guides may define (e.g. Provider Access API of PDEX)."
+    resources:
+      - StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional-Basis
+      - StructureDefinition/C4BB-ExplanationOfBenefit-Oral-Basis
+      - StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional-Basis
+      - StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy-Basis
+      - StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician-Basis
+
+  profiles:
+    name: "Structures: Resource Profiles"
+    description: "These define constraints on FHIR resources for systems conforming to this implementation guide."
+    resources:
+      - StructureDefinition/C4BB-Patient
+      - StructureDefinition/C4BB-Coverage
+      - StructureDefinition/C4BB-Practitioner
+      - StructureDefinition/C4BB-Organization
+      - StructureDefinition/C4BB-RelatedPerson
+      - StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional
+      - StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional
+      - StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician
+      - StructureDefinition/C4BB-ExplanationOfBenefit-Pharmacy
+      - StructureDefinition/C4BB-ExplanationOfBenefit-Oral
+
+
+
+
 resources:
   Patient/Patient1:
     name: Patient Example 1
