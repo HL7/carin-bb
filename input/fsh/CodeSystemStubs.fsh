@@ -943,6 +943,7 @@ The Centers for Medicare & Medicaid Services (CMS) maintain Remittance Advice Re
 * ^experimental = false
 
 
+/* FHIR-46778 - Move the X12 Ambulance Transport Codes Code System to THO
 
 //  *** @ Saul - No change to CodeSystem CARCs ; RARCs are new
 CodeSystem: X12AmbulanceTransportReasonCodes
@@ -979,7 +980,7 @@ Additional information on X12 licensing program can be found here:
 To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.com."
 * ^experimental = false
 
-
+*/
 ValueSet: C4BBAmbulanceTransportReasonCodes
 Title: "C4BB Ambulance Transport Reasons Value Set"
 Description: "Transportation Services Ambulatory Transport Reason Codes" 
