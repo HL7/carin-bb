@@ -35,7 +35,7 @@ The basis profile does not have requirements for financial data."
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from CDCICD910CMDiagnosisCodes (required)
 * diagnosis.onAdmission 0..1 MS
-* diagnosis.onAdmission from AHANUBCPresentOnAdmission (required)
+* diagnosis.onAdmission from CMSPresentOnAdmissionIndicator (required)
 * procedure.procedure[x] only CodeableConcept
 * procedure.procedure[x] 1..1 MS
 * procedure.procedure[x] from CMSICD910PCSProcedureCodes (required)
