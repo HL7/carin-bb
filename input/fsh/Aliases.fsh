@@ -96,7 +96,7 @@ Alias: $AHANUBCPointOfOriginForAdmissionOrVisitOID = urn:oid:2.16.840.1.113883.6
 Alias: $AHANUBCTypeOfBillOID = urn:oid:2.16.840.1.113883.18.290
 Alias: $AHANUBCRevenueCodeOID = urn:oid:2.16.840.1.113883.13.18
 Alias: $AHANUBCPatientDischargeStatusOID = urn:oid:2.16.840.1.113883.6.301.5
-Alias: $AHANUBCPresentOnAdmissionOID  = urn:oid:2.16.840.1.113883.6.301.11
+//Alias: $AHANUBCPresentOnAdmissionOID  = urn:oid:2.16.840.1.113883.6.301.11
 Alias: $CMSPresentOnAdmissionIndicator = https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding
 
 Alias: $X12CARCCS = https://x12.org/codes/claim-adjustment-reason-codes
