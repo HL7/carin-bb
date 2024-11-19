@@ -106,7 +106,7 @@ The basis profile does not have requirements for financial data."
 * item.bodySite ^short = "First tooth number or oral cavity code"
 * item.bodySite from OralBodySite (required) // may change to $ToothNumber
 * item.subSite ^short = "Tooth surface for all teeth on line"
-* item.subSite from C4BBSurfaceCodes (required)
+* item.subSite from ADAToothSurfaceCodes (required)
 
 * insert AdjudicationSlicing
 * adjudication MS

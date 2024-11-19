@@ -251,6 +251,6 @@ Description: "This value set includes Professional and Non Clinician Claim SubTy
 ValueSet: C4BBSurfaceCodes
 Title: "US Surface Codes Set Value Set"
 Description: "This value set includes FDI tooth surface codes localized for the US Realm."
-* codes from system C4BBSurfaceCodes
+* codes from system ADAToothSurfaceCodes
 * ^experimental = false
 * ^copyright = "This ValueSet is not copyrighted."
