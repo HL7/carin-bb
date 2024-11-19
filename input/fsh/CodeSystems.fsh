@@ -212,6 +212,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
 
+/* FHIR-47140 - Move US Surface Codes System to THO
 
 CodeSystem: C4BBSurfaceCodes
 Title: "US Surface Codes System"
@@ -230,3 +231,7 @@ This is a code system defined locally by the CARIN BlueButton IG. As this IG mat
 * ^caseSensitive = true
 * ^experimental = false
 * ^copyright = "This CodeSystem is not copyrighted."
+
+
+
+*/

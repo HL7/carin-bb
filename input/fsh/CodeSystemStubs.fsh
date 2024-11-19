@@ -206,6 +206,8 @@ To obtain the underlying code systems, please see information [here](https://www
 * insert AHANUBCCopyrightNotice
 * ^experimental = false
 
+
+/* FHIR-38278 - CARIN BB Present on Admission Code System URL different than THO
 CodeSystem: AHANUBCPresentOnAdmission
 Title: "NUBC Present On Admission Indicator Code System"
 Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
@@ -224,19 +226,13 @@ To obtain the underlying code systems, please see information [here](https://www
 * insert AHANUBCCopyrightNotice
 * ^experimental = false
 
-ValueSet: AHANUBCPresentOnAdmission
+*/
+
+ValueSet: CMSPresentOnAdmissionIndicator
 Title: "NUBC Present On Admission Indicator Codes Value Set"
-Description: "The UB-04 Data File contains the complete set of NUBC codes. Every code in the range of possible codes is accounted for sequentially. There are no gaps because all used and unused codes are identified.
-
-This code system consists of the following:
-
-*   FL 67 - Present On Admission Indicator
-
-These codes are used to report the principal diagnosis code (ICD-9 or ICD-10 code) and each of the secondary diagnoses.  The 8th character in that set (first 7 are ICD) is the location used to report whether or not a condition was present on admission. The present on admission code acts as a modifier and is used to further define another code, so as to say this ICD-10 code is for a condition that was/was not present on admission.  It should be noted that present on admission also appears in FL 72
-
-To obtain the underlying code systems, please see information [here](https://www.nubc.org/subscription-information)"
-* codes from system AHANUBCPresentOnAdmission
-* insert AHANUBCCopyrightNotice
+Description: "This code system consists of Present on Admission (POA) indicators which are assigned to the principal and secondary diagnoses (as defined in Section II of the Official Guidelines for Coding and Reporting) and the external cause of injury codes to indicate the presence or absence of the diagnosis at the time of inpatient admission."
+* codes from system $CMSPresentOnAdmissionIndicator
+* ^copyright = "This ValueSet is not copyrighted."
 * ^experimental = false
 
 /*
