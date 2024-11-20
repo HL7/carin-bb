@@ -1,6 +1,6 @@
 ```
 Instance: Patient1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient|2.1.0-snapshot1
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient|2.1.0
 Title: "Patient Example 1"
 Description: "Patient Example 1"
 Usage: #example

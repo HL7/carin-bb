@@ -4,7 +4,7 @@ Title: "Coverage3"
 Description: "Coverage Example 3"
 // Usage: #example
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
-* meta.profile = Canonical(C4BBCoverage|2.1.0-snapshot1)
+* meta.profile = Canonical(C4BBCoverage|2.1.0)
 * language = #en-US
 * identifier.type = $v2-0203#MB
 * identifier.system = "https://www.xxxhealthplan.com/fhir/memberidentifier"

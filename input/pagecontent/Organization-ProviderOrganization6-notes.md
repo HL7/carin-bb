@@ -1,6 +1,6 @@
 ```
 Instance: ProviderOrganization6
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|2.1.0-snapshot1
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|2.1.0
 Title: "Provider Organization 6"
 Description: "Provider Organization 6"
 Usage: #example

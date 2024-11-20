@@ -1,6 +1,6 @@
 ```
 Instance: CoverageDental1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.1.0-snapshot1
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.1.0
 Title: "Dental Coverage Example1"
 Description: "Dental Coverage Example1"
 Usage: #example

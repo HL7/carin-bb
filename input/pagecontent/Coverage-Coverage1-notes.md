@@ -1,6 +1,6 @@
 ```
 Instance: Coverage1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.1.0-snapshot1
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.1.0
 Title: "Coverage Example 1"
 Description: "Coverage Example1"
 Usage: #example

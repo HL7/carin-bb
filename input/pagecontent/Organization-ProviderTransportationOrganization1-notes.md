@@ -1,6 +1,6 @@
 ```
 Instance: ProviderTransportationOrganization1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|2.1.0-snapshot1
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|2.1.0
 Title: "Provider Transportation Organization Example 1"
 Description: "Provider Transportation Organization Example 1"
 Usage: #example

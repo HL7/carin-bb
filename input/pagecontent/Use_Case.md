@@ -96,7 +96,6 @@
 
 #### Background
 
-<span class="bg-success">
 The CMS Advancing Interoperability and Improving Prior Authorization Processes Proposed Rule (CMS-0057-P) requires Health Plans to adjudicated claims and encounter data (profiled in this IG available) for the Provider Access and Payer-to-Payer APIs. The data available via these APIs would be the information a Health Plan makes available to the member, with the exception that it excludes provider remittances and patient cost-sharing information.
 
 This IG addresses consumer access to claims and encounter data and does not directly address these other APIs. It does, however, contain profiles structured in a way that may used by IGs that do define the requirements of these APIs, like the Payer Data Exchange (PDex) IG, to share this information.
@@ -106,7 +105,4 @@ This IG addresses consumer access to claims and encounter data and does not dire
 The below diagram shows the structure of the profiles in this IG and how they are anticipated to be used by the PDex IG where the “Basis” profiles contain all of the requirements for each type of EOB without financial data requirements and the Full EOB profiles to be used for consumer access.
 
 <p><img style="width: 85%; float: none; align: middle;" src="carin-bb-eob-profile-structure.png"/></p>
-
-</span>
-
 </span>

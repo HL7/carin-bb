@@ -14,11 +14,11 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 //* identifier.type 1..1 MS
 //* identifier.type from C4BBClaimIdentifierType (extensible)
 
-* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.ordered = false   // can be omitted, since false is the default
-* identifier ^slicing.description = "Slice based on value pattern"
+* identifier ^slicing.description = "Slice based on value"
 * identifier contains 
    uniqueclaimid 1..1  MS
 * identifier[uniqueclaimid] ^short = "Unique Claim Identifier"
@@ -251,25 +251,25 @@ RuleSet: AdjudicationSlicing
 * adjudication ^slicing.rules = #open
 * adjudication ^slicing.discriminator.path = "category"
 * adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* adjudication ^slicing.description = "Slice based on value pattern"
-* adjudication ^slicing.discriminator.type = #pattern
+* adjudication ^slicing.description = "Slice based on value"
+* adjudication ^slicing.discriminator.type = #value
 * adjudication.category 1..1 MS
 * adjudication.category from C4BBAdjudicationCategoryDiscriminator (extensible)
 
 RuleSet: SupportingInfoSlicing
-* supportingInfo ^slicing.discriminator.type = #pattern
+* supportingInfo ^slicing.discriminator.type = #value
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.ordered = false   // can be omitted, since false is the default
-* supportingInfo ^slicing.description = "Slice based on $this pattern"
+* supportingInfo ^slicing.description = "Slice based on $this value"
 * supportingInfo MS
 // * supportingInfo.category MS  -- we will flag in each slice
 
 RuleSet: TotalSlicing
 * total ^slicing.rules = #open
 * total ^slicing.ordered = false   // can be omitted, since false is the default
-* total ^slicing.description = "Slice based on value pattern"
-* total  ^slicing.discriminator.type = #pattern
+* total ^slicing.description = "Slice based on value"
+* total  ^slicing.discriminator.type = #value
 * total  ^slicing.discriminator.path = "category"
 * total.category 1..1 MS
 
@@ -277,8 +277,8 @@ RuleSet: TotalSlicing
 RuleSet: ItemAdjudicationSlicing
 * item.adjudication ^slicing.rules = #open
 * item.adjudication ^slicing.ordered = false   // can be omitted, since false is the default
-* item.adjudication ^slicing.description = "Slice based on value pattern"
-* item.adjudication ^slicing.discriminator.type = #pattern
+* item.adjudication ^slicing.description = "Slice based on value"
+* item.adjudication ^slicing.discriminator.type = #value
 * item.adjudication ^slicing.discriminator.path = "category"
 * item.adjudication.category from C4BBAdjudicationCategoryDiscriminator (extensible)
 

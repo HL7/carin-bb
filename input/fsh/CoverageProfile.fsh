@@ -12,7 +12,7 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 // 20210216 CAS: FHIR-30575 Pulled from block vote1a
 //* insert Metaprofile-supportedProfile-slice
 //* meta.profile[supportedProfile] = Canonical(C4BBCoverage|1.2.0)
-* obeys coverage-meta-profile-version
+//* obeys coverage-meta-profile-version
 * identifier MS 
 * identifier ^short = "Member ID and other identifiers"
 // 20210312 CAS: Remove per https://jira.hl7.org/browse/FHIR-31535 - Revert Coverage.Subscriber Type to that defined by the base Resource
@@ -22,15 +22,13 @@ Description: "Data that reflect a payer’s coverage that was effective as of th
 * extension contains
    $R5CoverageKind named coverage-kind 1..1 and
    InsuranceProductLine named product-line 0..1  MS and
-   InsuranceProductType named product-type 0..1 MS and
+   InsuranceProductType named product-type 0..1 MS 
    CoverageBenefitType named benefit-type 0..* MS
-
-
+*/
+/*
 * extension[coverage-kind]
   * valueCode 1..1
   * valueCode = #insurance
-*/
-
 //* extension[$R5CoverageKind] 1..1
 //* extension[$R5CoverageKind].valueCode 1..1
 /* extension contains 
@@ -128,9 +126,9 @@ Needs to be made in to extensions
 * class[plan].name ^comment = "Name of the health plan benefit offering assigned to the Plan Identifier (155)"
 
 
-
-// TODO move to THO or correct file
 /*
+// TODO move to THO or correct file
+
 CodeSystem: C4BBInsuranceProductLineCS
 Title: "C4BB Insurance Product Line Code System"
 Description: "Insurance Product Line Code System"
@@ -185,8 +183,8 @@ Description: "Insurance Product Line Code System"
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false
 */
-
 /*
+
 ValueSet: C4BBCoverageClassVS
 Title: "C4BB Coverage Class Value Set"
 Description: "C4BB Coverage Class Value Set"
@@ -218,7 +216,8 @@ Description: "Insurance Product Type."
 * value[x] 1..1
 * value[x] only CodeableConcept
 * valueCodeableConcept from C4BBInsuranceProductTypeVS (extensible)
-
+*/
+/*
 Extension: CoverageBenefitType
 //Id: usdf-FormularyReference-extension
 Title: "Coverage Benefit Type"

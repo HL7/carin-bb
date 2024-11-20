@@ -6,7 +6,7 @@ Usage: #definition
 * extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * extension.valueCode = #trial-use
 * url = "http://hl7.org/fhir/us/carin-bb/SearchParameter/coverage-payor"
-* version = "2.1.0-snapshot1"
+* version = "2.1.0"
 * name = "Coverage_Payor"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/Coverage-payor"
 * status = #active

@@ -1,6 +1,6 @@
 ```
 Instance: Payer2
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|2.1.0-snapshot1
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|2.1.0
 Title: "Payer 2"
 Description: "Payer 2"
 Usage: #example

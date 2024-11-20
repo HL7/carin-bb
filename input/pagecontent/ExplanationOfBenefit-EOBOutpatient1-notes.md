@@ -1,6 +1,6 @@
 ```
 Instance: EOBOutpatient1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional|2.1.0-snapshot1
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional|2.1.0
 Title: "EOB Outpatient Institutional - Example 1"
 Description: "EOB Outpatient Institutional - Example 1"
 Usage: #example

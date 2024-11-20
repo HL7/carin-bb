@@ -16,9 +16,9 @@ Description: "This profile builds upon the US Core Patient profile. It is used t
 //* identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
-* identifier ^slicing.discriminator.type = #pattern 
+* identifier ^slicing.discriminator.type = #value 
 * identifier ^slicing.ordered = false   // can be omitted, since false is the default
-* identifier ^slicing.description = "Slice based on $this pattern"
+* identifier ^slicing.description = "Slice based on $this value"
 * identifier contains 
    memberid 1..* MS and
 //   medrecnum 0..* MS and

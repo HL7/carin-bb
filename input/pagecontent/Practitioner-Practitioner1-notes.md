@@ -1,6 +1,6 @@
 ```
 Instance: Practitioner1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|2.1.0-snapshot1
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|2.1.0
 Title: "Practitioner Example 1"
 Description: "Practitioner Example 1"
 Usage: #example

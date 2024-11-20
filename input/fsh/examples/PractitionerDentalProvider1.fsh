@@ -2,7 +2,7 @@ Instance: PractitionerDentalProvider1
 InstanceOf: C4BBPractitioner
 Description: "Dental Provider 1"
 Usage: #example
-* meta.profile[+] = Canonical(C4BBPractitioner|2.1.0-snapshot1)
+* meta.profile[+] = Canonical(C4BBPractitioner|2.1.0)
 * meta.lastUpdated = "2021-01-01T10:23:11+00:00"
 * language = #en-US
 * identifier[NPI].type = $HL7IdentifierType#NPI
