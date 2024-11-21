@@ -113,3 +113,11 @@ WARNING: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element
 WARNING: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[37].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
 WARNING: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
 WARNING: StructureDefinition/C4BB-Practitioner: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
+
+
+
+# Deprecated pattern slicing from an inherited U Core profile 
+WARNING: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[37].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+WARNING: StructureDefinition/C4BB-Practitioner: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead

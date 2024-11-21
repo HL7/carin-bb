@@ -1,13 +1,10 @@
 CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®) was developed under the <a href="https://www.carinalliance.com/">CARIN Alliance</a>.
 
+### Changes and Updates for Version 2.1.0 (from version 2.0.0)
+The current official published version of CARIN BB for FHIR R4, An update of STU2 addressing various issues and added support for US Core 6.1.0
 
-
-<h3> Changes and Updates for Version 2.1.0 (from version 2.0.0)</h3>
-
-
-The current official published version of CARIN BB for FHIR R4 
 <ul>
-  <li>Changed base profile of the <a href="StructureDefinition-C4BB-Patient.html">Patient</a>, <a href="StructureDefinition-C4BB-Coverage.html">Coverage</a>, <a href="StructureDefinition-C4BB-Practitioner.html">Practitioner</a>, <a href="StructureDefinition-C4BB-Organization.html">Organization</a>, and <a href="StructureDefinition-C4BB-RelatedPerson.html">RelatedPerson</a> to <a href="https://hl7.org/fhir/us/core/STU6.1/">US Core 6.1</a> and added complies with requirements to <a href="https://hl7.org/fhir/us/core/STU3.1.1/">US Core 3.1.1</a> where there was a profile in that version (<a href="https://jira.hl7.org/browse/FHIR-46374">FHIR-46374</a>) *.  Note: Most of the changes from US Core 3.1.1 to 6.1 are reductions in Must Support requirements, but there are a small number of breaking changes to note, including:
+  <li>Changed base profile of the <a href="StructureDefinition-C4BB-Patient.html">Patient</a>, <a href="StructureDefinition-C4BB-Coverage.html">Coverage</a>, <a href="StructureDefinition-C4BB-Practitioner.html">Practitioner</a>, <a href="StructureDefinition-C4BB-Organization.html">Organization</a>, and <a href="StructureDefinition-C4BB-RelatedPerson.html">RelatedPerson</a> to <a href="https://hl7.org/fhir/us/core/STU6.1/">US Core 6.1</a> and added complies with requirements to <a href="https://hl7.org/fhir/us/core/STU3.1.1/">US Core 3.1.1</a> where there was a profile in that version (<a href="https://jira.hl7.org/browse/FHIR-46374">FHIR-46374</a>) <br/>Note: Most of the changes from US Core 3.1.1 to 6.1 are reductions in Must Support requirements, but there are a small number of breaking changes to note, including:
     <ul>
       <li>The <a href="StructureDefinition-C4BB-Coverage.html">Coverage</a> profile now requires the member identifier, if present, to have a type of <code>MB</code> from system <code>http://terminology.hl7.org/CodeSystem/v2-0203</code>. The previous version of this profile did not have specific requirements for the member ID, though the example had a member ID that matched US Core 6.1 requirements.</li>
       <li>The <a href="StructureDefinition-C4BB-Coverage.html">Coverage</a> profile now has an extensible binding to a ValueSet to Coverage.type, where there was no previous binding.</li>
@@ -15,13 +12,17 @@ The current official published version of CARIN BB for FHIR R4
     </ul>
   </li>
   <li>Added "Basis" profiles for all EOB types that identify all data requirements excluding financial data. This is made available for other IGs (e.g. <a href="https://hl7.org/fhir/us/davinci-pdex">Da Vinci PDex</a>) that need communicate EOB information to parties other than the patient/member. This does not represent any change of conformance requirements for the existing EOB profiles. (<a href="https://jira.hl7.org/browse/FHIR-40999">FHIR-40999</a> and <a href="https://jira.hl7.org/browse/FHIR-40820">FHIR-40820</a>)</li>
-  <li>Corrected the ICD-9 CodeSystem url (changed from http://terminology.hl7.org/CodeSystem/icd9 to http://hl7.org/fhir/sid/icd-9-cm) (<a href="https://jira.hl7.org/browse/FHIR-41791">FHIR-41791</a>)</li>
+  <li>Removed the NUBC Present On Admission Indicator CodeSystem "stub", Updated the NUBC Present On Admission Indicator Codes Value Set to point to the <a href="https://terminology.hl7.org/CodeSystem-presentOnAdmission.html">CMS Present on Admission Indicator CodeSystem</a>, and change the name to "CMS Present On Admission Indicator Codes Value Set" (This requires a code system change from <code>https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator</code> to <code>https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding</code> for resources claiming conformance) (<a href="https://jira.hl7.org/browse/FHIR-38278">FHIR-38278</a>)</li>
+  <li>Removed the US Surface Codes System and updated the <a href="ValueSet-C4BBSurfaceCodes.html">US Surface Codes Set Value Set</a> to point to the <a href="https://terminology.hl7.org/CodeSystem-ADAToothSurfaceCodes.html">ADA Tooth Surface Codes CodeSystem</a> (This requires a code system change from <code>http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSurfaceCodes</code> to <code>http://terminology.hl7.org/CodeSystem/ADAToothSurfaceCodes</code> for resources claiming conformance) (<a href="https://jira.hl7.org/browse/FHIR-47140">FHIR-47140</a>)</li>
+  <li>Corrected the ICD-9 CodeSystem url (This requires a code system change from <code>http://terminology.hl7.org/CodeSystem/icd9</code> to <code>http://hl7.org/fhir/sid/icd-9-cm</code> for resources claiming conformance) (<a href="https://jira.hl7.org/browse/FHIR-41791">FHIR-41791</a>)</li>
+  <li>Removed the X12 Ambulance Transport Reason Codes (X12AmbulanceTransportReasonCodes) CodeSystem "stub". This CodeSystem is now defined in THO and the stub is no longer needed in this IG. The code system url <code>https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes</code> used by implementers for conformance resources has not changed (<a href="https://jira.hl7.org/browse/FHIR-46778">FHIR-46778</a>)</li>
   <li>Corrected several invariants that either had the wrong context or an expression that returned false negatives if the element of interest had multiple iterations (<a href="https://jira.hl7.org/browse/FHIR-46276">FHIR-46276</a>)</li>
   <li>Added a <code>masked</code> Data Absent Reason Code to the <a href="ValueSet-CDCICD910CMDiagnosisCodes.html">Diagnosis Codes ValueSet</a> to allow for masking of sensitive diagnosis codes. (<a href="https://jira.hl7.org/browse/FHIR-40441">FHIR-40441</a>)</li>
-  <li>Reduced meta.profile requirements for all profiles. meta.profile still required, but the invariant checking for the profile url of this guide is no longer an error, but a informational warning.  (<a href="https://jira.hl7.org/browse/FHIR-41498">FHIR-41498</a>)</li>
+  <li>Reduced <code>meta.profile</code> requirements for all profiles. <code>meta.profile</code> still required, but the invariant checking for the profile url of this guide is no longer an error, but a informational warning.  (<a href="https://jira.hl7.org/browse/FHIR-41498">FHIR-41498</a>)</li>
   <li>Fixed the expression for the <a href="SearchParameter-explanationofbenefit-service-start-date.html">Service Start Date SearchParameter</a> (<a href="https://jira.hl7.org/browse/FHIR-46376">FHIR-46376</a>)</li>
   <li>Added the ability for the ExplanationOfBenefit.provider to be an Organization for the <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Oral.html">Oral EOB Profile</a> (<a href="https://jira.hl7.org/browse/FHIR-44662">FHIR-44662</a>)</li>
-  <li>Removed the inclusion of codes in <a href="ValueSet-C4BBPayerBenefitPaymentStatus.html">Benefit Payment Status</a> from the <a href="ValueSet-C4BBTotalCategoryDiscriminator.html"></a> (<a href="https://jira.hl7.org/browse/FHIR-40245">FHIR-40245</a>)</li>
+  <li>Removed the inclusion of codes in <a href="ValueSet-C4BBPayerBenefitPaymentStatus.html">Benefit Payment Status</a> from the <a href="ValueSet-C4BBTotalCategoryDiscriminator.html">C4BB Total Category Discriminator Value Set</a> (<a href="https://jira.hl7.org/browse/FHIR-40245">FHIR-40245</a>)</li>
+  <li>Added Guidance to the notes section of all EOB profiles describing the difference in the adjudication slice types of billing network status (billingnetworkstatus), rendering network status (renderingnetworkstatus), and benefit payment status (benefitpaymentstatus) (<a href="https://jira.hl7.org/browse/FHIR-46558">FHIR-46558</a>)</li>
   <li>Updated guidance for the <a href= "SearchParameter-explanationofbenefit-service-date.html">Service Date Search Parameter</a> to state that the search parameter is to simplify the search in case the client does not know the specific date type to search for based on EOB type. (<a href="https://jira.hl7.org/browse/FHIR-41634">FHIR-41634</a>)</li>
   <li>Clarified search removing the need for a patient search argument in the <a href = "CapabilityStatement-c4bb.html">Capability Statement</a>. (<a href="https://jira.hl7.org/browse/FHIR-41628">FHIR-41628</a>)</li>
   <li>Improved the <a href="ExplanationOfBenefit-EOBProfessional1.html">EOB Professional 1 example</a> to include more realistic amounts and a payee. (<a href="https://jira.hl7.org/browse/FHIR-43464">FHIR-43464</a>)</li>
@@ -31,7 +32,7 @@ The current official published version of CARIN BB for FHIR R4
 
 
 ### Changes and Updates for Version 2.0.0 (from version 1.1.0)
-The current official published version of CARIN BB for FHIR R4 
+Balloted Release
 
 
 <ul>
