@@ -229,7 +229,7 @@ To obtain the underlying code systems, please see information [here](https://www
 */
 
 ValueSet: CMSPresentOnAdmissionIndicator
-Title: "NUBC Present On Admission Indicator Codes Value Set"
+Title: "CMS Present On Admission Indicator Codes Value Set"
 Description: "This code system consists of Present on Admission (POA) indicators which are assigned to the principal and secondary diagnoses (as defined in Section II of the Official Guidelines for Coding and Reporting) and the external cause of injury codes to indicate the presence or absence of the diagnosis at the time of inpatient admission."
 * codes from system $CMSPresentOnAdmissionIndicator
 * ^copyright = "This ValueSet is not copyrighted."
