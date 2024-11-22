@@ -108,16 +108,8 @@ The definition for the element 'ExplanationOfBenefit.fundsReserveRequested' bind
 The definition for the element 'ExplanationOfBenefit.fundsReserve' binds to the value set 'http://hl7.org/fhir/ValueSet/fundsreserve' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'ExplanationOfBenefit.formCode' binds to the value set 'http://hl7.org/fhir/ValueSet/forms' which is experimental, but this structure is not labeled as experimental
 
-# Inherited US Core profile uses deprecates pattern slicing
-WARNING: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
-WARNING: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[37].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
-WARNING: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
-WARNING: StructureDefinition/C4BB-Practitioner: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
-
-
-
-# Deprecated pattern slicing from an inherited U Core profile 
-WARNING: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
-WARNING: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[37].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
-WARNING: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
-WARNING: StructureDefinition/C4BB-Practitioner: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=value with a pattern[x] instead
+# Deprecated pattern slicing from an inherited US Core profile 
+INFORMATION: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[37].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/C4BB-Practitioner: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)

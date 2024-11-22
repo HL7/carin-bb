@@ -39,7 +39,7 @@ Provisioning Clinical Data is defined by the DaVinci Payer Data Exchange (PDex) 
 ### CARIN IG for Blue Button&reg; Relation to other IGs
 <h4>US Core</h4>
 
-<p class="new-content">
+<p>
 This implementation guide supports the <a href="{{site.data.fhir.path}}index.html">R4</a> version of the FHIR standard and builds on the US Core <a href="{{site.data.fhir.ver.uscore3}}">3.1 (USCDI 1)</a> and <a href="{{site.data.fhir.ver.uscore6}}">6.1 (USCDI 3)</a> implementation guides and implementers need to familiarize themselves with the profiles in those guides.  The profiles in this IG conform with both releases of US Core.
 </p>
 
