@@ -62,7 +62,7 @@ For the purposes of information exchange defined by this IG, additional security
     13.	user/Organization.read
     14.	user/Practitioner.read
 
-6.	MAY support the [Security for Scalable Registration, Authentication, and Authorization](http://hl7.org/fhir/us/udap-security/2021Sep/) 0.1.0 or later for registration of client applications and (authentication and authorization of client applications or users)
+6.	MAY support the [Security for Scalable Registration, Authentication, and Authorization](https://hl7.org/fhir/us/udap-security/) 1.0.0 or later for registration of client applications and (authentication and authorization of client applications or users)
     1.  If UDAP is supported, then all server systems and client applications that can protect private cryptographic keys and all systems of record **SHOULD** support UDAP JWT-Based Client Authentication for the authentication of client applications using asymmetric cryptography.
 
 
