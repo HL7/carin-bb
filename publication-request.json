@@ -1,10 +1,9 @@
 {
     "package-id": "hl7.fhir.us.carin-bb",
     "version": "2.1.0",
-    "path": "http://hl7.org/fhir/us/carin-bb/2.1.0",
-    "milestone": true,
-    "mode" : "working",
+    "path": "http://hl7.org/fhir/us/carin-bb/STU2.1",
+    "mode" : "milestone",
     "status": "trial-use",
     "sequence": "STU 2",
-    "desc": "CARIN Blue Button Implementation Guide Release 2.1 Snapshot - US Realm STU"
+    "desc": "CARIN Blue Button Implementation Guide Release 2.1 - US Realm STU"
 }
