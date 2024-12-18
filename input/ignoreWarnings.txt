@@ -1,7 +1,7 @@
 == Suppressed Messages ==
 
 
-# INFORMATION: Previously defined CodeSystems currently in use by implementers. Will leave for an STU Update with the intent to make the change during a major version
+# 1 - INFORMATION: Previously defined CodeSystems currently in use by implementers. Will leave for an STU Update with the intent to make the change during a major version
 INFORMATION: CodeSystem/C4BBAdjudication: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/C4BBAdjudicationDiscriminator: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/C4BBClaimCareTeamRole: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
@@ -16,7 +16,7 @@ INFORMATION: CodeSystem/C4BBRelatedClaimRelationshipCodes: CodeSystem: Most code
 INFORMATION: CodeSystem/C4BBSupportingInfoType: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 
-# INFORMATION: The following code systems are external and not supported by terminology server, and cannot be validated in examples
+# 2 - INFORMATION: The following code systems are external and not supported by terminology server, and cannot be validated in examples
 A definition for CodeSystem 'https://www.nubc.org/CodeSystem/TypeOfBill' could not be found, so the code cannot be validated
 
 Unable to check whether the code is in the value set 'http://hl7.org/fhir/us/carin-bb/ValueSet/AHANUBCTypeOfBill|2.1.0' because the code system https://www.nubc.org/CodeSystem/TypeOfBill was not found
@@ -93,7 +93,7 @@ Error from http://tx.fhir.org/r4: Unable to provide support for code system http
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/ICD9
 
 
-# All slices constraints Inherited from US Core 6.1.0 - The pattern is defined in the slice and not in the repeating element ($this) which allows users the necessary flexibility ====
+# 3 - All slices constraints Inherited from US Core 6.1.0 - The pattern is defined in the slice and not in the repeating element ($this) which allows users the necessary flexibility
 
 INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[18].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[19].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
@@ -102,12 +102,12 @@ INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot
 INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[22].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/C4BB-Practitioner: StructureDefinition.snapshot.element[19].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 
-# Warnings regarding FHIR base resource having an example binding to an experimental ValueSet
+# 4 - Warnings regarding FHIR base resource having an example binding to an experimental ValueSet
 The definition for the element 'ExplanationOfBenefit.fundsReserveRequested' binds to the value set 'http://hl7.org/fhir/ValueSet/fundsreserve' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'ExplanationOfBenefit.fundsReserve' binds to the value set 'http://hl7.org/fhir/ValueSet/fundsreserve' which is experimental, but this structure is not labeled as experimental
 The definition for the element 'ExplanationOfBenefit.formCode' binds to the value set 'http://hl7.org/fhir/ValueSet/forms' which is experimental, but this structure is not labeled as experimental
 
-# Deprecated pattern slicing from an inherited US Core profile 
+# 5 - Deprecated pattern slicing from an inherited US Core profile
 INFORMATION: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[37].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
