@@ -42,8 +42,8 @@ dependencies:
       Defines USCDIv3 expectations on a range of resources that will be queried by CARIN BlueButton client systems
   hl7.fhir.extensions.r5: 4.0.1
   us.nlm.vsac:
-    uri: http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.nlm.vsac
-    version: 0.7.0
+    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
+    version: 0.21.0
 parameters:
   show-inherited-invariants: false
   default-jurisdiction: true
