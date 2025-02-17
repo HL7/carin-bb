@@ -102,13 +102,15 @@ INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot
 INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[22].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/C4BB-Practitioner: StructureDefinition.snapshot.element[19].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 
-# 4 - Warnings regarding FHIR base resource having an example binding to an experimental ValueSet
-The definition for the element 'ExplanationOfBenefit.fundsReserveRequested' binds to the value set 'http://hl7.org/fhir/ValueSet/fundsreserve' which is experimental, but this structure is not labeled as experimental
-The definition for the element 'ExplanationOfBenefit.fundsReserve' binds to the value set 'http://hl7.org/fhir/ValueSet/fundsreserve' which is experimental, but this structure is not labeled as experimental
-The definition for the element 'ExplanationOfBenefit.formCode' binds to the value set 'http://hl7.org/fhir/ValueSet/forms' which is experimental, but this structure is not labeled as experimental
 
-# 5 - Deprecated pattern slicing from an inherited US Core profile
+# 4 - Deprecated pattern slicing from an inherited US Core profile
 INFORMATION: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[37].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/C4BB-Organization: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/C4BB-Practitioner: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+
+# 5 - NEW Warning about FMM Level Being missed - This warning showed up after all publication approvals, but before the IG was able to be published.
+WARNING: ImplementationGuide/hl7.fhir.us.carin-bb: ImplementationGuide: HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+
+# 6 - Information Message regarding a deprecated extension (maxValueSet), that was inherited through the FHIR R4 standard itself.
+INFORMATION: StructureDefinition/C4BB-Coverage: StructureDefinition.snapshot.element[12].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
