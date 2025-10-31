@@ -2,8 +2,17 @@ Profile: ContainedBundle
 Parent: Bundle
 Id: contained-bundle
 Title: "Contained Bundle Profile"
-Description: "This profile defines a valid Submission Bundle to NHSN with all resources contained within. The Bundle is comprised of entry slices representing the data source Organization, a Patients of Interest (POI) List, one Subject List MeasureReport per reportable measure, an Individual MeasureReport List, individual MeasureReports, and the underlying patient-centric clinical information."
+Description: "Contained Bundle Profile"
 * obeys bundle-observation-device-exists and bundle-observation-device-active
+
+
+Profile: ContainedObservation
+Parent: Observation
+Id: contained-observation
+Title: "Contained Observation Profile"
+Description: "Contained Observation Profile"
+* obeys observation-device-exists and observation-device-active
+
 
 Instance: BundleTest
 InstanceOf: ContainedBundle
@@ -14,7 +23,7 @@ Description: "Example Bundle"
 * entry[=].resource = observation-entry
 
 Instance: observation-entry
-InstanceOf: Observation
+InstanceOf: ContainedObservation
 Title: "Example Bundle entry Observation"
 Description: "Example Bundle entry Observation"
 Usage: #example
@@ -33,13 +42,25 @@ Usage: #inline
 
 
 Invariant: bundle-observation-device-exists
-Description: "Observation Device must resolve"
+Description: "Bundle Observation Device must resolve"
 Severity: #error
 Expression: "entry.resource.ofType(Observation).all(device.resolve().exists())"
 
 
 Invariant: bundle-observation-device-active
-Description: "Observation Devices must be active"
+Description: "Bundle Observation Devices must be active"
 Severity: #error
 Expression: "entry.resource.ofType(Observation).all(device.resolve().status = 'active')"
+
+
+Invariant: observation-device-exists
+Description: "Observation Device must resolve"
+Severity: #error
+Expression: "device.resolve().exists()"
+
+
+Invariant: observation-device-active
+Description: "Observation Devices must be active"
+Severity: #error
+Expression: "device.resolve().status = 'active'"
 

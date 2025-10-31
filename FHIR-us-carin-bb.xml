@@ -83,6 +83,7 @@
 <artifact id="ValueSet/CMSPlaceofServiceCodes" key="ValueSet-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS) Value Set"/>
 <artifact id="ValueSet/CMSPresentOnAdmissionIndicator" key="ValueSet-CMSPresentOnAdmissionIndicator" name="CMS Present On Admission Indicator Codes Value Set"/>
 <artifact id="StructureDefinition/contained-bundle" key="StructureDefinition-contained-bundle" name="Contained Bundle Profile"/>
+<artifact id="StructureDefinition/contained-observation" key="StructureDefinition-contained-observation" name="Contained Observation Profile"/>
 <artifact id="Coverage/Coverage1" key="Coverage-Coverage1" name="Coverage Example 1"/>
 <artifact deprecated="true" id="Coverage/CoverageEx1" key="Coverage-CoverageEx1" name="Coverage Example 1 (deprecated)"/>
 <artifact id="Coverage/Coverage2" key="Coverage-CoverageEx2" name="Coverage Example 2"/>
