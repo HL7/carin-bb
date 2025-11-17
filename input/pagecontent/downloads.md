@@ -2,10 +2,6 @@
 
 <ul>
 <li><a href="full-ig.zip">Full Specification (zip)</a></li>
-<li><a href="definitions.json.zip">JSON Definitions (zip)</a></li>
-<li><a href="examples.json.zip">JSON Examples (zip)</a></li>
-<li><a href="definitions.xml.zip">XML Definitions (zip)</a></li>
-<li><a href="definitions.ttl.zip">Turtle Definitions</a></li>
 </ul>
 
 #### Cross Version Analysis

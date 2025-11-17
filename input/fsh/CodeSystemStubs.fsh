@@ -980,7 +980,7 @@ To purchase code list subscriptions call (425) 562-2245 or email admin@wpc-edi.c
 ValueSet: C4BBAmbulanceTransportReasonCodes
 Title: "C4BB Ambulance Transport Reasons Value Set"
 Description: "Transportation Services Ambulatory Transport Reason Codes" 
-* codes from system X12AmbulanceTransportReasonCodes
+* codes from system $X12AmbulanceTransReas
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false
 //  ********* ICD diagnosis codes / procedure codes
