@@ -40,7 +40,8 @@ dependencies:
     id: uscore3
     reason: |
       Defines USCDIv3 expectations on a range of resources that will be queried by CARIN BlueButton client systems
-  hl7.fhir.extensions.r5: 4.0.1
+  hl7.fhir.uv.extensions.r4:
+    version: 5.2.0
   us.nlm.vsac:
     uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
     version: 0.21.0
