@@ -4,12 +4,12 @@ Title: "Patient Example 2"
 Description: "Patient Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-30T09:48:01.8512764-04:00"
-* meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile[+] = Canonical(C4BBPatient|2.1.0)
+
+* meta.profile[+] = Canonical(C4BBPatient|2.2.0)
 * language = #en-US
 * identifier[memberid].type = $v2-0203#MB "Member Number"
 * identifier[memberid].type.text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
-* identifier[memberid].system = "https://www.upmchealthplan.com/fhir/memberidentifier"
+* identifier[memberid].system = "https://www.example.com/fhir/memberidentifier"
 * identifier[memberid].value = "88800933501"
 * identifier[memberid].assigner = Reference(Payer2) "UPMC Health Plan"
 * active = true
@@ -36,7 +36,7 @@ Usage: #example
 * telecom[=].use = #work
 * telecom[=].rank = 6
 * telecom[+].system = #email
-* telecom[=].value = "GXXX@XXXX.com"
+* telecom[=].value = "GXXX@example.com.com"
 * telecom[=].rank = 7
 * telecom[+].system = #fax
 * telecom[=].value = "5555555557"

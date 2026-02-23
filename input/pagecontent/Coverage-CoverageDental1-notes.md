@@ -1,6 +1,6 @@
 ```
 Instance: CoverageDental1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.1.0
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.2.0
 Title: "Dental Coverage Example1"
 Description: "Dental Coverage Example1"
 Usage: #example
@@ -8,7 +8,7 @@ Usage: #example
 * language = #en-US
 * identifier
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MB
-  * system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
+  * system = "https://www.example.com/fhir/memberidentifier"
   * value = "210300002"
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#DENTAL

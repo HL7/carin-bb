@@ -2,13 +2,13 @@ Instance: EOBOral2
 InstanceOf: C4BBExplanationOfBenefitOral
 Description: "EOB Oral Example 2"
 Usage: #example
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOral|2.1.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOral|2.2.0)
 * meta.lastUpdated = "2021-10-28T10:23:00-05:00"
 * language = #en-US
 * status = #active
 * identifier[uniqueclaimid].type = $C4BBIdentifierTypeCS#uc
 * identifier[uniqueclaimid].value = "210300012"
-* identifier[uniqueclaimid].system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* identifier[uniqueclaimid].system = "https://www.example.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#oral
 * type.text = "Oral"
 * use = #claim

@@ -1,6 +1,6 @@
 ```
 Instance: EOBInpatient2
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|2.1.0
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|2.2.0
 Title: "EOB Inpatient Example 2"
 Description: "EOB Inpatient Example 2"
 Usage: #example
@@ -8,7 +8,7 @@ Usage: #example
 * identifier
   * type = C4BBIdentifierType#uc "Unique Claim ID"
     * text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
-  * system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
+  * system = "https://www.example.com/fhir/EOBIdentifier"
   * value = "InpatientEOBExample1"
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional

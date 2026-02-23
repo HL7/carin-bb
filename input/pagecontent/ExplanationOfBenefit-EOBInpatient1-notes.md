@@ -1,6 +1,6 @@
 ```
 Instance: EOBInpatient1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|2.1.0
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Inpatient-Institutional|2.2.0
 Title: "EOB Inpatient Example1"
 Description: "EOB Inpatient Example 1"
 Usage: #example
@@ -8,7 +8,7 @@ Usage: #example
 * language = #en-US
 * identifier
   * type = C4BBIdentifierType#uc
-  * system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+  * system = "https://www.example.com/fhir/EOBIdentifier"
   * value = "AW123412341234123412341234123412"
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional

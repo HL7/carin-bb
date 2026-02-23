@@ -1,5 +1,32 @@
 CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®) was developed under the <a href="https://www.carinalliance.com/">CARIN Alliance</a>.
 
+### Changes and Updates for Version 2.2.0 (from version 2.1.0)
+The current official published version of CARIN BB for FHIR R4, An update of STU2.1 addressing various issues, loosening of some constraints, and add support for US Core 7.
+
+<ul>
+  <li>Changed base profile of the <a href="StructureDefinition-C4BB-Patient.html">Patient</a>, <a href="StructureDefinition-C4BB-Coverage.html">Coverage</a>, <a href="StructureDefinition-C4BB-Practitioner.html">Practitioner</a>, <a href="StructureDefinition-C4BB-Organization.html">Organization</a>, and <a href="StructureDefinition-C4BB-RelatedPerson.html">RelatedPerson</a> to <a href="https://hl7.org/fhir/us/core/STU6.1/">US Core 7.0.0</a> and added complies with requirements to <a href="https://hl7.org/fhir/us/core/STU6.1/">US Core 6.1.0</a>. Removed complies with requirements of <a href="https://hl7.org/fhir/us/core/STU3.1.1/">US Core 3.1.1</a> (<a href="https://jira.hl7.org/browse/FHIR-53287">FHIR-53287</a>, <a href="https://jira.hl7.org/browse/FHIR-55932">FHIR-55932</a>).
+  <li>Updated the EOB-pharm-careTeam-practitioner invariant on the <a href="StructureDefinition-C4BB-ExplanationOfBenefit-Pharmacy-Basis.html">ExplanationOfBenefit Pharmacy Basis Profile</a> to require the primary or prescribing role careTeam to refer to a Practitioner instead of Organization. (<a href="https://jira.hl7.org/browse/FHIR-55581">FHIR-55581)</li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li>Updated the IG specification introduction on the <a href="index.html">home</a> page (<a href="https://jira.hl7.org/browse/FHIR-53479">FHIR-53479).</li>
+  <li>Added IP statement for CPT on <a href="downloads.html">Downloads</a> page where the IP statements are (<a href="https://jira.hl7.org/browse/FHIR-53593">FHIR-53593)</li>      
+</ul>
+
+
+
 ### Changes and Updates for Version 2.1.0 (from version 2.0.0)
 The current official published version of CARIN BB for FHIR R4, An update of STU2 addressing various issues and added support for US Core 6.1.0
 

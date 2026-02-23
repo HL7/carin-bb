@@ -1,16 +1,14 @@
 ```
 Instance: EOBOutpatient2
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional|2.1.0
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Outpatient-Institutional|2.2.0
 Title: "EOB Outpatient Institutional - Example 2"
 Description: "EOB Outpatient Institutional - Example 2"
 Usage: #example
-* meta
-  * lastUpdated = "2020-10-13T11:10:24-04:00"
-  * source = "Organization/PayerOrganizationExample1"
+
 * identifier
   * type = C4BBIdentifierType#uc "Unique Claim ID"
     * text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
-  * system = "https://www.upmchealthplan.com/fhir/EOBIdentifier"
+  * system = "https://www.example.com/fhir/EOBIdentifier"
   * value = "OutpatientEOBExample1"
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional

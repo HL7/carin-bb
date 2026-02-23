@@ -1,8 +1,9 @@
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
 
-<ul>
-<li><a href="full-ig.zip">Full Specification (zip)</a></li>
-</ul>
+* [Full Specification (zip)](full-ig.zip)
+* [JSON Definitions (zip)](definitions.json.zip)
+* [Examples (zip)](examples.json.zip)
+* [XML Definitions (zip)](definitions.xml.zip)
+* [Turtle Definitions](definitions.ttl.zip)
 
 #### Cross Version Analysis
 
@@ -17,7 +18,6 @@
 {% lang-fragment globals-table.xhtml %}
 
 #### IP Statements
+* Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
 
 {% lang-fragment ip-statements.xhtml %}
-
-</div>

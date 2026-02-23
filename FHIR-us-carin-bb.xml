@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="2.1.0" defaultWorkgroup="fm" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/carin-bb/2022Jan" ciUrl="http://build.fhir.org/ig/HL7/carin-bb" defaultVersion="2.2.0" defaultWorkgroup="fm" gitUrl="https://github.com/HL7/carin-bb" url="http://hl7.org/fhir/us/carin-bb">
 <version code="current" url="http://build.fhir.org/ig/HL7/carin-bb"/>
+<version code="2.2.0" url="http://hl7.org/fhir/us/carin-bb/STU2.2"/>
 <version code="2.1.0" url="http://hl7.org/fhir/us/carin-bb/STU2.1"/>
 <version code="2.1.0-snapshot1" url="http://hl7.org/fhir/us/carin-bb/2.1.0-snapshot1"/>
 <version code="2.0.0" url="http://hl7.org/fhir/us/carin-bb/STU2"/>
@@ -82,8 +83,6 @@
 <artifact deprecated="true" id="CodeSystem/CMSPlaceofServiceCodes" key="CodeSystem-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS) CS"/>
 <artifact id="ValueSet/CMSPlaceofServiceCodes" key="ValueSet-CMSPlaceofServiceCodes" name="CMS Place of Service Codes (POS) Value Set"/>
 <artifact id="ValueSet/CMSPresentOnAdmissionIndicator" key="ValueSet-CMSPresentOnAdmissionIndicator" name="CMS Present On Admission Indicator Codes Value Set"/>
-<artifact id="StructureDefinition/contained-bundle" key="StructureDefinition-contained-bundle" name="Contained Bundle Profile"/>
-<artifact id="StructureDefinition/contained-observation" key="StructureDefinition-contained-observation" name="Contained Observation Profile"/>
 <artifact id="Coverage/Coverage1" key="Coverage-Coverage1" name="Coverage Example 1"/>
 <artifact deprecated="true" id="Coverage/CoverageEx1" key="Coverage-CoverageEx1" name="Coverage Example 1 (deprecated)"/>
 <artifact id="Coverage/Coverage2" key="Coverage-CoverageEx2" name="Coverage Example 2"/>
@@ -114,8 +113,6 @@
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBOral1a" key="ExplanationOfBenefit-EOBOral1a" name="EOBOral1a"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBOutpatientInstitutional1" key="ExplanationOfBenefit-EOBOutpatientInstitutional1" name="EOBOutpatientInstitutional1"/>
 <artifact deprecated="true" id="ExplanationOfBenefit/EOBProfessional1a" key="ExplanationOfBenefit-EOBProfessional1a" name="EOBProfessional1a"/>
-<artifact id="Bundle/BundleTest" key="Bundle-BundleTest" name="Example Bundle"/>
-<artifact id="Observation/observation-entry" key="Observation-observation-entry" name="Example Bundle entry Observation"/>
 <artifact id="SearchParameter/explanationofbenefit-billable-period-start" key="SearchParameter-explanationofbenefit-billable-period-start" name="ExplanationOfBenefit_BillablePeriodStart"/>
 <artifact id="SearchParameter/explanationofbenefit-care-team" key="SearchParameter-explanationofbenefit-care-team" name="ExplanationOfBenefit_Careteam"/>
 <artifact id="SearchParameter/explanationofbenefit-coverage" key="SearchParameter-explanationofbenefit-coverage" name="ExplanationOfBenefit_Coverage"/>

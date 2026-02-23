@@ -1,12 +1,10 @@
 ```
 Instance: EOBProfessionalTransportation1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|2.1.0
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-ExplanationOfBenefit-Professional-NonClinician|2.2.0
 Title: "EOB Professional - Transportation 1"
 Description: "EOB Professional - Transportation 1"
 Usage: #example
-* meta
-  * lastUpdated = "2022-09-10T14:46:05-04:00"
-  * source = "Organization/PayerOrganizationExample1"
+
 * identifier
   * type = C4BBIdentifierType#uc "Unique Claim ID"
     * text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"

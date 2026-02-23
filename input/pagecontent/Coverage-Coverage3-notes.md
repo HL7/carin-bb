@@ -1,6 +1,6 @@
 ```
 Instance: Coverage3
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.1.0
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.2.0
 Title: "Coverage Example 3"
 Description: "Coverage Example 3"
 Usage: #example
@@ -8,7 +8,7 @@ Usage: #example
 * language = #en-US
 * identifier
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MB
-  * system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
+  * system = "https://www.example.com/fhir/memberidentifier"
   * value = "1234-234-1243-12345678901"
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP
