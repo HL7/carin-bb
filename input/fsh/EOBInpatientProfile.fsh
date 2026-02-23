@@ -44,7 +44,7 @@ The basis profile does not have requirements for financial data."
 * procedure.type 1..1 MS
 * procedure.date 0..1 MS
 * provider 1..1
-* provider only Reference(C4BBOrganization)
+* provider only Reference(C4BBOrganization or C4BBPractitioner)
 * insert SupportingInfoSlicing
 * supportingInfo contains
      admissionperiod 1..1 MS  and

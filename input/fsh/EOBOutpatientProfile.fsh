@@ -28,7 +28,7 @@ The basis profile does not have requirements for financial data."
 * diagnosis.diagnosis[x] 1..1 MS
 * diagnosis.diagnosis[x] only CodeableConcept
 * diagnosis.diagnosis[x] from CDCICD910CMDiagnosisCodes (required)
-* provider only Reference(C4BBOrganization)
+* provider only Reference(C4BBOrganization or C4BBPractitioner)
 * insert SupportingInfoSlicing
 * supportingInfo contains
    clmrecvddate 0..1 MS and
