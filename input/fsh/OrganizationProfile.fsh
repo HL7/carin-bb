@@ -20,7 +20,8 @@ Description: "This profile builds upon the US Core Organization profile. It is u
    /* and
    naiccode 0..* MS
    */
-* identifier[NPI] ^patternIdentifier.type  = $HL7IdentifierType#NPI
+//* identifier[NPI] ^patternIdentifier.type  = $HL7IdentifierType#NPI
+* identifier[NPI] 0..1
 // * identifier[NPI].type
 * identifier[tax] ^short = "Tax ID Number"
 * identifier[tax] ^patternIdentifier.type  = $IdentifierType#TAX
@@ -34,11 +35,11 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * identifier[naiccode] ^patternIdentifier.system = $NAICCodeCS
 * identifier[naiccode] ^patternIdentifier.type  = C4BBIdentifierType#naiccode
 */
-* identifier[NAIC] MS
+//* identifier[NAIC] MS
 * identifier[NAIC] ^short = "NAIC Code"
 // * identifier[naiccode].type
-* identifier[NAIC] ^patternIdentifier.system = $NAICCodeCS
-* identifier[NAIC] ^patternIdentifier.type  = C4BBIdentifierType#naiccode
+//* identifier[NAIC] ^patternIdentifier.system = $NAICCodeCS
+//* identifier[NAIC] ^patternIdentifier.type  = C4BBIdentifierType#naiccode
 
 * identifier[tax] ^comment = "Tax ID Number"
 * identifier[payerid] ^comment = "Internal value assigned by the payer responsible for the claim (2)"
@@ -48,8 +49,6 @@ Description: "This profile builds upon the US Core Organization profile. It is u
 * meta.lastUpdated ^comment = "Defines the date the Resource was created or updated, whichever comes last (163).  Payers SHALL provide the last time the data was updated or the date of creation in the payer’s system of record, whichever comes last. Apps will use the meta.lastUpdated value to determine if the Reference resources are as of the current date or date of service.  lastUpdated required unless the Resource is \"contained\""
 * meta.profile ^comment = "meta.profile is required as a matter of convenience of receiving systems. The meta.profile should be used by the Server to hint/assert/declare that this instance conforms to one (or more) stated profiles (with business versions). meta.profile does not capture any business logic, processing directives, or semantics (for example, inpatient or outpatient). Clients should not assume that the Server will exhaustively indicate all profiles with all versions that this instance conforms to. Clients can (and should) perform their own validation of conformance to the indicated profile(s) and to any other profiles of interest. CPCDS data element (190)"
 
-
-// TODO Need Organization for US Core 3.1.1, which has the above naic code requirements (which was added in a later version of US Core)
 
 
 
