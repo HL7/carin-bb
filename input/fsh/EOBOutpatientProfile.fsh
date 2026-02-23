@@ -274,6 +274,6 @@ The profile has requirements for financial data."
 * item.revenue ^comment = "Code used on the UB-04 (Form Locator 42) to identify a specific accommodation, ancillary service, or billing calculation related to the service being billed (86)"
 * adjudication[adjustmentreason].reason ^comment = "Reason codes used to interpret the Non-Covered Amount that are provided to the Provider. (92)"
 * careTeam.provider ^comment = "The National Provider Identifier assigned to the care team (primary care provider, attending, referring, otheroperating, operating, and rendering) for the admission. (93, 96, 98, 99, 173)"
-
+* diagnosis.diagnosis[x] ^comment = "When using ICD-10-CM codes, only non-header codes SHOULD be used. Header codes are non-billable organizational categories and should not be used for coding actual patient diagnoses"
 
 * insert EOBBaseProfileComments

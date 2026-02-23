@@ -206,7 +206,7 @@ If the service facility is not assigned an NPI, this data element will not be po
 * item.location[x] ^comment = "Code indicating the location, such as inpatient, outpatient facility, office, or home health agency, where this service was performed. (46)"
 * careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, rendering, purchased service and referring care team. (95, 96, 99)"
 * item.serviced[x]  ^comment = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
-
+* diagnosis.diagnosis[x] ^comment = "When using ICD-10-CM codes, only non-header codes SHOULD be used. Header codes are non-billable organizational categories and should not be used for coding actual patient diagnoses"
 
 * insert EOBBaseProfileComments
 
