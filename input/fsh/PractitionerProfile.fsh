@@ -37,5 +37,5 @@ Description: "This profile builds upon the US Core Practitioner profile. It is u
 
 Invariant:  Practitioner-identifier
 Description: "Practitioner.identifier must include an NPI or a Tax ID"
-Expression: "identifier.where(type.where(coding.where(code in ('NPI' | 'TAX')).exists()).exists()).exists()"
+Expression: "identifier.where(system in ('http://hl7.org/fhir/sid/us-npi' | 'urn:oid:2.16.840.1.113883.4.4')).exists()).exists()).exists()"
 Severity:   #error
