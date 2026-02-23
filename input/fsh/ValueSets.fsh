@@ -65,6 +65,7 @@ defined in http://terminology.hl7.org/CodeSystem/adjudication, as well as those 
 * C4BBAdjudication#paidbypatient "Paid by patient"
 * C4BBAdjudication#paidbypatientcash "Paid by patient - cash"
 * C4BBAdjudication#paidbypatientother "Paid by patient - other"
+* C4BBAdjudication#paidbypatienthealthaccount "Paid by patient - health account"
 * C4BBAdjudication#paidtopatient "Paid to patient"
 * C4BBAdjudication#paidtoprovider "Paid to provider" 
 * C4BBAdjudication#memberliability "Member liability" 
