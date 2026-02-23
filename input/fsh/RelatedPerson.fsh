@@ -18,9 +18,3 @@ Description: "This profile is used to convey basic demographic information about
 //* obeys relatedperson-name-or-relationship
 //* obeys relatedperson-meta-profile-version
 
-/*
-Invariant: relatedperson-name-or-relationship
-Description: "Either a name or a relationship SHALL be provided (or both)"
-Expression: "name.exists() or relationship.exists()"
-Severity: #error
-*/
