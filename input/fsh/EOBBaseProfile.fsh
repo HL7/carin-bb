@@ -109,7 +109,7 @@ role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'superv
 provider.all(resolve() is Practitioner)
 )"
 Severity: #error
-
+/*
 Invariant: EOB-inst-careTeam-organization    // rewritten with input from Lee Surprenant  FHIR-28530
 Description: "Institutional EOB: Careteam roles refer to an organization"
 // TODO Add Jira ticket
