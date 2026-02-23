@@ -1,10 +1,12 @@
 // TODO relax meta.profile no invariant, just require at least one. Across all profiles (Jira ticket? If no ticket, create one.)
 
 Profile: C4BBCoverage
-Parent: USCoreCoverageProfile|6.1.0
+Parent: USCoreCoverageProfile|7.0.0
 Id: C4BB-Coverage
 Title: "C4BB Coverage"
 Description: "Data that reflect a payer’s coverage that was effective as of the date of service or the date of admission of the claim."
+* ^extension[$compliesWithProfile].valueCanonical = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|6.1.0"
+//* ^extension[$compliesWithProfile].valueCanonical = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|7.0.0"
 //* ^jurisdiction.valueCodeableConcept = "US#urn:iso:std:iso:3166"
 * meta 1..1 MS
 * meta.lastUpdated 1..1 MS

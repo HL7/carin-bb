@@ -1,9 +1,10 @@
 Profile: C4BBOrganization
-Parent:  USCoreOrganizationProfile|6.1.0
+Parent:  USCoreOrganizationProfile|7.0.0
 Id:  C4BB-Organization
 Title: "C4BB Organization"
 Description: "This profile builds upon the US Core Organization profile. It is used to convey a payer, provider, payee or service facility organization."
-* ^extension[$compliesWithProfile].valueCanonical = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|3.1.1"
+* ^extension[$compliesWithProfile].valueCanonical = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0"
+//* ^extension[$compliesWithProfile].valueCanonical = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0"
 * obeys uncontained-requires-lastUpdated
 * meta 1..1 MS
 * meta.lastUpdated 0..1  MS
