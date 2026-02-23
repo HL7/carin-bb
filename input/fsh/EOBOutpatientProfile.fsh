@@ -20,7 +20,7 @@ The basis profile does not have requirements for financial data."
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)   // was PayerInstitutionalProviderRole
 * careTeam.role 1..1 MS
 * careTeam obeys EOB-inst-careTeam-practitioner
-* careTeam obeys EOB-inst-careTeam-organization
+//* careTeam obeys EOB-inst-careTeam-organization
 * careTeam obeys EOB-careteam-qualification
 * careTeam.qualification from $USCoreProviderSpecialty (required)
 * identifier MS

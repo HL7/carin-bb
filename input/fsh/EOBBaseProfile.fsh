@@ -143,12 +143,12 @@ Description: "Pharmacy EOB: Careteam roles refer to a practitioner"
 /*
 Expression: "(
 role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists() implies
-role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists().provider.all(resolve() is Organization)
+role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists().provider.all(resolve() is Practitioner)
 )"
 */
 Expression: "(
 role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists() implies
-provider.all(resolve() is Organization)
+provider.all(resolve() is Practitioner)
 )"
 Severity: #error
 
