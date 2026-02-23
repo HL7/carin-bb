@@ -152,7 +152,7 @@ The basis profile does not have requirements for financial data."
 * item.adjudication contains
 // CHANGE FOR NON-FINANCIAL
 //   adjudicationamounttype 1..* MS and
-   adjustmentreason 0..1 MS and
+   adjustmentreason 0.. MS and
    benefitpaymentstatus 1..1 MS and
    allowedunits 0..1 MS
 
