@@ -4,8 +4,7 @@ Title: "EOB Professional - Transportation 1 - Nonfinancial"
 Description: "EOB Professional - Transportation Services Example 1 - Nonfinancial"
 Usage: #example
 * meta.lastUpdated = "2022-09-10T14:46:05-04:00"
-* meta.source = "Organization/PayerOrganizationExample1"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinicianBasis|2.1.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitProfessionalNonClinicianBasis|2.2.0)
 * identifier[uniqueclaimid].type = $C4BBIdentifierType#uc "Unique Claim ID"
 * identifier[uniqueclaimid].type.text = "Indicates that the claim identifier is that assigned by a payer for a claim received from a provider or subscriber"
 * identifier[uniqueclaimid].system = "https://www.example.com/fhir/EOBIdentifier"
@@ -42,7 +41,7 @@ Usage: #example
 
 * supportingInfo[ambulancetransportreason][+].category = C4BBSupportingInfoType#ambulancetransportreason
 * supportingInfo[ambulancetransportreason][=].sequence = 3
-* supportingInfo[ambulancetransportreason][=].reason = X12AmbulanceTransportReasonCodes#B "Patient was transported for the benefit of a preferred physician"
+* supportingInfo[ambulancetransportreason][=].reason = $X12AmbulanceTransReas#B "Patient was transported for the benefit of a preferred physician"
 
 
 * supportingInfo[transportationdistance][+].category = C4BBSupportingInfoType#transportationdistance

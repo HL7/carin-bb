@@ -6,6 +6,7 @@
 <li>The determination of inpatient vs. outpatient institutional claims is defined by the Type of Bill. The NUBC manual defines which TOBs are inpatient vs outpatient.</p>
 .diagnosis:&nbsp; ICD-10 / ICD-9 diagnosis codes are defined as CodeableConcepts &nbsp;</li>
 <li>.diagnosis.sequence rule:&nbsp; diagnosis.sequence values do not necessarily indicate any order in which the diagnosis was reported or identified.&nbsp; client app implementations should not assign any significance to the sequence values.&nbsp; client app implementations should use the values of diagnosis.type to identify primary, secondary, etc.&nbsp;</li>
+<li>.diagnosis: When a single diagnosis code represents multiple diagnosis types (e.g. principle and patientreasonforvisit), the diagnosis code will be repeated in separate ExplanationOfBenefit.diagnosis iterations each with a single type.</li>
 <li>.item.productOrService:&nbsp; CPT / HCPCS procedure codes are defined as CodeableConcepts</li>
 <li>A CPT / HCPCS or HIPPS code may not be available on an outpatient institutional claim. The cardinality of the HL7 base EOB Resource for item.productOrService is 1..1 if .item is provided.&nbsp; Since .item.revenue is required it means that item.productOrService must be populated.&nbsp; Since the profile is not able to relax the cardinality of the resource, it is recommended payers provide a data absent reason when a CPT / HCPCS or HIPPS code is not available.</li>
 <li>.adjudication[benefitpaymentstatus]:&nbsp; in network or out of network payment status for the claim</li>

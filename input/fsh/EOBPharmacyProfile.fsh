@@ -98,7 +98,7 @@ The basis profile does not have requirements for financial data."
 * item.adjudication contains
 // CHANGE FOR NON-FINANCIAL
 //   adjudicationamounttype 1..* MS and
-   rejectreason 0..1 MS
+   rejectreason 0..* MS
 
 /* item.adjudication[adjudicationamounttype] ^short =  "Line level adjudication type and amount"
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication

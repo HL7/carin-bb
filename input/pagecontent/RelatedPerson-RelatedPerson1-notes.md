@@ -1,6 +1,6 @@
 ```
 Instance: RelatedPerson1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-RelatedPerson|2.1.0
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-RelatedPerson|2.2.0
 Title: "Related Person 1"
 Description: "Related Person 1"
 Usage: #example

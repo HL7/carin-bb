@@ -26,7 +26,7 @@ The basis profile does not have requirements for financial data."
 * careTeam.role from C4BBClaimInstitutionalCareTeamRole  (required)  // was  PayerInstitutionalProviderRole
 * careTeam.role 1..1 MS
 * careTeam obeys EOB-inst-careTeam-practitioner
-* careTeam obeys EOB-inst-careTeam-organization
+//* careTeam obeys EOB-inst-careTeam-organization
 * billablePeriod 1..1 MS
 * diagnosis 1..* MS
 * diagnosis.type 1..1 MS
@@ -44,7 +44,7 @@ The basis profile does not have requirements for financial data."
 * procedure.type 1..1 MS
 * procedure.date 0..1 MS
 * provider 1..1
-* provider only Reference(C4BBOrganization)
+* provider only Reference(C4BBOrganization or C4BBPractitioner)
 * insert SupportingInfoSlicing
 * supportingInfo contains
      admissionperiod 1..1 MS  and
@@ -262,7 +262,7 @@ The basis profile does not have requirements for financial data."
 * procedure ^comment = "Medical procedure a patient received during inpatient stay. Current coding methods include: International Classification of Diseases Surgical Procedures (ICD-9). Information located on UB04 (Form Locator 74). (25, 27, 10, 12)"
 * procedure.type ^comment = "Indicates if the inpatient institutional procedure (ICD-PCS) is the principal procedure or another procedure. (186)"
 * procedure.sequence ^comment =  " procedure.sequence values do not necessarily indicate any order in which the procedure occurred.  client app implementations should not assign any significance to the sequence values.  client app implementations should use the values of procedure.type to identify primary and secondary procedures"
-
+* diagnosis.diagnosis[x] ^comment = "When using ICD-10-CM codes, only non-header codes SHOULD be used. Header codes are non-billable organizational categories and should not be used for coding actual patient diagnoses"
 
 * insert EOBBaseProfileComments
 

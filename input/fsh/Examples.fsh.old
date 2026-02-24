@@ -26,16 +26,16 @@ Usage: #example
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#UNK
 * identifier[memberid].type = $IdentifierType#MB
 * identifier[memberid].value = "1234-234-1243-12345678901"
-* identifier[memberid].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
+* identifier[memberid].system = "https://www.example.com/fhir/memberidentifier"
 //* identifier[medrecnum].type = $IdentifierType#MR
 //* identifier[medrecnum].value = "1234-234-1243-12345678901m"
-//* identifier[medrecnum].system = "https://www.xxxhealthplan.com/fhir/medicalrecordnumber"
+//* identifier[medrecnum].system = "https://www.example.com/fhir/medicalrecordnumber"
 * identifier[uniquememberid].type = C4BBIdentifierType#um
 * identifier[uniquememberid].value = "1234-234-1243-12345678901u"
-* identifier[uniquememberid].system = "https://www.xxxhealthplan.com/fhir/iniquememberidentifier"
+* identifier[uniquememberid].system = "https://www.example.com/fhir/iniquememberidentifier"
 //* identifier[patacctnum].type = C4BBIdentifierType#pat
 //* identifier[patacctnum].value = "1234-234-1243-12345678901a"
-//* identifier[patacctnum].system = "https://www.xxxhealthplan.com/fhir/patacctnum"
+//* identifier[patacctnum].system = "https://www.example.com/fhir/patacctnum"
 
 Instance: Coverage1
 InstanceOf: C4BBCoverage
@@ -49,7 +49,7 @@ Usage: #example
 * status = #active
 * identifier[0].type = $IdentifierType#MB
 * identifier[0].value = "1234-234-1243-12345678901"
-* identifier[0].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
+* identifier[0].system = "https://www.example.com/fhir/memberidentifier"
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#HIP
 * type.text = "health insurance plan policy"
 * policyHolder = Reference(Patient1)
@@ -87,7 +87,7 @@ Usage: #example
 * status = #active
 * identifier[0].type = $IdentifierType#MB
 * identifier[0].value = "210300002"
-* identifier[0].system = "https://www.xxxhealthplan.com/fhir/memberidentifier"
+* identifier[0].system = "https://www.example.com/fhir/memberidentifier"
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#DENTAL
 * type.text = "dental care policy"
 * policyHolder = Reference(Patient1)
@@ -123,7 +123,7 @@ Usage: #example
 * status = #active
 * identifier.type = C4BBIdentifierType#uc
 * identifier.value = "AW123412341234123412341234123412"
-* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* identifier.system = "https://www.example.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
 * type.text = "Institutional"
 * subType = C4BBInstitutionalClaimSubType#inpatient
@@ -222,7 +222,7 @@ Usage: #example
 * status = #active
 * identifier.type = C4BBIdentifierType#uc
 * identifier.value = "AW123412341234123412341234123412"
-* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* identifier.system = "https://www.example.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#institutional
 * type.text = "Institutional"
 * subType = C4BBInstitutionalClaimSubType#outpatient
@@ -314,7 +314,7 @@ Usage: #example
 * status = #active
 * identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "AW123412341234123412341234123413"
-* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* identifier.system = "https://www.example.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#professional
 * type.text = "Professional"
 * use = #claim
@@ -396,7 +396,7 @@ Usage: #example
 
 * identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "210300002"
-* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* identifier.system = "https://www.example.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#oral
 * type.text = "Oral"
 * use = #claim
@@ -499,7 +499,7 @@ Usage: #example
 
 * identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "210300012"
-* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* identifier.system = "https://www.example.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#oral
 * type.text = "Oral"
 * use = #claim
@@ -606,7 +606,7 @@ Usage: #example
 * status = #active
 * identifier.type = $C4BBIdentifierTypeCS#uc
 * identifier.value = "AW123412341234123412341234123412"
-* identifier.system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* identifier.system = "https://www.example.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#pharmacy
 * type.text = "Pharmacy"
 * use = #claim

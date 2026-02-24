@@ -1,12 +1,10 @@
 ```
 Instance: Payer2
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|2.1.0
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Organization|2.2.0
 Title: "Payer 2"
 Description: "Payer 2"
 Usage: #example
-* meta
-  * lastUpdated = "2020-09-08T00:00:00+00:00"
-  * source = "Organization/PayerOrganizationExample1"
+
 * identifier
   * type = C4BBIdentifierType#naiccode "NAIC Code"
     * text = "NAIC Code"

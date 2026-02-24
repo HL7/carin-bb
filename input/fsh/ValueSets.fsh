@@ -59,12 +59,13 @@ defined in http://terminology.hl7.org/CodeSystem/adjudication, as well as those 
 * $HL7AdjudicationCS#eligible
 * $HL7AdjudicationCS#deductible  
 * $HL7AdjudicationCS#benefit 
-* C4BBAdjudication#coinsurance "Coinsurance" 
+* C4BBAdjudication#coinsurance "Co-insurance" 
 * C4BBAdjudication#noncovered "Noncovered" 
 * C4BBAdjudication#priorpayerpaid "Prior payer paid" 
 * C4BBAdjudication#paidbypatient "Paid by patient"
 * C4BBAdjudication#paidbypatientcash "Paid by patient - cash"
 * C4BBAdjudication#paidbypatientother "Paid by patient - other"
+* C4BBAdjudication#paidbypatienthealthaccount "Paid by patient - health account"
 * C4BBAdjudication#paidtopatient "Paid to patient"
 * C4BBAdjudication#paidtoprovider "Paid to provider" 
 * C4BBAdjudication#memberliability "Member liability" 
@@ -113,7 +114,7 @@ Description: "Identifies the type of recipient of the adjudication amount; i.e.,
 ValueSet: C4BBClaimProfessionalAndNonClinicianDiagnosisType 
 Title: "C4BB Claim Professional And Non Clinician Diagnosis Type Value Set"
 Description: "Indicates if the professional and non-clinician diagnosis is principal or secondary"
-* $HL7DiagnosisType#principal "principal"
+* $HL7DiagnosisType#principal "Principal Diagnosis"
 * C4BBClaimDiagnosisType#secondary "secondary"
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false

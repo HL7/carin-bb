@@ -137,7 +137,7 @@ The basis profile does not have requirements for financial data."
 * item.adjudication contains
 // CHANGE FOR NON-FINANCIAL   
 //   adjudicationamounttype 1..* MS and
-   adjustmentreason 0..1 MS and
+   adjustmentreason 0.. MS and
    benefitpaymentstatus 1..1 MS and
    allowedunits 0..1 MS
 * item.adjudication[allowedunits] ^short = "The quantity of units, times, days, visits, services, or treatments for the service described by the HCPCS code, revenue code or procedure code, submitted by the provider.  (149)"
@@ -301,6 +301,7 @@ If the service facility is not assigned an NPI, this data element will not be po
 * careTeam.provider ^comment = "The National Provider Identifier assigned to the primary, supervising, rendering, purchased service and referring care team. (95, 96, 99)"
 * item.serviced[x]  ^comment = "Date services began/ended. Located on CMS 1500 (Form Locator 24A) (118)"
 * total.amount ^comment = "Total amount for each category (i.e., submitted, eligible, etc.) (148)"
+* diagnosis.diagnosis[x] ^comment = "When using ICD-10-CM codes, only non-header codes SHOULD be used. Header codes are non-billable organizational categories and should not be used for coding actual patient diagnoses"
 
 * insert EOBBaseProfileComments
 
@@ -308,20 +309,16 @@ If the service facility is not assigned an NPI, this data element will not be po
 
 Invariant:  Oral-EOB-surface-subsite-requires-tooth-number
 Description: "If item.subsite (tooth surface) exists then tooth number is required in bodySite or supportingInfo[additionalBodySite]"
-//Expression: "item.where(subSite.exists() and (bodySite.where(coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.where(coding.system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists() and category.where(coding.code = 'additionalbodysite').exists()).sequence).isDistinct())).count() = 0"
 Expression: "item.where(subSite.exists() and (bodySite.coding.where(system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists().not() and informationSequence.combine(%context.supportingInfo.where(code.coding.where(system='http://terminology.hl7.org/CodeSystem/ADAUniversalToothDesignationSystem').exists() and category.coding.where(code = 'additionalbodysite').exists()).sequence).isDistinct())).count() = 0"
 Severity:   #error
 
 Invariant:  Oral-EOB-supportinginfo-additionalbodysite-requires-line-item
 Description: "supportingInfo repetitions with additional body site must be referred to by one or more repetitions of item.informationSequence"
-//Expression: "supportingInfo.where(category.coding.code = 'additionalbodysite').sequence.subsetOf(%context.item.informationSequence)"
-//Expression: "supportingInfo.where(category.coding.where(code = 'additionalbodysite').exists()).where(sequence.subsetOf(%context.item.informationSequence)).exists()"
 Expression: "supportingInfo.where(category.coding.where(code = 'additionalbodysite').exists()).sequence.subsetOf(%context.item.informationSequence)"
 Severity:   #error
 
 
 Invariant:  Oral-line-item-with-linked-additionalbody-site-requires-bodysite
 Description: "At least one item.bodySite needs to be present if an item.informationSequence references supportingInfo[additionalbodysite].sequence"
-//Expression: "item.where(informationSequence.intersect(%context.supportingInfo.where(category.coding.code = 'additionalbodysite').sequence).exists()).bodySite.exists()"
 Expression: "item.where(informationSequence.intersect(%context.supportingInfo.where(category.coding.where(code = 'additionalbodysite').exists()).sequence).exists()).where(bodySite.count() != count()).empty()"
 Severity:   #error

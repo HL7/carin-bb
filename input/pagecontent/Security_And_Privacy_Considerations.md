@@ -34,7 +34,7 @@ For the purposes of information exchange defined by this IG, additional security
 2.	Implementers of this Implementation Guide **SHOULD** support SMART on FHIR Authorization best practices [Transport Security section](https://docs.smarthealthit.org/authorization/best-practices/#11--transport-security).
 
 ### Authentication and Authorization Requirements
-1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements]({{site.data.fhir.ver.uscore6}}/security.html).
+1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements]({{site.data.fhir.ver.uscore}}/security.html).
 2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](https://hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) JSON file with scopes defined in the `scopes_supported` property.
 3.	Implementations **SHOULD** consider the SMART on FHIR Best Practices in Authorization found [here](https://docs.smarthealthit.org/authorization/best-practices/).
 4.	Server implementation **SHALL** support the following [“SMART Core Capabilities”](https://hl7.org/fhir/smart-app-launch/1.0.0/conformance/index.html#core-capabilities) and **MAY** support additional capabilities:

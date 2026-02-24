@@ -1,6 +1,6 @@
 ```
 Instance: PractitionerDentalProvider1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|2.1.0
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Practitioner|2.2.0
 Title: "Dental Provider 1"
 Description: "Dental Provider 1"
 Usage: #example

@@ -1,17 +1,15 @@
 ```
 Instance: Patient2
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient|2.1.0
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Patient|2.2.0
 Title: "Patient Example 2"
 Description: "Patient Example 2"
 Usage: #example
-* meta
-  * lastUpdated = "2020-10-30T09:48:01.8512764-04:00"
-  * source = "Organization/PayerOrganizationExample1"
+
 * language = #en-US
 * identifier
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MB "Member Number"
     * text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
-  * system = "https://www.upmchealthplan.com/fhir/memberidentifier"
+  * system = "https://www.example.com/fhir/memberidentifier"
   * value = "88800933501"
   * assigner = Reference(Payer2) "UPMC Health Plan"
 * active = true
@@ -46,7 +44,7 @@ Usage: #example
   * rank = 6
 * telecom[+]
   * system = #email
-  * value = "GXXX@XXXX.com"
+  * value = "GXXX@example.com"
   * rank = 7
 * telecom[+]
   * system = #fax

@@ -3,13 +3,13 @@ InstanceOf: C4BBExplanationOfBenefitOralBasis
 Description: "EOB Oral Example 1 - Nonfinancial"
 Usage: #example
 //* id = "1234-234-1243-12345678901-20190101-20191031"
-* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOralBasis|2.1.0)
+* meta.profile[+] = Canonical(C4BBExplanationOfBenefitOralBasis|2.2.0)
 * meta.lastUpdated = "2021-03-18T10:23:00-05:00"
 * language = #en-US
 * status = #active
 * identifier[uniqueclaimid].type = $C4BBIdentifierTypeCS#uc
 * identifier[uniqueclaimid].value = "210300002"
-* identifier[uniqueclaimid].system = "https://www.xxxplan.com/fhir/EOBIdentifier"
+* identifier[uniqueclaimid].system = "https://www.example.com/fhir/EOBIdentifier"
 * type = $HL7ClaimTypeCS#oral
 * type.text = "Oral"
 * use = #claim

@@ -1,6 +1,6 @@
 ```
 Instance: Coverage1
-InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.1.0
+InstanceOf: http://hl7.org/fhir/us/carin-bb/StructureDefinition/C4BB-Coverage|2.2.0
 Title: "Coverage Example 1"
 Description: "Coverage Example1"
 Usage: #example
@@ -9,7 +9,7 @@ Usage: #example
 * identifier
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#MB "Member Number"
     * text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
-  * system = "https://www.upmchealthplan.com/fhir/memberidentifier"
+  * system = "https://www.example.com/fhir/memberidentifier"
   * value = "88800933501"
   * assigner = Reference(Payer2) "UPMC Health Plan"
 * status = #active

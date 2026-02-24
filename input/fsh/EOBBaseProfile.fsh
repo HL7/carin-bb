@@ -91,95 +91,33 @@ All EOB instances should be from one of the four concrete EOB profiles defined i
 
 Invariant:  EOB-insurance-focal
 Description: "EOB.insurance:  at most one with focal = true"
-//Expression: "insurance.select (focal = true).count() < 2"
-// TODO Add Jira ticket
 Expression: "select (focal = true).count() < 2"
 Severity:   #error
 
 Invariant: EOB-inst-careTeam-practitioner // rewritten with input from Lee Surprenant FHIR-28530
 Description: "Institutional EOB: Careteam roles refer to a practitioner"
-/*Expression: "(
-role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'supervising')).exists()).exists() implies
-role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'supervising')).exists()).exists().provider.all(resolve() is Practitioner)
-)"
-*/
-// TODO Add Jira ticket
-Expression: "(
-role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'supervisor')).exists()).exists() implies
-provider.all(resolve() is Practitioner)
-)"
+Expression: "(role.where(coding.where(code in ('attending' | 'primary' | 'referring' | 'supervisor')).exists()).exists() implies provider.all(resolve() is Practitioner))"
 Severity: #error
 
-Invariant: EOB-inst-careTeam-organization    // rewritten with input from Lee Surprenant  FHIR-28530
-Description: "Institutional EOB: Careteam roles refer to an organization"
-// TODO Add Jira ticket
-/*
-Expression:   "(
-role.where(coding.where(code in ('rendering' )).exists()).exists() implies
-role.where(coding.where(code in ('rendering' )).exists()).exists().provider.all(resolve() is Organization)
-)"
-*/
-Expression:   "(
-role.where(coding.where(code in ('rendering' )).exists()).exists() implies
-provider.all(resolve() is Organization)
-)"
-Severity: #error
 
 Invariant: EOB-careteam-qualification
 Description: "Care Team Rendering physician's qualifications are from Healthcare Provider Taxonomy Value Set"
-//Expression: "where(role.where(coding.code in ('rendering')).exists().not() or qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')).exists()" // FHIR-35889
-//Expression: "where(role.where(coding.code in ('rendering')).exists().not() or qualification.where(coding.system = 'http://nucc.org/provider-taxonomy')).exists()"
 Expression: "where(role.where(coding.code in ('rendering')).exists().not() or qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')).exists()"
-/* Expression: "(
-#role.where(coding.where(code in ('rendering' )).exists()).exists() implies
-role.where(coding.where(code in ('rendering' )).exists()).exists().qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')
-)"
-*/
 Severity: #error
 
 Invariant: EOB-pharm-careTeam-practitioner
 Description: "Pharmacy EOB: Careteam roles refer to a practitioner"
-// TODO Add Jira Ticket
-/*
-Expression: "(
-role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists() implies
-role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists().provider.all(resolve() is Organization)
-)"
-*/
-Expression: "(
-role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists() implies
-provider.all(resolve() is Organization)
-)"
+Expression: "(role.where(coding.where(code in ('primary' | 'prescribing' )).exists()).exists() implies provider.all(resolve() is Practitioner))"
 Severity: #error
 
 Invariant: EOB-pharm-careTeam-organization
 Description: "Pharmacy EOB: Careteam roles refer to an organization"
-// TODO Add Jira Ticket
-/*
-Expression: "(
-role.where(coding.where(code in ('rendering' )).exists()).exists() implies
-role.where(coding.where(code in ('rendering' )).exists()).exists().provider.all(resolve() is Organization)
-)"
-*/
-Expression: "(
-role.where(coding.where(code in ('rendering' )).exists()).exists() implies
-provider.all(resolve() is Organization)
-)"
+Expression: "(role.where(coding.where(code in ('rendering' )).exists()).exists() implies provider.all(resolve() is Organization))"
 Severity: #error
 
 Invariant: EOB-prof-careTeam-practitioner
 Description: "Professional EOB:  Careteam roles refer to a practitioner"
-// TODO Add Jira Ticket
-/*
-Expression: "(
-role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervising')).exists()).exists() implies
-role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervising' )).exists()).exists().provider.all(resolve() is Practitioner)
-)"
-*/
-Expression: "(
-role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervisor')).exists()).exists() implies
-provider.all(resolve() is Practitioner)
-)"
+Expression: "(role.where(coding.where(code in ('rendering' | 'primary' | 'referring' | 'supervisor')).exists()).exists() implies provider.all(resolve() is Practitioner))"
 Severity: #error
 
 
@@ -202,27 +140,14 @@ Description: "If Adjudication is present, it must have at least one adjudication
 Expression: "(adjudication.exists().not() or adjudication.where(category.memberOf('http://hl7.org/fhir/us/carin-bb/ValueSet/C4BBAdjudication')).exists())"
 Severity: #error
 
-// 20211110 CAS: https://jira.hl7.org/browse/FHIR-32850
-/*
-Invariant: EOB-out-inst-item-productorservice
-Description: "Outpatient Institutional EOB:  Item productOrService required. Data absent reason of Not Applicable is not allowed."
-Expression: "coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()"
-Severity: #error
-*/
-
-// 20210203 CAS: https://jira.hl7.org/browse/FHIR-33024
 Invariant: EOB-vision-item-productorservice
 Description: "Vision EOB: Item productOrService not required in item.productOrService if and only if type is vision."
-// TODO Add Jira Ticket
-//Expression: "ExplanationOfBenefit.type.coding.where(code = 'vision' and system='http://terminology.hl7.org/CodeSystem/claim-type').exists() or ExplanationOfBenefit.item.productOrService.coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()"
 Expression: "type.coding.where(code = 'vision' and system='http://terminology.hl7.org/CodeSystem/claim-type').exists() or item.productOrService.coding.where(code = 'not-applicable' and system = 'http://terminology.hl7.org/CodeSystem/data-absent-reason').exists().not()"
 Severity: #error
 
 
-// 20210203 CAS: https://jira.hl7.org/browse/FHIR-30370 - NUBC Point Of Origin - newborns
 Invariant: EOB-inst-pointoforigin
 Description: "Where Admission Type and Point of Origin slices exist, if Type of Admission code is Newborn, Point of Origin must be from Point of Origin - Newborn CodeSystem  or Type of Admission is not Newborn and Point of Origin must be from Point of Origin Nonnewborn CodeSystem."
-//Expression: "(supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code = '4').exists() and supportingInfo.where(code.coding.system='AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn').exists()).not() and (supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit' and code.coding.code != '4').exists() and supportingInfo.where(code.coding.system = 'https://www.nubc.org/CodeSystem/PointOfOriginNewborn').exists() ).not()"
 Expression: "(supportingInfo.where(code.coding.where(system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit').exists() and code.coding.where(code = '4').exists()).exists() and supportingInfo.where(code.coding.where(system='AHANUBCPointOfOriginForAdmissionOrVisitNonnewborn').exists()).exists()).not() and (supportingInfo.where(code.coding.where(system = 'https://www.nubc.org/CodeSystem/PriorityTypeOfAdmitOrVisit').exists() and code.coding.where(code = '4').exists().not()).exists() and supportingInfo.where(code.coding.where(system = 'https://www.nubc.org/CodeSystem/PointOfOriginNewborn').exists()).exists() ).not()"
 Severity: #error
 
@@ -240,10 +165,7 @@ Severity: #error
 RuleSet: ItemAdjudicationInvariant
 * item obeys adjudication-has-amount-type-slice
 
-/* removed - FHIR-38063 - Update Invariants to support contracting and benefit payment status move to EOB.adjudication
-RuleSet: AdjudicationInvariant
-* obeys adjudication-has-amount-type-slice
-*/
+
 RuleSet: EOBHeaderItemAdjudicationInvariant
 * obeys EOB-institutional-item-or-header-adjudication
 
@@ -314,13 +236,3 @@ RuleSet: EOBBaseProfileComments
 * payment.date ^comment = "The date the claim was paid. (107)"
 * processNote.text ^comment = "Payment denial explanation to a member, typically goes on the EOB when the payment is denied or disallowed (181)"
 
-// 20210322 CAS: FHIR-30575
-/*
-RuleSet: Metaprofile-supportedProfile-slice
-* meta.profile ^slicing.discriminator.type = #pattern
-* meta.profile ^slicing.discriminator.path = "$this"
-* meta.profile ^slicing.rules = #open
-* meta.profile ^slicing.ordered = false
-* meta.profile ^slicing.description = "Slice based on value"
-* meta.profile contains supportedProfile 1..1
-*/

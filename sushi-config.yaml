@@ -12,7 +12,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.carin-bb
 canonical: http://hl7.org/fhir/us/carin-bb
-version: 2.1.0
+version: 2.2.0
 name: CARINConsumerDirectedPayerDataExchange
 title: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®)
 status: active
@@ -29,21 +29,36 @@ description: CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Butt
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
+#  hl7.fhir.us.core:
+#    id: uscore8
+#    version: 8.0.1
+#    uri: http://hl7.org/fhir/us/core/v801/ImplementationGuide/hl7.fhir.us.core.v801
+#    reason: |
+#      Defines USCDIv5 expectations on a range of resources that will be queried by CARIN BlueButton client systems
   hl7.fhir.us.core:
+    id: uscore
+    version: 7.0.0
+#    uri: http://hl7.org/fhir/us/core/v700/ImplementationGuide/hl7.fhir.us.core.v700
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    reason: |
+      Defines USCDIv4 expectations on a range of resources that will be queried by CARIN BlueButton client systems      
+  hl7.fhir.us.core.v610:
     id: uscore6
     version: 6.1.0
+    uri: http://hl7.org/fhir/us/core/v610/ImplementationGuide/hl7.fhir.us.core.v610
     reason: |
       Defines USCDIv3 expectations on a range of resources that will be queried by CARIN BlueButton client systems
-  hl7.fhir.us.core.3.1.1:
-    version: 3.1.1
-    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-    id: uscore3
-    reason: |
-      Defines USCDIv3 expectations on a range of resources that will be queried by CARIN BlueButton client systems
-  hl7.fhir.extensions.r5: 4.0.1
+#  hl7.fhir.us.core.v311:
+#    version: 3.1.1
+#    uri: http://hl7.org/fhir/us/core/v311/ImplementationGuide/hl7.fhir.us.core.v311
+#    id: uscore3
+#    reason: |
+#      Defines USCDIv3 expectations on a range of resources that will be queried by CARIN BlueButton client systems
+  hl7.fhir.uv.extensions.r4:
+    version: 5.2.0
   us.nlm.vsac:
     uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-    version: 0.21.0
+    version: 0.24.0
 parameters:
   show-inherited-invariants: false
   default-jurisdiction: true
@@ -60,8 +75,8 @@ parameters:
     - https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes
     - https://www.nubc.org/CodeSystem/PresentOnAdmissionIndicator
 
-copyrightYear: 2024+
-releaseLabel: STU 2.1
+copyrightYear: 2026+
+releaseLabel: STU 2.2
 jurisdiction: urn:iso:std:iso:3166#US
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

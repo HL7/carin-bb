@@ -6,7 +6,11 @@ https://jira.hl7.org/browse/FHIR-31535?jql=cf%5B11402%5D%20%3D%20STU-1.1.0-Updat
 
 -->
 
-<p>This implementation guide describes the CARIN for Blue Button® <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup> Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can display to consumers via a FHIR API. See the <a href="toc.html">Table of Contents</a> for more information.</p>
+<p>The CARIN Consumer Directed Payer Data Exchange (CARIN for Blue Button® <sup>[<a href="#ftn.id1" name="id1">*</a>]</sup>) Implementation Guide defines a FHIR®-based API that enables secure, consumer-directed access to adjudicated claims and encounter data maintained by commercial health plans and payers. The CARIN BlueButton is not a claims processing standard and instead is meant to enable the communication of data that has resulted from claims processing.
+
+Building on the CMS Medicare Blue Button 2.0 API model, this guide supports the requirements of the CMS Patient Access and Interoperability Rules by standardizing how payers expose claims, explanation of benefit, and related administrative data to members and their authorized third-party applications. The guide leverages HL7® FHIR Release 4 and the US Core profiles wherever applicable to promote consistency and interoperability across payer implementations, and aligns with other HL7 Da Vinci and CARIN implementation guides to support a cohesive payer interoperability ecosystem. These constraints and guidance enable scalable, standards-based access to claims data that empowers consumers, supports application innovation, and advances nationwide interoperability objectives.
+
+This implementation guide describes the CARIN for Blue Button Framework and Common Payer Consumer Data Set (CPCDS), providing a set of resources that payers can provide to consumers via a FHIR API.</p>
 
 <a name="authors"> </a>
 ### Authors
