@@ -1031,7 +1031,7 @@ Current and previous releases of ICD-10-CM are available in PDF and XML format h
 
 Most files are provided in compressed zip format for ease in downloading. These files have been created by the National Center for Health Statistics (NCHS), under authorization by the World Health Organization. Any questions regarding typographical or other errors noted on this release may be reported to nchsicd10cm@cdc.gov.
 
-When using ICD-10-CM codes, only non-header codes SHOULD be used. Header codes are non-billable organizational categories and should not be used for coding actual patient diagnoses."
+When using ICD-10-CM codes, only non-header codes shoul be used. Header codes are non-billable organizational categories and should not be used for coding actual patient diagnoses."
 * codes from system $ICD10CM
 * codes from system $ICD9CM
 * $HL7DataAbsentReason#masked
@@ -1063,7 +1063,9 @@ Most files are provided in compressed zip format for ease in downloading. These 
 
 A link to information about the ICD-10-PCS code system - including how to obtain the content - is available at [https://www.cms.gov/Medicare/Coding/ICD10.](https://www.cms.gov/Medicare/Coding/ICD10)
 
-Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of ICD-10-CM. CMS republishes the ICD-10-CM codes system on their website for convenience only. For authoritative information on ICD-10-CM, users should refer to the National Center for Health Statistics (NCHS) site located [here](https://www.cdc.gov/nchs/icd/icd10cm.htm)."
+Note: CMS is the owner of the ICD-10-PCS code system. CMS is NOT the owner of ICD-10-CM. CMS republishes the ICD-10-CM codes system on their website for convenience only. For authoritative information on ICD-10-CM, users should refer to the National Center for Health Statistics (NCHS) site located [here](https://www.cdc.gov/nchs/icd/icd10cm.htm).
+
+When using ICD-10-CM codes, only non-header codes shoul be used. Header codes are non-billable organizational categories and should not be used for coding actual patient diagnoses."
 * codes from system $ICD10PCS
 * codes from system $ICD9PCS
 * ^copyright = "The International Classification of Diseases, Tenth Revision, Procedure Coding System (ICD-10-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS) available for public use. CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-10-PCS.
