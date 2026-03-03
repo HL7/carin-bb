@@ -1,6 +1,7 @@
 CARIN Consumer Directed Payer Data Exchange (CARIN IG for Blue Button®) was developed under the <a href="https://www.carinalliance.com/">CARIN Alliance</a>.
 
-### Changes and Updates for Version 2.2.0 (from version 2.1.0)
+<h3 id="changes-and-updates-for-version-220-from-version-210">Changes and Updates for Version 2.2.0 (from version 2.1.0)</h3>
+
 The current official published version of CARIN BB for FHIR R4, An update of STU2.1 addressing various issues, loosening of some constraints, and add support for US Core 7.
 
 <ul>
@@ -21,8 +22,7 @@ The current official published version of CARIN BB for FHIR R4, An update of STU
 </ul>
 
 
-
-### Changes and Updates for Version 2.1.0 (from version 2.0.0)
+<h3 id="changes-and-updates-for-version-210-from-version-200">Changes and Updates for Version 2.1.0 (from version 2.0.0)</h3>
 The current official published version of CARIN BB for FHIR R4, An update of STU2 addressing various issues and added support for US Core 6.1.0
 
 <ul>
@@ -52,8 +52,8 @@ The current official published version of CARIN BB for FHIR R4, An update of STU
 
 </ul>
 
+<h3 id="changes-and-updates-for-version-200-from-version-110">Changes and Updates for Version 2.0.0 (from version 1.1.0)</h3>
 
-### Changes and Updates for Version 2.0.0 (from version 1.1.0)
 Balloted Release
 
 
@@ -181,8 +181,7 @@ Balloted Release
 
 </ul>
 
-
-### Changes and Updates for Version 1.1.0
+<h3 id="changes-and-updates-for-version-110">Changes and Updates for Version 1.1.0</h3>
 STU Update of STU 1
 
 <ul>
