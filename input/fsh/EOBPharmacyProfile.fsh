@@ -19,7 +19,7 @@ The basis profile does not have requirements for financial data."
    dayssupply 1..1 MS and
    dawcode 1..1 MS and
    refillNum 1..1 MS and
-   refillsAuthorized 1..1 and
+   refillsAuthorized 0..1 and
    brandgenericindicator 0..1 MS and
    rxoriginCode 0..1 MS and
    clmrecvddate 0..1 MS and
