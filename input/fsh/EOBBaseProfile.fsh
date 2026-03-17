@@ -102,7 +102,7 @@ Severity: #error
 
 Invariant: EOB-careteam-qualification
 Description: "Care Team Rendering physician's qualifications are from Healthcare Provider Taxonomy Value Set"
-Expression: "where(role.where(coding.code in ('rendering')).exists().not() or qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')).exists()"
+Expression: "(role.coding.where(code = 'rendering').exists().not() or qualification.memberOf('http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066')).exists()"
 Severity: #error
 
 Invariant: EOB-pharm-careTeam-practitioner
