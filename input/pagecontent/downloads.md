@@ -15,6 +15,6 @@
 {% lang-fragment globals-table.xhtml %}
 
 #### IP Statements
-* Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved
+* CPT © Copyright 2026 American Medical Association. All rights reserved. AMA and CPT are registered trademarks of the American Medical Association.
 
 {% lang-fragment ip-statements.xhtml %}
