@@ -21,6 +21,8 @@ extension:
     valueCode: fm  # <<< The value must be the code for the workgroup
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2    
 publisher:
   name: HL7 International / Financial Management
   url: http://www.hl7.org/Special/committees/fm
