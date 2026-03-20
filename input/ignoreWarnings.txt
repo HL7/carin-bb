@@ -108,13 +108,7 @@ The concept '0777-3105-02' has a status of inactive and its use should be review
 # 08. === WARNING about US Core IG not being the latest. THis was done on purpose as US Core 8 will not be required for some time and has some incompatibilities with US Core 7 ===
 WARNING: ImplementationGuide/hl7.fhir.us.carin-bb: ImplementationGuide.dependsOn[1]: The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
 
-# 09. === WARNING about setting fmm. FMM will be determined and stated in the next balloted release ===
-WARNING: ImplementationGuide/hl7.fhir.us.carin-bb: ImplementationGuide: HL7 Implementation Guides should state their maturity explicitly using the extension http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-
-
-# 10. - INFORMATION: The following code systems are external or are otherwise not supported by terminology server, and cannot be validated in examples
-The definition for the Code System with URI 'https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes' doesn't provide any codes so the code cannot be validated
-
+# 09. - INFORMATION: The following code systems are external or are otherwise not supported by terminology server, and cannot be validated in examples
 WARNING: ValueSet.where(id = 'ADADentalProcedureCode'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://www.ada.org/cdt' could not be found, so the value set cannot be expanded
 WARNING: ValueSet.where(id = 'AHANUBCPatientDischargeStatus'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PatDischargeStatus' could not be found, so the value set cannot be expanded
 WARNING: ValueSet.where(id = 'AHANUBCPointOfOriginForAdmissionOrVisit'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PointOfOrigin' could not be found, so the value set cannot be expanded
@@ -135,5 +129,5 @@ WARNING: ValueSet.where(id = 'X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRe
 Error from https://tx.fhir.org/r4: Error: The code System "http://www.ama-assn.org/go/cpt" has a grammar, and cannot be enumerated directly
 
 
-# 11. - Information about a valueSet Fragment
+# 10. - Information about a valueSet Fragment
 The value set references CodeSystem 'http://hl7.org/fhir/sid/icd-9-cm' which has status 'fragment'
