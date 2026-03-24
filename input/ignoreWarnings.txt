@@ -30,8 +30,9 @@ A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPDispense
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPBrandGenericIndicator' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPrescriptionOriginCode' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPCompoundCode' could not be found, so the code cannot be validated
-A definition for CodeSystem 'https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes' could not be found, so the code cannot be validated
 A definition for CodeSystem 'https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets' could not be found, so the code cannot be validated
+Resolved system https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes (v1.0.0), but the definition doesn't include any codes, so the code has not been validated
+Resolved system https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes (v1.0.0), but the definition doesn't include any codes, so the code has not been validated (for 'https://x12.org/codesystem.x12.org/ambulance-transport-reason-codes#B')
 
 
 # 03. === Suggestion to pin canonical for an artifact that is inherited by this guide. Cannot be directly addressed by this guide. ===
