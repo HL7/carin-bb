@@ -6,7 +6,7 @@ Usage: #example
 * meta.lastUpdated = "2021-01-01T14:22:01.0314215+00:00"
 * meta.profile[+] = Canonical(C4BBCoverage|2.2.0)
 * language = #en-US
-* identifier.type = $v2-0203#MB
+* identifier.type = $IdentifierType#MB
 * identifier.system = "https://www.example.com/fhir/memberidentifier"
 * identifier.value = "210300002"
 * status = #active

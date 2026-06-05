@@ -6,7 +6,7 @@ Usage: #example
 * meta.lastUpdated = "2020-10-30T09:48:01.8462752-04:00"
 * meta.profile[+] = Canonical(C4BBCoverage|2.2.0)
 * language = #en-US
-* identifier.type = $v2-0203#MB "Member Number"
+* identifier.type = $IdentifierType#MB "Member Number"
 * identifier.type.text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
 * identifier.system = "https://www.example.com/fhir/memberidentifier"
 * identifier.value = "88800933501"

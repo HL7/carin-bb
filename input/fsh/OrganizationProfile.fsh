@@ -20,7 +20,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
    /* and
    naiccode 0..* MS
    */
-//* identifier[NPI] ^patternIdentifier.type  = $HL7IdentifierType#NPI
+//* identifier[NPI] ^patternIdentifier.type  = $IdentifierType#NPI
 * identifier[NPI] 0..1
 // * identifier[NPI].type
 * identifier[tax] ^short = "Tax ID Number"

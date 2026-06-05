@@ -6,7 +6,7 @@ Description: "Coverage Example 3"
 * meta.lastUpdated = "2020-07-07T13:26:22.0314215+00:00"
 * meta.profile = Canonical(C4BBCoverage|2.2.0)
 * language = #en-US
-* identifier.type = $v2-0203#MB
+* identifier.type = $IdentifierType#MB
 * identifier.system = "https://www.example.com/fhir/memberidentifier"
 * identifier.value = "1234-234-1243-12345678901"
 * status = #active

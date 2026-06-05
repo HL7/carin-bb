@@ -6,7 +6,7 @@ Usage: #example
 * meta.profile[+] = Canonical(C4BBOrganization|2.2.0)
 * meta.lastUpdated = "2019-12-12T09:14:11+00:00"
 * language = #en-US
-* identifier[NPI].type = $HL7IdentifierType#NPI
+* identifier[NPI].type = $IdentifierType#NPI
 * identifier[NPI].value = "9941339100"
 * identifier[payerid].type = $C4BBIdentifierTypeCS#payerid
 * identifier[payerid].value = "901234"

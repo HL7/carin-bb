@@ -10,7 +10,7 @@ Usage: #example
 * identifier[uniqueclaimid].system = "https://www.example.com/fhir/EOBIdentifier"
 * identifier[uniqueclaimid].value = "ProfessionalTransportationEOBExample1"
 * status = #active
-* type = $claim-type#professional
+* type = $HL7ClaimTypeCS#professional
 * type.text = "Professional"
 * use = #claim
 * patient = Reference(Patient1)

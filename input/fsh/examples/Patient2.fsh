@@ -7,7 +7,7 @@ Usage: #example
 
 * meta.profile[+] = Canonical(C4BBPatient|2.2.0)
 * language = #en-US
-* identifier[memberid].type = $v2-0203#MB "Member Number"
+* identifier[memberid].type = $IdentifierType#MB "Member Number"
 * identifier[memberid].type.text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."
 * identifier[memberid].system = "https://www.example.com/fhir/memberidentifier"
 * identifier[memberid].value = "88800933501"

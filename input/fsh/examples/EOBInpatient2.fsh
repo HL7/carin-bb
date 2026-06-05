@@ -10,7 +10,7 @@ Usage: #example
 * identifier[uniqueclaimid].system = "https://www.example.com/fhir/EOBIdentifier"
 * identifier[uniqueclaimid].value = "InpatientEOBExample1"
 * status = #active
-* type = $claim-type#institutional
+* type = $HL7ClaimTypeCS#institutional
 * type.text = "Institutional"
 * subType = $C4BBInstitutionalClaimSubType#inpatient
 * subType.text = "Inpatient"

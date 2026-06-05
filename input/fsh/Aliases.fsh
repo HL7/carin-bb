@@ -1,10 +1,9 @@
-Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203|5.0.0
+Alias: $IdentifierType   =  http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $payeetype = http://terminology.hl7.org/CodeSystem/payeetype|1.0.1
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $subscriber-relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship
 Alias: $coverage-class = http://terminology.hl7.org/CodeSystem/coverage-class
 Alias: $C4BBIdentifierType = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBIdentifierType
-Alias: $claim-type = http://terminology.hl7.org/CodeSystem/claim-type|1.0.1
 Alias: $C4BBInstitutionalClaimSubType = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBInstitutionalClaimSubType
 Alias: $C4BBSupportingInfoType = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBSupportingInfoType
 Alias: $C4BBPayerAdjudicationStatus = http://hl7.org/fhir/us/carin-bb/CodeSystem/C4BBPayerAdjudicationStatus
@@ -68,15 +67,12 @@ Alias: $HL7RelatedClaimRelationshipCS = http://terminology.hl7.org/CodeSystem/ex
 Alias: $SubscriberRelationship = http://hl7.org/fhir/ValueSet/subscriber-relationship
 Alias: $HL7AdjudicationCS = 	http://terminology.hl7.org/CodeSystem/adjudication|1.0.1
 Alias: $HL7ClaimType = http://hl7.org/fhir/ValueSet/claim-type
-Alias: $HL7ClaimTypeCS = http://terminology.hl7.org/CodeSystem/claim-type|1.0.1
+Alias: $HL7ClaimTypeCS = http://terminology.hl7.org/CodeSystem/claim-type
 Alias: $CoverageClassCS = http://terminology.hl7.org/CodeSystem/coverage-class
-Alias: $OrganizationIdentifierType   =  http://terminology.hl7.org/CodeSystem/v2-0203|5.0.0
-Alias: $IdentifierType   =  http://terminology.hl7.org/CodeSystem/v2-0203|5.0.0
 Alias: $AdjudicationTypeExt = http://hl7.org/fhir/us/carin-bb/StructureDefinition/AdjudicationType
 Alias: $HL7DiagnosisType = http://terminology.hl7.org/CodeSystem/ex-diagnosistype|1.0.1
 Alias: $HL7ProcedureType = http://terminology.hl7.org/CodeSystem/ex-procedure-type
 Alias: $HL7PayeeType = http://terminology.hl7.org/CodeSystem/payeetype|1.0.1
-Alias: $HL7IdentifierType = http://terminology.hl7.org/CodeSystem/v2-0203|5.0.0
 
 Alias: $HL7DataAbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason|1.0.0
 
