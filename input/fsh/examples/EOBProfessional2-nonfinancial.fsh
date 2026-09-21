@@ -41,7 +41,7 @@ Usage: #example
 * diagnosis[=].type.text = "The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment."
 * diagnosis[+].sequence = 2
 * diagnosis[=].diagnosisCodeableConcept = $icd-10-cm#L97.929
-* diagnosis[=].type = $C4BBClaimDiagnosisType#secondary "secondary"
+* diagnosis[=].type = $C4BBClaimDiagnosisType#secondary "Secondary"
 * diagnosis[=].type.text = "Required when necessary to report additional diagnoses on professional and non-clinician claims"
 * insurance.focal = true
 * insurance.coverage = Reference(Coverage1)
