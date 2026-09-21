@@ -21,7 +21,7 @@ Description: "This profile builds upon the US Core Organization profile. It is u
    naiccode 0..* MS
    */
 //* identifier[NPI] ^patternIdentifier.type  = $IdentifierType#NPI
-* identifier[NPI] 0..1
+* identifier[NPI]
 // * identifier[NPI].type
 * identifier[tax] ^short = "Tax ID Number"
 * identifier[tax] ^patternIdentifier.type  = $IdentifierType#TAX
