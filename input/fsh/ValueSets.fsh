@@ -80,6 +80,7 @@ Title: "C4BB Payer Provider Network Status Value Set"
 Description: "Indicates the provider network status in relation to a patient's coverage as of the effective date of service or admission."
 * C4BBPayerAdjudicationStatus#innetwork	"In Network"
 * C4BBPayerAdjudicationStatus#outofnetwork "Out Of Network"
+* C4BBPayerAdjudicationStatus#other "Other"
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false
 
@@ -115,7 +116,7 @@ ValueSet: C4BBClaimProfessionalAndNonClinicianDiagnosisType
 Title: "C4BB Claim Professional And Non Clinician Diagnosis Type Value Set"
 Description: "Indicates if the professional and non-clinician diagnosis is principal or secondary"
 * $HL7DiagnosisType#principal "Principal Diagnosis"
-* C4BBClaimDiagnosisType#secondary "secondary"
+* C4BBClaimDiagnosisType#secondary "Secondary"
 * ^copyright = "This Valueset is not copyrighted."
 * ^experimental = false
 
