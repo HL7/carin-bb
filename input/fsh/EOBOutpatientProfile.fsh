@@ -177,8 +177,8 @@ The basis profile does not have requirements for financial data."
 * item.servicedDate MS
 
 * item.quantity MS
-* payment.type MS
-* payment.date MS
+//* payment.type MS
+//* payment.date MS
 * processNote.text MS
 
 * supportingInfo[pointoforigin] ^comment = "Identifies the place where the patient was identified as needing admission to an institution. This is a two position code mapped from the standard values for the UB-04 Source of Admission code (FL-15). (13)"
@@ -236,6 +236,12 @@ The profile has requirements for financial data."
 * adjudication[adjudicationamounttype] ^short = "Claim level adjudication type and amount"
 * adjudication[adjudicationamounttype].category from C4BBAdjudication (required)
 * adjudication[adjudicationamounttype].amount 1..1 MS
+
+
+* payment MS
+* payment.type MS
+* payment.date MS
+
 
 * total 1..* MS
 * insert TotalSlicing

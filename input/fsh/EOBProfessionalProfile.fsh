@@ -235,6 +235,10 @@ The profile has requirements for financial data."
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
 
+* payment MS
+* payment.type MS
+* payment.date MS
+
 * total 1..* MS
 * insert TotalSlicing
 * total.category from C4BBAdjudication  (extensible)

@@ -134,17 +134,17 @@ The basis profile does not have requirements for financial data."
 * item.serviced[x] 1..1
 * item.serviced[x] only date 
 * item.servicedDate MS       // listed as item.serviced in CPCDS spreadsheet
-* payment.type MS
+//* payment.type MS
 * provider MS
 * careTeam.provider MS
-* payment.date MS
+//* payment.date MS
 * related MS
 * payee.type MS
 * payee.party MS
 * careTeam.provider MS
 * status MS
 * insurance MS
-* total.amount MS
+//* total.amount MS
 * created MS
 * processNote.text MS
 
@@ -193,6 +193,10 @@ The profile has requirements for financial data."
 * item.adjudication[adjudicationamounttype].category from C4BBAdjudication
 * item.adjudication[adjudicationamounttype].amount  MS
 * item.adjudication[adjudicationamounttype].amount 1..1
+
+* payment MS
+* payment.type MS
+* payment.date MS
 
 * total 1..* MS
 * insert TotalSlicing

@@ -203,13 +203,13 @@ The basis profile does not have requirements for financial data."
 * item.modifier MS
 * item.quantity MS
 * item.revenue 1..1 MS
-* payment.type MS
+//* payment.type MS
 * careTeam.provider MS
 * provider MS
 * careTeam.provider MS
 * careTeam.provider MS
 * careTeam.provider MS
-* payment.date MS
+//* payment.date MS
 * related MS
 * related MS
 * payee.type MS
@@ -297,6 +297,10 @@ The profile has requirements for financial data."
 * adjudication[adjudicationamounttype] ^short = "Claim level adjudication type and amount"
 * adjudication[adjudicationamounttype].category from C4BBAdjudication  (required)
 * adjudication[adjudicationamounttype].amount 1..1
+
+* payment MS
+* payment.type MS
+* payment.date MS
 
 * total 1..* MS
 * insert TotalSlicing
