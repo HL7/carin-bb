@@ -35,9 +35,9 @@ For the purposes of information exchange defined by this IG, additional security
 
 ### Authentication and Authorization Requirements
 1.	Implementations **SHALL** support the FHIR US Core [Patient Privacy and Security requirements]({{site.data.fhir.ver.uscore}}/security.html).
-2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)](https://hl7.org/fhir/smart-app-launch/conformance/index.html#using-well-known) JSON file with scopes defined in the `scopes_supported` property.
+2.	Server systems **SHALL** publish their authorization and token endpoints for discovery in accordance with the SMART App Launch framework and publicly publish the [Well-Known Uniform Resource Identifiers (URIs)]({{site.data.fhir.ver.smart}}/conformance.html#using-well-known) JSON file with scopes defined in the `scopes_supported` property.
 3.	Implementations **SHOULD** consider the SMART on FHIR Best Practices in Authorization found [here](https://docs.smarthealthit.org/authorization/best-practices/).
-4.	Server implementation **SHALL** support the following [“SMART Core Capabilities”](https://hl7.org/fhir/smart-app-launch/1.0.0/conformance/index.html#core-capabilities) and **MAY** support additional capabilities:
+4.	Server implementation **SHALL** support the following [“SMART on FHIR Capabilities”]({{site.data.fhir.ver.smart}}/conformance.html#smart-on-fhir-oauth-authorization-endpoints-and-capabilities) and **MAY** support additional capabilities:
     1.	`launch-standalone`: support for SMART’s Standalone Launch mode
     2.	`client-public`: support for SMART’s public client profile (no client authentication)
     3.	`client-confidential-symmetric`: support for SMART’s confidential client profile 
@@ -50,17 +50,17 @@ For the purposes of information exchange defined by this IG, additional security
     1.	openid
     2.	fhirUser
     3.	launch/patient
-    4.  patient/ExplanationOfBenefit.read
-    5.	patient/Coverage.read
-    6.	patient/Patient.read
-    7.	patient/Organization.read
-    8.	patient/Practitioner.read
-    9.	patient/Coverage.read
-    10.	user/ExplanationOfBenefit.read
-    11.	user/Coverage.read
-    12.	user/Patient.read
-    13.	user/Organization.read
-    14.	user/Practitioner.read
+    4.  patient/ExplanationOfBenefit.rd
+    5.	patient/Coverage.rs
+    6.	patient/Patient.rs
+    7.	patient/Organization.rs
+    8.	patient/Practitioner.rs
+    9.	patient/Coverage.rs
+    10.	user/ExplanationOfBenefit.rs
+    11.	user/Coverage.rs
+    12.	user/Patient.rs
+    13.	user/Organization.rs
+    14.	user/Practitioner.rs
 
 6.	MAY support the [Security for Scalable Registration, Authentication, and Authorization](https://hl7.org/fhir/us/udap-security/) 1.0.0 or later for registration of client applications and (authentication and authorization of client applications or users)
     1.  If UDAP is supported, then all server systems and client applications that can protect private cryptographic keys and all systems of record **SHOULD** support UDAP JWT-Based Client Authentication for the authentication of client applications using asymmetric cryptography.
