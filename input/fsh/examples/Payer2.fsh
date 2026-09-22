@@ -4,7 +4,7 @@ Title: "Payer Organization Example 2"
 Description: "Payer Organization Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-09-08T00:00:00+00:00"
-* meta.profile[+] = Canonical(C4BBOrganization|2.2.0)
+* meta.profile[+] = Canonical(C4BBOrganization|2.2.1)
 * identifier.type = $C4BBIdentifierType#naiccode "NAIC Code"
 * identifier.type.text = "NAIC Code"
 * identifier.system = "urn:oid:2.16.840.1.113883.6.300"

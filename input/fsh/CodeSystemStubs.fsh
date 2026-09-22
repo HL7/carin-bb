@@ -426,9 +426,9 @@ RuleSet: HCPCSCopyrightNotice
 
 
 RuleSet: ADACopyrightNotice
-* ^copyright = "American Dental Association (ADA) developed Current Dental Terminology (CDT®) as a standardized language to help dentists and other members of the healthcare industry communicate effectively. CDT is revised and updated every year.
+* ^copyright = "\"American Dental Association (ADA) developed Current Dental Terminology (CDT®) as a standardized language to help dentists and other members of the healthcare industry communicate effectively. CDT is revised and updated every year.
 
-The ADA is the exclusive copyright owner of CDT, the Code on Dental Procedures and Nomenclature (the Code), and the ADA Dental Claim Form. Except as permitted by law, all use, copying or distribution of CDT, or any portion thereof (including the Code on Dental Procedures and Nomenclature) in any product or services (including works prepared for clients by consultants and other professionals), whether in printed, electronic or other format, requires a valid commercial user license from the ADA.
+The ADA is the exclusive copyright owner of CDT, the Code on Dental Procedures and Nomenclature (the Code), and the ADA Dental Claim Form. Except as permitted by law, all use, copying or distribution of CDT, or any portion thereof (including the Code on Dental Procedures and Nomenclature) in any product or services (including works prepared for clients by consultants and other professionals), whether in printed, electronic or other format, requires a valid commercial user license from the ADA.\"
 
 For more information : https://www.ada.org/en/publications/ada-catalog/cdt-products/licensing-for-commercial-users"
 

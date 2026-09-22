@@ -4,7 +4,7 @@ Title: "Coverage Example 2"
 Description: "Coverage Example 2"
 Usage: #example
 * meta.lastUpdated = "2020-10-30T09:48:01.8462752-04:00"
-* meta.profile[+] = Canonical(C4BBCoverage|2.2.0)
+* meta.profile[+] = Canonical(C4BBCoverage|2.2.1)
 * language = #en-US
 * identifier.type = $IdentifierType#MB "Member Number"
 * identifier.type.text = "An identifier for the insured of an insurance policy (this insured always has a subscriber), usually assigned by the insurance carrier."

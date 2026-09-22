@@ -4,7 +4,7 @@ Title: "Provider Organization Example 3"
 Description: "Provider Organization Example 3"
 Usage: #example
 * meta.lastUpdated = "2020-05-04T03:02:01-04:00"
-* meta.profile[+] = Canonical(C4BBOrganization|2.2.0)
+* meta.profile[+] = Canonical(C4BBOrganization|2.2.1)
 * identifier.type = $IdentifierType#NPI "National Provider Identifier"
 * identifier.type.text = "National Provider Identifier"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
